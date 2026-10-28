@@ -544,10 +544,15 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
         super.onDestroy()
     }
 
+    // The service observer of a resumed activity. It was launched in a new MainScope() at every resume and never
+    // cancelled: each one kept collecting the service flow and held the activity after it was destroyed.
+    private var serviceJob: kotlinx.coroutines.Job? = null
+
     override fun onResume() {
-        PlaybackService.serviceFlow.onEach {
+        serviceJob?.cancel()
+        serviceJob = PlaybackService.serviceFlow.onEach {
             onServiceChanged(it)
-        }.launchIn(MainScope())
+        }.launchIn(lifecycleScope)
         if (playerShown)
             applyMarginToProgressBar(playerBehavior.peekHeight)
         else
@@ -559,6 +564,8 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
     }
 
     override fun onPause() {
+        serviceJob?.cancel()
+        serviceJob = null
         PlaybackService.instance?.let { unregisterObserver(it) }
         super.onPause()
     }
