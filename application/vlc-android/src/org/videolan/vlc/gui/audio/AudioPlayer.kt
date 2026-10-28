@@ -121,6 +121,7 @@ import org.videolan.vlc.gui.helpers.TalkbackUtil
 import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.gui.helpers.UiTools.addToPlaylist
 import org.videolan.vlc.gui.helpers.UiTools.isTablet
+import org.videolan.vlc.gui.helpers.UiTools.useNavigationRail
 import org.videolan.vlc.gui.helpers.UiTools.showPinIfNeeded
 import org.videolan.vlc.gui.video.VideoPlayerActivity
 import org.videolan.vlc.gui.view.AudioMediaSwitcher
@@ -372,7 +373,7 @@ class AudioPlayer : Fragment(), PlaylistAdapter.IPlayer, TextWatcher, IAudioPlay
     fun setBottomMargin() {
         (binding.playPause.layoutParams as? ConstraintLayout.LayoutParams)?.let {
             val audioPlayerContainerActivity = (requireActivity() as AudioPlayerContainerActivity)
-            if (audioPlayerContainerActivity is MainActivity && !audioPlayerContainerActivity.isTablet()) it.bottomMargin = 8.dp + audioPlayerContainerActivity.bottomInset
+            if (audioPlayerContainerActivity is MainActivity && !audioPlayerContainerActivity.useNavigationRail()) it.bottomMargin = 8.dp + audioPlayerContainerActivity.bottomInset
         }
     }
 

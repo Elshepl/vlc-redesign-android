@@ -39,6 +39,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDE
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.videolan.libvlc.util.AndroidUtil
+import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.tools.DependencyProvider
 import org.videolan.tools.dp
 import org.videolan.tools.setGone
@@ -107,6 +108,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
                 binding.subtitleTracks.trackTitle.contentDescription = getString(R.string.talkback_subtitle_tracks)
             }
             if (playbackService.spuTracks == null) binding.subtitleTracks.emptyView.setVisible()
+            applyMediaKind(playbackService)
         }
     }
 
@@ -192,19 +194,55 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
     }
 
     // VLC Redesign: the tabs of the desktop panel (Video, Audio, Subtitles), opening on Subtitles
+    private var rdTabsKey: String? = null
+
     private fun setupTabs() {
-        val tabs = binding.rdTracksTabs
-        val sections = listOf(listOf<View>(binding.videoTracks.root), listOf<View>(binding.audioTracks.root),
-                listOf<View>(binding.subtitleTracks.root, binding.rdSubTiming.root))
-        listOf(R.string.video, R.string.audio, R.string.subtitles).forEach { tabs.addTab(tabs.newTab().setText(it), false) }
-        fun show(index: Int) = sections.forEachIndexed { i, views -> views.forEach { it.visibility = if (i == index) View.VISIBLE else View.GONE } }
-        tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) = show(tab.position)
+        binding.rdTracksTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) = showSection(tab.tag as? Int ?: 2)
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
-        tabs.getTabAt(2)?.select()
-        show(2)
+        configureTabs(hasVideo = true, subtitles = true)
+    }
+
+    private var rdStream = false
+
+    private fun sections() = listOf(listOf<View>(binding.videoTracks.root), listOf<View>(binding.audioTracks.root),
+            if (rdStream) listOf<View>(binding.subtitleTracks.root) else listOf<View>(binding.subtitleTracks.root, binding.rdSubTiming.root))
+
+    private fun showSection(index: Int) = sections().forEachIndexed { i, views -> views.forEach { it.visibility = if (i == index) View.VISIBLE else View.GONE } }
+
+    /**
+     * The owner's rule for every platform: subtitles are for films. Audio only: no Subtitles tab at all (and no
+     * Video tab). A live/network stream: only its own subtitle tracks (on, off, language) when it carries any,
+     * never a file, an online search or the timing.
+     */
+    private fun configureTabs(hasVideo: Boolean, subtitles: Boolean) {
+        val key = "$hasVideo/$subtitles"
+        if (key == rdTabsKey) return
+        rdTabsKey = key
+        val tabs = binding.rdTracksTabs
+        val selected = tabs.getTabAt(tabs.selectedTabPosition)?.tag as? Int
+        tabs.removeAllTabs()
+        val ids = buildList { if (hasVideo) add(0); add(1); if (subtitles) add(2) }
+        ids.forEach { id -> tabs.addTab(tabs.newTab().setText(listOf(R.string.video, R.string.audio, R.string.subtitles)[id]).setTag(id), false) }
+        val target = selected?.takeIf { it in ids } ?: ids.last()
+        tabs.getTabAt(ids.indexOf(target))?.select()
+        showSection(target)
+    }
+
+    private fun applyMediaKind(service: PlaybackService) {
+        val media = service.currentMediaWrapper
+        val hasVideo = service.videoTracksCount > 0
+        val stream = media != null && (media.type == MediaWrapper.TYPE_STREAM || media.uri?.scheme.let { it != null && it != "file" && it != "content" })
+        val streamHasSubs = (service.spuTracks?.size ?: 0) > 0
+        rdStream = stream
+        configureTabs(hasVideo, hasVideo && (!stream || streamHasSubs))
+        if (stream) {
+            binding.rdSubTiming.root.setGone()
+            binding.subtitleTracks.trackMore.setGone()
+            binding.subtitleTracks.options.setGone()
+        }
     }
 
     private var rdService: PlaybackService? = null

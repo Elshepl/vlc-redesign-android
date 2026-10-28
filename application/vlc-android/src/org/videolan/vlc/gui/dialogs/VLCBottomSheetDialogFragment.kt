@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,10 @@ import android.view.accessibility.AccessibilityEvent
 import android.view.inputmethod.BaseInputConnection
 import android.widget.FrameLayout
 import androidx.annotation.LayoutRes
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -22,6 +27,7 @@ import kotlinx.coroutines.launch
 import org.videolan.resources.AndroidDevices
 import org.videolan.tools.Settings
 import org.videolan.vlc.R
+import org.videolan.vlc.gui.video.VideoPlayerActivity
 import org.videolan.vlc.gui.video.VideoPlayerActivity.Companion.videoRemoteFlow
 import org.videolan.vlc.util.isTalkbackIsEnabled
 
@@ -83,6 +89,7 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         lifecycleScope.launchWhenStarted {
             dialog?.window?.setLayout(resources.getDimensionPixelSize(R.dimen.default_context_width), ViewGroup.LayoutParams.MATCH_PARENT)
+            if (useSideSheet()) applySideSheet(view)
             dialog?.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)?.let {
                 val bsb = BottomSheetBehavior.from(it)
                 if (bsb.state == BottomSheetBehavior.STATE_COLLAPSED) bsb.state = getDefaultState()
@@ -93,6 +100,50 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
         }
 
 
+    }
+
+    /**
+     * VLC Redesign: in landscape the player's panels are side sheets at the end of the window (the desktop's
+     * player panels), a floating A3 panel with radius 14 and the 1 px window border, over the full height
+     */
+    open fun useSideSheet() = activity is VideoPlayerActivity && !AndroidDevices.isTv
+            && resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+
+    private fun applySideSheet(view: View) {
+        val dialog = dialog ?: return
+        val width = minOf(resources.getDimensionPixelSize(R.dimen.rd_side_sheet_width), resources.displayMetrics.widthPixels / 2)
+        val margin = resources.getDimensionPixelSize(R.dimen.rd_side_sheet_margin)
+        dialog.window?.setLayout(width + 2 * margin, ViewGroup.LayoutParams.MATCH_PARENT)
+        dialog.window?.setGravity(Gravity.END)
+        dialog.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)?.let { sheet ->
+            sheet.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                height = ViewGroup.LayoutParams.MATCH_PARENT
+                setMargins(margin, 0, margin, 0)
+            }
+            // the sheet behaviour keeps the sheet on the bottom edge: make it the parent's height less both
+            // margins and lift it by one margin, so it floats with the same gap above and below
+            (sheet.parent as? View)?.let { parent ->
+                parent.post {
+                    val top = ViewCompat.getRootWindowInsets(parent)?.let {
+                        // the player shows and hides the status bar: keep its room either way
+                        maxOf(it.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.systemBars()).top, it.getInsets(WindowInsetsCompat.Type.displayCutout()).top)
+                    } ?: 0
+                    if (parent.height > top + 2 * margin) {
+                        sheet.updateLayoutParams<ViewGroup.MarginLayoutParams> { height = parent.height - top - 2 * margin }
+                        sheet.translationY = -margin.toFloat()
+                    }
+                }
+            }
+            sheet.background = null
+            BottomSheetBehavior.from(sheet).apply {
+                skipCollapsed = true
+                isDraggable = false
+                state = BottomSheetBehavior.STATE_EXPANDED
+            }
+        }
+        view.updateLayoutParams<ViewGroup.LayoutParams> { height = ViewGroup.LayoutParams.MATCH_PARENT }
+        view.background = ContextCompat.getDrawable(view.context, R.drawable.rd_panel_float)
+        view.clipToOutline = true
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

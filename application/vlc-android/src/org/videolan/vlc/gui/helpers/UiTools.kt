@@ -718,6 +718,9 @@ object UiTools {
 
     fun Context.isTablet() = resources.getBoolean(R.bool.is_tablet)
 
+    /** VLC Redesign: the main window shows a navigation rail (the desktop sidebar) instead of the bottom bar */
+    fun Context.useNavigationRail() = resources.getBoolean(R.bool.rd_navigation_rail)
+
     fun getDefaultCover(context: Context, item: MediaLibraryItem): BitmapDrawable {
         return when (item.itemType) {
             MediaLibraryItem.TYPE_ARTIST -> getDefaultArtistDrawable(context)

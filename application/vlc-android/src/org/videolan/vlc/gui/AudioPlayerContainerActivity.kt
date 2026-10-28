@@ -96,6 +96,7 @@ import org.videolan.vlc.gui.helpers.PlayerKeyListenerDelegate
 import org.videolan.vlc.gui.helpers.PlayerOptionsDelegateCallback
 import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.gui.helpers.UiTools.isTablet
+import org.videolan.vlc.gui.helpers.UiTools.useNavigationRail
 import org.videolan.vlc.interfaces.IRefreshable
 import org.videolan.vlc.media.PlaylistManager
 import org.videolan.vlc.media.ResumeStatus
@@ -213,7 +214,7 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
                 if (this@AudioPlayerContainerActivity is MainActivity) {
                     leftMargin = insets.left
                     rightMargin = insets.right
-                    if (isTablet()) bottomMargin = insets.bottom
+                    if (useNavigationRail()) bottomMargin = insets.bottom
                     topMargin = insets.top
                     topInset = insets.top
                     val bottomNavigationView = findViewById<BottomNavigationView?>(R.id.navigation)
@@ -254,9 +255,9 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
      */
     private fun setContentBottomPadding() {
         // insets from soft nav buttons
-        var bottomMargin = if (this is MainActivity && isTablet()) 0 else bottomInset
+        var bottomMargin = if (this is MainActivity && useNavigationRail()) 0 else bottomInset
         // Bottom bar navigation
-        bottomMargin += if (this is MainActivity && !isTablet()) 58.dp else 0
+        bottomMargin += if (this is MainActivity && !useNavigationRail()) 58.dp else 0
         //mini player
         bottomMargin += if (::playerBehavior.isInitialized && playerBehavior.state != STATE_HIDDEN) 72.dp else 0 + 4.dp
         fragmentContainer.setPadding(fragmentContainer.paddingLeft, fragmentContainer.paddingTop, fragmentContainer.paddingRight, bottomMargin)
@@ -382,7 +383,7 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
                 val translationpercent = min(1f, max(0f, slideOffset))
                 bottomBehavior?.let { bottomBehavior ->
                     bottomBar?.let { bottomBar ->
-                        val translation = min((translationpercent * audioPlayerContainer.height / 2), bottomBar.height.toFloat()) - if (isTablet()) topInset else 0
+                        val translation = min((translationpercent * audioPlayerContainer.height / 2), bottomBar.height.toFloat()) - if (useNavigationRail()) topInset else 0
                         bottomBehavior.translate(bottomBar, translation)
                     }
                 }
@@ -719,9 +720,9 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
         vsc?.let {
             val lp = it.layoutParams as CoordinatorLayout.LayoutParams
             if (this is MainActivity) {
-                lp.anchorId = if (isTablet()) R.id.fragment_placeholder else R.id.navigation
-                lp.anchorGravity = if (isTablet()) Gravity.BOTTOM else Gravity.TOP
-                lp.marginStart = if (isTablet()) 72.dp else 0.dp
+                lp.anchorId = if (useNavigationRail()) R.id.fragment_placeholder else R.id.navigation
+                lp.anchorGravity = if (useNavigationRail()) Gravity.BOTTOM else Gravity.TOP
+                lp.marginStart = if (useNavigationRail()) 72.dp else 0.dp
             }
             it.layoutParams = lp
         }

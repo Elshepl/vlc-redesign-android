@@ -144,8 +144,12 @@
         <item name="android:paddingStart">8dp</item>
         <item name="android:paddingEnd">8dp</item>
         <item name="android:textSize">13sp</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:ellipsize">end</item>
+        <!-- two lines rather than an ellipsis: the side sheet in landscape and long translations are narrow -->
+        <item name="android:maxLines">3</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
         <item name="backgroundTint">@color/rd_dark_bg_b2</item>
         <item name="strokeColor">@color/rd_dark_divider_bright</item>
         <item name="android:textColor">@color/rd_dark_fg_1</item>

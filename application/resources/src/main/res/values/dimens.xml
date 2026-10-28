@@ -35,7 +35,7 @@
     <dimen name="time_margin_sides">16dp</dimen>
 
     <dimen name="large_margins_center">8dp</dimen>
-    <dimen name="small_margins_sides">0dp</dimen>
+    <dimen name="small_margins_sides">8dp</dimen><!-- VLC Redesign: the player controls keep off the screen edges -->
 
 
     <dimen name="media_ctrl_margin_top">20dp</dimen>

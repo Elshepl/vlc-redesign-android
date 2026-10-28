@@ -168,6 +168,9 @@ object VLCOptions {
             options.add(if (frameSkip) "2" else "0")
             options.add("--subsdec-encoding")
             options.add(subtitlesEncoding)
+            // VLC Redesign: lay out each subtitle line in the direction of its own text (Hebrew and Arabic right to
+            // left), as VLC 4 on the desktop does; VLC 3.0's default is left to right for every line
+            options.add("--freetype-text-direction=2")
             options.add("--stats")
             if (networkCaching > 0) options.add("--network-caching=$networkCaching")
             options.add("--audio-resampler")

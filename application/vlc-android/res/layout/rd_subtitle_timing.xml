@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   VLC Redesign: Subtitle timing of the tracks panel (docs/wiki/Subtitles.md "Subtitle timing"): the delay, a
-  slider from -10 s (earlier) to +10 s (later) in steps of 50 ms, then Mark voice heard, Mark text seen and Reset.
+  slider from -10 s (earlier) to +10 s (later) in steps of 50 ms, then Mark voice heard and Mark text seen; Reset beside the delay.
   Once the voice and the text are both marked, the subtitles move by the time between the two taps.
 -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,6 +24,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <TextView
@@ -44,6 +46,15 @@
             android:fontFeatureSettings="tnum"
             android:textColor="@color/rd_dark_fg_a1"
             android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rd_sub_delay_reset"
+            style="@style/Widget.Redesign.Button.Outlined.Player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:minHeight="32dp"
+            android:text="@string/rd_reset" />
     </LinearLayout>
 
     <com.google.android.material.slider.Slider
@@ -67,6 +78,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
@@ -86,13 +98,6 @@
             android:layout_weight="1"
             android:text="@string/rd_mark_text_seen" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/rd_sub_delay_reset"
-            style="@style/Widget.Redesign.Button.Outlined.Player"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="@string/rd_reset" />
     </LinearLayout>
 </LinearLayout>
 </layout>

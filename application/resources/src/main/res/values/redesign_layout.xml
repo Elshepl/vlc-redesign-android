@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign: the desktop sidebar becomes a navigation rail once the window is 600 dp wide
+         (a phone in landscape, a tablet, a wide split screen); the bottom bar otherwise -->
+    <bool name="rd_navigation_rail">false</bool>
+    <!-- the player's panels (tracks, speed, sleep timer...) become a side sheet in landscape, as on the desktop -->
+    <dimen name="rd_side_sheet_width">400dp</dimen>
+    <dimen name="rd_side_sheet_margin">8dp</dimen>
+</resources>

@@ -5,6 +5,7 @@ import android.content.res.TypedArray
 import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
@@ -26,6 +27,7 @@ import org.videolan.vlc.gui.browser.KEY_IN_MEDIALIB
 import org.videolan.vlc.gui.browser.KEY_MEDIA
 import org.videolan.vlc.gui.helpers.FloatingActionButtonBehavior
 import org.videolan.vlc.gui.helpers.UiTools.isTablet
+import org.videolan.vlc.gui.helpers.UiTools.useNavigationRail
 import org.videolan.vlc.gui.view.SwipeRefreshLayout
 
 abstract class BaseFragment : Fragment(), ActionMode.Callback {
@@ -94,7 +96,16 @@ abstract class BaseFragment : Fragment(), ActionMode.Callback {
         val fabLarge = requireActivity().findViewById<FloatingActionButton>(R.id.fab_large)
         fab.setGone()
         fabLarge.setGone()
-        fabPlay = if (requireActivity().isTablet() && requireActivity() is MainActivity) fabLarge else fab
+        fabPlay = if (requireActivity().useNavigationRail() && requireActivity().isTablet() && requireActivity() is MainActivity) fabLarge else fab
+        if (requireActivity().useNavigationRail() && requireActivity() is MainActivity) (fab.layoutParams as? CoordinatorLayout.LayoutParams)?.let { lp ->
+            // the bottom bar it is anchored to is gone: anchor it to the bottom end of the content
+            if (lp.anchorId == R.id.navigation) {
+                lp.anchorId = R.id.fragment_placeholder
+                lp.anchorGravity = Gravity.BOTTOM or Gravity.END
+                lp.gravity = Gravity.TOP or Gravity.START
+                fab.layoutParams = lp
+            }
+        }
         visibility?.let { fabPlay?.visibility = it }
     }
 

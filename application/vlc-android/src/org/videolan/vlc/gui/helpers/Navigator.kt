@@ -27,6 +27,7 @@ import android.app.Activity
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.core.content.edit
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -36,6 +37,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.navigationrail.NavigationRailView
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.resources.EXTRA_FOR_ESPRESSO
 import org.videolan.resources.EXTRA_TARGET
@@ -58,6 +60,7 @@ import org.videolan.vlc.gui.audio.AudioBrowserFragment
 import org.videolan.vlc.gui.browser.BaseBrowserFragment
 import org.videolan.vlc.gui.browser.MainBrowserFragment
 import org.videolan.vlc.gui.helpers.UiTools.isTablet
+import org.videolan.vlc.gui.helpers.UiTools.useNavigationRail
 import org.videolan.vlc.gui.video.VideoBrowserFragment
 import org.videolan.vlc.util.getScreenWidth
 
@@ -141,10 +144,13 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
     override fun configurationChanged(size: Int) {
         navigationView.forEach {
             when (it) {
-                is BottomNavigationView -> if (activity.isTablet()) it.setGone() else it.setVisible()
-                else -> if (!activity.isTablet()) it.setGone() else it.setVisible()
+                is BottomNavigationView -> if (activity.useNavigationRail()) it.setGone() else it.setVisible()
+                else -> if (!activity.useNavigationRail()) it.setGone() else it.setVisible()
             }
         }
+        // VLC Redesign: a phone in landscape has no room for the large play button above the five entries:
+        // the rail keeps only the entries and the play button floats at the bottom end of the content
+        if (activity.useNavigationRail() && !activity.isTablet()) (activity.findViewById<View>(R.id.navigation_rail) as? NavigationRailView)?.removeHeaderView()
     }
 
     override fun getFragmentWidth(activity: Activity): Int {

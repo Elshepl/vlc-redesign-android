@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="rd_navigation_rail">true</bool>
+    <dimen name="navigation_margin">72dp</dimen>
+</resources>
