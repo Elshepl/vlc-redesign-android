@@ -9,4 +9,5 @@
         android:singleLine="true"
         android:gravity="center_vertical"
         android:textColor="?attr/audio_browser_separator"
-        android:textSize="20sp" />
+        android:textSize="16sp"
+        android:fontFamily="@font/inter" />

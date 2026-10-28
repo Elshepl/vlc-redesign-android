@@ -59,7 +59,7 @@
         <item name="background_actionbar">@color/rd_light_bg_b1</item>
         <item name="audio_player_background_tint">@color/white_transparent_75</item>
         <item name="background_audio_tips">@color/white_transparent_95</item>
-        <item name="audio_browser_separator">@color/rd_accent_orange_main</item>
+        <item name="audio_browser_separator">@color/rd_light_fg_a1</item>
         <item name="dialog_circle_background">@color/dialog_circle_background</item>
         <item name="font_default">@color/rd_light_fg_1</item>
         <item name="font_light">@color/rd_light_fg_a1</item>
@@ -298,7 +298,7 @@
         <item name="background_actionbar">@color/rd_dark_bg_b1</item>
         <item name="background_audio_tips">@color/black_transparent_90</item>
         <item name="audio_player_background_tint">@color/black_transparent_50</item>
-        <item name="audio_browser_separator">@color/rd_accent_orange_main</item>
+        <item name="audio_browser_separator">@color/rd_dark_fg_a1</item>
         <item name="dialog_circle_background">@color/dialog_circle_background_dark</item>
         <item name="font_default">@color/rd_dark_fg_1</item>
         <item name="font_light">@color/rd_dark_fg_a1</item>
@@ -886,13 +886,14 @@
         <item name="android:minHeight">56dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">?attr/font_default</item>
-        <item name="android:fontFamily">@font/inter_medium</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
+    <!-- VLC Redesign: the Home section titles ("Continue Watching", 6261:15078), Inter 18 in FG/2 -->
     <style name="Theme.VLC.HorizontalListTitle">
-        <item name="android:fontFamily">@font/inter_medium</item>
-        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">?attr/rd_text_section</item>
         <item name="android:textSize">18sp</item>
     </style>
 

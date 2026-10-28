@@ -25,6 +25,8 @@
 <resources>
 
     <style name="Theme.VLC" parent="Theme.VLC.19">
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
 
         <!-- Optional, if your app is drawing behind the status bar also. -->
@@ -34,6 +36,8 @@
     </style>
 
     <style name="Theme.VLC.Black" parent="Theme.VLC.Black.19">
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
 
         <!-- Optional, if your app is drawing behind the status bar also. -->

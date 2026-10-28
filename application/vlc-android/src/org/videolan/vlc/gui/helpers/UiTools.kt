@@ -1108,12 +1108,12 @@ fun BaseActivity.applyTheme() {
     val string = settings.getString(KEY_APP_THEME, "-1")
     when (string) {
         "1" -> {
-            window.setBackgroundDrawable(ContextCompat.getColor(this, R.color.white).toDrawable())
+            window.setBackgroundDrawable(ContextCompat.getColor(this, R.color.rd_light_bg_b1).toDrawable())
             WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
             WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightNavigationBars = true
         }
         "2" -> {
-            window.setBackgroundDrawable(ContextCompat.getColor(this, R.color.mini_player_dark).toDrawable())
+            window.setBackgroundDrawable(ContextCompat.getColor(this, R.color.rd_dark_bg_b1).toDrawable())
             WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
             WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightNavigationBars = false
         }

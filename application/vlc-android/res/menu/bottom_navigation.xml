@@ -29,7 +29,7 @@
 
     <item
             android:id="@+id/nav_video"
-            android:title="@string/rd_nav_videos"
+            android:title="@string/default_action_videos"
             android:icon="@drawable/rd_nav_sel_videos" />
     <item
             android:id="@+id/nav_audio"
