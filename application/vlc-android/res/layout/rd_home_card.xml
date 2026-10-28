@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VLC Redesign: a card of the Home page (6261:15078). The picture (a 16:9 video thumbnail, a square cover or a
+  folder tile, radius 6), the accent progress line under a video's picture, the title in FG/1 and, for songs,
+  the artist in FG/A1.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+
+        <variable name="media" type="org.videolan.medialibrary.media.MediaLibraryItem" />
+        <variable name="title" type="String" />
+        <variable name="subtitle" type="String" />
+        <variable name="cover" type="android.graphics.drawable.BitmapDrawable" />
+        <variable name="scaleType" type="android.widget.ImageView.ScaleType" />
+        <variable name="progress" type="int" />
+        <variable name="isFolder" type="boolean" />
+        <variable name="seen" type="boolean" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rd_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingBottom="4dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rd_cover_card"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:importantForAccessibility="no"
+            app:cardBackgroundColor="@color/rd_folder_card"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:id="@+id/rd_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="@{scaleType ?? android.widget.ImageView.ScaleType.CENTER_CROP}"
+                android:src="@{cover}"
+                android:visibility="@{isFolder ? View.GONE : View.VISIBLE}"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:visibility="@{isFolder ? View.VISIBLE : View.GONE, default=gone}"
+                app:srcCompat="@drawable/rd_ic_folder" />
+
+            <View
+                android:id="@+id/rd_progress"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom|start"
+                android:background="?attr/colorPrimary"
+                android:visibility="@{progress > 0 ? View.VISIBLE : View.GONE, default=gone}" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/rd_title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:text="@{title}"
+            android:textAlignment="viewStart"
+            android:textColor="@{seen ? @color/rd_fg_a1 : @color/rd_fg_1}"
+            android:textSize="14sp"
+            tools:text="The_Wand_S01E05.mp4" />
+
+        <TextView
+            android:id="@+id/rd_subtitle"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:text="@{subtitle}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/rd_fg_a1"
+            android:textSize="12sp"
+            android:visibility="@{TextUtils.isEmpty(subtitle) ? View.GONE : View.VISIBLE}"
+            tools:text="juxtopposed" />
+    </LinearLayout>
+</layout>

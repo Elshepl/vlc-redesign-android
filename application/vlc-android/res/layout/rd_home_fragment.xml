@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VLC Redesign: Home (6261:15078, docs/wiki/Library.md "Home"). The sections the desktop shows, newest first, one
+  row of cards each; a section with nothing in it is hidden. An empty library shows the empty state.
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rd_home_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include android:id="@+id/rd_home_continue" layout="@layout/rd_home_section" />
+        <include android:id="@+id/rd_home_listen" layout="@layout/rd_home_section" />
+        <include android:id="@+id/rd_home_folders" layout="@layout/rd_home_section" />
+        <include android:id="@+id/rd_home_favorites" layout="@layout/rd_home_section" />
+        <include android:id="@+id/rd_home_new_videos" layout="@layout/rd_home_section" />
+        <include android:id="@+id/rd_home_new_music" layout="@layout/rd_home_section" />
+
+        <TextView
+            android:id="@+id/rd_home_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/nomedia"
+            android:textColor="@color/rd_fg_a1"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/rd_ic_welcome"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

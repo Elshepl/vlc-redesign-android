@@ -207,6 +207,7 @@ class SecondaryActivity : ContentActivity(), IDialogManager {
             ABOUT -> fragment = AboutFragment()
             STREAMS -> fragment = MRLPanelFragment()
             HISTORY -> fragment = HistoryFragment()
+            PLAYLISTS -> fragment = PlaylistFragment()
             VIDEO_GROUP_LIST -> {
                 fragment = VideoGridFragment().apply {
                     arguments = bundleOf(
@@ -241,6 +242,7 @@ class SecondaryActivity : ContentActivity(), IDialogManager {
         const val ABOUT = "about"
         const val STREAMS = "streams"
         const val HISTORY = "history"
+        const val PLAYLISTS = "playlists"
         const val VIDEO_GROUP_LIST = "videoGroupList"
         const val STORAGE_BROWSER = "storage_browser"
         const val STORAGE_BROWSER_ONBOARDING = "storage_browser_onboarding"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The strings of the VLC Redesign port. They use the desktop interface's wording, so that
+  buildsystem/redesign/import_strings.py can take their translations from the desktop catalogues.
+-->
+<resources>
+    <string name="rd_nav_music">Music</string>
+    <string name="rd_continue_watching">Continue Watching</string>
+    <string name="rd_listen_again">Listen Again</string>
+    <string name="rd_frequent_folders">Frequently Visited Folders</string>
+    <string name="rd_new_videos">New Videos</string>
+    <string name="rd_new_music">New Music</string>
+    <string name="rd_recent">Recent</string>
+    <string name="rd_open_network_stream">Open Network Stream</string>
+</resources>

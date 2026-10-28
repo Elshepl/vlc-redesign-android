@@ -51,6 +51,7 @@ import org.videolan.vlc.BuildConfig
 import org.videolan.vlc.R
 import org.videolan.vlc.gui.BaseFragment
 import org.videolan.vlc.gui.MainActivity
+import org.videolan.vlc.gui.HomeFragment
 import org.videolan.vlc.gui.MoreFragment
 import org.videolan.vlc.gui.PlaylistFragment
 import org.videolan.vlc.gui.audio.AudioBrowserFragment
@@ -64,7 +65,7 @@ private const val TAG = "Navigator"
 
 class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObserver, INavigator {
 
-    private val defaultFragmentId = R.id.nav_video
+    private val defaultFragmentId = R.id.nav_home
     override var currentFragmentId: Int = 0
     private var currentFragment: Fragment? = null
     private lateinit var activity: MainActivity
@@ -106,6 +107,7 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
             }
             R.id.nav_playlists -> PlaylistFragment()
             R.id.nav_more -> MoreFragment()
+            R.id.nav_home -> HomeFragment()
             else -> VideoBrowserFragment()
         }
     }

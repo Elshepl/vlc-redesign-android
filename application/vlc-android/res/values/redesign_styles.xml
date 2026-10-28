@@ -223,4 +223,30 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?attr/font_light</item>
     </style>
+
+    <!-- The rows of the More page: 52 high, the design glyph, Inter 15 in FG/1, the chevron at the end. -->
+    <style name="Redesign.MoreRow" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/rd_fg_1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="drawableEndCompat">@drawable/rd_ic_chevron_right</item>
+    </style>
+    <style name="Redesign.MoreDivider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">56dp</item>
+        <item name="android:background">@color/rd_divider_dim</item>
+    </style>
 </resources>

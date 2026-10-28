@@ -76,8 +76,8 @@ class MoreFragment : BaseFragment(), IRefreshable, IHistory, IDialogManager,
     private lateinit var streamsAdapter: MRLAdapter
     private lateinit var historyEntry: TitleListView
     private lateinit var streamsEntry: TitleListView
-    private lateinit var settingsButton: Button
-    private lateinit var aboutButton: Button
+    private lateinit var settingsButton: View
+    private lateinit var aboutButton: View
     private lateinit var donationsButton: CardView
     private lateinit var viewModel: HistoryModel
     private lateinit var streamsViewModel: StreamsModel
@@ -161,6 +161,9 @@ class MoreFragment : BaseFragment(), IRefreshable, IHistory, IDialogManager,
             requireActivity().startActivityForResult(i, SecondaryActivity.ACTIVITY_RESULT_SECONDARY)
         }
 
+        view.findViewById<View>(R.id.playlistsButton).setOnClickListener { openSecondary(SecondaryActivity.PLAYLISTS) }
+        view.findViewById<View>(R.id.historyButton).setOnClickListener { openSecondary(SecondaryActivity.HISTORY) }
+        view.findViewById<View>(R.id.streamsButton).setOnClickListener { openSecondary(SecondaryActivity.STREAMS) }
         settingsButton.setOnClickListener {
             requireActivity().startActivityForResult(Intent(requireActivity(), PreferencesActivity::class.java), ACTIVITY_RESULT_PREFERENCES)
         }
@@ -198,6 +201,12 @@ class MoreFragment : BaseFragment(), IRefreshable, IHistory, IDialogManager,
             val name = bundle.getString(RENAME_DIALOG_NEW_NAME) ?: return@setFragmentResultListener
             renameStream(media, name)
         }
+    }
+
+    private fun openSecondary(fragment: String) {
+        val i = Intent(requireActivity(), SecondaryActivity::class.java)
+        i.putExtra("fragment", fragment)
+        requireActivity().startActivityForResult(i, SecondaryActivity.ACTIVITY_RESULT_SECONDARY)
     }
 
     private fun manageDonationVisibility() {

@@ -118,4 +118,7 @@
 
     <!-- VLC Redesign: the player top bar under the status bar -->
     <dimen name="rd_player_topbar_height">112dp</dimen>
+    <!-- VLC Redesign: Home cards (a video 16:9, a cover or a folder square) -->
+    <dimen name="rd_home_video_width">168dp</dimen>
+    <dimen name="rd_home_square_width">120dp</dimen>
 </resources>

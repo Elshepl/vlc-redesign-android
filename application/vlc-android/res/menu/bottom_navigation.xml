@@ -26,7 +26,12 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
+    <!-- VLC Redesign: the desktop sidebar. Home first; Playlists and Recent are reached from Home and More
+         (a bottom bar holds five entries). -->
+    <item
+            android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/rd_nav_sel_home" />
     <item
             android:id="@+id/nav_video"
             android:title="@string/default_action_videos"
@@ -39,10 +44,6 @@
             android:id="@+id/nav_directories"
             android:title="@string/network"
             android:icon="@drawable/rd_nav_sel_browse" />
-    <item
-            android:id="@+id/nav_playlists"
-            android:title="@string/playlists"
-            android:icon="@drawable/rd_nav_sel_playlists" />
     <item
             android:id="@+id/nav_more"
             android:title="@string/more"

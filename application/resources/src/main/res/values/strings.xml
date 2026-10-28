@@ -1447,6 +1447,4 @@
     <string name="feedback_email_warning_try_anyway">Try anyway</string>
     <string name="forum_url" translatable="false">https://forum.videolan.org/viewforum.php?f=35</string>
     <string name="doc_url" translatable="false">https://docs.videolan.me/vlc-user/android/</string>
-    <!-- VLC Redesign -->
-    <string name="rd_nav_music">Music</string>
 </resources>

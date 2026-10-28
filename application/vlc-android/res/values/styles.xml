@@ -902,7 +902,7 @@
     </style>
 
     <style name="VLCCardView" parent="@style/Widget.MaterialComponents.CardView">
-        <item name="cardCornerRadius">4dp</item>
+        <item name="cardCornerRadius">6dp</item>
         <item name="background">?attr/card_background</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:clickable">true</item>

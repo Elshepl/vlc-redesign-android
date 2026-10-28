@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign: Playlists left the bottom bar (now Home first) but stays a navigation target. -->
+    <item name="nav_playlists" type="id" />
+</resources>

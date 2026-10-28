@@ -33,44 +33,59 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <org.videolan.vlc.gui.view.AutofitButton
-                android:id="@+id/settingsButton"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        <!-- VLC Redesign: the entries of the desktop sidebar and menu that have no place in the bottom bar,
+             as one panel of rows (BG/A2, radius 12): Playlists, Recent, Open Network Stream, Settings, About. -->
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rd_more_panel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
-                android:ellipsize="middle"
-                android:singleLine="true"
-                android:text="@string/preferences"
-                app:icon="@drawable/ic_more_preferences"
-                app:iconSize="24dp"
-                app:layout_constraintEnd_toStartOf="@+id/aboutButton"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="200dp" />
-
-        <org.videolan.vlc.gui.view.AutofitButton
-                android:id="@+id/aboutButton"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:ellipsize="middle"
-                android:singleLine="true"
-                android:text="@string/about"
-                app:icon="@drawable/ic_more_about"
-                app:iconSize="24dp"
+                app:cardBackgroundColor="@color/rd_bg_a2"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/settingsButton"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="200dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/playlistsButton"
+                    style="@style/Redesign.MoreRow"
+                    android:text="@string/playlists"
+                    app:drawableStartCompat="@drawable/rd_ic_playlists" />
+            <View style="@style/Redesign.MoreDivider" />
+            <TextView
+                    android:id="@+id/historyButton"
+                    style="@style/Redesign.MoreRow"
+                    android:text="@string/rd_recent"
+                    app:drawableStartCompat="@drawable/rd_ic_recent" />
+            <View style="@style/Redesign.MoreDivider" />
+            <TextView
+                    android:id="@+id/streamsButton"
+                    style="@style/Redesign.MoreRow"
+                    android:text="@string/rd_open_network_stream"
+                    app:drawableStartCompat="@drawable/rd_ic_duo_streaming" />
+            <View style="@style/Redesign.MoreDivider" />
+            <TextView
+                    android:id="@+id/settingsButton"
+                    style="@style/Redesign.MoreRow"
+                    android:text="@string/preferences"
+                    app:drawableStartCompat="@drawable/rd_ic_settings" />
+            <View style="@style/Redesign.MoreDivider" />
+            <TextView
+                    android:id="@+id/aboutButton"
+                    style="@style/Redesign.MoreRow"
+                    android:text="@string/about"
+                    app:drawableStartCompat="@drawable/rd_ic_duo_info" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.cardview.widget.CardView
                 android:id="@+id/donationsButton"
@@ -80,9 +95,9 @@
                 android:visibility="gone"
                 app:cardBackgroundColor="?attr/donate_card"
                 app:cardCornerRadius="4dp"
-                app:layout_constraintEnd_toEndOf="@+id/aboutButton"
-                app:layout_constraintStart_toStartOf="@+id/settingsButton"
-                app:layout_constraintTop_toBottomOf="@+id/settingsButton"
+                app:layout_constraintEnd_toEndOf="@+id/rd_more_panel"
+                app:layout_constraintStart_toStartOf="@+id/rd_more_panel"
+                app:layout_constraintTop_toBottomOf="@+id/rd_more_panel"
                 tools:visibility="visible">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -153,7 +168,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/streams_entry"
-                app:title="@string/history" />
+                app:title="@string/rd_recent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
