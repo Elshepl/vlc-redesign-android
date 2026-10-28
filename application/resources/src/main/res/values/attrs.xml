@@ -117,4 +117,15 @@
         <attr name="is_left" format="boolean"/>
     </declare-styleable>
 
+    <!-- VLC Redesign theme colours (see vlc-android/res/values/redesign_styles.xml) -->
+    <attr name="rd_well" format="reference|color"/>
+    <attr name="rd_border" format="reference|color"/>
+    <attr name="rd_panel" format="reference|color"/>
+    <attr name="rd_icon" format="reference|color"/>
+    <attr name="rd_icon_dim" format="reference|color"/>
+    <attr name="rd_hover" format="reference|color"/>
+    <attr name="rd_topbar" format="reference|color"/>
+    <attr name="rd_accent_bright" format="reference|color"/>
+    <attr name="rd_text_section" format="reference|color"/>
+
 </resources>

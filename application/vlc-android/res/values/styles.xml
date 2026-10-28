@@ -13,6 +13,7 @@
     </style>
 
     <style name="Theme.VLC.Apearance" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/Widget.Redesign.Overflow</item>
         <item name="toolbar_popup_style">@style/ThemeOverlay.MaterialComponents</item>
         <item name="actionMenuTextColor">@color/white</item>
 
@@ -23,63 +24,63 @@
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
         </item>
 
-        <item name="colorPrimary">@color/orange800</item>
-        <item name="colorPrimaryDark">@color/orange700</item>
-        <item name="colorSecondary">@color/orange800</item>
-        <item name="colorOnSecondary">@color/grey50</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorAccent">@color/orange800</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorPrimaryDark">@color/rd_light_bg_b1</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <item name="colorOnSecondary">@color/rd_light_fg_b1</item>
+        <item name="colorOnPrimary">@color/rd_light_fg_b1</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeTheme">@style/ThemeOverlay.ActionMode</item>
         <item name="actionModeStyle">@style/ActionMode</item>
-        <item name="colorOnSurface">@color/black</item>
-        <item name="colorControlHighlight">@color/orange800</item>
-        <item name="colorControlNormal">@color/grey700</item>
+        <item name="colorOnSurface">@color/rd_light_fg_1</item>
+        <item name="colorControlHighlight">@color/rd_ripple_light</item>
+        <item name="colorControlNormal">@color/rd_light_fg_a2</item>
 
 
-        <item name="actionModeBackground">@color/action_mode_light</item>
-        <item name="background_default">@color/white</item>
+        <item name="actionModeBackground">@color/rd_light_bg_a3</item>
+        <item name="background_default">@color/rd_light_bg_b1</item>
         <item name="bottom_navigation_background">@drawable/bottom_navigation_background</item>
-        <item name="audio_header_background">@color/white</item>
-        <item name="audio_header_divider">@color/grey400</item>
-        <item name="default_divider">@color/black_transparent_20</item>
-        <item name="subtle_selection">@color/black_transparent_10</item>
-        <item name="audio_menu_icon">@color/black_transparent_50</item>
+        <item name="audio_header_background">@color/rd_light_bg_b1</item>
+        <item name="audio_header_divider">@color/rd_light_divider_dim</item>
+        <item name="default_divider">@color/rd_light_divider_dim</item>
+        <item name="subtle_selection">@color/rd_light_bg_a5</item>
+        <item name="audio_menu_icon">@color/rd_light_fg_a2</item>
         <item name="audio_list_background">@drawable/audio_list_background</item>
         <item name="audio_seek_bar">@drawable/audio_seekbar</item>
         <item name="mini_visualizer_color">@color/mini_visualizer</item>
         <item name="round_background">@drawable/round_background</item>
-        <item name="bottom_sheet_background">@color/white</item>
+        <item name="bottom_sheet_background">@color/rd_light_bg_a4</item>
         <item name="bookmark_background">@color/white_transparent_90</item>
-        <item name="bottom_sheet_radius">16dp</item>
-        <item name="bottom_navigation_color">@color/grey700</item>
-        <item name="header_background">@color/whitetransparent_ea</item>
-        <item name="background_default_darker">@color/grey200</item>
-        <item name="background_actionbar">@color/white</item>
+        <item name="bottom_sheet_radius">14dp</item>
+        <item name="bottom_navigation_color">@color/rd_light_fg_a2</item>
+        <item name="header_background">@color/rd_light_bg_b1</item>
+        <item name="background_default_darker">@color/rd_light_bg_a4</item>
+        <item name="background_actionbar">@color/rd_light_bg_b1</item>
         <item name="audio_player_background_tint">@color/white_transparent_75</item>
         <item name="background_audio_tips">@color/white_transparent_95</item>
-        <item name="audio_browser_separator">@color/orange800</item>
+        <item name="audio_browser_separator">@color/rd_accent_orange_main</item>
         <item name="dialog_circle_background">@color/dialog_circle_background</item>
-        <item name="font_default">@color/grey900</item>
-        <item name="font_light">@color/grey700</item>
-        <item name="font_disabled">@color/grey700transparent</item>
-        <item name="font_audio_light">@color/grey700</item>
-        <item name="list_subtitle">@color/list_subtitle</item>
-        <item name="list_title">@color/list_title</item>
+        <item name="font_default">@color/rd_light_fg_1</item>
+        <item name="font_light">@color/rd_light_fg_a1</item>
+        <item name="font_disabled">@color/rd_light_fg_a4</item>
+        <item name="font_audio_light">@color/rd_light_fg_a1</item>
+        <item name="list_subtitle">@color/rd_light_fg_a1</item>
+        <item name="list_title">@color/rd_light_fg_1</item>
         <item name="donate_card">@color/orange500</item>
         <item name="donate_item_background">@drawable/donate_background_color</item>
-        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowBackground">@color/rd_light_bg_b1</item>
         <item name="audio_chips_color">@color/black_transparent_75</item>
         <item name="audio_chips_text_color">@color/white_transparent_60</item>
-        <item name="bottom_navigation_focus">@color/orange_800_transparent_10</item>
+        <item name="bottom_navigation_focus">@color/rd_light_bg_a1</item>
         <item name="scan_background">@drawable/rounded_corners_scan_progress</item>
         <item name="otp_code_background">@drawable/rounded_corners_otp_code</item>
         <item name="fast_scroller_bubble">@drawable/fastscroller_bubble</item>
         <item name="fast_scroller_handle">@drawable/fastscroller_handle</item>
-        <item name="primary_focus">@color/orange_800_transparent_20</item>
-        <item name="swipe_refresh_background">?attr/background_default</item>
+        <item name="primary_focus">@color/rd_light_bg_a1</item>
+        <item name="swipe_refresh_background">@color/rd_light_bg_a4</item>
         <item name="dialogButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
-        <item name="permission_explanation_background">@color/grey200</item>
+        <item name="permission_explanation_background">@color/rd_light_bg_a4</item>
 
         <item name="gridview_progressbar">@drawable/gridview_progressbar</item>
         <item name="progress_mini_player">@drawable/progress_mini_player</item>
@@ -87,27 +88,68 @@
         <item name="ic_tips_double_tap">@drawable/tips_double_tap_500</item>
         <item name="ic_tips_tap">@drawable/tips_tap_500</item>
         <item name="ic_passthrough">@drawable/ic_passthrough</item>
-        <item name="ariane_text_color">@color/grey700</item>
+        <item name="ariane_text_color">@color/rd_light_fg_a1</item>
         <item name="ariane_text_size">14sp</item>
-        <item name="player_icon_color">@color/black</item>
-        <item name="card_background">@color/white</item>
-        <item name="default_separator">@color/grey300</item>
+        <item name="player_icon_color">@color/rd_light_fg_1</item>
+        <item name="card_background">@color/rd_light_bg_b1</item>
+        <item name="default_separator">@color/rd_light_divider_dim</item>
         <item name="empty_button">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
-        <item name="card_border">@color/grey300</item>
-        <item name="empty_foreground">@color/grey300</item>
-        <item name="empty_background">@color/grey50</item>
+        <item name="card_border">@color/rd_light_divider_bright</item>
+        <item name="empty_foreground">@color/rd_light_fg_a4</item>
+        <item name="empty_background">@color/rd_light_bg_b1</item>
         <item name="disabled_overlay_color">@color/white_transparent_50</item>
         <item name="video_card_background">@drawable/video_grid_card_background</item>
         <item name="video_list_background">@drawable/video_list_background</item>
         <item name="audio_chip_background">@drawable/rounded_corners_audio</item>
         <item name="audio_chip_text_color">@color/white_transparent_60</item>
-        <item name="empty_title">@color/grey850</item>
+        <item name="empty_title">@color/rd_light_fg_a1</item>
         <item name="audio_player_gradient_bottom">@drawable/gradient_audio_player_bottom</item>
         <item name="audio_player_gradient_top">@drawable/gradient_audio_player_top</item>
-        <item name="tips_item_background">@color/grey300</item>
-        <item name="about_text_primary">@color/black</item>
+        <item name="tips_item_background">@color/rd_light_bg_a4</item>
+        <item name="about_text_primary">@color/rd_light_fg_1</item>
         <item name="widget_preview_rounded_bg">@drawable/rounded_top_corners_left_background</item>
         <item name="sliderStyle">@style/VLC.Slider</item>
+        <item name="colorSurface">@color/rd_light_bg_a4</item>
+        <item name="colorOnBackground">@color/rd_light_fg_1</item>
+        <item name="android:colorBackground">@color/rd_light_bg_b1</item>
+        <item name="colorControlActivated">@color/rd_accent_orange_main</item>
+        <item name="android:textColorPrimary">@color/rd_light_fg_1</item>
+        <item name="android:textColorSecondary">@color/rd_light_fg_a1</item>
+        <item name="android:textColorTertiary">@color/rd_light_fg_a3</item>
+        <item name="android:textColorHint">@color/rd_light_fg_a4</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Redesign.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Redesign.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Redesign.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Redesign.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Redesign.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Redesign.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Redesign.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Redesign.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Redesign.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Redesign.Overline</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Redesign.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Redesign.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Redesign.Large</item>
+        <item name="materialButtonStyle">@style/Widget.Redesign.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Redesign.Button.Outlined</item>
+        <item name="borderlessButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Redesign.Dialog.Light</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.Redesign.Dialog.Light</item>
+        <item name="tabStyle">@style/TabLayout.VLC</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Redesign.FAB</item>
+        <item name="rd_well">@color/rd_light_bg_b2</item>
+        <item name="rd_border">@color/rd_light_divider_bright</item>
+        <item name="rd_panel">@color/rd_light_bg_a4</item>
+        <item name="rd_icon">@color/rd_light_fg_a2</item>
+        <item name="rd_icon_dim">@color/rd_light_fg_a3</item>
+        <item name="rd_hover">@color/rd_light_bg_a1</item>
+        <item name="rd_topbar">@color/rd_light_bg_a3</item>
+        <item name="rd_text_section">@color/rd_light_fg_2</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
     </style>
 
     <style name="VLC.Slider" parent="Widget.MaterialComponents.Slider">
@@ -133,7 +175,7 @@
 
     <style name="TextAppearance.VLC.Tooltip" parent="TextAppearance.Material3.BodySmall">
         <item name="android:textColor">@color/white</item>
-        <item name="fontFamily">sans-serif-black</item>
+        <item name="fontFamily">@font/inter_semibold</item>
     </style>
 
     <style name="Theme.VLC.PickerDialog" parent="Theme.VLC.PickerDialog.Light"/>
@@ -210,6 +252,7 @@
     </style>
 
     <style name="Theme.VLC.Apearance.Black" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/Widget.Redesign.Overflow</item>
         <item name="toolbar_popup_style">@style/ThemeOverlay.MaterialComponents.Dark</item>
 
         <item name="android:gridViewStyle">@style/Theme.VLC.List</item>
@@ -219,61 +262,61 @@
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
         </item>
 
-        <item name="colorPrimary">@color/orange500</item>
-        <item name="colorPrimaryDark">@color/transparent</item>
-        <item name="colorAccent">@color/orange600</item>
-        <item name="colorSecondary">@color/orange600</item>
-        <item name="colorOnSecondary">@color/grey50</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorControlHighlight">@color/orange500</item>
-        <item name="colorControlNormal">@color/grey300</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorPrimaryDark">@color/rd_dark_bg_b1</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <item name="colorOnSecondary">@color/rd_dark_fg_b1</item>
+        <item name="colorOnPrimary">@color/rd_dark_fg_b1</item>
+        <item name="colorControlHighlight">@color/rd_ripple_dark</item>
+        <item name="colorControlNormal">@color/rd_dark_fg_a2</item>
 
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeTheme">@style/ThemeOverlay.ActionMode.Dark</item>
         <item name="actionModeStyle">@style/ActionMode.Dark</item>
-        <item name="actionModeBackground">@color/action_mode_dark</item>
-        <item name="background_default">@color/dark_background</item>
+        <item name="actionModeBackground">@color/rd_dark_bg_a3</item>
+        <item name="background_default">@color/rd_dark_bg_b1</item>
         <item name="bottom_navigation_background">@drawable/bottom_navigation_background_dark</item>
-        <item name="audio_header_background">@color/mini_player_dark</item>
-        <item name="audio_header_divider">@color/black</item>
-        <item name="default_divider">@color/white_transparent_20</item>
-        <item name="subtle_selection">@color/white_transparent_10</item>
-        <item name="audio_menu_icon">@color/white_transparent_50</item>
+        <item name="audio_header_background">@color/rd_dark_bg_b1</item>
+        <item name="audio_header_divider">@color/rd_dark_divider_dim</item>
+        <item name="default_divider">@color/rd_dark_divider_dim</item>
+        <item name="subtle_selection">@color/rd_dark_bg_a5</item>
+        <item name="audio_menu_icon">@color/rd_dark_fg_a2</item>
         <item name="audio_list_background">@drawable/audio_list_background_black</item>
         <item name="audio_seek_bar">@drawable/audio_seekbar_black</item>
         <item name="mini_visualizer_color">@color/white_transparent_75</item>
         <item name="round_background">@drawable/round_background_dark</item>
-        <item name="bottom_sheet_background">@color/grey875</item>
+        <item name="bottom_sheet_background">@color/rd_dark_bg_a4</item>
         <item name="bookmark_background">@color/black_transparent_80</item>
-        <item name="bottom_sheet_radius">16dp</item>
-        <item name="bottom_navigation_color">@color/grey500</item>
-        <item name="header_background">@color/dark_background</item>
-        <item name="background_default_darker">@color/grey875</item>
-        <item name="background_actionbar">@color/dark_background</item>
+        <item name="bottom_sheet_radius">14dp</item>
+        <item name="bottom_navigation_color">@color/rd_dark_fg_a2</item>
+        <item name="header_background">@color/rd_dark_bg_b1</item>
+        <item name="background_default_darker">@color/rd_dark_bg_a4</item>
+        <item name="background_actionbar">@color/rd_dark_bg_b1</item>
         <item name="background_audio_tips">@color/black_transparent_90</item>
         <item name="audio_player_background_tint">@color/black_transparent_50</item>
-        <item name="audio_browser_separator">@color/orange500</item>
+        <item name="audio_browser_separator">@color/rd_accent_orange_main</item>
         <item name="dialog_circle_background">@color/dialog_circle_background_dark</item>
-        <item name="font_default">@color/grey50</item>
-        <item name="font_light">@color/grey600</item>
-        <item name="font_disabled">@color/grey600transparent</item>
-        <item name="font_audio_light">@color/grey400</item>
-        <item name="list_subtitle">@color/list_subtitle_dark</item>
-        <item name="list_title">@color/list_title_dark</item>
+        <item name="font_default">@color/rd_dark_fg_1</item>
+        <item name="font_light">@color/rd_dark_fg_a1</item>
+        <item name="font_disabled">@color/rd_dark_fg_a4</item>
+        <item name="font_audio_light">@color/rd_dark_fg_a1</item>
+        <item name="list_subtitle">@color/rd_dark_fg_a1</item>
+        <item name="list_title">@color/rd_dark_fg_1</item>
         <item name="donate_card">@color/orange500transparent</item>
         <item name="donate_item_background">@drawable/donate_background_color_dark</item>
-        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="android:windowBackground">@color/rd_dark_bg_b1</item>
         <item name="audio_chips_color">@color/white_transparent_90</item>
         <item name="audio_chips_text_color">@color/black_transparent_60</item>
-        <item name="bottom_navigation_focus">@color/white_transparent_10</item>
+        <item name="bottom_navigation_focus">@color/rd_dark_bg_a1</item>
         <item name="scan_background">@drawable/rounded_corners_scan_progress_dark</item>
         <item name="otp_code_background">@drawable/rounded_corners_otp_code_dark</item>
         <item name="fast_scroller_bubble">@drawable/fastscroller_bubble_black</item>
         <item name="fast_scroller_handle">@drawable/fastscroller_handle_black</item>
-        <item name="primary_focus">@color/orange_500_transparent_20</item>
-        <item name="swipe_refresh_background">?attr/background_default_darker</item>
+        <item name="primary_focus">@color/rd_dark_bg_a1</item>
+        <item name="swipe_refresh_background">@color/rd_dark_bg_a4</item>
         <item name="dialogButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
-        <item name="permission_explanation_background">@color/grey800</item>
+        <item name="permission_explanation_background">@color/rd_dark_bg_a4</item>
 
         <item name="gridview_progressbar">@drawable/gridview_progressbar_w</item>
         <item name="progress_mini_player">@drawable/progress_mini_player_black</item>
@@ -281,28 +324,70 @@
         <item name="ic_tips_double_tap">@drawable/tips_double_tap</item>
         <item name="ic_tips_tap">@drawable/tips_tap</item>
         <item name="ic_passthrough">@drawable/ic_passthrough</item>
-        <item name="ariane_text_color">@color/grey50</item>
+        <item name="ariane_text_color">@color/rd_dark_fg_a1</item>
         <item name="ariane_text_size">14sp</item>
-        <item name="player_icon_color">@color/white</item>
-        <item name="card_background">@color/black</item>
-        <item name="default_separator">@color/grey700</item>
+        <item name="player_icon_color">@color/rd_dark_fg_1</item>
+        <item name="card_background">@color/rd_dark_bg_b1</item>
+        <item name="default_separator">@color/rd_dark_divider_dim</item>
         <item name="empty_button">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
 
-        <item name="card_border">@color/grey800</item>
-        <item name="empty_foreground">@color/grey800</item>
-        <item name="empty_background">@color/grey900</item>
+        <item name="card_border">@color/rd_dark_divider_bright</item>
+        <item name="empty_foreground">@color/rd_dark_fg_a4</item>
+        <item name="empty_background">@color/rd_dark_bg_b1</item>
         <item name="disabled_overlay_color">@color/black_transparent_50</item>
         <item name="video_card_background">@drawable/video_grid_card_background_dark</item>
         <item name="video_list_background">@drawable/video_list_background_dark</item>
         <item name="audio_chip_background">@drawable/rounded_corners_audio_dark</item>
         <item name="audio_chip_text_color">@color/black_transparent_60</item>
-        <item name="empty_title">@color/grey300</item>
+        <item name="empty_title">@color/rd_dark_fg_a1</item>
         <item name="audio_player_gradient_bottom">@drawable/gradient_audio_player_bottom_dark</item>
         <item name="audio_player_gradient_top">@drawable/gradient_audio_player_top_dark</item>
-        <item name="tips_item_background">@color/grey900</item>
-        <item name="about_text_primary">@color/orange500</item>
+        <item name="tips_item_background">@color/rd_dark_bg_a4</item>
+        <item name="about_text_primary">@color/rd_dark_fg_1</item>
         <item name="widget_preview_rounded_bg">@drawable/rounded_top_corners_left_background_dark</item>
         <item name="sliderStyle">@style/VLC.Slider.Dark</item>
+        <item name="colorSurface">@color/rd_dark_bg_a4</item>
+        <item name="colorOnSurface">@color/rd_dark_fg_1</item>
+        <item name="colorOnBackground">@color/rd_dark_fg_1</item>
+        <item name="android:colorBackground">@color/rd_dark_bg_b1</item>
+        <item name="colorControlActivated">@color/rd_accent_orange_main</item>
+        <item name="android:textColorPrimary">@color/rd_dark_fg_1</item>
+        <item name="android:textColorSecondary">@color/rd_dark_fg_a1</item>
+        <item name="android:textColorTertiary">@color/rd_dark_fg_a3</item>
+        <item name="android:textColorHint">@color/rd_dark_fg_a4</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Redesign.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Redesign.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Redesign.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Redesign.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Redesign.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Redesign.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Redesign.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Redesign.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Redesign.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Redesign.Overline</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Redesign.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Redesign.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Redesign.Large</item>
+        <item name="materialButtonStyle">@style/Widget.Redesign.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Redesign.Button.Outlined</item>
+        <item name="borderlessButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Redesign.Dialog.Dark</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.Redesign.Dialog.Dark</item>
+        <item name="tabStyle">@style/TabLayout.VLC</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Redesign.FAB</item>
+        <item name="rd_well">@color/rd_dark_bg_b2</item>
+        <item name="rd_border">@color/rd_dark_divider_bright</item>
+        <item name="rd_panel">@color/rd_dark_bg_a4</item>
+        <item name="rd_icon">@color/rd_dark_fg_a2</item>
+        <item name="rd_icon_dim">@color/rd_dark_fg_a3</item>
+        <item name="rd_hover">@color/rd_dark_bg_a1</item>
+        <item name="rd_topbar">@color/rd_dark_bg_a3</item>
+        <item name="rd_text_section">@color/rd_dark_fg_2</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
     </style>
 
 
@@ -623,14 +708,14 @@
 
     <style name="VLC.Onboarding.Title" parent="TextAppearance.AppCompat.Headline">
         <item name="android:textSize">22sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="KeyboardButton">
         <item name="android:background">@drawable/keyboard_button_background</item>
         <item name="android:focusable">true</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">16sp</item>
         <item name="android:elevation">0dp</item>
@@ -638,7 +723,7 @@
 
     <style name="VLC.Onboarding.Text" parent="TextAppearance.AppCompat.Headline">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">@font/inter</item>
         <item name="android:textColor">@color/white_transparent_80</item>
     </style>
 
@@ -666,11 +751,11 @@
 
     <style name="Toolbar.VLC" parent="ThemeOverlay.MaterialComponents.Toolbar.Surface">
         <item name="android:textCursorDrawable">@drawable/cursor_w</item>
-        <item name="colorControlNormal">@color/grey700</item>
+        <item name="colorControlNormal">@color/rd_light_fg_a2</item>
     </style>
 
     <style name="ExpandableToolbar.VLC" parent="Toolbar.VLC">
-        <item name="background">@color/white</item>
+        <item name="background">@color/rd_light_bg_b1</item>
     </style>
 
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded.Shadow" parent="TextAppearance.MaterialComponents.Headline5">
@@ -683,11 +768,15 @@
 
     <style name="TabLayout.VLC" parent="Widget.MaterialComponents.TabLayout">
         <item name="android:background">?attr/background_default</item>
-        <item name="tabRippleColor">?attr/colorPrimary</item>
-        <item name="tabMode">scrollable</item>
+                <item name="tabMode">scrollable</item>
         <item name="tabIndicatorFullWidth">false</item>
         <item name="tabIndicator">@drawable/tab_indicator</item>
-        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Redesign.Tab</item>
+        <item name="tabTextColor">?attr/font_light</item>
+        <item name="tabSelectedTextColor">?attr/font_default</item>
+        <item name="tabRippleColor">?attr/colorControlHighlight</item>
     </style>
 
     <style name="Result.Title" parent="Base.TextAppearance.AppCompat.Subhead">
@@ -787,18 +876,18 @@
         <item name="android:minHeight">56dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">?attr/font_default</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textSize">18sp</item>
     </style>
 
     <style name="Theme.VLC.HorizontalListTitle">
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">?attr/colorAccent</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="ToolbarTitleText" parent="@style/TextAppearance.MaterialComponents.Headline6">
-        <item name="android:textColor">?attr/colorControlNormal</item>
+    <style name="ToolbarTitleText" parent="@style/TextAppearance.Redesign.Headline6">
+        <item name="android:textColor">?attr/font_default</item>
     </style>
 
     <style name="VLCCardView" parent="@style/Widget.MaterialComponents.CardView">
@@ -834,7 +923,7 @@
     <style name="About.Title">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">?attr/font_default</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
 
     </style>
 

@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/inter_medium"
             android:gravity="center"
             android:textColor="?attr/font_audio_light"
             android:textSize="10sp" />

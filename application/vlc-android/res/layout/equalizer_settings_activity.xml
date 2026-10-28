@@ -56,7 +56,7 @@
                                 android:layout_marginStart="8dp"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="8dp"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/inter_medium"
                                 android:textColor="?attr/font_default"
                                 android:text="@string/equalizer_overwrite_warning"
                                 vlc:layout_constraintEnd_toEndOf="parent"

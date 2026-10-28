@@ -98,7 +98,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/rounded_corners_black_more_transparent"
-                    android:fontFamily="sans-serif-medium"
+                    android:fontFamily="@font/inter_medium"
                     android:padding="16dp"
                     android:textColor="@color/white"
                     android:textSize="16sp"

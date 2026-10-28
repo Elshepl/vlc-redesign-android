@@ -82,7 +82,7 @@
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="sans-serif-medium"
+                                    android:fontFamily="@font/inter_medium"
                                     android:text="@string/widget_preview"
                                     android:textColor="?attr/font_default"
                                     android:textSize="18sp" />

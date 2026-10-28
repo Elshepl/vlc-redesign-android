@@ -95,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:fontFamily="sans-serif-light"
+                        android:fontFamily="@font/inter_light"
                         android:text="@{filesText}"
                         android:textSize="12sp"
                         android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"

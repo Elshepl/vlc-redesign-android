@@ -75,7 +75,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:duplicateParentState="true"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/inter"
                 android:gravity="center_vertical"
                 android:maxLines="1"
                 android:textColor="?attr/list_title"

@@ -97,7 +97,7 @@
                             android:layout_marginStart="@dimen/default_margin"
                             android:layout_marginEnd="@dimen/default_margin"
                             android:ellipsize="end"
-                            android:fontFamily="sans-serif-medium"
+                            android:fontFamily="@font/inter_medium"
                             android:maxLines="3"
                             android:text="@{playlist.title}"
                             android:contentDescription="@{TalkbackUtil.INSTANCE.getAlbumTitle(context, playlist.title)}"

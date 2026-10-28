@@ -29,23 +29,23 @@
 
     <item
             android:id="@+id/nav_video"
-            android:title="@string/video"
-            android:icon="@drawable/ic_video" />
+            android:title="@string/rd_nav_videos"
+            android:icon="@drawable/rd_nav_sel_videos" />
     <item
             android:id="@+id/nav_audio"
-            android:title="@string/audio"
-            android:icon="@drawable/ic_menu_audio" />
+            android:title="@string/rd_nav_music"
+            android:icon="@drawable/rd_nav_sel_music" />
     <item
             android:id="@+id/nav_directories"
-            android:title="@string/browse"
-            android:icon="@drawable/ic_folder" />
+            android:title="@string/network"
+            android:icon="@drawable/rd_nav_sel_browse" />
     <item
             android:id="@+id/nav_playlists"
             android:title="@string/playlists"
-            android:icon="@drawable/ic_playlist" />
+            android:icon="@drawable/rd_nav_sel_playlists" />
     <item
             android:id="@+id/nav_more"
             android:title="@string/more"
-            android:icon="@drawable/ic_nav_more" />
+            android:icon="@drawable/rd_nav_sel_more" />
 
 </menu>

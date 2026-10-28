@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The VLC Redesign design system (Juxtopposed's "VLC Redesign (Community)" Figma file, CC BY 4.0) applied to the
+  Android components. Values come from design/tokens.json of the desktop repository (see
+  buildsystem/redesign/import_design.py): Inter, 14 for the interface text, 12 small, 15 the player controls,
+  16 the section titles; radii 6 (controls), 10 (menus), 12 (cards), 14 (panels).
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="rd_ripple_dark">#14FFFFFF</color>
+    <color name="rd_ripple_light">#14000000</color>
+
+    <!-- Text -->
+    <style name="TextAppearance.Redesign.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/inter_light</item>
+        <item name="android:fontFamily">@font/inter_light</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.Redesign.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <!-- Tabs: 14 Inter, sentence case, like the desktop view switches. -->
+    <style name="TextAppearance.Redesign.Tab" parent="TextAppearance.Design.Tab">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <!-- The bottom navigation labels: 12 Inter, the same size checked or not. -->
+    <style name="TextAppearance.Redesign.Nav" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <!-- The player times: Inter 15 (fontControl), tabular figures so they do not move. -->
+    <style name="TextAppearance.Redesign.Time" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+
+    <!-- Shapes -->
+    <style name="ShapeAppearance.Redesign.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+    <style name="ShapeAppearance.Redesign.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+    <style name="ShapeAppearance.Redesign.Large" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+    <style name="ShapeAppearance.Redesign.Card" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- Buttons: 32 high, radius 6, the B2 well, 14 Inter (500:3063 "Button"). -->
+    <style name="Widget.Redesign.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">6dp</item>
+        <item name="backgroundTint">@color/rd_button_primary_bg</item>
+        <item name="android:textColor">@color/rd_button_primary_text</item>
+        <item name="rippleColor">@color/rd_ripple_dark</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.Redesign.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">6dp</item>
+        <item name="backgroundTint">?attr/rd_well</item>
+        <item name="strokeColor">?attr/rd_border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">?attr/font_default</item>
+    </style>
+    <style name="Widget.Redesign.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
+        <item name="cornerRadius">6dp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+    <style name="Widget.Redesign.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Redesign.Fab</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="tint">?attr/colorOnPrimary</item>
+        <item name="elevation">4dp</item>
+    </style>
+    <style name="ShapeAppearance.Redesign.Fab" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <!-- The toolbar overflow: the desktop's horizontal "more". -->
+    <style name="Widget.Redesign.Overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="srcCompat">@drawable/rd_nav_more</item>
+        <item name="android:src">@drawable/rd_nav_more</item>
+    </style>
+
+    <!-- Menus (2107:5903 "context menu"): A4 panel, radius 10, rows of 48, 14 Inter in FG/A2. -->
+    <style name="Widget.Redesign.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@drawable/rd_menu_background</item>
+        <item name="android:popupElevation">8dp</item>
+    </style>
+
+    <!-- Dialogs: the panel (radius 14, A4), title 16, buttons in the accent. -->
+    <style name="ThemeOverlay.Redesign.Dialog.Dark" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <item name="colorSurface">@color/rd_dark_bg_a4</item>
+        <item name="colorOnSurface">@color/rd_dark_fg_1</item>
+        <item name="android:textColorPrimary">@color/rd_dark_fg_1</item>
+        <item name="android:textColorSecondary">@color/rd_dark_fg_a1</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Redesign.Large</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Redesign.DialogTitle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Dialog.Light" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <item name="colorSurface">@color/rd_light_bg_a4</item>
+        <item name="colorOnSurface">@color/rd_light_fg_1</item>
+        <item name="android:textColorPrimary">@color/rd_light_fg_1</item>
+        <item name="android:textColorSecondary">@color/rd_light_fg_a1</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Redesign.Large</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Redesign.DialogTitle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Redesign.Button.Text</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+    </style>
+    <style name="Redesign.DialogTitle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textAppearance">@style/TextAppearance.Redesign.Headline6</item>
+    </style>
+
+    <!-- The library header: "N items" and the like (12, FG/A1). -->
+    <style name="Redesign.Text.Small" parent="VLC.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?attr/font_light</item>
+    </style>
+</resources>

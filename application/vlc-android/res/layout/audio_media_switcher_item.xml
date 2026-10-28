@@ -28,7 +28,7 @@
             android:layout_marginStart="16dp"
             android:background="#00000000"
             android:ellipsize="marquee"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/inter_medium"
             android:maxLines="1"
             android:scrollHorizontally="true"
             android:singleLine="true"
