@@ -151,7 +151,7 @@ class VideoBrowserFragment : BaseFragment(), TabLayout.OnTabSelectedListener, Fi
     }
 
     private fun getPageTitle(position: Int) = when (position) {
-        0 -> getString(R.string.videos)
+        0 -> getString(R.string.rd_nav_videos)
         else -> getString(R.string.playlists)
     }
 

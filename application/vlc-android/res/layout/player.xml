@@ -50,17 +50,17 @@
 
     <View
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="64dp"
             android:layout_gravity="bottom"
             android:id="@+id/hud_background"
-            android:background="@drawable/gradient_hud_player"
+            android:background="@drawable/rd_player_bar"
             android:visibility="gone"/>
 
     <View
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="@dimen/rd_player_topbar_height"
             android:id="@+id/hud_right_background"
-            android:background="@drawable/gradient_title_player"
+            android:background="@drawable/rd_player_bar"
             android:visibility="gone"/>
 
     <FrameLayout

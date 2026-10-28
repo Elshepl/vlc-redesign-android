@@ -1,36 +1,10 @@
-<!--
-  ~ *************************************************************************
-  ~  ic_play_player.xml
-  ~ **************************************************************************
-  ~ Copyright © 2020 VLC authors and VideoLAN
-  ~ Author: Nicolas POMEPUY
-  ~ This program is free software; you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation; either version 2 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ This program is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with this program; if not, write to the Free Software
-  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
-  ~ ***************************************************************************
-  ~
-  ~
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign play button (the control bar's 54 x 28 accent pill, radius 6, the play glyph of 22 between
+     paddings of 17 and 15: design/tokens.json size.controlBar.play*, icon.play; design/icons/svg/play.svg). -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="48dp"
-    android:height="48dp"
-    android:viewportWidth="48"
-    android:viewportHeight="48">
-  <path
-      android:pathData="M20,33L32,24L20,15L20,33ZM24,4C12.96,4 4,12.96 4,24C4,35.04 12.96,44 24,44C35.04,44 44,35.04 44,24C44,12.96 35.04,4 24,4ZM24,41.5C14.3531,41.5 6.5,33.6469 6.5,24C6.5,14.3531 14.3531,6.5 24,6.5C33.6469,6.5 41.5,14.3531 41.5,24C41.5,33.6469 33.6469,41.5 24,41.5Z"
-      android:strokeWidth="1"
-      android:fillColor="?attr/player_icon_color"
-      android:fillType="nonZero"
-      android:strokeColor="#00000000"/>
+    android:width="54dp" android:height="28dp" android:viewportWidth="54" android:viewportHeight="28">
+    <path android:pathData="M6,0h42a6,6 0 0,1 6,6v16a6,6 0 0,1 -6,6h-42a6,6 0 0,1 -6,-6v-16a6,6 0 0,1 6,-6z" android:fillColor="?attr/colorPrimary" />
+    <group android:translateX="17" android:translateY="3" android:scaleX="0.9167" android:scaleY="0.9167">
+        <path android:pathData="M8 16.9554V7.04464C8 6.21249 8.95708 5.7444 9.61394 6.25529L15.9851 11.2106C16.4999 11.611 16.4999 12.389 15.9851 12.7894L9.61394 17.7447C8.95708 18.2556 8 17.7875 8 16.9554Z" android:fillColor="@color/rd_dark_fg_b1" android:strokeColor="@color/rd_dark_fg_b1" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    </group>
 </vector>

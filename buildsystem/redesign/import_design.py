@@ -280,6 +280,9 @@ def icons(design, version):
                 print("  %s: literal colours %s" % (f, ", ".join(sorted(missing))))
             write(os.path.join(ddir, name + ".xml"), hdr + xml)
             count += 1
+    for name in EXTRA:
+        write(os.path.join(ddir, "rd_ic_%s.xml" % name), hdr + extra_xml(name, "@color/rd_fg_a2"))
+        count += 1
     # The active (accent) state of the single-colour icons, as the desktop sidebar and player draw them.
     folder = os.path.join(design, "icons", "svg")
     for n in ACTIVE_VARIANTS:
@@ -287,6 +290,47 @@ def icons(design, version):
         write(os.path.join(ddir, "rd_ic_%s_active.xml" % n.replace("-", "_")), hdr + xml)
         count += 1
     print("icons:", count)
+
+
+# Glyphs the design has only as PNG (design/icons/png: cast, snapshot, PiP, bookmark, repeat, speed) or not at all
+# (rotate, lock, sleep), drawn here in its style: 24 box, 1.5 strokes with round caps and joins, FG/A2.
+# name -> list of (pathData, "s" stroke | "f" fill)
+EXTRA = {
+    "cast": [("M3,9V8a3,3 0 0,1 3,-3h12a3,3 0 0,1 3,3v8a3,3 0 0,1 -3,3h-5", "s"), ("M3,12.5a6.5,6.5 0 0,1 6.5,6.5", "s"),
+             ("M3,15.75a3.25,3.25 0 0,1 3.25,3.25", "s"), ("M2.25,19a1,1 0 1,0 2,0a1,1 0 1,0 -2,0z", "f")],
+    "cast_on": [("M3,9V8a3,3 0 0,1 3,-3h12a3,3 0 0,1 3,3v8a3,3 0 0,1 -3,3h-5", "s"), ("M3,12.5a6.5,6.5 0 0,1 6.5,6.5", "s"),
+                ("M3,15.75a3.25,3.25 0 0,1 3.25,3.25", "s"), ("M2.25,19a1,1 0 1,0 2,0a1,1 0 1,0 -2,0z", "f"),
+                ("M7,9h10v6h-3.5a6,6 0 0,0 -6.5,-5z", "f")],
+    "snapshot": [("M4,8V6a2,2 0 0,1 2,-2h2M16,4h2a2,2 0 0,1 2,2v2M20,16v2a2,2 0 0,1 -2,2h-2M8,20H6a2,2 0 0,1 -2,-2v-2", "s"),
+                 ("M9,12a3,3 0 1,0 6,0a3,3 0 1,0 -6,0z", "s")],
+    "pip": [("M6,5h12a3,3 0 0,1 3,3v8a3,3 0 0,1 -3,3h-12a3,3 0 0,1 -3,-3v-8a3,3 0 0,1 3,-3z", "s"),
+            ("M13,12h4a1,1 0 0,1 1,1v2a1,1 0 0,1 -1,1h-4a1,1 0 0,1 -1,-1v-2a1,1 0 0,1 1,-1z", "f")],
+    "bookmark": [("M6,5a2,2 0 0,1 2,-2h8a2,2 0 0,1 2,2v15.5l-6,-4l-6,4z", "s"), ("M12,7.25v5M9.5,9.75h5", "s")],
+    "repeat": [("M17,3.5l3,3l-3,3M20,6.5H8a4,4 0 0,0 -4,4v1M7,20.5l-3,-3l3,-3M4,17.5h12a4,4 0 0,0 4,-4v-1", "s")],
+    "repeat_one": [("M17,3.5l3,3l-3,3M20,6.5H8a4,4 0 0,0 -4,4v1M7,20.5l-3,-3l3,-3M4,17.5h12a4,4 0 0,0 4,-4v-1", "s"),
+                   ("M11,10.5l1.25,-0.75v4.75", "s")],
+    "rotate": [("M4.5,9.5A8,8 0 0,1 18,6M18,2.75V6h-3.25", "s"), ("M19.5,14.5A8,8 0 0,1 6,18M6,21.25V18h3.25", "s"),
+               ("M10,9h4a1,1 0 0,1 1,1v4a1,1 0 0,1 -1,1h-4a1,1 0 0,1 -1,-1v-4a1,1 0 0,1 1,-1z", "s")],
+    "lock": [("M7.5,10.75V8a4.5,4.5 0 0,1 9,0v2.75", "s"),
+             ("M7,10.75h10a2,2 0 0,1 2,2v6.5a2,2 0 0,1 -2,2h-10a2,2 0 0,1 -2,-2v-6.5a2,2 0 0,1 2,-2z", "s"), ("M12,15v2.25", "s")],
+    "backward": [("M5.75,8.5A7.25,7.25 0 0,1 18.6,7.25M5.25,4.25V8.75H9.75", "s")],
+    "forward": [("M18.25,8.5A7.25,7.25 0 0,0 5.4,7.25M18.75,4.25V8.75H14.25", "s")],
+    "speed": [("M4.5,17a8,8 0 1,1 15,0", "s"), ("M12,13l3.5,-4", "s"), ("M10.75,13a1.25,1.25 0 1,0 2.5,0a1.25,1.25 0 1,0 -2.5,0z", "f")],
+    "sleep": [("M19.5,14.5A8,8 0 1,1 9.5,4.5a6.5,6.5 0 0,0 10,10z", "s")],
+    "more": [("M4.5,12a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM10.5,12a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM16.5,12a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0z", "f")],
+}
+
+
+def extra_xml(name, colour, size=24):
+    out = ['<vector xmlns:android="http://schemas.android.com/apk/res/android"',
+           '    android:width="%ddp" android:height="%ddp" android:viewportWidth="24" android:viewportHeight="24">' % (size, size)]
+    for d, kind in EXTRA[name]:
+        if kind == "s":
+            out.append('    <path android:pathData="%s" android:strokeColor="%s" android:strokeWidth="1.5" '
+                       'android:strokeLineCap="round" android:strokeLineJoin="round" />' % (d, colour))
+        else:
+            out.append('    <path android:pathData="%s" android:fillColor="%s" />' % (d, colour))
+    return "\n".join(out) + "\n</vector>\n"
 
 
 # Existing VLC Android icons redrawn with the redesign's glyphs: name -> (svg, size in dp, colour of the glyph).
@@ -303,6 +347,12 @@ OVERRIDES = {
     "ic_player_next": ("next", 32, PC), "ic_player_previous": ("previous", 32, PC),
     "ic_player_audiotrack": ("subtitles", 32, PC), "ic_player_playqueue": ("queue", 32, PC),
     "ic_player_ratio": ("fullscreen", 32, PC), "ic_player_navmenu": ("player-settings", 32, PC),
+    "ic_player_rotate": ("+rotate", 32, PC), "ic_player_renderer": ("+cast", 24, PC), "ic_player_renderer_on": ("+cast_on", 24, PC),
+    "ic_player_screenshot": ("+snapshot", 32, PC), "ic_lock_player": ("+lock", 32, PC),
+    "ic_player_rewind_10": ("+backward", 32, PC), "ic_player_forward_10": ("+forward", 32, PC),
+    "ic_player_more": ("+more", 32, PC), "ic_renderer": ("+cast", 24, CC), "ic_renderer_on": ("+cast_on", 24, "?attr/colorPrimary"),
+    "ic_bookmark": ("+bookmark", 48, PC), "ic_sleep": ("+sleep", 48, PC), "ic_speed": ("+speed", 48, PC),
+    "ic_more": ("+more", 32, CC), "ic_repeat": ("+repeat", 48, PC), "ic_repeat_one": ("+repeat_one", 48, "?attr/colorPrimary"),
 }
 
 
@@ -310,6 +360,9 @@ def overrides(design, version):
     ddir = os.path.join(RES, "drawable")
     hdr = '<?xml version="1.0" encoding="utf-8"?>\n' + HEADER % version
     for name, (src, size, colour) in OVERRIDES.items():
+        if src.startswith("+"):
+            write(os.path.join(ddir, name + ".xml"), hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android icon.") + extra_xml(src[1:], colour, size))
+            continue
         cmap = {"@color/rd_fg_a2": colour, "@color/rd_fg_a3": colour, "@color/rd_accent_dim": colour}
         if src == "sort":
             cmap["?attr/colorPrimary"] = None  # the "sorted" dot is drawn by the sort button itself

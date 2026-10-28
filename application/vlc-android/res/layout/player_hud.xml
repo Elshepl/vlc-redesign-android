@@ -34,6 +34,27 @@
             tools:theme="@style/Theme.VLC.Player"
             tools:visibility="visible">
 
+        <!-- VLC Redesign: the control bar (Dark/BG/A3) under the seek row and the controls -->
+        <Space
+                android:id="@+id/rd_bar_top"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                vlc:layout_constraintBottom_toTopOf="@+id/player_overlay_seekbar"
+                vlc:layout_constraintStart_toStartOf="parent"
+                vlc:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+                android:id="@+id/rd_bar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/rd_player_bar"
+                android:clickable="false"
+                android:importantForAccessibility="no"
+                vlc:layout_constraintTop_toTopOf="@+id/rd_bar_top"
+                vlc:layout_constraintBottom_toBottomOf="parent"
+                vlc:layout_constraintStart_toStartOf="parent"
+                vlc:layout_constraintEnd_toEndOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/stats_container"
                 android:layout_width="0dp"
@@ -201,9 +222,10 @@
         <org.videolan.vlc.gui.view.FocusableTextView
                 android:id="@+id/player_overlay_time"
                 style="@style/VLC.Player.TimeText"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:minWidth="56dp"
+                android:layout_marginStart="12dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:importantForAccessibility="no"
@@ -212,18 +234,18 @@
                 android:onClick="@{(v) -> player.toggleTimeDisplay()}"
                 android:text="@{Tools.millisToString(progress.time)}"
                 tools:text="0:32"
-                vlc:layout_constraintBottom_toTopOf="@+id/player_overlay_seekbar"
-                vlc:layout_constraintRight_toLeftOf="@+id/player_overlay_length"
-                vlc:layout_constraintHorizontal_chainStyle="spread"
-                vlc:layout_constraintLeft_toLeftOf="parent" />
+                vlc:layout_constraintBottom_toBottomOf="@+id/player_overlay_seekbar"
+                vlc:layout_constraintTop_toTopOf="@+id/player_overlay_seekbar"
+                vlc:layout_constraintStart_toStartOf="parent" />
 
 
         <org.videolan.vlc.gui.view.FocusableTextView
                 android:id="@+id/player_overlay_length"
                 style="@style/VLC.Player.TimeText"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
+                android:minWidth="56dp"
+                android:layout_marginEnd="12dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="right"
@@ -231,9 +253,9 @@
                 android:nextFocusUp="@+id/ab_repeat_add_marker"
                 android:onClick="@{(v) -> player.toggleTimeDisplay()}"
                 tools:text="56:37"
-                vlc:layout_constraintBottom_toTopOf="@+id/player_overlay_seekbar"
-                vlc:layout_constraintRight_toRightOf="parent"
-                vlc:layout_constraintLeft_toRightOf="@+id/player_overlay_time"
+                vlc:layout_constraintBottom_toBottomOf="@+id/player_overlay_seekbar"
+                vlc:layout_constraintTop_toTopOf="@+id/player_overlay_seekbar"
+                vlc:layout_constraintEnd_toEndOf="parent"
                 vlc:length="@{progress.length}"
                 vlc:time="@{progress.time}" />
 
@@ -244,17 +266,20 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:layoutDirection="ltr"
-                android:maxHeight="@dimen/seekbar_height"
-                android:minHeight="@dimen/seekbar_height"
+                android:maxHeight="28dp"
+                android:minHeight="28dp"
                 android:paddingStart="0dp"
                 android:paddingEnd="0dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:progress="@{player.service.getTime(progress.time)}"
-                android:progressDrawable="@drawable/po_seekbar_video"
+                android:progressDrawable="@drawable/rd_seekbar_player"
                 android:splitTrack="false"
-                android:thumb="@drawable/ic_seekbar_thumb"
+                android:thumb="@drawable/rd_seekbar_player_thumb"
+                android:thumbOffset="4dp"
                 vlc:layout_constraintBottom_toTopOf="@+id/player_overlay_play"
-                vlc:layout_constraintEnd_toEndOf="parent"
-                vlc:layout_constraintStart_toStartOf="parent"
+                vlc:layout_constraintEnd_toStartOf="@+id/player_overlay_length"
+                vlc:layout_constraintStart_toEndOf="@+id/player_overlay_time"
                 vlc:mediamax="@{(int)progress.length}" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -407,6 +432,8 @@
                     android:importantForAccessibility="no"
                     tools:visibility="visible"
                     android:textSize="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_marginTop="5dp"
                     android:textStyle="bold"
                     vlc:layout_constraintBottom_toBottomOf="@+id/player_overlay_rewind"
                     vlc:layout_constraintEnd_toEndOf="@+id/player_overlay_rewind"
@@ -418,6 +445,7 @@
                     android:id="@+id/player_overlay_play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="8dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:contentDescription="@string/play"
@@ -457,6 +485,8 @@
                     android:visibility="gone"
                     tools:visibility="visible"
                     android:textSize="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_marginTop="5dp"
                     android:importantForAccessibility="no"
                     android:textStyle="bold"
                     vlc:layout_constraintBottom_toBottomOf="@+id/player_overlay_forward"

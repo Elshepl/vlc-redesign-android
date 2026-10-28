@@ -150,6 +150,9 @@
         <item name="rd_topbar">@color/rd_light_bg_a3</item>
         <item name="rd_text_section">@color/rd_light_fg_2</item>
         <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
+        <item name="snackbarStyle">@style/Widget.Redesign.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Redesign.Snackbar.Text</item>
+        <item name="snackbarButtonStyle">@style/Widget.Redesign.Snackbar.Button</item>
     </style>
 
     <style name="VLC.Slider" parent="Widget.MaterialComponents.Slider">
@@ -388,6 +391,9 @@
         <item name="rd_topbar">@color/rd_dark_bg_a3</item>
         <item name="rd_text_section">@color/rd_dark_fg_2</item>
         <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
+        <item name="snackbarStyle">@style/Widget.Redesign.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Redesign.Snackbar.Text</item>
+        <item name="snackbarButtonStyle">@style/Widget.Redesign.Snackbar.Button</item>
     </style>
 
 
@@ -592,9 +598,12 @@
         <item name="bottom_sheet_radius">4dp</item>
 
 
-        <item name="colorPrimary">@color/orange800</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/transparent</item>
-        <item name="colorAccent">@color/orange500</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
         <item name="background_default_darker">@color/grey875</item>
 
         <item name="background_default">@color/grey850</item>
@@ -618,7 +627,7 @@
         <item name="android:colorControlHighlight" tools:targetApi="lollipop">@color/orange500
         </item>
         <item name="colorControlHighlight">@color/orange500</item>
-        <item name="player_icon_color">@color/grey50</item>
+        <item name="player_icon_color">@color/rd_dark_fg_a2</item>
         <item name="background_audio_tips">@color/white_transparent_95</item>
         <item name="audio_seek_bar">@drawable/audio_seekbar_black</item>
     </style>
@@ -695,13 +704,14 @@
         <item name="android:ellipsize">start</item>
     </style>
 
+    <!-- VLC Redesign: the control bar times, Inter in FG/A1 on the bar, tabular figures -->
     <style name="VLC.Player.TimeText" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:shadowColor">@color/blacktransparent</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:shadowDy">2</item>
-        <item name="android:shadowRadius">6</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/rd_dark_fg_a1</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:gravity">center</item>
         <item name="android:paddingStart">4dp</item>
         <item name="android:paddingEnd">4dp</item>
     </style>

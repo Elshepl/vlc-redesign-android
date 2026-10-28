@@ -116,4 +116,6 @@
     <dimen name="audio_cover">48dp</dimen>
     <dimen name="video_cover">100dp</dimen>
 
+    <!-- VLC Redesign: the player top bar under the status bar -->
+    <dimen name="rd_player_topbar_height">112dp</dimen>
 </resources>

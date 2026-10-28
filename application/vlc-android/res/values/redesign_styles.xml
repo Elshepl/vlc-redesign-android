@@ -201,6 +201,23 @@
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Headline6</item>
     </style>
 
+    <!-- Snackbars: the menu panel (A4, radius 10), text FG/1, the action in the accent. -->
+    <style name="Widget.Redesign.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="backgroundTint">@color/rd_bg_a4</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Redesign.Medium</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="elevation">6dp</item>
+    </style>
+    <style name="Widget.Redesign.Snackbar.Text" parent="Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textColor">@color/rd_fg_1</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Widget.Redesign.Snackbar.Button" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
+    </style>
+
     <!-- The library header: "N items" and the like (12, FG/A1). -->
     <style name="Redesign.Text.Small" parent="VLC.TextView">
         <item name="android:textSize">12sp</item>

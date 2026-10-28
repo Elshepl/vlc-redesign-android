@@ -509,7 +509,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         player.service?.let { service ->
             if (service.isPausable) {
 
-                if (skipAnim) {
+                // VLC Redesign: the play button is the accent pill, drawn without the morphing animation
+                if (skipAnim || true) {
                     hudBinding.playerOverlayPlay.setImageResource(if (service.isPlaying)
                         R.drawable.ic_pause_player
                     else
