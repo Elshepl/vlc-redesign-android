@@ -16,4 +16,5 @@
     <string name="rd_text_marked">ടെക്സ്റ്റ് അടയാളപ്പെടുത്തി</string>
     <string name="rd_reset">റീസെറ്റ് ചെയ്യുക</string>
     <string name="rd_languages_and_tracks">ഭാഷകളും ട്രാക്കുകളും</string>
+    <string name="rd_about_version">പതിപ്പ് %1$s · VLC %2$s അടിസ്ഥാനമാക്കിയത്</string>
 </resources>

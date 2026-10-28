@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Text označený</string>
     <string name="rd_reset">Obnoviť</string>
     <string name="rd_languages_and_tracks">Jazyky a stopy</string>
+    <string name="rd_about_version">Verzia %1$s · založené na VLC %2$s</string>
 </resources>

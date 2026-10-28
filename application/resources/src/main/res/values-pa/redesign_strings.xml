@@ -16,4 +16,5 @@
     <string name="rd_text_marked">ਟੈਕਸਟ ਨਿਸ਼ਾਨਬੱਧ ਕੀਤਾ</string>
     <string name="rd_reset">ਰੀਸੈੱਟ</string>
     <string name="rd_languages_and_tracks">ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਟਰੈਕ</string>
+    <string name="rd_about_version">ਵਰਜਨ %1$s · VLC %2$s ਉੱਤੇ ਆਧਾਰਿਤ</string>
 </resources>

@@ -218,10 +218,10 @@
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Headline6</item>
     </style>
 
-    <!-- Snackbars: the menu panel (A4, radius 10), text FG/1, the action in the accent. -->
+    <!-- Snackbars: the menu panel (A4, radius 10, the 1 px window border), text FG/1, the action in the accent. -->
     <style name="Widget.Redesign.Snackbar" parent="Widget.MaterialComponents.Snackbar">
-        <item name="backgroundTint">@color/rd_snackbar_bg</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.Redesign.Medium</item>
+        <item name="android:background">@drawable/rd_snackbar_background</item>
+        <item name="backgroundTint">@null</item>
         <item name="android:layout_margin">8dp</item>
         <item name="elevation">6dp</item>
         <!-- Material dims the action to half its colour: the design shows it in the full accent -->

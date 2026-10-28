@@ -65,7 +65,13 @@ def main():
     for lang in langs:
         cat = load_catalogue(os.path.join(desktop, "po", lang + ".po"))
         cat.update(load_catalogue(os.path.join(desktop, "po", "redesign", lang + ".po")))
-        rows = [(name, cat[text]) for name, text in strings if text in cat]
+        # Android's %1$s is the desktop's (Qt) %1
+        def qt(text):
+            return re.sub(r"%(\d)\$[sd]", r"%\1", text)
+
+        def android(text):
+            return re.sub(r"%(\d)(?!\$)", r"%\1$s", text)
+        rows = [(name, android(cat[qt(text)])) for name, text in strings if qt(text) in cat]
         for d in android_dirs(lang):
             folder = os.path.join(RES, "values-" + d)
             if not os.path.isdir(folder):

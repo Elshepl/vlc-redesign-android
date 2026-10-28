@@ -16,4 +16,5 @@
     <string name="rd_text_marked">자막 표시됨</string>
     <string name="rd_reset">초기화</string>
     <string name="rd_languages_and_tracks">언어 및 트랙</string>
+    <string name="rd_about_version">버전 %1$s · VLC %2$s 기반</string>
 </resources>

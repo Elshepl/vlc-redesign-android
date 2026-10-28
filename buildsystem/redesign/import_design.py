@@ -27,7 +27,7 @@ THEME = {
     "bg_a4": "bg.a4", "bg_a5": "bg.a5", "folder_card": "bg.folderCard",
     "fg_1": "fg.1", "fg_2": "fg.2", "fg_a1": "fg.a1", "fg_a2": "fg.a2", "fg_a3": "fg.a3", "fg_a4": "fg.a4",
     "fg_b1": "fg.b1", "divider_dim": "divider.dim", "divider_bright": "divider.bright",
-    "warning": "status.warning",
+    "warning": "status.warning", "window_border_token": "windowBorder",
 }
 
 # Placeholder colours of the SVGs -> colour resources.
@@ -262,10 +262,14 @@ def convert(svg_file, colour_map=None, size=None):
     return body + "\n".join(out) + "\n</vector>\n", missing
 
 
+HAND_DRAWN = {"rd_ic_chevron_right.xml"}
+
+
 def icons(design, version):
     ddir = os.path.join(RES, "drawable")
     for f in os.listdir(ddir):
-        if f.startswith("rd_ic_") and f.endswith(".xml"):
+        # drawn by hand for Android (not in design/): kept
+        if f.startswith("rd_ic_") and f.endswith(".xml") and f not in HAND_DRAWN:
             os.remove(os.path.join(ddir, f))
     hdr = '<?xml version="1.0" encoding="utf-8"?>\n' + HEADER % version
     count = 0

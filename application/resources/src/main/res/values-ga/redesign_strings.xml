@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Téacs marcáilte</string>
     <string name="rd_reset">Athshocraigh</string>
     <string name="rd_languages_and_tracks">Teangacha agus rianta</string>
+    <string name="rd_about_version">Leagan %1$s · bunaithe ar VLC %2$s</string>
 </resources>

@@ -7,5 +7,7 @@
     <color name="rd_snackbar_bg">@color/rd_dark_bg_a4</color>
     <!-- The 1 px frame of every floating panel (menus, dialogs, sheets, player panels), as on the desktop: the
          window border colour (Divider/Bright until design/tokens.json defines color.*.windowBorder) -->
-    <color name="rd_window_border">@color/rd_dark_divider_bright</color>
+    <color name="rd_window_border">@color/rd_dark_window_border_token</color>
+    <!-- The platform pill of About (desktop RedesignAboutDialog: #262626, its light pair #9C9C9B) -->
+    <color name="rd_badge_bg">#FF262626</color>
 </resources>

@@ -37,6 +37,8 @@
     <color name="rd_light_divider_bright">#FF8E8E8D</color>
     <color name="rd_dark_warning">#FFE4A580</color>
     <color name="rd_light_warning">#FF7A1414</color>
+    <color name="rd_dark_window_border_token">#FF4C4A48</color>
+    <color name="rd_light_window_border_token">#FF4C4A48</color>
     <color name="rd_accent_orange_main">#FFD37918</color>
     <color name="rd_accent_orange_dim">#FFAB6314</color>
     <color name="rd_accent_orange_bright">#FF371F06</color>
@@ -92,6 +94,7 @@
     <color name="rd_divider_dim">@color/rd_light_divider_dim</color>
     <color name="rd_divider_bright">@color/rd_light_divider_bright</color>
     <color name="rd_warning">@color/rd_light_warning</color>
+    <color name="rd_window_border_token">@color/rd_light_window_border_token</color>
     <color name="rd_accent">@color/rd_accent_orange_main</color>
     <color name="rd_accent_dim">@color/rd_accent_orange_dim</color>
     <color name="rd_accent_bright">@color/rd_accent_orange_bright_light</color>

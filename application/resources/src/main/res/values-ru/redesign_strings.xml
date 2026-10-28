@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Текст отмечен</string>
     <string name="rd_reset">Сбросить</string>
     <string name="rd_languages_and_tracks">Языки и дорожки</string>
+    <string name="rd_about_version">Версия %1$s · на основе VLC %2$s</string>
 </resources>

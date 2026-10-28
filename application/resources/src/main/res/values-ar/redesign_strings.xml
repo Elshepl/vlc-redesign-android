@@ -16,4 +16,5 @@
     <string name="rd_text_marked">عُلِّم النص</string>
     <string name="rd_reset">أعد الضبط</string>
     <string name="rd_languages_and_tracks">اللغات والمسارات</string>
+    <string name="rd_about_version">الإصدار %1$s · مبني على VLC %2$s</string>
 </resources>

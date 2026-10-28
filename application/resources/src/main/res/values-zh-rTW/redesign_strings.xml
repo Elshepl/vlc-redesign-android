@@ -16,4 +16,5 @@
     <string name="rd_text_marked">已標記文字</string>
     <string name="rd_reset">重置</string>
     <string name="rd_languages_and_tracks">語言與軌道</string>
+    <string name="rd_about_version">版本 %1$s · 基於 VLC %2$s</string>
 </resources>

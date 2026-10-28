@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Texto marcado</string>
     <string name="rd_reset">Restaurar</string>
     <string name="rd_languages_and_tracks">Idiomas y pistas</string>
+    <string name="rd_about_version">Versión %1$s · basada en VLC %2$s</string>
 </resources>

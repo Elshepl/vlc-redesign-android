@@ -19,6 +19,7 @@
     <color name="rd_divider_dim">@color/rd_dark_divider_dim</color>
     <color name="rd_divider_bright">@color/rd_dark_divider_bright</color>
     <color name="rd_warning">@color/rd_dark_warning</color>
+    <color name="rd_window_border_token">@color/rd_dark_window_border_token</color>
     <color name="rd_accent">@color/rd_accent_orange_main</color>
     <color name="rd_accent_dim">@color/rd_accent_orange_dim</color>
     <color name="rd_accent_bright">@color/rd_accent_orange_bright</color>

@@ -144,7 +144,6 @@ import org.videolan.tools.dp
 import org.videolan.tools.isStarted
 import org.videolan.tools.putSingle
 import org.videolan.tools.setGone
-import org.videolan.vlc.BuildConfig.VLC_VERSION_NAME
 import org.videolan.vlc.MediaParsingService
 import org.videolan.vlc.R
 import org.videolan.vlc.StartActivity
@@ -473,13 +472,46 @@ object UiTools {
         v?.setOnClickListener(ocl)
     }
 
+    /** The VLC core version of libvlc ("3.0.21"), or the libvlc-android package version if the core is not loaded */
+    fun libvlcVersion(): String = try {
+        org.videolan.libvlc.LibVLC.version().split(" ").first()
+    } catch (e: Throwable) {
+        org.videolan.vlc.BuildConfig.LIBVLC_VERSION
+    }
+
+    /** The ABI of the native libraries installed with this copy (arm64-v8a, armeabi-v7a, x86_64, x86) */
+    fun installedAbi(context: Context): String {
+        val dir = java.io.File(context.applicationInfo.nativeLibraryDir ?: "").name
+        return when (dir) {
+            "arm64" -> "arm64-v8a"
+            "arm" -> "armeabi-v7a"
+            "x86_64", "x86" -> dir
+            else -> android.os.Build.SUPPORTED_ABIS.firstOrNull() ?: dir
+        }
+    }
+
+    fun abiLabel(abi: String) = when (abi) {
+        "arm64-v8a" -> "ARM64"
+        "armeabi-v7a" -> "ARMv7"
+        else -> abi
+    }
+
     /**
      * Fill the about main view for mobile and TV
      */
     fun fillAboutView(activity: FragmentActivity, v: View) {
         val builddate = v.context.getString(R.string.build_time)
         val appVersion = v.findViewById<TextView>(R.id.app_version)
-        appVersion.text = VLC_VERSION_NAME
+        // VLC Redesign: "Version 0.3.2 · based on VLC 3.0.x" and the platform pill, as the desktop's About
+        appVersion.text = v.context.getString(R.string.rd_about_version, org.videolan.vlc.BuildConfig.RD_VERSION_NAME, libvlcVersion())
+        v.findViewById<TextView>(R.id.rd_about_platform)?.let { badge ->
+            val abi = installedAbi(v.context)
+            badge.text = "Android " + abiLabel(abi)
+            badge.contentDescription = badge.text
+            val details = "Android ${android.os.Build.VERSION.RELEASE} (API ${android.os.Build.VERSION.SDK_INT}) · ${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL} · $abi"
+            // the build date (the revision line of VLC) moves into the tooltip: the pill takes its place
+            androidx.appcompat.widget.TooltipCompat.setTooltipText(badge, "$details\n$builddate")
+        }
         val appVersionDate = v.findViewById<TextView>(R.id.app_version_date)
         appVersionDate.text = builddate
         v.findViewById<View>(R.id.sliding_tabs).setGone()

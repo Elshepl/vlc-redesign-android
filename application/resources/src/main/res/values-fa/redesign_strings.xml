@@ -16,4 +16,5 @@
     <string name="rd_text_marked">متن علامت‌گذاری شد</string>
     <string name="rd_reset">بازنشانی</string>
     <string name="rd_languages_and_tracks">زبان‌ها و قطعه‌ها</string>
+    <string name="rd_about_version">نسخهٔ %1$s · بر پایهٔ VLC %2$s</string>
 </resources>

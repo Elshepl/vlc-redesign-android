@@ -16,4 +16,5 @@
     <string name="rd_text_marked">ტექსტი მონიშნულია</string>
     <string name="rd_reset">აღდგენა</string>
     <string name="rd_languages_and_tracks">ენები და ტრეკები</string>
+    <string name="rd_about_version">ვერსია %1$s · VLC %2$s-ის საფუძველზე</string>
 </resources>

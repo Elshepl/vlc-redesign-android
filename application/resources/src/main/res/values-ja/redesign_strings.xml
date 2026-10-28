@@ -16,4 +16,5 @@
     <string name="rd_text_marked">字幕をマーク済み</string>
     <string name="rd_reset">リセット</string>
     <string name="rd_languages_and_tracks">言語とトラック</string>
+    <string name="rd_about_version">バージョン %1$s · VLC %2$s ベース</string>
 </resources>

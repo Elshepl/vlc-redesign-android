@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Tekstas pažymėtas</string>
     <string name="rd_reset">Atstatyti</string>
     <string name="rd_languages_and_tracks">Kalbos ir takeliai</string>
+    <string name="rd_about_version">Versija %1$s · paremta VLC %2$s</string>
 </resources>

@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Tekst merket</string>
     <string name="rd_reset">Nullstill</string>
     <string name="rd_languages_and_tracks">Språk og spor</string>
+    <string name="rd_about_version">Versjon %1$s · basert på VLC %2$s</string>
 </resources>

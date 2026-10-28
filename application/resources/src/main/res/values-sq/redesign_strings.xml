@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Teksti u shënua</string>
     <string name="rd_reset">Rivendos</string>
     <string name="rd_languages_and_tracks">Gjuhët dhe pistat</string>
+    <string name="rd_about_version">Versioni %1$s · bazuar në VLC %2$s</string>
 </resources>

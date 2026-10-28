@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Đã đánh dấu chữ</string>
     <string name="rd_reset">Cài đặt lại</string>
     <string name="rd_languages_and_tracks">Ngôn ngữ và track</string>
+    <string name="rd_about_version">Phiên bản %1$s · dựa trên VLC %2$s</string>
 </resources>

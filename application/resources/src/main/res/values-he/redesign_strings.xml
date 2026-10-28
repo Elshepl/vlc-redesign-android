@@ -16,4 +16,5 @@
     <string name="rd_text_marked">הטקסט סומן</string>
     <string name="rd_reset">איפוס</string>
     <string name="rd_languages_and_tracks">שפות ורצועות</string>
+    <string name="rd_about_version">גרסה %1$s · מבוססת על VLC %2$s</string>
 </resources>

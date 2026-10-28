@@ -16,4 +16,5 @@
     <string name="rd_text_marked">دەق نیشانەکرا</string>
     <string name="rd_reset">گەڕاندنەوە</string>
     <string name="rd_languages_and_tracks">زمان و تراکەکان</string>
+    <string name="rd_about_version">وەشانی %1$s · لەسەر بنەمای VLC %2$s</string>
 </resources>

@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Το κείμενο σημειώθηκε</string>
     <string name="rd_reset">Επαναφορά</string>
     <string name="rd_languages_and_tracks">Γλώσσες και κομμάτια</string>
+    <string name="rd_about_version">Έκδοση %1$s · βασισμένο στο VLC %2$s</string>
 </resources>

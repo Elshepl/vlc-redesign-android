@@ -16,4 +16,5 @@
     <string name="rd_text_marked">បានសម្គាល់អត្ថបទ</string>
     <string name="rd_reset">កំណត់​ឡើងវិញ</string>
     <string name="rd_languages_and_tracks">ភាសា និងបទ</string>
+    <string name="rd_about_version">កំណែ %1$s · ផ្អែកលើ VLC %2$s</string>
 </resources>

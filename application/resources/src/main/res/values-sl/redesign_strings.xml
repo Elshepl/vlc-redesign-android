@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Besedilo označeno</string>
     <string name="rd_reset">Ponastavi</string>
     <string name="rd_languages_and_tracks">Jeziki in sledi</string>
+    <string name="rd_about_version">Različica %1$s · temelji na VLC %2$s</string>
 </resources>

@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Testun wedi\'i nodi</string>
     <string name="rd_reset">Ailosod</string>
     <string name="rd_languages_and_tracks">Ieithoedd a thraciau</string>
+    <string name="rd_about_version">Fersiwn %1$s · yn seiliedig ar VLC %2$s</string>
 </resources>

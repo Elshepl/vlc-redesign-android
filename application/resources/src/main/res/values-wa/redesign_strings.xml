@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Tecse markî</string>
     <string name="rd_reset">Rimete a zero</string>
     <string name="rd_languages_and_tracks">Lingaedjes et bokets</string>
+    <string name="rd_about_version">Modêye %1$s · so l\' båze di VLC %2$s</string>
 </resources>

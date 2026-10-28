@@ -75,7 +75,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="52dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:orientation="horizontal">
 
                 <TextView
@@ -84,21 +87,52 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         style="@style/About.Title"
+                        android:textSize="14sp"
                         android:textColor="?attr/about_text_primary"
+                        android:textAlignment="viewStart"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/rd_about_platform"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="3.4.0" />
 
+                <!-- VLC Redesign: the platform this copy is made for, as the desktop's About (a pill badge);
+                     a long press shows the device it runs on -->
+                <TextView
+                        android:id="@+id/rd_about_platform"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/rd_badge_background"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="?attr/about_text_primary"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="16dp"
+                        android:maxLines="1"
+                        app:layout_constraintBottom_toBottomOf="@+id/app_version"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/app_version"
+                        app:layout_constraintTop_toTopOf="@+id/app_version"
+                        tools:text="Android ARM64" />
+
                 <TextView
                         android:id="@+id/app_version_date"
+                        android:visibility="gone"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:textSize="12sp"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintBottom_toBottomOf="@+id/app_version"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/app_version"
+                        app:layout_constraintStart_toEndOf="@+id/rd_about_platform"
                         app:layout_constraintTop_toTopOf="@+id/app_version"
                         tools:text="Revision" />
             </androidx.constraintlayout.widget.ConstraintLayout>

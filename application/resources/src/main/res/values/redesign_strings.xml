@@ -19,4 +19,5 @@
     <string name="rd_text_marked">Text marked</string>
     <string name="rd_reset">Reset</string>
     <string name="rd_languages_and_tracks">Languages and tracks</string>
+    <string name="rd_about_version">Version %1$s · based on VLC %2$s</string>
 </resources>

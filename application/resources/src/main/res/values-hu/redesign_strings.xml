@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Szöveg megjelölve</string>
     <string name="rd_reset">Alaphelyzetbe</string>
     <string name="rd_languages_and_tracks">Nyelvek és sávok</string>
+    <string name="rd_about_version">Verzió: %1$s · a VLC %2$s alapján</string>
 </resources>

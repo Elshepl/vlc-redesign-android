@@ -16,4 +16,5 @@
     <string name="rd_text_marked">Teks ditanda</string>
     <string name="rd_reset">Ulangtetap</string>
     <string name="rd_languages_and_tracks">Bahasa dan trek</string>
+    <string name="rd_about_version">Versi %1$s · berasaskan VLC %2$s</string>
 </resources>

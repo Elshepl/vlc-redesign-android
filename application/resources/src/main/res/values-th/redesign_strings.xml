@@ -16,4 +16,5 @@
     <string name="rd_text_marked">ทำเครื่องหมายข้อความแล้ว</string>
     <string name="rd_reset">กลับค่าเดิม</string>
     <string name="rd_languages_and_tracks">ภาษาและร่อง</string>
+    <string name="rd_about_version">รุ่น %1$s · พัฒนาจาก VLC %2$s</string>
 </resources>

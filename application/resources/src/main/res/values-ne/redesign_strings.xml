@@ -16,4 +16,5 @@
     <string name="rd_text_marked">पाठ चिन्ह लगाइयो</string>
     <string name="rd_reset">रिसेट गर्नुहोस्</string>
     <string name="rd_languages_and_tracks">भाषा र ट्रयाकहरू</string>
+    <string name="rd_about_version">संस्करण %1$s · VLC %2$s मा आधारित</string>
 </resources>
