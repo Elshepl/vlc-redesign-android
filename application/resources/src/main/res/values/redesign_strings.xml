@@ -12,4 +12,11 @@
     <string name="rd_new_music">New Music</string>
     <string name="rd_recent">Recent</string>
     <string name="rd_open_network_stream">Open Network Stream</string>
+    <string name="rd_subtitle_timing">Subtitle timing</string>
+    <string name="rd_mark_voice_heard">Mark voice heard</string>
+    <string name="rd_mark_text_seen">Mark text seen</string>
+    <string name="rd_voice_marked">Voice marked</string>
+    <string name="rd_text_marked">Text marked</string>
+    <string name="rd_reset">Reset</string>
+    <string name="rd_languages_and_tracks">Languages and tracks</string>
 </resources>

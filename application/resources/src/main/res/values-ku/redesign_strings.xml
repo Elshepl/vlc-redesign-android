@@ -9,4 +9,11 @@
     <string name="rd_new_music">مۆسیقای نوێ</string>
     <string name="rd_recent">دواین</string>
     <string name="rd_open_network_stream">کردنەوەی ستریمی ڕایەڵە</string>
+    <string name="rd_subtitle_timing">کاتبەندیی ژێرنووس</string>
+    <string name="rd_mark_voice_heard">نیشانەکردنی دەنگی بیستراو</string>
+    <string name="rd_mark_text_seen">نیشانەکردنی دەقی بینراو</string>
+    <string name="rd_voice_marked">دەنگ نیشانەکرا</string>
+    <string name="rd_text_marked">دەق نیشانەکرا</string>
+    <string name="rd_reset">گەڕاندنەوە</string>
+    <string name="rd_languages_and_tracks">زمان و تراکەکان</string>
 </resources>

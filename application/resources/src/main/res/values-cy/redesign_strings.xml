@@ -9,4 +9,11 @@
     <string name="rd_new_music">Cerddoriaeth Newydd</string>
     <string name="rd_recent">Diweddar</string>
     <string name="rd_open_network_stream">Agor Ffrwd Rhwydwaith</string>
+    <string name="rd_subtitle_timing">Amseru\'r isdeitlau</string>
+    <string name="rd_mark_voice_heard">Nodi pryd clywyd y llais</string>
+    <string name="rd_mark_text_seen">Nodi pryd gwelwyd y testun</string>
+    <string name="rd_voice_marked">Llais wedi\'i nodi</string>
+    <string name="rd_text_marked">Testun wedi\'i nodi</string>
+    <string name="rd_reset">Ailosod</string>
+    <string name="rd_languages_and_tracks">Ieithoedd a thraciau</string>
 </resources>

@@ -113,10 +113,9 @@ class MoreFragment : BaseFragment(), IRefreshable, IHistory, IDialogManager,
         viewModel.dataset.observe(viewLifecycleOwner) { list ->
             list?.let {
                 historyAdapter.update(it)
-                if (list.isEmpty()) historyEntry.setGone() else {
-                    historyEntry.setVisible()
-                    historyEntry.loading.state = EmptyLoadingState.NONE
-                }
+                // VLC Redesign: Recent is a row of the panel (and Home shows what was played last)
+                historyEntry.setGone()
+                historyEntry.loading.state = EmptyLoadingState.NONE
                 if (list.isNotEmpty()) historyEntry.actionButton.setVisible() else historyEntry.actionButton.setGone()
             }
             restoreMultiSelectHelper()
@@ -187,6 +186,8 @@ class MoreFragment : BaseFragment(), IRefreshable, IHistory, IDialogManager,
         historyEntry.list.nextFocusForwardId = android.R.id.list
 
         streamsEntry.list.adapter = streamsAdapter
+        // VLC Redesign: Open Network Stream is a row of the panel, as in the desktop menu
+        streamsEntry.setGone()
 
         historyEntry.setOnActionClickListener {
             val i = Intent(requireActivity(), SecondaryActivity::class.java)

@@ -138,6 +138,19 @@
         <item name="strokeWidth">1dp</item>
         <item name="android:textColor">?attr/font_default</item>
     </style>
+    <!-- The buttons of the player's panels: always on the dark panel, 36 high, 13 Inter. -->
+    <style name="Widget.Redesign.Button.Outlined.Player">
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="backgroundTint">@color/rd_dark_bg_b2</item>
+        <item name="strokeColor">@color/rd_dark_divider_bright</item>
+        <item name="android:textColor">@color/rd_dark_fg_1</item>
+        <item name="rippleColor">@color/rd_ripple_dark</item>
+    </style>
     <style name="Widget.Redesign.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
         <item name="cornerRadius">6dp</item>
@@ -203,10 +216,12 @@
 
     <!-- Snackbars: the menu panel (A4, radius 10), text FG/1, the action in the accent. -->
     <style name="Widget.Redesign.Snackbar" parent="Widget.MaterialComponents.Snackbar">
-        <item name="backgroundTint">@color/rd_bg_a4</item>
+        <item name="backgroundTint">@color/rd_snackbar_bg</item>
         <item name="shapeAppearance">@style/ShapeAppearance.Redesign.Medium</item>
         <item name="android:layout_margin">8dp</item>
         <item name="elevation">6dp</item>
+        <!-- Material dims the action to half its colour: the design shows it in the full accent -->
+        <item name="actionTextColorAlpha">1</item>
     </style>
     <style name="Widget.Redesign.Snackbar.Text" parent="Widget.MaterialComponents.Snackbar.TextView">
         <item name="android:textColor">@color/rd_fg_1</item>
@@ -214,7 +229,8 @@
         <item name="android:textSize">14sp</item>
     </style>
     <style name="Widget.Redesign.Snackbar.Button" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
-        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textColor">@color/rd_accent_text</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
     </style>
 

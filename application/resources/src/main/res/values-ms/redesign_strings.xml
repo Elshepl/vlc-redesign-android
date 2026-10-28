@@ -9,4 +9,11 @@
     <string name="rd_new_music">Muzik Baharu</string>
     <string name="rd_recent">Terkini</string>
     <string name="rd_open_network_stream">Buka Strim Rangkaian</string>
+    <string name="rd_subtitle_timing">Pemasaan sarikata</string>
+    <string name="rd_mark_voice_heard">Tanda suara didengar</string>
+    <string name="rd_mark_text_seen">Tanda teks dilihat</string>
+    <string name="rd_voice_marked">Suara ditanda</string>
+    <string name="rd_text_marked">Teks ditanda</string>
+    <string name="rd_reset">Ulangtetap</string>
+    <string name="rd_languages_and_tracks">Bahasa dan trek</string>
 </resources>

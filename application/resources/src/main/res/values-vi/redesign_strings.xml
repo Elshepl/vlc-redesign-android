@@ -9,4 +9,11 @@
     <string name="rd_new_music">Nhạc mới</string>
     <string name="rd_recent">Gần đây</string>
     <string name="rd_open_network_stream">Mở luồng mạng</string>
+    <string name="rd_subtitle_timing">Căn thời gian phụ đề</string>
+    <string name="rd_mark_voice_heard">Đánh dấu lúc nghe thấy lời</string>
+    <string name="rd_mark_text_seen">Đánh dấu lúc thấy chữ</string>
+    <string name="rd_voice_marked">Đã đánh dấu lời</string>
+    <string name="rd_text_marked">Đã đánh dấu chữ</string>
+    <string name="rd_reset">Cài đặt lại</string>
+    <string name="rd_languages_and_tracks">Ngôn ngữ và track</string>
 </resources>

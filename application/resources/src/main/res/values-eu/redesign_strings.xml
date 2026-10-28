@@ -9,4 +9,11 @@
     <string name="rd_new_music">Musika berria</string>
     <string name="rd_recent">Azkenak</string>
     <string name="rd_open_network_stream">Ireki sareko transmisio jarraitua</string>
+    <string name="rd_subtitle_timing">Azpitituluen denbora-doikuntza</string>
+    <string name="rd_mark_voice_heard">Markatu ahotsa entzun dela</string>
+    <string name="rd_mark_text_seen">Markatu testua ikusi dela</string>
+    <string name="rd_voice_marked">Ahotsa markatuta</string>
+    <string name="rd_text_marked">Testua markatuta</string>
+    <string name="rd_reset">Berrezarri</string>
+    <string name="rd_languages_and_tracks">Hizkuntzak eta pistak</string>
 </resources>

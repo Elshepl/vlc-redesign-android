@@ -9,4 +9,11 @@
     <string name="rd_new_music">Nauja muzika</string>
     <string name="rd_recent">Neseniai</string>
     <string name="rd_open_network_stream">Atverti tinklo srautą</string>
+    <string name="rd_subtitle_timing">Subtitrų laikas</string>
+    <string name="rd_mark_voice_heard">Pažymėti išgirstą balsą</string>
+    <string name="rd_mark_text_seen">Pažymėti pamatytą tekstą</string>
+    <string name="rd_voice_marked">Balsas pažymėtas</string>
+    <string name="rd_text_marked">Tekstas pažymėtas</string>
+    <string name="rd_reset">Atstatyti</string>
+    <string name="rd_languages_and_tracks">Kalbos ir takeliai</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">Nova muzika</string>
     <string name="rd_recent">Nedavno</string>
     <string name="rd_open_network_stream">Otvori mrežno strujanje</string>
+    <string name="rd_subtitle_timing">Vremensko usklađivanje podtitlova</string>
+    <string name="rd_mark_voice_heard">Označi da se čuje glas</string>
+    <string name="rd_mark_text_seen">Označi da se vidi tekst</string>
+    <string name="rd_voice_marked">Glas označen</string>
+    <string name="rd_text_marked">Tekst označen</string>
+    <string name="rd_reset">Resetuj</string>
+    <string name="rd_languages_and_tracks">Jezici i tragovi</string>
 </resources>

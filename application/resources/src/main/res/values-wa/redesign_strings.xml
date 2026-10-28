@@ -9,4 +9,11 @@
     <string name="rd_new_music">Novele muzike</string>
     <string name="rd_recent">Dierins</string>
     <string name="rd_open_network_stream">Drovi on floû pa l\' rantoele</string>
+    <string name="rd_subtitle_timing">Tins des sortites</string>
+    <string name="rd_mark_voice_heard">Marker l\' vwès oyowe</string>
+    <string name="rd_mark_text_seen">Marker l\' tecse veyou</string>
+    <string name="rd_voice_marked">Vwès markêye</string>
+    <string name="rd_text_marked">Tecse markî</string>
+    <string name="rd_reset">Rimete a zero</string>
+    <string name="rd_languages_and_tracks">Lingaedjes et bokets</string>
 </resources>

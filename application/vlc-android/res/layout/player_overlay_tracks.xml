@@ -31,77 +31,79 @@
 
     </data>
 
+    <!--
+      VLC Redesign: the desktop's "Languages and tracks" panel (docs/wiki/Subtitles.md): a dark panel (BG/A3,
+      radius 14 on top) with the tabs Video, Audio and Subtitles, opening on Subtitles; under the subtitle tracks,
+      Subtitle timing (the delay slider from -10 s to +10 s by 50 ms, Mark voice heard, Mark text seen, Reset).
+    -->
     <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/rd_panel_top">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
                 android:id="@+id/player_overlay_tracks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
 
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/rd_tracks_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="?attr/colorPrimary"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabMode="fixed"
+                    app:tabRippleColor="@color/rd_ripple_dark"
+                    app:tabSelectedTextColor="?attr/colorPrimary"
+                    app:tabTextAppearance="@style/TextAppearance.Redesign.Tab"
+                    app:tabTextColor="@color/rd_dark_fg_a1" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/rd_dark_divider_dim" />
 
             <include
                     android:id="@+id/audio_tracks"
                     layout="@layout/player_overlay_track_item"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@+id/tracks_separator_2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             <View
                     android:id="@+id/tracks_separator_2"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/white_transparent_10"
                     android:focusable="false"
-                    app:layout_constraintBottom_toTopOf="@+id/subtitle_tracks"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/audio_tracks" />
+                    android:visibility="gone" />
 
             <include
                     android:id="@+id/subtitle_tracks"
                     layout="@layout/player_overlay_track_item"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@+id/tracks_separator_3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tracks_separator_2" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <include
+                    android:id="@+id/rd_sub_timing"
+                    layout="@layout/rd_subtitle_timing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             <View
                     android:id="@+id/tracks_separator_3"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/white_transparent_10"
                     android:focusable="false"
-                    app:layout_constraintBottom_toTopOf="@+id/video_tracks"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/subtitle_tracks" />
+                    android:visibility="gone" />
 
             <include
                     android:id="@+id/video_tracks"
                     layout="@layout/player_overlay_track_item"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tracks_separator_3" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

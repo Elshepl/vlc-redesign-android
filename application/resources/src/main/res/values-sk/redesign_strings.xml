@@ -9,4 +9,11 @@
     <string name="rd_new_music">Nová hudba</string>
     <string name="rd_recent">Nedávne</string>
     <string name="rd_open_network_stream">Otvoriť sieťový stream</string>
+    <string name="rd_subtitle_timing">Časovanie titulkov</string>
+    <string name="rd_mark_voice_heard">Označiť počutý hlas</string>
+    <string name="rd_mark_text_seen">Označiť videný text</string>
+    <string name="rd_voice_marked">Hlas označený</string>
+    <string name="rd_text_marked">Text označený</string>
+    <string name="rd_reset">Obnoviť</string>
+    <string name="rd_languages_and_tracks">Jazyky a stopy</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">Muzikë e re</string>
     <string name="rd_recent">Të fundit</string>
     <string name="rd_open_network_stream">Hap transmetim rrjeti</string>
+    <string name="rd_subtitle_timing">Koha e titrave</string>
+    <string name="rd_mark_voice_heard">Shëno zërin e dëgjuar</string>
+    <string name="rd_mark_text_seen">Shëno tekstin e parë</string>
+    <string name="rd_voice_marked">Zëri u shënua</string>
+    <string name="rd_text_marked">Teksti u shënua</string>
+    <string name="rd_reset">Rivendos</string>
+    <string name="rd_languages_and_tracks">Gjuhët dhe pistat</string>
 </resources>

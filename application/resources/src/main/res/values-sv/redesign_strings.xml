@@ -9,4 +9,11 @@
     <string name="rd_new_music">Ny musik</string>
     <string name="rd_recent">Senaste</string>
     <string name="rd_open_network_stream">Öppna nätverksström</string>
+    <string name="rd_subtitle_timing">Tidsinställning för undertexter</string>
+    <string name="rd_mark_voice_heard">Markera hörd röst</string>
+    <string name="rd_mark_text_seen">Markera sedd text</string>
+    <string name="rd_voice_marked">Röst markerad</string>
+    <string name="rd_text_marked">Text markerad</string>
+    <string name="rd_reset">Återställ</string>
+    <string name="rd_languages_and_tracks">Språk och spår</string>
 </resources>

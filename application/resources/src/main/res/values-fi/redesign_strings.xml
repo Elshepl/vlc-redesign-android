@@ -9,4 +9,11 @@
     <string name="rd_new_music">Uutta musiikkia</string>
     <string name="rd_recent">Viimeisimmät</string>
     <string name="rd_open_network_stream">Avaa verkkovirta</string>
+    <string name="rd_subtitle_timing">Tekstityksen ajoitus</string>
+    <string name="rd_mark_voice_heard">Merkitse puhe kuulluksi</string>
+    <string name="rd_mark_text_seen">Merkitse teksti nähdyksi</string>
+    <string name="rd_voice_marked">Puhe merkitty</string>
+    <string name="rd_text_marked">Teksti merkitty</string>
+    <string name="rd_reset">Nollaa</string>
+    <string name="rd_languages_and_tracks">Kielet ja raidat</string>
 </resources>

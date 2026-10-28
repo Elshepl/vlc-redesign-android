@@ -9,4 +9,11 @@
     <string name="rd_new_music">موسیقی جدید</string>
     <string name="rd_recent">اخیر</string>
     <string name="rd_open_network_stream">باز کردن جریان شبکه</string>
+    <string name="rd_subtitle_timing">زمان‌بندی زیرنویس</string>
+    <string name="rd_mark_voice_heard">علامت‌گذاری شنیدن گفتار</string>
+    <string name="rd_mark_text_seen">علامت‌گذاری دیدن متن</string>
+    <string name="rd_voice_marked">گفتار علامت‌گذاری شد</string>
+    <string name="rd_text_marked">متن علامت‌گذاری شد</string>
+    <string name="rd_reset">بازنشانی</string>
+    <string name="rd_languages_and_tracks">زبان‌ها و قطعه‌ها</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">موسيقى جديدة</string>
     <string name="rd_recent">الأخيرة</string>
     <string name="rd_open_network_stream">فتح تدفق شبكة</string>
+    <string name="rd_subtitle_timing">توقيت الترجمة</string>
+    <string name="rd_mark_voice_heard">تعليم لحظة سماع الكلام</string>
+    <string name="rd_mark_text_seen">تعليم لحظة رؤية النص</string>
+    <string name="rd_voice_marked">عُلِّم الكلام</string>
+    <string name="rd_text_marked">عُلِّم النص</string>
+    <string name="rd_reset">أعد الضبط</string>
+    <string name="rd_languages_and_tracks">اللغات والمسارات</string>
 </resources>

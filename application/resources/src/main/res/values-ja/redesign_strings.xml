@@ -9,4 +9,11 @@
     <string name="rd_new_music">新着ミュージック</string>
     <string name="rd_recent">最近</string>
     <string name="rd_open_network_stream">ネットワークストリームを開く</string>
+    <string name="rd_subtitle_timing">字幕のタイミング</string>
+    <string name="rd_mark_voice_heard">声が聞こえた時点をマーク</string>
+    <string name="rd_mark_text_seen">字幕が見えた時点をマーク</string>
+    <string name="rd_voice_marked">声をマーク済み</string>
+    <string name="rd_text_marked">字幕をマーク済み</string>
+    <string name="rd_reset">リセット</string>
+    <string name="rd_languages_and_tracks">言語とトラック</string>
 </resources>

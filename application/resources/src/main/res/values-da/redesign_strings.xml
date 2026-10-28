@@ -9,4 +9,11 @@
     <string name="rd_new_music">Ny musik</string>
     <string name="rd_recent">Seneste</string>
     <string name="rd_open_network_stream">Åbn netværksstrøm</string>
+    <string name="rd_subtitle_timing">Undertekst-timing</string>
+    <string name="rd_mark_voice_heard">Markér stemme hørt</string>
+    <string name="rd_mark_text_seen">Markér tekst set</string>
+    <string name="rd_voice_marked">Stemme markeret</string>
+    <string name="rd_text_marked">Tekst markeret</string>
+    <string name="rd_reset">Nulstil</string>
+    <string name="rd_languages_and_tracks">Sprog og spor</string>
 </resources>

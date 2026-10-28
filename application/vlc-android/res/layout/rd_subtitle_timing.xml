@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VLC Redesign: Subtitle timing of the tracks panel (docs/wiki/Subtitles.md "Subtitle timing"): the delay, a
+  slider from -10 s (earlier) to +10 s (later) in steps of 50 ms, then Mark voice heard, Mark text seen and Reset.
+  Once the voice and the text are both marked, the subtitles move by the time between the two taps.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/rd_dark_divider_dim" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/inter"
+            android:text="@string/rd_subtitle_timing"
+            android:textAlignment="viewStart"
+            android:textColor="@color/rd_dark_fg_1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rd_sub_delay_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:fontFeatureSettings="tnum"
+            android:textColor="@color/rd_dark_fg_a1"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/rd_sub_delay_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:stepSize="50"
+        android:value="0"
+        android:valueFrom="-10000"
+        android:valueTo="10000"
+        app:haloColor="@color/rd_ripple_dark"
+        app:labelBehavior="gone"
+        app:thumbColor="?attr/colorPrimary"
+        app:thumbRadius="7dp"
+        app:tickVisible="false"
+        app:trackColorActive="@color/rd_dark_bg_b2"
+        app:trackColorInactive="@color/rd_dark_bg_b2"
+        app:trackHeight="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rd_sub_mark_voice"
+            style="@style/Widget.Redesign.Button.Outlined.Player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rd_mark_voice_heard" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rd_sub_mark_text"
+            style="@style/Widget.Redesign.Button.Outlined.Player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/rd_mark_text_seen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rd_sub_delay_reset"
+            style="@style/Widget.Redesign.Button.Outlined.Player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/rd_reset" />
+    </LinearLayout>
+</LinearLayout>
+</layout>

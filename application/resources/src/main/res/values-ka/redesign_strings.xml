@@ -9,4 +9,11 @@
     <string name="rd_new_music">ახალი მუსიკა</string>
     <string name="rd_recent">ბოლოდროინდელი</string>
     <string name="rd_open_network_stream">ქსელური ნაკადის გახსნა</string>
+    <string name="rd_subtitle_timing">ტიტრების დრო</string>
+    <string name="rd_mark_voice_heard">მოსმენილი ხმის მონიშვნა</string>
+    <string name="rd_mark_text_seen">დანახული ტექსტის მონიშვნა</string>
+    <string name="rd_voice_marked">ხმა მონიშნულია</string>
+    <string name="rd_text_marked">ტექსტი მონიშნულია</string>
+    <string name="rd_reset">აღდგენა</string>
+    <string name="rd_languages_and_tracks">ენები და ტრეკები</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">Нова музика</string>
     <string name="rd_recent">Нещодавні</string>
     <string name="rd_open_network_stream">Відкрити мережевий потік</string>
+    <string name="rd_subtitle_timing">Синхронізація субтитрів</string>
+    <string name="rd_mark_voice_heard">Позначити почутий голос</string>
+    <string name="rd_mark_text_seen">Позначити побачений текст</string>
+    <string name="rd_voice_marked">Голос позначено</string>
+    <string name="rd_text_marked">Текст позначено</string>
+    <string name="rd_reset">Скинути</string>
+    <string name="rd_languages_and_tracks">Мови й доріжки</string>
 </resources>

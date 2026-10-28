@@ -9,4 +9,11 @@
     <string name="rd_new_music">Ceol nua</string>
     <string name="rd_recent">Le déanaí</string>
     <string name="rd_open_network_stream">Oscail sruth líonra</string>
+    <string name="rd_subtitle_timing">Uainiú na bhfotheideal</string>
+    <string name="rd_mark_voice_heard">Marcáil an guth a chloistear</string>
+    <string name="rd_mark_text_seen">Marcáil an téacs a fheictear</string>
+    <string name="rd_voice_marked">Guth marcáilte</string>
+    <string name="rd_text_marked">Téacs marcáilte</string>
+    <string name="rd_reset">Athshocraigh</string>
+    <string name="rd_languages_and_tracks">Teangacha agus rianta</string>
 </resources>

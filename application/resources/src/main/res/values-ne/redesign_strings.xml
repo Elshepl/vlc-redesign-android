@@ -9,4 +9,11 @@
     <string name="rd_new_music">नयाँ सङ्गीत</string>
     <string name="rd_recent">हालैका</string>
     <string name="rd_open_network_stream">सञ्जाल प्रवाह खोल्नुहोस्</string>
+    <string name="rd_subtitle_timing">उपशीर्षकको समय</string>
+    <string name="rd_mark_voice_heard">सुनिएको बोली चिन्ह लगाउनुहोस्</string>
+    <string name="rd_mark_text_seen">देखिएको पाठ चिन्ह लगाउनुहोस्</string>
+    <string name="rd_voice_marked">बोली चिन्ह लगाइयो</string>
+    <string name="rd_text_marked">पाठ चिन्ह लगाइयो</string>
+    <string name="rd_reset">रिसेट गर्नुहोस्</string>
+    <string name="rd_languages_and_tracks">भाषा र ट्रयाकहरू</string>
 </resources>

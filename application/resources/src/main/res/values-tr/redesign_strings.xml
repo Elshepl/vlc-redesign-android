@@ -9,4 +9,11 @@
     <string name="rd_new_music">Yeni Müzikler</string>
     <string name="rd_recent">Son Oynatılanlar</string>
     <string name="rd_open_network_stream">Ağ Akışı Aç</string>
+    <string name="rd_subtitle_timing">Altyazı zamanlaması</string>
+    <string name="rd_mark_voice_heard">Duyulan konuşmayı işaretle</string>
+    <string name="rd_mark_text_seen">Görülen yazıyı işaretle</string>
+    <string name="rd_voice_marked">Konuşma işaretlendi</string>
+    <string name="rd_text_marked">Yazı işaretlendi</string>
+    <string name="rd_reset">Sıfırla</string>
+    <string name="rd_languages_and_tracks">Diller ve kayıtlar</string>
 </resources>

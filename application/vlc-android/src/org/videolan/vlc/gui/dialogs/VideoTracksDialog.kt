@@ -53,6 +53,7 @@ import org.videolan.vlc.gui.dialogs.adapters.VlcTrack
 import org.videolan.vlc.gui.helpers.getBitmapFromDrawable
 import org.videolan.vlc.util.isTalkbackIsEnabled
 import org.videolan.vlc.isVLC4
+import com.google.android.material.tabs.TabLayout
 
 class VideoTracksDialog : VLCBottomSheetDialogFragment() {
     override fun getDefaultState(): Int = STATE_EXPANDED
@@ -70,14 +71,9 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
 
     private fun onServiceChanged(service: PlaybackService?) {
         service?.let { playbackService ->
-            if ((isVLC4() && playbackService.videoTracksCount < 2) || (!isVLC4() && playbackService.videoTracksCount <= 2)) {
-                binding.videoTracks.trackContainer.setGone()
-                binding.tracksSeparator3.setGone()
-            }
-            if (playbackService.audioTracksCount <= 0) {
-                binding.audioTracks.trackContainer.setGone()
-                binding.tracksSeparator2.setGone()
-            }
+            // VLC Redesign: each kind of track has its own tab, so a single video track still shows in its tab
+            rdService = playbackService
+            updateTiming()
 
             playbackService.videoTracks?.let { trackList ->
                 val trackAdapter = TrackAdapter(generateTrackList(trackList), trackList.firstOrNull { it.getId() == playbackService.videoTrack }, getString(R.string.track_video))
@@ -189,8 +185,81 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             binding.subtitleTracks.options.toggle()
             binding.audioTracks.options.collapse()
         }
+        setupTabs()
+        setupTiming()
         super.onViewCreated(view, savedInstanceState)
         PlaybackService.serviceFlow.onEach { onServiceChanged(it) }.launchIn(lifecycleScope)
+    }
+
+    // VLC Redesign: the tabs of the desktop panel (Video, Audio, Subtitles), opening on Subtitles
+    private fun setupTabs() {
+        val tabs = binding.rdTracksTabs
+        val sections = listOf(listOf<View>(binding.videoTracks.root), listOf<View>(binding.audioTracks.root),
+                listOf<View>(binding.subtitleTracks.root, binding.rdSubTiming.root))
+        listOf(R.string.video, R.string.audio, R.string.subtitles).forEach { tabs.addTab(tabs.newTab().setText(it), false) }
+        fun show(index: Int) = sections.forEachIndexed { i, views -> views.forEach { it.visibility = if (i == index) View.VISIBLE else View.GONE } }
+        tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) = show(tab.position)
+            override fun onTabUnselected(tab: TabLayout.Tab) {}
+            override fun onTabReselected(tab: TabLayout.Tab) {}
+        })
+        tabs.getTabAt(2)?.select()
+        show(2)
+    }
+
+    private var rdService: PlaybackService? = null
+    private var voiceMark = -1L
+    private var textMark = -1L
+
+    // Subtitle timing: the delay slider (ms, the player takes µs) and the voice/text marks
+    private fun setupTiming() {
+        val timing = binding.rdSubTiming
+        timing.rdSubDelaySlider.addOnChangeListener { _, value, fromUser ->
+            if (fromUser) rdService?.setSpuDelay(value.toLong() * 1000L)
+            showDelay(value.toLong())
+        }
+        timing.rdSubDelayReset.setOnClickListener {
+            rdService?.setSpuDelay(0L)
+            voiceMark = -1L
+            textMark = -1L
+            updateTiming()
+        }
+        timing.rdSubMarkVoice.setOnClickListener {
+            voiceMark = if (voiceMark >= 0) -1L else rdService?.getTime() ?: -1L
+            applyMarks()
+        }
+        timing.rdSubMarkText.setOnClickListener {
+            textMark = if (textMark >= 0) -1L else rdService?.getTime() ?: -1L
+            applyMarks()
+        }
+    }
+
+    /** Once both are marked: the text came (text - voice) late, so the subtitles move that much earlier. */
+    private fun applyMarks() {
+        val service = rdService ?: return
+        if (voiceMark >= 0 && textMark >= 0) {
+            val delay = (service.spuDelay / 1000L + (voiceMark - textMark)).coerceIn(-10000L, 10000L)
+            service.setSpuDelay(delay / 50L * 50L * 1000L)
+            voiceMark = -1L
+            textMark = -1L
+        }
+        updateTiming()
+    }
+
+    private fun updateTiming() {
+        if (!::binding.isInitialized) return
+        val timing = binding.rdSubTiming
+        val delay = ((rdService?.spuDelay ?: 0L) / 1000L).coerceIn(-10000L, 10000L) / 50L * 50L
+        timing.rdSubDelaySlider.value = delay.toFloat()
+        showDelay(delay)
+        timing.rdSubMarkVoice.text = getString(if (voiceMark >= 0) R.string.rd_voice_marked else R.string.rd_mark_voice_heard)
+        timing.rdSubMarkText.text = getString(if (textMark >= 0) R.string.rd_text_marked else R.string.rd_mark_text_seen)
+        timing.rdSubMarkVoice.isChecked = voiceMark >= 0
+        timing.rdSubMarkText.isChecked = textMark >= 0
+    }
+
+    private fun showDelay(ms: Long) {
+        binding.rdSubTiming.rdSubDelayValue.text = String.format(java.util.Locale.US, "%+d ms", ms)
     }
 
     private fun generateSeparator(parent: ViewGroup, margin: Boolean = false) {

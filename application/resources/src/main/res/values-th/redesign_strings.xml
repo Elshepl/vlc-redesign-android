@@ -9,4 +9,11 @@
     <string name="rd_new_music">เพลงใหม่</string>
     <string name="rd_recent">ล่าสุด</string>
     <string name="rd_open_network_stream">เปิดกระแสเครือข่าย</string>
+    <string name="rd_subtitle_timing">จังหวะเวลาบทบรรยาย</string>
+    <string name="rd_mark_voice_heard">ทำเครื่องหมายเมื่อได้ยินเสียงพูด</string>
+    <string name="rd_mark_text_seen">ทำเครื่องหมายเมื่อเห็นข้อความ</string>
+    <string name="rd_voice_marked">ทำเครื่องหมายเสียงพูดแล้ว</string>
+    <string name="rd_text_marked">ทำเครื่องหมายข้อความแล้ว</string>
+    <string name="rd_reset">กลับค่าเดิม</string>
+    <string name="rd_languages_and_tracks">ภาษาและร่อง</string>
 </resources>

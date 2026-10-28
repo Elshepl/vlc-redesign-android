@@ -9,4 +9,11 @@
     <string name="rd_new_music">Uus muusika</string>
     <string name="rd_recent">Hiljutised</string>
     <string name="rd_open_network_stream">Ava võrguvoog</string>
+    <string name="rd_subtitle_timing">Subtiitrite ajastus</string>
+    <string name="rd_mark_voice_heard">Märgi hääl kuuldud</string>
+    <string name="rd_mark_text_seen">Märgi tekst nähtud</string>
+    <string name="rd_voice_marked">Hääl märgitud</string>
+    <string name="rd_text_marked">Tekst märgitud</string>
+    <string name="rd_reset">Lähtesta</string>
+    <string name="rd_languages_and_tracks">Keeled ja rajad</string>
 </resources>

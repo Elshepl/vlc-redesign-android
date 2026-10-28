@@ -9,4 +9,11 @@
     <string name="rd_new_music">புதிய இசை</string>
     <string name="rd_recent">சமீபத்தியவை</string>
     <string name="rd_open_network_stream">பிணைய ஓடையைத் திற</string>
+    <string name="rd_subtitle_timing">வசன நேரக்கணிப்பு</string>
+    <string name="rd_mark_voice_heard">குரல் கேட்டதைக் குறி</string>
+    <string name="rd_mark_text_seen">உரை கண்டதைக் குறி</string>
+    <string name="rd_voice_marked">குரல் குறிக்கப்பட்டது</string>
+    <string name="rd_text_marked">உரை குறிக்கப்பட்டது</string>
+    <string name="rd_reset">மீட்டமை</string>
+    <string name="rd_languages_and_tracks">மொழிகளும் சுவடுகளும்</string>
 </resources>

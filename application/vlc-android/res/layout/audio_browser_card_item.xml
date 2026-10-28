@@ -90,7 +90,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@color/transparent"
-                vlc:cardCornerRadius="4dp"
+                vlc:cardCornerRadius="6dp"
                 vlc:cardUseCompatPadding="true"
                 vlc:layout_constraintDimensionRatio="1"
                 vlc:layout_constraintEnd_toEndOf="parent"

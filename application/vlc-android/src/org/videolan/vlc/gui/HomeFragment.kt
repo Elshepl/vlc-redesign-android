@@ -83,7 +83,16 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
             list.adapter = adapter
         }
 
+        private var signature = ""
+
         fun update(newCards: List<Card>) {
+            // the library reports every thumbnail it makes as a change: redraw only when the cards changed
+            val newSignature = newCards.joinToString("|") { c ->
+                val m = c.media
+                "${m.id}:${m.uri}:${m.title}:${m.displayTime}:${m.seen}:${m.isFavorite}:${m.artworkMrl}"
+            }
+            if (newSignature == signature && view.visibility == (if (newCards.isEmpty()) View.GONE else View.VISIBLE)) return
+            signature = newSignature
             cards = newCards
             adapter.notifyDataSetChanged()
             view.visibility = if (newCards.isEmpty()) View.GONE else View.VISIBLE

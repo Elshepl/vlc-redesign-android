@@ -9,4 +9,11 @@
     <string name="rd_new_music">新音樂</string>
     <string name="rd_recent">最近</string>
     <string name="rd_open_network_stream">開啟網路串流</string>
+    <string name="rd_subtitle_timing">字幕時間</string>
+    <string name="rd_mark_voice_heard">標記聽到語音</string>
+    <string name="rd_mark_text_seen">標記看到文字</string>
+    <string name="rd_voice_marked">已標記語音</string>
+    <string name="rd_text_marked">已標記文字</string>
+    <string name="rd_reset">重置</string>
+    <string name="rd_languages_and_tracks">語言與軌道</string>
 </resources>

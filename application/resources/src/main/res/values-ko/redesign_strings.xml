@@ -9,4 +9,11 @@
     <string name="rd_new_music">새 음악</string>
     <string name="rd_recent">최근</string>
     <string name="rd_open_network_stream">네트워크 스트림 열기</string>
+    <string name="rd_subtitle_timing">자막 타이밍</string>
+    <string name="rd_mark_voice_heard">음성이 들린 시점 표시</string>
+    <string name="rd_mark_text_seen">자막이 보인 시점 표시</string>
+    <string name="rd_voice_marked">음성 표시됨</string>
+    <string name="rd_text_marked">자막 표시됨</string>
+    <string name="rd_reset">초기화</string>
+    <string name="rd_languages_and_tracks">언어 및 트랙</string>
 </resources>

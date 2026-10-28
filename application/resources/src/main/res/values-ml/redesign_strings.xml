@@ -9,4 +9,11 @@
     <string name="rd_new_music">പുതിയ സംഗീതം</string>
     <string name="rd_recent">സമീപകാലം</string>
     <string name="rd_open_network_stream">നെറ്റ്വർക്ക് സ്ട്രീം തുറക്കുക</string>
+    <string name="rd_subtitle_timing">ഉപശീർഷക സമയക്രമം</string>
+    <string name="rd_mark_voice_heard">സംഭാഷണം കേട്ടത് അടയാളപ്പെടുത്തുക</string>
+    <string name="rd_mark_text_seen">ടെക്സ്റ്റ് കണ്ടത് അടയാളപ്പെടുത്തുക</string>
+    <string name="rd_voice_marked">സംഭാഷണം അടയാളപ്പെടുത്തി</string>
+    <string name="rd_text_marked">ടെക്സ്റ്റ് അടയാളപ്പെടുത്തി</string>
+    <string name="rd_reset">റീസെറ്റ് ചെയ്യുക</string>
+    <string name="rd_languages_and_tracks">ഭാഷകളും ട്രാക്കുകളും</string>
 </resources>

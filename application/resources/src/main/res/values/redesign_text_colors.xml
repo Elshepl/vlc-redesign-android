@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign: the accent for text on a panel (snackbar actions, links). On the light panels the main
+         accent is too faint; the dim one reads like the desktop's accent text. -->
+    <color name="rd_accent_text">@color/rd_accent_orange_dim</color>
+    <!-- The snackbar panel: A4 in the dark theme; in the light one the lighter well, so the accent action reads -->
+    <color name="rd_snackbar_bg">@color/rd_light_bg_b2</color>
+    <!-- The 1 px frame of every floating panel (menus, dialogs, sheets, player panels), as on the desktop: the
+         window border colour (Divider/Bright until design/tokens.json defines color.*.windowBorder) -->
+    <color name="rd_window_border">@color/rd_light_divider_bright</color>
+</resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">Musik Baru</string>
     <string name="rd_recent">Terbaru</string>
     <string name="rd_open_network_stream">Buka Stream Jaringan</string>
+    <string name="rd_subtitle_timing">Waktu subtitle</string>
+    <string name="rd_mark_voice_heard">Tandai ucapan terdengar</string>
+    <string name="rd_mark_text_seen">Tandai teks terlihat</string>
+    <string name="rd_voice_marked">Ucapan ditandai</string>
+    <string name="rd_text_marked">Teks ditandai</string>
+    <string name="rd_reset">Reset</string>
+    <string name="rd_languages_and_tracks">Bahasa dan trek</string>
 </resources>

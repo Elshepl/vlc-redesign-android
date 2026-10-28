@@ -9,4 +9,11 @@
     <string name="rd_new_music">Jauna mūzika</string>
     <string name="rd_recent">Nesenie</string>
     <string name="rd_open_network_stream">Atvērt tīkla straumi</string>
+    <string name="rd_subtitle_timing">Subtitru laiks</string>
+    <string name="rd_mark_voice_heard">Atzīmēt dzirdēto balsi</string>
+    <string name="rd_mark_text_seen">Atzīmēt redzēto tekstu</string>
+    <string name="rd_voice_marked">Balss atzīmēta</string>
+    <string name="rd_text_marked">Teksts atzīmēts</string>
+    <string name="rd_reset">Atiestatīt</string>
+    <string name="rd_languages_and_tracks">Valodas un celiņi</string>
 </resources>

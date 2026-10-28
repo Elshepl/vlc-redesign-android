@@ -9,4 +9,11 @@
     <string name="rd_new_music">Nuwe musiek</string>
     <string name="rd_recent">Onlangs</string>
     <string name="rd_open_network_stream">Open netwerkstroom</string>
+    <string name="rd_subtitle_timing">Onderskrif-tydsberekening</string>
+    <string name="rd_mark_voice_heard">Merk gehoorde stem</string>
+    <string name="rd_mark_text_seen">Merk gesiene teks</string>
+    <string name="rd_voice_marked">Stem gemerk</string>
+    <string name="rd_text_marked">Teks gemerk</string>
+    <string name="rd_reset">Stel terug</string>
+    <string name="rd_languages_and_tracks">Tale en snitte</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">Νέα μουσική</string>
     <string name="rd_recent">Πρόσφατα</string>
     <string name="rd_open_network_stream">Άνοιγμα ροής δικτύου</string>
+    <string name="rd_subtitle_timing">Χρονισμός υποτίτλων</string>
+    <string name="rd_mark_voice_heard">Σημείωση: ακούστηκε η φωνή</string>
+    <string name="rd_mark_text_seen">Σημείωση: φάνηκε το κείμενο</string>
+    <string name="rd_voice_marked">Η φωνή σημειώθηκε</string>
+    <string name="rd_text_marked">Το κείμενο σημειώθηκε</string>
+    <string name="rd_reset">Επαναφορά</string>
+    <string name="rd_languages_and_tracks">Γλώσσες και κομμάτια</string>
 </resources>

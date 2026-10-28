@@ -9,4 +9,11 @@
     <string name="rd_new_music">Új zenék</string>
     <string name="rd_recent">Legutóbbiak</string>
     <string name="rd_open_network_stream">Hálózati folyam megnyitása</string>
+    <string name="rd_subtitle_timing">Feliratidőzítés</string>
+    <string name="rd_mark_voice_heard">Hallott beszéd megjelölése</string>
+    <string name="rd_mark_text_seen">Látott szöveg megjelölése</string>
+    <string name="rd_voice_marked">Beszéd megjelölve</string>
+    <string name="rd_text_marked">Szöveg megjelölve</string>
+    <string name="rd_reset">Alaphelyzetbe</string>
+    <string name="rd_languages_and_tracks">Nyelvek és sávok</string>
 </resources>

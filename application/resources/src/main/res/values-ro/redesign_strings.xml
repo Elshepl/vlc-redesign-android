@@ -9,4 +9,11 @@
     <string name="rd_new_music">Muzică nouă</string>
     <string name="rd_recent">Recente</string>
     <string name="rd_open_network_stream">Deschide flux de rețea</string>
+    <string name="rd_subtitle_timing">Sincronizarea subtitlurilor</string>
+    <string name="rd_mark_voice_heard">Marchează vocea auzită</string>
+    <string name="rd_mark_text_seen">Marchează textul văzut</string>
+    <string name="rd_voice_marked">Voce marcată</string>
+    <string name="rd_text_marked">Text marcat</string>
+    <string name="rd_reset">Resetează</string>
+    <string name="rd_languages_and_tracks">Limbi și piste</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="rd_new_music">ਨਵਾਂ ਸੰਗੀਤ</string>
     <string name="rd_recent">ਤਾਜ਼ਾ</string>
     <string name="rd_open_network_stream">ਨੈੱਟਵਰਕ ਸਟਰੀਮ ਖੋਲ੍ਹੋ</string>
+    <string name="rd_subtitle_timing">ਸਬ-ਟਾਈਟਲ ਟਾਈਮਿੰਗ</string>
+    <string name="rd_mark_voice_heard">ਬੋਲ ਸੁਣੇ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਾਓ</string>
+    <string name="rd_mark_text_seen">ਟੈਕਸਟ ਵੇਖਿਆ ਵਜੋਂ ਨਿਸ਼ਾਨ ਲਾਓ</string>
+    <string name="rd_voice_marked">ਬੋਲ ਨਿਸ਼ਾਨਬੱਧ ਕੀਤੇ</string>
+    <string name="rd_text_marked">ਟੈਕਸਟ ਨਿਸ਼ਾਨਬੱਧ ਕੀਤਾ</string>
+    <string name="rd_reset">ਰੀਸੈੱਟ</string>
+    <string name="rd_languages_and_tracks">ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਟਰੈਕ</string>
 </resources>

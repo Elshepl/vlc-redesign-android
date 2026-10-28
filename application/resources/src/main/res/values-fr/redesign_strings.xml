@@ -9,4 +9,11 @@
     <string name="rd_new_music">Nouvelle musique</string>
     <string name="rd_recent">Récents</string>
     <string name="rd_open_network_stream">Ouvrir un flux réseau</string>
+    <string name="rd_subtitle_timing">Synchronisation des sous-titres</string>
+    <string name="rd_mark_voice_heard">Marquer la voix entendue</string>
+    <string name="rd_mark_text_seen">Marquer le texte vu</string>
+    <string name="rd_voice_marked">Voix marquée</string>
+    <string name="rd_text_marked">Texte marqué</string>
+    <string name="rd_reset">Réinitialiser</string>
+    <string name="rd_languages_and_tracks">Langues et pistes</string>
 </resources>

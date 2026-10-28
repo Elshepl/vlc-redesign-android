@@ -9,4 +9,11 @@
     <string name="rd_new_music">Ný tónlist</string>
     <string name="rd_recent">Nýlegt</string>
     <string name="rd_open_network_stream">Opna netstraum</string>
+    <string name="rd_subtitle_timing">Tímasetning skjátexta</string>
+    <string name="rd_mark_voice_heard">Merkja heyrða rödd</string>
+    <string name="rd_mark_text_seen">Merkja séðan texta</string>
+    <string name="rd_voice_marked">Rödd merkt</string>
+    <string name="rd_text_marked">Texti merktur</string>
+    <string name="rd_reset">Endurstilla</string>
+    <string name="rd_languages_and_tracks">Tungumál og spor</string>
 </resources>

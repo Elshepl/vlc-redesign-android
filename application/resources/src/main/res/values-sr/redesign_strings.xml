@@ -9,4 +9,11 @@
     <string name="rd_new_music">Нова музика</string>
     <string name="rd_recent">Недавно</string>
     <string name="rd_open_network_stream">Отвори мрежни ток</string>
+    <string name="rd_subtitle_timing">Тајминг титла</string>
+    <string name="rd_mark_voice_heard">Означи да се глас чуо</string>
+    <string name="rd_mark_text_seen">Означи да се текст видео</string>
+    <string name="rd_voice_marked">Глас означен</string>
+    <string name="rd_text_marked">Текст означен</string>
+    <string name="rd_reset">Ресетуј</string>
+    <string name="rd_languages_and_tracks">Језици и траке</string>
 </resources>

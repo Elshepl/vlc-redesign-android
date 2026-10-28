@@ -9,4 +9,11 @@
     <string name="rd_new_music">מוזיקה חדשה</string>
     <string name="rd_recent">אחרונים</string>
     <string name="rd_open_network_stream">פתח תזרים רשת</string>
+    <string name="rd_subtitle_timing">תזמון כתוביות</string>
+    <string name="rd_mark_voice_heard">סמן שהקול נשמע</string>
+    <string name="rd_mark_text_seen">סמן שהטקסט נראה</string>
+    <string name="rd_voice_marked">הקול סומן</string>
+    <string name="rd_text_marked">הטקסט סומן</string>
+    <string name="rd_reset">איפוס</string>
+    <string name="rd_languages_and_tracks">שפות ורצועות</string>
 </resources>
