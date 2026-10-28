@@ -46,6 +46,12 @@ import org.videolan.vlc.util.convertFavorites
 class BrowserFavoritesModel(context: Context) : ViewModel() {
     val favorites = LiveDataset<MediaLibraryItem>()
     val provider = FavoritesProvider(context.applicationContext, favorites, viewModelScope)
+
+    // the provider's media browsers are native objects: free them with the model
+    override fun onCleared() {
+        provider.release()
+        super.onCleared()
+    }
 }
 
 class FavoritesProvider(

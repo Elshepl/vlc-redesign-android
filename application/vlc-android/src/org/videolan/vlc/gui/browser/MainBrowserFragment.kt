@@ -203,7 +203,13 @@ class MainBrowserFragment : BaseFragment(), View.OnClickListener, CtxActionRecei
         networkMonitor = NetworkMonitor.getInstance(requireContext())
         super.onCreate(savedInstanceState)
         localViewModel = getBrowserModel(category = TYPE_FILE, url = null)
-        favoritesViewModel = BrowserFavoritesModel(requireContext())
+        // through a ViewModelProvider, so it is cleared with the fragment: built by hand, its favourites flow and
+        // media browsers lived on after every visit of the tab (25 fragments and 5,000 views kept after 125 switches)
+        val appContext = requireContext().applicationContext
+        favoritesViewModel = androidx.lifecycle.ViewModelProvider(this, object : androidx.lifecycle.ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = BrowserFavoritesModel(appContext) as T
+        })[BrowserFavoritesModel::class.java]
         networkViewModel = getBrowserModel(category = TYPE_NETWORK, url = null, mocked = arguments?.parcelableList(EXTRA_FOR_ESPRESSO))
     }
 
