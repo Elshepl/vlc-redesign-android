@@ -23,7 +23,9 @@
   ~
   -->
 
+<!-- VLC Redesign: a round well with the 1 px border (the speed presets, the jump buttons) -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
         android:shape="oval">
-    <solid android:color="?attr/default_divider" />
+    <solid android:color="?attr/rd_well" />
+    <stroke android:color="?attr/rd_border" android:width="1dp"/>
 </shape>

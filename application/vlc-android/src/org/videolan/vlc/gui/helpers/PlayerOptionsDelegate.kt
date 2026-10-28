@@ -152,6 +152,8 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         activity.findViewById<ViewStubCompat>(R.id.player_options_stub)?.let {
             rootView = it.inflate() as FrameLayout
             recyclerview = rootView.findViewById(R.id.options_list)
+            // VLC Redesign: the video player's panel is always dark; the audio player's follows the theme (a menu)
+            if (!video) recyclerview.background = androidx.core.content.ContextCompat.getDrawable(activity, R.drawable.rd_menu_background)
             val browseFrameLayout =  rootView.findViewById<BrowseFrameLayout>(R.id.options_background)
             browseFrameLayout.onFocusSearchListener = OnFocusSearchListener { focused, _ ->
                 if (recyclerview.hasFocus()) focused // keep focus on recyclerview! DO NOT return recyclerview, but focused, which is a child of the recyclerview

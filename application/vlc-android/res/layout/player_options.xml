@@ -12,8 +12,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|end"
+            android:layout_margin="8dp"
             android:elevation="8dp"
-            android:background="?attr/advanced_options_bg"
+            android:background="@drawable/rd_panel_float"
+            android:outlineProvider="background"
             android:clipToPadding="false"
             android:paddingTop="@dimen/default_margin"
             android:paddingBottom="@dimen/default_margin" />

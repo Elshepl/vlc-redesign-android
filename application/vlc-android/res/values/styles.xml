@@ -134,6 +134,7 @@
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Redesign.Large</item>
         <item name="materialButtonStyle">@style/Widget.Redesign.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Redesign.Button.Outlined</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Redesign.Button</item>
         <item name="borderlessButtonStyle">@style/Widget.Redesign.Button.Text</item>
         <item name="popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
         <item name="android:popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
@@ -375,6 +376,7 @@
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Redesign.Large</item>
         <item name="materialButtonStyle">@style/Widget.Redesign.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Redesign.Button.Outlined</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Redesign.Button</item>
         <item name="borderlessButtonStyle">@style/Widget.Redesign.Button.Text</item>
         <item name="popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
         <item name="android:popupMenuStyle">@style/Widget.Redesign.PopupMenu</item>
@@ -594,6 +596,15 @@
         </item>
 
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme.Player</item>
+        <!-- VLC Redesign: the player is dark in both themes -->
+        <item name="rd_well">@color/rd_dark_bg_b2</item>
+        <item name="rd_border">@color/rd_dark_divider_bright</item>
+        <item name="rd_panel">@color/rd_dark_bg_a4</item>
+        <item name="rd_icon">@color/rd_dark_fg_a2</item>
+        <item name="rd_icon_dim">@color/rd_dark_fg_a3</item>
+        <item name="rd_hover">@color/rd_dark_bg_a1</item>
+        <item name="rd_topbar">@color/rd_dark_bg_a3</item>
+        <item name="rd_text_section">@color/rd_dark_fg_2</item>
         <item name="bottom_sheet_background">@color/black_transparent_80</item>
         <item name="bottom_sheet_radius">4dp</item>
 
@@ -869,6 +880,8 @@
     <style name="AppBottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Redesign.Button.Outlined</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Redesign.Button</item>
         <item name="android:windowIsFloating">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
 
@@ -876,18 +889,30 @@
 
     <style name="AppBottomSheetDialogTheme.Player">
         <item name="android:navigationBarColor">@color/black_transparent_80</item>
+        <!-- VLC Redesign: the player's panels are always dark -->
+        <item name="bottomSheetStyle">@style/AppModalStyle.Player</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Redesign.Button.Outlined.Player</item>
+        <item name="rd_well">@color/rd_dark_bg_b2</item>
+        <item name="rd_border">@color/rd_dark_divider_bright</item>
 
     </style>
 
+    <!-- VLC Redesign: the desktop's panel, BG/A3 with radius 14 on top and the 1 px window border -->
     <style name="AppModalStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@drawable/rd_sheet_background</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="AppModalStyle.Player">
+        <item name="android:background">@drawable/rd_panel_top</item>
     </style>
 
     <style name="Theme.VLC.BottomSheetTitle">
         <item name="android:minHeight">56dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">?attr/font_default</item>
-        <item name="android:fontFamily">@font/inter</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
     <!-- VLC Redesign: the Home section titles ("Continue Watching", 6261:15078), Inter 18 in FG/2 -->

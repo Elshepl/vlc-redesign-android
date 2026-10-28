@@ -150,9 +150,9 @@
         <item name="android:ellipsize">none</item>
         <item name="android:paddingTop">4dp</item>
         <item name="android:paddingBottom">4dp</item>
-        <item name="backgroundTint">@color/rd_dark_bg_b2</item>
-        <item name="strokeColor">@color/rd_dark_divider_bright</item>
-        <item name="android:textColor">@color/rd_dark_fg_1</item>
+        <item name="backgroundTint">@color/rd_player_button_bg</item>
+        <item name="strokeColor">@color/rd_player_button_stroke</item>
+        <item name="android:textColor">@color/rd_player_button_text</item>
         <item name="rippleColor">@color/rd_ripple_dark</item>
     </style>
     <style name="Widget.Redesign.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">

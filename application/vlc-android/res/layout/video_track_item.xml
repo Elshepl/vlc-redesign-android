@@ -53,6 +53,7 @@
                 android:textColor="@{selected ? @color/white : @color/white_transparent_50}"
                 android:maxLines="1"
                 android:singleLine="true"
+                android:textAlignment="viewStart"
                 app:ellipsizeMode="@{true}"
                 app:selected="@{selected}"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView11"

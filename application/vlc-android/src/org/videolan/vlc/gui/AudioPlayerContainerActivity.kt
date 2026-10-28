@@ -293,6 +293,9 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
         }
         audioPlayerContainer = findViewById(R.id.audio_player_container)
         (audioPlayerContainer.layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = bottomInset
+        // VLC Redesign: beside the navigation rail, the mini player and the audio player start after it
+        if (this is MainActivity) (audioPlayerContainer.layoutParams as CoordinatorLayout.LayoutParams).marginStart =
+                if (useNavigationRail()) resources.getDimensionPixelSize(R.dimen.navigation_margin) else 0
     }
 
     private fun updateToolbarScrollability(enabled: Boolean) {
