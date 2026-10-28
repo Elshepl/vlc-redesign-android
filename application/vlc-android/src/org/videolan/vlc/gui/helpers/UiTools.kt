@@ -502,7 +502,7 @@ object UiTools {
     fun fillAboutView(activity: FragmentActivity, v: View) {
         val builddate = v.context.getString(R.string.build_time)
         val appVersion = v.findViewById<TextView>(R.id.app_version)
-        // VLC Redesign: "Version 0.3.2 · based on VLC 3.0.x" and the platform pill, as the desktop's About
+        // VLC Redesign: "Version 0.4.0 · based on VLC 3.0.x" and the platform pill, as the desktop's About
         appVersion.text = v.context.getString(R.string.rd_about_version, org.videolan.vlc.BuildConfig.RD_VERSION_NAME, libvlcVersion())
         v.findViewById<TextView>(R.id.rd_about_platform)?.let { badge ->
             val abi = installedAbi(v.context)
