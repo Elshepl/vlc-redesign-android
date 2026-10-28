@@ -84,6 +84,8 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
         }
         lifecycle.addObserver(this@Navigator)
         navigationView = listOf(findViewById(R.id.navigation), findViewById(R.id.navigation_rail))
+        // VLC Redesign: the icons carry their own colours (the active one is filled in the accent with a cut-out)
+        navigationView.forEach { it.itemIconTintList = null }
         appbarLayout = findViewById(R.id.appbar)
     }
 
