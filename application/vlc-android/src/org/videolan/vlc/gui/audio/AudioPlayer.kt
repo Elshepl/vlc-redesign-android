@@ -501,6 +501,7 @@ class AudioPlayer : Fragment(), PlaylistAdapter.IPlayer, TextWatcher, IAudioPlay
         updateRepeatMode()
         binding.audioMediaSwitcher.updateMedia(playlistModel.service)
         binding.coverMediaSwitcher.updateMedia(playlistModel.service)
+        updateWaveform()
         playlistModel.service?.currentMediaWrapper?.let {
             binding.audioMediaSwitcher.contentDescription = getString(R.string.talkback_audio_player,TalkbackUtil.getAudioTrack(requireActivity(), it))
             binding.trackInfoContainer?.contentDescription = getString(R.string.talkback_audio_player,TalkbackUtil.getAudioTrack(requireActivity(), it))
@@ -557,6 +558,41 @@ class AudioPlayer : Fragment(), PlaylistAdapter.IPlayer, TextWatcher, IAudioPlay
     }
 
     private var wasPlaying = true
+    // VLC Redesign: the desktop's waveform seek bar (WaveformSlider.qml) for a local audio file; the plain well
+    // for a stream, a file the platform cannot decode, or while the analysis runs
+    private var waveformUri: android.net.Uri? = null
+    private var waveformJob: kotlinx.coroutines.Job? = null
+    private var plainSeekDrawable: android.graphics.drawable.Drawable? = null
+
+    private fun updateWaveform() {
+        val media = playlistModel.service?.currentMediaWrapper ?: return
+        val uri = media.uri ?: return
+        if (uri == waveformUri) return
+        waveformUri = uri
+        waveformJob?.cancel()
+        if (plainSeekDrawable == null) plainSeekDrawable = binding.timeline.progressDrawable
+        val ctx = requireContext().applicationContext
+        val apply = { bins: FloatArray? ->
+            val bar = binding.timeline
+            val bounds = bar.progressDrawable?.bounds
+            bar.progressDrawable = if (bins == null) plainSeekDrawable else {
+                val accent = android.util.TypedValue().also { requireContext().theme.resolveAttribute(R.attr.rd_accent_bright, it, true) }.data
+                val night = resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK == android.content.res.Configuration.UI_MODE_NIGHT_YES
+                WaveformDrawable(ctx, bins, accent, ContextCompat.getColor(ctx, R.color.rd_bg_b2), if (night) 0xFF404040.toInt() else 0xFF929291.toInt())
+            }
+            bounds?.let { bar.progressDrawable?.bounds = it }
+            bar.progress = bar.progress
+            bar.invalidate()
+        }
+        Waveform.cached(uri)?.let { apply(it); return }
+        apply(null)
+        if (media.type == MediaWrapper.TYPE_VIDEO) return
+        waveformJob = lifecycleScope.launch {
+            val bins = withContext(Dispatchers.IO) { Waveform.peaks(ctx, uri) }
+            if (bins != null && waveformUri == uri && isAdded) apply(bins)
+        }
+    }
+
     private fun updatePlayPause() {
         val ctx = context ?: return
         val playing = playlistModel.playing
