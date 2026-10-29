@@ -59,4 +59,11 @@
     <string name="rd_right">Управа</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Затрымка аўдыё</string>
+    <string name="rd_accent_color">Акцэнтны колер</string>
+    <string name="rd_red">Чырвоны</string>
+    <string name="rd_yellow">Жоўты</string>
+    <string name="rd_green">Зялёны</string>
+    <string name="rd_blue">Сіні</string>
+    <string name="rd_purple">Пурпуровы</string>
+    <string name="rd_gray">Шэры</string>
 </resources>

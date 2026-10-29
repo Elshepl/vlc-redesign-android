@@ -59,4 +59,11 @@
     <string name="rd_right">வலது</string>
     <string name="rd_dolby_surround">டால்பி சரவுண்ட்</string>
     <string name="rd_audio_delay">ஒலித் தாமதம்</string>
+    <string name="rd_accent_color">உச்சரிப்பு நிறம்</string>
+    <string name="rd_red">சிவப்பு</string>
+    <string name="rd_yellow">மஞ்சல்</string>
+    <string name="rd_green">பச்சை</string>
+    <string name="rd_blue">நீலம்</string>
+    <string name="rd_purple">ஊதா</string>
+    <string name="rd_gray">சாம்பல்</string>
 </resources>

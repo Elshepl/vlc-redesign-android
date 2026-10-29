@@ -59,4 +59,11 @@
     <string name="rd_right">Djathtas</string>
     <string name="rd_dolby_surround">Dolby Përreth</string>
     <string name="rd_audio_delay">Vonesa e audios</string>
+    <string name="rd_accent_color">Ngjyra theksuese</string>
+    <string name="rd_red">Kuqe</string>
+    <string name="rd_yellow">Verdhë</string>
+    <string name="rd_green">Jeshil</string>
+    <string name="rd_blue">Blu</string>
+    <string name="rd_purple">Vjollcë</string>
+    <string name="rd_gray">Gri</string>
 </resources>

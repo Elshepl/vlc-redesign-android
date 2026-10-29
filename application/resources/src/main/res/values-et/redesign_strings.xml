@@ -59,4 +59,11 @@
     <string name="rd_right">Paremalt</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Audio viivitus</string>
+    <string name="rd_accent_color">Rõhuvärv</string>
+    <string name="rd_red">Punane</string>
+    <string name="rd_yellow">Kollane</string>
+    <string name="rd_green">Roheline</string>
+    <string name="rd_blue">Sinine</string>
+    <string name="rd_purple">Lilla</string>
+    <string name="rd_gray">Hall</string>
 </resources>

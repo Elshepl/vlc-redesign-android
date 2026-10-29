@@ -166,6 +166,11 @@ class PreferencesUi : BasePreferenceFragment(), SharedPreferences.OnSharedPrefer
             KEY_APP_THEME -> {
                 UiTools.restartDialog(requireActivity())
             }
+            "rd_accent" -> {
+                // the accent of the desktop changes at once: this screen now, the others when they come back
+                (activity as PreferencesActivity).setRestart()
+                requireActivity().recreate()
+            }
             LIST_TITLE_ELLIPSIZE -> {
                 Settings.listTitleEllipsize = sharedPreferences.getString(LIST_TITLE_ELLIPSIZE, "0")?.toInt() ?: 0
                 (activity as PreferencesActivity).setRestart()

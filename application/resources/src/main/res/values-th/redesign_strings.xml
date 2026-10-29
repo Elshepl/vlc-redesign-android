@@ -59,4 +59,11 @@
     <string name="rd_right">ขวา</string>
     <string name="rd_dolby_surround">ดอลบีเซอร์ราวนด์</string>
     <string name="rd_audio_delay">หน่วงเวลาเสียง</string>
+    <string name="rd_accent_color">สีเน้น</string>
+    <string name="rd_red">แดง</string>
+    <string name="rd_yellow">เหลือง</string>
+    <string name="rd_green">เขียว</string>
+    <string name="rd_blue">น้ำเงิน</string>
+    <string name="rd_purple">ม่วง</string>
+    <string name="rd_gray">เทา</string>
 </resources>

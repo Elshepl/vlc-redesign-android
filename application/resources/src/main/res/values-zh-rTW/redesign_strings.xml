@@ -59,4 +59,11 @@
     <string name="rd_right">右邊</string>
     <string name="rd_dolby_surround">杜比環繞</string>
     <string name="rd_audio_delay">音訊延遲</string>
+    <string name="rd_accent_color">輔色</string>
+    <string name="rd_red">紅</string>
+    <string name="rd_yellow">黃</string>
+    <string name="rd_green">綠</string>
+    <string name="rd_blue">藍</string>
+    <string name="rd_purple">紫</string>
+    <string name="rd_gray">灰</string>
 </resources>

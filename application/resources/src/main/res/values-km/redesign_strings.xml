@@ -59,4 +59,11 @@
     <string name="rd_right">ស្ដាំ</string>
     <string name="rd_dolby_surround">ដុលប៊ី​សឹរោន</string>
     <string name="rd_audio_delay">ការពន្យារពេលអូឌីយ៉ូ</string>
+    <string name="rd_accent_color">ពណ៌សង្កត់</string>
+    <string name="rd_red">ក្រហម</string>
+    <string name="rd_yellow">លឿង</string>
+    <string name="rd_green">បៃតង</string>
+    <string name="rd_blue">ខៀវ</string>
+    <string name="rd_purple">ស្វាយ</string>
+    <string name="rd_gray">ប្រផេះ</string>
 </resources>

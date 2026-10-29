@@ -59,4 +59,11 @@
     <string name="rd_right">ڕاست</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">دواخستنی دەنگ</string>
+    <string name="rd_accent_color">ڕەنگی جەختکردنەوە</string>
+    <string name="rd_red">سور</string>
+    <string name="rd_yellow">زەرد</string>
+    <string name="rd_green">سەوز</string>
+    <string name="rd_blue">شین</string>
+    <string name="rd_purple">مۆر</string>
+    <string name="rd_gray">ڕەساسی</string>
 </resources>

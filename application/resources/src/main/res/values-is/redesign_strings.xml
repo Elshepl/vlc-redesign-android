@@ -59,4 +59,11 @@
     <string name="rd_right">Hægri</string>
     <string name="rd_dolby_surround">Dolby Surround hljóðumhverfi</string>
     <string name="rd_audio_delay">Töf hljóðs</string>
+    <string name="rd_accent_color">Áherslulitur</string>
+    <string name="rd_red">Rautt</string>
+    <string name="rd_yellow">Gult</string>
+    <string name="rd_green">Grænt</string>
+    <string name="rd_blue">Blátt</string>
+    <string name="rd_purple">Purpurablátt</string>
+    <string name="rd_gray">Grátt</string>
 </resources>

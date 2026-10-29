@@ -59,4 +59,11 @@
     <string name="rd_right">Droete</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Ritårdmint odio</string>
+    <string name="rd_accent_color">Coleur d\' acsint</string>
+    <string name="rd_red">Rodje</string>
+    <string name="rd_yellow">Djaene</string>
+    <string name="rd_green">Vert</string>
+    <string name="rd_blue">Bleu</string>
+    <string name="rd_purple">Poûrpe</string>
+    <string name="rd_gray">Gris</string>
 </resources>

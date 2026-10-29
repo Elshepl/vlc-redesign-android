@@ -59,4 +59,11 @@
     <string name="rd_right">راست</string>
     <string name="rd_dolby_surround">دالبی سراند</string>
     <string name="rd_audio_delay">تأخیر صدا</string>
+    <string name="rd_accent_color">رنگ تأکیدی</string>
+    <string name="rd_red">قرمز</string>
+    <string name="rd_yellow">زرد</string>
+    <string name="rd_green">سبز</string>
+    <string name="rd_blue">آبی</string>
+    <string name="rd_purple">بنفش</string>
+    <string name="rd_gray">خاکستری</string>
 </resources>

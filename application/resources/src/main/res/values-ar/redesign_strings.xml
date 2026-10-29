@@ -59,4 +59,11 @@
     <string name="rd_right">يمين</string>
     <string name="rd_dolby_surround">Dolby  محيط</string>
     <string name="rd_audio_delay">تأخير الصوت</string>
+    <string name="rd_accent_color">لون التمييز</string>
+    <string name="rd_red">أحمر</string>
+    <string name="rd_yellow">أصفر</string>
+    <string name="rd_green">أخضر</string>
+    <string name="rd_blue">أزرق</string>
+    <string name="rd_purple">أرجواني</string>
+    <string name="rd_gray">رمادي</string>
 </resources>

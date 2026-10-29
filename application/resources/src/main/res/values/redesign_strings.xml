@@ -87,4 +87,37 @@
         <item>4</item>
         <item>5</item>
     </string-array>
+    <!-- Settings › Interface: the desktop's accent colour -->
+    <string name="rd_accent_color">Accent color</string>
+    <string name="rd_orange">Orange</string>
+    <string name="rd_red">Red</string>
+    <string name="rd_yellow">Yellow</string>
+    <string name="rd_green">Green</string>
+    <string name="rd_cyan">Cyan</string>
+    <string name="rd_blue">Blue</string>
+    <string name="rd_purple">Purple</string>
+    <string name="rd_pink">Pink</string>
+    <string name="rd_gray">Gray</string>
+    <string-array name="rd_accent_entries" translatable="false">
+        <item>@string/rd_orange</item>
+        <item>@string/rd_red</item>
+        <item>@string/rd_yellow</item>
+        <item>@string/rd_green</item>
+        <item>@string/rd_cyan</item>
+        <item>@string/rd_blue</item>
+        <item>@string/rd_purple</item>
+        <item>@string/rd_pink</item>
+        <item>@string/rd_gray</item>
+    </string-array>
+    <string-array name="rd_accent_values" translatable="false">
+        <item>orange</item>
+        <item>red</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>cyan</item>
+        <item>blue</item>
+        <item>purple</item>
+        <item>pink</item>
+        <item>grey</item>
+    </string-array>
 </resources>

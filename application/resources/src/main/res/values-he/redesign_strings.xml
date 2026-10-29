@@ -59,4 +59,11 @@
     <string name="rd_right">ימין</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">השהיית שמע</string>
+    <string name="rd_accent_color">צבע הדגשה</string>
+    <string name="rd_red">אדום</string>
+    <string name="rd_yellow">צהוב</string>
+    <string name="rd_green">ירוק</string>
+    <string name="rd_blue">כחול</string>
+    <string name="rd_purple">סגול</string>
+    <string name="rd_gray">אפור</string>
 </resources>

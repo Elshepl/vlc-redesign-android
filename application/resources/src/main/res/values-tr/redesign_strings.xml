@@ -59,4 +59,11 @@
     <string name="rd_right">Sağ</string>
     <string name="rd_dolby_surround">Dolby Çevresel Ses</string>
     <string name="rd_audio_delay">Ses gecikmesi</string>
+    <string name="rd_accent_color">Vurgu rengi</string>
+    <string name="rd_red">Kırmızı</string>
+    <string name="rd_yellow">Sarı</string>
+    <string name="rd_green">Yeşil</string>
+    <string name="rd_blue">Mavi</string>
+    <string name="rd_purple">Eflatun</string>
+    <string name="rd_gray">Gri</string>
 </resources>

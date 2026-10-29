@@ -59,4 +59,11 @@
     <string name="rd_right">오른쪽</string>
     <string name="rd_dolby_surround">돌비 서라운드</string>
     <string name="rd_audio_delay">오디오 지연</string>
+    <string name="rd_accent_color">강조 색</string>
+    <string name="rd_red">빨간색</string>
+    <string name="rd_yellow">노란색</string>
+    <string name="rd_green">녹색</string>
+    <string name="rd_blue">파란색</string>
+    <string name="rd_purple">보라색</string>
+    <string name="rd_gray">회색</string>
 </resources>

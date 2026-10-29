@@ -59,4 +59,11 @@
     <string name="rd_right">दाएँ</string>
     <string name="rd_dolby_surround">डोल्बी सराउंड</string>
     <string name="rd_audio_delay">ऑडियो विलंब</string>
+    <string name="rd_accent_color">एक्सेंट रंग</string>
+    <string name="rd_red">लाल</string>
+    <string name="rd_yellow">पीला</string>
+    <string name="rd_green">हरा</string>
+    <string name="rd_blue">नीला</string>
+    <string name="rd_purple">बैंगनी</string>
+    <string name="rd_gray">धूसर</string>
 </resources>

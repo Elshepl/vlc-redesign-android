@@ -59,4 +59,11 @@
     <string name="rd_right">Dešinėje</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Garso vėlinimas</string>
+    <string name="rd_accent_color">Akcento spalva</string>
+    <string name="rd_red">Raudona</string>
+    <string name="rd_yellow">Geltona</string>
+    <string name="rd_green">Žalia</string>
+    <string name="rd_blue">Mėlyna</string>
+    <string name="rd_purple">Violetinė</string>
+    <string name="rd_gray">Pilka</string>
 </resources>

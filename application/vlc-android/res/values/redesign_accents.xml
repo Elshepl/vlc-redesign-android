@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the desktop's nine accent colours (Settings > General > Accent colour) as theme overlays,
+     applied over the activity's theme (UiTools.applyAccent). Light theme: the light 'bright' tint. -->
+<resources>
+    <style name="ThemeOverlay.Redesign.Accent.Orange" parent="">
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
+        <item name="colorControlActivated">@color/rd_accent_orange_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Red" parent="">
+        <item name="colorPrimary">@color/rd_accent_red_main</item>
+        <item name="colorSecondary">@color/rd_accent_red_main</item>
+        <item name="colorAccent">@color/rd_accent_red_main</item>
+        <item name="colorControlActivated">@color/rd_accent_red_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_red_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Yellow" parent="">
+        <item name="colorPrimary">@color/rd_accent_yellow_main</item>
+        <item name="colorSecondary">@color/rd_accent_yellow_main</item>
+        <item name="colorAccent">@color/rd_accent_yellow_main</item>
+        <item name="colorControlActivated">@color/rd_accent_yellow_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_yellow_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Green" parent="">
+        <item name="colorPrimary">@color/rd_accent_green_main</item>
+        <item name="colorSecondary">@color/rd_accent_green_main</item>
+        <item name="colorAccent">@color/rd_accent_green_main</item>
+        <item name="colorControlActivated">@color/rd_accent_green_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_green_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Cyan" parent="">
+        <item name="colorPrimary">@color/rd_accent_cyan_main</item>
+        <item name="colorSecondary">@color/rd_accent_cyan_main</item>
+        <item name="colorAccent">@color/rd_accent_cyan_main</item>
+        <item name="colorControlActivated">@color/rd_accent_cyan_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_cyan_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Blue" parent="">
+        <item name="colorPrimary">@color/rd_accent_blue_main</item>
+        <item name="colorSecondary">@color/rd_accent_blue_main</item>
+        <item name="colorAccent">@color/rd_accent_blue_main</item>
+        <item name="colorControlActivated">@color/rd_accent_blue_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_blue_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Purple" parent="">
+        <item name="colorPrimary">@color/rd_accent_purple_main</item>
+        <item name="colorSecondary">@color/rd_accent_purple_main</item>
+        <item name="colorAccent">@color/rd_accent_purple_main</item>
+        <item name="colorControlActivated">@color/rd_accent_purple_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_purple_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Pink" parent="">
+        <item name="colorPrimary">@color/rd_accent_pink_main</item>
+        <item name="colorSecondary">@color/rd_accent_pink_main</item>
+        <item name="colorAccent">@color/rd_accent_pink_main</item>
+        <item name="colorControlActivated">@color/rd_accent_pink_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_pink_bright_light</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.Accent.Grey" parent="">
+        <item name="colorPrimary">@color/rd_accent_grey_main</item>
+        <item name="colorSecondary">@color/rd_accent_grey_main</item>
+        <item name="colorAccent">@color/rd_accent_grey_main</item>
+        <item name="colorControlActivated">@color/rd_accent_grey_main</item>
+        <item name="rd_accent_bright">@color/rd_accent_grey_bright_light</item>
+    </style>
+</resources>

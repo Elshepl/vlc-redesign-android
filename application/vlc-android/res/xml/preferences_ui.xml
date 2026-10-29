@@ -13,6 +13,15 @@
             android:entries="@array/daynight_mode_entries"
             android:entryValues="@array/daynight_mode_values"/>
 
+    <!-- VLC Redesign: the desktop's accent colour (Settings > General > Appearance) -->
+    <ListPreference
+            android:defaultValue="orange"
+            android:key="rd_accent"
+            android:title="@string/rd_accent_color"
+            android:summary="%s"
+            android:entries="@array/rd_accent_entries"
+            android:entryValues="@array/rd_accent_values"/>
+
     <CheckBoxPreference
             app:singleLineTitle="false"
             android:key="tv_ui"

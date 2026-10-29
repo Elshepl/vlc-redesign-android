@@ -59,4 +59,11 @@
     <string name="rd_right">Dreapta</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Întârziere audio</string>
+    <string name="rd_accent_color">Culoare de accent</string>
+    <string name="rd_red">Roșu</string>
+    <string name="rd_yellow">Galben</string>
+    <string name="rd_green">Verde</string>
+    <string name="rd_blue">Albastru</string>
+    <string name="rd_purple">Violet</string>
+    <string name="rd_gray">Gri</string>
 </resources>

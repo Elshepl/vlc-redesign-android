@@ -59,4 +59,11 @@
     <string name="rd_right">Deas</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Moill fhuaime</string>
+    <string name="rd_accent_color">Dath béime</string>
+    <string name="rd_red">Dearg</string>
+    <string name="rd_yellow">Buí</string>
+    <string name="rd_green">Uaine</string>
+    <string name="rd_blue">Gorm</string>
+    <string name="rd_purple">Corcra</string>
+    <string name="rd_gray">Liath</string>
 </resources>

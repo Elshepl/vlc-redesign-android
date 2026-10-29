@@ -6,4 +6,7 @@
     <string name="rd_move_earlier">הזזה שמאלה</string>
     <string name="rd_move_later">הזזה ימינה</string>
     <string name="rd_audio_delay_summary">משהה את הצליל ביחס לתמונה בכל מדיה, באלפיות שנייה; ערך שלילי משמיע אותו מוקדם יותר.</string>
+    <string name="rd_orange">כתום</string>
+    <string name="rd_cyan">טורקיז</string>
+    <string name="rd_pink">ורוד</string>
 </resources>

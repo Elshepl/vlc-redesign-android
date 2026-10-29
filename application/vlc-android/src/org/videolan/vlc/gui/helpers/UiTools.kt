@@ -1186,6 +1186,18 @@ fun trackNumber(v: View, media: MediaWrapper) {
     (v as? TextView)?.text = media.trackNumberText()
 }
 
+/**
+ * VLC Redesign: the accent colour chosen in Settings (the desktop's nine), as a theme overlay over the activity's
+ * theme. The colours the theme gives (colorPrimary, colorSecondary, colorAccent, rd_accent_bright) follow it; the
+ * views that name the orange directly keep it.
+ */
+fun android.app.Activity.applyAccent() {
+    val name = Settings.getInstance(this).getString("rd_accent", "orange") ?: "orange"
+    if (name == "orange") return
+    val res = resources.getIdentifier("ThemeOverlay.Redesign.Accent." + name.replaceFirstChar { it.uppercase() }, "style", packageName)
+    if (res != 0) theme.applyStyle(res, true)
+}
+
 fun BaseActivity.applyTheme() {
     forcedTheme()?.let {
         setTheme(it)
@@ -1220,6 +1232,7 @@ fun BaseActivity.applyTheme() {
         }
     }
     AppCompatDelegate.setDefaultNightMode(Integer.valueOf(string!!))
+    applyAccent()
 }
 
 fun getTvIconRes(mediaLibraryItem: MediaLibraryItem) = when (mediaLibraryItem.itemType) {

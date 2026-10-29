@@ -59,4 +59,11 @@
     <string name="rd_right">Eskuina</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Audio-atzerapena</string>
+    <string name="rd_accent_color">Nabarmentze-kolorea</string>
+    <string name="rd_red">Gorria</string>
+    <string name="rd_yellow">Horia</string>
+    <string name="rd_green">Berdea</string>
+    <string name="rd_blue">Urdina</string>
+    <string name="rd_purple">Morea</string>
+    <string name="rd_gray">Grisa</string>
 </resources>

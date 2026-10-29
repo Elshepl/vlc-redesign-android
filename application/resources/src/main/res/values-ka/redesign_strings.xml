@@ -59,4 +59,11 @@
     <string name="rd_right">მარჯვენა</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">აუდიოს დაყოვნება</string>
+    <string name="rd_accent_color">აქცენტის ფერი</string>
+    <string name="rd_red">წითელი</string>
+    <string name="rd_yellow">ყვითელი</string>
+    <string name="rd_green">მწვანე</string>
+    <string name="rd_blue">ლურჯი</string>
+    <string name="rd_purple">იისფერი</string>
+    <string name="rd_gray">ნაცრისფერი</string>
 </resources>

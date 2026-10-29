@@ -59,4 +59,11 @@
     <string name="rd_right">Regs</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Oudiovertraging</string>
+    <string name="rd_accent_color">Aksentkleur</string>
+    <string name="rd_red">Rooi</string>
+    <string name="rd_yellow">Geel</string>
+    <string name="rd_green">Groen</string>
+    <string name="rd_blue">Blou</string>
+    <string name="rd_purple">Pers</string>
+    <string name="rd_gray">Grys</string>
 </resources>

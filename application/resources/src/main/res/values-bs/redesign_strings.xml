@@ -59,4 +59,11 @@
     <string name="rd_right">Desno</string>
     <string name="rd_dolby_surround">Dolby Ozvučenje</string>
     <string name="rd_audio_delay">Kašnjenje zvuka</string>
+    <string name="rd_accent_color">Boja naglaska</string>
+    <string name="rd_red">Crvena</string>
+    <string name="rd_yellow">Žuta</string>
+    <string name="rd_green">Zelena</string>
+    <string name="rd_blue">Plava</string>
+    <string name="rd_purple">Ljubičasta</string>
+    <string name="rd_gray">Siva</string>
 </resources>

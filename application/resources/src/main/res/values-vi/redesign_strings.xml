@@ -59,4 +59,11 @@
     <string name="rd_right">Bên Phải</string>
     <string name="rd_dolby_surround">Âm thanh Nổi</string>
     <string name="rd_audio_delay">Độ trễ âm thanh</string>
+    <string name="rd_accent_color">Màu nhấn</string>
+    <string name="rd_red">Đỏ</string>
+    <string name="rd_yellow">Vàng</string>
+    <string name="rd_green">Xanh lá</string>
+    <string name="rd_blue">Xanh da trời</string>
+    <string name="rd_purple">Đỏ tía</string>
+    <string name="rd_gray">Xám</string>
 </resources>

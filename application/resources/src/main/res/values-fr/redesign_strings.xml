@@ -59,4 +59,11 @@
     <string name="rd_right">Droite</string>
     <string name="rd_dolby_surround">Dolby surround</string>
     <string name="rd_audio_delay">Retard audio</string>
+    <string name="rd_accent_color">Couleur d\'accentuation</string>
+    <string name="rd_red">Rouge</string>
+    <string name="rd_yellow">Jaune</string>
+    <string name="rd_green">Vert</string>
+    <string name="rd_blue">Bleu</string>
+    <string name="rd_purple">Violet</string>
+    <string name="rd_gray">Gris</string>
 </resources>

@@ -59,4 +59,11 @@
     <string name="rd_right">Höger</string>
     <string name="rd_dolby_surround">Dolby Surround</string>
     <string name="rd_audio_delay">Ljudfördröjning</string>
+    <string name="rd_accent_color">Accentfärg</string>
+    <string name="rd_red">Röd</string>
+    <string name="rd_yellow">Gul</string>
+    <string name="rd_green">Grön</string>
+    <string name="rd_blue">Blå</string>
+    <string name="rd_purple">Lila</string>
+    <string name="rd_gray">Grå</string>
 </resources>
