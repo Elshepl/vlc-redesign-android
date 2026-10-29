@@ -32,9 +32,10 @@
                     android:layout_alignParentTop="true"
                     android:text="@{dialog.text}"                    android:layout_margin="8dp" />
 
+            <!-- VLC Redesign: the desktop's dialog buttons (RedesignButton: neutral, the action in the accent) -->
             <Button
                     android:id="@+id/cancel"
-                    style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/text"
@@ -47,7 +48,7 @@
 
             <Button
                     android:id="@+id/action2"
-                    style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cancel"
@@ -61,7 +62,7 @@
 
             <Button
                     android:id="@+id/action1"
-                    style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                    style="?attr/materialButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/action2"

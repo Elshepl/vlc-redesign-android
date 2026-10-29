@@ -578,7 +578,7 @@ class AudioPlayer : Fragment(), PlaylistAdapter.IPlayer, TextWatcher, IAudioPlay
             bar.progressDrawable = if (bins == null) plainSeekDrawable else {
                 val accent = android.util.TypedValue().also { requireContext().theme.resolveAttribute(R.attr.rd_accent_bright, it, true) }.data
                 val night = resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK == android.content.res.Configuration.UI_MODE_NIGHT_YES
-                WaveformDrawable(ctx, bins, accent, ContextCompat.getColor(ctx, R.color.rd_bg_b2), if (night) 0xFF404040.toInt() else 0xFF929291.toInt())
+                WaveformDrawable(ctx, bins, accent, ContextCompat.getColor(requireContext(), R.color.rd_bg_b2), if (night) 0xFF404040.toInt() else 0xFF929291.toInt())
             }
             bounds?.let { bar.progressDrawable?.bounds = it }
             bar.progress = bar.progress

@@ -532,6 +532,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     override fun onCreate(savedInstanceState: Bundle?) {
         // VLC Redesign: the accent chosen in Settings (the player is not a BaseActivity)
         applyAccent(alwaysDark = true)
+        // VLC Redesign: the player is always dark (as the desktop's): its panels and sheets read the night colours
+        // too, also when the app or the system is light (they were light cards and toggles over the video)
+        delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
         super.onCreate(savedInstanceState)
 
         dialogsDelegate.observeDialogs(this, this)
