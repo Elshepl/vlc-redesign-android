@@ -430,12 +430,14 @@ def _remove_bitmaps(name, prefix="drawable"):
 # VLC Android's cone, wherever the phone interface draws it, as the redesign's logo (icons/svg/logo.svg, the 24-unit
 # logo of the desktop's app icon share/icons/scalable/vlc.svg): name -> (width dp, height dp, viewport w, viewport h,
 # scale of the 24-unit logo, colour, alpha). The logo's own orange is the brand colour (rd_logo), not the accent.
-# ic_default_cone stays: only the TV interface draws it.
+# ic_default_cone stays (only the TV interface draws it), as ic_icon_vlc4 (VLC 4 debug builds) and ic_no_media (the
+# media session's artwork, drawn outside the app).
 LOGOS = {
     "ic_cone_o": (46, 46, 24, 24, 1, "@color/rd_logo", 1),                      # the player while it opens a media
     "ic_about_logo": (112, 112, 24, 24, 1, "@color/rd_logo", 1),                # About
     "ic_renderer_background_cone": (510, 600, 272, 320, 13, "@color/rd_logo", 0.85),  # the player while it casts
     "ic_stat_vlc": (24, 24, 24, 24, 1, "#FFFFFFFF", 1),                         # the debug log's notification
+    "ic_icon": (54, 54, 24, 24, 1, "@color/rd_logo", 1),                        # onboarding, toolbar, pinned shortcuts
 }
 
 
