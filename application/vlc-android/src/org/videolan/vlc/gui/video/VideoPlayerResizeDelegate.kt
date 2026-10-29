@@ -24,6 +24,7 @@
 
 package org.videolan.vlc.gui.video
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -100,6 +101,9 @@ class VideoPlayerResizeDelegate(private val player: VideoPlayerActivity) {
             sizeAdapter.setOnSizeSelectedListener { scale ->
                 setVideoScale(scale)
             }
+            // VLC Redesign: the custom ratios of Settings > Video > Framing after the fixed ones (the desktop's list)
+            sizeAdapter.customs = RdCustomAspect.list(player)
+            sizeAdapter.customSelectedListener = { ratio -> setCustomRatio(ratio) }
             sizeList.adapter = sizeAdapter
 
             val settings = Settings.getInstance(player)
@@ -134,7 +138,10 @@ class VideoPlayerResizeDelegate(private val player: VideoPlayerActivity) {
             }
 
             resizeMainView.setOnClickListener { hideResizeOverlay() }
-            sizeAdapter.selectedSize = MediaPlayer.ScaleType.entries.indexOf(player.service?.mediaplayer?.videoScale ?: MediaPlayer.ScaleType.SURFACE_BEST_FIT)
+            sizeAdapter.customs = RdCustomAspect.list(player)
+            val custom = player.customAspect.current
+            sizeAdapter.selectedSize = if (custom != null && custom in sizeAdapter.customs) MediaPlayer.ScaleType.entries.size + sizeAdapter.customs.indexOf(custom)
+            else MediaPlayer.ScaleType.entries.indexOf(player.service?.mediaplayer?.videoScale ?: MediaPlayer.ScaleType.SURFACE_BEST_FIT)
             scrollView.scrollTo(0, 0)
             resizeMainView.visibility = View.VISIBLE
             player.setSurfaceOpen("aspect", true)
@@ -168,7 +175,15 @@ class VideoPlayerResizeDelegate(private val player: VideoPlayerActivity) {
      * Resize the video layout to a given aspect ratio
      * @param scale the new aspect ratio
      */
+    /** a custom ratio of Settings > Video > Framing */
+    fun setCustomRatio(ratio: String) {
+        if (player.service == null) return
+        player.customAspect.set(ratio)
+        overlayDelegate.showInfo(ratio, 1000, player.getString(R.string.resize_tip))
+    }
+
     fun setVideoScale(scale: MediaPlayer.ScaleType) = player.service?.run {
+        if (player.customAspect.current != null) player.customAspect.set(null)
         mediaplayer.videoScale = scale
         when (scale) {
             MediaPlayer.ScaleType.SURFACE_BEST_FIT -> overlayDelegate.showInfo(R.string.surface_best_fit, 1000, R.string.resize_tip)
@@ -211,6 +226,11 @@ class SizeAdapter : RecyclerView.Adapter<SizeAdapter.ViewHolder>() {
             notifyItemChanged(field)
         }
     lateinit var sizeSelectedListener: (MediaPlayer.ScaleType) -> Unit
+    /** VLC Redesign: the custom ratios, after the fixed list */
+    var customs: List<String> = emptyList()
+        @SuppressLint("NotifyDataSetChanged")
+        set(value) { if (field != value) { field = value; notifyDataSetChanged() } }
+    var customSelectedListener: ((String) -> Unit)? = null
     private var scheduler: LifecycleAwareScheduler? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -223,10 +243,11 @@ class SizeAdapter : RecyclerView.Adapter<SizeAdapter.ViewHolder>() {
         sizeSelectedListener = listener
     }
 
-    override fun getItemCount() = MediaPlayer.ScaleType.entries.size
+    override fun getItemCount() = MediaPlayer.ScaleType.entries.size + customs.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(MediaPlayer.ScaleType.entries[position], position == selectedSize)
+        if (position >= MediaPlayer.ScaleType.entries.size) holder.bindCustom(customs[position - MediaPlayer.ScaleType.entries.size], position == selectedSize)
+        else holder.bind(MediaPlayer.ScaleType.entries[position], position == selectedSize)
     }
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
@@ -245,9 +266,18 @@ class SizeAdapter : RecyclerView.Adapter<SizeAdapter.ViewHolder>() {
         init {
 
             itemView.setOnClickListener {
-                selectedSize = layoutPosition
-                sizeSelectedListener.invoke(MediaPlayer.ScaleType.entries[layoutPosition])
+                val position = layoutPosition
+                if (position < 0) return@setOnClickListener
+                selectedSize = position
+                if (position >= MediaPlayer.ScaleType.entries.size) customSelectedListener?.invoke(customs[position - MediaPlayer.ScaleType.entries.size])
+                else sizeSelectedListener.invoke(MediaPlayer.ScaleType.entries[position])
             }
+        }
+
+        fun bindCustom(ratio: String, selected: Boolean) {
+            binding.scaleName = ratio
+            binding.selected = selected
+            binding.executePendingBindings()
         }
 
         fun bind(scaleType: MediaPlayer.ScaleType, selected: Boolean) {

@@ -311,4 +311,6 @@
     <string name="rd_record">Ta opp</string>
     <string name="rd_record_started">Opptak</string>
     <string name="rd_font_default">Standard</string>
+    <string name="rd_custom_aspect_ratios">Eigendefinerte sideforhold</string>
+    <string name="rd_help_custom_aspect_ratios">Kommadelt liste over sideforhold som blir lagde til i lista over sideforhold i grensesnittet.</string>
 </resources>

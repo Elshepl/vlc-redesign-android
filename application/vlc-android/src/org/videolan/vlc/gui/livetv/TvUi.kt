@@ -220,8 +220,79 @@ internal class TvProgress(context: Context, private val track: Int, private val 
     }
 }
 
+/**
+ * A row that wraps (the desktop's Flow): badges and buttons go on to a new line instead of being cut at the edge
+ * of a narrow window or a long translation. Lines follow the layout direction; [alignEnd] puts them at the end.
+ */
+internal class TvFlow(context: Context, private val hGap: Int, private val vGap: Int, private val alignEnd: Boolean = false) : ViewGroup(context) {
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val unbounded = MeasureSpec.getMode(widthMeasureSpec) == MeasureSpec.UNSPECIFIED
+        val maxW = MeasureSpec.getSize(widthMeasureSpec) - paddingLeft - paddingRight
+        val childW = if (unbounded) MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED) else MeasureSpec.makeMeasureSpec(maxOf(0, maxW), MeasureSpec.AT_MOST)
+        var lineW = 0
+        var lineH = 0
+        var totalH = 0
+        var widest = 0
+        for (i in 0 until childCount) {
+            val c = getChildAt(i)
+            if (c.visibility == View.GONE) continue
+            c.measure(childW, getChildMeasureSpec(heightMeasureSpec, 0, c.layoutParams?.height ?: ViewGroup.LayoutParams.WRAP_CONTENT))
+            if (lineW > 0 && !unbounded && lineW + hGap + c.measuredWidth > maxW) {
+                totalH += lineH + vGap
+                widest = maxOf(widest, lineW)
+                lineW = c.measuredWidth
+                lineH = c.measuredHeight
+            } else {
+                lineW += (if (lineW > 0) hGap else 0) + c.measuredWidth
+                lineH = maxOf(lineH, c.measuredHeight)
+            }
+        }
+        totalH += lineH
+        widest = maxOf(widest, lineW)
+        setMeasuredDimension(resolveSize(widest + paddingLeft + paddingRight, widthMeasureSpec),
+            resolveSize(totalH + paddingTop + paddingBottom, heightMeasureSpec))
+    }
+
+    override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
+        val maxW = width - paddingLeft - paddingRight
+        val rtl = layoutDirection == View.LAYOUT_DIRECTION_RTL
+        val lines = mutableListOf<MutableList<View>>(mutableListOf())
+        var lineW = 0
+        for (i in 0 until childCount) {
+            val c = getChildAt(i)
+            if (c.visibility == View.GONE) continue
+            if (lineW > 0 && lineW + hGap + c.measuredWidth > maxW) {
+                lines.add(mutableListOf())
+                lineW = 0
+            }
+            lineW += (if (lineW > 0) hGap else 0) + c.measuredWidth
+            lines.last().add(c)
+        }
+        var y = paddingTop
+        for (line in lines) {
+            if (line.isEmpty()) continue
+            val w = line.sumOf { it.measuredWidth } + hGap * (line.size - 1)
+            val h = line.maxOf { it.measuredHeight }
+            // the start of the line, from the left: the start side, or the end side when aligned to the end
+            val fromStart = if (alignEnd) maxOf(0, maxW - w) else 0
+            var x = 0
+            for (c in line) {
+                val left = if (rtl) paddingLeft + maxW - fromStart - x - c.measuredWidth else paddingLeft + fromStart + x
+                val top = y + (h - c.measuredHeight) / 2
+                c.layout(left, top, left + c.measuredWidth, top + c.measuredHeight)
+                x += c.measuredWidth + hGap
+            }
+            y += h + vGap
+        }
+    }
+}
+
 internal object TvTexts {
-    fun time(context: Context, secs: Long): String = DateFormat.getTimeInstance(DateFormat.SHORT).format(Date(secs * 1000))
+    /** the language of the app (it can differ from the phone's), as the desktop's QLocale().toString(time, ShortFormat) */
+    private fun locale(context: Context) = context.resources.configuration.locales[0] ?: java.util.Locale.getDefault()
+
+    fun time(context: Context, secs: Long): String = DateFormat.getTimeInstance(DateFormat.SHORT, locale(context)).format(Date(secs * 1000))
 
     fun duration(context: Context, secs: Long): String {
         val minutes = (maxOf(0L, secs) + 59) / 60
@@ -241,7 +312,7 @@ internal object TvTexts {
             0L -> context.getString(R.string.rd_tv_today)
             1L -> context.getString(R.string.rd_tv_tomorrow)
             -1L -> context.getString(R.string.rd_tv_yesterday)
-            else -> android.text.format.DateFormat.format(android.text.format.DateFormat.getBestDateTimePattern(java.util.Locale.getDefault(), "EEE d MMM"), c).toString()
+            else -> android.text.format.DateFormat.format(android.text.format.DateFormat.getBestDateTimePattern(locale(context), "EEE d MMM"), c).toString()
         }
     }
 

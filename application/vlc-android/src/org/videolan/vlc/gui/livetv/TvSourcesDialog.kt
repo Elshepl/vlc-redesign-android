@@ -52,7 +52,9 @@ class TvSourcesDialog : DialogFragment() {
 
     private lateinit var tabs: TvSegmented
     private lateinit var body: LinearLayout
-    private lateinit var footer: LinearLayout
+    /** the footer: Close at the start, then [footer], the actions of the page at the end, wrapping when too wide */
+    private lateinit var footerBar: LinearLayout
+    private lateinit var footer: TvFlow
     private lateinit var scroll: ScrollView
 
     // the fields of the link page, kept across its rebuilds
@@ -126,8 +128,10 @@ class TvSourcesDialog : DialogFragment() {
         body = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
         scroll = ScrollView(ctx).apply { isFillViewport = true; addView(body) }
         root.addView(scroll, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f).apply { topMargin = ctx.tvPx(14f) })
-        footer = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.END or Gravity.CENTER_VERTICAL }
-        root.addView(footer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(12f) })
+        footerBar = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
+        footer = TvFlow(ctx, ctx.tvPx(8f), ctx.tvPx(8f), alignEnd = true)
+        footerBar.addView(footer, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = ctx.tvPx(8f) })
+        root.addView(footerBar, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(12f) })
         return root
     }
 
@@ -150,12 +154,13 @@ class TvSourcesDialog : DialogFragment() {
         tabs.value = page
         body.removeAllViews()
         footer.removeAllViews()
+        while (footerBar.childCount > 1) footerBar.removeViewAt(0)
         when (page) {
             "link" -> buildLink(ctx, sources)
             "catalog" -> buildCatalog(ctx, sources)
             else -> buildSources(ctx, sources)
         }
-        footer.addView(ctx.tvButton(getString(R.string.rd_tv_close)) { dismissAllowingStateLoss() }, 0)
+        footerBar.addView(ctx.tvButton(getString(R.string.rd_tv_close)) { dismissAllowingStateLoss() }, 0)
     }
 
     private fun gap(ctx: Context, v: Float) = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(v) }
@@ -172,7 +177,6 @@ class TvSourcesDialog : DialogFragment() {
         heading(ctx, getString(R.string.rd_tv_your_tv_sources), description = getString(
             if (sources.isNotEmpty()) R.string.rd_tv_sources_order_help else R.string.rd_tv_no_source_help))
         sources.forEachIndexed { i, s -> body.addView(sourceCard(ctx, s, i, sources.size), gap(ctx, 10f)) }
-        footer.addView(View(ctx), LinearLayout.LayoutParams(0, 1, 1f))
         if (sources.isNotEmpty()) footer.addView(ctx.tvButton(getString(R.string.rd_tv_update_all)) { LiveTv.refresh() }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(8f) })
         footer.addView(ctx.tvButton(getString(R.string.rd_tv_add_link), accent = true) { page = "link"; editing = ""; clearFields(); build() },
             LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(8f) })
@@ -186,14 +190,15 @@ class TvSourcesDialog : DialogFragment() {
             alpha = if (s.enabled) 1f else 0.6f
         }
         card.addView(ctx.tvText(s.name.ifEmpty { getString(if (s.kind == "xtream") R.string.rd_tv_kind_xtream else R.string.rd_tv_kind_m3u) }, 15f, ctx.tvColor(R.color.rd_fg_1), medium = true))
-        val badges = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL }
-        fun badge(v: View) = badges.addView(v, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = ctx.tvPx(6f) })
+        // badges and buttons wrap on a narrow window or a long translation, instead of being cut at the edge
+        val badges = TvFlow(ctx, ctx.tvPx(6f), ctx.tvPx(6f))
+        fun badge(v: View) = badges.addView(v, ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         badge(ctx.tvBadge(resources.getQuantityString(R.plurals.rd_tv_n_channels, s.channels, s.channels), R.drawable.rd_ic_tv))
         if (s.withGuide > 0) badge(ctx.tvBadge(resources.getQuantityString(R.plurals.rd_tv_guide_n, s.withGuide, s.withGuide), R.drawable.rd_ic_duo_lists))
         if (s.catchupDays > 0) badge(ctx.tvBadge(resources.getQuantityString(R.plurals.rd_tv_catchup_n, s.catchupDays, s.catchupDays), R.drawable.rd_ic_recent))
         if (s.vod) badge(ctx.tvBadge(getString(R.string.rd_tv_films), R.drawable.rd_ic_video))
         if (s.series) badge(ctx.tvBadge(getString(R.string.rd_tv_series), R.drawable.rd_ic_playlists))
-        card.addView(HorizontalScrollView(ctx).apply { isHorizontalScrollBarEnabled = false; addView(badges) }, gap(ctx, 8f))
+        card.addView(badges, gap(ctx, 8f))
         val status = when {
             s.busy -> if (s.stage == "guide") getString(R.string.rd_tv_updating_guide, "%.1f".format(s.received / 1048576.0)) else getString(R.string.rd_tv_updating_channels)
             s.error.isNotEmpty() && s.channels == 0 -> getString(R.string.rd_tv_could_not_load, s.name, s.error)
@@ -201,8 +206,8 @@ class TvSourcesDialog : DialogFragment() {
             else -> ""
         }
         if (status.isNotEmpty()) card.addView(ctx.tvText(status, 12f, ctx.tvColor(if (s.error.isNotEmpty() && s.channels == 0 && !s.busy) R.color.rd_warning else R.color.rd_fg_a3), lines = 2), gap(ctx, 8f))
-        val buttons = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
-        fun add(v: View) = buttons.addView(v, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = ctx.tvPx(6f) })
+        val buttons = TvFlow(ctx, ctx.tvPx(6f), ctx.tvPx(6f))
+        fun add(v: View) = buttons.addView(v, ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         if (count > 1) {
             add(ctx.tvIconButton(R.drawable.rd_ic_chevron_down, getString(R.string.rd_tv_move_up)) { LiveTv.moveSource(s.id, -1) }.apply { rotation = 180f; isEnabled = index > 0; alpha = if (index > 0) 1f else 0.3f; minimumWidth = ctx.tvPx(36f); minimumHeight = ctx.tvPx(36f) })
             add(ctx.tvIconButton(R.drawable.rd_ic_chevron_down, getString(R.string.rd_tv_move_down)) { LiveTv.moveSource(s.id, 1) }.apply { isEnabled = index < count - 1; alpha = if (index < count - 1) 1f else 0.3f; minimumWidth = ctx.tvPx(36f); minimumHeight = ctx.tvPx(36f) })
@@ -211,7 +216,7 @@ class TvSourcesDialog : DialogFragment() {
         add(ctx.tvButton(getString(R.string.rd_tv_update)) { LiveTv.refresh(listOf(s.id)) }.apply { isEnabled = s.enabled && !s.busy })
         add(ctx.tvButton(getString(R.string.rd_tv_edit)) { edit(s.id) })
         add(ctx.tvButton(getString(R.string.rd_tv_remove)) { LiveTv.removeSource(s.id) })
-        card.addView(HorizontalScrollView(ctx).apply { isHorizontalScrollBarEnabled = false; addView(buttons) }, gap(ctx, 10f))
+        card.addView(buttons, gap(ctx, 10f))
         return card
     }
 
@@ -286,7 +291,6 @@ class TvSourcesDialog : DialogFragment() {
         body.addView(ctx.tvField(getString(R.string.rd_tv_guide_hint), multiLine = true).apply { setText(fEpg); watch(this) { fEpg = it }; contentDescription = getString(R.string.rd_tv_guide_links) }, gap(ctx, 6f))
         if (error.isNotEmpty()) body.addView(ctx.tvText(error, 13f, ctx.tvColor(R.color.rd_warning), lines = 0), gap(ctx, 10f))
         body.addView(ctx.tvText(getString(R.string.rd_tv_secrets_help), 12f, ctx.tvColor(R.color.rd_fg_a4), lines = 0), gap(ctx, 14f))
-        footer.addView(View(ctx), LinearLayout.LayoutParams(0, 1, 1f))
         footer.addView(ctx.tvButton(getString(R.string.rd_tv_back)) { page = "sources"; editing = ""; build() },
             LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(8f) })
         footer.addView(ctx.tvButton(getString(when {
@@ -406,7 +410,6 @@ class TvSourcesDialog : DialogFragment() {
             try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(LiveTv.suggestionUrl()))) } catch (e: Exception) { }
         }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(10f) })
         body.addView(note, gap(ctx, 16f))
-        footer.addView(View(ctx), LinearLayout.LayoutParams(0, 1, 1f))
     }
 
     private fun refreshCatalogList(ctx: Context) {

@@ -319,4 +319,6 @@
     <string name="rd_record">Eredjistraedje</string>
     <string name="rd_record_started">Eredjistraedje</string>
     <string name="rd_font_default">Prémetou</string>
+    <string name="rd_custom_aspect_ratios">Rapoirts lårdjeur/hôteur da vosse</string>
+    <string name="rd_help_custom_aspect_ratios">Djivêye, dispårteye pa des virgules, des rapoirts lårdjeur/hôteur k\' seront radjoutés al djivêye des rapoirts lårdjeur/hôteur di l\' eterface.</string>
 </resources>

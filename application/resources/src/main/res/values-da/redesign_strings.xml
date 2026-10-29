@@ -323,4 +323,6 @@
     <string name="rd_record">Optag</string>
     <string name="rd_record_started">Optager</string>
     <string name="rd_font_default">Standard</string>
+    <string name="rd_custom_aspect_ratios">Brugerdefinerede højde-bredde-forhold</string>
+    <string name="rd_help_custom_aspect_ratios">Kommasepareret liste over højde-bredde-forhold der tilføjes i den tilsvarende liste i brugerfladen.</string>
 </resources>

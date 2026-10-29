@@ -323,4 +323,6 @@
     <string name="rd_record">Ierakstīt</string>
     <string name="rd_record_started">Ierakstīšana</string>
     <string name="rd_font_default">Noklusējuma</string>
+    <string name="rd_custom_aspect_ratios">Pielāgotas malu proporcijas</string>
+    <string name="rd_help_custom_aspect_ratios">Komatu atdalīts saraksts ar malu proporcijām, kuras tiks pievienotas saskarnes malu attiecību sarakstā.</string>
 </resources>

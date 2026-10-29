@@ -317,4 +317,6 @@
     <string name="rd_record">Recordio</string>
     <string name="rd_record_started">Yn recordio</string>
     <string name="rd_font_default">Rhagosodedig</string>
+    <string name="rd_custom_aspect_ratios">Cymarebau agwedd personol</string>
+    <string name="rd_help_custom_aspect_ratios">Rhestr o gymarebau agwedd (wedi\'u gwahanu gyda choma) caiff eu hychwanegu i restr y rhyngwyneb o gymarebau agwedd.</string>
 </resources>

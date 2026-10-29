@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug builds only: the UI tour's probe (tools/autotour). Never merged into a release manifest. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- started with the process: enables StrictMode logging and follows the activities -->
+        <provider
+            android:name="org.videolan.vlc.autotour.AutoTourProbe"
+            android:authorities="${applicationId}.autotour"
+            android:exported="false"
+            android:initOrder="1" />
+        <!-- commands of the tour driver: adb shell am broadcast -n <pkg>/org.videolan.vlc.autotour.AutoTourReceiver -a <cmd> -->
+        <receiver
+            android:name="org.videolan.vlc.autotour.AutoTourReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP" />
+    </application>
+</manifest>

@@ -76,7 +76,8 @@ class MLStorageBrowserFragment : BaseFragment(), IStorageFragmentDelegate by Sto
 
     private var alertDialog: AlertDialog? = null
 
-    override fun getTitle() = getString(if (arguments?.getBoolean(FROM_ONBOARDING, false) == true) R.string.medialibrary_directories else  R.string.directories_summary)
+    // VLC Redesign: the short name as the title (the instruction, directories_summary, is cut in most languages)
+    override fun getTitle() = getString(R.string.medialibrary_directories)
 
     override fun onCreateActionMode(mode: ActionMode?, menu: Menu?) = false
 

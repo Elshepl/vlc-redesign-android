@@ -324,4 +324,6 @@
     <string name="rd_record">ថត</string>
     <string name="rd_record_started">កំពុង​កត់ត្រា</string>
     <string name="rd_font_default">លំនាំដើម</string>
+    <string name="rd_custom_aspect_ratios">សមាមាត្រផ្ទាល់ខ្លួន</string>
+    <string name="rd_help_custom_aspect_ratios">បញ្ជី​បំបែក​ដោយ​សញ្ញា​ក្បៀស​នៃ​សមាមាត្រ ដែល​នឹង​ត្រូវ​បាន​បន្ថែម​ទៅ​ក្នុង​បញ្ជី​សមាមាត្រ​របស់​ចំណុច​ប្រទាក់។</string>
 </resources>

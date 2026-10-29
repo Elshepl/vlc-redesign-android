@@ -96,7 +96,18 @@ class VideoStatsDelegate(private val player: VideoPlayerActivity, val scrolling:
 
     @SuppressLint("SetTextI18n")
     private val runnable = Runnable {
-        val media = player.service?.mediaplayer?.media as? Media ?: return@Runnable
+        // MediaPlayer.getMedia() retains the media: released at the end of each refresh (it leaked one reference
+        // a second while the statistics were shown)
+        val retained = player.service?.mediaplayer?.media ?: return@Runnable
+        val media = retained as? Media ?: run { retained.release(); return@Runnable }
+        try { refresh(media) } finally { media.release() }
+        if (started) {
+            start()
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun refresh(media: Media) {
 
         val stats = media.stats
         if (BuildConfig.DEBUG) Log.i(this::class.java.simpleName, "Stats: demuxBitrate: ${stats?.demuxBitrate} demuxCorrupted: ${stats?.demuxCorrupted} demuxDiscontinuity: ${stats?.demuxDiscontinuity} demuxReadBytes: ${stats?.demuxReadBytes}")
@@ -155,10 +166,6 @@ class VideoStatsDelegate(private val player: VideoPlayerActivity, val scrolling:
                     binding.infoGrids.addView(grid)
                 }
             }
-        }
-
-        if (started) {
-            start()
         }
     }
 

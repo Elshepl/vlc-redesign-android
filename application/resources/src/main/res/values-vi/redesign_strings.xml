@@ -316,4 +316,6 @@
     <string name="rd_record">Thu âm</string>
     <string name="rd_record_started">Đang thu âm</string>
     <string name="rd_font_default">Mặc định</string>
+    <string name="rd_custom_aspect_ratios">Tỉ lệ khung hình tùy chỉnh</string>
+    <string name="rd_help_custom_aspect_ratios">Dấu phẩy tách biệt danh sách các tỉ lệ, sẽ được thêm vào trong phần danh sách tỉ lệ của giao diện.</string>
 </resources>

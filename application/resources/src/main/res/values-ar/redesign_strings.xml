@@ -313,4 +313,6 @@
     <string name="rd_record">تسجيل</string>
     <string name="rd_record_started">تسجيل</string>
     <string name="rd_font_default">المبدئي</string>
+    <string name="rd_custom_aspect_ratios">نسب أبعاد مخصصة</string>
+    <string name="rd_help_custom_aspect_ratios">قائمة نسب أبعاد مفصولة بفواصل تُضاف إلى قائمة نسب الأبعاد في الواجهة.</string>
 </resources>

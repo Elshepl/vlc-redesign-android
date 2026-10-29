@@ -311,4 +311,6 @@
     <string name="rd_record">Снимање</string>
     <string name="rd_record_started">Снимање</string>
     <string name="rd_font_default">Подразумевано</string>
+    <string name="rd_custom_aspect_ratios">Прилагођене пропорције</string>
+    <string name="rd_help_custom_aspect_ratios">Зарезом одвојен списак пропорција које ће бити додате у списак пропорција у интерфејсу.</string>
 </resources>

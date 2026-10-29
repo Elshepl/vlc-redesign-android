@@ -33,6 +33,14 @@
             android:entries="@array/rd_deinterlace_mode_entries"
             android:entryValues="@array/rd_deinterlace_mode_values" />
     </PreferenceCategory>
+    <!-- the desktop's Framing: custom-aspect-ratios, added to the player's aspect ratio list (RdCustomAspect) -->
+    <PreferenceCategory android:title="@string/rd_sec_framing">
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue=""
+            android:key="rd_custom_aspect_ratios"
+            android:summary="@string/rd_help_custom_aspect_ratios"
+            android:title="@string/rd_custom_aspect_ratios" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/rd_sec_snapshots">
         <org.videolan.vlc.gui.preferences.rd.RdListPreference
             android:defaultValue="0"

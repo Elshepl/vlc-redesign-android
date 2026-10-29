@@ -65,6 +65,7 @@ import org.videolan.tools.BROWSER_SHOW_ONLY_MULTIMEDIA
 import org.videolan.tools.CoroutineContextProvider
 import org.videolan.tools.DependencyProvider
 import org.videolan.tools.Settings
+import org.videolan.tools.getContextWithLocale
 import org.videolan.tools.livedata.LiveDataset
 import org.videolan.vlc.R
 import org.videolan.vlc.util.ModelsHelper
@@ -374,7 +375,8 @@ abstract class BrowserProvider(val context: Context, val dataset: LiveDataset<Me
     fun hasMedias(media: MediaWrapper): Boolean = foldersContentMap.get(media)?.map { it as MediaWrapper }?.filter { it.type != MediaWrapper.TYPE_DIR }?.size ?: 0 > 0
 
     open fun getDescription(folderCount: Int, mediaFileCount: Int): String {
-        val res = context.resources
+        // the application context of a view model keeps the phone's language: take the app's ("Empty" in German)
+        val res = context.getContextWithLocale(org.videolan.resources.AppContextProvider.locale).resources
         val texts = ArrayList<String>()
         if (folderCount > 0)  texts.add("$folderCount $folderReplacementMarker")
         if (mediaFileCount > 0) texts.add("$mediaFileCount $fileReplacementMarker")

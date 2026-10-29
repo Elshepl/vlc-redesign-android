@@ -323,4 +323,6 @@
     <string name="rd_record">Grabatu</string>
     <string name="rd_record_started">Grabatzen</string>
     <string name="rd_font_default">Lehenetsia</string>
+    <string name="rd_custom_aspect_ratios">Aspektu-erlazio pertsonalizatuak</string>
+    <string name="rd_help_custom_aspect_ratios">Komaz bereizitako aspektu-erlazioen zerrenda bat; interfazearen aspektu-erlazioen zerrendan gehituko da.</string>
 </resources>

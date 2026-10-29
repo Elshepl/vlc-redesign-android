@@ -323,4 +323,6 @@
     <string name="rd_record">Snemanje</string>
     <string name="rd_record_started">Snemanje</string>
     <string name="rd_font_default">Privzeto</string>
+    <string name="rd_custom_aspect_ratios">Razmerja stranic po meri</string>
+    <string name="rd_help_custom_aspect_ratios">Seznam razmerij prikaza, ki bo dodan na seznam razmerij prikaza vmesnika.</string>
 </resources>

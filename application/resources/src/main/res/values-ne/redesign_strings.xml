@@ -311,4 +311,6 @@
     <string name="rd_record">रेकर्ड</string>
     <string name="rd_record_started">रेकर्डिङ</string>
     <string name="rd_font_default">पूर्वनिर्धारित</string>
+    <string name="rd_custom_aspect_ratios">अनुकूलित आकार अनुपातहरू</string>
+    <string name="rd_help_custom_aspect_ratios">अल्पविरामले छुट्याइएको आकार  अनुपात सूची जुन interface को आकार अनुपात सूचीमा हालिनेछ।</string>
 </resources>

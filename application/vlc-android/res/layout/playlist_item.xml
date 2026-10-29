@@ -195,6 +195,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/item_delete"
+                android:contentDescription="@string/remove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -214,6 +215,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/item_move_down"
+                android:contentDescription="@string/move_down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -234,6 +236,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/item_move_up"
+                android:contentDescription="@string/move_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

@@ -421,4 +421,10 @@
     <string name="rd_font_condensed">Condensed</string>
     <string name="rd_font_casual">Casual</string>
     <string name="rd_font_cursive">Cursive</string>
+    <!-- debug builds only (LibraryScopeGuard): not translated -->
+    <string name="rd_debug_scope_title" translatable="false">Not added (debug build)</string>
+    <string name="rd_debug_scope_message" translatable="false">A debug build never adds a whole storage or a folder directly inside it (Internal memory, Download, Movies, Music, ...) to the media library, so a test cannot index the media of a phone in daily use. Open the folder and add a folder inside it instead. Release builds add any folder.</string>
+    <string name="rd_custom_aspect_ratios">Custom aspect ratios</string>
+    <string name="rd_help_custom_aspect_ratios">A comma separated list of aspect ratios (as 21:9, 1.85:1) added to the player\'s aspect ratio list.</string>
+    <string name="rd_search_in_english">Show the settings in English</string>
 </resources>

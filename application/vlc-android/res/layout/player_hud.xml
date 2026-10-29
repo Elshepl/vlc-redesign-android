@@ -149,6 +149,7 @@
 
             <ImageView
                     android:id="@+id/stats_close"
+                    android:contentDescription="@string/close"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -236,7 +237,8 @@
         <org.videolan.vlc.gui.view.FocusableTextView
                 android:id="@+id/player_overlay_time"
                 style="@style/VLC.Player.TimeText"
-                android:layout_width="@dimen/rd_player_time_width"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/rd_player_time_width"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/rd_player_time_side"
                 android:clickable="true"
@@ -253,7 +255,8 @@
         <org.videolan.vlc.gui.view.FocusableTextView
                 android:id="@+id/player_overlay_length"
                 style="@style/VLC.Player.TimeText"
-                android:layout_width="@dimen/rd_player_time_width"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/rd_player_time_width"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/rd_player_time_side"
                 android:clickable="true"

@@ -323,4 +323,6 @@
     <string name="rd_record">റെക്കോര്‍ഡ്</string>
     <string name="rd_record_started">റെക്കോര്‍ഡിംഗ്</string>
     <string name="rd_font_default">സഹജമായ</string>
+    <string name="rd_custom_aspect_ratios">ഇഷ്ടാനുസൃത ആസ്പെക്ട് റേഷ്യോകൾ</string>
+    <string name="rd_help_custom_aspect_ratios">സമ്പര്‍ക്കമുഖത്തിന്‍റെ ആസ്പെക്ട് അനുപാത പട്ടികയില്‍ ചേര്‍ക്കപ്പെടുന്ന അല്‍പവിരാമ ചിഹ്നത്താല്‍ വേര്‍തിരിക്കപ്പെട്ട ആസ്പെക്ട് അനുപാതങ്ങളുടെ പട്ടിക.</string>
 </resources>

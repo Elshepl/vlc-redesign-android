@@ -187,6 +187,7 @@
 
             <ImageView
                     android:id="@+id/manage_media_audio"
+                    android:contentDescription="@string/audio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
@@ -199,6 +200,7 @@
 
             <ImageView
                     android:id="@+id/manage_media_video"
+                    android:contentDescription="@string/video"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"

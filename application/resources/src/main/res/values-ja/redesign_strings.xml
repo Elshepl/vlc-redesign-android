@@ -323,4 +323,6 @@
     <string name="rd_record">レコーディング</string>
     <string name="rd_record_started">レコーディング中</string>
     <string name="rd_font_default">デフォルト</string>
+    <string name="rd_custom_aspect_ratios">カスタムのアスペクト比</string>
+    <string name="rd_help_custom_aspect_ratios">インターフェースのアスペクト比リストに加えられるアスペクト比をカンマで区切って指定します。</string>
 </resources>

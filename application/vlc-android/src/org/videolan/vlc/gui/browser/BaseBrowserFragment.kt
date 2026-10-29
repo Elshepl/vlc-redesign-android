@@ -720,6 +720,7 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
     }
 
     private fun addToScannedFolders(mw: MediaWrapper) {
+        if (org.videolan.vlc.util.LibraryScopeGuard.refuseWithMessage(requireActivity(), mw.uri.toString())) return
         MedialibraryUtils.addDir(mw.uri.toString(), requireActivity().applicationContext)
         Snackbar.make(binding.root, getString(R.string.scanned_directory_added, mw.uri.toString().toUri().lastPathSegment), Snackbar.LENGTH_LONG).show()
     }

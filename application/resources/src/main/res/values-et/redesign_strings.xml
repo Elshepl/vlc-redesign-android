@@ -321,4 +321,6 @@
     <string name="rd_record">Salvesta</string>
     <string name="rd_record_started">Salvestamine</string>
     <string name="rd_font_default">Vaikimisi</string>
+    <string name="rd_custom_aspect_ratios">Kohandatud külgede suhted</string>
+    <string name="rd_help_custom_aspect_ratios">Komaga eraldatud nimekiri külgede suhetest, mis lisatakse kasutajaliidese külgede suhete nimekirja.</string>
 </resources>

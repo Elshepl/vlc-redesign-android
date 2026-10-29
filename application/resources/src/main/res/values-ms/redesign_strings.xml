@@ -323,4 +323,6 @@
     <string name="rd_record">Rakam</string>
     <string name="rd_record_started">Merakam</string>
     <string name="rd_font_default">Lalai</string>
+    <string name="rd_custom_aspect_ratios">Nisbah aspek tersuai</string>
+    <string name="rd_help_custom_aspect_ratios">Senarai terpisah tanda koma bagi nisbah bidang yang akan ditambah dalam antaramuka senarai nisbah bidang.</string>
 </resources>

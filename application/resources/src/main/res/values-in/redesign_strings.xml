@@ -316,4 +316,6 @@
     <string name="rd_record">Rekam</string>
     <string name="rd_record_started">Perekaman</string>
     <string name="rd_font_default">Default</string>
+    <string name="rd_custom_aspect_ratios">Rasio aspek kustom</string>
+    <string name="rd_help_custom_aspect_ratios">Daftar rasio aspek yang dipisahkan koma, yang akan ditambahkan ke daftar rasio aspek di antarmuka.</string>
 </resources>

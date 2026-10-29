@@ -326,6 +326,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     val screenshotDelegate: VideoPlayerScreenshotDelegate by lazy(LazyThreadSafetyMode.NONE) { VideoPlayerScreenshotDelegate(this@VideoPlayerActivity) }
     val overlayDelegate: VideoPlayerOverlayDelegate by lazy(LazyThreadSafetyMode.NONE) { VideoPlayerOverlayDelegate(this@VideoPlayerActivity) }
     val resizeDelegate: VideoPlayerResizeDelegate by lazy(LazyThreadSafetyMode.NONE) { VideoPlayerResizeDelegate(this@VideoPlayerActivity) }
+    val customAspect: RdCustomAspect by lazy(LazyThreadSafetyMode.NONE) { RdCustomAspect(this@VideoPlayerActivity) }
     val orientationDelegate: VideoPlayerOrientationDelegate by lazy(LazyThreadSafetyMode.NONE) { VideoPlayerOrientationDelegate(this@VideoPlayerActivity) }
     private val playerKeyListenerDelegate: PlayerKeyListenerDelegate by lazy(LazyThreadSafetyMode.NONE) { PlayerKeyListenerDelegate(this@VideoPlayerActivity) }
     val tipsDelegate: VideoTipsDelegate by lazy(LazyThreadSafetyMode.NONE) { VideoTipsDelegate(this@VideoPlayerActivity) }
@@ -540,6 +541,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         // too, also when the app or the system is light (they were light cards and toggles over the video)
         delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
         super.onCreate(savedInstanceState)
+        // with a light system, the night mode above rebuilds the theme in super.onCreate() and drops the accent
+        // (the player was orange with the blue accent in light mode only): applied again before the views
+        applyAccent(alwaysDark = true)
 
         dialogsDelegate.observeDialogs(this, this)
         Util.checkCpuCompatibility(this)
@@ -587,14 +591,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
         val screenOrientationSetting = Integer.valueOf(settings.getString(SCREEN_ORIENTATION, "99" /*SCREEN ORIENTATION SENSOR*/)!!)
         val sensor = settings.getBoolean(LOCK_USE_SENSOR, true)
-        orientationMode = when (screenOrientationSetting) {
-            99 -> PlayerOrientationMode(false)
-            101 -> PlayerOrientationMode(true, if (sensor) ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE else ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
-            102 -> PlayerOrientationMode(true, if (sensor) ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-            103 -> PlayerOrientationMode(true, ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE)
-            98 -> PlayerOrientationMode(true, settings.getInt(LAST_LOCK_ORIENTATION, ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE))
-            else -> PlayerOrientationMode(true, getOrientationForLock())
-        }
+        orientationMode = orientationModeFromSettings()
 
         videoLayout = findViewById(R.id.video_layout)
 
@@ -806,6 +803,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 else uri = convertedUri
             }
             videoUri = uri
+            resetOrientationForNewSession()
             if (isPlaylistVisible) {
                 overlayDelegate.playlistAdapter.currentIndex = currentMediaPosition
                 overlayDelegate.playlistContainer.setGone()
@@ -1049,6 +1047,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     override fun onDestroy() {
         super.onDestroy()
+        customAspect.detach()
         castingCard.release()
         playlistModel?.run {
             dataset.removeObserver(playlistObserver)
@@ -1178,6 +1177,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 mediaPlayer.attachViews(it, displayManager, true, false)
                 val size = if (isBenchmark) MediaPlayer.ScaleType.SURFACE_FILL else MediaPlayer.ScaleType.entries[settings.getInt(VIDEO_RATIO, MediaPlayer.ScaleType.SURFACE_BEST_FIT.ordinal)]
                 mediaPlayer.videoScale = size
+                // a custom aspect ratio of Settings > Video > Framing chosen in the player
+                customAspect.attach(it)
+                if (!isBenchmark) customAspect.set(RdCustomAspect.saved(this@VideoPlayerActivity), persist = false)
             }
 
             initUI()
@@ -1756,8 +1758,11 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 }
                 MediaPlayer.Event.Vout -> {
                     updateNavStatus()
-                    if (event.voutCount > 0)
+                    if (event.voutCount > 0) {
                         service.mediaplayer.updateVideoSurfaces()
+                        // VideoHelper reset the aspect ratio: a custom one is laid over it again
+                        customAspect.onVideoOutput()
+                    }
                     if (menuIdx == -1)
                         handleVout(event.voutCount)
                 }
@@ -1876,10 +1881,15 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
         service?.let { service ->
             val allTracks= ArrayList<IMedia.Track>()
+            // getMedia() retains the media: released here (each call leaked a reference)
             service.mediaplayer.media?.let { media ->
-                if (currentTracks?.first == media.uri.toString()) return currentTracks!!.second
-                allTracks.addAll(media.getAllTracks())
-                currentTracks = Pair(media.uri.toString(), allTracks)
+                try {
+                    if (currentTracks?.first == media.uri.toString()) return currentTracks!!.second
+                    allTracks.addAll(media.getAllTracks())
+                    currentTracks = Pair(media.uri.toString(), allTracks)
+                } finally {
+                    media.release()
+                }
             }
             return allTracks
         }
@@ -2590,6 +2600,41 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 currentConfirmationDialog = this
                     show()
                 }
+    }
+
+    /**
+     * The orientation a playback session starts with: the one of Settings > Video screen orientation. A lock set in
+     * the player is for the current playback only (as the desktop and upstream): the next session starts from the
+     * setting again, unless the setting is "Last locked orientation".
+     */
+    private fun orientationModeFromSettings(): PlayerOrientationMode {
+        val sensor = settings.getBoolean(LOCK_USE_SENSOR, true)
+        return when (Integer.valueOf(settings.getString(SCREEN_ORIENTATION, "99" /*SCREEN ORIENTATION SENSOR*/)!!)) {
+            99 -> PlayerOrientationMode(false)
+            101 -> PlayerOrientationMode(true, if (sensor) ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE else ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+            102 -> PlayerOrientationMode(true, if (sensor) ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+            // reverse landscape, then the sensor if allowed: there is no SCREEN_ORIENTATION_SENSOR_REVERSE_LANDSCAPE
+            103 -> PlayerOrientationMode(true, ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE)
+            98 -> PlayerOrientationMode(true, settings.getInt(LAST_LOCK_ORIENTATION, ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE))
+            else -> PlayerOrientationMode(true, getOrientationForLock())
+        }
+    }
+
+    /**
+     * A new playback in the same player (singleTask: a video opened while the player is still alive): the lock
+     * of the previous playback does not carry over.
+     */
+    private fun resetOrientationForNewSession() {
+        if (isLocked) return // the screen lock holds its own orientation until unlocked
+        val mode = orientationModeFromSettings()
+        if (mode == orientationMode) return
+        orientationMode = mode
+        try {
+            requestedOrientation = getScreenOrientation(orientationMode)
+        } catch (ignored: IllegalStateException) {
+            Log.w(TAG, "resetOrientationForNewSession: failed to set orientation")
+        }
+        overlayDelegate.updateOrientationIcon()
     }
 
     fun toggleOrientationLock() {

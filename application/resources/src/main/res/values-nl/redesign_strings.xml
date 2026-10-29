@@ -323,4 +323,6 @@
     <string name="rd_record">Opnemen</string>
     <string name="rd_record_started">Opnemen</string>
     <string name="rd_font_default">Standaard</string>
+    <string name="rd_custom_aspect_ratios">Aangepaste beeldverhoudingen</string>
+    <string name="rd_help_custom_aspect_ratios">Een lijst met door komma\'s gescheiden waarden van beeldverhoudingen die toegevoegd zullen worden aan de lijst met beeldverhoudingen van de interface.</string>
 </resources>

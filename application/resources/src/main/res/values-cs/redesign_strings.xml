@@ -314,4 +314,6 @@
     <string name="rd_record">Nahrávat</string>
     <string name="rd_record_started">Nahrávání</string>
     <string name="rd_font_default">Výchozí</string>
+    <string name="rd_custom_aspect_ratios">Vlastní poměry stran</string>
+    <string name="rd_help_custom_aspect_ratios">Čárkou oddělený seznam poměrů stran, který bude přidán do seznamu poměrů stran v rozhraní.</string>
 </resources>

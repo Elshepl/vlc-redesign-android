@@ -323,4 +323,6 @@
     <string name="rd_record">Start opptak</string>
     <string name="rd_record_started">Tar opp</string>
     <string name="rd_font_default">Standard</string>
+    <string name="rd_custom_aspect_ratios">Egendefinerte størrelsesforhold</string>
+    <string name="rd_help_custom_aspect_ratios">Kommaseparert fil med bildeforhold som benyttes i grensesnittes bildeforholdsliste.</string>
 </resources>

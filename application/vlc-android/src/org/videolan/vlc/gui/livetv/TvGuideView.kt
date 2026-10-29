@@ -3,7 +3,9 @@
  * search) down, the time across with the line of now; the programmes as cells of the controls' grey, the one on
  * now brighter with its progress, the archived ones marked. Drawn on one canvas: only the rows and hours in
  * sight are drawn, so a guide of 20 000 channels scrolls as one of 20. The time goes from left to right in every
- * language, as the seek bar; the channels stay on the start side.
+ * language, as the seek bar; as the desktop (LayoutMirroring off), the guide is not mirrored in a right-to-left
+ * language: the channels stay on the left, by the earlier hours, and only a name in a right-to-left script is
+ * aligned to the right of its box.
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General
  * Public License as published by the Free Software Foundation; either version 2 of the License, or (at your
@@ -18,6 +20,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.RectF
+import android.text.TextDirectionHeuristics
 import android.text.TextPaint
 import android.text.TextUtils
 import android.view.GestureDetector
@@ -51,7 +54,8 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
     private val rowHeight = d(56f)
     private val rowGap = d(2f)
     private val timelineHeight = d(28f)
-    private val rtl = context.isRtl
+    // never mirrored (the desktop's TvGuideView.qml: LayoutMirroring.enabled: false)
+    private val rtl = false
     private val channelWidth get() = min(d(220f), max(d(120f), width * 0.34f))
     private val gridWidth get() = max(d(100f), width - channelWidth - d(8f))
     private val gridLeft get() = if (rtl) 0f else width - gridWidth
@@ -313,7 +317,9 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
         title.color = if (current) cAccent else cFgA1
         title.textSize = d(13f)
         val text = TextUtils.ellipsize(c.name, title, max(0f, nameW), TextUtils.TruncateAt.END).toString()
-        canvas.drawText(text, at(nameX, nameW) + if (rtl) nameW - title.measureText(text) else 0f, y + rowHeight / 2 + d(4.5f), title)
+        // a Hebrew or Arabic name to the right of its box, as a Text of the desktop aligns by its script
+        val rtlName = TextDirectionHeuristics.FIRSTSTRONG_LTR.isRtl(text, 0, text.length)
+        canvas.drawText(text, at(nameX, nameW) + if (rtl != rtlName) nameW - title.measureText(text) else 0f, y + rowHeight / 2 + d(4.5f), title)
     }
 
     private fun drawCell(canvas: Canvas, c: TvChannel, e: Entry, y: Float, n: Long, focused: Boolean) {

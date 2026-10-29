@@ -321,4 +321,6 @@
     <string name="rd_record">Tallenna</string>
     <string name="rd_record_started">Tallennus</string>
     <string name="rd_font_default">Oletusarvo</string>
+    <string name="rd_custom_aspect_ratios">Mukautetut kuvasuhteet</string>
+    <string name="rd_help_custom_aspect_ratios">Tähän voi lisätä pilkulla erotettuna kuvasuhteita, jotka lisätään käyttöliittymän kuvasuhteiden listaan.</string>
 </resources>

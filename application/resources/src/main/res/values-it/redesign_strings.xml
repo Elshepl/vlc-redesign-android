@@ -323,4 +323,6 @@
     <string name="rd_record">Registra</string>
     <string name="rd_record_started">Registrazione</string>
     <string name="rd_font_default">Predefinito</string>
+    <string name="rd_custom_aspect_ratios">Proporzioni personalizzate</string>
+    <string name="rd_help_custom_aspect_ratios">Elenco separato da virgole di proporzioni che saranno aggiunte all\'elenco di proporzioni dell\'interfaccia.</string>
 </resources>

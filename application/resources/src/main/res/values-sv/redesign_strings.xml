@@ -318,4 +318,6 @@
     <string name="rd_record">Spela in</string>
     <string name="rd_record_started">Inspelning</string>
     <string name="rd_font_default">Standard</string>
+    <string name="rd_custom_aspect_ratios">Anpassade bildförhållanden</string>
+    <string name="rd_help_custom_aspect_ratios">Kommaseparerad lista över bildförhållanden som kommer att läggas till i gränssnittets lista över bildförhållanden.</string>
 </resources>
