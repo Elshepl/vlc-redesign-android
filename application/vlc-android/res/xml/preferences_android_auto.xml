@@ -26,7 +26,7 @@
             app:iconSpaceReserved="false"
             app:min="50" />
 
-        <ListPreference
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
             android:defaultValue="3"
             android:entries="@array/android_auto_queue_position"
             android:entryValues="@array/android_auto_queue_position_values"
@@ -34,7 +34,7 @@
             android:summary="%s"
             android:title="@string/queue_info" />
 
-        <ListPreference
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
             android:defaultValue="1"
             android:entries="@array/android_auto_queue_format_entries"
             android:entryValues="@array/android_auto_queue_format_values"

@@ -30,7 +30,7 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
                 vlc:borderWidth="0dp"
-                vlc:rippleColor="@color/orange50"
+                vlc:rippleColor="?attr/rd_accent_bright"
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

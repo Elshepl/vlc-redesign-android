@@ -74,7 +74,7 @@
             app:layout_anchorGravity="top|end"
             android:layout_gravity="top|end"
             app:layout_behavior="org.videolan.vlc.gui.helpers.FloatingActionButtonBehavior"
-            app:rippleColor="@color/orange50" />
+            app:rippleColor="?attr/rd_accent_bright" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
