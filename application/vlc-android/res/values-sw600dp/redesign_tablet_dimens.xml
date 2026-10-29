@@ -5,4 +5,6 @@
     <!-- library tabs as wide as their text, as the desktop's (Material makes each tab 160 dp wide on a tablet:
          five tabs did not fit a portrait tablet or a half-screen window, "Playlists" was cut) -->
     <dimen name="design_tab_scrollable_min_width" tools:override="true">72dp</dimen>
+    <!-- a tablet has the room: the Hebrew "System default" of the language dropdown was cut at 150 dp -->
+    <dimen name="rd_pref_well_text_max_width">300dp</dimen>
 </resources>

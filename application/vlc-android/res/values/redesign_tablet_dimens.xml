@@ -3,4 +3,6 @@
 <resources>
     <!-- a single-column page (More): no limit on a phone -->
     <dimen name="rd_tablet_content_max_width">4000dp</dimen>
+    <!-- the value of a settings dropdown (SettingsDropdown): ellipsized past this on a phone -->
+    <dimen name="rd_pref_well_text_max_width">150dp</dimen>
 </resources>

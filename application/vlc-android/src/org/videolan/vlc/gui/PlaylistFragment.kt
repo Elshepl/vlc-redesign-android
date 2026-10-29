@@ -32,6 +32,7 @@ import androidx.appcompat.view.ActionMode
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
+import org.videolan.vlc.gui.helpers.UiTools.isTablet
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -102,6 +103,9 @@ class PlaylistFragment : BaseAudioBrowser<PlaylistsViewModel>(), SwipeRefreshLay
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.swipeLayout.setOnRefreshListener(this)
+        binding.root.addOnLayoutChangeListener { v, left, _, right, _, oldLeft, _, oldRight, _ ->
+            if (right - left != oldRight - oldLeft) v.post { if (isAdded && view != null) rdUpdatePane() }
+        }
 
 
         //size of an item
@@ -175,6 +179,7 @@ class PlaylistFragment : BaseAudioBrowser<PlaylistsViewModel>(), SwipeRefreshLay
 
     private fun updateEmptyView() {
         if (!isAdded) return
+        binding.root.post { if (isAdded && view != null) rdUpdatePane() }
         swipeRefreshLayout.visibility = if (Medialibrary.getInstance().isInitiated) View.VISIBLE else View.GONE
         binding.emptyLoading.emptyText = viewModel.filterQuery?.let {  getString(R.string.empty_search, it) } ?: if (viewModel.provider.onlyFavorites) getString(R.string.nofav) else getString(R.string.noplaylist)
         binding.emptyLoading.state =
@@ -230,7 +235,7 @@ class PlaylistFragment : BaseAudioBrowser<PlaylistsViewModel>(), SwipeRefreshLay
         if (playlists.itemDecorationCount > 0) {
             playlists.removeItemDecorationAt(0)
         }
-        when (viewModel.providerInCard) {
+        when (viewModel.providerInCard && !rdPaneShown) {
             true -> {
                 val screenWidth = (requireActivity() as? INavigator)?.getFragmentWidth(requireActivity()) ?: requireActivity().getScreenWidth()
                 adapter?.cardSize = RecyclerSectionItemGridDecoration.getItemSize(screenWidth, nbColumns, spacing, 16.dp)
@@ -254,14 +259,65 @@ class PlaylistFragment : BaseAudioBrowser<PlaylistsViewModel>(), SwipeRefreshLay
 
         val lp = playlists.layoutParams
         val dimension = requireActivity().resources.getDimension(R.dimen.default_content_width)
-        lp.width = if (viewModel.providerInCard) ViewGroup.LayoutParams.MATCH_PARENT else {
+        lp.width = if (viewModel.providerInCard || rdPaneShown) ViewGroup.LayoutParams.MATCH_PARENT else {
             dimension.toInt()
         }
-        (playlists.parent as View).setBackgroundColor(if (!viewModel.providerInCard && dimension != -1F) backgroundColor else ContextCompat.getColor(requireContext(), R.color.transparent))
-        playlists.setBackgroundColor(if (!viewModel.providerInCard && dimension != -1F) listColor else ContextCompat.getColor(requireContext(), R.color.transparent))
+        val plain = viewModel.providerInCard || rdPaneShown || dimension == -1F
+        (playlists.parent as View).setBackgroundColor(if (!plain) backgroundColor else ContextCompat.getColor(requireContext(), R.color.transparent))
+        playlists.setBackgroundColor(if (!plain) listColor else ContextCompat.getColor(requireContext(), R.color.transparent))
+    }
+
+    /* VLC Redesign, tablets: the playlist's tracks beside the list on a wide window (RdLibraryDetailPane) */
+    private var rdPane: org.videolan.vlc.gui.audio.RdLibraryDetailPane? = null
+    private var rdPaneShown = false
+    private var rdRestoreId = -1L
+
+    private fun rdPaneWanted() = view != null && actionMode == null && requireContext().isTablet() && (adapter?.itemCount ?: 0) > 0 &&
+            binding.root.width / resources.displayMetrics.density >= org.videolan.vlc.gui.audio.RdLibraryDetailPane.MIN_WIDTH_DP
+
+    private fun rdUpdatePane() {
+        if (view == null) return
+        val want = rdPaneWanted()
+        if (want != rdPaneShown) {
+            rdPaneShown = want
+            setupLayoutManager()
+            playlists.adapter = adapter
+        }
+        val container = binding.rdDetailContainer
+        if (!want) {
+            container.visibility = View.GONE
+            rdPane?.clear()
+            playlistAdapter.rdDetailItem = null
+            return
+        }
+        if (rdPane == null) {
+            val paneView = org.videolan.vlc.gui.audio.RdLibraryDetailPane.inflate(container)
+            container.addView(paneView)
+            rdPane = org.videolan.vlc.gui.audio.RdLibraryDetailPane(paneView, viewLifecycleOwner.lifecycleScope)
+        }
+        container.visibility = View.VISIBLE
+        val pane = rdPane ?: return
+        if (pane.item == null) {
+            val a = playlistAdapter
+            val kept = if (rdRestoreId >= 0) (0 until a.itemCount).firstNotNullOfOrNull { i -> a.getItem(i)?.takeIf { it.id == rdRestoreId } } else null
+            rdRestoreId = -1L
+            if (a.itemCount > 0) (kept ?: a.getItem(0))?.let { pane.show(it); a.rdDetailItem = it }
+        } else playlistAdapter.rdDetailItem = pane.item
+    }
+
+    override fun onDestroyView() {
+        rdPane?.item?.let { rdRestoreId = it.id }
+        rdPane = null
+        rdPaneShown = false
+        super.onDestroyView()
     }
 
     override fun onClick(v: View, position: Int, item: MediaLibraryItem) {
+        if (actionMode == null && rdPaneShown) {
+            rdPane?.show(item)
+            playlistAdapter.rdDetailItem = item
+            return
+        }
         if (actionMode == null) {
             val i = Intent(activity, HeaderMediaListActivity::class.java)
             i.putExtra(AudioBrowserFragment.TAG_ITEM, item)

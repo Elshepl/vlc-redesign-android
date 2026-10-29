@@ -108,6 +108,7 @@ import org.videolan.vlc.gui.helpers.DefaultPlaybackAction
 import org.videolan.vlc.gui.helpers.DefaultPlaybackActionMediaType
 import org.videolan.vlc.gui.helpers.ItemOffsetDecoration
 import org.videolan.vlc.gui.helpers.UiTools
+import org.videolan.vlc.gui.helpers.UiTools.isTablet
 import org.videolan.vlc.gui.helpers.UiTools.addToGroup
 import org.videolan.vlc.gui.helpers.UiTools.addToPlaylist
 import org.videolan.vlc.gui.helpers.UiTools.createShortcut
@@ -326,6 +327,10 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
         }
         swipeRefreshLayout.setOnRefreshListener(this)
         binding.videoGrid.adapter = videoListAdapter
+        // VLC Redesign: folders / groups list + detail on a wide window, as the music library's
+        binding.root.addOnLayoutChangeListener { v, left, _, right, _, oldLeft, _, oldRight, _ ->
+            if (right - left != oldRight - oldLeft) v.post { if (isAdded && view != null) rdUpdatePane() }
+        }
         binding.fastScroller.attachToCoordinator(requireActivity().findViewById<View>(R.id.appbar) as AppBarLayout, requireActivity().findViewById<View>(R.id.coordinator) as CoordinatorLayout, requireActivity().findViewById<View>(R.id.fab) as FloatingActionButton)
         binding.fastScroller.setRecyclerView(binding.videoGrid, viewModel.provider)
 
@@ -434,7 +439,8 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
         }
         val res = resources
         if (gridItemDecoration == null) gridItemDecoration = ItemOffsetDecoration(resources, R.dimen.left_right_1610_margin, R.dimen.top_bottom_1610_margin)
-        val listMode = !settings.getBoolean(KEY_VIDEOS_CARDS, true)
+        // beside the detail pane the folders / groups are rows (the saved display mode is not changed)
+        val listMode = !settings.getBoolean(KEY_VIDEOS_CARDS, true) || rdPaneShown
 
         // Select between grid or list
         binding.videoGrid.removeItemDecoration(gridItemDecoration!!)
@@ -459,6 +465,7 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
     private fun updateEmptyView() {
         if (!::binding.isInitialized) return
         if (!isAdded) return
+        binding.root.post { if (isAdded && view != null) rdUpdatePane() }
         val empty = viewModel.isEmpty() && videoListAdapter.currentList.isNullOrEmpty()
         val working = viewModel.provider.loading.value != false
         binding.emptyLoading.emptyText = viewModel.filterQuery?.let {  getString(R.string.empty_search, it) } ?: if (viewModel.provider.onlyFavorites) getString(R.string.nofav) else getString(R.string.nomedia)
@@ -777,6 +784,7 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
             }
             is Folder -> {
                 if (item.mMrl.isMissing()) return
+                if (actionMode == null && rdPaneShown) { rdShow(item); return }
                 if (actionMode != null) {
                     multiSelectHelper.toggleSelection(position)
                     invalidateActionMode()
@@ -787,11 +795,60 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
                     multiSelectHelper.toggleSelection(position)
                     invalidateActionMode()
                 }
+                rdPaneShown -> rdShow(item)
                 item.presentCount == 0 -> UiTools.snackerMissing(requireActivity())
                 item.presentCount == 1 -> viewModel.play(position)
                 else -> activity?.open(item)
             }
         }
+    }
+
+    /* VLC Redesign, tablets: the folder's videos beside the folders (RdLibraryDetailPane), as the desktop's folder view */
+    private var rdPane: org.videolan.vlc.gui.audio.RdLibraryDetailPane? = null
+    private var rdPaneShown = false
+    private var rdRestoreId = -1L
+
+    private fun rdPaneWanted() = view != null && viewModel.groupingType == VideoGroupingType.FOLDER && viewModel.folder == null &&
+            viewModel.group == null && actionMode == null && requireContext().isTablet() && videoListAdapter.itemCount > 0 &&
+            binding.root.width / resources.displayMetrics.density >= org.videolan.vlc.gui.audio.RdLibraryDetailPane.MIN_WIDTH_DP
+
+    private fun rdShow(item: MediaLibraryItem) {
+        rdPane?.show(item)
+    }
+
+    private fun rdUpdatePane() {
+        if (view == null) return
+        val want = rdPaneWanted()
+        if (want != rdPaneShown) {
+            rdPaneShown = want
+            updateViewMode()
+        }
+        val container = binding.rdDetailContainer
+        if (!want) {
+            container.visibility = View.GONE
+            rdPane?.clear()
+            return
+        }
+        if (rdPane == null) {
+            val paneView = org.videolan.vlc.gui.audio.RdLibraryDetailPane.inflate(container)
+            container.addView(paneView)
+            rdPane = org.videolan.vlc.gui.audio.RdLibraryDetailPane(paneView, viewLifecycleOwner.lifecycleScope)
+        }
+        container.visibility = View.VISIBLE
+        val pane = rdPane ?: return
+        if (pane.item == null) {
+            val list = videoListAdapter.currentList ?: return
+            val kept = if (rdRestoreId >= 0) list.firstOrNull { it?.id == rdRestoreId } else null
+            rdRestoreId = -1L
+            (kept ?: list.firstOrNull { it is Folder || it is VideoGroup })?.let { pane.show(it) }
+        }
+    }
+
+    override fun onDestroyView() {
+        rdPane?.item?.let { rdRestoreId = it.id }
+        rdPane = null
+        rdPaneShown = false
+        super.onDestroyView()
     }
 
     private fun castAsAudio(): Boolean = PlaybackService.renderer.value != null && settings.getBoolean(KEY_CASTING_AUDIO_ONLY, false)

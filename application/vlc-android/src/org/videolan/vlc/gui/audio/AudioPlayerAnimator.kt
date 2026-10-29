@@ -242,10 +242,11 @@ internal class AudioPlayerAnimator : IAudioPlayerAnimator, LifecycleObserver {
                 val cover = withContext(Dispatchers.IO) { AudioUtil.readCoverBitmap(Uri.decode(mw.artworkMrl), width) }
                 if (cover == null) setDefaultBackground()
                 else {
-                    // VLC Redesign: the desktop's backdrop (ArtworkBackdrop.qml): the artwork as it is in the dark
-                    // theme, under a white veil in the light one
+                    // VLC Redesign: the desktop's backdrop (ArtworkBackdrop.qml): under a white veil in the light
+                    // theme; in the dark one the desktop's four-pass blur averages the colours away, this lighter
+                    // blur kept bright colourful covers (seen on a tablet): a black veil of 40 % tones it down
                     val dark = (activity.resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
-                    UiTools.blurView(binding.backgroundView, cover, 20F, if (dark) android.graphics.Color.TRANSPARENT else android.graphics.Color.argb(153, 255, 255, 255))
+                    UiTools.blurView(binding.backgroundView, cover, 20F, if (dark) android.graphics.Color.argb(102, 0, 0, 0) else android.graphics.Color.argb(153, 255, 255, 255))
                     binding.backgroundView.setVisible()
                 }
             }
@@ -276,6 +277,9 @@ internal class AudioPlayerAnimator : IAudioPlayerAnimator, LifecycleObserver {
         binding.progressBar.requestLayout()
         // 0% to 40%
         binding.headerBackground.alpha = if (showCover) (1 - slideOffset) * 0.6F else 0.4F + ((1 - slideOffset) * 0.6F)
+        // VLC Redesign: the mini player is the desktop's solid strip (LibraryMiniPlayer.qml), the blurred artwork
+        // only behind the expanded player
+        binding.backgroundView.alpha = slideOffset
         binding.headerDivider.alpha = if (showCover) 0F else slideOffset
         if (slideOffset != 1f) audioPlayer.clearSearch()
         binding.playlistSearch.alpha = slideOffset

@@ -539,6 +539,8 @@ GLYPH_OVERRIDES = {
     "ic_add_to_scan": ("glyphs/new-folder/default", None), "ic_pin_lock": ("+lock", None),
     # (new: the Effects row of the player menu)
     "rd_ic_effects": ("glyphs/spectrum/default", None),
+    # History's Clear history: the desktop's removal glyph (it has no trash can)
+    "ic_trash": ("glyphs/remove/default", "?attr/colorControlNormal"),
 }
 
 

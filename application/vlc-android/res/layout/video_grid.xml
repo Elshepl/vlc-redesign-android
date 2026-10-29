@@ -30,7 +30,7 @@
                 android:visibility="@{empty ? View.GONE : View.VISIBLE}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/rd_detail_container"
                 app:layout_constraintTop_toBottomOf="@+id/searchButton">
 
             <org.videolan.vlc.gui.view.AutoFitRecyclerView
@@ -45,6 +45,19 @@
                     android:scrollbars="none"
                     android:stretchMode="none" />
         </org.videolan.vlc.gui.view.SwipeRefreshLayout>
+
+        <!-- VLC Redesign: the folder's or the group's videos beside the list on a wide window (RdLibraryDetailPane) -->
+        <FrameLayout
+                android:id="@+id/rd_detail_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintWidth_percent="0.58" />
 
         <org.videolan.vlc.gui.view.EmptyLoadingStateView
                 android:id="@+id/empty_loading"

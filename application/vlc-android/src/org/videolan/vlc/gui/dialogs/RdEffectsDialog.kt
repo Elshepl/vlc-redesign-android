@@ -145,10 +145,12 @@ class RdEffectsDialog : VLCBottomSheetDialogFragment() {
                 body.addView(note(getString(R.string.rd_fx_play_video)))
                 return
             }
-            // the sections of the desktop that have a filter here: two rows of buttons, the chosen one in the accent
+            // the desktop's sections that libvlc 3 can apply: rows of three buttons, the chosen one in the accent
             sectionViews.clear()
-            val grid = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL }
+            val grid = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
+            var line: LinearLayout? = null
             RdEffects.videoSections.forEachIndexed { i, (label, _) ->
+                if (i % 3 == 0) line = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; grid.addView(this) }
                 val b = text(ctx, getString(label), 14f, if (i == section) accent() else color(R.color.rd_fg_a3)).apply {
                     gravity = Gravity.CENTER
                     textAlignment = View.TEXT_ALIGNMENT_CENTER
@@ -158,8 +160,10 @@ class RdEffectsDialog : VLCBottomSheetDialogFragment() {
                     setOnClickListener { if (section != i) { section = i; fill() } }
                 }
                 sectionViews.add(b)
-                grid.addView(b, LinearLayout.LayoutParams(0, dp(42f), 1f))
+                line?.addView(b, LinearLayout.LayoutParams(0, dp(42f), 1f))
             }
+            // a short last row keeps the columns of the others
+            repeat((3 - RdEffects.videoSections.size % 3) % 3) { line?.addView(View(ctx), LinearLayout.LayoutParams(0, dp(42f), 1f)) }
             body.addView(grid, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = dp(16f) })
             val filters = RdEffects.videoSections[section].second
             filters.forEach { body.addView(filterPanel(ctx, it, true, resetButton = false)) }

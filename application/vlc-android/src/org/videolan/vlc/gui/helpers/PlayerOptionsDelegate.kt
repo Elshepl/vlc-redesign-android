@@ -82,6 +82,7 @@ private const val ID_SAFE_MODE_LOCK = 21L
 private const val ID_SAFE_MODE_UNLOCK = 22L
 private const val ID_SHARE = 23L
 private const val ID_CUSTOMIZE_PLAYER = 24L
+private const val ID_RECORD = 108L
 @SuppressLint("ShowToast")
 class PlayerOptionsDelegate(val activity: FragmentActivity, val service: PlaybackService, private val showABReapeat:Boolean = true)  {
 
@@ -112,6 +113,9 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         options.add(PlayerOption(ID_EQUALIZER, R.drawable.ic_equalizer, res.getString(R.string.equalizer)))
         // VLC Redesign: the desktop's Effects dialog (audio and video effects)
         if (!isChromecast) options.add(PlayerOption(ID_EFFECTS, R.drawable.rd_ic_effects, res.getString(R.string.rd_fx_effects)))
+        // VLC Redesign: the desktop's Record (libvlc 3's MediaPlayer.record), video only
+        if (video && !isChromecast) options.add(PlayerOption(ID_RECORD, R.drawable.rd_ic_duo_record,
+                res.getString(if (recordingDir != null) R.string.rd_record_stop else R.string.rd_record)))
         if (video) {
             if (primary && !Settings.showTvUi && service.audioTracksCount > 0)
                 options.add(PlayerOption(ID_PLAY_AS_AUDIO, R.drawable.ic_playasaudio_on, res.getString(R.string.play_as_audio)))
@@ -202,6 +206,28 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         }
     }
 
+    /**
+     * VLC Redesign: Record, as the desktop's: the stream as it plays is written, without decoding it again, to the
+     * Movies folder ("VLC Recordings"), or to the app's own Movies folder when the shared one cannot be written.
+     */
+    private fun toggleRecording() {
+        val mp = service.mediaplayer
+        val overlay = (activity as? VideoPlayerActivity)?.overlayDelegate
+        recordingDir?.let { dir ->
+            mp.record(null)
+            recordingDir = null
+            // the folder kept left to right in a right-to-left sentence
+            overlay?.showInfo(activity.getString(R.string.rd_record_saved, androidx.core.text.BidiFormatter.getInstance().unicodeWrap(dir, androidx.core.text.TextDirectionHeuristicsCompat.LTR)), 4000)
+            return
+        }
+        val shared = java.io.File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_MOVIES), "VLC Recordings")
+        val dir = if ((shared.isDirectory || shared.mkdirs()) && shared.canWrite()) shared
+                else java.io.File(activity.getExternalFilesDir(android.os.Environment.DIRECTORY_MOVIES) ?: activity.filesDir, "VLC Recordings").apply { mkdirs() }
+        val ok = mp.record(dir.absolutePath)
+        if (ok) recordingDir = dir.absolutePath
+        overlay?.showInfo(activity.getString(if (ok) R.string.rd_record_started else R.string.rd_record_failed), 2000)
+    }
+
     fun hide() {
         // (a control of the bar acts without the menu ever shown)
         if (::rootView.isInitialized) rootView.visibility = View.GONE
@@ -235,6 +261,7 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
             "popup" -> ID_POPUP_VIDEO
             "equalizer" -> ID_EQUALIZER
             "effects" -> ID_EFFECTS
+            "record" -> ID_RECORD
             else -> return
         }
         onClick(PlayerOption(id, 0, ""))
@@ -265,6 +292,10 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
                 setShuffle()
             }
             ID_PASSTHROUGH -> togglePassthrough()
+            ID_RECORD -> {
+                hide()
+                toggleRecording()
+            }
             ID_ABREPEAT -> {
                 hide()
                 service.playlistManager.toggleABRepeat()
@@ -492,5 +523,8 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
 interface PlayerOptionsDelegateCallback {
     fun onResumeToVideoClick()
 }
+
+/** VLC Redesign: the folder being recorded to (the player's Record), null when not recording */
+internal var recordingDir: String? = null
 
 data class PlayerOption(val id: Long, val icon: Int, val title: String)

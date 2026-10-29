@@ -48,6 +48,14 @@
             android:summary="%s"
             android:persistent="true"
             android:title="@string/rd_font_size" />
+        <!-- VLC Redesign: the desktop's Font (freetype-font): the families Android's font list has -->
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue=""
+            android:entries="@array/rd_sub_font_entries"
+            android:entryValues="@array/rd_sub_font_values"
+            android:key="rd_sub_font"
+            android:summary="%s"
+            android:title="@string/rd_font" />
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="subtitles_bold"

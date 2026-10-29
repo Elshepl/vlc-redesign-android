@@ -191,6 +191,8 @@ object VLCOptions {
                 options.add("--sub-text-scale=$subtitleScale")
             }
             if (freetypeBold) options.add("--freetype-bold")
+            // VLC Redesign: the subtitle font of Settings (a family of Android's font list; empty: libvlc's default)
+            pref.getString("rd_sub_font", "")?.takeIf { it.isNotBlank() }?.let { options.add("--freetype-font=$it") }
             options.add("--freetype-color=$freetypeColor")
             options.add("--freetype-opacity=$freetypeColorOpacity")
             if (freetypeBackgroundEnabled) {
@@ -355,6 +357,11 @@ object VLCOptions {
         return ret
     }
 
+    /** VLC Redesign: set while the player opens the same media again (the video effects): no Start paused */
+    @JvmStatic
+    @Volatile
+    var rdReopening = false
+
     fun setMediaOptions(media: IMedia, context: Context, flags: Int, hasRenderer: Boolean) {
         val noHardwareAcceleration = flags and MediaWrapper.MEDIA_NO_HWACCEL != 0
         val noVideo = flags and MediaWrapper.MEDIA_VIDEO == 0
@@ -379,7 +386,9 @@ object VLCOptions {
         } /* else automatic: use default options */
 
         if (noVideo) media.addOption(":no-video")
-        if (paused) media.addOption(":start-paused")
+        // VLC Redesign: Start paused (Settings > Playback), not when the player opens a media again in place
+        // (the video effects, a resumed session)
+        if (paused || (prefs.getBoolean("rd_start_paused", false) && !rdReopening)) media.addOption(":start-paused")
         if (!prefs.getBoolean(KEY_SUBTITLES_AUTOLOAD, true)) media.addOption(":sub-language=none")
         // VLC Redesign: the video effects of the player's Effects dialog (filters of this media)
         if (!noVideo && !hasRenderer) RdEffects.videoMediaOptions(prefs).forEach { media.addOption(it) }

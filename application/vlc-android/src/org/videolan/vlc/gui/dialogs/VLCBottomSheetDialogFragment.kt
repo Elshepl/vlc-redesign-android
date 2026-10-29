@@ -89,7 +89,7 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         lifecycleScope.launchWhenStarted {
-            dialog?.window?.setLayout(resources.getDimensionPixelSize(R.dimen.default_context_width), ViewGroup.LayoutParams.MATCH_PARENT)
+            dialog?.window?.setLayout(windowWidth(), ViewGroup.LayoutParams.MATCH_PARENT)
             if (useSideSheet()) applySideSheet(view)
             // VLC Redesign, tablets: a centred framed window instead of a sheet on the bottom edge (gui/tablet)
             else if (TabletSheets.wanted(dialog) && !AndroidDevices.isTv) dialog?.let { TabletSheets.applyCentered(it, view) }
@@ -105,6 +105,9 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     }
 
+    /** The sheet's width (a wider window for an editor shown centred on a tablet) */
+    open fun windowWidth() = resources.getDimensionPixelSize(R.dimen.default_context_width)
+
     /**
      * VLC Redesign: in landscape the player's panels are side sheets at the end of the window (the desktop's
      * player panels), a floating A3 panel with radius 14 and the 1 px window border, over the full height
@@ -117,7 +120,11 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
         val width = minOf(resources.getDimensionPixelSize(R.dimen.rd_side_sheet_width), resources.displayMetrics.widthPixels / 2)
         val margin = resources.getDimensionPixelSize(R.dimen.rd_side_sheet_margin)
         dialog.window?.setLayout(width + 2 * margin, ViewGroup.LayoutParams.MATCH_PARENT)
-        dialog.window?.setGravity(Gravity.END)
+        // the end of the window in the reading direction (the desktop's panels: on the left in Hebrew or Arabic);
+        // the window manager does not mirror a relative gravity: resolved here
+        val rtl = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL ||
+                android.text.TextUtils.getLayoutDirectionFromLocale(resources.configuration.locales[0]) == View.LAYOUT_DIRECTION_RTL
+        dialog.window?.setGravity((if (rtl) Gravity.LEFT else Gravity.RIGHT) or Gravity.CENTER_VERTICAL)
         dialog.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)?.let { sheet ->
             sheet.updateLayoutParams<ViewGroup.MarginLayoutParams> {
                 height = ViewGroup.LayoutParams.MATCH_PARENT

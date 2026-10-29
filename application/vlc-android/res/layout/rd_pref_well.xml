@@ -17,7 +17,7 @@
         android:id="@+id/rd_well_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="150dp"
+        android:maxWidth="@dimen/rd_pref_well_text_max_width"
         android:fontFamily="@font/inter"
         android:textSize="14sp"
         android:textColor="@color/rd_fg_a2"

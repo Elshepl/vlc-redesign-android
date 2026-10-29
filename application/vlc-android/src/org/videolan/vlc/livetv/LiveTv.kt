@@ -418,6 +418,7 @@ object LiveTv {
             } catch (e: CancelledException) {
                 throw e
             } catch (e: Exception) {
+                android.util.Log.w(TAG, "Xtream account ${cfg.id} could not be read", e)
                 st.error = e.message ?: "the account could not be read"
                 if (!liveFile.exists()) return false
             }

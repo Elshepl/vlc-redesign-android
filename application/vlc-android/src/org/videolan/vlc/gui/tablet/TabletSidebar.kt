@@ -72,6 +72,7 @@ object TabletSidebar {
         rail.visibility = View.GONE
         val existing = coordinator.findViewById<LinearLayout>(R.id.rd_tablet_sidebar)
         if (existing != null) {
+            syncRows(this, existing, rail)
             refresh(existing, rail)
             return
         }
@@ -168,6 +169,27 @@ object TabletSidebar {
         row.addView(label, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
         row.setTag(R.id.rd_tablet_sidebar_label, item.itemId)
         return row.also { it.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp } }
+    }
+
+    /**
+     * The rail's menu is rebuilt when the pages change (the Live TV add-on switched, Edit Sidebar, the TV page
+     * added after the first start): the sidebar's rows follow it, the play button at the bottom stays.
+     */
+    private fun syncRows(activity: MainActivity, sidebar: LinearLayout, rail: NavigationRailView) {
+        val menu = rail.menu
+        val wanted = (0 until menu.size()).map { menu.getItem(it).itemId }
+        val rows = (0 until sidebar.childCount).map { sidebar.getChildAt(it) }.filter { it.tag == TAG_ROW }
+        if (rows.map { it.getTag(R.id.rd_tablet_sidebar_label) } == wanted) return
+        rows.forEach { sidebar.removeView(it) }
+        for (i in 0 until menu.size()) sidebar.addView(row(activity, rail, menu.getItem(i)), 1 + i)
+    }
+
+    /** VLC Redesign: called when the pages of the bars change. */
+    fun MainActivity.refreshTabletSidebar() {
+        val rail = findViewById<NavigationRailView>(R.id.navigation_rail) ?: return
+        val sidebar = findViewById<CoordinatorLayout>(R.id.coordinator)?.findViewById<LinearLayout>(R.id.rd_tablet_sidebar) ?: return
+        syncRows(this, sidebar, rail)
+        refresh(sidebar, rail)
     }
 
     private fun checkedId(rail: NavigationRailView): Int {

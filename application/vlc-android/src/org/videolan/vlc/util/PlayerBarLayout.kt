@@ -45,6 +45,7 @@ object PlayerBarLayout {
             Control("popup", R.string.ctx_pip_title, R.drawable.rd_ic_pip, action = "popup"),
             Control("equalizer", R.string.equalizer, R.drawable.rd_ic_equalizer, action = "equalizer"),
             Control("queue", R.string.rd_bar_queue, R.drawable.rd_ic_queue, action = "queue"),
+            Control("record", R.string.rd_record, R.drawable.rd_ic_duo_record, action = "record"),
     )
 
     fun control(key: String) = CATALOGUE.firstOrNull { it.key == key }

@@ -19,9 +19,13 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.Tools
+import org.videolan.medialibrary.interfaces.media.Album
 import org.videolan.medialibrary.interfaces.media.Artist
+import org.videolan.medialibrary.interfaces.media.Folder
 import org.videolan.medialibrary.interfaces.media.Genre
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
+import org.videolan.medialibrary.interfaces.media.Playlist
+import org.videolan.medialibrary.interfaces.media.VideoGroup
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.tools.dp
 import org.videolan.vlc.R
@@ -29,8 +33,8 @@ import org.videolan.vlc.media.MediaUtils
 
 /**
  * VLC Redesign: the library's list + detail on a wide window (the desktop's MusicArtistsAlbums.qml and its genre
- * view): the list keeps the start side, the selected artist or genre shows here with its albums as sections and
- * their tracks, Play all and Shuffle. Narrow windows keep opening the artist in its own screen.
+ * view, its album and playlist views): the list keeps the start side, the selected artist or genre shows here
+ * with its albums as sections and their tracks, an album or a playlist as one list, Play all and Shuffle. Narrow windows keep opening the artist in its own screen.
  */
 class RdLibraryDetailPane(private val root: View, private val scope: LifecycleCoroutineScope) {
 
@@ -64,24 +68,38 @@ class RdLibraryDetailPane(private val root: View, private val scope: LifecycleCo
                 when (selected) {
                     is Artist -> selected.getTracks(org.videolan.medialibrary.interfaces.Medialibrary.SORT_ALBUM, false, false, false)
                     is Genre -> selected.getTracks(false, org.videolan.medialibrary.interfaces.Medialibrary.SORT_ALBUM, false, false, false)
+                    is Folder -> selected.media(Folder.TYPE_FOLDER_VIDEO, org.videolan.medialibrary.interfaces.Medialibrary.SORT_FILENAME, false, false, false, selected.mediaCount(Folder.TYPE_FOLDER_VIDEO), 0)
+                    is VideoGroup -> selected.media(org.videolan.medialibrary.interfaces.Medialibrary.SORT_DEFAULT, false, false, false, selected.mediaCount(), 0)
                     else -> selected.tracks
                 } ?: emptyArray()
             }
             val rows = ArrayList<Row>()
+            // an album or a playlist is one list (the desktop's album / playlist view); an artist or a genre has
+            // its albums as sections
+            val sections = selected is Artist || selected is Genre
             var album: String? = null
             tracks.forEachIndexed { index, media ->
                 val name = media.albumName?.takeIf { it.isNotBlank() } ?: context.getString(R.string.unknown_album)
-                if (name != album) {
+                if (sections && name != album) {
                     album = name
                     rows.add(Row(null, name, -1))
                 }
-                rows.add(Row(media, media.title, index))
+                rows.add(Row(media, if (selected is Playlist) listOfNotNull(media.title, media.artistName?.takeIf { it.isNotBlank() }).joinToString(" - ") else media.title, index))
             }
             val albums = rows.count { it.media == null }
-            subtitle.text = listOf(
-                context.resources.getQuantityString(R.plurals.albums_quantity, albums, albums),
-                context.resources.getQuantityString(R.plurals.track_quantity, tracks.size, tracks.size)
-            ).joinToString(" · ")
+            val total = tracks.sumOf { it.length.coerceAtLeast(0L) }
+            subtitle.text = when (selected) {
+                is Album -> listOfNotNull(selected.albumArtist?.takeIf { it.isNotBlank() },
+                        selected.releaseYear.takeIf { it > 0 }?.toString(),
+                        context.resources.getQuantityString(R.plurals.track_quantity, tracks.size, tracks.size),
+                        Tools.millisToString(total).takeIf { total > 0 })
+                is Folder, is VideoGroup -> listOfNotNull(context.resources.getQuantityString(R.plurals.videos_quantity, tracks.size, tracks.size),
+                        Tools.millisToString(total).takeIf { total > 0 })
+                is Playlist -> listOfNotNull(context.resources.getQuantityString(R.plurals.track_quantity, tracks.size, tracks.size),
+                        Tools.millisToString(total).takeIf { total > 0 })
+                else -> listOf(context.resources.getQuantityString(R.plurals.albums_quantity, albums, albums),
+                        context.resources.getQuantityString(R.plurals.track_quantity, tracks.size, tracks.size))
+            }.joinToString(" · ")
             this@RdLibraryDetailPane.tracks = tracks.toList()
             adapter.set(rows)
             list.scrollToPosition(0)
@@ -163,7 +181,12 @@ class RdLibraryDetailPane(private val root: View, private val scope: LifecycleCo
             }
             val row = v as LinearLayout
             val number = r.media.trackNumber
-            (row.getChildAt(0) as TextView).text = if (number > 0) number.toString() else ""
+            // a playlist numbers its own order; an album or an artist the track numbers
+            (row.getChildAt(0) as TextView).text = when {
+                item is Playlist -> (r.position + 1).toString()
+                number > 0 && r.media.type == MediaWrapper.TYPE_AUDIO -> number.toString()
+                else -> ""
+            }
             (row.getChildAt(1) as TextView).text = r.text
             (row.getChildAt(2) as TextView).text = if (r.media.length > 0) Tools.millisToString(r.media.length) else ""
             row.setOnClickListener { play(r.position, false) }
