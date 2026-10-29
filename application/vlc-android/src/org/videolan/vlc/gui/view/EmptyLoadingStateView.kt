@@ -196,8 +196,8 @@ class EmptyLoadingStateView : FrameLayout {
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         if (!::emptyImageView.isInitialized || h <= 0) return
-        val v = if (imageWanted && h >= 300.dp) VISIBLE else GONE
-        if (emptyImageView.visibility != v) post { emptyImageView.visibility = v }
+        // decided when it runs: the state may have changed in between
+        post { emptyImageView.visibility = if (imageWanted && height >= 300.dp) VISIBLE else GONE }
     }
 
     private fun applyCompactMode() {
