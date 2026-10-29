@@ -76,6 +76,12 @@ class PreferenceSearchActivity : BaseActivity(), TextWatcher, PreferenceItemAdap
         }
         val locale:Locale = AppContextProvider.locale?.takeIf { it.isNotBlank() }?.let {LocaleUtils.getLocaleFromString(it)} ?: if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) resources.configuration.locales[0] else resources.configuration.locale
         if (locale.language == "en") binding.translateButton.setGone()
+        // debug builds: a query from `adb shell setprop debug.vlc.prefquery <text>` (the test phone's keyboard
+        // turns injected letters into its own layout)
+        if (org.videolan.vlc.BuildConfig.DEBUG) try {
+            val q = Class.forName("android.os.SystemProperties").getMethod("get", String::class.java).invoke(null, "debug.vlc.prefquery") as? String
+            if (!q.isNullOrBlank()) binding.searchText.setText(q.replace('_', ' '))
+        } catch (_: Exception) {}
     }
 
     override fun onResume() {

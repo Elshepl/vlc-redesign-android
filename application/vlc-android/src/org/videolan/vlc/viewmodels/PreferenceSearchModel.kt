@@ -51,6 +51,8 @@ class PreferenceSearchModel(context: Context) : ViewModel() {
                 PreferenceParser.parsePreferences(context)
             }
             dataset.value = parsed.filter { PreferenceVisibilityManager.isPreferenceVisible(it.key, settings, Settings.tvUI) }.toMutableList()
+            // a query typed (or given) before the list was read: run it now
+            if (lastQuery.isNotBlank()) filter(lastQuery)
         }
         showTranslations.value = false
     }
@@ -66,7 +68,10 @@ class PreferenceSearchModel(context: Context) : ViewModel() {
      * Filter the preference list with a query. The result is then stored in the [filtered] livedata
      * @param query the query used to filter
      */
+    private var lastQuery = ""
+
     fun filter(query: String) {
+        lastQuery = query
         if (query.isBlank())
             filtered.value = arrayListOf()
         else
