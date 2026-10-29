@@ -55,7 +55,9 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
     private val channelWidth get() = min(d(220f), max(d(120f), width * 0.34f))
     private val gridWidth get() = max(d(100f), width - channelWidth - d(8f))
     private val gridLeft get() = if (rtl) 0f else width - gridWidth
-    private val pxPerSec get() = gridWidth / (hours * 3600f)
+    /** the hours across: the setting's on a wide window, half of them on a phone held upright */
+    private val shownHours get() = if (width > 0 && width < d(600f)) maxOf(1f, hours / 2f) else hours.toFloat()
+    private val pxPerSec get() = gridWidth / (shownHours * 3600f)
 
     /** two days back (the archives), a week ahead */
     private val origin: Long = Calendar.getInstance().run {
@@ -167,9 +169,9 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
         }
     }
 
-    fun jumpToNow() = scrollToTime(now() - hours * 3600L / 4, true)
-    fun earlier() = scrollToTime(leftTime - hours * 3600L / 2, true)
-    fun later() = scrollToTime(leftTime + hours * 3600L / 2, true)
+    fun jumpToNow() = scrollToTime(now() - (shownHours * 900).toLong(), true)
+    fun earlier() = scrollToTime(leftTime - (shownHours * 1800).toLong(), true)
+    fun later() = scrollToTime(leftTime + (shownHours * 1800).toLong(), true)
 
     fun showChannel(key: String) {
         val i = channels.indexOfFirst { it.key == key }
@@ -184,7 +186,7 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
-        if (oldw == 0) scrollToTime(now() - hours * 3600L / 4, false) else clampScroll()
+        if (oldw == 0) scrollToTime(now() - (shownHours * 900).toLong(), false) else clampScroll()
     }
 
     private fun xOf(t: Long) = gridLeft + (t - origin) * pxPerSec - timeX
@@ -213,6 +215,12 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
         val gw = gridWidth
         val pps = pxPerSec
         // the hours, every half hour
+        val labelWidth = label.measureText(TvTexts.time(context, origin + 12 * 3600 + 1800)) + d(14f)
+        val step = when {
+            1800 * pps >= labelWidth -> 1800L
+            3600 * pps >= labelWidth -> 3600L
+            else -> 7200L
+        }
         val firstTick = ((leftTime - origin) / 1800) * 1800 + origin
         canvas.save()
         canvas.clipRect(gl, 0f, gl + gw, timelineHeight)
@@ -221,8 +229,10 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
             val x = xOf(t)
             paint.color = cTick
             canvas.drawRect(x, timelineHeight - d(8f), x + d(1f), timelineHeight, paint)
-            label.color = cFgA3
-            canvas.drawText(TvTexts.time(context, t), x + d(6f), timelineHeight - d(10f), label)
+            if ((t - origin) % step == 0L) {
+                label.color = cFgA3
+                canvas.drawText(TvTexts.time(context, t), x + d(6f), timelineHeight - d(10f), label)
+            }
             t += 1800
         }
         canvas.restore()
@@ -271,15 +281,15 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
             canvas.drawRoundRect(rect, d(6f), d(6f), paint)
         }
         // number, logo, name, in the order of the language
-        val numW = d(32f)
+        val numW = if (cw < d(170f)) 0f else d(32f)
         val logoS = d(36f)
         fun at(x: Float, w: Float) = if (rtl) left + cw - x - w else left + x
         label.color = cFgA3
         label.textSize = d(13f)
-        val num = if (c.number > 0) c.number.toString() else ""
+        val num = if (c.number > 0 && numW > 0f) c.number.toString() else ""
         val nw = label.measureText(num)
         canvas.drawText(num, at(d(4f), numW) + if (rtl) 0f else numW - nw, y + rowHeight / 2 + d(4.5f), label)
-        val lx = at(d(4f) + numW + d(8f), logoS)
+        val lx = at(d(4f) + numW + if (numW > 0f) d(8f) else 0f, logoS)
         rect.set(lx, y + (rowHeight - logoS) / 2, lx + logoS, y + (rowHeight + logoS) / 2)
         paint.color = cWell
         canvas.drawRoundRect(rect, d(6f), d(6f), paint)
@@ -298,7 +308,7 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
             val ini = TvLogos.initials(c.name)
             canvas.drawText(ini, rect.centerX() - small.measureText(ini) / 2, rect.centerY() + d(4f), small)
         }
-        val nameX = d(4f) + numW + d(8f) + logoS + d(10f)
+        val nameX = d(4f) + numW + (if (numW > 0f) d(8f) else 0f) + logoS + d(10f)
         val nameW = cw - nameX - d(6f)
         title.color = if (current) cAccent else cFgA1
         title.textSize = d(13f)
@@ -376,8 +386,8 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
                 val target = if (i >= 0) list.getOrNull(if (forward) i + 1 else i - 1) else null
                 focusTime = target?.start ?: (focusTime + if (forward) 1800 else -1800)
                 val lt = leftTime
-                val rt = lt + hours * 3600L
-                if (focusTime < lt || focusTime >= rt - 600) scrollToTime(focusTime - hours * 3600L / 4, true)
+                val rt = lt + (shownHours * 3600).toLong()
+                if (focusTime < lt || focusTime >= rt - 600) scrollToTime(focusTime - (shownHours * 900).toLong(), true)
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_NUMPAD_ENTER -> {
                 c ?: return false

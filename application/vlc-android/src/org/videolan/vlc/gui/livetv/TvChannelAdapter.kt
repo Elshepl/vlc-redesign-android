@@ -149,7 +149,11 @@ internal class TvChannelAdapter(
                     marks.addView(it, 0)
                 }
             }
-            fav.visibility = if (LiveTv.isFavorite(c.key)) View.VISIBLE else View.INVISIBLE
+            // the same room on every row on a wide window (the next column stays in line); on a phone only the marks
+            fav.visibility = if (LiveTv.isFavorite(c.key)) View.VISIBLE else if (wide) View.INVISIBLE else View.GONE
+            val lp = marks.layoutParams as LinearLayout.LayoutParams
+            val w = if (wide) ctx.tvPx(70f) else ViewGroup.LayoutParams.WRAP_CONTENT
+            if (lp.width != w) { lp.width = w; marks.layoutParams = lp }
             bindNow(c)
         }
 

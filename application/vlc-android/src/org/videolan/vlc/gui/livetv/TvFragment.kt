@@ -74,6 +74,8 @@ class TvFragment : BaseFragment(), Filterable {
     private lateinit var empty: View
     private lateinit var emptyList: TextView
     private lateinit var bodyBox: FrameLayout
+    private lateinit var languageButton: com.google.android.material.button.MaterialButton
+    private lateinit var descriptionsChip: FrameLayout
     private var shown: List<TvChannel> = emptyList()
 
     override fun getTitle() = getString(R.string.rd_nav_tv)
@@ -148,6 +150,11 @@ class TvFragment : BaseFragment(), Filterable {
         guideTools.addView(ctx.tvButton(getString(R.string.rd_tv_earlier)) { guide.earlier() }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(8f) })
         guideTools.addView(ctx.tvButton(getString(R.string.rd_tv_later)) { guide.later() }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(8f) })
         guideTools.addView(guideDay, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(12f); marginEnd = ctx.tvPx(12f) })
+        // the languages of the guides (when they give several) and the descriptions, as Settings > Live TV
+        languageButton = ctx.tvButton(getString(R.string.rd_tv_language)) { v -> chooseLanguage(v) }
+        guideTools.addView(languageButton, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = ctx.tvPx(8f) })
+        descriptionsChip = FrameLayout(ctx)
+        guideTools.addView(descriptionsChip, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ctx.tvPx(32f)))
         guideBox.addView(HorizontalScrollView(ctx).apply { isHorizontalScrollBarEnabled = false; addView(guideTools) },
             LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { setMargins(ctx.tvPx(16f), 0, ctx.tvPx(16f), 0) })
         guideBox.addView(guide, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f).apply { setMargins(ctx.tvPx(12f), ctx.tvPx(10f), ctx.tvPx(12f), 0) })
@@ -312,6 +319,34 @@ class TvFragment : BaseFragment(), Filterable {
         }
         emptyList.visibility = if (hasSources && view == "channels" && list.isEmpty()) View.VISIBLE else View.GONE
         sourcesButton.visibility = if (hasSources) View.VISIBLE else View.GONE
+        // the guide's tools
+        val wanted = LiveTv.guideLanguages()
+        languageButton.visibility = if (state.languages.size > 1 || wanted.isNotEmpty()) View.VISIBLE else View.GONE
+        languageButton.text = if (wanted.isEmpty()) getString(R.string.rd_tv_language) + ": " + getString(R.string.rd_tv_all)
+                              else getString(R.string.rd_tv_language) + ": " + wanted.joinToString(", ") { languageName(it) }
+        descriptionsChip.removeAllViews()
+        val on = settings.getBoolean(KEY_IPTV_DESCRIPTIONS, true)
+        descriptionsChip.addView(ctx.tvChip(getString(R.string.rd_tv_descriptions), on) {
+            settings.edit { putBoolean(KEY_IPTV_DESCRIPTIONS, !on) }
+            refresh()
+        }, FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT))
+    }
+
+    private fun languageName(code: String) = java.util.Locale(code).getDisplayLanguage(java.util.Locale.getDefault()).ifEmpty { code }
+
+    /** Keeps only the programmes in a language when the guides give several (the guides are read again). */
+    private fun chooseLanguage(anchor: View) {
+        val langs = LiveTv.state.value.languages.sorted()
+        val m = PopupMenu(requireContext(), anchor)
+        m.menu.add(0, 0, 0, getString(R.string.rd_tv_all))
+        langs.forEachIndexed { i, l -> m.menu.add(0, i + 1, i + 1, languageName(l) + " (" + l + ")") }
+        m.setOnMenuItemClickListener { item ->
+            settings.edit { putString(KEY_IPTV_LANGUAGES, if (item.itemId == 0) "" else langs[item.itemId - 1]) }
+            LiveTv.reloadGuides()
+            refresh()
+            true
+        }
+        m.show()
     }
 
     /* Films and series of the first account that has them */
