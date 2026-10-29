@@ -95,6 +95,9 @@ import org.videolan.vlc.viewmodels.PlaylistModel
 import org.videolan.vlc.viewmodels.mobile.AudioBrowserViewModel
 import org.videolan.vlc.viewmodels.mobile.getViewModel
 
+private const val KEY_RD_DETAIL_ID = "rd_detail_id"
+private const val KEY_RD_DETAIL_TAB = "rd_detail_tab"
+
 class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
 
     private lateinit var binding: AudioBrowserBinding
@@ -152,6 +155,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         audioPagerAdapter = AudioPagerAdapter(views.toTypedArray(), titles)
         @Suppress("UNCHECKED_CAST")
         viewPager.adapter = audioPagerAdapter
+        savedInstanceState?.let { if (it.containsKey(KEY_RD_DETAIL_ID)) { restoreDetailId = it.getLong(KEY_RD_DETAIL_ID); restoreDetailTab = it.getInt(KEY_RD_DETAIL_TAB) } }
         savedInstanceState?.getIntegerArrayList(KEY_LISTS_POSITIONS)?.withIndex()?.forEach {
             restorePositions.put(it.index, it.value)
         }
@@ -257,6 +261,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
             positions.add((lists[i].layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition())
         }
         outState.putIntegerArrayList(KEY_LISTS_POSITIONS, positions)
+        // the entry shown in the detail pane is kept across a rotation or a window resize
+        detailPane?.item?.let { outState.putLong(KEY_RD_DETAIL_ID, it.id); outState.putInt(KEY_RD_DETAIL_TAB, currentTab) }
         super.onSaveInstanceState(outState)
     }
 
@@ -522,7 +528,11 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         container.visibility = View.VISIBLE
         detailPane?.item?.let { (getCurrentAdapter() as? AudioBrowserAdapter)?.rdDetailItem = it }
         if (detailPane?.item == null) (getCurrentAdapter() as? AudioBrowserAdapter)?.let { a ->
-            if (a.itemCount > 0) a.getItem(0)?.let { detailPane?.show(it); a.rdDetailItem = it }
+            // after a rotation or a resize: the entry that was shown, else the first one
+            val kept = if (restoreDetailId >= 0 && restoreDetailTab == currentTab)
+                (0 until a.itemCount).firstNotNullOfOrNull { i -> a.getItem(i)?.takeIf { it.id == restoreDetailId } } else null
+            if (kept != null || restoreDetailTab != currentTab) restoreDetailId = -1L
+            if (a.itemCount > 0) (kept ?: a.getItem(0))?.let { detailPane?.show(it); a.rdDetailItem = it }
         }
     }
 
@@ -532,6 +542,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
      * The saved display mode is not changed.
      */
     private val paneListMode = BooleanArray(MODE_TOTAL)
+    private var restoreDetailId = -1L
+    private var restoreDetailTab = -1
     private fun tabletPaneListMode() {
         if (!requireContext().isTablet() || view == null) return
         val wide = binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
