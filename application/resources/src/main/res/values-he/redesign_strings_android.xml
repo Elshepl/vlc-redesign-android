@@ -34,4 +34,11 @@
         <item>כתוביות שאינן ב־Unicode מוצגות כראוי: קבצים בעברית, ערבית, רוסית, יוונית, טורקית, יפנית, סינית, קוריאנית ותאית מזוהים לפי האותיות שלהם והשפה שבשמם.</item>
         <item>מסך האודות נותן קרדיט על עיצוב הממשק ל־Juxtopposed, עם הקישורים לעיצוב, כמו בגרסת המחשב.</item>
     </string-array>
+    <string name="rd_fx_luma_spat">עוצמת בהירות מרחבית (0-254)</string>
+    <string name="rd_fx_luma_temp">עוצמת בהירות זמנית (0-254)</string>
+    <string name="rd_fx_anaglyph_rg">אדום טהור (שמאל)  ירוק טהור (ימין)</string>
+    <string name="rd_fx_anaglyph_rb">אדום טהור (שמאל)  כחול טהור (ימין)</string>
+    <string name="rd_fx_anaglyph_rc">אדום טהור (שמאל)  ציאן טהור (ימין)</string>
+    <string name="rd_fx_anaglyph_gm">ירוק טהור (שמאל)  מג׳נטה טהורה (ימין)</string>
+    <string name="rd_fx_anaglyph_mc">מג׳נטה (שמאל)  ציאן (ימין)</string>
 </resources>

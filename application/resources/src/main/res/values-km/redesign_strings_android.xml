@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_move_earlier">ផ្លាស់ទីទៅឆ្វេង</string>
+    <string name="rd_move_later">ផ្លាស់ទីទៅស្ដាំ</string>
+    <string name="rd_orange">ទឹកក្រូច</string>
+    <string name="rd_pink">ផ្កាឈូក</string>
+    <string name="rd_sec_notifications">ការជូនដំណឹង</string>
+    <string name="rd_ob_whole_device">ឧបករណ៍ទាំងមូល</string>
+    <string name="rd_fuzzy_1">ឯកសារចំណងជើងរងណាមួយ</string>
+</resources>
