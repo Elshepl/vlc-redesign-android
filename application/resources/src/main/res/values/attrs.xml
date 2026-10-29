@@ -126,6 +126,7 @@
     <attr name="rd_hover" format="reference|color"/>
     <attr name="rd_topbar" format="reference|color"/>
     <attr name="rd_accent_bright" format="reference|color"/>
+    <attr name="rd_accent_dim" format="reference|color"/>
     <attr name="rd_text_section" format="reference|color"/>
 
 </resources>

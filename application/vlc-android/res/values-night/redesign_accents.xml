@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/rd_accent_orange_main</item>
         <item name="colorControlActivated">@color/rd_accent_orange_main</item>
         <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Red" parent="">
         <item name="colorPrimary">@color/rd_accent_red_main</item>
@@ -15,6 +16,7 @@
         <item name="colorAccent">@color/rd_accent_red_main</item>
         <item name="colorControlActivated">@color/rd_accent_red_main</item>
         <item name="rd_accent_bright">@color/rd_accent_red_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_red_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Yellow" parent="">
         <item name="colorPrimary">@color/rd_accent_yellow_main</item>
@@ -22,6 +24,7 @@
         <item name="colorAccent">@color/rd_accent_yellow_main</item>
         <item name="colorControlActivated">@color/rd_accent_yellow_main</item>
         <item name="rd_accent_bright">@color/rd_accent_yellow_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_yellow_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Green" parent="">
         <item name="colorPrimary">@color/rd_accent_green_main</item>
@@ -29,6 +32,7 @@
         <item name="colorAccent">@color/rd_accent_green_main</item>
         <item name="colorControlActivated">@color/rd_accent_green_main</item>
         <item name="rd_accent_bright">@color/rd_accent_green_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_green_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Cyan" parent="">
         <item name="colorPrimary">@color/rd_accent_cyan_main</item>
@@ -36,6 +40,7 @@
         <item name="colorAccent">@color/rd_accent_cyan_main</item>
         <item name="colorControlActivated">@color/rd_accent_cyan_main</item>
         <item name="rd_accent_bright">@color/rd_accent_cyan_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_cyan_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Blue" parent="">
         <item name="colorPrimary">@color/rd_accent_blue_main</item>
@@ -43,6 +48,7 @@
         <item name="colorAccent">@color/rd_accent_blue_main</item>
         <item name="colorControlActivated">@color/rd_accent_blue_main</item>
         <item name="rd_accent_bright">@color/rd_accent_blue_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_blue_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Purple" parent="">
         <item name="colorPrimary">@color/rd_accent_purple_main</item>
@@ -50,6 +56,7 @@
         <item name="colorAccent">@color/rd_accent_purple_main</item>
         <item name="colorControlActivated">@color/rd_accent_purple_main</item>
         <item name="rd_accent_bright">@color/rd_accent_purple_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_purple_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Pink" parent="">
         <item name="colorPrimary">@color/rd_accent_pink_main</item>
@@ -57,6 +64,7 @@
         <item name="colorAccent">@color/rd_accent_pink_main</item>
         <item name="colorControlActivated">@color/rd_accent_pink_main</item>
         <item name="rd_accent_bright">@color/rd_accent_pink_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_pink_dim</item>
     </style>
     <style name="ThemeOverlay.Redesign.Accent.Grey" parent="">
         <item name="colorPrimary">@color/rd_accent_grey_main</item>
@@ -64,5 +72,6 @@
         <item name="colorAccent">@color/rd_accent_grey_main</item>
         <item name="colorControlActivated">@color/rd_accent_grey_main</item>
         <item name="rd_accent_bright">@color/rd_accent_grey_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_grey_dim</item>
     </style>
 </resources>

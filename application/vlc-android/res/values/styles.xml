@@ -151,6 +151,7 @@
         <item name="rd_topbar">@color/rd_light_bg_a3</item>
         <item name="rd_text_section">@color/rd_light_fg_2</item>
         <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
         <item name="snackbarStyle">@style/Widget.Redesign.Snackbar</item>
         <item name="snackbarTextViewStyle">@style/Widget.Redesign.Snackbar.Text</item>
         <item name="snackbarButtonStyle">@style/Widget.Redesign.Snackbar.Button</item>
@@ -393,6 +394,7 @@
         <item name="rd_topbar">@color/rd_dark_bg_a3</item>
         <item name="rd_text_section">@color/rd_dark_fg_2</item>
         <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
         <item name="snackbarStyle">@style/Widget.Redesign.Snackbar</item>
         <item name="snackbarTextViewStyle">@style/Widget.Redesign.Snackbar.Text</item>
         <item name="snackbarButtonStyle">@style/Widget.Redesign.Snackbar.Button</item>
@@ -617,6 +619,7 @@
         <item name="colorPrimaryDark">@color/transparent</item>
         <item name="colorAccent">@color/rd_accent_orange_main</item>
         <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
         <item name="android:fontFamily">@font/inter</item>
         <item name="fontFamily">@font/inter</item>
         <item name="background_default_darker">@color/grey875</item>
