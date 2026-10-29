@@ -323,4 +323,6 @@
     <string name="rd_record">Εγγραφή</string>
     <string name="rd_record_started">Εγγραφή</string>
     <string name="rd_font_default">Προεπιλογή</string>
+    <string name="rd_custom_aspect_ratios">Προσαρμοσμένες αναλογίες διαστάσεων</string>
+    <string name="rd_help_custom_aspect_ratios">Χωρισμένη με κόμματα λίστα αναλογιών διαστάσεων που θα προστεθούν στη λίστα αναλογιών διαστάσεων της διεπαφής.</string>
 </resources>

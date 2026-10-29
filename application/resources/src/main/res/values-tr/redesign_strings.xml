@@ -323,4 +323,6 @@
     <string name="rd_record">Kayıt</string>
     <string name="rd_record_started">Kayıt ediyor</string>
     <string name="rd_font_default">Varsayılan</string>
+    <string name="rd_custom_aspect_ratios">Özel en boy oranları</string>
+    <string name="rd_help_custom_aspect_ratios">Arayüzdeki listeye eklenecek en boy oranlarını, virgül (,) ile ayırarak yazın.</string>
 </resources>

@@ -323,4 +323,6 @@
     <string name="rd_record">Enregistrer</string>
     <string name="rd_record_started">Enregistrement</string>
     <string name="rd_font_default">Par défaut</string>
+    <string name="rd_custom_aspect_ratios">Formats d\'écran personnalisés</string>
+    <string name="rd_help_custom_aspect_ratios">Liste de formats d\'écran (séparés par des virgules) qui seront ajoutés à la liste des formats d\'écran de l\'interface.</string>
 </resources>

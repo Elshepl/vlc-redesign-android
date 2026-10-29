@@ -323,4 +323,6 @@
     <string name="rd_record">Записування</string>
     <string name="rd_record_started">Запис</string>
     <string name="rd_font_default">Стандартно</string>
+    <string name="rd_custom_aspect_ratios">Власні співвідношення сторін</string>
+    <string name="rd_help_custom_aspect_ratios">Список, елементи якого розділені комами, співвідношень сторін, який буде додано до відповідного списку інтерфейсу.</string>
 </resources>

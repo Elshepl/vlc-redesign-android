@@ -304,4 +304,6 @@
     <string name="rd_record">பதிவுகள்</string>
     <string name="rd_record_started">பதிவு</string>
     <string name="rd_font_default">இயல்புநிலை</string>
+    <string name="rd_custom_aspect_ratios">தனிப்பயன் தோற்றவிகிதங்கள்</string>
+    <string name="rd_help_custom_aspect_ratios">இடைமுகத்தின் தோற்றவிகிதப் பட்டியலில் சேர்க்கப்படும் தோற்றவிகிதங்களின் காற்புள்ளியால் பிரிக்கப்பட்ட பட்டியல்.</string>
 </resources>

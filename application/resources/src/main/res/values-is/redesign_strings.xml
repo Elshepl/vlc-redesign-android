@@ -315,4 +315,6 @@
     <string name="rd_record">Upptaka</string>
     <string name="rd_record_started">Upptaka</string>
     <string name="rd_font_default">Sjálfgefið</string>
+    <string name="rd_custom_aspect_ratios">Sérsniðin stærðarhlutföll</string>
+    <string name="rd_help_custom_aspect_ratios">Kommuaðskilinn listi yfir stærðarhlutföll sem bætt verður við lista viðmótsins yfir stærðarhlutföll.</string>
 </resources>

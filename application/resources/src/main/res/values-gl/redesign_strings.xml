@@ -323,4 +323,6 @@
     <string name="rd_record">Gravar</string>
     <string name="rd_record_started">Gravación</string>
     <string name="rd_font_default">Predeterminado</string>
+    <string name="rd_custom_aspect_ratios">Proporcións de aspecto personalizadas</string>
+    <string name="rd_help_custom_aspect_ratios">Lista de proporcións de aspecto separada por comas que se engadira á lista de proporcións de aspecto da interface.</string>
 </resources>

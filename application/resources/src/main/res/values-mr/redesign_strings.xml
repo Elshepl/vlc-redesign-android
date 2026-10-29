@@ -323,4 +323,6 @@
     <string name="rd_record">रेकॉर्ड करा</string>
     <string name="rd_record_started">मुद्रण</string>
     <string name="rd_font_default">पूर्वनिर्धारित</string>
+    <string name="rd_custom_aspect_ratios">सानुकूल बाजूंचे प्रमाण</string>
+    <string name="rd_help_custom_aspect_ratios">स्वल्पविरामाने स्वतंत्र केलेली बाजू अनुपाताची यादी जी आंतरपृष्ठाच्या बाजू अनुपात यादीमध्ये समाविष्ट केली जाईल.</string>
 </resources>

@@ -321,4 +321,7 @@
     <string name="rd_record">הקלטה</string>
     <string name="rd_record_started">הקלטה</string>
     <string name="rd_font_default">ברירת מחדל</string>
+    <string name="rd_custom_aspect_ratios">יחסי תצוגה מותאמים אישית</string>
+    <string name="rd_help_custom_aspect_ratios">רשימה מופרדת בפסיקים של יחסי תצוגה שיתווספו לרשימת יחסי התצוגה של הממשק.</string>
+    <string name="rd_search_in_english">הצגת ההגדרות באנגלית</string>
 </resources>

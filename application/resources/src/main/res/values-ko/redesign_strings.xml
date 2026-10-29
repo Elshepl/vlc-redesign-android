@@ -323,4 +323,6 @@
     <string name="rd_record">녹음/녹화</string>
     <string name="rd_record_started">녹화</string>
     <string name="rd_font_default">기본</string>
+    <string name="rd_custom_aspect_ratios">사용자 지정 화면 비율</string>
+    <string name="rd_help_custom_aspect_ratios">화면 비율 목록은 쉼표(,)로 구분합니다. 인터페이스의 화면 비율 목록에 추가됩니다.</string>
 </resources>

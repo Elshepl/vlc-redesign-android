@@ -323,4 +323,7 @@
     <string name="rd_record">Aufnehmen</string>
     <string name="rd_record_started">Aufnehmen</string>
     <string name="rd_font_default">Standard</string>
+    <string name="rd_custom_aspect_ratios">Eigene Seitenverhältnisse</string>
+    <string name="rd_help_custom_aspect_ratios">Eine durch Kommata getrennte Liste von Seitenverhältnissen, die der Liste in der Oberfläche hinzugefügt werden.</string>
+    <string name="rd_search_in_english">Einstellungen auf Englisch anzeigen</string>
 </resources>

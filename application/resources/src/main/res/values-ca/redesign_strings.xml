@@ -323,4 +323,6 @@
     <string name="rd_record">Enregistra</string>
     <string name="rd_record_started">S\'està enregistrant</string>
     <string name="rd_font_default">Per defecte</string>
+    <string name="rd_custom_aspect_ratios">Relacions d\'aspecte personalitzades</string>
+    <string name="rd_help_custom_aspect_ratios">Llista separada per comes de les relacions d\'aspecte que s\'afegiran a la llista de relacions d\'aspecte de la interfície.</string>
 </resources>

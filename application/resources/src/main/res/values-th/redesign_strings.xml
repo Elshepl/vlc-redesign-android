@@ -311,4 +311,6 @@
     <string name="rd_record">บันทึก</string>
     <string name="rd_record_started">กำลังบันทึก</string>
     <string name="rd_font_default">ปริยาย</string>
+    <string name="rd_custom_aspect_ratios">อัตราส่วนภาพที่กำหนดเอง</string>
+    <string name="rd_help_custom_aspect_ratios">ใช้เตรื่องหมายจุลภาคคั่นแต่ละรายการที่จะเพิ่มเข้าไปในรายการอัตราส่วนภาพ</string>
 </resources>

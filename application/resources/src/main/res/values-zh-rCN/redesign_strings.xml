@@ -323,4 +323,6 @@
     <string name="rd_record">录制</string>
     <string name="rd_record_started">正在录制</string>
     <string name="rd_font_default">默认</string>
+    <string name="rd_custom_aspect_ratios">自定义宽高比</string>
+    <string name="rd_help_custom_aspect_ratios">逗号分隔的宽高比列表，将被添加到界面的宽高比菜单。</string>
 </resources>

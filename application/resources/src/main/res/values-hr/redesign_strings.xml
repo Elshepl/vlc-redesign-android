@@ -321,4 +321,6 @@
     <string name="rd_record">Snimanje</string>
     <string name="rd_record_started">Snima se</string>
     <string name="rd_font_default">Zadano</string>
+    <string name="rd_custom_aspect_ratios">Prilagođeni bočni omjeri</string>
+    <string name="rd_help_custom_aspect_ratios">Zarezima podijeljeni popis bočnih omjera koji će biti dodan sučelnom popisu bočnih omjera. </string>
 </resources>

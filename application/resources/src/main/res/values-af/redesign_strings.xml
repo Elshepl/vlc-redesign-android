@@ -308,4 +308,6 @@
     <string name="rd_record">Neem op</string>
     <string name="rd_record_started">Opname</string>
     <string name="rd_font_default">Verstek</string>
+    <string name="rd_custom_aspect_ratios">Pasgemaakte aspekverhoudings</string>
+    <string name="rd_help_custom_aspect_ratios">Kommageskeide lys van aspekverhoudings wat by die koppelvlak se lys van aspekverhoudings gevoeg word.</string>
 </resources>

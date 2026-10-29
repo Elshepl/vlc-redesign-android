@@ -42,6 +42,7 @@ import org.videolan.vlc.MediaParsingService
 import org.videolan.vlc.gui.SecondaryActivity
 import org.videolan.vlc.gui.helpers.MedialibraryUtils
 import org.videolan.vlc.gui.helpers.ThreeStatesCheckbox
+import org.videolan.vlc.util.LibraryScopeGuard
 import org.videolan.vlc.util.Permissions
 
 interface IStorageFragmentDelegate {
@@ -87,6 +88,12 @@ class StorageFragmentDelegate : IStorageFragmentDelegate, RootsEventsCb {
         val checked = tscb.state == ThreeStatesCheckbox.STATE_CHECKED
         if (checked && mrl.contains("file://") && !canReadStorage(context)) {
             Permissions.showStoragePermissionDialog(context as FragmentActivity, false)
+            tscb.state = ThreeStatesCheckbox.STATE_UNCHECKED
+            return
+        }
+        // debug builds never index a whole storage or a top-level folder (LibraryScopeGuard): say so, instead of a
+        // ticked box that the media library silently ignores
+        if (checked && LibraryScopeGuard.refuseWithMessage(v.context, mrl)) {
             tscb.state = ThreeStatesCheckbox.STATE_UNCHECKED
             return
         }

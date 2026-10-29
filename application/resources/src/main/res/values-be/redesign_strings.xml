@@ -323,4 +323,6 @@
     <string name="rd_record">Запіс</string>
     <string name="rd_record_started">Запіс</string>
     <string name="rd_font_default">Стандартна</string>
+    <string name="rd_custom_aspect_ratios">Уласныя стасункі бакоў</string>
+    <string name="rd_help_custom_aspect_ratios">Спіс стасункаў бакоў праз коску. Дадаюцца да адпаведнага спісу інтэрфейсу.</string>
 </resources>

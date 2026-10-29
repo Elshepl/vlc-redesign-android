@@ -311,4 +311,6 @@
     <string name="rd_record">ضبط</string>
     <string name="rd_record_started">ضبط</string>
     <string name="rd_font_default">پیش‌فرض</string>
+    <string name="rd_custom_aspect_ratios">نسبت‌های طول به عرض سفارشی</string>
+    <string name="rd_help_custom_aspect_ratios">این مقادیر به فهرست نسبت‌های نسبت طول به عرض در واسط اضافه می‌شوند. مقادیر فهرست را با ویرگول (,) جدا کنید.</string>
 </resources>

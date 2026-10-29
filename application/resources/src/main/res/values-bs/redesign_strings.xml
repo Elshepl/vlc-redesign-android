@@ -307,4 +307,6 @@
     <string name="rd_record">Snimi</string>
     <string name="rd_record_started">Snimanje</string>
     <string name="rd_font_default">Zadano</string>
+    <string name="rd_custom_aspect_ratios">Prilagođeni omjeri slike</string>
+    <string name="rd_help_custom_aspect_ratios">Zarezima odvojena lista omjera koji će biti dodani na listu omjera na okruženju.</string>
 </resources>

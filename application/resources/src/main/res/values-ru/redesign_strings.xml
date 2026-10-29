@@ -323,4 +323,6 @@
     <string name="rd_record">Запись</string>
     <string name="rd_record_started">Запись</string>
     <string name="rd_font_default">По умолчанию</string>
+    <string name="rd_custom_aspect_ratios">Свои соотношения сторон</string>
+    <string name="rd_help_custom_aspect_ratios">Список соотношений сторон изображения, разделённых запятыми. Добавляются в соответствующий список интерфейса.</string>
 </resources>

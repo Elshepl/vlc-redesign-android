@@ -314,4 +314,6 @@
     <string name="rd_record">Déan taifead</string>
     <string name="rd_record_started">Ag taifead</string>
     <string name="rd_font_default">Réamhshocrú</string>
+    <string name="rd_custom_aspect_ratios">Cóimheasa treoíochta saincheaptha</string>
+    <string name="rd_help_custom_aspect_ratios">Liosta de chóimheasa treoíochta, scartha le camóga, a chuirfear le liosta cóimheasa treoíochta an chomhéadain.</string>
 </resources>

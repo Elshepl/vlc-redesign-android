@@ -323,4 +323,6 @@
     <string name="rd_record">Felvétel</string>
     <string name="rd_record_started">Felvétel</string>
     <string name="rd_font_default">Alapértelmezett</string>
+    <string name="rd_custom_aspect_ratios">Egyéni méretarányok</string>
+    <string name="rd_help_custom_aspect_ratios">A felületen a méretarányok listájára felkerülő méretarányok vesszővel elválasztott listája.</string>
 </resources>

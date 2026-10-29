@@ -323,4 +323,6 @@
     <string name="rd_record">Nahrať</string>
     <string name="rd_record_started">Nahrávanie</string>
     <string name="rd_font_default">Predvolený</string>
+    <string name="rd_custom_aspect_ratios">Vlastné stranové pomery</string>
+    <string name="rd_help_custom_aspect_ratios">Čiarkou oddeľovaný zoznam stran. pomerov, ktoré sa pridajú do zoznamu stranových pomerov v rozhraní.</string>
 </resources>

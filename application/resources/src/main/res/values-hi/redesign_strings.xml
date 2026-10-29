@@ -313,4 +313,6 @@
     <string name="rd_record">रिकॉर्ड करें</string>
     <string name="rd_record_started">रिकॉर्डिंग</string>
     <string name="rd_font_default">डिफ़ॉल्ट</string>
+    <string name="rd_custom_aspect_ratios">कस्टम पक्षानुपात</string>
+    <string name="rd_help_custom_aspect_ratios">पक्षानुपातों की अल्पविराम से अलग की गई सूची, जो इंटरफ़ेस की पक्षानुपात सूची में जोड़ी जाएगी।</string>
 </resources>

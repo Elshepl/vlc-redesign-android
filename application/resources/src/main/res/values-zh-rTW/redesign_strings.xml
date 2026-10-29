@@ -316,4 +316,6 @@
     <string name="rd_record">錄製</string>
     <string name="rd_record_started">錄製</string>
     <string name="rd_font_default">預設</string>
+    <string name="rd_custom_aspect_ratios">自訂長寬比例</string>
+    <string name="rd_help_custom_aspect_ratios">寬高比的逗號分隔列表會被加到介面上的寬高比列表。</string>
 </resources>

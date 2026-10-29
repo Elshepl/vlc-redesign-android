@@ -305,4 +305,6 @@
     <string name="rd_record">Regjistro</string>
     <string name="rd_record_started">Regjistrimi</string>
     <string name="rd_font_default">Parazgjedhje</string>
+    <string name="rd_custom_aspect_ratios">Raporte të personalizuara të pamjes</string>
+    <string name="rd_help_custom_aspect_ratios">Listë raportesh pamjeje, të ndara me presje, që do të shtohen në listën e raporteve të pamjes së ndërfaqes.</string>
 </resources>

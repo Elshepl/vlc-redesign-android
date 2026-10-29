@@ -316,4 +316,6 @@
     <string name="rd_record">Įrašyti</string>
     <string name="rd_record_started">Įrašoma</string>
     <string name="rd_font_default">Numatytasis</string>
+    <string name="rd_custom_aspect_ratios">Pasirinktiniai kraštinių santykiai</string>
+    <string name="rd_help_custom_aspect_ratios">Kableliais atskirtų vaizdo (pločio ir aukščio) santykių sąrašas, kuris bus įdedamas į sąsajos santykių sąrašą.</string>
 </resources>

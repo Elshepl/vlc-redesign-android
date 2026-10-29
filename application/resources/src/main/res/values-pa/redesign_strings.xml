@@ -312,4 +312,6 @@
     <string name="rd_record">ਰਿਕਾਰਡ ਕਰੋ</string>
     <string name="rd_record_started">ਰਿਕਾਰਡਿੰਗ</string>
     <string name="rd_font_default">ਡਿਫਾਲਟ</string>
+    <string name="rd_custom_aspect_ratios">ਕਸਟਮ ਅਕਾਰ ਅਨੁਪਾਤ</string>
+    <string name="rd_help_custom_aspect_ratios">ਅਕਾਰ ਅਨੁਪਾਤਾਂ ਦੀ ਕੌਮੇ ਨਾਲ ਵੱਖ ਕੀਤੀ ਲਿਸਟ, ਜੋ ਇੰਟਰਫੇਸ ਦੀ ਅਕਾਰ ਅਨੁਪਾਤ ਲਿਸਟ ਵਿੱਚ ਜੋੜੇ ਜਾਣਗੇ।</string>
 </resources>

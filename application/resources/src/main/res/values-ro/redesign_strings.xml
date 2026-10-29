@@ -316,4 +316,6 @@
     <string name="rd_record">Înregistrare</string>
     <string name="rd_record_started">Înregistrare</string>
     <string name="rd_font_default">Implicit</string>
+    <string name="rd_custom_aspect_ratios">Rapoarte de aspect personalizate</string>
+    <string name="rd_help_custom_aspect_ratios">Listă de rapoarte de aspect, separate prin virgulă care vor fi adăugate în lista de rapoarte de aspect a interfaței.</string>
 </resources>

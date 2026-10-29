@@ -304,4 +304,6 @@
     <string name="rd_record">ჩაწერა</string>
     <string name="rd_record_started">ჩაწერა</string>
     <string name="rd_font_default">ნაგულისხმევი</string>
+    <string name="rd_custom_aspect_ratios">გვერდების საკუთარი შეფარდებები</string>
+    <string name="rd_help_custom_aspect_ratios">გვერდების შეფარდებების მძიმით გამოყოფილი სია, რომელიც ინტერფეისის გვერდების შეფარდების სიას დაემატება.</string>
 </resources>

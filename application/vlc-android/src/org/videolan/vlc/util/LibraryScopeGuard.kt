@@ -10,12 +10,15 @@
  */
 package org.videolan.vlc.util
 
+import android.content.Context
 import android.net.Uri
 import android.util.Log
+import androidx.appcompat.app.AlertDialog
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.resources.AndroidDevices
 import org.videolan.tools.removeFileScheme
 import org.videolan.vlc.BuildConfig
+import org.videolan.vlc.R
 
 object LibraryScopeGuard {
     private const val TAG = "VLC/LibraryScope"
@@ -63,6 +66,21 @@ object LibraryScopeGuard {
         val tooWide = isTooWide(path)
         if (tooWide) Log.w(TAG, "Debug build: refused to index a whole storage or a top-level folder: $path")
         return !tooWide
+    }
+
+    /**
+     * A folder chosen by hand (the folder picker, "Add to media library"): when a debug build refuses it, say so in a
+     * dialog instead of a tick or a "folder added" that the media library then silently ignores. True when refused.
+     */
+    fun refuseWithMessage(context: Context, path: String): Boolean {
+        if (!enforced || !isTooWide(path)) return false
+        Log.w(TAG, "Debug build: the folder picker refused $path")
+        AlertDialog.Builder(context)
+                .setTitle(R.string.rd_debug_scope_title)
+                .setMessage(R.string.rd_debug_scope_message)
+                .setPositiveButton(R.string.ok, null)
+                .show()
+        return true
     }
 
     /** Debug builds: remove the entry points that would scan a whole storage before anything reloads them. */
