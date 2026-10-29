@@ -30,20 +30,24 @@ import org.videolan.tools.KEY_LAST_WHATS_NEW
 import org.videolan.tools.KEY_SHOW_WHATS_NEW
 import org.videolan.tools.Settings
 import org.videolan.tools.putSingle
-import org.videolan.vlc.gui.dialogs.WhatsNewDialog
+import org.videolan.vlc.BuildConfig
+import org.videolan.vlc.gui.dialogs.RdWhatsNewDialog
 
 object WhatsNewManager {
+    private val CURRENT = "redesign-" + BuildConfig.RD_VERSION_NAME
+
     fun launchIfNeeded(context: AppCompatActivity) {
         val preferences = Settings.getInstance(context)
-        val needed = preferences.getBoolean(KEY_SHOW_WHATS_NEW, true) && preferences.getString(KEY_LAST_WHATS_NEW, "") != "3.7"
+        val needed = preferences.getBoolean(KEY_SHOW_WHATS_NEW, true) && preferences.getString(KEY_LAST_WHATS_NEW, "") != CURRENT
         if (needed) {
             markAsShown(preferences)
-            val whatsNewDialog = WhatsNewDialog()
+            // VLC Redesign: the What's new card of the redesign's release
+            val whatsNewDialog = RdWhatsNewDialog()
             whatsNewDialog.show(context.supportFragmentManager, "fragment_whats_new")
         }
     }
 
     fun markAsShown(preferences: SharedPreferences) {
-        preferences.putSingle(KEY_LAST_WHATS_NEW, "3.7")
+        preferences.putSingle(KEY_LAST_WHATS_NEW, CURRENT)
     }
 }

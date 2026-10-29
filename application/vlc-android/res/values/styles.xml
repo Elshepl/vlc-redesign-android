@@ -635,6 +635,9 @@
 
         <item name="list_subtitle">@color/grey400</item>
         <item name="list_title">@color/white</item>
+        <!-- VLC Redesign: the player's dialogs as the app's (the panel in the 1 px window border) -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Redesign.Dialog.Dark</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.Redesign.Dialog.Dark</item>
         <!-- VLC Redesign: neutral pressed states in the player (the desktop has no accent ripples) -->
         <item name="android:colorControlHighlight" tools:targetApi="lollipop">@color/rd_ripple_dark</item>
         <item name="colorControlHighlight">@color/rd_ripple_dark</item>

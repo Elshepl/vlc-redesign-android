@@ -17,4 +17,14 @@
     <string name="rd_reset">Ponastavi</string>
     <string name="rd_languages_and_tracks">Jeziki in sledi</string>
     <string name="rd_about_version">Različica %1$s · temelji na VLC %2$s</string>
+    <string name="rd_about_designed_by">Vmesnik je oblikovala &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Kanal YouTube</string>
+    <string name="rd_about_video">Video o prenovi</string>
+    <string name="rd_about_figma">Datoteka Figma</string>
+    <string name="rd_about_website">Spletišče</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Prvo izvedbo je ustvaril</string>
+    <string name="rd_about_built_on">Temelji na predvajalniku VLC, ki ga razvijajo</string>
+    <string name="rd_about_videolan">ekipa VideoLAN in sodelavci</string>
+    <string name="rd_about_unofficial">Neuradna različica, ki ni povezana z VideoLAN ali Juxtopposed in je ta dva ne podpirata. VLC, VLC media player in logotip stožca so blagovne znamke VideoLAN. Prosto programje pod licenco GNU GPL v2 ali novejšo.</string>
 </resources>

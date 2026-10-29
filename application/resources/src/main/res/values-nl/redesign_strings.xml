@@ -17,4 +17,14 @@
     <string name="rd_reset">Herstellen</string>
     <string name="rd_languages_and_tracks">Talen en sporen</string>
     <string name="rd_about_version">Versie %1$s · gebaseerd op VLC %2$s</string>
+    <string name="rd_about_designed_by">Interface ontworpen door &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-kanaal</string>
+    <string name="rd_about_video">De redesignvideo</string>
+    <string name="rd_about_figma">Figma-bestand</string>
+    <string name="rd_about_website">Website</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Eerste implementatie door</string>
+    <string name="rd_about_built_on">Gebouwd op VLC media player door</string>
+    <string name="rd_about_videolan">het VideoLAN-team en de bijdragers</string>
+    <string name="rd_about_unofficial">Een onofficiële build, niet verbonden aan of goedgekeurd door VideoLAN of Juxtopposed. VLC, VLC media player en het kegellogo zijn handelsmerken van VideoLAN. Vrije software onder de GNU GPL v2 of later.</string>
 </resources>

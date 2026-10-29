@@ -17,4 +17,14 @@
     <string name="rd_reset">איפוס</string>
     <string name="rd_languages_and_tracks">שפות ורצועות</string>
     <string name="rd_about_version">גרסה %1$s · מבוססת על VLC %2$s</string>
+    <string name="rd_about_designed_by">הממשק עוצב בידי &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">ערוץ YouTube</string>
+    <string name="rd_about_video">סרטון העיצוב החדש</string>
+    <string name="rd_about_figma">קובץ Figma</string>
+    <string name="rd_about_website">אתר אינטרנט</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">מימוש ראשון בידי</string>
+    <string name="rd_about_built_on">מבוסס על נגן המדיה VLC מאת</string>
+    <string name="rd_about_videolan">צוות VideoLAN והתורמים</string>
+    <string name="rd_about_unofficial">גרסה לא רשמית, שאינה קשורה ל־VideoLAN או ל־Juxtopposed ואינה מאושרת על ידיהם. VLC,‏ VLC media player ולוגו הקונוס הם סימנים מסחריים של VideoLAN. תוכנה חופשית תחת GNU GPL v2 ואילך.</string>
 </resources>

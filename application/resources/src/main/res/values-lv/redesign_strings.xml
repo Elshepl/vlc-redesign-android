@@ -17,4 +17,14 @@
     <string name="rd_reset">Atiestatīt</string>
     <string name="rd_languages_and_tracks">Valodas un celiņi</string>
     <string name="rd_about_version">Versija %1$s · balstīta uz VLC %2$s</string>
+    <string name="rd_about_designed_by">Saskarnes dizains: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube kanāls</string>
+    <string name="rd_about_video">Video par jauno dizainu</string>
+    <string name="rd_about_figma">Figma datne</string>
+    <string name="rd_about_website">Tīmekļa vietne</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Pirmo realizāciju veidoja</string>
+    <string name="rd_about_built_on">Balstīts uz VLC multimediju atskaņotāju, ko veidojusi</string>
+    <string name="rd_about_videolan">VideoLAN komanda un līdzstrādnieki</string>
+    <string name="rd_about_unofficial">Neoficiāla versija, kas nav saistīta ar VideoLAN vai Juxtopposed un ko tie nav apstiprinājuši. VLC, VLC media player un konusa logotips ir VideoLAN preču zīmes. Brīva programmatūra ar GNU GPL v2 vai jaunākas versijas licenci.</string>
 </resources>

@@ -17,4 +17,14 @@
     <string name="rd_reset">Stel terug</string>
     <string name="rd_languages_and_tracks">Tale en snitte</string>
     <string name="rd_about_version">Weergawe %1$s · gebaseer op VLC %2$s</string>
+    <string name="rd_about_designed_by">Koppelvlak ontwerp deur &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-kanaal</string>
+    <string name="rd_about_video">Die herontwerp-video</string>
+    <string name="rd_about_figma">Figma-lêer</string>
+    <string name="rd_about_website">Webwerf</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Eerste implementering deur</string>
+    <string name="rd_about_built_on">Gebou op VLC-mediaspeler deur</string>
+    <string name="rd_about_videolan">die VideoLAN-span en bydraers</string>
+    <string name="rd_about_unofficial">’n Nie-amptelike bou, nie verbonde aan of onderskryf deur VideoLAN of Juxtopposed nie. VLC, VLC media player en die keël-logo is handelsmerke van VideoLAN. Vrye sagteware onder die GNU GPL v2 of later.</string>
 </resources>

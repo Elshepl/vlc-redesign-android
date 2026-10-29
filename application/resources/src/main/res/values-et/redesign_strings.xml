@@ -17,4 +17,14 @@
     <string name="rd_reset">Lähtesta</string>
     <string name="rd_languages_and_tracks">Keeled ja rajad</string>
     <string name="rd_about_version">Versioon %1$s · VLC %2$s põhjal</string>
+    <string name="rd_about_designed_by">Kasutajaliidese kujundas &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube\'i kanal</string>
+    <string name="rd_about_video">Ümberkujunduse video</string>
+    <string name="rd_about_figma">Figma fail</string>
+    <string name="rd_about_website">Veebileht</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Esimese teostuse autor</string>
+    <string name="rd_about_built_on">VLC meediaesitaja põhjal, mille lõid</string>
+    <string name="rd_about_videolan">VideoLAN-i meeskond ja kaastöötajad</string>
+    <string name="rd_about_unofficial">Mitteametlik väljalase, mis pole seotud VideoLAN-i ega Juxtopposediga ega nende poolt heaks kiidetud. VLC, VLC media player ja koonuse logo on VideoLAN-i kaubamärgid. Vaba tarkvara GNU GPL v2 või uuema litsentsi alusel.</string>
 </resources>

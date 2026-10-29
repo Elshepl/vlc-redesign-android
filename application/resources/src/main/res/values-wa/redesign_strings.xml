@@ -17,4 +17,14 @@
     <string name="rd_reset">Rimete a zero</string>
     <string name="rd_languages_and_tracks">Lingaedjes et bokets</string>
     <string name="rd_about_version">Modêye %1$s · so l\' båze di VLC %2$s</string>
+    <string name="rd_about_designed_by">Eterface tuzêye pa &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Canå YouTube</string>
+    <string name="rd_about_video">Li videyo do novea dessin</string>
+    <string name="rd_about_figma">Fitchî Figma</string>
+    <string name="rd_about_website">Site waibe</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Prumire metaedje en ouve pa</string>
+    <string name="rd_about_built_on">Bati sol djouweu d\' media VLC pa</string>
+    <string name="rd_about_videolan">l\' ekipe VideoLAN et ses contribouweus</string>
+    <string name="rd_about_unofficial">Ene modêye nén oficiele, nén loyeye a VideoLAN ni a Juxtopposed, ni sopoirtêye pa zels. VLC, VLC media player et l\' logo do cône sont des markes di VideoLAN. Libe programe dizo l\' GNU GPL v2 ou pus nouve.</string>
 </resources>

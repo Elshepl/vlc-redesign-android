@@ -17,4 +17,14 @@
     <string name="rd_reset">Alaphelyzetbe</string>
     <string name="rd_languages_and_tracks">Nyelvek és sávok</string>
     <string name="rd_about_version">Verzió: %1$s · a VLC %2$s alapján</string>
+    <string name="rd_about_designed_by">A kezelőfelületet tervezte: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-csatorna</string>
+    <string name="rd_about_video">Az újratervezés videója</string>
+    <string name="rd_about_figma">Figma-fájl</string>
+    <string name="rd_about_website">Weboldal</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Az első megvalósítás szerzője</string>
+    <string name="rd_about_built_on">A VLC médialejátszóra épül, amelynek készítői</string>
+    <string name="rd_about_videolan">a VideoLAN csapata és közreműködői</string>
+    <string name="rd_about_unofficial">Nem hivatalos kiadás: sem a VideoLAN, sem a Juxtopposed nem áll kapcsolatban vele, és nem is támogatja. A VLC, a VLC media player és a kúp logó a VideoLAN védjegyei. Szabad szoftver a GNU GPL v2 vagy újabb licenc alatt.</string>
 </resources>

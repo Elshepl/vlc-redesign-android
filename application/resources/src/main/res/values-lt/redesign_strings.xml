@@ -17,4 +17,14 @@
     <string name="rd_reset">Atstatyti</string>
     <string name="rd_languages_and_tracks">Kalbos ir takeliai</string>
     <string name="rd_about_version">Versija %1$s · paremta VLC %2$s</string>
+    <string name="rd_about_designed_by">Sąsajos dizainą sukūrė &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube kanalas</string>
+    <string name="rd_about_video">Pertvarkymo vaizdo įrašas</string>
+    <string name="rd_about_figma">Figma failas</string>
+    <string name="rd_about_website">Svetainė</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Pirmąją versiją sukūrė</string>
+    <string name="rd_about_built_on">Sukurta remiantis VLC media player, kurį kuria</string>
+    <string name="rd_about_videolan">VideoLAN komanda ir talkininkai</string>
+    <string name="rd_about_unofficial">Neoficiali versija, nesusijusi su VideoLAN ar Juxtopposed ir jų nepatvirtinta. VLC, VLC media player ir kūgio logotipas yra VideoLAN prekių ženklai. Laisvoji programinė įranga pagal GNU GPL v2 ar vėlesnę licenciją.</string>
 </resources>

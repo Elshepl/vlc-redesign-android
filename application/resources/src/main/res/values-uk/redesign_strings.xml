@@ -17,4 +17,14 @@
     <string name="rd_reset">Скинути</string>
     <string name="rd_languages_and_tracks">Мови й доріжки</string>
     <string name="rd_about_version">Версія %1$s · на основі VLC %2$s</string>
+    <string name="rd_about_designed_by">Дизайн інтерфейсу: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Канал YouTube</string>
+    <string name="rd_about_video">Відео про редизайн</string>
+    <string name="rd_about_figma">Файл Figma</string>
+    <string name="rd_about_website">Вебсайт</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Першу реалізацію створив</string>
+    <string name="rd_about_built_on">Створено на основі медіапрогравача VLC від</string>
+    <string name="rd_about_videolan">команди VideoLAN і учасників</string>
+    <string name="rd_about_unofficial">Неофіційна збірка, не пов’язана з VideoLAN чи Juxtopposed і не схвалена ними. VLC, VLC media player і логотип-конус є торговельними марками VideoLAN. Вільне програмне забезпечення за ліцензією GNU GPL v2 або новішою.</string>
 </resources>

@@ -17,4 +17,14 @@
     <string name="rd_reset">Resetează</string>
     <string name="rd_languages_and_tracks">Limbi și piste</string>
     <string name="rd_about_version">Versiunea %1$s · bazată pe VLC %2$s</string>
+    <string name="rd_about_designed_by">Interfață proiectată de &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Canal YouTube</string>
+    <string name="rd_about_video">Videoclipul reproiectării</string>
+    <string name="rd_about_figma">Fișier Figma</string>
+    <string name="rd_about_website">Pagină Web</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Prima implementare de</string>
+    <string name="rd_about_built_on">Construit pe baza VLC media player de</string>
+    <string name="rd_about_videolan">echipa VideoLAN și contribuitori</string>
+    <string name="rd_about_unofficial">O versiune neoficială, neafiliată cu VideoLAN sau Juxtopposed și neaprobată de acestea. VLC, VLC media player și sigla con sunt mărci comerciale ale VideoLAN. Software liber sub licența GNU GPL v2 sau ulterioară.</string>
 </resources>

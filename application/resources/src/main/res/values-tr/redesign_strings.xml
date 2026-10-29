@@ -17,4 +17,14 @@
     <string name="rd_reset">Sıfırla</string>
     <string name="rd_languages_and_tracks">Diller ve kayıtlar</string>
     <string name="rd_about_version">Sürüm %1$s · VLC %2$s tabanlı</string>
+    <string name="rd_about_designed_by">Arayüz tasarımı: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube kanalı</string>
+    <string name="rd_about_video">Yeniden tasarım videosu</string>
+    <string name="rd_about_figma">Figma dosyası</string>
+    <string name="rd_about_website">Web sitesi</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">İlk uygulama:</string>
+    <string name="rd_about_built_on">Temel alınan VLC ortam oynatıcının yapımcıları:</string>
+    <string name="rd_about_videolan">VideoLAN ekibi ve katkıda bulunanlar</string>
+    <string name="rd_about_unofficial">Resmî olmayan bir derlemedir; VideoLAN ya da Juxtopposed ile bağlantılı değildir ve onlarca onaylanmamıştır. VLC, VLC media player ve koni logosu VideoLAN\'ın ticari markalarıdır. GNU GPL v2 ya da sonraki sürümleri kapsamında özgür yazılımdır.</string>
 </resources>

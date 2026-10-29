@@ -17,4 +17,14 @@
     <string name="rd_reset">Endurstilla</string>
     <string name="rd_languages_and_tracks">Tungumál og spor</string>
     <string name="rd_about_version">Útgáfa %1$s · byggð á VLC %2$s</string>
+    <string name="rd_about_designed_by">Viðmót hannað af &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-rás</string>
+    <string name="rd_about_video">Myndbandið um endurhönnunina</string>
+    <string name="rd_about_figma">Figma-skrá</string>
+    <string name="rd_about_website">Heimasíða</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Fyrsta útfærsla eftir</string>
+    <string name="rd_about_built_on">Byggt á VLC-miðlaspilaranum eftir</string>
+    <string name="rd_about_videolan">VideoLAN-teymið og þátttakendur</string>
+    <string name="rd_about_unofficial">Óopinber útgáfa, hvorki tengd né studd af VideoLAN eða Juxtopposed. VLC, VLC media player og keilumerkið eru vörumerki VideoLAN. Frjáls hugbúnaður samkvæmt GNU GPL v2 eða nýrri.</string>
 </resources>

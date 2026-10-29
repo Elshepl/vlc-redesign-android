@@ -17,4 +17,14 @@
     <string name="rd_reset">กลับค่าเดิม</string>
     <string name="rd_languages_and_tracks">ภาษาและร่อง</string>
     <string name="rd_about_version">รุ่น %1$s · พัฒนาจาก VLC %2$s</string>
+    <string name="rd_about_designed_by">ออกแบบส่วนติดต่อโดย &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">ช่อง YouTube</string>
+    <string name="rd_about_video">วีดิทัศน์การออกแบบใหม่</string>
+    <string name="rd_about_figma">แฟ้ม Figma</string>
+    <string name="rd_about_website">เว็บไซต์</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">พัฒนาครั้งแรกโดย</string>
+    <string name="rd_about_built_on">สร้างบนโปรแกรมเล่นสื่อ VLC โดย</string>
+    <string name="rd_about_videolan">ทีม VideoLAN และผู้ร่วมพัฒนา</string>
+    <string name="rd_about_unofficial">รุ่นที่ไม่เป็นทางการ ไม่มีส่วนเกี่ยวข้องหรือได้รับการรับรองจาก VideoLAN หรือ Juxtopposed VLC, VLC media player และโลโก้กรวยเป็นเครื่องหมายการค้าของ VideoLAN ซอฟต์แวร์เสรีภายใต้สัญญาอนุญาต GNU GPL v2 หรือใหม่กว่า</string>
 </resources>

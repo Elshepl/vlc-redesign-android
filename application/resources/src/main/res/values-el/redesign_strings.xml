@@ -17,4 +17,14 @@
     <string name="rd_reset">Επαναφορά</string>
     <string name="rd_languages_and_tracks">Γλώσσες και κομμάτια</string>
     <string name="rd_about_version">Έκδοση %1$s · βασισμένο στο VLC %2$s</string>
+    <string name="rd_about_designed_by">Σχεδίαση διεπαφής: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Κανάλι YouTube</string>
+    <string name="rd_about_video">Το βίντεο του επανασχεδιασμού</string>
+    <string name="rd_about_figma">Αρχείο Figma</string>
+    <string name="rd_about_website">Ιστοσελίδα</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Πρώτη υλοποίηση από</string>
+    <string name="rd_about_built_on">Βασίζεται στον αναπαραγωγό πολυμέσων VLC από</string>
+    <string name="rd_about_videolan">την ομάδα του VideoLAN και τους συνεισφέροντες</string>
+    <string name="rd_about_unofficial">Ανεπίσημη έκδοση, χωρίς σχέση με το VideoLAN ή τον Juxtopposed και χωρίς την έγκρισή τους. Τα VLC, VLC media player και το λογότυπο του κώνου είναι εμπορικά σήματα του VideoLAN. Ελεύθερο λογισμικό υπό την άδεια GNU GPL v2 ή νεότερη.</string>
 </resources>

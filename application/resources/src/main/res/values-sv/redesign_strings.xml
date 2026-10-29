@@ -17,4 +17,14 @@
     <string name="rd_reset">Återställ</string>
     <string name="rd_languages_and_tracks">Språk och spår</string>
     <string name="rd_about_version">Version %1$s · baserad på VLC %2$s</string>
+    <string name="rd_about_designed_by">Gränssnitt designat av &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-kanal</string>
+    <string name="rd_about_video">Videon om omdesignen</string>
+    <string name="rd_about_figma">Figma-fil</string>
+    <string name="rd_about_website">Webbplats</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Första implementeringen av</string>
+    <string name="rd_about_built_on">Bygger på VLC media player av</string>
+    <string name="rd_about_videolan">VideoLAN-teamet och bidragsgivare</string>
+    <string name="rd_about_unofficial">En inofficiell version, inte ansluten till eller godkänd av VideoLAN eller Juxtopposed. VLC, VLC media player och konlogotypen är varumärken som tillhör VideoLAN. Fri programvara under GNU GPL v2 eller senare.</string>
 </resources>

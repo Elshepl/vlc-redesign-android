@@ -17,4 +17,14 @@
     <string name="rd_reset">Obnovit</string>
     <string name="rd_languages_and_tracks">Jazyky a stopy</string>
     <string name="rd_about_version">Verze %1$s · založeno na VLC %2$s</string>
+    <string name="rd_about_designed_by">Rozhraní navrhla &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Kanál YouTube</string>
+    <string name="rd_about_video">Video o redesignu</string>
+    <string name="rd_about_figma">Soubor Figma</string>
+    <string name="rd_about_website">Webová stránka</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">První implementaci vytvořil</string>
+    <string name="rd_about_built_on">Založeno na přehrávači VLC media player od</string>
+    <string name="rd_about_videolan">týmu VideoLAN a přispěvatelů</string>
+    <string name="rd_about_unofficial">Neoficiální sestavení, které není spojeno s VideoLAN ani Juxtopposed a není jimi schváleno. VLC, VLC media player a logo kužele jsou ochranné známky VideoLAN. Svobodný software pod licencí GNU GPL v2 nebo novější.</string>
 </resources>

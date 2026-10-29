@@ -17,4 +17,14 @@
     <string name="rd_reset">Rivendos</string>
     <string name="rd_languages_and_tracks">Gjuhët dhe pistat</string>
     <string name="rd_about_version">Versioni %1$s · bazuar në VLC %2$s</string>
+    <string name="rd_about_designed_by">Ndërfaqja u projektua nga &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Kanali në YouTube</string>
+    <string name="rd_about_video">Videoja e ridizajnit</string>
+    <string name="rd_about_figma">Skedari Figma</string>
+    <string name="rd_about_website">Sajti</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Zbatimi i parë nga</string>
+    <string name="rd_about_built_on">Ndërtuar mbi VLC media player nga</string>
+    <string name="rd_about_videolan">ekipi i VideoLAN dhe kontribuuesit</string>
+    <string name="rd_about_unofficial">Një ndërtim jozyrtar, që nuk lidhet me VideoLAN ose Juxtopposed dhe nuk miratohet prej tyre. VLC, VLC media player dhe logoja e konit janë marka tregtare të VideoLAN. Softuer i lirë sipas GNU GPL v2 ose më të re.</string>
 </resources>

@@ -17,4 +17,14 @@
     <string name="rd_reset">リセット</string>
     <string name="rd_languages_and_tracks">言語とトラック</string>
     <string name="rd_about_version">バージョン %1$s · VLC %2$s ベース</string>
+    <string name="rd_about_designed_by">インターフェースデザイン: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTubeチャンネル</string>
+    <string name="rd_about_video">リデザイン動画</string>
+    <string name="rd_about_figma">Figmaファイル</string>
+    <string name="rd_about_website">ウェブサイト</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">最初の実装:</string>
+    <string name="rd_about_built_on">ベースのVLCメディアプレイヤーの開発:</string>
+    <string name="rd_about_videolan">VideoLANチームと貢献者</string>
+    <string name="rd_about_unofficial">VideoLAN および Juxtopposed とは無関係の非公式ビルドであり、両者による承認も受けていません。VLC、VLC media player およびコーンのロゴは VideoLAN の商標です。GNU GPL v2 以降のフリーソフトウェアです。</string>
 </resources>

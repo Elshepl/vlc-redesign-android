@@ -17,4 +17,14 @@
     <string name="rd_reset">Nollaa</string>
     <string name="rd_languages_and_tracks">Kielet ja raidat</string>
     <string name="rd_about_version">Versio %1$s · pohjana VLC %2$s</string>
+    <string name="rd_about_designed_by">Käyttöliittymän suunnittelu: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-kanava</string>
+    <string name="rd_about_video">Uudistuksen video</string>
+    <string name="rd_about_figma">Figma-tiedosto</string>
+    <string name="rd_about_website">Verkkosivu</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Ensimmäisen toteutuksen teki</string>
+    <string name="rd_about_built_on">Pohjana VLC media player, jonka ovat tehneet</string>
+    <string name="rd_about_videolan">VideoLAN-tiimi ja avustajat</string>
+    <string name="rd_about_unofficial">Epävirallinen koontiversio, joka ei ole yhteydessä VideoLANiin tai Juxtopposediin eikä niiden hyväksymä. VLC, VLC media player ja kartiologo ovat VideoLANin tavaramerkkejä. Vapaa ohjelmisto GNU GPL v2:n tai uudemman lisenssin alaisena.</string>
 </resources>

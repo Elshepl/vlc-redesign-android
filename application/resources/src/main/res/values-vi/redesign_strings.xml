@@ -17,4 +17,14 @@
     <string name="rd_reset">Cài đặt lại</string>
     <string name="rd_languages_and_tracks">Ngôn ngữ và track</string>
     <string name="rd_about_version">Phiên bản %1$s · dựa trên VLC %2$s</string>
+    <string name="rd_about_designed_by">Giao diện do &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt; thiết kế</string>
+    <string name="rd_about_youtube">Kênh YouTube</string>
+    <string name="rd_about_video">Video về bản thiết kế lại</string>
+    <string name="rd_about_figma">Tập tin Figma</string>
+    <string name="rd_about_website">Website</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Bản triển khai đầu tiên bởi</string>
+    <string name="rd_about_built_on">Xây dựng trên VLC media player của</string>
+    <string name="rd_about_videolan">nhóm VideoLAN và những người đóng góp</string>
+    <string name="rd_about_unofficial">Bản dựng không chính thức, không liên kết với hay được VideoLAN hoặc Juxtopposed bảo trợ. VLC, VLC media player và biểu tượng hình nón là thương hiệu của VideoLAN. Phần mềm tự do theo giấy phép GNU GPL v2 hoặc mới hơn.</string>
 </resources>

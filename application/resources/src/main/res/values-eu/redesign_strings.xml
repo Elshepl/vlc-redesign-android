@@ -17,4 +17,14 @@
     <string name="rd_reset">Berrezarri</string>
     <string name="rd_languages_and_tracks">Hizkuntzak eta pistak</string>
     <string name="rd_about_version">%1$s bertsioa · VLC %2$s bertsioan oinarritua</string>
+    <string name="rd_about_designed_by">Interfazearen diseinua: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube kanala</string>
+    <string name="rd_about_video">Birdiseinuaren bideoa</string>
+    <string name="rd_about_figma">Figma fitxategia</string>
+    <string name="rd_about_website">Webgunea</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Lehen inplementazioaren egilea</string>
+    <string name="rd_about_built_on">VLC media player-en oinarritua, egileak</string>
+    <string name="rd_about_videolan">VideoLAN taldea eta laguntzaileak</string>
+    <string name="rd_about_unofficial">Bertsio ez-ofiziala da, VideoLAN-ekin edo Juxtopposed-ekin loturarik gabea eta haiek babestu gabea. VLC, VLC media player eta kono-logotipoa VideoLAN-en marka erregistratuak dira. Software librea, GNU GPL v2 edo berriagoaren lizentziapean.</string>
 </resources>

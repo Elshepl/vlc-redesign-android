@@ -17,4 +17,14 @@
     <string name="rd_reset">Zurücksetzen</string>
     <string name="rd_languages_and_tracks">Sprachen und Spuren</string>
     <string name="rd_about_version">Version %1$s · basiert auf VLC %2$s</string>
+    <string name="rd_about_designed_by">Oberfläche gestaltet von &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube-Kanal</string>
+    <string name="rd_about_video">Das Redesign-Video</string>
+    <string name="rd_about_figma">Figma-Datei</string>
+    <string name="rd_about_website">Internetseite</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Erste Umsetzung von</string>
+    <string name="rd_about_built_on">Basiert auf VLC media player von</string>
+    <string name="rd_about_videolan">dem VideoLAN-Team und Mitwirkenden</string>
+    <string name="rd_about_unofficial">Ein inoffizieller Build, weder mit VideoLAN noch mit Juxtopposed verbunden oder von ihnen unterstützt. VLC, VLC media player und das Kegel-Logo sind Marken von VideoLAN. Freie Software unter der GNU GPL v2 oder neuer.</string>
 </resources>

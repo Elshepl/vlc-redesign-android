@@ -20,4 +20,17 @@
     <string name="rd_reset">Reset</string>
     <string name="rd_languages_and_tracks">Languages and tracks</string>
     <string name="rd_about_version">Version %1$s · based on VLC %2$s</string>
+    <!-- About: the design credit (CC BY 4.0), as the desktop's About -->
+    <string name="rd_about_designed_by">Interface designed by &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_design_source">Every screen comes from the \"VLC Redesign (Community)\" Figma file, licensed under CC BY 4.0. It was adapted to Android and its icons were redrawn.</string>
+    <string name="rd_about_youtube">YouTube channel</string>
+    <string name="rd_about_video">The redesign video</string>
+    <string name="rd_about_figma">Figma file</string>
+    <string name="rd_about_website">Website</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">First implementation by</string>
+    <string name="rd_about_built_on">Built on VLC media player by</string>
+    <string name="rd_about_videolan">the VideoLAN team and contributors</string>
+    <string name="rd_about_unofficial">An unofficial build, not affiliated with or endorsed by VideoLAN or Juxtopposed. VLC, VLC media player and the cone logo are trademarks of VideoLAN. Free software under the GNU GPL v2 or later.</string>
+    <string name="rd_about_whats_new">What\'s new in %1$s</string>
 </resources>

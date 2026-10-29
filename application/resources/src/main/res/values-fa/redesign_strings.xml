@@ -17,4 +17,14 @@
     <string name="rd_reset">بازنشانی</string>
     <string name="rd_languages_and_tracks">زبان‌ها و قطعه‌ها</string>
     <string name="rd_about_version">نسخهٔ %1$s · بر پایهٔ VLC %2$s</string>
+    <string name="rd_about_designed_by">طراحی رابط: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">کانال YouTube</string>
+    <string name="rd_about_video">ویدئوی بازطراحی</string>
+    <string name="rd_about_figma">پروندهٔ Figma</string>
+    <string name="rd_about_website">وب‌گاه</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">نخستین پیاده‌سازی توسط</string>
+    <string name="rd_about_built_on">ساخته‌شده بر پایهٔ پخش‌کنندهٔ رسانهٔ VLC از</string>
+    <string name="rd_about_videolan">تیم VideoLAN و مشارکت‌کنندگان</string>
+    <string name="rd_about_unofficial">نسخه‌ای غیررسمی که وابسته به VideoLAN یا Juxtopposed نیست و مورد تأیید آن‌ها هم نیست. VLC، VLC media player و نشان مخروط علامت‌های تجاری VideoLAN هستند. نرم‌افزار آزاد تحت GNU GPL نسخهٔ 2 یا بالاتر.</string>
 </resources>

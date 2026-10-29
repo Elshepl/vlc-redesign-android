@@ -66,6 +66,8 @@ class LanguageSelector: ConstraintLayout, DialogInterface.OnDismissListener, Dia
         selection.addAll(allEntriesOfLanguages.map { false })
         setOnClickListener {
             val builder = MaterialAlertDialogBuilder(context)
+            // VLC Redesign: the dialog panel in the 1 px window border, as every other dialog
+            builder.background = androidx.appcompat.content.res.AppCompatResources.getDrawable(builder.context, R.drawable.rd_dialog_background)
             builder.setOnDismissListener(this)
             builder.setMultiChoiceItems(allEntriesOfLanguages, selection.toBooleanArray(), this)
                     .setPositiveButton(R.string.done) { dialogInterface: DialogInterface, _: Int ->

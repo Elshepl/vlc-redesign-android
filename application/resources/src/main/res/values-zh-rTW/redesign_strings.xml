@@ -17,4 +17,14 @@
     <string name="rd_reset">重置</string>
     <string name="rd_languages_and_tracks">語言與軌道</string>
     <string name="rd_about_version">版本 %1$s · 基於 VLC %2$s</string>
+    <string name="rd_about_designed_by">介面設計：&lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube 頻道</string>
+    <string name="rd_about_video">重新設計介紹影片</string>
+    <string name="rd_about_figma">Figma 檔案</string>
+    <string name="rd_about_website">網站</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">最初實作者</string>
+    <string name="rd_about_built_on">基於 VLC media player，開發者為</string>
+    <string name="rd_about_videolan">VideoLAN 團隊與貢獻者</string>
+    <string name="rd_about_unofficial">非官方版本，與 VideoLAN 或 Juxtopposed 無關，亦未經其認可。VLC、VLC media player 及三角錐標誌為 VideoLAN 的商標。依 GNU GPL v2 或更新版本授權的自由軟體。</string>
 </resources>

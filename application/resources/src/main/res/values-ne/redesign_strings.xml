@@ -17,4 +17,14 @@
     <string name="rd_reset">रिसेट गर्नुहोस्</string>
     <string name="rd_languages_and_tracks">भाषा र ट्रयाकहरू</string>
     <string name="rd_about_version">संस्करण %1$s · VLC %2$s मा आधारित</string>
+    <string name="rd_about_designed_by">इन्टरफेस डिजाइन: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube च्यानल</string>
+    <string name="rd_about_video">रिडिजाइन भिडियो</string>
+    <string name="rd_about_figma">Figma फाइल</string>
+    <string name="rd_about_website">वेबसाइट</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">पहिलो कार्यान्वयन गर्ने</string>
+    <string name="rd_about_built_on">VLC मिडिया प्लेयरमा आधारित, निर्माण गर्ने</string>
+    <string name="rd_about_videolan">VideoLAN टोली र योगदानकर्ताहरू</string>
+    <string name="rd_about_unofficial">अनौपचारिक बिल्ड, VideoLAN वा Juxtopposed सँग सम्बद्ध वा तिनीहरूद्वारा समर्थित छैन। VLC, VLC media player र कोन लोगो VideoLAN का ट्रेडमार्क हुन्। GNU GPL v2 वा पछिको संस्करण अन्तर्गत निःशुल्क सफ्टवेयर।</string>
 </resources>

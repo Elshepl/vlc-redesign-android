@@ -17,4 +17,14 @@
     <string name="rd_reset">റീസെറ്റ് ചെയ്യുക</string>
     <string name="rd_languages_and_tracks">ഭാഷകളും ട്രാക്കുകളും</string>
     <string name="rd_about_version">പതിപ്പ് %1$s · VLC %2$s അടിസ്ഥാനമാക്കിയത്</string>
+    <string name="rd_about_designed_by">ഇന്റർഫേസ് രൂപകൽപ്പന ചെയ്തത് &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube ചാനൽ</string>
+    <string name="rd_about_video">റീഡിസൈൻ വീഡിയോ</string>
+    <string name="rd_about_figma">Figma ഫയൽ</string>
+    <string name="rd_about_website">വെബ്സൈറ്റ്</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">ആദ്യ നിർവ്വഹണം നടത്തിയത്</string>
+    <string name="rd_about_built_on">ഇതിന്റെ അടിസ്ഥാനമായ VLC മീഡിയ പ്ലേയർ നിർമ്മിച്ചത്</string>
+    <string name="rd_about_videolan">VideoLAN ടീമും സംഭാവകരും</string>
+    <string name="rd_about_unofficial">VideoLAN-ഉമായോ Juxtopposed-ഉമായോ ബന്ധമില്ലാത്തതും അവർ അംഗീകരിക്കാത്തതുമായ ഒരു അനൗദ്യോഗിക ബിൽഡ്. VLC, VLC media player എന്നിവയും കോൺ ലോഗോയും VideoLAN-ന്റെ വ്യാപാരമുദ്രകളാണ്. GNU GPL v2 അല്ലെങ്കിൽ പിന്നീടുള്ള പതിപ്പിന് കീഴിലുള്ള സ്വതന്ത്ര സോഫ്റ്റ്വെയർ.</string>
 </resources>

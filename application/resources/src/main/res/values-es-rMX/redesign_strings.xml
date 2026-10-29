@@ -17,4 +17,14 @@
     <string name="rd_reset">Restaurar</string>
     <string name="rd_languages_and_tracks">Idiomas y pistas</string>
     <string name="rd_about_version">Versión %1$s · basada en VLC %2$s</string>
+    <string name="rd_about_designed_by">Interfaz diseñada por &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Canal de YouTube</string>
+    <string name="rd_about_video">El video del rediseño</string>
+    <string name="rd_about_figma">Archivo de Figma</string>
+    <string name="rd_about_website">Sitio web</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Primera implementación de</string>
+    <string name="rd_about_built_on">Basado en el reproductor multimedia VLC de</string>
+    <string name="rd_about_videolan">el equipo de VideoLAN y sus colaboradores</string>
+    <string name="rd_about_unofficial">Una compilación no oficial, sin afiliación ni respaldo de VideoLAN ni de Juxtopposed. VLC, VLC media player y el logotipo del cono son marcas comerciales de VideoLAN. Software libre bajo la GNU GPL v2 o posterior.</string>
 </resources>

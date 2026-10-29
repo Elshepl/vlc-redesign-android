@@ -17,4 +17,14 @@
     <string name="rd_reset">ਰੀਸੈੱਟ</string>
     <string name="rd_languages_and_tracks">ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਟਰੈਕ</string>
     <string name="rd_about_version">ਵਰਜਨ %1$s · VLC %2$s ਉੱਤੇ ਆਧਾਰਿਤ</string>
+    <string name="rd_about_designed_by">ਇੰਟਰਫੇਸ &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt; ਵੱਲੋਂ ਡਿਜ਼ਾਈਨ ਕੀਤਾ ਗਿਆ</string>
+    <string name="rd_about_youtube">YouTube ਚੈਨਲ</string>
+    <string name="rd_about_video">ਰੀਡਿਜ਼ਾਈਨ ਵਿਡੀਓ</string>
+    <string name="rd_about_figma">Figma ਫਾਇਲ</string>
+    <string name="rd_about_website">ਵੈੱਬਸਾਈਟ</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">ਪਹਿਲਾ ਰੂਪ ਤਿਆਰ ਕਰਨ ਵਾਲੇ</string>
+    <string name="rd_about_built_on">VLC ਮੀਡਿਆ ਪਲੇਅਰ ਉੱਤੇ ਆਧਾਰਿਤ, ਜਿਸ ਦੇ ਨਿਰਮਾਤਾ ਹਨ</string>
+    <string name="rd_about_videolan">VideoLAN ਟੀਮ ਅਤੇ ਯੋਗਦਾਨੀ</string>
+    <string name="rd_about_unofficial">ਇੱਕ ਗ਼ੈਰ-ਅਧਿਕਾਰਤ ਬਿਲਡ, ਜੋ VideoLAN ਜਾਂ Juxtopposed ਨਾਲ ਜੁੜਿਆ ਨਹੀਂ ਅਤੇ ਨਾ ਹੀ ਉਹਨਾਂ ਵੱਲੋਂ ਸਮਰਥਿਤ ਹੈ। VLC, VLC ਮੀਡਿਆ ਪਲੇਅਰ ਅਤੇ ਕੋਨ ਲੋਗੋ VideoLAN ਦੇ ਟਰੇਡਮਾਰਕ ਹਨ। GNU GPL v2 ਜਾਂ ਨਵੇਂ ਵਰਜਨ ਅਧੀਨ ਮੁਫ਼ਤ ਸਾਫ਼ਟਵੇਅਰ।</string>
 </resources>

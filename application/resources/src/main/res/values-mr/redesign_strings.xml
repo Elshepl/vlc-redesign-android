@@ -17,4 +17,14 @@
     <string name="rd_reset">फेररचना</string>
     <string name="rd_languages_and_tracks">भाषा आणि ट्रॅक</string>
     <string name="rd_about_version">आवृत्ती %1$s · VLC %2$s वर आधारित</string>
+    <string name="rd_about_designed_by">इंटरफेस डिझाइन: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube चॅनेल</string>
+    <string name="rd_about_video">पुनर्रचनेची ध्वनीचित्रफित</string>
+    <string name="rd_about_figma">Figma धारिका</string>
+    <string name="rd_about_website">संकेतस्थळ</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">पहिली अंमलबजावणी करणारे</string>
+    <string name="rd_about_built_on">VLC media player वर आधारित; निर्माते</string>
+    <string name="rd_about_videolan">VideoLAN संघ आणि योगदानकर्ते</string>
+    <string name="rd_about_unofficial">ही अनधिकृत आवृत्ती आहे, ती VideoLAN किंवा Juxtopposed शी संलग्न नाही आणि त्यांनी तिला मान्यता दिलेली नाही. VLC, VLC media player आणि शंकू लोगो हे VideoLAN चे ट्रेडमार्क आहेत. GNU GPL v2 किंवा नंतरच्या आवृत्तीअंतर्गत मुक्त सॉफ्टवेअर.</string>
 </resources>

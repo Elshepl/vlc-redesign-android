@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design credit card of About (RedesignAboutDialog.qml: on the page it is a step lighter than the page, as the desktop card is a step apart from its dialog: BG/A4, radius 10). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="10dp" />
+    <solid android:color="@color/rd_bg_a4" />
+</shape>

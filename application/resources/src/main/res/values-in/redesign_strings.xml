@@ -17,4 +17,14 @@
     <string name="rd_reset">Reset</string>
     <string name="rd_languages_and_tracks">Bahasa dan trek</string>
     <string name="rd_about_version">Versi %1$s · berbasis VLC %2$s</string>
+    <string name="rd_about_designed_by">Antarmuka dirancang oleh &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Kanal YouTube</string>
+    <string name="rd_about_video">Video redesain</string>
+    <string name="rd_about_figma">File Figma</string>
+    <string name="rd_about_website">Situs web</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Implementasi pertama oleh</string>
+    <string name="rd_about_built_on">Dibangun di atas VLC media player oleh</string>
+    <string name="rd_about_videolan">tim VideoLAN dan para kontributor</string>
+    <string name="rd_about_unofficial">Build tidak resmi, tidak berafiliasi dengan atau didukung oleh VideoLAN maupun Juxtopposed. VLC, VLC media player, dan logo kerucut adalah merek dagang VideoLAN. Perangkat lunak bebas di bawah GNU GPL v2 atau yang lebih baru.</string>
 </resources>

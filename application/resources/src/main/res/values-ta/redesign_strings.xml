@@ -17,4 +17,14 @@
     <string name="rd_reset">மீட்டமை</string>
     <string name="rd_languages_and_tracks">மொழிகளும் சுவடுகளும்</string>
     <string name="rd_about_version">பதிப்பு %1$s · VLC %2$s அடிப்படையில்</string>
+    <string name="rd_about_designed_by">இடைமுக வடிவமைப்பு: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube சேனல்</string>
+    <string name="rd_about_video">மறுவடிவமைப்பு நிகழ்படம்</string>
+    <string name="rd_about_figma">Figma கோப்பு</string>
+    <string name="rd_about_website">இணையதளம்</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">முதல் செயலாக்கம் செய்தவர்</string>
+    <string name="rd_about_built_on">இதன் அடிப்படை VLC ஊடக இயக்கி, உருவாக்கியவர்கள்</string>
+    <string name="rd_about_videolan">VideoLAN குழுவும் பங்களிப்பாளர்களும்</string>
+    <string name="rd_about_unofficial">அதிகாரப்பூர்வமற்ற உருவாக்கம்; VideoLAN அல்லது Juxtopposed உடன் தொடர்புடையதோ அவற்றால் அங்கீகரிக்கப்பட்டதோ அல்ல. VLC, VLC media player மற்றும் கூம்புச் சின்னம் ஆகியவை VideoLAN-இன் வர்த்தகமுத்திரைகள். GNU GPL v2 அல்லது அதற்குப் பிந்தைய உரிமத்தின் கீழ் இலவச மென்பொருள்.</string>
 </resources>

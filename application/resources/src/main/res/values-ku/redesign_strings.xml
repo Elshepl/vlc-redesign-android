@@ -17,4 +17,14 @@
     <string name="rd_reset">گەڕاندنەوە</string>
     <string name="rd_languages_and_tracks">زمان و تراکەکان</string>
     <string name="rd_about_version">وەشانی %1$s · لەسەر بنەمای VLC %2$s</string>
+    <string name="rd_about_designed_by">ڕووکار لە لایەن &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt; دیزاین کراوە</string>
+    <string name="rd_about_youtube">کەناڵی YouTube</string>
+    <string name="rd_about_video">ڤیدیۆی دیزاینی نوێ</string>
+    <string name="rd_about_figma">پەڕگەی Figma</string>
+    <string name="rd_about_website">ماڵپەڕ</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">یەکەم جێبەجێکردن لە لایەن</string>
+    <string name="rd_about_built_on">دروستکراوە لەسەر لێدەری ڕەنگاڵەی VLC لە لایەن</string>
+    <string name="rd_about_videolan">تیمی VideoLAN و بەشداربووان</string>
+    <string name="rd_about_unofficial">بنیاتێکی نافەرمی، پەیوەست نییە بە VideoLAN یان Juxtopposed ەوە و لە لایەن ئەوانەوە پشتگیری نەکراوە. VLC، VLC media player و لۆگۆی قووچەکەکە نیشانەی بازرگانیی VideoLAN ن. نەرمەکاڵای ئازاد لە ژێر GNU GPL v2 یان دواتر.</string>
 </resources>

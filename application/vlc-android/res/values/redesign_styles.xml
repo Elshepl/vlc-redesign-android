@@ -183,7 +183,7 @@
         <item name="android:popupElevation">8dp</item>
     </style>
 
-    <!-- Dialogs: the panel (radius 14, A4), title 16, buttons in the accent. -->
+    <!-- Dialogs: the panel (radius 14, A4, the 1 px window border), title 16, buttons in the accent. -->
     <style name="ThemeOverlay.Redesign.Dialog.Dark" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorSecondary">@color/rd_accent_orange_main</item>
@@ -193,6 +193,8 @@
         <item name="android:textColorSecondary">@color/rd_dark_fg_a1</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Redesign.Large</item>
         <item name="materialAlertDialogTitleTextStyle">@style/Redesign.DialogTitle</item>
+        <!-- the dialog panel in the 1 px window border -->
+        <item name="android:windowBackground">@drawable/rd_dialog_background</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.Redesign.Button.Text</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.Redesign.Button.Text</item>
         <item name="buttonBarNeutralButtonStyle">@style/Widget.Redesign.Button.Text</item>
@@ -208,6 +210,8 @@
         <item name="android:textColorSecondary">@color/rd_light_fg_a1</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Redesign.Large</item>
         <item name="materialAlertDialogTitleTextStyle">@style/Redesign.DialogTitle</item>
+        <!-- the dialog panel in the 1 px window border -->
+        <item name="android:windowBackground">@drawable/rd_dialog_background</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.Redesign.Button.Text</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.Redesign.Button.Text</item>
         <item name="buttonBarNeutralButtonStyle">@style/Widget.Redesign.Button.Text</item>

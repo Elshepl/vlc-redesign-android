@@ -497,6 +497,71 @@ object UiTools {
     }
 
     /**
+     * VLC Redesign: the credits of the desktop's About (RedesignAboutDialog.qml), a permanent rule of the project:
+     * "Interface designed by Juxtopposed" with the CC BY 4.0 text and its links, "First implementation by
+     * MrDouglax", "Built on VLC media player by the VideoLAN team and contributors" and the trademark line.
+     */
+    private fun fillRedesignCredits(activity: FragmentActivity, v: View) {
+        val ctx = v.context
+        val accent = ContextCompat.getColor(ctx, R.color.rd_accent).let { c ->
+            val attr = android.util.TypedValue()
+            if (ctx.theme.resolveAttribute(androidx.appcompat.R.attr.colorPrimary, attr, true)) attr.data else c
+        }
+        val accentHex = String.format("#%06X", 0xFFFFFF and accent)
+        v.findViewById<TextView>(R.id.rd_designed_by)?.text =
+            androidx.core.text.HtmlCompat.fromHtml(ctx.getString(R.string.rd_about_designed_by, accentHex), androidx.core.text.HtmlCompat.FROM_HTML_MODE_LEGACY)
+        fun link(builder: android.text.SpannableStringBuilder, text: String, url: String) {
+            val start = builder.length
+            // a link never breaks inside: its spaces do not wrap
+            builder.append(text.replace(' ', ' '))
+            builder.setSpan(object : android.text.style.ClickableSpan() {
+                override fun onClick(widget: View) { activity.openLinkIfPossible(url) }
+                override fun updateDrawState(ds: android.text.TextPaint) {
+                    ds.color = accent
+                    ds.isUnderlineText = false
+                }
+            }, start, builder.length, android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+        v.findViewById<TextView>(R.id.rd_design_links)?.let { tv ->
+            val b = android.text.SpannableStringBuilder()
+            listOf(R.string.rd_about_youtube to "https://www.youtube.com/@juxtopposed",
+                    R.string.rd_about_video to "https://www.youtube.com/watch?v=ERFeOgqk324",
+                    R.string.rd_about_figma to "https://www.figma.com/community/file/1691465999134370980",
+                    R.string.rd_about_website to "https://juxtopposed.com",
+                    R.string.rd_about_license to "https://creativecommons.org/licenses/by/4.0/").forEachIndexed { i, (text, url) ->
+                // the desktop's 18 px between the links
+                if (i > 0) b.append("  ")
+                link(b, ctx.getString(text), url)
+            }
+            tv.text = b
+            tv.movementMethod = android.text.method.LinkMovementMethod.getInstance()
+            tv.highlightColor = android.graphics.Color.TRANSPARENT
+        }
+        fun creditLine(id: Int, text: String, linkText: String, url: String) {
+            v.findViewById<TextView>(id)?.let { tv ->
+                val b = android.text.SpannableStringBuilder(text).append(' ')
+                link(b, linkText, url)
+                // the link in Inter Medium, as the desktop's Link
+                androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.inter_medium)?.let { medium ->
+                    b.setSpan(object : android.text.style.MetricAffectingSpan() {
+                        override fun updateDrawState(tp: android.text.TextPaint) { tp.typeface = medium }
+                        override fun updateMeasureState(tp: android.text.TextPaint) { tp.typeface = medium }
+                    }, b.length - linkText.length, b.length, android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                }
+                tv.text = b
+                tv.movementMethod = android.text.method.LinkMovementMethod.getInstance()
+                tv.highlightColor = android.graphics.Color.TRANSPARENT
+            }
+        }
+        v.findViewById<TextView>(R.id.rd_whats_new_link)?.let { tv ->
+            tv.text = ctx.getString(R.string.rd_about_whats_new, org.videolan.vlc.BuildConfig.RD_VERSION_NAME)
+            tv.setOnClickListener { org.videolan.vlc.gui.dialogs.RdWhatsNewDialog().show(activity.supportFragmentManager, "rd_whats_new") }
+        }
+        creditLine(R.id.rd_first_implementation, ctx.getString(R.string.rd_about_first_implementation), "MrDouglax", "https://github.com/SrDouglax/JuxtopposedVLC")
+        creditLine(R.id.rd_built_on, ctx.getString(R.string.rd_about_built_on), ctx.getString(R.string.rd_about_videolan), "https://www.videolan.org/")
+    }
+
+    /**
      * Fill the about main view for mobile and TV
      */
     fun fillAboutView(activity: FragmentActivity, v: View) {
@@ -515,6 +580,7 @@ object UiTools {
         val appVersionDate = v.findViewById<TextView>(R.id.app_version_date)
         appVersionDate.text = builddate
         v.findViewById<View>(R.id.sliding_tabs).setGone()
+        fillRedesignCredits(activity, v)
 
         val logo = v.findViewById<ImageView>(R.id.logo)
         val konfettiView = v.findViewById<KonfettiView>(R.id.konfetti)

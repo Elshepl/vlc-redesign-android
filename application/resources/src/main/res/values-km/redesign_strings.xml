@@ -17,4 +17,14 @@
     <string name="rd_reset">កំណត់​ឡើងវិញ</string>
     <string name="rd_languages_and_tracks">ភាសា និងបទ</string>
     <string name="rd_about_version">កំណែ %1$s · ផ្អែកលើ VLC %2$s</string>
+    <string name="rd_about_designed_by">ចំណុចប្រទាក់រចនាដោយ &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">ឆានែល YouTube</string>
+    <string name="rd_about_video">វីដេអូនៃការរចនាថ្មី</string>
+    <string name="rd_about_figma">ឯកសារ Figma</string>
+    <string name="rd_about_website">តំបន់បណ្ដាញ</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">ការអនុវត្តដំបូងដោយ</string>
+    <string name="rd_about_built_on">សាងសង់លើកម្មវិធីចាក់មេឌៀ VLC ដោយ</string>
+    <string name="rd_about_videolan">ក្រុម VideoLAN និងអ្នករួមចំណែក</string>
+    <string name="rd_about_unofficial">កំណែមិនផ្លូវការ មិនមានទំនាក់ទំនង ឬការគាំទ្រពី VideoLAN ឬ Juxtopposed ទេ។ VLC, កម្មវិធីចាក់មេឌៀ VLC និងរូបសញ្ញាកោណ គឺជាពាណិជ្ជសញ្ញារបស់ VideoLAN។ កម្មវិធីឥតគិតថ្លៃក្រោម GNU GPL v2 ឬក្រោយ។</string>
 </resources>

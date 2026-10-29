@@ -17,4 +17,14 @@
     <string name="rd_reset">أعد الضبط</string>
     <string name="rd_languages_and_tracks">اللغات والمسارات</string>
     <string name="rd_about_version">الإصدار %1$s · مبني على VLC %2$s</string>
+    <string name="rd_about_designed_by">الواجهة من تصميم &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">قناة YouTube</string>
+    <string name="rd_about_video">فيديو إعادة التصميم</string>
+    <string name="rd_about_figma">ملف Figma</string>
+    <string name="rd_about_website">الموقع</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">أول تنفيذ بواسطة</string>
+    <string name="rd_about_built_on">مبني على مشغل الوسائط VLC من تطوير</string>
+    <string name="rd_about_videolan">فريق VideoLAN والمساهمين</string>
+    <string name="rd_about_unofficial">إصدار غير رسمي، لا يرتبط بـ VideoLAN أو Juxtopposed ولا يحظى بتأييدهما. ‏VLC ومشغل الوسائط VLC وشعار المخروط علامات تجارية لـ VideoLAN. برنامج حر بموجب رخصة GNU GPL الإصدار 2 أو أحدث.</string>
 </resources>

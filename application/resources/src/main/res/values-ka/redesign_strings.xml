@@ -17,4 +17,14 @@
     <string name="rd_reset">აღდგენა</string>
     <string name="rd_languages_and_tracks">ენები და ტრეკები</string>
     <string name="rd_about_version">ვერსია %1$s · VLC %2$s-ის საფუძველზე</string>
+    <string name="rd_about_designed_by">ინტერფეისის დიზაინი: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube არხი</string>
+    <string name="rd_about_video">რედიზაინის ვიდეო</string>
+    <string name="rd_about_figma">Figma ფაილი</string>
+    <string name="rd_about_website">ვებსაიტი</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">პირველი ვერსიის ავტორი</string>
+    <string name="rd_about_built_on">დაფუძნებულია VLC მედიადამკვრელზე, რომელიც შექმნეს</string>
+    <string name="rd_about_videolan">VideoLAN-ის გუნდმა და მონაწილეებმა</string>
+    <string name="rd_about_unofficial">არაოფიციალური ანაწყობი, რომელიც არ არის დაკავშირებული VideoLAN-თან ან Juxtopposed-თან და არ არის მათ მიერ მოწონებული. VLC, VLC media player და კონუსის ლოგო VideoLAN-ის სავაჭრო ნიშნებია. თავისუფალი პროგრამა GNU GPL v2 ან უფრო ახალი ლიცენზიით.</string>
 </resources>

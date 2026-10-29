@@ -17,4 +17,14 @@
     <string name="rd_reset">초기화</string>
     <string name="rd_languages_and_tracks">언어 및 트랙</string>
     <string name="rd_about_version">버전 %1$s · VLC %2$s 기반</string>
+    <string name="rd_about_designed_by">인터페이스 디자인: &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube 채널</string>
+    <string name="rd_about_video">리디자인 영상</string>
+    <string name="rd_about_figma">Figma 파일</string>
+    <string name="rd_about_website">웹사이트</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">최초 구현:</string>
+    <string name="rd_about_built_on">VLC 미디어 재생기 기반, 개발:</string>
+    <string name="rd_about_videolan">VideoLAN 팀 및 기여자</string>
+    <string name="rd_about_unofficial">VideoLAN 또는 Juxtopposed와 제휴하거나 그 보증을 받지 않은 비공식 빌드입니다. VLC, VLC media player 및 원뿔 로고는 VideoLAN의 상표입니다. GNU GPL v2 이상에 따른 자유 소프트웨어입니다.</string>
 </resources>

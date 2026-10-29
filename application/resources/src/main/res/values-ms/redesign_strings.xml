@@ -17,4 +17,14 @@
     <string name="rd_reset">Ulangtetap</string>
     <string name="rd_languages_and_tracks">Bahasa dan trek</string>
     <string name="rd_about_version">Versi %1$s · berasaskan VLC %2$s</string>
+    <string name="rd_about_designed_by">Antaramuka direka oleh &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">Saluran YouTube</string>
+    <string name="rd_about_video">Video reka bentuk semula</string>
+    <string name="rd_about_figma">Fail Figma</string>
+    <string name="rd_about_website">Laman sesawang</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Pelaksanaan pertama oleh</string>
+    <string name="rd_about_built_on">Dibina di atas pemain media VLC oleh</string>
+    <string name="rd_about_videolan">pasukan VideoLAN dan para penyumbang</string>
+    <string name="rd_about_unofficial">Binaan tidak rasmi, tidak bergabung dengan atau disokong oleh VideoLAN atau Juxtopposed. VLC, VLC media player dan logo kon ialah tanda dagangan VideoLAN. Perisian bebas di bawah GNU GPL v2 atau lebih baharu.</string>
 </resources>

@@ -17,4 +17,14 @@
     <string name="rd_reset">Ресетуј</string>
     <string name="rd_languages_and_tracks">Језици и траке</string>
     <string name="rd_about_version">Верзија %1$s · заснована на VLC %2$s</string>
+    <string name="rd_about_designed_by">Интерфејс је дизајнирао &lt;font color=\"%1$s\"&gt;Juxtopposed&lt;/font&gt;</string>
+    <string name="rd_about_youtube">YouTube канал</string>
+    <string name="rd_about_video">Видео о редизајну</string>
+    <string name="rd_about_figma">Figma датотека</string>
+    <string name="rd_about_website">Веб-сајт</string>
+    <string name="rd_about_license">CC BY 4.0</string>
+    <string name="rd_about_first_implementation">Прву имплементацију направио</string>
+    <string name="rd_about_built_on">Засновано на VLC медија плејеру, који су направили</string>
+    <string name="rd_about_videolan">тим VideoLAN и сарадници</string>
+    <string name="rd_about_unofficial">Незванична верзија, није повезана са организацијом VideoLAN нити са Juxtopposed, нити је они подржавају. VLC, VLC media player и логотип чуња су заштитни знаци организације VideoLAN. Слободан софтвер под лиценцом GNU GPL v2 или новијом.</string>
 </resources>
