@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Network, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_network">
+    <PreferenceCategory android:title="@string/rd_sec_buffering">
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue="0"
+            android:key="network_caching"
+            android:maxLength="5"
+            android:summary="@string/network_caching_summary"
+            android:title="@string/rd_network_streams" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_file_caching"
+            android:title="@string/rd_local_files"
+            android:summary="@string/rd_help_file_caching"
+            android:defaultValue="" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_live_caching"
+            android:title="@string/rd_live_capture"
+            android:summary="@string/rd_help_live_caching"
+            android:defaultValue="" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_proxy">
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_http_proxy"
+            android:title="@string/rd_http_proxy"
+            android:defaultValue="" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_connections">
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue=""
+            android:inputType="textMultiLine"
+            android:key="http_user_agent"
+            app:useSimpleSummaryProvider="true"
+            android:title="@string/rd_http_user_agent" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:entries="@array/metered_connection_list"
+            android:entryValues="@array/metered_connection_values"
+            android:key="metered_connection"
+            android:summary="%s"
+            android:title="@string/metered_connection" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="prefer_smbv1"
+            android:summary="@string/prefersmbv1_summary"
+            android:title="@string/prefersmbv1" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_casting">
+        <CheckBoxPreference
+            android:key="enable_casting"
+            android:defaultValue="true"
+            android:switchTextOff="Disabled"
+            android:switchTextOn="Enabled"
+            android:title="@string/rd_discover_cast" />
+        <CheckBoxPreference
+            android:key="casting_audio_only"
+            android:defaultValue="false"
+            android:summary="@string/casting_audio_only_summary"
+            android:title="@string/casting_audio_only"
+            android:dependency="enable_casting" />
+        <CheckBoxPreference
+            android:key="casting_passthrough"
+            android:defaultValue="false"
+            android:summary="@string/casting_passthrough_summary"
+            android:title="@string/rd_send_dolby"
+            android:dependency="enable_casting" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="2"
+            android:entries="@array/casting_quality"
+            android:entryValues="@array/casting_quality_values"
+            android:key="casting_quality"
+            android:summary="@string/casting_conversion_quality_summary"
+            android:title="@string/rd_cast_quality"
+            android:dependency="enable_casting" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

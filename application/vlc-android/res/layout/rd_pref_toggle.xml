@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The ON / OFF toggle of the design as the check box of a CheckBoxPreference -->
+<org.videolan.vlc.gui.preferences.rd.RdToggleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/checkbox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />

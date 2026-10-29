@@ -247,6 +247,21 @@ object VLCOptions {
             // media (audio-desync, ms), both libvlc 3 options
             pref.getString("rd_stereo_mode", "0")?.toIntOrNull()?.takeIf { it in 1..5 }?.let { options.add("--stereo-mode=$it") }
             pref.getString("rd_audio_desync", "0")?.trim()?.toIntOrNull()?.takeIf { it != 0 }?.let { options.add("--audio-desync=$it") }
+            // VLC Redesign: the desktop's other settings that libvlc 3 has (Settings > Video, Subtitles, Playback,
+            // Network, Performance); unset = VLC's default
+            fun text(key: String) = pref.getString(key, "")?.trim().orEmpty()
+            text("rd_deinterlace").toIntOrNull()?.takeIf { it != -1 }?.let { options.add("--deinterlace=$it") }
+            text("rd_deinterlace_mode").takeIf { it.matches(Regex("[a-z0-9]+")) && it != "auto" }?.let { options.add("--deinterlace-mode=$it") }
+            text("rd_avi_index").toIntOrNull()?.takeIf { it in 1..3 }?.let { options.add("--avi-index=$it") }
+            text("rd_sub_fuzzy").toIntOrNull()?.takeIf { it in 0..4 && it != 3 }?.let { options.add("--sub-autodetect-fuzzy=$it") }
+            text("rd_file_caching").toIntOrNull()?.takeIf { it in 0..60000 }?.let { options.add("--file-caching=$it") }
+            text("rd_live_caching").toIntOrNull()?.takeIf { it in 0..60000 }?.let { options.add("--live-caching=$it") }
+            text("rd_http_proxy").takeIf { it.isNotEmpty() && !it.contains(' ') }?.let { options.add("--http-proxy=$it") }
+            text("rd_postproc").toIntOrNull()?.takeIf { it in 1..6 }?.let { options.add("--postproc-q=$it") }
+            text("rd_avcodec_threads").toIntOrNull()?.takeIf { it in 1..32 }?.let { options.add("--avcodec-threads=$it") }
+            pref.getInt("rd_sub_margin", 0).takeIf { it in 1..400 }?.let { options.add("--sub-margin=$it") }
+            if (pref.getBoolean(KEY_SUBTITLES_SHADOW, true)) pref.getInt("rd_shadow_distance", 6).takeIf { it in 0..20 && it != 6 }
+                    ?.let { options.add("--freetype-shadow-distance=" + String.format(java.util.Locale.US, "%.2f", it / 100f)) }
             val soundFontFile = getSoundFontFile(context)
             if (soundFontFile.exists()) {
                 options.add("--soundfont=${soundFontFile.path}")

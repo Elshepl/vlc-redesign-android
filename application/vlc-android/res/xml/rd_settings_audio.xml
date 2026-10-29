@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Audio, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_audio">
+    <PreferenceCategory android:title="@string/rd_sec_output">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:entries="@array/aouts"
+            android:entryValues="@array/aouts_values"
+            android:key="aout"
+            android:summary="@string/aout_summary"
+            android:title="@string/rd_audio_output_module" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="audio_digital_output"
+            android:title="@string/rd_pass_compressed" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:entries="@array/rd_stereo_mode"
+            android:entryValues="@array/rd_stereo_mode_values"
+            android:key="rd_stereo_mode"
+            android:title="@string/rd_speaker_setup"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_volume">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="audio_boost"
+            android:summary="@string/audio_boost_summary"
+            android:title="@string/audio_boost_title" />
+        <CheckBoxPreference
+            android:key="audio_ducking"
+            android:defaultValue="true"
+            android:summary="@string/audio_ducking_summary"
+            android:title="@string/audio_ducking_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_loudness">
+        <CheckBoxPreference
+            android:key="rd_normalize"
+            android:title="@string/rd_normalize_loudness"
+            android:summary="@string/rd_help_normalize"
+            android:defaultValue="false" />
+        <SeekBarPreference
+            android:key="rd_norm_level"
+            android:title="@string/rd_target_level"
+            android:summary="@string/rd_help_target_level"
+            android:defaultValue="4"
+            android:max="10"
+            app:min="1"
+            app:showSeekBarValue="true"
+            android:dependency="rd_normalize" />
+        <CheckBoxPreference
+            android:key="rd_night_mode"
+            android:title="@string/rd_night_mode"
+            android:summary="@string/rd_help_night_mode"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            app:key="audio-replay-gain-enable"
+            app:summary="@string/replaygain_enable_summary"
+            app:title="@string/replaygain_enable" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="track"
+            android:entries="@array/replaygain"
+            android:entryValues="@array/replaygain_values"
+            android:key="audio-replay-gain-mode"
+            android:summary="@string/replaygain_mode_summary"
+            android:title="@string/rd_replay_gain"
+            android:dependency="audio-replay-gain-enable" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue="0.0"
+            android:key="audio-replay-gain-preamp"
+            android:summary="@string/replaygain_preamp_summary"
+            android:title="@string/rd_replay_gain_preamp"
+            android:dependency="audio-replay-gain-enable" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue="-7.0"
+            android:key="audio-replay-gain-default"
+            android:summary="@string/replaygain_default_summary"
+            android:title="@string/replaygain_default"
+            android:dependency="audio-replay-gain-enable" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="audio-replay-gain-peak-protection"
+            android:summary="@string/replaygain_peak_protection_summary"
+            android:title="@string/replaygain_peak_protection"
+            android:dependency="audio-replay-gain-enable" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_effects">
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="equalizer"
+            android:title="@string/equalizer" />
+        <CheckBoxPreference
+            android:defaultValue="@bool/time_stretching_default"
+            android:key="enable_time_stretching_audio"
+            android:summary="@string/enable_time_stretching_audio_summary"
+            android:title="@string/rd_keep_pitch" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_tracks">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue=""
+            android:key="audio_preferred_language"
+            android:persistent="true"
+            android:title="@string/rd_preferred_audio_language" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue="0"
+            android:key="rd_audio_desync"
+            android:title="@string/rd_audio_delay"
+            android:summary="@string/rd_audio_delay_summary" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="save_individual_audio_delay"
+            android:summary="@string/save_audiodelay_summary"
+            android:title="@string/save_audiodelay_title" />
+    </PreferenceCategory>
+    <org.videolan.vlc.gui.preferences.rd.RdAdvancedPreference android:key="audio_advanced_bar" android:title="@string/rd_sec_advanced" />
+    <PreferenceCategory android:key="audio_advanced" android:layout="@layout/rd_pref_category_empty" app:isPreferenceVisible="false">
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="soundfont"
+            android:summary="@string/soundfont_summary"
+            android:title="@string/soundfont" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

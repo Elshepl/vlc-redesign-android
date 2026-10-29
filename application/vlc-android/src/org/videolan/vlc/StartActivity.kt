@@ -144,6 +144,12 @@ class StartActivity : FragmentActivity() {
                 org.videolan.vlc.gui.helpers.MedialibraryUtils.addDir(folder, ctx)
             }
         }
+        // debug builds: open the settings (on a page: `--es debug_settings_page audio`) without tapping through
+        if (BuildConfig.DEBUG) intent.getStringExtra("debug_settings_page")?.let { page ->
+            startActivity(Intent(this, org.videolan.vlc.gui.preferences.PreferencesActivity::class.java).putExtra("rd_debug_page", page))
+            finish()
+            return
+        }
         resume()
     }
 

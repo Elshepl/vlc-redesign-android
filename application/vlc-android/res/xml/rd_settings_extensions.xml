@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Extensions, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_set_extensions">
+    <PreferenceCategory android:title="@string/rd_sec_addons">
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="optional_features"
+            android:title="@string/optional_features" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Playback, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_playback">
+    <PreferenceCategory android:title="@string/rd_sec_startup">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:key="video_confirm_resume"
+            android:entries="@array/ask_confirmation_entries"
+            android:entryValues="@array/ask_confirmation_values"
+            android:summary="%s"
+            android:title="@string/confirm_resume_title" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:key="audio_confirm_resume"
+            android:entries="@array/ask_confirmation_entries"
+            android:entryValues="@array/ask_confirmation_values"
+            android:summary="%s"
+            android:title="@string/confirm_resume_audio_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="resume_playback"
+            android:summary="@string/resume_playback_summary"
+            android:title="@string/resume_playback_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="audio_task_removed"
+            android:title="@string/audio_task_cleared_title"
+            android:summary="@string/audio_task_cleared_summary" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:defaultValue="-1"
+            android:key="default_sleep_timer"
+            android:title="@string/sleep_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_tracks">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="-1"
+            android:entries="@array/preferred_resolution"
+            android:entryValues="@array/preferred_resolution_values"
+            android:key="preferred_resolution"
+            android:summary="@string/preferred_resolution_summary"
+            android:title="@string/rd_preferred_quality" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_order">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="playlist_mode_video"
+            android:summary="@string/force_play_all_summary"
+            android:title="@string/force_play_all_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="playlist_mode_audio"
+            android:summary="@string/force_play_all_audio_summary"
+            android:title="@string/force_play_all_audio_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="audio_force_shuffle"
+            android:summary="@string/force_shuffle_summary"
+            android:title="@string/force_shuffle_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_seeking">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="always_fast_seek"
+            android:summary="@string/always_fast_seek_summary"
+            android:title="@string/always_fast_seek" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_files_discs">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:key="rd_avi_index"
+            android:title="@string/rd_repair_avi"
+            android:defaultValue="0"
+            android:entries="@array/rd_avi_index_entries"
+            android:entryValues="@array/rd_avi_index_values" />
+    </PreferenceCategory>
+    <org.videolan.vlc.gui.preferences.rd.RdAdvancedPreference android:key="playback_advanced_bar" android:title="@string/rd_sec_advanced" />
+    <PreferenceCategory android:key="playback_advanced" android:layout="@layout/rd_pref_category_empty" app:isPreferenceVisible="false">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="quick_play"
+            android:summary="@string/browser_quick_play_summary"
+            android:title="@string/browser_quick_play" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="quick_play_default"
+            android:dependency="quick_play"
+            android:summary="@string/browser_quick_play_default_summary"
+            android:title="@string/browser_quick_play_default" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

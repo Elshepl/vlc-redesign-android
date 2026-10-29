@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Video, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_video">
+    <PreferenceCategory android:title="@string/rd_sec_output">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="-1"
+            android:entries="@array/opengl_list"
+            android:entryValues="@array/opengl_values"
+            android:key="opengl"
+            android:summary="@string/opengl_summary"
+            android:title="@string/opengl_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="video_match_frame_rate"
+            android:summary="@string/video_match_frame_rate_summary"
+            android:title="@string/video_match_frame_rate_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_deinterlacing">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:key="rd_deinterlace"
+            android:title="@string/rd_deinterlacing"
+            android:summary="@string/rd_help_deinterlace"
+            android:defaultValue="-1"
+            android:entries="@array/rd_deinterlace_entries"
+            android:entryValues="@array/rd_deinterlace_values" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:key="rd_deinterlace_mode"
+            android:title="@string/rd_method"
+            android:defaultValue="auto"
+            android:entries="@array/rd_deinterlace_mode_entries"
+            android:entryValues="@array/rd_deinterlace_mode_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_snapshots">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:entries="@array/video_screenshot"
+            android:entryValues="@array/video_screenshot_values"
+            android:key="screenshot_mode"
+            android:summary="%s"
+            android:title="@string/enable_video_screenshot" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

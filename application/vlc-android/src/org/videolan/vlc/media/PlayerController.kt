@@ -90,7 +90,10 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
             } else {
                 mediaplayer.setEqualizer(null)
             }
-            mediaplayer.setVideoTitleDisplay(MediaPlayer.Position.Disable, 0)
+            // VLC Redesign: Settings > Subtitles > Show filename when a video starts (the desktop's video-title-show,
+            // at the bottom for 3 s)
+            if (settings.getBoolean("rd_video_title", false)) mediaplayer.setVideoTitleDisplay(MediaPlayer.Position.Bottom, 3000)
+            else mediaplayer.setVideoTitleDisplay(MediaPlayer.Position.Disable, 0)
             mediaplayer.play()
         }
     }

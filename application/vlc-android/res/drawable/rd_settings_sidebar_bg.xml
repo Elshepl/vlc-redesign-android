@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The settings sidebar of a wide window (SettingsSidebar.qml): the A4 panel, radius 6 -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetLeft="8dp" android:insetRight="0dp" android:insetTop="8dp" android:insetBottom="8dp">
+    <shape><solid android:color="@color/rd_bg_a4" /><corners android:radius="6dp" /></shape>
+</inset>

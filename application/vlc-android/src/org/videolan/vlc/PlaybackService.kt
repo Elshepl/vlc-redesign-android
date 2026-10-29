@@ -1319,8 +1319,11 @@ class PlaybackService : MediaBrowserServiceCompat(), LifecycleOwner, CoroutineSc
         mediaSession.isActive = mediaIsActive
         mediaSession.setQueueTitle(getString(R.string.music_now_playing))
         if (update) {
-            if (mediaIsActive) sendStartSessionIdIntent()
-            else sendStopSessionIdIntent()
+            if (mediaIsActive) {
+                sendStartSessionIdIntent()
+                // VLC Redesign: Normalize loudness / Night mode on VLC's audio session
+                org.videolan.vlc.util.LoudnessEffects.apply(this)
+            } else sendStopSessionIdIntent()
         }
     }
 

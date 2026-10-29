@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The dropdown of the design (SettingsDropdown.qml): the A4 face in its B2 well, radius 4, the value in FG/A2 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rd_well"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:minWidth="120dp"
+    android:background="@drawable/rd_pref_well_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="8dp"
+    android:duplicateParentState="true">
+
+    <TextView
+        android:id="@+id/rd_well_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:fontFamily="@font/inter"
+        android:textSize="14sp"
+        android:textColor="@color/rd_fg_a2"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textAlignment="viewStart" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/rd_ic_chevron_down"
+        android:importantForAccessibility="no" />
+</LinearLayout>

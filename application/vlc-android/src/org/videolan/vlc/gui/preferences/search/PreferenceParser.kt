@@ -126,6 +126,12 @@ object PreferenceParser {
      */
     fun parsePreferences(context: Context, parseUIPrefs: Boolean = false): ArrayList<PreferenceItem> {
         val result = ArrayList<PreferenceItem>()
+        // VLC Redesign: the settings pages of the desktop first (their keys, titles and sections), then the old
+        // screens for what they alone have (each key once)
+        val keys = HashSet<String>()
+        org.videolan.vlc.gui.preferences.rd.RdPage.entries.forEach { page ->
+            parsePreferences(context, page.xml).forEach { if (keys.add(it.key)) result.add(it) }
+        }
         arrayListOf(R.xml.preferences, R.xml.preferences_adv, R.xml.preferences_audio, R.xml.preferences_parental_control, R.xml.preferences_casting, R.xml.preferences_subtitles, R.xml.preferences_ui, R.xml.preferences_video, R.xml.preferences_remote_access, R.xml.preferences_android_auto)
             .apply {
                 if (parseUIPrefs) {
@@ -134,9 +140,14 @@ object PreferenceParser {
                 }
             }
         .forEach {
-            result.addAll(parsePreferences(context, it))
+            parsePreferences(context, it).forEach { item -> if (keys.add(item.key)) result.add(item) }
         }
         return result
+    }
+
+    /** VLC Redesign: the settings page that shows a key, if one does */
+    fun rdPageOf(context: Context, key: String) = org.videolan.vlc.gui.preferences.rd.RdPage.entries.firstOrNull { page ->
+        parsePreferences(context, page.xml).any { it.key == key }
     }
 
     /**

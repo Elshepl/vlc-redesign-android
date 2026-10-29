@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SettingsSegmented.qml: the B2 well, 3 inside, the segments radius 3 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rd_segments"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:background="@drawable/rd_pref_field_bg"
+    android:orientation="horizontal"
+    android:padding="3dp" />

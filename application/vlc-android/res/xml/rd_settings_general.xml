@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > General, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_general">
+    <PreferenceCategory android:title="@string/rd_sec_appearance">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue=""
+            android:key="set_locale"
+            android:title="@string/rd_interface_language" />
+        <org.videolan.vlc.gui.preferences.rd.RdSegmentedPreference
+            android:defaultValue="-1"
+            android:key="app_theme"
+            android:title="@string/rd_theme"
+            android:entries="@array/rd_theme_entries"
+            android:entryValues="@array/rd_theme_values" />
+        <org.videolan.vlc.gui.preferences.rd.RdAccentPreference
+            android:defaultValue="orange"
+            android:key="rd_accent"
+            android:title="@string/rd_accent_color"
+            android:entries="@array/rd_accent_entries"
+            android:entryValues="@array/rd_accent_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_startup">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="show_update"
+            android:summary="@string/update_nightly_summary"
+            android:title="@string/rd_check_updates" />
+        <CheckBoxPreference
+            android:key="show_whats_new"
+            android:title="@string/rd_show_whats_new"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="tv_ui"
+            android:summary="@string/tv_ui_summary"
+            android:title="@string/tv_ui_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_diagnostics">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_verbose_mode"
+            android:summary="@string/enable_verbose_mode_summary"
+            android:title="@string/rd_show_minor_warnings" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="debug_logs"
+            android:title="@string/debug_logs" />
+    </PreferenceCategory>
+    <org.videolan.vlc.gui.preferences.rd.RdAdvancedPreference android:key="general_advanced_bar" android:title="@string/rd_sec_advanced" />
+    <PreferenceCategory android:key="general_advanced" android:layout="@layout/rd_pref_category_empty" app:isPreferenceVisible="false">
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue=""
+            android:inputType="textMultiLine"
+            android:key="custom_libvlc_options"
+            android:title="@string/rd_extra_options" />
+        <org.videolan.vlc.gui.preferences.rd.RdActionPreference
+            android:key="rd_welcome_setup"
+            android:title="@string/rd_welcome_setup"
+            android:summary="@string/rd_help_welcome"
+            app:actionText="@string/rd_open" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="export_settings"
+            android:summary="@string/export_settings_summary"
+            android:title="@string/export_settings" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="restore_settings"
+            android:summary="@string/restore_settings_summary"
+            android:title="@string/restore_settings" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="nightly_install"
+            android:title="@string/install_nightly" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="quit_app"
+            android:title="@string/quit" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="clear_app_data"
+            android:summary="@string/clear_app_data_summary"
+            android:title="@string/clear_app_data" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

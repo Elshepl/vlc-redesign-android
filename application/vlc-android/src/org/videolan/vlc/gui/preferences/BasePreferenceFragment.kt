@@ -87,6 +87,8 @@ abstract class BasePreferenceFragment : PreferenceFragmentCompat() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // VLC Redesign: the settings have no lines between their sections
+        setDivider(null)
         arguments?.parcelable<PreferenceItem>(EXTRA_PREF_END_POINT)?.let { endPoint ->
             selectPreference(endPoint.key)
         }

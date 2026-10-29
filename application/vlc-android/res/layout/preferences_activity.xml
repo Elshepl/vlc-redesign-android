@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the settings as the desktop's window: from 600 dp the sidebar (rd_settings_sidebar) stays at the
+     start, the page beside it; narrower, the sidebar is the first screen and a page opens over it. -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:vlc="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -6,9 +8,22 @@
 
     <include layout="@layout/toolbar" />
 
-    <FrameLayout
-            android:id="@+id/fragment_placeholder"
-            android:layout_width="fill_parent"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            vlc:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            android:orientation="horizontal"
+            vlc:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+                android:id="@+id/rd_settings_sidebar"
+                android:layout_width="248dp"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        <FrameLayout
+                android:id="@+id/fragment_placeholder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -45,6 +45,9 @@ import org.videolan.vlc.R
 import org.videolan.vlc.gui.BaseActivity
 import org.videolan.vlc.gui.PinCodeActivity
 import org.videolan.vlc.gui.PinCodeReason
+import org.videolan.vlc.gui.preferences.rd.RdPage
+import org.videolan.vlc.gui.preferences.rd.RdSettingsPage
+import org.videolan.vlc.gui.preferences.rd.RdSettingsSidebar
 import org.videolan.vlc.gui.preferences.search.PreferenceItem
 import org.videolan.vlc.gui.preferences.search.PreferenceParser
 import org.videolan.vlc.gui.preferences.search.PreferenceSearchActivity
@@ -63,20 +66,47 @@ class PreferencesActivity : BaseActivity() {
     }
     override fun getSnackAnchorView(overAudioPlayer:Boolean): View? = findViewById(android.R.id.content)
 
+    // VLC Redesign: the page shown (kept across a rotation, which may switch one pane <-> two panes)
+    private var currentPage: RdPage? = null
+    private var twoPane = false
+    private val sidebar get() = supportFragmentManager.findFragmentById(R.id.rd_settings_sidebar) as? RdSettingsSidebar
+            ?: supportFragmentManager.findFragmentById(R.id.fragment_placeholder) as? RdSettingsSidebar
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (Settings.getInstance(this).getBoolean(KEY_RESTRICT_SETTINGS, false)) {
+        // the panes are rebuilt from the page kept, not restored: a rotation can change their number
+        super.onCreate(null)
+        if (Settings.getInstance(this).getBoolean(KEY_RESTRICT_SETTINGS, false) && savedInstanceState == null) {
             val intent = PinCodeActivity.getIntent(this, PinCodeReason.CHECK)
             pinCodeResult.launch(intent)
         }
 
         setContentView(R.layout.preferences_activity)
         setSupportActionBar(findViewById<View>(R.id.main_toolbar) as Toolbar)
-        if (savedInstanceState == null) {
+        val widthDp = windowManager.currentWindowMetrics.bounds.width() / resources.displayMetrics.density
+        twoPane = widthDp >= 600
+        findViewById<View>(R.id.rd_settings_sidebar).visibility = if (twoPane) View.VISIBLE else View.GONE
+        val kept = RdPage.of(savedInstanceState?.getString(KEY_PAGE))
+        val endPoint = if (savedInstanceState == null) intent.parcelable<PreferenceItem>(EXTRA_PREF_END_POINT) else null
+        if (twoPane) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_placeholder, PreferencesFragment().apply { if (intent.hasExtra(EXTRA_PREF_END_POINT)) arguments = bundleOf(EXTRA_PREF_END_POINT to intent.parcelable(EXTRA_PREF_END_POINT)) })
-                    .commit()
+                    .replace(R.id.rd_settings_sidebar, RdSettingsSidebar.newInstance(true))
+                    .replace(R.id.fragment_placeholder, RdSettingsPage.newInstance(kept ?: RdPage.GENERAL))
+                    .commitNow()
+        } else {
+            supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_placeholder, RdSettingsSidebar.newInstance(false))
+                    .commitNow()
+            kept?.let { openPage(it) }
         }
+        if (currentPage == null && !twoPane) supportActionBar?.title = getString(R.string.rd_settings)
+        supportFragmentManager.addOnBackStackChangedListener {
+            if (!twoPane && supportFragmentManager.backStackEntryCount == 0) {
+                currentPage = null
+                supportActionBar?.title = getString(R.string.rd_settings)
+            }
+        }
+        endPoint?.let { openEndPoint(it) }
+        if (savedInstanceState == null) RdPage.of(intent.getStringExtra("rd_debug_page"))?.let { openPage(it) }
         mAppBarLayout = findViewById(R.id.appbar)
         mAppBarLayout!!.post { ViewCompat.setElevation(mAppBarLayout!!, resources.getDimensionPixelSize(R.dimen.default_appbar_elevation).toFloat()) }
     }
@@ -112,14 +142,57 @@ class PreferencesActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == searchRequestCode && resultCode == RESULT_OK) {
-            data?.extras?.parcelable<PreferenceItem>(EXTRA_PREF_END_POINT)?.let {
-                supportFragmentManager.popBackStack()
-                supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_placeholder, PreferencesFragment().apply { arguments = bundleOf(EXTRA_PREF_END_POINT to it) })
-                        .commit()
-            }
+            data?.extras?.parcelable<PreferenceItem>(EXTRA_PREF_END_POINT)?.let { openEndPoint(it) }
         }
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        currentPage?.let { outState.putString(KEY_PAGE, it.key) }
+    }
+
+    /** Opens a page of the settings: beside the sidebar (two panes) or over it */
+    fun openPage(page: RdPage, scrollTo: String? = null) {
+        val fm = supportFragmentManager
+        if (twoPane) {
+            fm.popBackStackImmediate(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            fm.beginTransaction().replace(R.id.fragment_placeholder, RdSettingsPage.newInstance(page, scrollTo)).commit()
+        } else {
+            fm.popBackStackImmediate(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            fm.beginTransaction().replace(R.id.fragment_placeholder, RdSettingsPage.newInstance(page, scrollTo))
+                    .addToBackStack(PAGE_STACK).commit()
+        }
+        currentPage = page
+    }
+
+    /** A screen of its own (parental control, remote access, Android Auto, optional features) over the page */
+    fun openSubScreen(fragment: androidx.fragment.app.Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_placeholder, fragment).addToBackStack("sub").commit()
+    }
+
+    /** Called by a page when it shows: the sidebar marks it, the bar shows its title */
+    fun onPageShown(page: RdPage) {
+        currentPage = page
+        sidebar?.select(page.key)
+    }
+
+    /** A setting found by the search or asked by another screen: its page, scrolled to it */
+    private fun openEndPoint(item: PreferenceItem) {
+        val page = PreferenceParser.rdPageOf(this, item.key)
+        if (page != null) {
+            openPage(page, item.key)
+            return
+        }
+        val args = bundleOf(EXTRA_PREF_END_POINT to item)
+        val sub = when (item.parentScreen) {
+            R.xml.preferences_parental_control -> PreferencesParentalControl()
+            R.xml.preferences_remote_access -> PreferencesRemoteAccess()
+            R.xml.preferences_android_auto -> PreferencesAndroidAuto()
+            else -> null
+        } ?: return
+        if (!twoPane) openPage(RdPage.GENERAL)
+        openSubScreen(sub.apply { arguments = args })
     }
 
     fun exitAndRescan() {
@@ -147,6 +220,8 @@ class PreferencesActivity : BaseActivity() {
     }
 
     companion object {
+        private const val KEY_PAGE = "rd_settings_page"
+        private const val PAGE_STACK = "page"
         /**
          * Launch the preferences and redirect to a given preference
          * @param activity The calling activity

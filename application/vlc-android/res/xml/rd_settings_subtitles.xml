@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Subtitles, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_subtitles">
+    <PreferenceCategory android:title="@string/rd_sec_tracks_languages">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue=""
+            android:key="subtitle_preferred_language"
+            android:persistent="true"
+            android:title="@string/rd_preferred_language" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue=""
+            android:entries="@array/subtitles_encoding_list"
+            android:entryValues="@array/subtitles_encoding_values"
+            android:key="subtitle_text_encoding"
+            android:persistent="true"
+            android:summary="%s"
+            android:title="@string/rd_text_encoding" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_loading_subtitles">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="subtitles_autoload"
+            android:title="@string/rd_load_subtitles_auto" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:key="rd_sub_fuzzy"
+            android:title="@string/rd_file_name_matching"
+            android:summary="@string/rd_help_fuzzy"
+            android:defaultValue="3"
+            android:entries="@array/rd_fuzzy_entries"
+            android:entryValues="@array/rd_fuzzy_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_appearance">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="-1"
+            android:entries="@array/subtitles_presets_entries"
+            android:entryValues="@array/subtitles_presets_values"
+            android:key="subtitles_presets"
+            android:persistent="false"
+            android:title="@string/subtitles_presets_title" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="16"
+            android:entries="@array/subtitles_size_entries"
+            android:entryValues="@array/subtitles_size_values"
+            android:key="subtitles_size"
+            android:summary="%s"
+            android:persistent="true"
+            android:title="@string/rd_font_size" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="subtitles_bold"
+            android:title="@string/rd_bold" />
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="@color/white"
+            android:key="subtitles_color"
+            android:title="@string/rd_text_color" />
+        <SeekBarPreference
+            android:defaultValue="255"
+            android:iconSpaceReserved="false"
+            android:key="subtitles_color_opacity"
+            android:max="255"
+            android:title="@string/rd_text_opacity"
+            app:min="50" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="subtitles_outline"
+            android:title="@string/subtitles_outline_title" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="4"
+            android:entries="@array/subtitles_outline_size_entries"
+            android:entryValues="@array/subtitles_outline_size_values"
+            android:key="subtitles_outline_size"
+            app:isPreferenceVisible="false"
+            android:summary="%s"
+            android:persistent="true"
+            android:title="@string/subtitles_size" />
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="@color/black"
+            android:key="subtitles_outline_color"
+            app:isPreferenceVisible="false"
+            android:title="@string/rd_outline_color" />
+        <SeekBarPreference
+            android:defaultValue="255"
+            android:key="subtitles_outline_color_opacity"
+            app:isPreferenceVisible="false"
+            android:max="255"
+            android:title="@string/rd_outline_opacity"
+            app:min="0" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="subtitles_shadow"
+            android:title="@string/rd_shadow" />
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="@color/black"
+            android:key="subtitles_shadow_color"
+            app:isPreferenceVisible="false"
+            android:title="@string/rd_shadow_color" />
+        <SeekBarPreference
+            android:defaultValue="128"
+            android:key="subtitles_shadow_color_opacity"
+            app:isPreferenceVisible="false"
+            android:max="255"
+            android:title="@string/rd_shadow_opacity"
+            app:min="0" />
+        <SeekBarPreference
+            android:key="rd_shadow_distance"
+            android:title="@string/rd_shadow_distance"
+            android:summary="@string/rd_help_shadow_distance"
+            android:defaultValue="6"
+            android:max="20"
+            app:min="0"
+            app:showSeekBarValue="true"
+            android:dependency="subtitles_shadow" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="subtitles_background"
+            android:title="@string/rd_background" />
+        <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+            android:defaultValue="@color/black"
+            android:key="subtitles_background_color"
+            android:title="@string/rd_background_color" />
+        <SeekBarPreference
+            android:defaultValue="255"
+            android:iconSpaceReserved="false"
+            android:key="subtitles_background_color_opacity"
+            android:max="255"
+            android:title="@string/rd_background_opacity"
+            app:min="0" />
+        <SeekBarPreference
+            android:key="rd_sub_margin"
+            android:title="@string/rd_vertical_position"
+            android:summary="@string/rd_help_sub_margin"
+            android:defaultValue="0"
+            android:max="200"
+            app:min="0"
+            app:showSeekBarValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_osd">
+        <CheckBoxPreference
+            android:key="rd_video_title"
+            android:title="@string/rd_show_filename"
+            android:summary="@string/rd_help_video_title"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

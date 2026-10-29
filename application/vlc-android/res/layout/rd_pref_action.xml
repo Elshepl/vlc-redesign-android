@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The button of SettingsActionRow.qml: A4 face, radius 4, Inter 14 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rd_action"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:minWidth="88dp"
+    android:background="@drawable/rd_pref_button_bg"
+    android:gravity="center"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:fontFamily="@font/inter_medium"
+    android:textSize="14sp"
+    android:textColor="@color/rd_fg_2"
+    android:singleLine="true"
+    android:focusable="true"
+    android:clickable="true" />

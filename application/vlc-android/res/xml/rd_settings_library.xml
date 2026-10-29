@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Library, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_library">
+    <PreferenceCategory android:title="@string/rd_sec_opening_files">
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="directories"
+            android:summary="@string/directories_summary"
+            android:title="@string/medialibrary_directories" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_rescan"
+            android:summary="@string/auto_rescan_summary"
+            android:title="@string/auto_rescan" />
+        <CheckBoxPreference
+            android:key="browser_show_hidden_files"
+            android:defaultValue="false"
+            app:isPreferenceVisible="false"
+            android:summary="@string/tv_show_hidden_files_summary"
+            android:title="@string/rd_show_hidden_files" />
+    </PreferenceCategory>
+    <org.videolan.vlc.gui.preferences.rd.RdAdvancedPreference android:key="library_advanced_bar" android:title="@string/rd_sec_advanced" />
+    <PreferenceCategory android:key="library_advanced" android:layout="@layout/rd_pref_category_empty" app:isPreferenceVisible="false">
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="dump_media_db"
+            android:summary="@string/dump_media_db_summary"
+            android:title="@string/dump_media_db" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="clear_media_db"
+            android:summary="@string/clear_media_database_summary"
+            android:title="@string/clear_media_db" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:enabled="true"
+            android:key="dump_app_db"
+            android:summary="@string/dump_media_db_summary"
+            android:title="@string/dump_app_db" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

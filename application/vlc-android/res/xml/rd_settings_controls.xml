@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Controls, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_set_controls">
+    <PreferenceCategory android:title="@string/gestures">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_volume_gesture"
+            android:summary="@string/enable_volume_gesture_summary"
+            android:title="@string/enable_volume_gesture_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_brightness_gesture"
+            android:summary="@string/enable_brightness_gesture_summary"
+            android:title="@string/enable_brightness_gesture_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="save_brightness"
+            android:summary="@string/save_brightness_summary"
+            android:title="@string/save_brightness_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_swipe_seek"
+            android:summary="@string/enable_swipe_seek_summary"
+            android:title="@string/enable_swipe_seek_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_scale_gesture"
+            android:summary="@string/enable_scale_gesture_summary"
+            android:title="@string/enable_scale_gesture_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_double_tap_seek"
+            android:summary="@string/enable_double_tap_seek_summary"
+            android:title="@string/enable_double_tap_seek_title" />
+        <org.videolan.vlc.gui.view.NumberPickerPreference
+            android:defaultValue="10"
+            android:dependency="enable_double_tap_seek"
+            app:key="video_double_tap_jump_delay"
+            app:title="@string/video_double_tap_jump_delay" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_double_tap_play"
+            android:summary="@string/enable_double_tap_play_summary"
+            android:title="@string/enable_double_tap_play_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_fastplay"
+            android:summary="@string/enable_tap_and_hold_fastplay_summary"
+            android:title="@string/enable_tap_and_hold_fastplay_title" />
+        <SeekBarPreference
+            android:defaultValue="20"
+            android:dependency="enable_fastplay"
+            android:key="fastplay_speed"
+            android:max="80"
+            android:summary="%s"
+            android:title="@string/fastplay_speed_title"
+            app:min="11"
+            app:seekBarIncrement="1"
+            app:updatesContinuously="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_skip">
+        <org.videolan.vlc.gui.view.NumberPickerPreference
+            android:defaultValue="10"
+            app:key="video_jump_delay"
+            app:title="@string/jump_delay" />
+        <org.videolan.vlc.gui.view.NumberPickerPreference
+            android:defaultValue="20"
+            app:key="video_long_jump_delay"
+            app:title="@string/long_jump_delay" />
+        <org.videolan.vlc.gui.view.NumberPickerPreference
+            app:key="audio_jump_delay"
+            app:title="@string/jump_delay"
+            android:summary="%ss"
+            android:defaultValue="10" />
+        <org.videolan.vlc.gui.view.NumberPickerPreference
+            app:key="audio_long_jump_delay"
+            app:title="@string/long_jump_delay"
+            android:summary="%ss"
+            android:defaultValue="20" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_remotes">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_headset_detection"
+            android:summary="@string/enable_headset_detection_summary"
+            android:title="@string/enable_headset_detection" />
+        <CheckBoxPreference
+            android:key="enable_play_on_headset_insertion"
+            android:defaultValue="false"
+            android:dependency="enable_headset_detection"
+            android:summary="@string/enable_play_on_headset_insertion_summary"
+            android:title="@string/enable_play_on_headset_insertion" />
+        <CheckBoxPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:key="ignore_headset_media_button_presses"
+            android:summary="@string/ignore_headset_media_button_presses_summary"
+            android:title="@string/ignore_headset_media_button_presses" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="remote_access_category"
+            android:title="@string/remote_access" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="android_auto_category"
+            android:title="@string/android_auto" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

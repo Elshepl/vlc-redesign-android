@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Interface, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_interface">
+    <PreferenceCategory android:title="@string/rd_sec_window">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:key="video_action_switch"
+            android:defaultValue="0"
+            android:entries="@array/video_app_switch_action_titles"
+            android:entryValues="@array/video_app_switch_action_values"
+            android:summary="@string/video_app_switch_summary"
+            android:title="@string/video_app_switch_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="popup_force_legacy"
+            android:summary="@string/popup_force_legacy_summary"
+            android:title="@string/popup_force_legacy_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="restore_background_video"
+            android:summary="@string/restore_background_video_summary"
+            android:title="@string/restore_background_video_title" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="99"
+            android:entries="@array/screen_orientation_list"
+            android:entryValues="@array/screen_orientation_values"
+            android:key="screen_orientation"
+            android:summary="%s"
+            android:title="@string/screen_orientation" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="popup_keepscreen"
+            android:summary="@string/popup_keepscreen_summary"
+            android:title="@string/popup_keepscreen_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_clone_mode"
+            android:summary="@string/enable_clone_mode_summary"
+            android:title="@string/enable_clone_mode" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_playback_controls">
+        <SeekBarPreference
+            android:defaultValue="4"
+            android:key="video_hud_timeout_in_s"
+            android:max="16"
+            android:summary="%s"
+            android:title="@string/rd_hide_after"
+            app:min="1"
+            app:seekBarIncrement="1"
+            app:updatesContinuously="true" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="video_transition_show"
+            android:summary="@string/video_transition_summary"
+            android:title="@string/video_transition_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_seek_buttons"
+            android:summary="@string/enable_seek_buttons_summary"
+            android:title="@string/enable_seek_buttons" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="lock_use_sensor"
+            android:summary="@string/lock_use_sensor_summary"
+            android:title="@string/lock_use_sensor_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="audio_show_chapter_buttons"
+            android:title="@string/show_chapter_buttons"
+            android:summary="@string/show_chapter_buttons_summary" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="audio_show_bookmark_buttons"
+            android:title="@string/show_bookmark_buttons"
+            android:summary="@string/show_bookmark_buttons_summary" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="audio_show_bookmark_buttons"
+            android:key="audio_show_bookmark_markers"
+            android:title="@string/show_bookmark_markers"
+            android:summary="@string/show_bookmark_markers_summary" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="audio_show_track_numbers"
+            android:title="@string/albums_show_track_numbers" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="blurred_cover_background"
+            android:summary="@string/blurred_cover_background_summary"
+            android:title="@string/blurred_cover_background_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_notifications">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="show_seek_in_compact_notification"
+            android:summary="@string/show_seek_in_compact_notif_summary"
+            android:title="@string/show_seek_in_compact_notif_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="lockscreen_cover"
+            android:summary="@string/lockscreen_cover_summary"
+            android:title="@string/lockscreen_cover_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="audio_resume_card"
+            android:title="@string/audio_resume_card_title"
+            android:summary="@string/audio_resume_card_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_playlist">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:entries="@array/list_title_ellipsize_list"
+            android:entryValues="@array/list_title_ellipsize_values"
+            android:key="list_title_ellipsize"
+            android:persistent="true"
+            android:title="@string/list_title_ellipsize"
+            android:summary="%s" />
+        <CheckBoxPreference
+            android:key="show_headers"
+            android:defaultValue="true"
+            android:summary="@string/show_headers_summary"
+            android:title="@string/show_headers" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_video_thumbnails"
+            android:summary="@string/show_video_thumbnails_summary"
+            android:title="@string/show_video_thumbnails" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="media_seen"
+            android:summary="@string/media_seen_summary"
+            android:title="@string/media_seen" />
+        <CheckBoxPreference
+            android:key="tv_folders_first"
+            android:defaultValue="true"
+            app:isPreferenceVisible="false"
+            android:summary="@string/tv_folders_first_summary"
+            android:title="@string/tv_folders_first" />
+        <CheckBoxPreference
+            android:key="include_missing"
+            android:defaultValue="true"
+            android:summary="@string/browser_show_missing_media_summary"
+            android:title="@string/browser_show_missing_media" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

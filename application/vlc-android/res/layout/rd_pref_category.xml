@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A section title of the settings (SettingsSectionTitle.qml): Inter 16 Medium, FG/2 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="22dp"
+    android:paddingBottom="6dp"
+    android:fontFamily="@font/inter_medium"
+    android:textSize="16sp"
+    android:textColor="@color/rd_fg_2"
+    android:textAlignment="viewStart"
+    android:accessibilityHeading="true" />

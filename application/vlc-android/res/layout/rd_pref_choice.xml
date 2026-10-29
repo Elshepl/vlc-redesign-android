@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A choice of the dropdown (SettingsDropdown.qml): Inter 14, the chosen one in the accent on BG/A2 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:gravity="center_vertical|start"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:background="@drawable/rd_pref_choice_bg"
+    android:fontFamily="@font/inter"
+    android:textSize="14sp"
+    android:textColor="@color/rd_pref_choice_text"
+    android:textAlignment="viewStart" />

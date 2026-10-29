@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Performance, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_performance">
+    <PreferenceCategory android:title="@string/rd_sec_decoding">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="-1"
+            android:entries="@array/hardware_acceleration_list"
+            android:entryValues="@array/hardware_acceleration_values"
+            android:key="hardware_acceleration"
+            android:summary="@string/hardware_acceleration_summary"
+            android:title="@string/rd_hw_decoding" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="-1"
+            android:entries="@array/deblocking_list"
+            android:entryValues="@array/deblocking_values"
+            android:key="deblocking"
+            android:summary="@string/deblocking_summary"
+            android:title="@string/rd_skip_loop_filter" />
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:key="rd_postproc"
+            android:title="@string/rd_postproc_quality"
+            android:defaultValue="0"
+            android:entries="@array/rd_postproc_entries"
+            android:entryValues="@array/rd_postproc_values" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_avcodec_threads"
+            android:title="@string/rd_decoding_threads"
+            android:summary="@string/rd_help_threads"
+            android:defaultValue="" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue=""
+            android:inputType="textMultiLine"
+            android:key="dav1d_thread_number"
+            app:useSimpleSummaryProvider="true"
+            android:title="@string/dav1d_thread_number" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_sec_smooth">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_frame_skip"
+            android:summary="@string/enable_frame_skip_summary"
+            android:title="@string/enable_frame_skip" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

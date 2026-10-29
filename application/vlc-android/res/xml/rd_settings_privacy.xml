@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Privacy, the desktop's page (sections and wording of SettingsPresentation.qml).
+     The rows keep the keys of the VLC Android settings; RdSettingsPage holds their behaviour. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_title_privacy">
+    <PreferenceCategory android:title="@string/rd_sec_history">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="playback_history"
+            android:disableDependentsState="true"
+            android:summary="@string/playback_history_summary"
+            android:title="@string/rd_save_recent" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="playback_history"
+            android:key="video_resume_playback"
+            android:summary="@string/video_resume_playback_summary"
+            android:title="@string/video_resume_playback_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="playback_history"
+            android:key="audio_resume_playback"
+            android:summary="@string/audio_resume_playback_summary"
+            android:title="@string/audio_resume_playback_title" />
+        <CheckBoxPreference
+            android:key="incognito_mode"
+            android:defaultValue="false"
+            android:title="@string/incognito_mode" />
+        <CheckBoxPreference
+            android:key="persistent_incognito"
+            android:dependency="incognito_mode"
+            android:defaultValue="true"
+            android:summary="@string/persistent_incognito_mode_summary"
+            android:title="@string/persistent_incognito_mode" />
+        <org.videolan.vlc.gui.preferences.rd.RdActionPreference
+            android:key="clear_history"
+            android:title="@string/rd_clear_history_now"
+            app:actionText="@string/clear_history" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/permissions">
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="permissions"
+            android:summary="@string/permissions_summary"
+            android:title="@string/permissions" />
+        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
+            android:key="parental_control"
+            android:title="@string/parental_control" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

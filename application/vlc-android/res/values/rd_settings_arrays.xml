@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the choices of the settings pages, as the desktop's (SettingsPresentation.qml) -->
+<resources>
+    <!-- The button text of RdActionPreference (SettingsActionRow.qml) -->
+    <declare-styleable name="RdActionPreference">
+        <attr name="actionText" format="reference|string" />
+    </declare-styleable>
+    <!-- Theme: Dark, Light, System (app_theme values 2, 1, -1) -->
+    <string-array name="rd_theme_entries" translatable="false">
+        <item>@string/rd_dark</item>
+        <item>@string/rd_light</item>
+        <item>@string/rd_system</item>
+    </string-array>
+    <string-array name="rd_theme_values" translatable="false">
+        <item>2</item>
+        <item>1</item>
+        <item>-1</item>
+    </string-array>
+    <!-- deinterlace: -1 Automatic, 0 Off, 1 On -->
+    <string-array name="rd_deinterlace_entries" translatable="false">
+        <item>@string/rd_automatic</item>
+        <item>@string/rd_off</item>
+        <item>@string/rd_on</item>
+    </string-array>
+    <string-array name="rd_deinterlace_values" translatable="false">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <!-- deinterlace-mode of VLC 3 (the names VLC shows) -->
+    <string-array name="rd_deinterlace_mode_entries" translatable="false">
+        <item>@string/rd_automatic</item>
+        <item>Discard</item>
+        <item>Blend</item>
+        <item>Mean</item>
+        <item>Bob</item>
+        <item>Linear</item>
+        <item>X</item>
+        <item>Yadif</item>
+        <item>Yadif (2x)</item>
+        <item>Phosphor</item>
+        <item>Film NTSC (IVTC)</item>
+    </string-array>
+    <string-array name="rd_deinterlace_mode_values" translatable="false">
+        <item>auto</item>
+        <item>discard</item>
+        <item>blend</item>
+        <item>mean</item>
+        <item>bob</item>
+        <item>linear</item>
+        <item>x</item>
+        <item>yadif</item>
+        <item>yadif2x</item>
+        <item>phosphor</item>
+        <item>ivtc</item>
+    </string-array>
+    <!-- avi-index: 0 Ask, 1 Always, 2 Never, 3 When needed -->
+    <string-array name="rd_avi_index_entries" translatable="false">
+        <item>@string/rd_ask</item>
+        <item>@string/rd_always</item>
+        <item>@string/rd_never</item>
+        <item>@string/rd_when_needed</item>
+    </string-array>
+    <string-array name="rd_avi_index_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <!-- sub-autodetect-fuzzy 0..4 (VLC's own texts) -->
+    <string-array name="rd_fuzzy_entries" translatable="false">
+        <item>@string/rd_fuzzy_0</item>
+        <item>@string/rd_fuzzy_1</item>
+        <item>@string/rd_fuzzy_2</item>
+        <item>@string/rd_fuzzy_3</item>
+        <item>@string/rd_fuzzy_4</item>
+    </string-array>
+    <string-array name="rd_fuzzy_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <!-- postproc-q 0..6 -->
+    <string-array name="rd_postproc_entries" translatable="false">
+        <item>@string/rd_off</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="rd_postproc_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+</resources>
