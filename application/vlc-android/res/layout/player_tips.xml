@@ -144,6 +144,7 @@
             app:layout_constraintStart_toStartOf="@+id/tips_overlay_adv_function"
             app:layout_constraintTop_toTopOf="@+id/tips_overlay_adv_function" />
 
+    <!-- VLC Redesign: the tips point at the control bar, which stays left to right in RTL (as the desktop): the icons too -->
     <ImageView
             android:id="@+id/tips_overlay_tracks"
             android:layout_width="wrap_content"
@@ -151,9 +152,9 @@
             android:contentDescription="@string/tracks"
             android:scaleType="center"
             app:layout_constraintBottom_toBottomOf="@+id/tips_overlay_play"
-            app:layout_constraintEnd_toStartOf="@+id/tips_orientation_toggle"
+            app:layout_constraintRight_toLeftOf="@+id/tips_orientation_toggle"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tips_overlay_play"
             app:srcCompat="@drawable/ic_player_audiotrack"
             tools:visibility="visible" />
@@ -165,9 +166,9 @@
             android:layout_gravity="center_vertical"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/tips_overlay_play"
-            app:layout_constraintEnd_toStartOf="@+id/tips_overlay_play"
+            app:layout_constraintRight_toLeftOf="@+id/tips_overlay_play"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tips_overlay_tracks"
+            app:layout_constraintLeft_toRightOf="@+id/tips_overlay_tracks"
             app:layout_constraintTop_toTopOf="@+id/tips_overlay_play"
             app:srcCompat="@drawable/ic_player_rotate"
             tools:visibility="visible" />
@@ -180,9 +181,9 @@
             android:contentDescription="@string/play"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tips_resize"
+            app:layout_constraintRight_toLeftOf="@+id/tips_resize"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tips_orientation_toggle"
+            app:layout_constraintLeft_toRightOf="@+id/tips_orientation_toggle"
             app:srcCompat="@drawable/ic_play_player"
             tools:visibility="visible" />
 
@@ -193,9 +194,9 @@
             android:contentDescription="@string/advanced"
             android:scaleType="center"
             app:layout_constraintBottom_toBottomOf="@+id/tips_overlay_play"
-            app:layout_constraintEnd_toStartOf="@+id/tips_overlay_adv_function"
+            app:layout_constraintRight_toLeftOf="@+id/tips_overlay_adv_function"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tips_overlay_play"
+            app:layout_constraintLeft_toRightOf="@+id/tips_overlay_play"
             app:layout_constraintTop_toTopOf="@+id/tips_overlay_play"
             app:srcCompat="@drawable/ic_player_ratio"
             tools:visibility="visible" />
@@ -207,9 +208,9 @@
             android:contentDescription="@string/advanced"
             android:scaleType="center"
             app:layout_constraintBottom_toBottomOf="@+id/tips_overlay_play"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tips_resize"
+            app:layout_constraintLeft_toRightOf="@+id/tips_resize"
             app:layout_constraintTop_toTopOf="@+id/tips_overlay_play"
             app:srcCompat="@drawable/ic_player_more"
             tools:visibility="visible" />

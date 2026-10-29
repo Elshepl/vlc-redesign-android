@@ -112,7 +112,6 @@
                     android:focusable="true"
                     android:padding="12dp"
                     app:layout_constraintBottom_toBottomOf="@+id/eq_title"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/equalizer_settings"
                     app:layout_constraintTop_toTopOf="@+id/eq_title"
                     app:srcCompat="@drawable/ic_add"

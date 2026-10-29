@@ -82,7 +82,7 @@ class EmptyLoadingStateView : FrameLayout {
             loadingFlipper.visibility = if (value == EmptyLoadingState.LOADING) VISIBLE else GONE
             loadingTitle.visibility = if (value == EmptyLoadingState.LOADING) VISIBLE else GONE
             emptyTextView.visibility = if (value in arrayOf(EmptyLoadingState.EMPTY, EmptyLoadingState.EMPTY_SEARCH, EmptyLoadingState.EMPTY_FAVORITES)) VISIBLE else GONE
-            emptyImageView.visibility = if (value in arrayOf(EmptyLoadingState.EMPTY,EmptyLoadingState.MISSING_PERMISSION,EmptyLoadingState.MISSING_VIDEO_PERMISSION, EmptyLoadingState.MISSING_AUDIO_PERMISSION, EmptyLoadingState.EMPTY_SEARCH, EmptyLoadingState.EMPTY_FAVORITES)) VISIBLE else GONE
+            emptyImageView.visibility = if (value in arrayOf(EmptyLoadingState.EMPTY,EmptyLoadingState.MISSING_PERMISSION,EmptyLoadingState.MISSING_VIDEO_PERMISSION, EmptyLoadingState.MISSING_AUDIO_PERMISSION, EmptyLoadingState.EMPTY_SEARCH, EmptyLoadingState.EMPTY_FAVORITES) && (height == 0 || height >= 300.dp)) VISIBLE else GONE
             emptyImageView.setImageBitmap(context.getBitmapFromDrawable(if (value == EmptyLoadingState.EMPTY_FAVORITES) R.drawable.ic_fav_empty else if (value in arrayOf(EmptyLoadingState.EMPTY, EmptyLoadingState.EMPTY_SEARCH, EmptyLoadingState.EMPTY_FAVORITES)) R.drawable.ic_empty else R.drawable.ic_empty_warning))
             permissionTitle.visibility = if (value in arrayOf(EmptyLoadingState.MISSING_PERMISSION, EmptyLoadingState.MISSING_VIDEO_PERMISSION, EmptyLoadingState.MISSING_AUDIO_PERMISSION)) VISIBLE else GONE
             permissionTextView.visibility = if (value in arrayOf(EmptyLoadingState.MISSING_PERMISSION, EmptyLoadingState.MISSING_VIDEO_PERMISSION, EmptyLoadingState.MISSING_AUDIO_PERMISSION)) VISIBLE else GONE
@@ -188,6 +188,13 @@ class EmptyLoadingStateView : FrameLayout {
         if (compactMode) {
             applyCompactMode()
         }
+    }
+
+    // VLC Redesign: in a short view (the file picker) the picture would sit on the path above it: text only
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
+        if (::emptyImageView.isInitialized && h > 0 && h < 300.dp && emptyImageView.visibility == VISIBLE)
+            post { emptyImageView.visibility = GONE }
     }
 
     private fun applyCompactMode() {

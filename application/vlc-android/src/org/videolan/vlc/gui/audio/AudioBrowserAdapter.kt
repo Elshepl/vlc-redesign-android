@@ -184,11 +184,22 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
 
     private fun rdMarkDetail(view: View, item: MediaLibraryItem?) {
         val marked = item != null && rdDetailItem?.let { it.id == item.id && it.itemType == item.itemType } == true
-        if (marked && view.foreground == null) view.foreground = androidx.core.content.ContextCompat.getDrawable(view.context, R.drawable.rd_list_detail_marked)
-        else if (!marked && view.foreground != null && view.getTag(R.id.rd_detail_marked) != null) view.foreground = null
-        if (marked) view.setTag(R.id.rd_detail_marked, true) else view.setTag(R.id.rd_detail_marked, null)
+        // the row's own foreground (its ripple) is kept: the mark is layered over it, and taken off again
+        @Suppress("UNCHECKED_CAST")
+        val kept = view.getTag(R.id.rd_detail_marked) as? Array<android.graphics.drawable.Drawable?>
+        if (marked && kept == null) {
+            val original = view.foreground
+            val mark = androidx.core.content.ContextCompat.getDrawable(view.context, R.drawable.rd_list_detail_marked)
+            view.setTag(R.id.rd_detail_marked, arrayOf(original))
+            view.foreground = if (original != null) android.graphics.drawable.LayerDrawable(arrayOf(mark, original)) else mark
+        } else if (!marked && kept != null) {
+            view.foreground = kept[0]
+            view.setTag(R.id.rd_detail_marked, null)
+        }
         view.isActivated = marked
     }
+
+
     override fun onBindViewHolder(holder: AbstractMediaItemViewHolder<ViewDataBinding>, position: Int) {
         if (position >= itemCount) return
         val item = getItem(position)
