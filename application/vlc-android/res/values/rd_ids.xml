@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign: a list row whose foreground marks the entry of the detail pane -->
+    <item name="rd_detail_marked" type="id" />
+</resources>

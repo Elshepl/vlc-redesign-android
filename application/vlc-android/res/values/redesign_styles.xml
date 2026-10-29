@@ -54,8 +54,8 @@
         <item name="android:letterSpacing">0</item>
     </style>
     <style name="TextAppearance.Redesign.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="fontFamily">@font/inter</item>
-        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
@@ -115,10 +115,13 @@
         <item name="cornerSize">12dp</item>
     </style>
 
-    <!-- Buttons: 32 high, radius 6, the B2 well, 14 Inter (500:3063 "Button"). -->
+    <!-- Buttons (RedesignButton.qml, Figma "Cancel" / "Save"): radius 6, Inter SemiBold 14, sentence case; the
+         accent button on the accent's background with the accent text, the neutral one on A3 in the window border.
+         36 high (the desktop's 32 and a little more for a finger). -->
     <style name="Widget.Redesign.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
-        <item name="android:minHeight">40dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:minWidth">100dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="cornerRadius">6dp</item>
@@ -129,14 +132,15 @@
     </style>
     <style name="Widget.Redesign.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
-        <item name="android:minHeight">40dp</item>
+        <item name="android:minHeight">36dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="cornerRadius">6dp</item>
-        <item name="backgroundTint">?attr/rd_well</item>
-        <item name="strokeColor">?attr/rd_border</item>
+        <item name="backgroundTint">@color/rd_button_neutral_bg</item>
+        <item name="strokeColor">@color/rd_window_border_token</item>
         <item name="strokeWidth">1dp</item>
-        <item name="android:textColor">?attr/font_default</item>
+        <item name="android:textColor">@color/rd_button_neutral_text</item>
+        <item name="rippleColor">@color/rd_ripple_dark</item>
     </style>
     <!-- The buttons of the player's panels: always on the dark panel, 36 high, 13 Inter. -->
     <style name="Widget.Redesign.Button.Outlined.Player">
@@ -270,5 +274,71 @@
         <item name="android:layout_height">1dp</item>
         <item name="android:layout_marginStart">56dp</item>
         <item name="android:background">@color/rd_divider_dim</item>
+    </style>
+
+    <!-- Text fields (RedesignTextArea.qml): the B2 well, radius 6, no Material outline or underline, Inter 14;
+         the label above in the accent while typing. Every TextInputLayout of the app without its own style. -->
+    <style name="Widget.Redesign.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">?attr/rd_well</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxCornerRadiusTopStart">6dp</item>
+        <item name="boxCornerRadiusTopEnd">6dp</item>
+        <item name="boxCornerRadiusBottomStart">6dp</item>
+        <item name="boxCornerRadiusBottomEnd">6dp</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="android:textColorHint">?android:attr/textColorTertiary</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Redesign.TextInput</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.TextInput" parent="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="editTextStyle">@style/Widget.Redesign.TextInputEditText</item>
+    </style>
+    <style name="Widget.Redesign.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <!-- Spinners as the desktop's dropdown: the well, the menu panel for the list, Inter 14 in FG/A2 -->
+    <style name="Widget.Redesign.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/rd_spinner_bg</item>
+        <item name="android:popupBackground">@drawable/rd_menu_background</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+    </style>
+    <style name="Widget.Redesign.SpinnerItem" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/rd_fg_a2</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="Widget.Redesign.DropDownItem" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/rd_fg_a2</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+    </style>
+
+    <!-- The equalizer presets as the desktop's segmented choices (flat on the well, the chosen one on A2 in the accent) -->
+    <style name="ThemeOverlay.Redesign.ChoiceChip" parent="">
+        <item name="chipStyle">@style/Widget.Redesign.ChoiceChip</item>
+    </style>
+    <style name="Widget.Redesign.ChoiceChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipSurfaceColor">@android:color/transparent</item>
+        <item name="chipBackgroundColor">@color/rd_choice_chip_bg</item>
+        <item name="android:textColor">@color/rd_pref_choice_text_checked</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipCornerRadius">4dp</item>
+        <item name="chipMinHeight">30dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipIconVisible">false</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="rippleColor">@color/rd_ripple_dark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Redesign.Body1</item>
     </style>
 </resources>

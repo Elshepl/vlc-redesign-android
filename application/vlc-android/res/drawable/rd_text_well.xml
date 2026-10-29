@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the desktop's text field (RedesignTextArea.qml): the B2 well, radius 6, 2 px of A4 inside; the accent frame while typing -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"><shape><solid android:color="?attr/rd_well" /><stroke android:width="2dp" android:color="?attr/rd_accent_dim" /><corners android:radius="6dp" /></shape></item>
+    <item><shape><solid android:color="?attr/rd_well" /><stroke android:width="2dp" android:color="@color/rd_bg_a4" /><corners android:radius="6dp" /></shape></item>
+</selector>

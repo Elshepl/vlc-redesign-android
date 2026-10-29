@@ -98,7 +98,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/rounded_corners_line"
+                    android:background="@drawable/rd_card_a3"
                     android:visibility="@{state == state.Download ? View.VISIBLE : View.GONE}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

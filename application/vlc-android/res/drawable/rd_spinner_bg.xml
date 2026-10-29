@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a spinner as the desktop's dropdown (SettingsDropdown.qml): the A4 face in its B2 well, the chevron at the end -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rd_pref_well_bg" />
+    <item android:drawable="@drawable/rd_ic_chevron_down" android:gravity="end|center_vertical" android:end="8dp" android:width="18dp" android:height="18dp" />
+</layer-list>

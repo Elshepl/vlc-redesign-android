@@ -129,12 +129,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/equalizer_button">
 
 
+                <!-- VLC Redesign: the presets as the desktop's segmented choices: one well, the chosen one raised -->
                 <com.google.android.material.chip.ChipGroup
                         android:id="@+id/equalizer_presets"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="16dp"
-                        android:paddingRight="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rd_choice_well"
+                        android:padding="3dp"
+                        app:chipSpacingHorizontal="2dp"
                         app:selectionRequired="true"
                         app:singleLine="true"
                         app:singleSelection="true" />
@@ -150,7 +154,8 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:clickable="false"
-                    app:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="?attr/rd_well"
+                    app:cardCornerRadius="6dp"
                     app:cardElevation="0dp"
                     app:cardUseCompatPadding="true"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -247,6 +252,11 @@
 
                     <EditText
                             android:id="@+id/preset_title_edit"
+                            android:background="@drawable/rd_text_well"
+                            android:fontFamily="@font/inter"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:minHeight="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"

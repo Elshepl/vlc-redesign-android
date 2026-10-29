@@ -23,9 +23,9 @@
   ~
   -->
 
-<!-- VLC Redesign: a round well with the 1 px border (the speed presets, the jump buttons) -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shape="oval">
-    <solid android:color="?attr/rd_well" />
-    <stroke android:color="?attr/rd_border" android:width="1dp"/>
+<!-- VLC Redesign: the desktop's neutral button (RedesignButton.qml): A3, radius 6, the window border -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/rd_bg_a3" />
+    <stroke android:color="@color/rd_window_border_token" android:width="1dp"/>
+    <corners android:radius="6dp" />
 </shape>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the neutral button of the desktop: A3 (#1B1B1B / #ABABAA), A1 when checked (a chosen option) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/rd_bg_a1" android:state_checked="true" />
+    <item android:color="@color/rd_bg_a3" />
+</selector>

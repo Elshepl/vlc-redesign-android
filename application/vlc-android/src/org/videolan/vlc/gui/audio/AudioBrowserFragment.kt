@@ -461,6 +461,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         }
         if ((item.itemType == MediaLibraryItem.TYPE_ARTIST || item.itemType == MediaLibraryItem.TYPE_GENRE) && detailWanted()) {
             detailPane?.show(item)
+            (getCurrentAdapter() as? AudioBrowserAdapter)?.rdDetailItem = item
             return
         }
         val i: Intent
@@ -501,6 +502,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         if (!detailWanted() || (getCurrentAdapter()?.itemCount ?: 0) == 0) {
             container.visibility = View.GONE
             detailPane?.clear()
+            (getCurrentAdapter() as? AudioBrowserAdapter)?.rdDetailItem = null
             return
         }
         if (detailPane == null) {
@@ -509,8 +511,9 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
             detailPane = RdLibraryDetailPane(paneView, viewLifecycleOwner.lifecycleScope)
         }
         container.visibility = View.VISIBLE
+        detailPane?.item?.let { (getCurrentAdapter() as? AudioBrowserAdapter)?.rdDetailItem = it }
         if (detailPane?.item == null) (getCurrentAdapter() as? AudioBrowserAdapter)?.let { a ->
-            if (a.itemCount > 0) a.getItem(0)?.let { detailPane?.show(it) }
+            if (a.itemCount > 0) a.getItem(0)?.let { detailPane?.show(it); a.rdDetailItem = it }
         }
     }
 

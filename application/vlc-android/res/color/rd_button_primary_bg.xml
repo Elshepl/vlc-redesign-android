@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the accent button of the desktop (RedesignButton.qml accent): the accent's background -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/rd_fg_a4" android:state_enabled="false" />
-    <item android:color="?attr/colorPrimary" />
+    <item android:color="@color/rd_bg_a1" android:state_enabled="false" />
+    <item android:color="?attr/rd_accent_bright" />
 </selector>

@@ -285,26 +285,39 @@
 
             <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/playlist_search_text"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="4dp"
                     android:focusable="true"
                     android:visibility="gone"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/header_play_pause"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
+                <!-- VLC Redesign: the desktop's search well (A5, radius 6, Inter 14) -->
                 <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="34dp"
+                        android:background="@drawable/rd_search_well"
+                        android:drawableStart="@drawable/ic_search"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/rd_fg_a3"
+                        android:fontFamily="@font/inter"
                         android:hint="@string/search_hint"
                         android:imeOptions="actionSearch"
-                        android:inputType="textFilter" />
+                        android:inputType="textFilter"
+                        android:paddingStart="8dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/rd_fg_a2"
+                        android:textColorHint="@color/rd_fg_a4"
+                        android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView

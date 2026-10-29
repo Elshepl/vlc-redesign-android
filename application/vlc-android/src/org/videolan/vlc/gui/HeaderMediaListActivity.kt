@@ -361,6 +361,7 @@ open class HeaderMediaListActivity : AudioPlayerContainerActivity(), IEventsHand
         val searchItem = menu.findItem(R.id.ml_menu_filter)
         searchView = searchItem.actionView as SearchView
         searchView.queryHint = getString(R.string.search_in_list_hint)
+        org.videolan.vlc.gui.helpers.RdStyle.searchView(searchView)
         searchView.setOnQueryTextListener(this)
         val query = getFilterQuery()
         if (!query.isNullOrEmpty()) {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a small panel pill over the player (the menu panel: A4, the 1 px window border) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/rd_bg_a4" />
+    <stroke android:width="1dp" android:color="@color/rd_window_border_token" />
+    <corners android:radius="10dp" />
+</shape>

@@ -44,10 +44,11 @@ class PlayerProgress : View {
     private val progressPercent: Float
         get() = if (isDouble) value.toFloat() / 200 else value.toFloat() / 100
 
-    private val progressColor = ContextCompat.getColor(context, R.color.white)
-    private val boostColor = context.rdAccent()
+    // VLC Redesign: the desktop volume's fill (the accent; above 100 % the warning colour) in the dark well
+    private val progressColor = context.rdAccent()
+    private val boostColor = ContextCompat.getColor(context, R.color.rd_dark_warning)
     private val shadowColor = ContextCompat.getColor(context, R.color.blacktransparent)
-    private val backgroundColor = ContextCompat.getColor(context, R.color.white_transparent_50)
+    private val backgroundColor = ContextCompat.getColor(context, R.color.rd_dark_bg_b2)
 
     private val paintProgress = Paint()
     private val paintBackground = Paint()

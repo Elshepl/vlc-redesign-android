@@ -137,13 +137,16 @@ class PlaylistAdapter(private val player: IPlayer) : DiffUtilAdapter<MediaWrappe
             if (model?.playing != false) holder.binding.playing.start() else holder.binding.playing.stop()
             holder.binding.playing.visibility = View.VISIBLE
             holder.binding.coverImage.visibility = View.INVISIBLE
-            holder.binding.audioItemTitle.setTypeface(null, Typeface.BOLD)
-            holder.binding.audioItemSubtitle.setTypeface(null, Typeface.BOLD)
+            // VLC Redesign: the current item of the desktop's queue (PlaylistDelegate.qml): its title in the accent,
+            // heavier; the others in FG/2 (Inter kept: a bold "null" typeface fell back to the system font)
+            holder.binding.audioItemTitle.typeface = rdFont(holder.itemView.context, R.font.inter_semibold)
+            holder.binding.audioItemTitle.setTextColor(rdThemeColor(holder.itemView.context, androidx.appcompat.R.attr.colorPrimary))
             currentPlayingVisu = holder.binding.playing
         } else {
             holder.binding.playing.stop()
             holder.binding.playing.visibility = View.INVISIBLE
-            holder.binding.audioItemTitle.typeface = null
+            holder.binding.audioItemTitle.typeface = rdFont(holder.itemView.context, R.font.inter_medium)
+            holder.binding.audioItemTitle.setTextColor(rdThemeColor(holder.itemView.context, R.attr.font_default))
             holder.binding.coverImage.visibility = View.VISIBLE
         }
 
@@ -288,4 +291,12 @@ class PlaylistAdapter(private val player: IPlayer) : DiffUtilAdapter<MediaWrappe
 
     override val lifecycle: Lifecycle
         get() = player.getLifeCycle()
+}
+
+private val rdFonts = HashMap<Int, android.graphics.Typeface?>()
+private fun rdFont(ctx: android.content.Context, id: Int) = rdFonts.getOrPut(id) { androidx.core.content.res.ResourcesCompat.getFont(ctx, id) }
+private fun rdThemeColor(ctx: android.content.Context, attr: Int): Int {
+    val tv = android.util.TypedValue()
+    ctx.theme.resolveAttribute(attr, tv, true)
+    return if (tv.resourceId != 0) androidx.core.content.ContextCompat.getColor(ctx, tv.resourceId) else tv.data
 }

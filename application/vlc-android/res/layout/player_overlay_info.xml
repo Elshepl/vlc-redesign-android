@@ -4,7 +4,7 @@
         android:id="@+id/player_overlay_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/video_list_length_bg"
+        android:background="@drawable/rd_player_osd_bg"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:visibility="invisible"
@@ -17,8 +17,9 @@
             android:gravity="center"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:textColor="@color/white"
-            android:textSize="36sp"
+            android:textColor="@color/rd_dark_fg_1"
+            android:fontFamily="@font/inter"
+            android:textSize="30sp"
             tools:text="Audio delay\n0ms" />
 
     <TextView
@@ -29,8 +30,9 @@
             android:gravity="center"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textColor="@color/rd_dark_fg_a2"
+            android:fontFamily="@font/inter"
+            android:textSize="13sp"
             android:visibility="gone"
             tools:text="Audio delay\n0ms"
             tools:visibility="visible" />

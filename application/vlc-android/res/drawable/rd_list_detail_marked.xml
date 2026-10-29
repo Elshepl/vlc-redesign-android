@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the entry shown in the detail pane: the hover grey over the row, the accent bar on its start side -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><color android:color="?attr/colorControlHighlight" /></item>
+    <item android:gravity="start|fill_vertical" android:width="3dp" android:top="10dp" android:bottom="10dp"><shape><solid android:color="?attr/colorPrimary" /><corners android:radius="2dp" /></shape></item>
+</layer-list>

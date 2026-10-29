@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a raised card in a panel (A3, radius 6): its fields, the B2 wells, show in it -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?attr/rd_topbar" />
+    <corners android:radius="6dp" />
+</shape>

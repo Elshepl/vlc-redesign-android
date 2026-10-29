@@ -22,39 +22,66 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+        <!-- VLC Redesign: the desktop library header (LibraryHeader.qml): A3 bar, the search well (34 high, radius
+             6, A5, the search glyph 8 in, the text 10 after it, Inter 14 FG/A2, hint FG/A4, the accent frame while typing) -->
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/background_default">
+                android:layout_height="56dp"
+                android:background="?attr/rd_topbar"
+                android:gravity="center_vertical">
 
             <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/abc_action_bar_up_description"
                     android:onClick="@{handler::onBack}"
+                    android:scaleType="center"
                     app:srcCompat="@drawable/ic_arrow_back" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <LinearLayout
                     android:id="@+id/search_edit_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="12dp"
                     android:layout_weight="1"
-                    app:endIconMode="clear_text">
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/rd_search_well"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        app:srcCompat="@drawable/ic_search"
+                        app:tint="@color/rd_fg_a3" />
 
                 <EditText
                         android:id="@+id/search_edit_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
                         android:hint="@string/search_hint"
                         android:imeOptions="actionSearch"
-                        android:inputType="textFilter" >
+                        android:inputType="textFilter"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/rd_fg_a2"
+                        android:textColorHint="@color/rd_fg_a4"
+                        android:textSize="14sp"
+                        android:duplicateParentState="false">
                     <requestFocus/>
                 </EditText>
-            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <androidx.core.widget.NestedScrollView

@@ -13,6 +13,13 @@
     </style>
 
     <style name="Theme.VLC.Apearance" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- VLC Redesign: check boxes and switches as the desktop's ON / OFF toggle -->
+        <item name="viewInflaterClass">org.videolan.vlc.gui.helpers.RdViewInflater</item>
+        <item name="textInputStyle">@style/Widget.Redesign.TextInputLayout</item>
+        <item name="spinnerStyle">@style/Widget.Redesign.Spinner</item>
+        <item name="android:spinnerStyle">@style/Widget.Redesign.Spinner</item>
+        <item name="android:spinnerItemStyle">@style/Widget.Redesign.SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/Widget.Redesign.DropDownItem</item>
         <item name="actionOverflowButtonStyle">@style/Widget.Redesign.Overflow</item>
         <item name="toolbar_popup_style">@style/ThemeOverlay.MaterialComponents</item>
         <item name="actionMenuTextColor">@color/white</item>
@@ -21,8 +28,6 @@
         <item name="android:expandableListViewStyle">@style/Theme.VLC.List</item>
         <item name="android:dropDownListViewStyle">@style/Theme.VLC.List</item>
         <item name="preferenceTheme">@style/VLCPreferenceTheme.Light</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
-        </item>
 
         <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/rd_light_bg_b1</item>
@@ -70,8 +75,8 @@
         <item name="donate_card">?attr/colorPrimary</item>
         <item name="donate_item_background">@drawable/donate_background_color</item>
         <item name="android:windowBackground">@color/rd_light_bg_b1</item>
-        <item name="audio_chips_color">@color/black_transparent_75</item>
-        <item name="audio_chips_text_color">@color/white_transparent_60</item>
+        <item name="audio_chips_color">@color/rd_bg_a4</item>
+        <item name="audio_chips_text_color">@color/rd_fg_a2</item>
         <item name="bottom_navigation_focus">@color/rd_light_bg_a1</item>
         <item name="scan_background">@drawable/rounded_corners_scan_progress</item>
         <item name="otp_code_background">@drawable/rounded_corners_otp_code</item>
@@ -93,15 +98,15 @@
         <item name="player_icon_color">@color/rd_light_fg_1</item>
         <item name="card_background">@color/rd_light_bg_b1</item>
         <item name="default_separator">@color/rd_light_divider_dim</item>
-        <item name="empty_button">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+        <item name="empty_button">@style/Widget.Redesign.Button.Outlined</item>
         <item name="card_border">@color/rd_light_divider_bright</item>
         <item name="empty_foreground">@color/rd_light_fg_a4</item>
         <item name="empty_background">@color/rd_light_bg_b1</item>
         <item name="disabled_overlay_color">@color/white_transparent_50</item>
         <item name="video_card_background">@drawable/video_grid_card_background</item>
         <item name="video_list_background">@drawable/video_list_background</item>
-        <item name="audio_chip_background">@drawable/rounded_corners_audio</item>
-        <item name="audio_chip_text_color">@color/white_transparent_60</item>
+        <item name="audio_chip_background">@drawable/rd_audio_chip_bg</item>
+        <item name="audio_chip_text_color">@color/rd_fg_a2</item>
         <item name="empty_title">@color/rd_light_fg_a1</item>
         <item name="audio_player_gradient_bottom">@drawable/gradient_audio_player_bottom</item>
         <item name="audio_player_gradient_top">@drawable/gradient_audio_player_top</item>
@@ -179,7 +184,8 @@
     </style>
 
     <style name="TextAppearance.VLC.Tooltip" parent="TextAppearance.Material3.BodySmall">
-        <item name="android:textColor">@color/white</item>
+        <!-- VLC Redesign: the accent pill's dark text (as the play pill's glyph) -->
+        <item name="android:textColor">@color/rd_dark_fg_b1</item>
         <item name="fontFamily">@font/inter_semibold</item>
     </style>
 
@@ -187,23 +193,33 @@
     <style name="Theme.VLC.PickerDialog.Dark" parent="Theme.VLC.PickerDialog.Dark.7"/>
     <style name="Theme.VLC.PickerDialog.Light" parent="Theme.VLC.PickerDialog.Light.7"/>
     <style name="Theme.VLC.PickerDialog.Dark.7" parent="Theme.MaterialComponents.Dialog">
+        <!-- VLC Redesign: the redesign's surfaces (the file picker and other dialogs of this theme) -->
+        <item name="rd_well">@color/rd_dark_bg_b2</item>
+        <item name="rd_border">@color/rd_dark_divider_bright</item>
+        <item name="rd_panel">@color/rd_dark_bg_a4</item>
+        <item name="rd_icon">@color/rd_dark_fg_a2</item>
+        <item name="rd_icon_dim">@color/rd_dark_fg_a3</item>
+        <item name="rd_hover">@color/rd_dark_bg_a1</item>
+        <item name="rd_topbar">@color/rd_dark_bg_a3</item>
+        <item name="rd_text_section">@color/rd_dark_fg_2</item>
+        <item name="android:fontFamily">@font/inter</item>
         <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/rd_accent_orange_dim</item>
         <item name="colorSecondary">@color/rd_accent_orange_main</item>
         <item name="windowNoTitle">true</item>
         <item name="android:gridViewStyle">@style/Theme.VLC.List</item>
-        <item name="background_default">@color/grey850</item>
-        <item name="background_default_darker">@color/grey875</item>
-        <item name="font_default">@color/grey50</item>
-        <item name="font_light">@color/grey600</item>
-        <item name="font_disabled">@color/grey600transparent</item>
-        <item name="list_subtitle">@color/grey400</item>
-        <item name="list_title">@color/white</item>
-        <item name="ariane_text_color">@color/grey50</item>
+        <item name="background_default">@color/rd_dark_bg_a4</item>
+        <item name="background_default_darker">@color/rd_dark_bg_a4</item>
+        <item name="font_default">@color/rd_dark_fg_1</item>
+        <item name="font_light">@color/rd_dark_fg_a1</item>
+        <item name="font_disabled">@color/rd_dark_fg_a4</item>
+        <item name="list_subtitle">@color/rd_dark_fg_a1</item>
+        <item name="list_title">@color/rd_dark_fg_1</item>
+        <item name="ariane_text_color">@color/rd_dark_fg_a1</item>
         <item name="ariane_text_size">14sp</item>
-        <item name="android:windowBackground">@color/grey900</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:textViewStyle">@style/VLC.TextView</item>
-        <item name="empty_title">@color/grey300</item>
+        <item name="empty_title">@color/rd_dark_fg_a1</item>
         <item name="fast_scroller_bubble">@drawable/fastscroller_bubble</item>
         <item name="fast_scroller_handle">@drawable/fastscroller_handle</item>
         <item name="gridview_progressbar">@drawable/gridview_progressbar_w</item>
@@ -213,23 +229,33 @@
     </style>
 
     <style name="Theme.VLC.PickerDialog.Light.7" parent="Theme.MaterialComponents.Dialog">
+        <!-- VLC Redesign: the redesign's surfaces (the file picker and other dialogs of this theme) -->
+        <item name="rd_well">@color/rd_light_bg_b2</item>
+        <item name="rd_border">@color/rd_light_divider_bright</item>
+        <item name="rd_panel">@color/rd_light_bg_a4</item>
+        <item name="rd_icon">@color/rd_light_fg_a2</item>
+        <item name="rd_icon_dim">@color/rd_light_fg_a3</item>
+        <item name="rd_hover">@color/rd_light_bg_a1</item>
+        <item name="rd_topbar">@color/rd_light_bg_a3</item>
+        <item name="rd_text_section">@color/rd_light_fg_2</item>
+        <item name="android:fontFamily">@font/inter</item>
         <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/rd_accent_orange_dim</item>
         <item name="colorSecondary">@color/rd_accent_orange_main</item>
         <item name="windowNoTitle">true</item>
         <item name="android:gridViewStyle">@style/Theme.VLC.List</item>
-        <item name="background_default">@color/white</item>
-        <item name="background_default_darker">@color/grey200</item>
-        <item name="font_default">@color/black</item>
-        <item name="font_light">@color/grey300</item>
-        <item name="font_disabled">@color/grey300transparent</item>
-        <item name="list_subtitle">@color/grey600</item>
-        <item name="list_title">@color/black</item>
-        <item name="ariane_text_color">@color/grey900</item>
+        <item name="background_default">@color/rd_light_bg_a4</item>
+        <item name="background_default_darker">@color/rd_light_bg_a4</item>
+        <item name="font_default">@color/rd_light_fg_1</item>
+        <item name="font_light">@color/rd_light_fg_a1</item>
+        <item name="font_disabled">@color/rd_light_fg_a4</item>
+        <item name="list_subtitle">@color/rd_light_fg_a1</item>
+        <item name="list_title">@color/rd_light_fg_1</item>
+        <item name="ariane_text_color">@color/rd_light_fg_a1</item>
         <item name="ariane_text_size">14sp</item>
-        <item name="android:windowBackground">@color/grey200</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:textViewStyle">@style/VLC.TextView</item>
-        <item name="empty_title">@color/grey850</item>
+        <item name="empty_title">@color/rd_light_fg_a1</item>
 
         <item name="fast_scroller_bubble">@drawable/fastscroller_bubble</item>
         <item name="fast_scroller_handle">@drawable/fastscroller_handle</item>
@@ -266,6 +292,13 @@
     </style>
 
     <style name="Theme.VLC.Apearance.Black" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- VLC Redesign: check boxes and switches as the desktop's ON / OFF toggle -->
+        <item name="viewInflaterClass">org.videolan.vlc.gui.helpers.RdViewInflater</item>
+        <item name="textInputStyle">@style/Widget.Redesign.TextInputLayout</item>
+        <item name="spinnerStyle">@style/Widget.Redesign.Spinner</item>
+        <item name="android:spinnerStyle">@style/Widget.Redesign.Spinner</item>
+        <item name="android:spinnerItemStyle">@style/Widget.Redesign.SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/Widget.Redesign.DropDownItem</item>
         <item name="actionOverflowButtonStyle">@style/Widget.Redesign.Overflow</item>
         <item name="toolbar_popup_style">@style/ThemeOverlay.MaterialComponents.Dark</item>
 
@@ -273,8 +306,6 @@
         <item name="android:expandableListViewStyle">@style/Theme.VLC.List</item>
         <item name="android:dropDownListViewStyle">@style/Theme.VLC.List</item>
         <item name="preferenceTheme">@style/VLCPreferenceTheme.Dark</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
-        </item>
 
         <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/rd_dark_bg_b1</item>
@@ -320,8 +351,8 @@
         <item name="donate_card">@color/rd_accent_a71</item>
         <item name="donate_item_background">@drawable/donate_background_color_dark</item>
         <item name="android:windowBackground">@color/rd_dark_bg_b1</item>
-        <item name="audio_chips_color">@color/white_transparent_90</item>
-        <item name="audio_chips_text_color">@color/black_transparent_60</item>
+        <item name="audio_chips_color">@color/rd_bg_a4</item>
+        <item name="audio_chips_text_color">@color/rd_fg_a2</item>
         <item name="bottom_navigation_focus">@color/rd_dark_bg_a1</item>
         <item name="scan_background">@drawable/rounded_corners_scan_progress_dark</item>
         <item name="otp_code_background">@drawable/rounded_corners_otp_code_dark</item>
@@ -343,7 +374,7 @@
         <item name="player_icon_color">@color/rd_dark_fg_1</item>
         <item name="card_background">@color/rd_dark_bg_b1</item>
         <item name="default_separator">@color/rd_dark_divider_dim</item>
-        <item name="empty_button">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+        <item name="empty_button">@style/Widget.Redesign.Button.Outlined</item>
 
         <item name="card_border">@color/rd_dark_divider_bright</item>
         <item name="empty_foreground">@color/rd_dark_fg_a4</item>
@@ -351,8 +382,8 @@
         <item name="disabled_overlay_color">@color/black_transparent_50</item>
         <item name="video_card_background">@drawable/video_grid_card_background_dark</item>
         <item name="video_list_background">@drawable/video_list_background_dark</item>
-        <item name="audio_chip_background">@drawable/rounded_corners_audio_dark</item>
-        <item name="audio_chip_text_color">@color/black_transparent_60</item>
+        <item name="audio_chip_background">@drawable/rd_audio_chip_bg</item>
+        <item name="audio_chip_text_color">@color/rd_fg_a2</item>
         <item name="empty_title">@color/rd_dark_fg_a1</item>
         <item name="audio_player_gradient_bottom">@drawable/gradient_audio_player_bottom_dark</item>
         <item name="audio_player_gradient_top">@drawable/gradient_audio_player_top_dark</item>
@@ -601,6 +632,15 @@
     <style name="Theme.VLC.Player" parent="Theme.VLC.Player.7" />
 
     <style name="Theme.VLC.Player.7" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- VLC Redesign: the slider value label in the accent (the equalizer from the player) -->
+        <item name="sliderStyle">@style/VLC.Slider.Dark</item>
+        <!-- VLC Redesign: check boxes and switches as the desktop's ON / OFF toggle -->
+        <item name="viewInflaterClass">org.videolan.vlc.gui.helpers.RdViewInflater</item>
+        <item name="textInputStyle">@style/Widget.Redesign.TextInputLayout</item>
+        <item name="spinnerStyle">@style/Widget.Redesign.Spinner</item>
+        <item name="android:spinnerStyle">@style/Widget.Redesign.Spinner</item>
+        <item name="android:spinnerItemStyle">@style/Widget.Redesign.SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/Widget.Redesign.DropDownItem</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@color/transparent</item>
@@ -610,8 +650,6 @@
         <item name="snackbarStyle">@style/Widget.Redesign.Snackbar</item>
         <item name="snackbarTextViewStyle">@style/Widget.Redesign.Snackbar.Text</item>
         <item name="snackbarButtonStyle">@style/Widget.Redesign.Snackbar.Button</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
-        </item>
 
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme.Player</item>
         <!-- VLC Redesign: the player is dark in both themes -->
@@ -816,9 +854,8 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="VLC.Tips.Button.Next" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">@color/white</item>
-    </style>
+    <!-- VLC Redesign: the desktop's accent button (sentence case, Inter SemiBold 14) -->
+    <style name="VLC.Tips.Button.Next" parent="Widget.Redesign.Button" />
 
 
     <style name="ActionBar" parent="Widget.AppCompat.Light.ActionBar">
@@ -863,10 +900,12 @@
         <item name="tabRippleColor">?attr/colorControlHighlight</item>
     </style>
 
+    <!-- VLC Redesign: a section title of the desktop (Inter Medium 16, FG/2, sentence case) -->
     <style name="Result.Title" parent="Base.TextAppearance.AppCompat.Subhead">
-        <item name="android:textColor">?attr/font_light</item>
-        <item name="android:textSize">14sp</item>
-        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/rd_fg_2</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="textAllCaps">false</item>
     </style>
 
     <!--Preferences-->

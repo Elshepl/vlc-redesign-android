@@ -23,7 +23,6 @@
  */
 package org.videolan.vlc.gui.dialogs
 
-import org.videolan.vlc.gui.helpers.rdAccent
 import android.animation.LayoutTransition
 import android.content.Intent
 import android.os.Bundle
@@ -257,13 +256,13 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
         }
         binding.equalizerPresets.removeAllViews()
         viewModel.equalizerEntries.value?.forEachIndexed { index, item ->
-            val chip = Chip(requireActivity())
+            val chip = Chip(android.view.ContextThemeWrapper(requireActivity(), R.style.ThemeOverlay_Redesign_ChoiceChip))
             chip.text = item.equalizerEntry.name
             chip.tag = item.equalizerEntry.id
             chip.isCheckable = true
             val isCurrentCustom = viewModel.isCurrentEqCustom()
             chip.nextFocusDownId = if (!isCurrentCustom) R.id.edit else R.id.preset_title_edit
-            if (item.equalizerEntry.presetIndex == -1) chip.chipBackgroundColor = android.content.res.ColorStateList.valueOf(chip.context.rdAccent(0.1f))
+            org.videolan.vlc.gui.helpers.RdStyle.choiceChip(chip)
             if (item.equalizerEntry.id == viewModel.currentEqualizerId) {
                 selectedChip = chip
                 selectedChipIndex = index

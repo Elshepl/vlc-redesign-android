@@ -168,6 +168,27 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         this.model = model
     }
 
+    /**
+     * VLC Redesign: the entry shown in the list + detail pane (a wide window), marked in the list as the desktop
+     * marks the chosen row: the hover grey under it and the accent bar on its start side.
+     */
+    var rdDetailItem: MediaLibraryItem? = null
+        set(value) {
+            val old = field
+            field = value
+            for (i in 0 until itemCount) {
+                val it = getItem(i) ?: continue
+                if ((old != null && it.id == old.id && it.itemType == old.itemType) || (value != null && it.id == value.id && it.itemType == value.itemType)) notifyItemChanged(i, UPDATE_DETAIL)
+            }
+        }
+
+    private fun rdMarkDetail(view: View, item: MediaLibraryItem?) {
+        val marked = item != null && rdDetailItem?.let { it.id == item.id && it.itemType == item.itemType } == true
+        if (marked && view.foreground == null) view.foreground = androidx.core.content.ContextCompat.getDrawable(view.context, R.drawable.rd_list_detail_marked)
+        else if (!marked && view.foreground != null && view.getTag(R.id.rd_detail_marked) != null) view.foreground = null
+        if (marked) view.setTag(R.id.rd_detail_marked, true) else view.setTag(R.id.rd_detail_marked, null)
+        view.isActivated = marked
+    }
     override fun onBindViewHolder(holder: AbstractMediaItemViewHolder<ViewDataBinding>, position: Int) {
         if (position >= itemCount) return
         val item = getItem(position)
@@ -195,6 +216,7 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         }
         item?.let { holder.binding.setVariable(BR.isFavorite, it.isFavorite) }
         holder.binding.setVariable(BR.inSelection,multiSelectHelper.inActionMode)
+        rdMarkDetail(holder.itemView, item)
         holder.binding.invalidateAll()
         holder.binding.executePendingBindings()
         if (position == focusNext) {
@@ -221,6 +243,7 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
                        holder.binding.invalidateAll()
                     }
                     UPDATE_FAVORITE_STATE -> getItem(position)?.let { holder.binding.setVariable(BR.isFavorite, it.isFavorite) }
+                    UPDATE_DETAIL -> rdMarkDetail(holder.itemView, getItem(position))
                 }
             }
         }
@@ -423,6 +446,7 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
 
         private const val TAG = "VLC/AudioBrowserAdapter"
         private const val UPDATE_PAYLOAD = 1
+        private const val UPDATE_DETAIL = 0x2D7A
         /**
          * Awful hack to workaround the [PagedListAdapter] not keeping track of notifyItemMoved operations
          */
