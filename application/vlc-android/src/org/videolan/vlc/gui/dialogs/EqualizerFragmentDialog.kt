@@ -217,6 +217,36 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
             viewModel.createCustomEqualizer(requireActivity())
         }
 
+        // VLC Redesign: the desktop's preset dropdown, Two-pass equalizer and Reset
+        binding.equalizerPresetDropdown.setOnClickListener { v ->
+            val entries = viewModel.equalizerEntries.value ?: return@setOnClickListener
+            val menu = android.widget.PopupMenu(requireActivity(), v)
+            // the chosen preset in the accent (a checkable item would show the settings toggle)
+            val accent = com.google.android.material.color.MaterialColors.getColor(v, androidx.appcompat.R.attr.colorAccent)
+            entries.forEachIndexed { i, e ->
+                val title = android.text.SpannableString(e.equalizerEntry.name)
+                if (e.equalizerEntry.id == viewModel.currentEqualizerId)
+                    title.setSpan(android.text.style.ForegroundColorSpan(accent), 0, title.length, 0)
+                menu.menu.add(0, i, i, title)
+            }
+            menu.setOnMenuItemClickListener { item ->
+                binding.equalizerPresets.findViewWithTag<Chip>(entries[item.itemId].equalizerEntry.id)?.performClick()
+                true
+            }
+            menu.show()
+        }
+        val settings = Settings.getInstance(requireActivity())
+        binding.equalizerTwoPass.isChecked = settings.getBoolean(KEY_EQ_TWO_PASS, false)
+        binding.equalizerTwoPass.setOnCheckedChangeListener { _, checked -> setTwoPass(checked) }
+        binding.equalizerReset.setOnClickListener {
+            // the first preset (VLC's "Flat"), on, and one pass
+            if (!binding.equalizerButton.isChecked) binding.equalizerButton.isChecked = true
+            viewModel.equalizerEntries.value?.firstOrNull { it.equalizerEntry.presetIndex == 0 }?.let { flat ->
+                binding.equalizerPresets.findViewWithTag<Chip>(flat.equalizerEntry.id)?.performClick()
+            }
+            if (binding.equalizerTwoPass.isChecked) binding.equalizerTwoPass.isChecked = false
+        }
+
         binding.presetTitleEdit.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -332,6 +362,8 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
         binding.equalizerPresets.children.forEach {
             it.isEnabled = isChecked
         }
+        binding.equalizerPresetDropdown.isEnabled = isChecked
+        binding.equalizerPresetDropdown.alpha = if (isChecked) 1f else 0.45f
         val eqCardEnabled = isChecked && getEqualizerType() == TYPE_CUSTOM
         binding.equalizerPreamp.isEnabled = eqCardEnabled
         binding.equalizerBands.children.forEach {
@@ -398,6 +430,19 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
         return TYPE_PRESET
     }
 
+    /**
+     * VLC Redesign: the two-pass equalizer is a libvlc option in libvlc 3 (--equalizer-2pass, read when the filter
+     * opens): libvlc is started again and what plays goes on where it was.
+     */
+    private fun setTwoPass(on: Boolean) {
+        val activity = requireActivity()
+        Settings.getInstance(activity).edit { putBoolean(KEY_EQ_TWO_PASS, on) }
+        if (activity is VideoPlayerActivity) activity.reloadForEffects()
+        else org.videolan.vlc.PlaybackService.serviceFlow.value?.let { service ->
+            activity.lifecycleScope.launch { service.playlistManager.restartForEffects() }
+        } ?: activity.lifecycleScope.launch { VLCInstance.restart() }
+    }
+
     override fun onValueChange(slider: Slider, value: Float, fromUser: Boolean) {
         if (!fromUser) return
         viewModel.saveInHistory(-1)
@@ -408,6 +453,7 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
     companion object {
         const val TAG = "VLC/EqualizerFragmentDialog"
 
+        private const val KEY_EQ_TWO_PASS = "rd_eq_2pass"
         private const val TYPE_PRESET = 0
         private const val TYPE_CUSTOM = 1
 

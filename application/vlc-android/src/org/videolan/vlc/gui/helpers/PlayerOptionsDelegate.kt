@@ -64,6 +64,7 @@ private const val ID_BOOKMARK = 4L
 private const val ID_CHAPTER_TITLE = 5L
 private const val ID_PLAYBACK_SPEED = 6L
 private const val ID_EQUALIZER = 7L
+private const val ID_EFFECTS = 107L
 private const val ID_SAVE_PLAYLIST = 8L
 private const val ID_POPUP_VIDEO = 9L
 private const val ID_REPEAT = 10L
@@ -109,6 +110,8 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         if (!isChromecast) options.add(PlayerOption(ID_PLAYBACK_SPEED, R.drawable.ic_speed, res.getString(R.string.playback_speed)))
         options.add(PlayerOption(ID_JUMP_TO, R.drawable.ic_jumpto, res.getString(R.string.jump_to_time)))
         options.add(PlayerOption(ID_EQUALIZER, R.drawable.ic_equalizer, res.getString(R.string.equalizer)))
+        // VLC Redesign: the desktop's Effects dialog (audio and video effects)
+        if (!isChromecast) options.add(PlayerOption(ID_EFFECTS, R.drawable.ic_equalizer, res.getString(R.string.rd_fx_effects)))
         if (video) {
             if (primary && !Settings.showTvUi && service.audioTracksCount > 0)
                 options.add(PlayerOption(ID_PLAY_AS_AUDIO, R.drawable.ic_playasaudio_on, res.getString(R.string.play_as_audio)))
@@ -227,6 +230,7 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
             "bookmarks" -> ID_BOOKMARK
             "popup" -> ID_POPUP_VIDEO
             "equalizer" -> ID_EQUALIZER
+            "effects" -> ID_EFFECTS
             else -> return
         }
         onClick(PlayerOption(id, 0, ""))
@@ -365,6 +369,10 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
             ID_EQUALIZER -> {
                 newFragment = EqualizerFragmentDialog.newInstance()
                 tag = "equalizer"
+            }
+            ID_EFFECTS -> {
+                newFragment = org.videolan.vlc.gui.dialogs.RdEffectsDialog.newInstance()
+                tag = "effects"
             }
             ID_SAVE_PLAYLIST -> {
                 activity.addToPlaylist(service.media)

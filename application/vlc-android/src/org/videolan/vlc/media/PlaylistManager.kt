@@ -481,6 +481,36 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
         showAudioPlayer.value = PlayerController.playbackState != PlaybackStateCompat.STATE_STOPPED && (item !== null || !player.isVideoPlaying())
     }
 
+    /** VLC Redesign: the time to open the media at again for the video effects (-1: none) */
+    private var effectsResumeTime = -1L
+
+    /**
+     * VLC Redesign: libvlc 3 cannot change the filters of a playing video (a media's own ":video-filter" never
+     * reaches the video output): the video effects are options of libvlc, which the video player starts again with a
+     * new media player (VideoPlayerActivity.reloadForEffects); the video is then opened again where it was, paused
+     * if it was, in place.
+     */
+    private fun reloadForEffects(time: Long, paused: Boolean) {
+        if (!hasMedia()) return
+        effectsResumeTime = time.coerceAtLeast(0L)
+        launch { playIndex(currentIndex, if (paused) MediaWrapper.MEDIA_PAUSED else 0, forceResume = true) }
+    }
+
+    /**
+     * VLC Redesign: libvlc started again with the options of the effects (video filters, two-pass equalizer) and a new
+     * media player, which [attach] gives the video player's views; what was playing goes on where it was.
+     */
+    suspend fun restartForEffects(attach: ((org.videolan.libvlc.MediaPlayer) -> Unit)? = null) {
+        val playing = hasMedia() && player.isPlaying()
+        val time = player.getCurrentTime()
+        val paused = !playing
+        val had = hasMedia() && player.mediaplayer.hasMedia()
+        VLCInstance.restart()
+        player.restart()
+        attach?.invoke(player.mediaplayer)
+        if (had) reloadForEffects(time, paused)
+    }
+
     suspend fun playIndex(index: Int, flags: Int = 0, forceResume:Boolean = false, forceRestart:Boolean = false) {
         // The fonts are scanned when the first text renderer is created, which would otherwise
         // delay the playback by several seconds on the first run. See [FontCache]
@@ -508,7 +538,7 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
 
         val isInCustomPiP: Boolean = service.isInPiPMode.value ?: false
         if (mw.type == MediaWrapper.TYPE_VIDEO && !isAppStarted() && !isInCustomPiP) videoBackground = true
-        val isVideoPlaying = mw.type == MediaWrapper.TYPE_VIDEO && player.isVideoPlaying()
+        val isVideoPlaying = mw.type == MediaWrapper.TYPE_VIDEO && (player.isVideoPlaying() || effectsResumeTime >= 0L)
         setRepeatTypeFromSettings()
         if (!videoBackground && isVideoPlaying) mw.addFlags(MediaWrapper.MEDIA_VIDEO)
         if (videoBackground) mw.addFlags(MediaWrapper.MEDIA_FORCE_AUDIO)
@@ -531,7 +561,7 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
             val title = mw.getMetaLong(MediaWrapper.META_TITLE)
             if (title > 0) uri = "$uri#$title".toUri()
 
-            val start: Long
+            var start: Long
             if (isVideoPlaying) {
                 start = if (forceRestart
                     || videoResumeStatus == ResumeStatus.NEVER) 0L else getStartTime(mw)
@@ -551,6 +581,11 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                     waitForConfirmationAudio.postValue(confirmation)
                     return
                 }
+            }
+            // VLC Redesign: opened again for the video effects: where it was, without asking
+            if (effectsResumeTime >= 0L) {
+                start = effectsResumeTime
+                effectsResumeTime = -1L
             }
             //todo restore position as well when we move to VLC 4.0
             val media = mediaFactory.getFromUri(VLCInstance.getInstance(service), uri)

@@ -260,10 +260,12 @@ object VLCOptions {
             // the Java properties http.proxyHost / http.proxyPort, so the desktop's HTTP proxy is set there
             applyHttpProxy(text("rd_http_proxy"))
             // the quality alone does nothing: as on the desktop, the "postproc" video filter has to run as well
-            text("rd_postproc").toIntOrNull()?.takeIf { it in 1..6 }?.let {
-                options.add("--video-filter=postproc")
-                options.add("--postproc-q=$it")
-            }
+            val postproc = text("rd_postproc").toIntOrNull()?.takeIf { it in 1..6 }
+            postproc?.let { options.add("--postproc-q=$it") }
+            // VLC Redesign: the video effects of the player's Effects dialog are filters of the whole libvlc too
+            options.addAll(RdEffects.videoOptions(pref, postproc != null))
+            // the desktop's Two-pass equalizer (the equalizer filter reads it when it opens)
+            if (pref.getBoolean("rd_eq_2pass", false)) options.add("--equalizer-2pass")
             text("rd_avcodec_threads").toIntOrNull()?.takeIf { it in 1..32 }?.let { options.add("--avcodec-threads=$it") }
             pref.getInt("rd_sub_margin", 0).takeIf { it in 1..400 }?.let { options.add("--sub-margin=$it") }
             if (pref.getBoolean(KEY_SUBTITLES_SHADOW, true)) pref.getInt("rd_shadow_distance", 6).takeIf { it in 0..20 && it != 6 }
@@ -371,6 +373,8 @@ object VLCOptions {
         if (noVideo) media.addOption(":no-video")
         if (paused) media.addOption(":start-paused")
         if (!prefs.getBoolean(KEY_SUBTITLES_AUTOLOAD, true)) media.addOption(":sub-language=none")
+        // VLC Redesign: the video effects of the player's Effects dialog (filters of this media)
+        if (!noVideo && !hasRenderer) RdEffects.videoMediaOptions(prefs).forEach { media.addOption(it) }
 
         if (hasRenderer) {
             media.addOption(":sout-chromecast-audio-passthrough=" + prefs.getBoolean(KEY_CASTING_PASSTHROUGH, true))

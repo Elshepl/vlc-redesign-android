@@ -117,12 +117,38 @@
                     app:srcCompat="@drawable/ic_add"
                     app:tint="?attr/colorControlNormal" />
 
+            <!-- VLC Redesign: the presets as the desktop's dropdown (EqualizerPanel.qml: the 48 high well of the
+                 settings and its chevron, the presets in a menu); the chips stay, hidden, for the selection -->
+            <TextView
+                    android:id="@+id/equalizer_preset_dropdown"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rd_spinner_bg"
+                    android:contentDescription="@string/rd_eq_preset"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="36dp"
+                    android:text="@{name}"
+                    android:textAlignment="viewStart"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/equalizer_button" />
+
             <HorizontalScrollView
                     android:id="@+id/equalizer_presets_container"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:scrollbars="none"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/equalizer_button">
@@ -160,7 +186,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/equalizer_presets_container">
+                    app:layout_constraintTop_toBottomOf="@+id/equalizer_preset_dropdown">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -326,6 +352,36 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/equalizer_bands"
                             app:switchPadding="8dp" />
+
+                    <!-- VLC Redesign: the desktop's Two-pass equalizer and Reset (EqualizerPanel.qml) -->
+                    <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/equalizer_two_pass"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/rd_eq_two_pass"
+                            android:textAlignment="textEnd"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/snapBands"
+                            app:switchPadding="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/equalizer_reset"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:contentDescription="@string/rd_fx_reset_defaults"
+                            android:text="@string/rd_reset"
+                            android:textAllCaps="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/equalizer_two_pass" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 

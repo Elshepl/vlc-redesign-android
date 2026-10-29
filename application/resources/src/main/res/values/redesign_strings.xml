@@ -288,4 +288,72 @@
         <item>pink</item>
         <item>grey</item>
     </string-array>
+
+    <!-- the player's Effects dialog (desktop EffectsDialog.qml, FilterPanel.qml, VideoEffectsPanel.qml, EqualizerPanel.qml) -->
+    <string name="rd_fx_effects">Effects</string>
+    <string name="rd_fx_compressor">Compressor</string>
+    <string name="rd_fx_spatializer">Spatializer</string>
+    <string name="rd_fx_stereo_widen">Stereo Widener</string>
+    <string name="rd_fx_attack">Attack</string>
+    <string name="rd_fx_release">Release</string>
+    <string name="rd_fx_threshold">Threshold</string>
+    <string name="rd_fx_ratio">Ratio</string>
+    <string name="rd_fx_knee">Knee Radius</string>
+    <string name="rd_fx_makeup">Makeup Gain</string>
+    <string name="rd_fx_size">Size</string>
+    <string name="rd_fx_width">Width</string>
+    <string name="rd_fx_wet">Wet</string>
+    <string name="rd_fx_damp">Damp</string>
+    <string name="rd_fx_unit_ms">ms</string>
+    <string name="rd_fx_unit_db">dB</string>
+    <string name="rd_fx_unit_ratio">: 1</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_image_adjust">Image Adjustment</string>
+    <string name="rd_fx_hue">Hue</string>
+    <string name="rd_fx_brightness">Brightness</string>
+    <string name="rd_fx_contrast">Contrast</string>
+    <string name="rd_fx_saturation">Saturation</string>
+    <string name="rd_fx_gamma">Gamma</string>
+    <string name="rd_fx_gradfun">Banding Removal Radius</string>
+    <string name="rd_fx_invert">Negate Colors</string>
+    <string name="rd_fx_sepia">Sepia Intensity</string>
+    <string name="rd_fx_transform">Transform</string>
+    <string name="rd_fx_transform_type">Transform type</string>
+    <string name="rd_fx_rotate_90">Rotate by 90 degrees</string>
+    <string name="rd_fx_rotate_180">Rotate by 180 degrees</string>
+    <string name="rd_fx_rotate_270">Rotate by 270 degrees</string>
+    <string name="rd_fx_flip_h">Flip horizontally</string>
+    <string name="rd_fx_flip_v">Flip vertically</string>
+    <string name="rd_fx_transpose">Transpose</string>
+    <string name="rd_fx_antitranspose">Anti-transpose</string>
+    <string name="rd_fx_rotate">Rotate</string>
+    <string name="rd_fx_angle">Angle in degrees</string>
+    <string name="rd_fx_anaglyph">Anaglyph 3D</string>
+    <string name="rd_fx_color_scheme">Color scheme</string>
+    <string name="rd_fx_anaglyph_rg">pure red (left)  pure green (right)</string>
+    <string name="rd_fx_anaglyph_rb">pure red (left)  pure blue (right)</string>
+    <string name="rd_fx_anaglyph_rc">pure red (left)  pure cyan (right)</string>
+    <string name="rd_fx_anaglyph_gm">pure green (left)  pure magenta (right)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (left)  cyan (right)</string>
+    <string name="rd_fx_blur">Spatial Blur</string>
+    <string name="rd_fx_blur_sigma">Gaussian\'s std deviation</string>
+    <string name="rd_fx_antiflicker">Anti-Flickering</string>
+    <string name="rd_fx_window_size">Window size</string>
+    <string name="rd_fx_softening">Softening value</string>
+    <string name="rd_fx_denoiser">Denoiser</string>
+    <string name="rd_fx_luma_spat">Spatial luma strength (0-254)</string>
+    <string name="rd_fx_chroma_spat">Spatial chroma strength (0-254)</string>
+    <string name="rd_fx_luma_temp">Temporal luma strength (0-254)</string>
+    <string name="rd_fx_chroma_temp">Temporal chroma strength (0-254)</string>
+    <string name="rd_fx_essential">Essential</string>
+    <string name="rd_fx_colors">Colors</string>
+    <string name="rd_fx_geometry">Geometry</string>
+    <string name="rd_fx_advanced">Advanced</string>
+    <string name="rd_fx_enable">Enable %1$s</string>
+    <string name="rd_fx_reset_defaults">Reset to defaults</string>
+    <string name="rd_fx_play_audio">Play audio to preview and edit audio effects.</string>
+    <string name="rd_fx_play_video">Play video to preview and edit effects.</string>
+    <string name="rd_eq_two_pass">Two-pass equalizer</string>
+    <string name="rd_eq_preset">Equalizer preset</string>
+    <string name="rd_eq_custom">Custom</string>
 </resources>

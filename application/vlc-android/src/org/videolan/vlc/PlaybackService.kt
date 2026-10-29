@@ -1110,7 +1110,11 @@ class PlaybackService : MediaBrowserServiceCompat(), LifecycleOwner, CoroutineSc
         NotificationManagerCompat.from(this@PlaybackService).cancel(NotificationIds.PLAYBACK.id)
     }
 
-    fun onNewPlayback() = mediaSession.setSessionActivity(sessionPendingIntent)
+    fun onNewPlayback() {
+        mediaSession.setSessionActivity(sessionPendingIntent)
+        // VLC Redesign: the loudness settings and the Effects dialog's audio effects on VLC's session
+        org.videolan.vlc.util.LoudnessEffects.apply(this)
+    }
 
     fun onPlaylistLoaded() {
         notifyTrackChanged()

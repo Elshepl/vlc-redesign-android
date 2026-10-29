@@ -1035,6 +1035,32 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         displayManager.release()
     }
 
+    /**
+     * VLC Redesign: the video effects (Effects dialog) are libvlc options in libvlc 3: libvlc and the media player
+     * are started again (as the benchmark does on a hardware failure), the views attached to the new player and the
+     * video opened again where it was.
+     */
+    fun reloadForEffects() {
+        val s = service ?: return
+        if (!s.isVideoPlaying || displayManager.isOnRenderer || isLoadingEffects) return
+        isLoadingEffects = true
+        val scale = s.mediaplayer.videoScale
+        lifecycleScope.launch {
+            try {
+                s.vout?.detachViews()
+                s.playlistManager.restartForEffects { mp ->
+                    videoLayout?.let {
+                        mp.attachViews(it, displayManager, true, false)
+                        mp.videoScale = scale
+                    }
+                }
+            } finally {
+                isLoadingEffects = false
+            }
+        }
+    }
+    private var isLoadingEffects = false
+
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private fun startPlayback() {
         /* start playback only when audio service and both surfaces are ready */
