@@ -34,4 +34,8 @@
         <item>Unicode ez diren azpitituluak ondo erakusten dira: hebreera, arabiera, errusiera, greziera, turkiera, japoniera, txinera, koreera eta thailandierako fitxategiak beren letren eta izeneko hizkuntzaren bidez ezagutzen dira.</item>
         <item>Honi buruz atalak interfazearen diseinua Juxtopposed-i aitortzen dio, diseinuaren estekekin, mahaigainean bezala.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Telefono hau</string>
+    <string name="rd_cast_this_tablet">Tableta hau</string>
+    <string name="rd_cast_none_found">Ez da gailurik aurkitu. Piztu zure telebista edo Chromecast-a, gailu honen sare berean.</string>
+    <string name="rd_cast_no_answer">%1$s gailuak ez du erantzuten. Egiaztatu piztuta dagoela eta gailu honen sare berean dagoela.</string>
 </resources>

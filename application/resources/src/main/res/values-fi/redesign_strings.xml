@@ -274,4 +274,26 @@
     <string name="rd_eq_two_pass">Kaksivaiheinen taajuuskorjain</string>
     <string name="rd_eq_preset">Taajuuskorjaimen esiasetus</string>
     <string name="rd_eq_custom">Mukauta</string>
+    <string name="rd_cast_to">Suoratoista laitteeseen</string>
+    <string name="rd_cast_to_tv">Suoratoista TV:hen</string>
+    <string name="rd_casting_to">Suoratoistetaan laitteeseen %1$s</string>
+    <string name="rd_cast_connecting">Yhdistetään…</string>
+    <string name="rd_cast_sound_only">Vain ääni</string>
+    <string name="rd_cast_not_playing_retry">Ei toistu: yritä uudelleen valitsemalla se</string>
+    <string name="rd_cast_looking">Etsitään televisioita ja Chromecasteja verkostasi…</string>
+    <string name="rd_cast_playing_on">Toistetaan laitteessa %1$s</string>
+    <string name="rd_cast_connecting_to">Yhdistetään laitteeseen %1$s…</string>
+    <string name="rd_cast_not_playing_on">Ei toistu laitteessa %1$s</string>
+    <string name="rd_cast_sound_plays_on">Ääni toistuu laitteessa %1$s</string>
+    <string name="rd_cast_hint">Tauota, kelaa ja vaihda tekstitystä täällä: TV seuraa.</string>
+    <string name="rd_cast_try_again">Yritä uudelleen</string>
+    <string name="rd_cast_play_here">Toista täällä</string>
+    <string name="rd_cast_stop">Lopeta suoratoisto</string>
+    <string name="rd_cast_refused">%1$s kieltäytyi toistamasta tätä videota.</string>
+    <string name="rd_cast_stopped">%1$s lopetti toiston.</string>
+    <string name="rd_cast_taken">%1$s toistaa nyt jotain muuta.</string>
+    <string name="rd_cast_could_not_play">%1$s ei voinut toistaa videota.</string>
+    <string name="rd_cast_subtitles_note">Näytetyt tekstitykset lähetetään televisioon kuvan mukana.</string>
+    <string name="rd_cast_subtitles_on">Tekstitys televisiossa: %1$s</string>
+    <string name="rd_cast_subtitles_off">Tekstitys pois televisiosta</string>
 </resources>

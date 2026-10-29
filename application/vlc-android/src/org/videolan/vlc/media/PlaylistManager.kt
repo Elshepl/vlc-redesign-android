@@ -476,13 +476,28 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
         launch { determinePrevAndNextIndices() }
     }
 
-    fun setRenderer(item: RendererItem?) {
-        player.setRenderer(item)
+    fun setRenderer(item: RendererItem?, live: Boolean = true) {
+        player.setRenderer(item, live)
         showAudioPlayer.value = PlayerController.playbackState != PlaybackStateCompat.STATE_STOPPED && (item !== null || !player.isVideoPlaying())
     }
 
     /** VLC Redesign: the time to open the media at again for the video effects (-1: none) */
     private var effectsResumeTime = -1L
+    /** VLC Redesign, casting: the media playing was opened without its picture (":no-video") */
+    private var openedNoVideo = false
+
+    /** VLC Redesign, casting: a video opened without its picture (played as audio): a device would get no picture */
+    fun openedWithoutVideo() = openedNoVideo && getCurrentMedia()?.type == MediaWrapper.TYPE_VIDEO
+
+    /**
+     * VLC Redesign, casting: the media opened again at [time] (Try again, back here after a failure, another
+     * device), without asking where to resume.
+     */
+    fun restartAt(time: Long, paused: Boolean) {
+        if (!hasMedia()) return
+        effectsResumeTime = time.coerceAtLeast(0L)
+        launch { playIndex(currentIndex, if (paused) MediaWrapper.MEDIA_PAUSED else 0, forceResume = true) }
+    }
 
     /**
      * VLC Redesign: libvlc 3 cannot change the filters of a playing video (a media's own ":video-filter" never
@@ -539,9 +554,12 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
         val isInCustomPiP: Boolean = service.isInPiPMode.value ?: false
         if (mw.type == MediaWrapper.TYPE_VIDEO && !isAppStarted() && !isInCustomPiP) videoBackground = true
         val isVideoPlaying = mw.type == MediaWrapper.TYPE_VIDEO && (player.isVideoPlaying() || effectsResumeTime >= 0L)
+        // VLC Redesign, casting: a video goes to the device with its picture, from the library or the
+        // background too (":no-video" made it sound only); "Audio only" in the settings keeps it there
+        val castVideo = player.hasRenderer && mw.type == MediaWrapper.TYPE_VIDEO
         setRepeatTypeFromSettings()
-        if (!videoBackground && isVideoPlaying) mw.addFlags(MediaWrapper.MEDIA_VIDEO)
-        if (videoBackground) mw.addFlags(MediaWrapper.MEDIA_FORCE_AUDIO)
+        if ((!videoBackground && isVideoPlaying) || castVideo) mw.addFlags(MediaWrapper.MEDIA_VIDEO)
+        if (videoBackground && !castVideo) mw.addFlags(MediaWrapper.MEDIA_FORCE_AUDIO)
         if (isBenchmark) mw.addFlags(MediaWrapper.MEDIA_BENCHMARK)
         parsed = false
         player.switchToVideo = false
@@ -603,7 +621,9 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
             }
             //todo in VLC 4.0, this should be done by using libvlc_media_player_set_time instead of start-time
             media.addOption(":start-time=${start/1000L}")
-            media.addOption(":no-sout-chromecast-video")
+            // VLC Redesign, casting: no ":no-sout-chromecast-video" on every media: "Audio only" is libvlc's option
+            // (VLCOptions), and the media's own options do not reach the Chromecast output of libvlc 3
+            openedNoVideo = (flags or mw.flags) and MediaWrapper.MEDIA_VIDEO == 0
             // VLC Redesign, Live TV: the options of the channel (its user agent, its referrer)
             org.videolan.vlc.livetv.TvPlayback.mediaOptions(mw.uri.toString()).forEach { media.addOption(it) }
             VLCOptions.setMediaOptions(media, ctx, flags or mw.flags, PlaybackService.hasRenderer())
@@ -1298,6 +1318,11 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                     playingState.value = true
                 }
                 MediaPlayer.Event.EndReached -> {
+                    // VLC Redesign, casting: the device refused the media or stopped by itself: not the end
+                    if (org.videolan.vlc.cast.CastController.endIsFailure(service)) {
+                        service.executeUpdate()
+                        return
+                    }
                     clearABRepeat()
                     getCurrentMedia()?.addFlags(MediaWrapper.MEDIA_FROM_START)
                     if (currentIndex != nextIndex) {
@@ -1323,6 +1348,11 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                     }
                 }
                 MediaPlayer.Event.EncounteredError -> {
+                    // VLC Redesign, casting: the casting screen says what went wrong (Try again / Play here)
+                    if (org.videolan.vlc.cast.CastController.errorIsCast()) {
+                        service.executeUpdate()
+                        return
+                    }
                     val location = try {
                         getCurrentMedia()?.location
                     } catch (e: NullPointerException) {

@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Ισοσταθμιστής δύο περασμάτων</string>
     <string name="rd_eq_preset">Προρρύθμισης ισοσταθμιστή</string>
     <string name="rd_eq_custom">Προσαρμοσμένη</string>
+    <string name="rd_cast_to">Μετάδοση σε</string>
+    <string name="rd_cast_to_tv">Μετάδοση σε τηλεόραση</string>
+    <string name="rd_casting_to">Μετάδοση στο %1$s</string>
+    <string name="rd_cast_connecting">Σύνδεση…</string>
+    <string name="rd_cast_sound_only">Μόνο ήχος</string>
+    <string name="rd_cast_not_playing_retry">Δεν αναπαράγεται: επιλέξτε το για νέα προσπάθεια</string>
+    <string name="rd_cast_looking">Αναζήτηση τηλεοράσεων και Chromecast στο δίκτυό σας…</string>
+    <string name="rd_cast_playing_on">Αναπαραγωγή στο %1$s</string>
+    <string name="rd_cast_connecting_to">Σύνδεση στο %1$s…</string>
+    <string name="rd_cast_not_playing_on">Δεν αναπαράγεται στο %1$s</string>
+    <string name="rd_cast_sound_plays_on">Ο ήχος αναπαράγεται στο %1$s</string>
+    <string name="rd_cast_hint">Κάντε παύση, μετακινηθείτε και αλλάξτε τους υπότιτλους εδώ: η τηλεόραση ακολουθεί.</string>
+    <string name="rd_cast_try_again">Δοκιμάστε ξανά</string>
+    <string name="rd_cast_play_here">Αναπαραγωγή εδώ</string>
+    <string name="rd_cast_stop">Διακοπή μετάδοσης</string>
+    <string name="rd_cast_refused">Το %1$s αρνήθηκε να αναπαραγάγει αυτό το βίντεο.</string>
+    <string name="rd_cast_stopped">Το %1$s σταμάτησε την αναπαραγωγή.</string>
+    <string name="rd_cast_taken">Το %1$s αναπαράγει τώρα κάτι άλλο.</string>
+    <string name="rd_cast_could_not_play">Το %1$s δεν μπόρεσε να αναπαραγάγει το βίντεο.</string>
+    <string name="rd_cast_subtitles_note">Οι υπότιτλοι που εμφανίζονται στέλνονται στην τηλεόραση μαζί με την εικόνα.</string>
+    <string name="rd_cast_subtitles_on">Υπότιτλοι στην τηλεόραση: %1$s</string>
+    <string name="rd_cast_subtitles_off">Υπότιτλοι απενεργοποιημένοι στην τηλεόραση</string>
 </resources>

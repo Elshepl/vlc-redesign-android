@@ -36,4 +36,8 @@
         <item>زیرنویس‌هایی که Unicode نیستند درست نمایش داده می‌شوند: پرونده‌های عبری، عربی، روسی، یونانی، ترکی، ژاپنی، چینی، کره‌ای و تایلندی از روی حروفشان و زبانی که در نامشان آمده شناخته می‌شوند.</item>
         <item>بخش «درباره» طراحی رابط را به Juxtopposed نسبت می‌دهد، همراه با پیوندهای طرح، مانند نسخهٔ رایانه.</item>
     </string-array>
+    <string name="rd_cast_this_phone">این تلفن</string>
+    <string name="rd_cast_this_tablet">این تبلت</string>
+    <string name="rd_cast_none_found">هیچ دستگاهی یافت نشد. تلویزیون یا Chromecast خود را روی همان شبکهٔ این دستگاه روشن کنید.</string>
+    <string name="rd_cast_no_answer">%1$s پاسخ نمی‌دهد. بررسی کنید که روشن باشد و روی همان شبکهٔ این دستگاه باشد.</string>
 </resources>

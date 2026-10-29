@@ -34,4 +34,8 @@
         <item>Ondertitels die geen Unicode zijn, worden goed weergegeven: Hebreeuwse, Arabische, Russische, Griekse, Turkse, Japanse, Chinese, Koreaanse en Thaise bestanden worden herkend aan hun letters en aan de taal in hun naam.</item>
         <item>Over vermeldt Juxtopposed als ontwerper van de interface, met de links naar het ontwerp, net als op de desktop.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Deze telefoon</string>
+    <string name="rd_cast_this_tablet">Deze tablet</string>
+    <string name="rd_cast_none_found">Geen apparaat gevonden. Zet uw tv of Chromecast aan, op hetzelfde netwerk als dit apparaat.</string>
+    <string name="rd_cast_no_answer">%1$s antwoordt niet. Controleer of het apparaat aan staat en op hetzelfde netwerk zit als dit apparaat.</string>
 </resources>

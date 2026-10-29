@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">ടു-പാസ് ഇക്വലൈസർ</string>
     <string name="rd_eq_preset">ഇക്വലൈസര്‍ പ്രീസെറ്റ്</string>
     <string name="rd_eq_custom">പതിവ്</string>
+    <string name="rd_cast_to">കാസ്റ്റ് ചെയ്യുക</string>
+    <string name="rd_cast_to_tv">ടിവിയിലേക്ക് കാസ്റ്റ് ചെയ്യുക</string>
+    <string name="rd_casting_to">%1$s-ലേക്ക് കാസ്റ്റ് ചെയ്യുന്നു</string>
+    <string name="rd_cast_connecting">കണക്റ്റ് ചെയ്യുന്നു…</string>
+    <string name="rd_cast_sound_only">ശബ്ദം മാത്രം</string>
+    <string name="rd_cast_not_playing_retry">പ്ലേ ചെയ്യുന്നില്ല: വീണ്ടും ശ്രമിക്കാൻ ഇത് തിരഞ്ഞെടുക്കുക</string>
+    <string name="rd_cast_looking">നിങ്ങളുടെ നെറ്റ്വർക്കിൽ ടിവികൾക്കും Chromecast-കൾക്കുമായി തിരയുന്നു…</string>
+    <string name="rd_cast_playing_on">%1$s-ൽ പ്ലേ ചെയ്യുന്നു</string>
+    <string name="rd_cast_connecting_to">%1$s-ലേക്ക് കണക്റ്റ് ചെയ്യുന്നു…</string>
+    <string name="rd_cast_not_playing_on">%1$s-ൽ പ്ലേ ചെയ്യുന്നില്ല</string>
+    <string name="rd_cast_sound_plays_on">ശബ്ദം %1$s-ൽ പ്ലേ ചെയ്യുന്നു</string>
+    <string name="rd_cast_hint">ഇവിടെ പോസ് ചെയ്യുക, സീക്ക് ചെയ്യുക, ഉപശീർഷകങ്ങൾ മാറ്റുക: ടിവി അത് പിന്തുടരും.</string>
+    <string name="rd_cast_try_again">വീണ്ടും ശ്രമിക്കുക</string>
+    <string name="rd_cast_play_here">ഇവിടെ പ്ലേ ചെയ്യുക</string>
+    <string name="rd_cast_stop">കാസ്റ്റിംഗ് നിർത്തുക</string>
+    <string name="rd_cast_refused">%1$s ഈ വീഡിയോ പ്ലേ ചെയ്യാൻ വിസമ്മതിച്ചു.</string>
+    <string name="rd_cast_stopped">%1$s പ്ലേ ചെയ്യുന്നത് നിർത്തി.</string>
+    <string name="rd_cast_taken">%1$s ഇപ്പോൾ മറ്റെന്തോ പ്ലേ ചെയ്യുന്നു.</string>
+    <string name="rd_cast_could_not_play">%1$s-ന് വീഡിയോ പ്ലേ ചെയ്യാനായില്ല.</string>
+    <string name="rd_cast_subtitles_note">കാണിക്കുന്ന ഉപശീർഷകങ്ങൾ ചിത്രത്തോടൊപ്പം ടിവിയിലേക്ക് പോകും.</string>
+    <string name="rd_cast_subtitles_on">ടിവിയിലെ ഉപശീർഷകങ്ങൾ: %1$s</string>
+    <string name="rd_cast_subtitles_off">ടിവിയിൽ ഉപശീർഷകങ്ങൾ ഓഫ്</string>
 </resources>

@@ -35,4 +35,8 @@
         <item>Mae isdeitlau nad ydynt yn Unicode yn dangos yn gywir: mae ffeiliau Hebraeg, Arabeg, Rwsieg, Groeg, Tyrceg, Japaneg, Tsieinëeg, Coreeg a Thai yn cael eu hadnabod wrth eu llythrennau a\'r iaith yn eu henw.</item>
         <item>Mae Ynghylch yn cydnabod Juxtopposed am ddylunio\'r rhyngwyneb, gyda dolenni at y dyluniad, fel ar y bwrdd gwaith.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Y ffôn hwn</string>
+    <string name="rd_cast_this_tablet">Y llechen hon</string>
+    <string name="rd_cast_none_found">Ni chanfuwyd dyfais. Trowch eich teledu neu Chromecast ymlaen, ar yr un rhwydwaith â\'r ddyfais hon.</string>
+    <string name="rd_cast_no_answer">Nid yw %1$s yn ateb. Gwiriwch ei fod ymlaen, ac ar yr un rhwydwaith â\'r ddyfais hon.</string>
 </resources>

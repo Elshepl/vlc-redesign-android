@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Zweifach-Equalizer</string>
     <string name="rd_eq_preset">Equalizervoreinstellung</string>
     <string name="rd_eq_custom">Eigenes</string>
+    <string name="rd_cast_to">Übertragen an</string>
+    <string name="rd_cast_to_tv">Auf TV übertragen</string>
+    <string name="rd_casting_to">Übertragung an %1$s</string>
+    <string name="rd_cast_connecting">Verbindungsaufbau…</string>
+    <string name="rd_cast_sound_only">Nur Ton</string>
+    <string name="rd_cast_not_playing_retry">Keine Wiedergabe: zum erneuten Versuch auswählen</string>
+    <string name="rd_cast_looking">Suche nach Fernsehern und Chromecasts in Ihrem Netzwerk…</string>
+    <string name="rd_cast_playing_on">Wiedergabe auf %1$s</string>
+    <string name="rd_cast_connecting_to">Verbindung zu %1$s…</string>
+    <string name="rd_cast_not_playing_on">Keine Wiedergabe auf %1$s</string>
+    <string name="rd_cast_sound_plays_on">Der Ton wird auf %1$s wiedergegeben</string>
+    <string name="rd_cast_hint">Pausieren, spulen und Untertitel wechseln Sie hier: Der Fernseher folgt.</string>
+    <string name="rd_cast_try_again">Erneut versuchen</string>
+    <string name="rd_cast_play_here">Hier wiedergeben</string>
+    <string name="rd_cast_stop">Übertragung beenden</string>
+    <string name="rd_cast_refused">%1$s hat die Wiedergabe dieses Videos abgelehnt.</string>
+    <string name="rd_cast_stopped">%1$s hat die Wiedergabe beendet.</string>
+    <string name="rd_cast_taken">%1$s spielt jetzt etwas anderes ab.</string>
+    <string name="rd_cast_could_not_play">%1$s konnte das Video nicht wiedergeben.</string>
+    <string name="rd_cast_subtitles_note">Die angezeigten Untertitel werden mit dem Bild an den Fernseher gesendet.</string>
+    <string name="rd_cast_subtitles_on">Untertitel auf dem Fernseher: %1$s</string>
+    <string name="rd_cast_subtitles_off">Untertitel auf dem Fernseher aus</string>
 </resources>

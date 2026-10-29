@@ -265,4 +265,26 @@
     <string name="rd_eq_two_pass">ਦੋ-ਪਾਸ ਇਕੂਲਾਈਜ਼ਰ</string>
     <string name="rd_eq_preset">ਇਕੂਲਾਈਜ਼ਰ ਪ੍ਰੀ-ਸੈੱਟ</string>
     <string name="rd_eq_custom">ਕਸਟਮ</string>
+    <string name="rd_cast_to">ਇਸ ਉੱਤੇ ਕਾਸਟ ਕਰੋ</string>
+    <string name="rd_cast_to_tv">TV ਉੱਤੇ ਕਾਸਟ ਕਰੋ</string>
+    <string name="rd_casting_to">%1$s ਉੱਤੇ ਕਾਸਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
+    <string name="rd_cast_connecting">ਜੁੜਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
+    <string name="rd_cast_sound_only">ਸਿਰਫ਼ ਆਵਾਜ਼</string>
+    <string name="rd_cast_not_playing_retry">ਨਹੀਂ ਚੱਲ ਰਿਹਾ: ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰਨ ਲਈ ਇਸ ਨੂੰ ਚੁਣੋ</string>
+    <string name="rd_cast_looking">ਤੁਹਾਡੇ ਨੈੱਟਵਰਕ ਉੱਤੇ TV ਅਤੇ Chromecast ਲੱਭੇ ਜਾ ਰਹੇ ਹਨ…</string>
+    <string name="rd_cast_playing_on">%1$s ਉੱਤੇ ਚੱਲ ਰਿਹਾ ਹੈ</string>
+    <string name="rd_cast_connecting_to">%1$s ਨਾਲ ਜੁੜਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
+    <string name="rd_cast_not_playing_on">%1$s ਉੱਤੇ ਨਹੀਂ ਚੱਲ ਰਿਹਾ</string>
+    <string name="rd_cast_sound_plays_on">ਆਵਾਜ਼ %1$s ਉੱਤੇ ਚੱਲਦੀ ਹੈ</string>
+    <string name="rd_cast_hint">ਵਿਰਾਮ, ਸੀਕ ਅਤੇ ਸਬ-ਟਾਈਟਲ ਇੱਥੇ ਬਦਲੋ: TV ਵੀ ਨਾਲ ਬਦਲੇਗਾ।</string>
+    <string name="rd_cast_try_again">ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string name="rd_cast_play_here">ਇੱਥੇ ਚਲਾਓ</string>
+    <string name="rd_cast_stop">ਕਾਸਟਿੰਗ ਰੋਕੋ</string>
+    <string name="rd_cast_refused">%1$s ਨੇ ਇਹ ਵਿਡੀਓ ਚਲਾਉਣ ਤੋਂ ਇਨਕਾਰ ਕੀਤਾ।</string>
+    <string name="rd_cast_stopped">%1$s ਨੇ ਚਲਾਉਣਾ ਬੰਦ ਕਰ ਦਿੱਤਾ।</string>
+    <string name="rd_cast_taken">%1$s ਹੁਣ ਕੁਝ ਹੋਰ ਚਲਾ ਰਿਹਾ ਹੈ।</string>
+    <string name="rd_cast_could_not_play">%1$s ਵਿਡੀਓ ਨਹੀਂ ਚਲਾ ਸਕਿਆ।</string>
+    <string name="rd_cast_subtitles_note">ਵੇਖਾਏ ਜਾ ਰਹੇ ਸਬ-ਟਾਈਟਲ ਤਸਵੀਰ ਦੇ ਨਾਲ TV ਉੱਤੇ ਜਾਂਦੇ ਹਨ।</string>
+    <string name="rd_cast_subtitles_on">ਟੀਵੀ ਉੱਤੇ ਸਬ-ਟਾਈਟਲ: %1$s</string>
+    <string name="rd_cast_subtitles_off">ਟੀਵੀ ਉੱਤੇ ਸਬ-ਟਾਈਟਲ ਬੰਦ</string>
 </resources>

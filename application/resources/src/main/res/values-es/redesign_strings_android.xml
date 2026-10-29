@@ -34,4 +34,8 @@
         <item>Los subtítulos que no están en Unicode se muestran bien: los archivos en hebreo, árabe, ruso, griego, turco, japonés, chino, coreano y tailandés se reconocen por sus letras y por el idioma de su nombre.</item>
         <item>Acerca de atribuye el diseño de la interfaz a Juxtopposed, con los enlaces del diseño, como en el escritorio.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Este teléfono</string>
+    <string name="rd_cast_this_tablet">Esta tableta</string>
+    <string name="rd_cast_none_found">No se encontró ningún dispositivo. Encienda su TV o Chromecast en la misma red que este dispositivo.</string>
+    <string name="rd_cast_no_answer">%1$s no responde. Compruebe que está encendido y en la misma red que este dispositivo.</string>
 </resources>

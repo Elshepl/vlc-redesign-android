@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Двухпраходны эквалайзер</string>
     <string name="rd_eq_preset">Нарыхтоўка для эквалайзера:</string>
     <string name="rd_eq_custom">Іншае</string>
+    <string name="rd_cast_to">Трансляваць на</string>
+    <string name="rd_cast_to_tv">Трансляваць на ТБ</string>
+    <string name="rd_casting_to">Трансляцыя на %1$s</string>
+    <string name="rd_cast_connecting">Падключэнне…</string>
+    <string name="rd_cast_sound_only">Толькі гук</string>
+    <string name="rd_cast_not_playing_retry">Не грае: абярыце, каб паспрабаваць зноў</string>
+    <string name="rd_cast_looking">Пошук тэлевізараў і Chromecast у вашай сетцы…</string>
+    <string name="rd_cast_playing_on">Грае на %1$s</string>
+    <string name="rd_cast_connecting_to">Падключэнне да %1$s…</string>
+    <string name="rd_cast_not_playing_on">Не грае на %1$s</string>
+    <string name="rd_cast_sound_plays_on">Гук грае на %1$s</string>
+    <string name="rd_cast_hint">Ставіце на паўзу, перамотвайце і змяняйце субтытры тут: тэлевізар паўтарае.</string>
+    <string name="rd_cast_try_again">Паспрабаваць зноў</string>
+    <string name="rd_cast_play_here">Граць тут</string>
+    <string name="rd_cast_stop">Спыніць трансляцыю</string>
+    <string name="rd_cast_refused">%1$s адмаўляецца прайграваць гэта відэа.</string>
+    <string name="rd_cast_stopped">%1$s: прайграванне спынена.</string>
+    <string name="rd_cast_taken">%1$s зараз прайграе нешта іншае.</string>
+    <string name="rd_cast_could_not_play">%1$s не можа прайграць відэа.</string>
+    <string name="rd_cast_subtitles_note">Паказаныя субтытры адпраўляюцца на тэлевізар разам з відарысам.</string>
+    <string name="rd_cast_subtitles_on">Субтытры на тэлевізары: %1$s</string>
+    <string name="rd_cast_subtitles_off">Субтытры на тэлевізары выключаны</string>
 </resources>

@@ -34,4 +34,8 @@
         <item>Unicode 以外の字幕も正しく表示されます。ヘブライ語、アラビア語、ロシア語、ギリシャ語、トルコ語、日本語、中国語、韓国語、タイ語のファイルは、文字とファイル名の言語から判別されます。</item>
         <item>「情報」画面にインターフェースのデザイナー Juxtopposed のクレジットとデザインへのリンクを、デスクトップ版と同じように表示します。</item>
     </string-array>
+    <string name="rd_cast_this_phone">このスマートフォン</string>
+    <string name="rd_cast_this_tablet">このタブレット</string>
+    <string name="rd_cast_none_found">デバイスが見つかりません。このデバイスと同じネットワーク上で、テレビまたはChromecastの電源を入れてください。</string>
+    <string name="rd_cast_no_answer">%1$sから応答がありません。電源が入っていて、このデバイスと同じネットワーク上にあるか確認してください。</string>
 </resources>

@@ -85,7 +85,9 @@ import org.videolan.tools.setInvisible
 import org.videolan.tools.setVisible
 import org.videolan.vlc.PlaybackService
 import org.videolan.vlc.R
-import org.videolan.vlc.RendererDelegate
+import android.content.res.ColorStateList
+import androidx.core.widget.ImageViewCompat
+import org.videolan.vlc.gui.helpers.rdAccent
 import org.videolan.vlc.VlcMigrationHelper
 import org.videolan.vlc.databinding.PlayerHudBinding
 import org.videolan.vlc.databinding.PlayerHudRightBinding
@@ -618,8 +620,13 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 overlayBackground = player.findViewById(R.id.player_overlay_background)
                 if (!AndroidDevices.isChromeBook && !player.isTv
                         && player.settings.getBoolean(KEY_ENABLE_CASTING, true)) {
-                    PlaybackService.renderer.observe(player) { rendererItem -> hudRightBinding.videoRenderer.setImageDrawable(AppCompatResources.getDrawable(player, if (rendererItem == null) R.drawable.ic_player_renderer else R.drawable.ic_player_renderer_on)) }
-                    RendererDelegate.renderers.observe(player) { updateRendererVisibility() }
+                    PlaybackService.renderer.observe(player) { rendererItem ->
+                        hudRightBinding.videoRenderer.setImageDrawable(AppCompatResources.getDrawable(player, if (rendererItem == null) R.drawable.ic_player_renderer else R.drawable.ic_player_renderer_on))
+                        // VLC Redesign: casting, in the accent; its name says where
+                        ImageViewCompat.setImageTintList(hudRightBinding.videoRenderer, if (rendererItem == null) null else ColorStateList.valueOf(player.rdAccent()))
+                        hudRightBinding.videoRenderer.contentDescription = rendererItem?.let { player.getString(R.string.rd_casting_to, it.displayName) } ?: player.getString(R.string.rd_cast_to_tv)
+                    }
+                    updateRendererVisibility()
                 }
 
                 setTitle(service.currentMediaWrapper?.title)
@@ -803,7 +810,9 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     }
 
     fun updateRendererVisibility() {
-        if (::hudRightBinding.isInitialized) hudRightBinding.videoRenderer.visibility = if (player.isLocked || RendererDelegate.renderers.value.isNullOrEmpty()) View.GONE else View.VISIBLE
+        // VLC Redesign: shown whether devices were found or not (its list looks for them), as on the desktop
+        if (::hudRightBinding.isInitialized) hudRightBinding.videoRenderer.visibility = if (player.isLocked || AndroidDevices.isChromeBook || player.isTv
+                || !player.settings.getBoolean(KEY_ENABLE_CASTING, true)) View.GONE else View.VISIBLE
     }
 
     private val titleConstraintSetLandscape = ConstraintSet()

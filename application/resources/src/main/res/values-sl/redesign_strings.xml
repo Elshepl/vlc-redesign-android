@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Dvoprehodni uravnalnik zvoka</string>
     <string name="rd_eq_preset">Predloge uravnalnika zvoka</string>
     <string name="rd_eq_custom">Po meri</string>
+    <string name="rd_cast_to">Predvajaj v napravi</string>
+    <string name="rd_cast_to_tv">Predvajaj na televizorju</string>
+    <string name="rd_casting_to">Predvajanje v napravi %1$s</string>
+    <string name="rd_cast_connecting">Povezovanje …</string>
+    <string name="rd_cast_sound_only">Samo zvok</string>
+    <string name="rd_cast_not_playing_retry">Ne predvaja: izberite jo za ponoven poskus</string>
+    <string name="rd_cast_looking">Iskanje televizorjev in naprav Chromecast v vašem omrežju …</string>
+    <string name="rd_cast_playing_on">Predvajanje na %1$s</string>
+    <string name="rd_cast_connecting_to">Povezovanje z napravo %1$s …</string>
+    <string name="rd_cast_not_playing_on">Ne predvaja se na %1$s</string>
+    <string name="rd_cast_sound_plays_on">Zvok se predvaja na %1$s</string>
+    <string name="rd_cast_hint">Premor, iskanje in podnapise upravljajte tukaj: televizor sledi.</string>
+    <string name="rd_cast_try_again">Poskusi znova</string>
+    <string name="rd_cast_play_here">Predvajaj tukaj</string>
+    <string name="rd_cast_stop">Ustavi predvajanje v napravi</string>
+    <string name="rd_cast_refused">Naprava %1$s je zavrnila predvajanje tega videa.</string>
+    <string name="rd_cast_stopped">Naprava %1$s je ustavila predvajanje.</string>
+    <string name="rd_cast_taken">Naprava %1$s zdaj predvaja nekaj drugega.</string>
+    <string name="rd_cast_could_not_play">Naprava %1$s ni mogla predvajati videa.</string>
+    <string name="rd_cast_subtitles_note">Prikazani podnapisi gredo na televizor skupaj s sliko.</string>
+    <string name="rd_cast_subtitles_on">Podnapisi na televizorju: %1$s</string>
+    <string name="rd_cast_subtitles_off">Podnapisi na televizorju izklopljeni</string>
 </resources>

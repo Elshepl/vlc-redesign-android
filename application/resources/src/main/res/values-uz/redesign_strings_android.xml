@@ -34,4 +34,8 @@
         <item>Unicode bo‘lmagan subtitrlar to‘g‘ri ko‘rsatiladi: ibroniy, arab, rus, yunon, turk, yapon, xitoy, koreys va tay tilidagi fayllar harflari va nomidagi til orqali aniqlanadi.</item>
         <item>“Haqida” bo‘limi kompyuter versiyasidagidek interfeys dizayni uchun Juxtopposed ni dizayn havolalari bilan birga ko‘rsatadi.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Bu telefon</string>
+    <string name="rd_cast_this_tablet">Bu planshet</string>
+    <string name="rd_cast_none_found">Hech qanday qurilma topilmadi. Televizor yoki Chromecast\'ni ushbu qurilma bilan bir xil tarmoqda yoqing.</string>
+    <string name="rd_cast_no_answer">%1$s javob bermayapti. U yoniq va ushbu qurilma bilan bir xil tarmoqda ekanini tekshiring.</string>
 </resources>

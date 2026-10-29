@@ -34,4 +34,8 @@
         <item>Els subtítols que no són Unicode es mostren bé: els fitxers en hebreu, àrab, rus, grec, turc, japonès, xinès, coreà i tai es reconeixen per les lletres i per l\'idioma del nom.</item>
         <item>Quant a atribueix el disseny de la interfície a Juxtopposed, amb els enllaços del disseny, com a l\'escriptori.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Aquest telèfon</string>
+    <string name="rd_cast_this_tablet">Aquesta tauleta</string>
+    <string name="rd_cast_none_found">No s\'ha trobat cap dispositiu. Engegueu el televisor o el Chromecast, a la mateixa xarxa que aquest dispositiu.</string>
+    <string name="rd_cast_no_answer">%1$s no respon. Comproveu que estigui engegat i a la mateixa xarxa que aquest dispositiu.</string>
 </resources>

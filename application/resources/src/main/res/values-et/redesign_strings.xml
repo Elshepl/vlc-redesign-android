@@ -274,4 +274,26 @@
     <string name="rd_eq_two_pass">Kahekäiguline ekvalaiser</string>
     <string name="rd_eq_preset">Ekvalaiseri eelseadistus</string>
     <string name="rd_eq_custom">Oma</string>
+    <string name="rd_cast_to">Kanna üle seadmesse</string>
+    <string name="rd_cast_to_tv">Kanna üle telerisse</string>
+    <string name="rd_casting_to">Ülekanne seadmesse %1$s</string>
+    <string name="rd_cast_connecting">Ühendumine…</string>
+    <string name="rd_cast_sound_only">Ainult heli</string>
+    <string name="rd_cast_not_playing_retry">Ei mängi: vali see, et uuesti proovida</string>
+    <string name="rd_cast_looking">Telerite ja Chromecastide otsimine sinu võrgust…</string>
+    <string name="rd_cast_playing_on">Mängib seadmes %1$s</string>
+    <string name="rd_cast_connecting_to">Ühendumine seadmega %1$s…</string>
+    <string name="rd_cast_not_playing_on">Ei mängi seadmes %1$s</string>
+    <string name="rd_cast_sound_plays_on">Heli mängib seadmes %1$s</string>
+    <string name="rd_cast_hint">Pane pausile, keri ja muuda subtiitreid siin: teler järgib.</string>
+    <string name="rd_cast_try_again">Proovi uuesti</string>
+    <string name="rd_cast_play_here">Esita siin</string>
+    <string name="rd_cast_stop">Lõpeta ülekandmine</string>
+    <string name="rd_cast_refused">%1$s keeldus seda videot esitamast.</string>
+    <string name="rd_cast_stopped">%1$s lõpetas esitamise.</string>
+    <string name="rd_cast_taken">%1$s esitab nüüd midagi muud.</string>
+    <string name="rd_cast_could_not_play">%1$s ei suutnud videot esitada.</string>
+    <string name="rd_cast_subtitles_note">Kuvatud subtiitrid lähevad koos pildiga telerisse.</string>
+    <string name="rd_cast_subtitles_on">Subtiitrid teleris: %1$s</string>
+    <string name="rd_cast_subtitles_off">Subtiitrid teleris väljas</string>
 </resources>

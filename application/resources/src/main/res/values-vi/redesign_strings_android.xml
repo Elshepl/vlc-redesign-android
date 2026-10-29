@@ -34,4 +34,8 @@
         <item>Phụ đề không phải Unicode hiển thị đúng: các tập tin tiếng Do Thái, Ả Rập, Nga, Hy Lạp, Thổ Nhĩ Kỳ, Nhật, Trung, Hàn và Thái được nhận biết qua chữ viết và ngôn ngữ trong tên tập tin.</item>
         <item>Trang Giới thiệu ghi công thiết kế giao diện cho Juxtopposed, kèm các liên kết của bản thiết kế, giống như trên máy tính.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Điện thoại này</string>
+    <string name="rd_cast_this_tablet">Máy tính bảng này</string>
+    <string name="rd_cast_none_found">Không tìm thấy thiết bị nào. Hãy bật TV hoặc Chromecast của bạn, trong cùng mạng với thiết bị này.</string>
+    <string name="rd_cast_no_answer">%1$s không phản hồi. Hãy kiểm tra xem thiết bị đã bật và ở cùng mạng với thiết bị này chưa.</string>
 </resources>

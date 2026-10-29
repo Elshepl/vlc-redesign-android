@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the casting screen's card (the desktop's casting card, Player.qml castingCard): the cast icon
+     in the accent (it breathes while it connects), "Playing on <device>" / "Connecting to <device>…" / "Not
+     playing on <device>", the artwork and title of what plays there, the hint; when it failed, why, with Try
+     again and Play here; else Stop casting. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rd_casting_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rd_casting_card_bg"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:minWidth="280dp"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="28dp"
+        android:paddingBottom="24dp">
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/rd_casting_art"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+        <ImageView
+                android:id="@+id/rd_casting_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/rd_ic_cast" />
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/rd_casting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/rd_dark_fg_1"
+            android:textSize="18sp"
+            tools:text="Playing on Living room TV" />
+
+    <TextView
+            android:id="@+id/rd_casting_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#FFB8B8B8"
+            android:textDirection="firstStrong"
+            android:textSize="14sp"
+            tools:text="Big Buck Bunny" />
+
+    <!-- the device's volume, a moment after a volume key -->
+    <LinearLayout
+            android:id="@+id/rd_casting_volume"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/rd_ic_volume_high"
+                app:tint="#FFEAEAEA"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        <ProgressBar
+                android:id="@+id/rd_casting_volume_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progressDrawable="@drawable/rd_mini_progress" />
+
+        <TextView
+                android:id="@+id/rd_casting_volume_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:minWidth="36dp"
+                android:textAlignment="viewEnd"
+                android:textColor="#FFB8B8B8"
+                android:textSize="13sp"
+                tools:text="40%" />
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/rd_casting_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="@string/rd_cast_hint"
+            android:textColor="#FF8F8F8F"
+            android:textSize="13sp" />
+
+    <TextView
+            android:id="@+id/rd_casting_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Living room TV doesn't answer." />
+
+    <LinearLayout
+            android:id="@+id/rd_casting_failed_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/rd_casting_retry"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:minHeight="40dp"
+                android:text="@string/rd_cast_try_again"
+                android:textAllCaps="false"
+                app:cornerRadius="8dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/rd_casting_play_here"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/inter_medium"
+                android:minHeight="40dp"
+                android:text="@string/rd_cast_play_here"
+                android:textAllCaps="false"
+                android:textColor="@color/rd_dark_fg_1"
+                app:cornerRadius="8dp"
+                app:strokeColor="#FF4A4A4A"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/rd_casting_stop"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_medium"
+            android:minHeight="40dp"
+            android:text="@string/rd_cast_stop"
+            android:textAllCaps="false"
+            android:textColor="@color/rd_dark_fg_1"
+            app:cornerRadius="8dp"
+            app:strokeColor="#FF4A4A4A"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

@@ -36,4 +36,8 @@
         <item>Taispeántar fotheidil nach bhfuil in Unicode i gceart: aithnítear comhaid Eabhraise, Araibise, Rúisise, Gréigise, Tuircise, Seapáinise, Sínise, Cóiréise agus Téalainnise óna litreacha agus ón teanga ina n-ainm.</item>
         <item>Tugann Maidir Le creidiúint do Juxtopposed as dearadh na comhéadaine, le naisc chuig an dearadh, mar a dhéantar ar an deasc.</item>
     </string-array>
+    <string name="rd_cast_this_phone">An fón seo</string>
+    <string name="rd_cast_this_tablet">An táibléad seo</string>
+    <string name="rd_cast_none_found">Níor aimsíodh gléas. Cas air do theilifís nó do Chromecast, ar an líonra céanna leis an ngléas seo.</string>
+    <string name="rd_cast_no_answer">Ní fhreagraíonn %1$s. Seiceáil go bhfuil sé casta air, agus ar an líonra céanna leis an ngléas seo.</string>
 </resources>

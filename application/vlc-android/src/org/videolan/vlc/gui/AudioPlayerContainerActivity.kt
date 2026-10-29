@@ -274,6 +274,10 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
     }
 
     protected open fun initAudioPlayerContainerActivity() {
+        // VLC Redesign, casting: the device lost, back here
+        org.videolan.vlc.cast.CastController.notice.observe(this) { message ->
+            if (!message.isNullOrEmpty()) UiTools.snacker(this, message)
+        }
         findViewById<View>(R.id.fragment_placeholder)?.let {
             fragmentContainer = it
             originalBottomPadding = fragmentContainer.paddingBottom

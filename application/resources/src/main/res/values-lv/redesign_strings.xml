@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Divu caurgājienu ekvalaizers</string>
     <string name="rd_eq_preset">Ekvalaizera priekšiestatījums</string>
     <string name="rd_eq_custom">Pielāgots</string>
+    <string name="rd_cast_to">Apraidīt uz</string>
+    <string name="rd_cast_to_tv">Apraidīt uz TV</string>
+    <string name="rd_casting_to">Apraida uz %1$s</string>
+    <string name="rd_cast_connecting">Savienojas…</string>
+    <string name="rd_cast_sound_only">Tikai skaņa</string>
+    <string name="rd_cast_not_playing_retry">Netiek atskaņots: izvēlieties, lai mēģinātu vēlreiz</string>
+    <string name="rd_cast_looking">Meklē televizorus un Chromecast ierīces jūsu tīklā…</string>
+    <string name="rd_cast_playing_on">Atskaņo ierīcē %1$s</string>
+    <string name="rd_cast_connecting_to">Savienojas ar %1$s…</string>
+    <string name="rd_cast_not_playing_on">Netiek atskaņots ierīcē %1$s</string>
+    <string name="rd_cast_sound_plays_on">Skaņa skan ierīcē %1$s</string>
+    <string name="rd_cast_hint">Pauzējiet, pārtiniet un mainiet subtitrus šeit: televizors sekos.</string>
+    <string name="rd_cast_try_again">Mēģināt vēlreiz</string>
+    <string name="rd_cast_play_here">Atskaņot šeit</string>
+    <string name="rd_cast_stop">Apturēt apraidi</string>
+    <string name="rd_cast_refused">%1$s atteicās atskaņot šo video.</string>
+    <string name="rd_cast_stopped">%1$s pārtrauca atskaņošanu.</string>
+    <string name="rd_cast_taken">%1$s tagad atskaņo kaut ko citu.</string>
+    <string name="rd_cast_could_not_play">%1$s nevarēja atskaņot video.</string>
+    <string name="rd_cast_subtitles_note">Rādītie subtitri tiek nosūtīti uz televizoru kopā ar attēlu.</string>
+    <string name="rd_cast_subtitles_on">Subtitri televizorā: %1$s</string>
+    <string name="rd_cast_subtitles_off">Subtitri televizorā izslēgti</string>
 </resources>

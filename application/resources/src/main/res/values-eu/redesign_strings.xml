@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Bi igaroaldiko ekualizadorea</string>
     <string name="rd_eq_preset">Ekualizadorearen aurrezarpena</string>
     <string name="rd_eq_custom">Pertsonalizatua</string>
+    <string name="rd_cast_to">Igorri hona</string>
+    <string name="rd_cast_to_tv">Igorri telebistara</string>
+    <string name="rd_casting_to">%1$s gailura igortzen</string>
+    <string name="rd_cast_connecting">Konektatzen…</string>
+    <string name="rd_cast_sound_only">Soinua soilik</string>
+    <string name="rd_cast_not_playing_retry">Ez da erreproduzitzen ari: aukeratu berriro saiatzeko</string>
+    <string name="rd_cast_looking">Telebistak eta Chromecast-ak bilatzen zure sarean…</string>
+    <string name="rd_cast_playing_on">%1$s gailuan erreproduzitzen</string>
+    <string name="rd_cast_connecting_to">%1$s gailura konektatzen…</string>
+    <string name="rd_cast_not_playing_on">Ez da %1$s gailuan erreproduzitzen ari</string>
+    <string name="rd_cast_sound_plays_on">Soinua %1$s gailuan entzuten da</string>
+    <string name="rd_cast_hint">Pausarazi, bilatu eta aldatu azpitituluak hemen: telebistak jarraituko dizu.</string>
+    <string name="rd_cast_try_again">Saiatu berriro</string>
+    <string name="rd_cast_play_here">Erreproduzitu hemen</string>
+    <string name="rd_cast_stop">Gelditu igorpena</string>
+    <string name="rd_cast_refused">%1$s gailuak bideo hau erreproduzitzeari uko egin dio.</string>
+    <string name="rd_cast_stopped">%1$s gailuak erreproduzitzeari utzi dio.</string>
+    <string name="rd_cast_taken">%1$s gailua beste zerbait erreproduzitzen ari da orain.</string>
+    <string name="rd_cast_could_not_play">%1$s gailuak ezin izan du bideoa erreproduzitu.</string>
+    <string name="rd_cast_subtitles_note">Erakutsitako azpitituluak telebistara doaz irudiarekin batera.</string>
+    <string name="rd_cast_subtitles_on">Azpitituluak telebistan: %1$s</string>
+    <string name="rd_cast_subtitles_off">Azpitituluak desaktibatuta telebistan</string>
 </resources>

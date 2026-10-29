@@ -2,6 +2,7 @@ package org.videolan.vlc.media
 
 import android.content.Context
 import android.net.Uri
+import android.util.Log
 import android.support.v4.media.session.PlaybackStateCompat
 import org.videolan.vlc.util.RdToast as Toast
 import androidx.annotation.MainThread
@@ -81,7 +82,16 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
         mediaplayerEventListener = listener
         resetPlaybackState(time, media.duration)
         mediaplayer.setEventListener(null)
-        withContext(Dispatchers.IO) { if (!mediaplayer.isReleased) mediaplayer.media = media.apply { if (hasRenderer) parse() } }
+        withContext(Dispatchers.IO) {
+            if (!mediaplayer.isReleased) {
+                mediaplayer.media = media.apply { if (hasRenderer) parse() }
+                // (the previous media stopped with the media set: the device takes this one from its start)
+                if (pendingRenderer) {
+                    mediaplayer.setRenderer(renderer)
+                    pendingRenderer = false
+                }
+            }
+        }
         mediaplayer.setEventListener(this@PlayerController)
         if (!mediaplayer.isReleased) {
             if (Settings.getInstance(context).getBoolean(KEY_EQUALIZER_ENABLED, false)) withContext(Dispatchers.IO) {
@@ -207,9 +217,24 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
         mediaplayer.aspectRatio = aspect
     }
 
-    fun setRenderer(renderer: RendererItem?) {
-        if (!mediaplayer.isReleased) mediaplayer.setRenderer(renderer)
+    /** VLC Redesign, casting: the device the media player casts to */
+    var renderer: RendererItem? = null
+        private set
+
+    /** VLC Redesign, casting: the device is for the next media (set with it), not under the playing one */
+    private var pendingRenderer = false
+
+    /**
+     * [live]: the playing media changes its output at once; else the device takes the next media opened (libvlc 3
+     * moves only the sound of a playing video to a device, and the change under it fights the media opened again)
+     */
+    fun setRenderer(renderer: RendererItem?, live: Boolean = true) {
+        if (live || !mediaplayer.hasMedia()) {
+            if (!mediaplayer.isReleased) mediaplayer.setRenderer(renderer)
+            pendingRenderer = false
+        } else pendingRenderer = true
         hasRenderer = renderer !== null
+        this.renderer = renderer
     }
 
     fun release(player: MediaPlayer = mediaplayer) {
@@ -221,7 +246,7 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
                 try {
                     withTimeout(5000) { player.release() }
                 } catch (exception: TimeoutCancellationException) {
-                    launch { Toast.makeText(context, "media stop has timeouted!", Toast.LENGTH_LONG).show() }
+                    Log.w("VLC/PlayerController", "media stop has timed out")
                 }
             } else player.release()
         }

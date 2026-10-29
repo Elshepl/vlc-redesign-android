@@ -9,8 +9,6 @@
                 app:singleLineTitle="false"
                 android:key="enable_casting"
                 android:defaultValue="true"
-                android:switchTextOff="Disabled"
-                android:switchTextOn="Enabled"
                 android:title="@string/casting_switch_title"/>
         <CheckBoxPreference
                 android:key="casting_audio_only"

@@ -34,4 +34,8 @@
         <item>Subtiitrid, mis pole Unicode’is, kuvatakse õigesti: heebrea, araabia, vene, kreeka, türgi, jaapani, hiina, korea ja tai failid tuvastatakse nende tähtede ja nimes oleva keele järgi.</item>
         <item>Teave tunnustab Juxtopposedit kasutajaliidese kujunduse eest ja annab lingid kujundusele, nagu arvutiversioonis.</item>
     </string-array>
+    <string name="rd_cast_this_phone">See telefon</string>
+    <string name="rd_cast_this_tablet">See tahvelarvuti</string>
+    <string name="rd_cast_none_found">Seadet ei leitud. Lülita oma teler või Chromecast sisse, selle seadmega samas võrgus.</string>
+    <string name="rd_cast_no_answer">%1$s ei vasta. Kontrolli, kas see on sisse lülitatud ja selle seadmega samas võrgus.</string>
 </resources>

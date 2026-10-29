@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">2パスイコライザー</string>
     <string name="rd_eq_preset">イコライザープリセット</string>
     <string name="rd_eq_custom">カスタム</string>
+    <string name="rd_cast_to">キャスト先</string>
+    <string name="rd_cast_to_tv">テレビにキャスト</string>
+    <string name="rd_casting_to">%1$sにキャスト中</string>
+    <string name="rd_cast_connecting">接続しています…</string>
+    <string name="rd_cast_sound_only">音声のみ</string>
+    <string name="rd_cast_not_playing_retry">再生していません: 選択して再試行</string>
+    <string name="rd_cast_looking">ネットワーク上のテレビとChromecastを探しています…</string>
+    <string name="rd_cast_playing_on">%1$sで再生中</string>
+    <string name="rd_cast_connecting_to">%1$sに接続しています…</string>
+    <string name="rd_cast_not_playing_on">%1$sで再生していません</string>
+    <string name="rd_cast_sound_plays_on">音声は%1$sで再生されます</string>
+    <string name="rd_cast_hint">一時停止、シーク、字幕の変更はここで行えます: テレビも連動します。</string>
+    <string name="rd_cast_try_again">再試行</string>
+    <string name="rd_cast_play_here">ここで再生</string>
+    <string name="rd_cast_stop">キャストを停止</string>
+    <string name="rd_cast_refused">%1$sはこのビデオの再生を拒否しました。</string>
+    <string name="rd_cast_stopped">%1$sは再生を停止しました。</string>
+    <string name="rd_cast_taken">%1$sは現在別のものを再生しています。</string>
+    <string name="rd_cast_could_not_play">%1$sはビデオを再生できませんでした。</string>
+    <string name="rd_cast_subtitles_note">表示中の字幕は映像と一緒にテレビに送信されます。</string>
+    <string name="rd_cast_subtitles_on">テレビの字幕: %1$s</string>
+    <string name="rd_cast_subtitles_off">テレビの字幕: オフ</string>
 </resources>

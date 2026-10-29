@@ -36,4 +36,8 @@
         <item>जो उपशीर्षक Unicode नहीं हैं वे सही दिखते हैं: हिब्रू, अरबी, रूसी, यूनानी, तुर्की, जापानी, चीनी, कोरियाई और थाई फ़ाइलें उनके अक्षरों और उनके नाम में दी गई भाषा से पहचानी जाती हैं।</item>
         <item>परिचय पृष्ठ इंटरफ़ेस के डिज़ाइन का श्रेय Juxtopposed को देता है, डिज़ाइन के लिंक के साथ, जैसा डेस्कटॉप पर है।</item>
     </string-array>
+    <string name="rd_cast_this_phone">यह फ़ोन</string>
+    <string name="rd_cast_this_tablet">यह टैबलेट</string>
+    <string name="rd_cast_none_found">कोई डिवाइस नहीं मिला। अपना TV या Chromecast चालू करें, उसी नेटवर्क पर जिस पर यह डिवाइस है।</string>
+    <string name="rd_cast_no_answer">%1$s उत्तर नहीं दे रहा। जाँचें कि यह चालू है और उसी नेटवर्क पर है जिस पर यह डिवाइस है।</string>
 </resources>

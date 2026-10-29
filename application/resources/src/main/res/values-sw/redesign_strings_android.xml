@@ -34,4 +34,8 @@
         <item>Manukuu yasiyo ya Unicode yanaonyeshwa sawasawa: faili za Kiebrania, Kiarabu, Kirusi, Kigiriki, Kituruki, Kijapani, Kichina, Kikorea na Kithai zinatambuliwa kwa herufi zake na lugha iliyo katika jina lake.</item>
         <item>Kuhusu inatoa sifa ya muundo wa kiolesura kwa Juxtopposed, pamoja na viungo vya muundo, kama kwenye kompyuta.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Simu hii</string>
+    <string name="rd_cast_this_tablet">Kompyuta kibao hii</string>
+    <string name="rd_cast_none_found">Hakuna kifaa kilichopatikana. Washa TV au Chromecast yako, kwenye mtandao mmoja na kifaa hiki.</string>
+    <string name="rd_cast_no_answer">%1$s haijibu. Hakikisha kimewashwa, na kiko kwenye mtandao mmoja na kifaa hiki.</string>
 </resources>

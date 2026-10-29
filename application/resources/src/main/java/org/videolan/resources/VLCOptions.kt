@@ -211,6 +211,7 @@ object VLCOptions {
             options.add(File(context.getDir("keystore", Context.MODE_PRIVATE), "file").absolutePath)
             options.add(if (verboseMode) "-vv" else "-v")
             // fixme comment temporarily
+            // (VLC Redesign: VLC 4 builds take these from the media's options, setMediaOptions)
             if (!isVLC4()) {
                 if (pref.getBoolean(KEY_CASTING_PASSTHROUGH, false))
                     options.add("--sout-chromecast-audio-passthrough")
@@ -377,7 +378,13 @@ object VLCOptions {
         if (!noVideo && !hasRenderer) RdEffects.videoMediaOptions(prefs).forEach { media.addOption(it) }
 
         if (hasRenderer) {
-            media.addOption(":sout-chromecast-audio-passthrough=" + prefs.getBoolean(KEY_CASTING_PASSTHROUGH, true))
+            // VLC Redesign, casting: the subtitles are there but none is on when the cast starts: libvlc 3's Chromecast
+            // output restarts its stream for a subtitle at the start and the device (the test Chromecast) ended the
+            // media at once. One chosen while it plays is burnt into the picture.
+            media.addOption(":sub-language=none")
+            // VLC Redesign, casting: the same default as libvlc's option above and the settings (off): libvlc 3
+            // takes libvlc's (its Chromecast output does not read the media's options), VLC 4 builds these
+            media.addOption(":sout-chromecast-audio-passthrough=" + prefs.getBoolean(KEY_CASTING_PASSTHROUGH, false))
             media.addOption(":sout-chromecast-conversion-quality=" + prefs.getString(KEY_CASTING_QUALITY, "2")!!)
         }
     }

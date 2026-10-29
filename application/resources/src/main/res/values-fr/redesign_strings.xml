@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Égaliseur à deux passes</string>
     <string name="rd_eq_preset">Préréglage de l\'égaliseur</string>
     <string name="rd_eq_custom">Personnalisé</string>
+    <string name="rd_cast_to">Diffuser sur</string>
+    <string name="rd_cast_to_tv">Diffuser sur la TV</string>
+    <string name="rd_casting_to">Diffusion sur %1$s</string>
+    <string name="rd_cast_connecting">Connexion…</string>
+    <string name="rd_cast_sound_only">Son uniquement</string>
+    <string name="rd_cast_not_playing_retry">Pas de lecture : choisissez-le pour réessayer</string>
+    <string name="rd_cast_looking">Recherche des TV et Chromecast sur votre réseau…</string>
+    <string name="rd_cast_playing_on">Lecture sur %1$s</string>
+    <string name="rd_cast_connecting_to">Connexion à %1$s…</string>
+    <string name="rd_cast_not_playing_on">Pas de lecture sur %1$s</string>
+    <string name="rd_cast_sound_plays_on">Le son est diffusé sur %1$s</string>
+    <string name="rd_cast_hint">Mettez en pause, déplacez-vous et changez les sous-titres ici : la TV suit.</string>
+    <string name="rd_cast_try_again">Réessayer</string>
+    <string name="rd_cast_play_here">Lire ici</string>
+    <string name="rd_cast_stop">Arrêter la diffusion</string>
+    <string name="rd_cast_refused">%1$s a refusé de lire cette vidéo.</string>
+    <string name="rd_cast_stopped">%1$s a arrêté la lecture.</string>
+    <string name="rd_cast_taken">%1$s lit autre chose maintenant.</string>
+    <string name="rd_cast_could_not_play">%1$s n\'a pas pu lire la vidéo.</string>
+    <string name="rd_cast_subtitles_note">Les sous-titres affichés sont envoyés à la TV avec l\'image.</string>
+    <string name="rd_cast_subtitles_on">Sous-titres sur la TV : %1$s</string>
+    <string name="rd_cast_subtitles_off">Sous-titres désactivés sur la TV</string>
 </resources>

@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Equalizador de duas passagens</string>
     <string name="rd_eq_preset">Pré-ajuste do equalizador</string>
     <string name="rd_eq_custom">Personalizado</string>
+    <string name="rd_cast_to">Transmitir para</string>
+    <string name="rd_cast_to_tv">Transmitir para a TV</string>
+    <string name="rd_casting_to">A transmitir para %1$s</string>
+    <string name="rd_cast_connecting">A ligar…</string>
+    <string name="rd_cast_sound_only">Só som</string>
+    <string name="rd_cast_not_playing_retry">Não está a reproduzir: escolha-o para tentar novamente</string>
+    <string name="rd_cast_looking">A procurar TV e Chromecasts na sua rede…</string>
+    <string name="rd_cast_playing_on">A reproduzir em %1$s</string>
+    <string name="rd_cast_connecting_to">A ligar a %1$s…</string>
+    <string name="rd_cast_not_playing_on">Não está a reproduzir em %1$s</string>
+    <string name="rd_cast_sound_plays_on">O som é reproduzido em %1$s</string>
+    <string name="rd_cast_hint">Pause, avance/recue e mude as legendas aqui: a TV acompanha.</string>
+    <string name="rd_cast_try_again">Tentar novamente</string>
+    <string name="rd_cast_play_here">Reproduzir aqui</string>
+    <string name="rd_cast_stop">Parar a transmissão</string>
+    <string name="rd_cast_refused">%1$s recusou reproduzir este vídeo.</string>
+    <string name="rd_cast_stopped">%1$s parou a reprodução.</string>
+    <string name="rd_cast_taken">%1$s está agora a reproduzir outra coisa.</string>
+    <string name="rd_cast_could_not_play">%1$s não conseguiu reproduzir o vídeo.</string>
+    <string name="rd_cast_subtitles_note">As legendas mostradas vão para a TV com a imagem.</string>
+    <string name="rd_cast_subtitles_on">Legendas na TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Legendas desligadas na TV</string>
 </resources>

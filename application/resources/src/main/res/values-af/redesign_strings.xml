@@ -261,4 +261,26 @@
     <string name="rd_eq_two_pass">Twee-deurloop-gelykmaker</string>
     <string name="rd_eq_preset">Gelykmaker-voorafstelling</string>
     <string name="rd_eq_custom">Pasgemaak</string>
+    <string name="rd_cast_to">Saai uit na</string>
+    <string name="rd_cast_to_tv">Saai uit na TV</string>
+    <string name="rd_casting_to">Saai tans uit na %1$s</string>
+    <string name="rd_cast_connecting">Koppel tans…</string>
+    <string name="rd_cast_sound_only">Net klank</string>
+    <string name="rd_cast_not_playing_retry">Speel nie: kies dit om weer te probeer</string>
+    <string name="rd_cast_looking">Soek tans na TV\'s en Chromecasts op u netwerk…</string>
+    <string name="rd_cast_playing_on">Speel op %1$s</string>
+    <string name="rd_cast_connecting_to">Koppel tans aan %1$s…</string>
+    <string name="rd_cast_not_playing_on">Speel nie op %1$s nie</string>
+    <string name="rd_cast_sound_plays_on">Die klank speel op %1$s</string>
+    <string name="rd_cast_hint">Laat wag, spoel en verander die onderskrifte hier: die TV volg.</string>
+    <string name="rd_cast_try_again">Probeer weer</string>
+    <string name="rd_cast_play_here">Speel hier</string>
+    <string name="rd_cast_stop">Stop uitsaai</string>
+    <string name="rd_cast_refused">%1$s het geweier om hierdie video te speel.</string>
+    <string name="rd_cast_stopped">%1$s het opgehou speel.</string>
+    <string name="rd_cast_taken">%1$s speel nou iets anders.</string>
+    <string name="rd_cast_could_not_play">%1$s kon nie die video speel nie.</string>
+    <string name="rd_cast_subtitles_note">Die onderskrifte wat gewys word, gaan saam met die beeld na die TV.</string>
+    <string name="rd_cast_subtitles_on">Onderskrifte op die TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Onderskrifte op die TV af</string>
 </resources>

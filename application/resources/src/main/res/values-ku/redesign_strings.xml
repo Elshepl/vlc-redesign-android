@@ -263,4 +263,26 @@
     <string name="rd_eq_two_pass">هاوسەنگکەری دوو جارە</string>
     <string name="rd_eq_preset">ڕێکخستنی ئامادەی هاوسەنگکەر</string>
     <string name="rd_eq_custom">دەستکرد</string>
+    <string name="rd_cast_to">کاست بۆ</string>
+    <string name="rd_cast_to_tv">کاست بۆ تەلەفزیۆن</string>
+    <string name="rd_casting_to">کاستکردن بۆ %1$s</string>
+    <string name="rd_cast_connecting">پەیوەستبوون…</string>
+    <string name="rd_cast_sound_only">تەنها دەنگ</string>
+    <string name="rd_cast_not_playing_retry">لێنادرێت: هەڵیبژێرە بۆ دووبارە هەوڵدان</string>
+    <string name="rd_cast_looking">گەڕان بۆ تەلەفزیۆن و Chromecast لەسەر ڕایەڵەکەت…</string>
+    <string name="rd_cast_playing_on">لەسەر %1$s لێدەدرێت</string>
+    <string name="rd_cast_connecting_to">پەیوەستبوون بە %1$s…</string>
+    <string name="rd_cast_not_playing_on">لەسەر %1$s لێنادرێت</string>
+    <string name="rd_cast_sound_plays_on">دەنگەکە لەسەر %1$s لێدەدرێت</string>
+    <string name="rd_cast_hint">لێرە ڕابگرە، بگوازەرەوە و ژێرنووسەکان بگۆڕە: تەلەفزیۆنەکە پەیڕەوی دەکات.</string>
+    <string name="rd_cast_try_again">دووبارە هەوڵبدەرەوە</string>
+    <string name="rd_cast_play_here">لێرە لێبدە</string>
+    <string name="rd_cast_stop">وەستاندنی کاست</string>
+    <string name="rd_cast_refused">%1$s ڕەتیکردەوە ئەم ڤیدیۆیە لێبدات.</string>
+    <string name="rd_cast_stopped">%1$s لێدانی ڕاگرت.</string>
+    <string name="rd_cast_taken">%1$s ئێستا شتێکی تر لێدەدات.</string>
+    <string name="rd_cast_could_not_play">%1$s نەیتوانی ڤیدیۆکە لێبدات.</string>
+    <string name="rd_cast_subtitles_note">ژێرنووسە پیشاندراوەکان لەگەڵ وێنەکە دەچن بۆ تەلەفزیۆنەکە.</string>
+    <string name="rd_cast_subtitles_on">ژێرنووس لە تەلەفزیۆن: %1$s</string>
+    <string name="rd_cast_subtitles_off">ژێرنووس لە تەلەفزیۆن کوژاوەتەوە</string>
 </resources>

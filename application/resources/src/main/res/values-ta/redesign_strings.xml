@@ -257,4 +257,26 @@
     <string name="rd_eq_two_pass">இரு சுற்று சரிசமமாக்குதல்</string>
     <string name="rd_eq_preset">சரிசமமாக்குதல் முன்னமைவு</string>
     <string name="rd_eq_custom">தனிப்பயன்</string>
+    <string name="rd_cast_to">காஸ்ட் செய்யும் இடம்</string>
+    <string name="rd_cast_to_tv">தொலைக்காட்சிக்குக் காஸ்ட் செய்</string>
+    <string name="rd_casting_to">%1$s-க்குக் காஸ்ட் செய்கிறது</string>
+    <string name="rd_cast_connecting">இணைக்கிறது…</string>
+    <string name="rd_cast_sound_only">ஒலி மட்டும்</string>
+    <string name="rd_cast_not_playing_retry">இயங்கவில்லை: மீண்டும் முயல இதைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="rd_cast_looking">உங்கள் பிணையத்தில் தொலைக்காட்சிகளையும் Chromecast-களையும் தேடுகிறது…</string>
+    <string name="rd_cast_playing_on">%1$s-இல் இயங்குகிறது</string>
+    <string name="rd_cast_connecting_to">%1$s-உடன் இணைக்கிறது…</string>
+    <string name="rd_cast_not_playing_on">%1$s-இல் இயங்கவில்லை</string>
+    <string name="rd_cast_sound_plays_on">ஒலி %1$s-இல் இயங்குகிறது</string>
+    <string name="rd_cast_hint">இடைநிறுத்துதல், தாவுதல், வசனங்களை மாற்றுதல் ஆகியவற்றை இங்கே செய்யுங்கள்: தொலைக்காட்சி பின்தொடரும்.</string>
+    <string name="rd_cast_try_again">மீண்டும் முயல்</string>
+    <string name="rd_cast_play_here">இங்கே இயக்கு</string>
+    <string name="rd_cast_stop">காஸ்ட் செய்வதை நிறுத்து</string>
+    <string name="rd_cast_refused">%1$s இந்த நிகழ்படத்தை இயக்க மறுத்தது.</string>
+    <string name="rd_cast_stopped">%1$s இயக்குவதை நிறுத்தியது.</string>
+    <string name="rd_cast_taken">%1$s இப்போது வேறொன்றை இயக்குகிறது.</string>
+    <string name="rd_cast_could_not_play">%1$s-ஆல் நிகழ்படத்தை இயக்க முடியவில்லை.</string>
+    <string name="rd_cast_subtitles_note">காட்டப்படும் வசனங்கள் படத்துடன் தொலைக்காட்சிக்குச் செல்லும்.</string>
+    <string name="rd_cast_subtitles_on">டிவியில் வசனங்கள்: %1$s</string>
+    <string name="rd_cast_subtitles_off">டிவியில் வசனங்கள் அணைக்கப்பட்டன</string>
 </resources>

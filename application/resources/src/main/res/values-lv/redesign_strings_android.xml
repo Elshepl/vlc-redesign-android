@@ -34,4 +34,8 @@
         <item>Subtitri, kas nav Unicode, tiek rādīti pareizi: ivrita, arābu, krievu, grieķu, turku, japāņu, ķīniešu, korejiešu un taju datnes tiek atpazītas pēc to burtiem un valodas to nosaukumā.</item>
         <item>Sadaļā Par kā saskarnes dizaina autors norādīts Juxtopposed, ar saitēm uz dizainu, kā datora versijā.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Šis tālrunis</string>
+    <string name="rd_cast_this_tablet">Šī planšete</string>
+    <string name="rd_cast_none_found">Neviena ierīce nav atrasta. Ieslēdziet televizoru vai Chromecast tajā pašā tīklā, kurā ir šī ierīce.</string>
+    <string name="rd_cast_no_answer">%1$s neatbild. Pārbaudiet, vai ierīce ir ieslēgta un atrodas tajā pašā tīklā, kurā ir šī ierīce.</string>
 </resources>

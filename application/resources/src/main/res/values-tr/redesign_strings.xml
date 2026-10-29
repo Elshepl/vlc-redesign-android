@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">İki geçişli dengeleyici</string>
     <string name="rd_eq_preset">Dengeleyici Önayarı</string>
     <string name="rd_eq_custom">İsteğe Uyarlanmış</string>
+    <string name="rd_cast_to">Şuraya yayınla</string>
+    <string name="rd_cast_to_tv">TV\'ye Yayınla</string>
+    <string name="rd_casting_to">%1$s aygıtına yayınlanıyor</string>
+    <string name="rd_cast_connecting">Bağlanılıyor…</string>
+    <string name="rd_cast_sound_only">Yalnızca ses</string>
+    <string name="rd_cast_not_playing_retry">Oynatılmıyor: yeniden denemek için seçin</string>
+    <string name="rd_cast_looking">Ağınızdaki TV ve Chromecast\'ler aranıyor…</string>
+    <string name="rd_cast_playing_on">%1$s aygıtında oynatılıyor</string>
+    <string name="rd_cast_connecting_to">%1$s aygıtına bağlanılıyor…</string>
+    <string name="rd_cast_not_playing_on">%1$s aygıtında oynatılmıyor</string>
+    <string name="rd_cast_sound_plays_on">Ses %1$s aygıtında çalıyor</string>
+    <string name="rd_cast_hint">Duraklatma, sarma ve altyazı değiştirme işlemlerini buradan yapın: TV de uyar.</string>
+    <string name="rd_cast_try_again">Yeniden dene</string>
+    <string name="rd_cast_play_here">Burada oynat</string>
+    <string name="rd_cast_stop">Yayını durdur</string>
+    <string name="rd_cast_refused">%1$s bu videoyu oynatmayı reddetti.</string>
+    <string name="rd_cast_stopped">%1$s oynatmayı durdurdu.</string>
+    <string name="rd_cast_taken">%1$s şu anda başka bir şey oynatıyor.</string>
+    <string name="rd_cast_could_not_play">%1$s videoyu oynatamadı.</string>
+    <string name="rd_cast_subtitles_note">Görüntülenen altyazılar görüntüyle birlikte TV\'ye gider.</string>
+    <string name="rd_cast_subtitles_on">TV\'de altyazı: %1$s</string>
+    <string name="rd_cast_subtitles_off">TV\'de altyazı kapalı</string>
 </resources>

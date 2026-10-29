@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Equalizzatore a doppio passaggio</string>
     <string name="rd_eq_preset">Preimpostazioni equalizzatore</string>
     <string name="rd_eq_custom">Personalizzato</string>
+    <string name="rd_cast_to">Trasmetti a</string>
+    <string name="rd_cast_to_tv">Trasmetti alla TV</string>
+    <string name="rd_casting_to">Trasmissione su %1$s</string>
+    <string name="rd_cast_connecting">Connessione…</string>
+    <string name="rd_cast_sound_only">Solo audio</string>
+    <string name="rd_cast_not_playing_retry">Non in riproduzione: sceglilo per riprovare</string>
+    <string name="rd_cast_looking">Ricerca di TV e Chromecast nella tua rete…</string>
+    <string name="rd_cast_playing_on">In riproduzione su %1$s</string>
+    <string name="rd_cast_connecting_to">Connessione a %1$s…</string>
+    <string name="rd_cast_not_playing_on">Non in riproduzione su %1$s</string>
+    <string name="rd_cast_sound_plays_on">L\'audio viene riprodotto su %1$s</string>
+    <string name="rd_cast_hint">Metti in pausa, spostati e cambia i sottotitoli da qui: la TV si adegua.</string>
+    <string name="rd_cast_try_again">Riprova</string>
+    <string name="rd_cast_play_here">Riproduci qui</string>
+    <string name="rd_cast_stop">Interrompi trasmissione</string>
+    <string name="rd_cast_refused">%1$s ha rifiutato di riprodurre questo video.</string>
+    <string name="rd_cast_stopped">%1$s ha interrotto la riproduzione.</string>
+    <string name="rd_cast_taken">%1$s sta riproducendo altro.</string>
+    <string name="rd_cast_could_not_play">%1$s non è riuscito a riprodurre il video.</string>
+    <string name="rd_cast_subtitles_note">I sottotitoli mostrati vengono inviati alla TV insieme all\'immagine.</string>
+    <string name="rd_cast_subtitles_on">Sottotitoli sulla TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Sottotitoli disattivati sulla TV</string>
 </resources>

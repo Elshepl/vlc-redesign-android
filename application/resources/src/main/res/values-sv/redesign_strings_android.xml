@@ -34,4 +34,8 @@
         <item>Undertexter som inte är Unicode visas rätt: hebreiska, arabiska, ryska, grekiska, turkiska, japanska, kinesiska, koreanska och thailändska filer känns igen på sina bokstäver och språket i namnet.</item>
         <item>Om krediterar Juxtopposed för gränssnittets design, med länkarna till designen, som på datorn.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Den här telefonen</string>
+    <string name="rd_cast_this_tablet">Den här surfplattan</string>
+    <string name="rd_cast_none_found">Ingen enhet hittades. Slå på din tv eller Chromecast, i samma nätverk som den här enheten.</string>
+    <string name="rd_cast_no_answer">%1$s svarar inte. Kontrollera att den är på och i samma nätverk som den här enheten.</string>
 </resources>

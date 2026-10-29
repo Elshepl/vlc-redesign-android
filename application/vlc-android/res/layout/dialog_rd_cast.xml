@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the cast list (the desktop's cast panel, CastButton.qml): "Cast to" and the dot while it looks
+     for devices, this phone, the devices (a TV, or a speaker: "Sound only"), the one playing checked, then
+     "Looking for TVs…" / "No device found…" when there are none. A bottom sheet; a centred framed window on a
+     tablet (VLCBottomSheetDialogFragment). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+        <TextView
+                android:id="@+id/rd_cast_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_medium"
+                android:maxLines="1"
+                android:text="@string/rd_cast_to"
+                android:textAlignment="viewStart"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+        <!-- looking for devices -->
+        <View
+                android:id="@+id/rd_cast_scanning"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/rd_cast_dot"
+                android:importantForAccessibility="no"
+                android:visibility="gone"
+                tools:visibility="visible" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/rd_cast_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false">
+
+        <LinearLayout
+                android:id="@+id/rd_cast_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+            android:id="@+id/rd_cast_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/inter"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="4dp"
+            android:textAlignment="viewStart"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp"
+            tools:text="@string/rd_cast_looking" />
+</LinearLayout>

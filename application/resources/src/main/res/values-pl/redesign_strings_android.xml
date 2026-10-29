@@ -34,4 +34,8 @@
         <item>Napisy nie w Unicode wyświetlają się poprawnie: pliki po hebrajsku, arabsku, rosyjsku, grecku, turecku, japońsku, chińsku, koreańsku i tajsku są rozpoznawane po literach i po języku w nazwie.</item>
         <item>Sekcja O programie podaje autora projektu interfejsu, Juxtopposed, z odnośnikami do projektu, tak jak w wersji na komputer.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Ten telefon</string>
+    <string name="rd_cast_this_tablet">Ten tablet</string>
+    <string name="rd_cast_none_found">Nie znaleziono urządzeń. Włącz telewizor lub Chromecast w tej samej sieci co to urządzenie.</string>
+    <string name="rd_cast_no_answer">Urządzenie %1$s nie odpowiada. Sprawdź, czy jest włączone i w tej samej sieci co to urządzenie.</string>
 </resources>

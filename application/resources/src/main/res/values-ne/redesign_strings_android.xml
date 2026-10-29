@@ -35,4 +35,8 @@
         <item>Unicode नभएका उपशीर्षकहरू ठीकसँग देखिन्छन्: हिब्रू, अरबी, रुसी, ग्रीक, टर्किस, जापानी, चिनियाँ, कोरियाली र थाई फाइलहरू तिनका अक्षर र नाममा भएको भाषाबाट चिनिन्छन्।</item>
         <item>बारेमा पृष्ठले इन्टरफेसको डिजाइनको श्रेय Juxtopposed लाई दिन्छ, डिजाइनका लिङ्कहरूसहित, डेस्कटपमा जस्तै।</item>
     </string-array>
+    <string name="rd_cast_this_phone">यो फोन</string>
+    <string name="rd_cast_this_tablet">यो ट्याब्लेट</string>
+    <string name="rd_cast_none_found">कुनै यन्त्र फेला परेन। आफ्नो TV वा Chromecast यो यन्त्र भएकै सञ्जालमा खोल्नुहोस्।</string>
+    <string name="rd_cast_no_answer">%1$s ले जवाफ दिँदैन। यो खुला छ र यो यन्त्र भएकै सञ्जालमा छ कि जाँच गर्नुहोस्।</string>
 </resources>

@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Kétmenetes hangszínszabályzó</string>
     <string name="rd_eq_preset">Előre beállított hangszínek</string>
     <string name="rd_eq_custom">Egyéni</string>
+    <string name="rd_cast_to">Átküldés ide</string>
+    <string name="rd_cast_to_tv">Átküldés tévére</string>
+    <string name="rd_casting_to">Átküldés ide: %1$s</string>
+    <string name="rd_cast_connecting">Csatlakozás…</string>
+    <string name="rd_cast_sound_only">Csak hang</string>
+    <string name="rd_cast_not_playing_retry">Nem játszik: válassza ki az újrapróbáláshoz</string>
+    <string name="rd_cast_looking">Tévék és Chromecastok keresése a hálózaton…</string>
+    <string name="rd_cast_playing_on">Lejátszás ezen: %1$s</string>
+    <string name="rd_cast_connecting_to">Csatlakozás ehhez: %1$s…</string>
+    <string name="rd_cast_not_playing_on">Nem játszik ezen: %1$s</string>
+    <string name="rd_cast_sound_plays_on">A hang ezen szól: %1$s</string>
+    <string name="rd_cast_hint">Itt szüneteltethet, tekerhet és válthat feliratot: a tévé követi.</string>
+    <string name="rd_cast_try_again">Újrapróbálás</string>
+    <string name="rd_cast_play_here">Lejátszás itt</string>
+    <string name="rd_cast_stop">Átküldés leállítása</string>
+    <string name="rd_cast_refused">%1$s elutasította a videó lejátszását.</string>
+    <string name="rd_cast_stopped">%1$s leállította a lejátszást.</string>
+    <string name="rd_cast_taken">%1$s most mást játszik le.</string>
+    <string name="rd_cast_could_not_play">%1$s nem tudta lejátszani a videót.</string>
+    <string name="rd_cast_subtitles_note">A megjelenített feliratok a képpel együtt kerülnek a tévére.</string>
+    <string name="rd_cast_subtitles_on">Felirat a tévén: %1$s</string>
+    <string name="rd_cast_subtitles_off">Felirat kikapcsolva a tévén</string>
 </resources>

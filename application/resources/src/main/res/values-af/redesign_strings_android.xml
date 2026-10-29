@@ -36,4 +36,8 @@
         <item>Onderskrifte wat nie Unicode is nie, word reg gewys: Hebreeuse, Arabiese, Russiese, Griekse, Turkse, Japannese, Chinese, Koreaanse en Thaise lêers word herken aan hul letters en die taal in hul naam.</item>
         <item>Oor erken Juxtopposed as die ontwerper van die koppelvlak, met die skakels na die ontwerp, soos op die rekenaar.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Hierdie foon</string>
+    <string name="rd_cast_this_tablet">Hierdie tablet</string>
+    <string name="rd_cast_none_found">Geen toestel gevind nie. Skakel u TV of Chromecast aan, op dieselfde netwerk as hierdie toestel.</string>
+    <string name="rd_cast_no_answer">%1$s antwoord nie. Maak seker dat dit aan is, en op dieselfde netwerk as hierdie toestel.</string>
 </resources>

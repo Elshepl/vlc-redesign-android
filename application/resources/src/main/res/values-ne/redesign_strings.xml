@@ -264,4 +264,26 @@
     <string name="rd_eq_two_pass">दुई-पास समकारी</string>
     <string name="rd_eq_preset">तुल्यकारक प्रिसेट</string>
     <string name="rd_eq_custom">अनुकूलित</string>
+    <string name="rd_cast_to">यसमा कास्ट गर्नुहोस्</string>
+    <string name="rd_cast_to_tv">TV मा कास्ट गर्नुहोस्</string>
+    <string name="rd_casting_to">%1$s मा कास्ट गर्दै</string>
+    <string name="rd_cast_connecting">जडान गर्दै…</string>
+    <string name="rd_cast_sound_only">आवाज मात्र</string>
+    <string name="rd_cast_not_playing_retry">बजिरहेको छैन: फेरि प्रयास गर्न यसलाई छान्नुहोस्</string>
+    <string name="rd_cast_looking">तपाईंको सञ्जालमा TV र Chromecast हरू खोज्दै…</string>
+    <string name="rd_cast_playing_on">%1$s मा बजिरहेको छ</string>
+    <string name="rd_cast_connecting_to">%1$s मा जडान गर्दै…</string>
+    <string name="rd_cast_not_playing_on">%1$s मा बजिरहेको छैन</string>
+    <string name="rd_cast_sound_plays_on">आवाज %1$s मा बजिरहेको छ</string>
+    <string name="rd_cast_hint">यहीँबाट पज, सिक र उपशीर्षक परिवर्तन गर्नुहोस्: TV ले पछ्याउँछ।</string>
+    <string name="rd_cast_try_again">फेरि प्रयास गर्नुहोस्</string>
+    <string name="rd_cast_play_here">यहाँ बजाउनुहोस्</string>
+    <string name="rd_cast_stop">कास्टिङ रोक्नुहोस्</string>
+    <string name="rd_cast_refused">%1$s ले यो भिडियो बजाउन अस्वीकार गर्‍यो।</string>
+    <string name="rd_cast_stopped">%1$s ले बजाउन रोक्यो।</string>
+    <string name="rd_cast_taken">%1$s ले अहिले अर्कै कुरा बजाइरहेको छ।</string>
+    <string name="rd_cast_could_not_play">%1$s ले भिडियो बजाउन सकेन।</string>
+    <string name="rd_cast_subtitles_note">देखाइएका उपशीर्षकहरू चित्रसँगै TV मा जान्छन्।</string>
+    <string name="rd_cast_subtitles_on">टिभीमा उपशीर्षक: %1$s</string>
+    <string name="rd_cast_subtitles_off">टिभीमा उपशीर्षक बन्द</string>
 </resources>

@@ -270,4 +270,26 @@
     <string name="rd_eq_two_pass">Cyfartalydd dau gam</string>
     <string name="rd_eq_preset">Rhagosodiad y cyfartalydd</string>
     <string name="rd_eq_custom">Dewisedig</string>
+    <string name="rd_cast_to">Castio i</string>
+    <string name="rd_cast_to_tv">Castio i\'r Teledu</string>
+    <string name="rd_casting_to">Yn castio i %1$s</string>
+    <string name="rd_cast_connecting">Yn cysylltu…</string>
+    <string name="rd_cast_sound_only">Sain yn unig</string>
+    <string name="rd_cast_not_playing_retry">Ddim yn chwarae: dewiswch ef i geisio eto</string>
+    <string name="rd_cast_looking">Yn chwilio am setiau teledu a Chromecasts ar eich rhwydwaith…</string>
+    <string name="rd_cast_playing_on">Yn chwarae ar %1$s</string>
+    <string name="rd_cast_connecting_to">Yn cysylltu â %1$s…</string>
+    <string name="rd_cast_not_playing_on">Ddim yn chwarae ar %1$s</string>
+    <string name="rd_cast_sound_plays_on">Mae\'r sain yn chwarae ar %1$s</string>
+    <string name="rd_cast_hint">Seibiwch, neidiwch a newidiwch yr isdeitlau yma: mae\'r teledu\'n dilyn.</string>
+    <string name="rd_cast_try_again">Ceisio eto</string>
+    <string name="rd_cast_play_here">Chwarae yma</string>
+    <string name="rd_cast_stop">Stopio castio</string>
+    <string name="rd_cast_refused">Gwrthododd %1$s chwarae\'r fideo hwn.</string>
+    <string name="rd_cast_stopped">Stopiodd %1$s chwarae.</string>
+    <string name="rd_cast_taken">Mae %1$s yn chwarae rhywbeth arall nawr.</string>
+    <string name="rd_cast_could_not_play">Methodd %1$s chwarae\'r fideo.</string>
+    <string name="rd_cast_subtitles_note">Mae\'r isdeitlau a ddangosir yn mynd i\'r teledu gyda\'r llun.</string>
+    <string name="rd_cast_subtitles_on">Isdeitlau ar y teledu: %1$s</string>
+    <string name="rd_cast_subtitles_off">Isdeitlau i ffwrdd ar y teledu</string>
 </resources>

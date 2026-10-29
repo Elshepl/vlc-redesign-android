@@ -34,4 +34,8 @@
         <item>Subtitle yang bukan Unicode tampil dengan benar: file berbahasa Ibrani, Arab, Rusia, Yunani, Turki, Jepang, Tionghoa, Korea, dan Thai dikenali dari hurufnya dan bahasa di namanya.</item>
         <item>Tentang memberikan kredit desain antarmuka kepada Juxtopposed, beserta tautan desainnya, seperti di desktop.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Ponsel ini</string>
+    <string name="rd_cast_this_tablet">Tablet ini</string>
+    <string name="rd_cast_none_found">Perangkat tidak ditemukan. Nyalakan TV atau Chromecast Anda, di jaringan yang sama dengan perangkat ini.</string>
+    <string name="rd_cast_no_answer">%1$s tidak merespons. Pastikan perangkat menyala dan berada di jaringan yang sama dengan perangkat ini.</string>
 </resources>

@@ -197,7 +197,7 @@ import org.videolan.vlc.gui.dialogs.EqualizerFragmentDialog
 import org.videolan.vlc.gui.dialogs.PlaybackSpeedDialog
 import org.videolan.vlc.gui.dialogs.RENAME_DIALOG_MEDIA
 import org.videolan.vlc.gui.dialogs.RENAME_DIALOG_NEW_NAME
-import org.videolan.vlc.gui.dialogs.RenderersDialog
+import org.videolan.vlc.gui.dialogs.CastSheet
 import org.videolan.vlc.gui.dialogs.SleepTimerDialog
 import org.videolan.vlc.gui.dialogs.VLCBottomSheetDialogFragment.Companion.shouldInterceptRemote
 import org.videolan.vlc.gui.dialogs.adapters.VlcTrack
@@ -254,6 +254,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     private lateinit var startedScope: CoroutineScope
     private var videoRemoteJob: Job? = null
     var service: PlaybackService? = null
+    /** VLC Redesign, casting: the casting screen's card */
+    private val castingCard = CastingCardDelegate(this)
     lateinit var medialibrary: Medialibrary
     var videoLayout: VLCVideoLayout? = null
     lateinit var displayManager: DisplayManager
@@ -552,6 +554,13 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         enableCloneMode = clone ?: settings.getBoolean(KEY_ENABLE_CLONE_MODE, false)
         displayManager = DisplayManager(this, PlaybackService.renderer, false, enableCloneMode, isBenchmark)
         setContentView(if (displayManager.isPrimary) R.layout.player else R.layout.player_remote_control)
+        // VLC Redesign, casting: the devices are looked for while the player shows; the casting screen's card
+        org.videolan.vlc.RendererDelegate.observe(this)
+        castingCard.bind()
+        org.videolan.vlc.cast.CastController.notice.observe(this) { message ->
+            // (the player's message on the video)
+            if (!message.isNullOrEmpty()) overlayDelegate.showInfo(message, 5000)
+        }
 
 
         rootView = findViewById(R.id.player_root)
@@ -933,6 +942,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     override fun onStart() {
         medialibrary.pauseBackgroundOperations()
         super.onStart()
+        visibleCount++
         startedScope = MainScope()
         PlaybackService.start(this)
         PlaybackService.serviceFlow.onEach { onServiceChanged(it) }.launchIn(startedScope)
@@ -973,6 +983,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     override fun onStop() {
         super.onStop()
+        if (visibleCount > 0) visibleCount--
         service?.playlistManager?.let {
             savedMediaList = ArrayList(it.getMediaList())
             savedMediaIndex = it.currentIndex
@@ -1029,6 +1040,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     override fun onDestroy() {
         super.onDestroy()
+        castingCard.release()
         playlistModel?.run {
             dataset.removeObserver(playlistObserver)
             onCleared()
@@ -1113,6 +1125,14 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     private fun stopPlayback() {
         if (!playbackStarted) return
 
+        // VLC Redesign, casting: the media goes on on the device, when the player turns into its casting screen
+        // (it is made again for it: stopping here broke the connection being made and opened the media twice)
+        // and when the casting screen is left (the mini player and the notification keep it)
+        if (PlaybackService.hasRenderer() && service != null) {
+            service?.vout?.let { if (it.areViewsAttached()) it.detachViews() }
+            playbackStarted = false
+            return
+        }
         if (!displayManager.isPrimary && !isFinishing || service == null) {
             playbackStarted = false
             return
@@ -1450,11 +1470,16 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 return true
             }
             KeyEvent.KEYCODE_VOLUME_DOWN -> {
-                volumeDown()
+                // VLC Redesign, casting: the device's volume
+                if (PlaybackService.hasRenderer() && org.videolan.vlc.cast.CastVolume.provider != null)
+                    org.videolan.vlc.cast.CastVolume.step(-1) { castingCard.showVolume(it) }
+                else volumeDown()
                 return true
             }
             KeyEvent.KEYCODE_VOLUME_UP -> {
-                volumeUp()
+                if (PlaybackService.hasRenderer() && org.videolan.vlc.cast.CastVolume.provider != null)
+                    org.videolan.vlc.cast.CastVolume.step(1) { castingCard.showVolume(it) }
+                else volumeUp()
                 return true
             }
             KeyEvent.KEYCODE_CAPTIONS -> {
@@ -2050,8 +2075,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
             }
             R.id.player_overlay_navmenu -> showNavMenu()
             R.id.player_overlay_length, R.id.player_overlay_time -> toggleTimeDisplay()
-            R.id.video_renderer -> if (supportFragmentManager.findFragmentByTag("renderers") == null)
-                RenderersDialog().show(supportFragmentManager, "renderers")
+            R.id.video_renderer -> CastSheet.show(supportFragmentManager)
             R.id.video_secondary_display -> {
                 clone = displayManager.isSecondary
                 recreate()
@@ -2617,6 +2641,10 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     }
 
     companion object {
+        /** VLC Redesign, casting: the video player shows (back from a device, the video comes back here) */
+        private var visibleCount = 0
+        val visible get() = visibleCount > 0
+
 
         private const val TAG = "VLC/VideoPlayerActivity"
 

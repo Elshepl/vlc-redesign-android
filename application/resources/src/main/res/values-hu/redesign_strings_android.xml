@@ -34,4 +34,8 @@
         <item>A nem Unicode feliratok helyesen jelennek meg: a héber, arab, orosz, görög, török, japán, kínai, koreai és thai fájlokat a betűik és a nevükben szereplő nyelv alapján ismeri fel.</item>
         <item>A Névjegy feltünteti a kezelőfelület tervezőjét, Juxtopposedot, a terv hivatkozásaival, ahogy az asztali változatban.</item>
     </string-array>
+    <string name="rd_cast_this_phone">Ez a telefon</string>
+    <string name="rd_cast_this_tablet">Ez a táblagép</string>
+    <string name="rd_cast_none_found">Nem található eszköz. Kapcsolja be a tévét vagy a Chromecastot ugyanazon a hálózaton, amelyen ez az eszköz is van.</string>
+    <string name="rd_cast_no_answer">%1$s nem válaszol. Ellenőrizze, hogy be van-e kapcsolva, és ugyanazon a hálózaton van-e, mint ez az eszköz.</string>
 </resources>
