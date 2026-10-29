@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_orange">ብርቱካናማ</string>
+    <string name="rd_cyan">ሳያን</string>
+    <string name="rd_pink">ሮዝ</string>
+    <string name="rd_sec_notifications">ማሳወቂያዎች</string>
+    <string name="rd_move_earlier">ወደ ግራ አንቀሳቅስ</string>
+    <string name="rd_move_later">ወደ ቀኝ አንቀሳቅስ</string>
+    <string name="rd_ob_whole_device">መላው መሣሪያ</string>
+    <string name="rd_about_whats_new">በ%1$s ውስጥ ምን አዲስ ነገር አለ</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_orange">လိမ္မော်ရောင်</string>
+    <string name="rd_cyan">စိမ်းပြာရောင်</string>
+    <string name="rd_pink">ပန်းရောင်</string>
+    <string name="rd_sec_notifications">အကြောင်းကြားချက်များ</string>
+    <string name="rd_move_earlier">ဘယ်ဘက်သို့ ရွှေ့ရန်</string>
+    <string name="rd_move_later">ညာဘက်သို့ ရွှေ့ရန်</string>
+    <string name="rd_ob_whole_device">စက်တစ်ခုလုံး</string>
+    <string name="rd_about_whats_new">%1$s တွင် အသစ်များ</string>
+</resources>

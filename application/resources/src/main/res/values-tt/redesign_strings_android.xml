@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_orange">Кызгылт сары</string>
+    <string name="rd_cyan">Зәңгәрсу</string>
+    <string name="rd_pink">Алсу</string>
+    <string name="rd_sec_notifications">Искәртүләр</string>
+    <string name="rd_move_earlier">Сулга күчерергә</string>
+    <string name="rd_move_later">Уңга күчерергә</string>
+    <string name="rd_ob_whole_device">Бөтен җайланма</string>
+    <string name="rd_about_whats_new">%1$s версиясендә яңалыклар</string>
+</resources>

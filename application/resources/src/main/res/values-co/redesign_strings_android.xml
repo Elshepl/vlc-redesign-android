@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_orange">Aranciu</string>
+    <string name="rd_pink">Rosulu</string>
+    <string name="rd_sec_notifications">Nutificazioni</string>
+    <string name="rd_move_earlier">Dispiazzà à manca</string>
+    <string name="rd_move_later">Dispiazzà à diritta</string>
+    <string name="rd_ob_whole_device">L\'apparechju sanu</string>
+    <string name="rd_about_whats_new">Novità in %1$s</string>
+</resources>

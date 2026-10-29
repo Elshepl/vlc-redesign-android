@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_sec_notifications">Notìficas</string>
+    <string name="rd_move_earlier">Move a manca</string>
+    <string name="rd_move_later">Move a dereta</string>
+    <string name="rd_ob_whole_device">Su dispositivu intreu</string>
+    <string name="rd_about_whats_new">Novidades in %1$s</string>
+</resources>

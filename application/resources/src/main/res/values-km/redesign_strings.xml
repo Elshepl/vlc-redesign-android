@@ -29,6 +29,7 @@
     <string name="rd_about_built_on">សាងសង់លើកម្មវិធីចាក់មេឌៀ VLC ដោយ</string>
     <string name="rd_about_videolan">ក្រុម VideoLAN និងអ្នករួមចំណែក</string>
     <string name="rd_about_unofficial">កំណែមិនផ្លូវការ មិនមានទំនាក់ទំនង ឬការគាំទ្រពី VideoLAN ឬ Juxtopposed ទេ។ VLC, កម្មវិធីចាក់មេឌៀ VLC និងរូបសញ្ញាកោណ គឺជាពាណិជ្ជសញ្ញារបស់ VideoLAN។ កម្មវិធីឥតគិតថ្លៃក្រោម GNU GPL v2 ឬក្រោយ។</string>
+    <string name="rd_about_whats_new">អ្វីដែលថ្មីនៅក្នុង %1$s</string>
     <string name="rd_customize_player">ប្ដូរកម្មវិធីចាក់តាមបំណង</string>
     <string name="rd_zone_left">ឆ្វេង</string>
     <string name="rd_zone_center">កណ្ដាល</string>

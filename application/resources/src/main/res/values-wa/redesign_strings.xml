@@ -29,6 +29,7 @@
     <string name="rd_about_built_on">Bati sol djouweu d\' media VLC pa</string>
     <string name="rd_about_videolan">l\' ekipe VideoLAN et ses contribouweus</string>
     <string name="rd_about_unofficial">Ene modêye nén oficiele, nén loyeye a VideoLAN ni a Juxtopposed, ni sopoirtêye pa zels. VLC, VLC media player et l\' logo do cône sont des markes di VideoLAN. Libe programe dizo l\' GNU GPL v2 ou pus nouve.</string>
+    <string name="rd_about_whats_new">Çou k\' est novea dins %1$s</string>
     <string name="rd_customize_player">Adjuster l\' djouweu</string>
     <string name="rd_zone_left">Hintche</string>
     <string name="rd_zone_center">Mitan</string>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Only the short labels; the rest falls back to English. -->
+<resources>
+    <string name="rd_orange">ສີສົ້ມ</string>
+    <string name="rd_cyan">ສີຟ້າອົມຂຽວ</string>
+    <string name="rd_pink">ສີບົວ</string>
+    <string name="rd_sec_notifications">ການແຈ້ງເຕືອນ</string>
+    <string name="rd_move_earlier">ຍ້າຍໄປຊ້າຍ</string>
+    <string name="rd_move_later">ຍ້າຍໄປຂວາ</string>
+    <string name="rd_ob_whole_device">ອຸປະກອນທັງໝົດ</string>
+    <string name="rd_about_whats_new">ມີຫຍັງໃໝ່ໃນ %1$s</string>
+</resources>
