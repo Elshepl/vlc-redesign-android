@@ -112,11 +112,14 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
             LinearLayout(ctx).apply {
                 orientation = LinearLayout.VERTICAL
                 setPadding(10.dp, 6.dp, 10.dp, 6.dp)
-                addView(text(11f, R.color.rd_dark_fg_a2, true).apply { text = getString(label).uppercase().toCharArray().joinToString(" ") })
-                val icons = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; minimumHeight = 48.dp }
+                addView(text(11f, R.color.rd_dark_fg_a2, true).apply { text = getString(label).uppercase(); letterSpacing = 0.2f })
+                // the bar keeps its order in right to left languages (as the desktop's): so does its picture
+                val icons = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; minimumHeight = 48.dp; layoutDirection = View.LAYOUT_DIRECTION_LTR }
                 (zoneRows as ArrayList).add(icons)
-                addView(HorizontalScrollView(ctx).apply { addView(icons) })
+                addView(HorizontalScrollView(ctx).apply { layoutDirection = View.LAYOUT_DIRECTION_LTR; addView(icons) })
                 setOnClickListener { zone = i; refresh() }
+                // drag and drop, as the desktop's editor: a control dropped in a zone goes where it was let go
+                setOnDragListener { _, e -> onZoneDrag(i, icons, e) }
                 column.addView(this, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = 6.dp })
             }
         }
@@ -139,6 +142,7 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
                     setPadding(0, 6.dp, 0, 0)
                 })
                 setOnClickListener { add(c.key) }
+                setOnLongClickListener { v -> startDrag(v, c.key); true }
             }
             grid.addView(cell, GridLayout.LayoutParams(GridLayout.spec(GridLayout.UNDEFINED), GridLayout.spec(GridLayout.UNDEFINED, 1f)).apply { width = 0 })
         }
@@ -218,11 +222,48 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
                     val ic = if (key == "play") ImageView(context).apply { setImageResource(R.drawable.ic_play_player); scaleType = ImageView.ScaleType.FIT_CENTER } else icon(c.icon)
                     addView(ic, FrameLayout.LayoutParams(if (key == "play") 54.dp else 24.dp, if (key == "play") 28.dp else 24.dp, Gravity.CENTER))
                     setOnClickListener { v -> showItemMenu(v, i, pos, key) }
+                    setOnLongClickListener { v -> startDrag(v, key); true }
                 }, LinearLayout.LayoutParams(if (key == "play") 62.dp else 44.dp, 44.dp))
             }
         }
         saveButton.isEnabled = changed
         saveButton.alpha = if (changed) 1f else 0.4f
+    }
+
+    private fun startDrag(v: View, key: String) {
+        v.startDragAndDrop(android.content.ClipData.newPlainText("control", key), View.DragShadowBuilder(v), key, 0)
+    }
+
+    /** A control dropped in zone [zoneIndex]: before the control under the finger (the zone's end after the last) */
+    private fun onZoneDrag(zoneIndex: Int, icons: LinearLayout, e: android.view.DragEvent): Boolean {
+        val key = e.localState as? String ?: return false
+        when (e.action) {
+            android.view.DragEvent.ACTION_DRAG_STARTED -> return true
+            android.view.DragEvent.ACTION_DRAG_ENTERED -> { zone = zoneIndex; refresh() }
+            android.view.DragEvent.ACTION_DROP -> {
+                // the drop point in the row of icons (the zone box has a padding, the row may be scrolled)
+                val loc = IntArray(2).also { icons.getLocationOnScreen(it) }
+                val box = IntArray(2).also { zoneBoxes[zoneIndex].getLocationOnScreen(it) }
+                val x = e.x + box[0] - loc[0]
+                var at = icons.childCount
+                for (c in 0 until icons.childCount) {
+                    val child = icons.getChildAt(c)
+                    if (x < child.left + child.width / 2) { at = c; break }
+                }
+                val l = lists(zones())
+                val from = l.indexOfFirst { key in it }
+                if (from == zoneIndex) {
+                    val old = l[from].indexOf(key)
+                    if (old < at) at--
+                }
+                l.forEach { it.remove(key) }
+                l[zoneIndex].add(at.coerceIn(0, l[zoneIndex].size), key)
+                zone = zoneIndex
+                setZones(zonesOf(l))
+                return true
+            }
+        }
+        return true
     }
 
     private fun showItemMenu(anchor: View, zoneIndex: Int, pos: Int, key: String) {

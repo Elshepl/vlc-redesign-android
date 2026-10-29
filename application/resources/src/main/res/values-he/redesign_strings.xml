@@ -50,4 +50,7 @@
     <string name="rd_remove">הסרה</string>
     <string name="rd_save">שמירה</string>
     <string name="rd_cancel">ביטול</string>
+    <string name="rd_customize_hint">גררו פקד אל אזור בסרגל, או בחרו אזור והקישו על הפקדים שיוצבו בו. הקשה על פקד בסרגל מזיזה אותו או מוציאה אותו.</string>
+    <string name="rd_move_earlier">הזזה שמאלה</string>
+    <string name="rd_move_later">הזזה ימינה</string>
 </resources>

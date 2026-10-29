@@ -35,7 +35,7 @@
     <string name="rd_about_whats_new">What\'s new in %1$s</string>
     <!-- Customize Player (the desktop's toolbar editor) -->
     <string name="rd_customize_player">Customize Player</string>
-    <string name="rd_customize_hint">Choose a zone of the bar, then tap the controls to put in it. Tap a control of the bar to move it or take it out.</string>
+    <string name="rd_customize_hint">Drag a control into a zone of the bar, or choose a zone and tap the controls to put in it. Tap a control of the bar to move it or take it out.</string>
     <string name="rd_zone_left">Left</string>
     <string name="rd_zone_center">Center</string>
     <string name="rd_zone_right">Right</string>
