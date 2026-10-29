@@ -71,11 +71,14 @@ class EmptyLoadingStateView : FrameLayout {
     lateinit var container: ConstraintLayout
     var showNoMedia: Boolean = true
     private var compactMode: Boolean = false
-    private var imageWanted = false
         set(value) {
             field = value
             applyCompactMode()
         }
+    // VLC Redesign: whether the state shows the picture (left out in a short view, see onSizeChanged).
+    // A plain field: applying the constraint sets again after the views' visibilities were set brought the
+    // cloned LOADING visibilities back (cone + "Loading" + the Medialibrary button together on an empty tab)
+    private var imageWanted = false
     var state = EmptyLoadingState.LOADING
         set(value) {
             compactMode = value  in arrayOf(EmptyLoadingState.EMPTY_SEARCH, EmptyLoadingState.EMPTY, EmptyLoadingState.EMPTY_FAVORITES)
