@@ -50,4 +50,13 @@
     <string name="rd_remove">P&amp;oista</string>
     <string name="rd_save">Tallenna</string>
     <string name="rd_cancel">Peruuta</string>
+    <string name="rd_audio_output">Lähtö</string>
+    <string name="rd_speaker_setup">Kaiutinkokoonpano</string>
+    <string name="rd_automatic">Automaattinen</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Käänteinen stereo</string>
+    <string name="rd_left">Vasen</string>
+    <string name="rd_right">Oikea</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Äänen viive</string>
 </resources>

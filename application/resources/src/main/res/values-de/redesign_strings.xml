@@ -50,4 +50,13 @@
     <string name="rd_remove">Entfernen</string>
     <string name="rd_save">Speichern</string>
     <string name="rd_cancel">Abbrechen</string>
+    <string name="rd_audio_output">Ausgabe</string>
+    <string name="rd_speaker_setup">Lautsprecherkonfiguration</string>
+    <string name="rd_automatic">Automatisch</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Stereo-Kanäle vertauschen</string>
+    <string name="rd_left">Links</string>
+    <string name="rd_right">Rechts</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Audioverzögerung</string>
 </resources>

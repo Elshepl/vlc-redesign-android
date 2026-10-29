@@ -50,4 +50,13 @@
     <string name="rd_remove">لابردن</string>
     <string name="rd_save">پاشەکەوتکردن</string>
     <string name="rd_cancel">پاشگەزبوونەوە</string>
+    <string name="rd_audio_output">دەرەنجام</string>
+    <string name="rd_speaker_setup">ڕێکخستنی بڵندگۆکان</string>
+    <string name="rd_automatic">خۆکار</string>
+    <string name="rd_stereo">ستریۆ</string>
+    <string name="rd_reverse_stereo">پێچەوانەکردنەوەی ستریۆ</string>
+    <string name="rd_left">چەپ</string>
+    <string name="rd_right">ڕاست</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">دواخستنی دەنگ</string>
 </resources>

@@ -50,4 +50,13 @@
     <string name="rd_remove">Αφαίρεση</string>
     <string name="rd_save">Αποθήκευση</string>
     <string name="rd_cancel">Άκυρο</string>
+    <string name="rd_audio_output">Έξοδος</string>
+    <string name="rd_speaker_setup">Διάταξη ηχείων</string>
+    <string name="rd_automatic">Αυτόματα</string>
+    <string name="rd_stereo">Στερεοφωνικά</string>
+    <string name="rd_reverse_stereo">Αντίστροφα στερεοφωνικά</string>
+    <string name="rd_left">Αριστερά</string>
+    <string name="rd_right">Δεξιά</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Καθυστέρηση ήχου</string>
 </resources>

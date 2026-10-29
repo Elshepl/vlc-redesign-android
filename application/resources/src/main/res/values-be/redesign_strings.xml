@@ -50,4 +50,13 @@
     <string name="rd_remove">Выдаліць</string>
     <string name="rd_save">Захаваць</string>
     <string name="rd_cancel">Скасаваць</string>
+    <string name="rd_audio_output">Вывад</string>
+    <string name="rd_speaker_setup">Канфігурацыя дынамікаў</string>
+    <string name="rd_automatic">Аўтаматычна</string>
+    <string name="rd_stereo">Стэрэа</string>
+    <string name="rd_reverse_stereo">Рэверсіўнае стэрэа</string>
+    <string name="rd_left">Улева</string>
+    <string name="rd_right">Управа</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Затрымка аўдыё</string>
 </resources>

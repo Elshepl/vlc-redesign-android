@@ -60,4 +60,31 @@
     <string name="rd_move_later">Move right</string>
     <string name="rd_save">Save</string>
     <string name="rd_cancel">Cancel</string>
+    <!-- Settings › Audio: the desktop's Output section -->
+    <string name="rd_audio_output">Output</string>
+    <string name="rd_speaker_setup">Speaker setup</string>
+    <string name="rd_automatic">Automatic</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Reverse stereo</string>
+    <string name="rd_left">Left</string>
+    <string name="rd_right">Right</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Audio delay</string>
+    <string name="rd_audio_delay_summary">Delays the sound against the picture in every media, in ms; a negative value plays it earlier.</string>
+    <string-array name="rd_stereo_mode" translatable="false">
+        <item>@string/rd_automatic</item>
+        <item>@string/rd_stereo</item>
+        <item>@string/rd_reverse_stereo</item>
+        <item>@string/rd_left</item>
+        <item>@string/rd_right</item>
+        <item>@string/rd_dolby_surround</item>
+    </string-array>
+    <string-array name="rd_stereo_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>

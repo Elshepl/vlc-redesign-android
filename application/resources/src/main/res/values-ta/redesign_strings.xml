@@ -50,4 +50,13 @@
     <string name="rd_remove">அகற்று</string>
     <string name="rd_save">சேமி</string>
     <string name="rd_cancel">ரத்துசெய்</string>
+    <string name="rd_audio_output">வெளியீடு</string>
+    <string name="rd_speaker_setup">ஒலிபெருக்கி அமைவு</string>
+    <string name="rd_automatic">தானாக</string>
+    <string name="rd_stereo">ஸ்டீரியோ</string>
+    <string name="rd_reverse_stereo">தலைகீழ் ஸ்டீரியோ</string>
+    <string name="rd_left">இடது</string>
+    <string name="rd_right">வலது</string>
+    <string name="rd_dolby_surround">டால்பி சரவுண்ட்</string>
+    <string name="rd_audio_delay">ஒலித் தாமதம்</string>
 </resources>

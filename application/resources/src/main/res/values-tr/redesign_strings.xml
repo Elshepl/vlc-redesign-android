@@ -50,4 +50,13 @@
     <string name="rd_remove">Kaldır</string>
     <string name="rd_save">Kaydet</string>
     <string name="rd_cancel">İptal</string>
+    <string name="rd_audio_output">Çıkış</string>
+    <string name="rd_speaker_setup">Hoparlör düzeni</string>
+    <string name="rd_automatic">Otomatik</string>
+    <string name="rd_stereo">Çift Kanal</string>
+    <string name="rd_reverse_stereo">Ters Çift Kanal</string>
+    <string name="rd_left">Sol</string>
+    <string name="rd_right">Sağ</string>
+    <string name="rd_dolby_surround">Dolby Çevresel Ses</string>
+    <string name="rd_audio_delay">Ses gecikmesi</string>
 </resources>

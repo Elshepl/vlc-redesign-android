@@ -50,4 +50,13 @@
     <string name="rd_remove">移除</string>
     <string name="rd_save">保存</string>
     <string name="rd_cancel">取消</string>
+    <string name="rd_audio_output">输出</string>
+    <string name="rd_speaker_setup">扬声器设置</string>
+    <string name="rd_automatic">自动</string>
+    <string name="rd_stereo">立体声</string>
+    <string name="rd_reverse_stereo">反转立体声</string>
+    <string name="rd_left">左</string>
+    <string name="rd_right">右</string>
+    <string name="rd_dolby_surround">杜比环绕</string>
+    <string name="rd_audio_delay">音频延迟</string>
 </resources>

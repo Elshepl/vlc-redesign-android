@@ -50,4 +50,13 @@
     <string name="rd_remove">移除</string>
     <string name="rd_save">儲存</string>
     <string name="rd_cancel">取消</string>
+    <string name="rd_audio_output">輸出</string>
+    <string name="rd_speaker_setup">喇叭組態</string>
+    <string name="rd_automatic">自動</string>
+    <string name="rd_stereo">立體聲</string>
+    <string name="rd_reverse_stereo">左右聲道交換</string>
+    <string name="rd_left">左邊</string>
+    <string name="rd_right">右邊</string>
+    <string name="rd_dolby_surround">杜比環繞</string>
+    <string name="rd_audio_delay">音訊延遲</string>
 </resources>

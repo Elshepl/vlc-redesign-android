@@ -50,4 +50,13 @@
     <string name="rd_remove">Ukloni</string>
     <string name="rd_save">Spremi</string>
     <string name="rd_cancel">Odustani</string>
+    <string name="rd_audio_output">Izlaz</string>
+    <string name="rd_speaker_setup">Postava zvučnika</string>
+    <string name="rd_automatic">Automatski</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Zamijeni stereo izlaze</string>
+    <string name="rd_left">Lijevo</string>
+    <string name="rd_right">Desno</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Odgoda zvuka</string>
 </resources>

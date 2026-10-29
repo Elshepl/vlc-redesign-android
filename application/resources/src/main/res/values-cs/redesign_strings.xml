@@ -50,4 +50,13 @@
     <string name="rd_remove">Odstranit</string>
     <string name="rd_save">Uložit</string>
     <string name="rd_cancel">Zrušit</string>
+    <string name="rd_audio_output">Výstup</string>
+    <string name="rd_speaker_setup">Nastavení reproduktorů</string>
+    <string name="rd_automatic">Automaticky</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Reverzní stereo (prohodí levý a pravý kanál)</string>
+    <string name="rd_left">Vlevo</string>
+    <string name="rd_right">Vpravo</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Zpoždění zvuku</string>
 </resources>

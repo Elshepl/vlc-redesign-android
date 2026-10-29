@@ -50,4 +50,13 @@
     <string name="rd_remove">Tynnu</string>
     <string name="rd_save">Cadw</string>
     <string name="rd_cancel">Diddymu</string>
+    <string name="rd_audio_output">Allbwn</string>
+    <string name="rd_speaker_setup">Gosod seinyddion</string>
+    <string name="rd_automatic">Awtomatig</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Gwrthdroi stereo</string>
+    <string name="rd_left">Chwith</string>
+    <string name="rd_right">De</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Oediad sain</string>
 </resources>

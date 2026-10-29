@@ -50,4 +50,13 @@
     <string name="rd_remove">Elimină</string>
     <string name="rd_save">Salvează</string>
     <string name="rd_cancel">Renunță</string>
+    <string name="rd_audio_output">Ieșire</string>
+    <string name="rd_speaker_setup">Configurația difuzoarelor</string>
+    <string name="rd_automatic">Automat</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Stereo inversat</string>
+    <string name="rd_left">Stânga</string>
+    <string name="rd_right">Dreapta</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Întârziere audio</string>
 </resources>

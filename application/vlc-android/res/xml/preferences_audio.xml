@@ -66,6 +66,24 @@
             app:singleLineTitle="false" />
     </PreferenceCategory>
 
+    <!-- VLC Redesign: options of the desktop's Audio page that libvlc 3 has (Settings-Audio.md) -->
+    <PreferenceCategory android:title="@string/rd_audio_output">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/rd_stereo_mode"
+            android:entryValues="@array/rd_stereo_mode_values"
+            android:key="rd_stereo_mode"
+            android:title="@string/rd_speaker_setup"
+            app:useSimpleSummaryProvider="true"
+            app:singleLineTitle="false" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:key="rd_audio_desync"
+            android:title="@string/rd_audio_delay"
+            android:summary="@string/rd_audio_delay_summary"
+            app:singleLineTitle="false" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/replaygain_prefs_category">
         <CheckBoxPreference
             app:singleLineTitle="false"

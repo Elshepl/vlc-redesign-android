@@ -50,4 +50,13 @@
     <string name="rd_remove">削除</string>
     <string name="rd_save">保存</string>
     <string name="rd_cancel">キャンセル</string>
+    <string name="rd_audio_output">出力</string>
+    <string name="rd_speaker_setup">スピーカーの構成</string>
+    <string name="rd_automatic">自動</string>
+    <string name="rd_stereo">ステレオ</string>
+    <string name="rd_reverse_stereo">ステレオを反転</string>
+    <string name="rd_left">左</string>
+    <string name="rd_right">右</string>
+    <string name="rd_dolby_surround">ドルビーサラウンド</string>
+    <string name="rd_audio_delay">オーディオ遅延</string>
 </resources>

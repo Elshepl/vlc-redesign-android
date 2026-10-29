@@ -50,4 +50,13 @@
     <string name="rd_remove">إزالة</string>
     <string name="rd_save">حفظ</string>
     <string name="rd_cancel">إلغاء</string>
+    <string name="rd_audio_output">الخرج</string>
+    <string name="rd_speaker_setup">إعداد السماعات</string>
+    <string name="rd_automatic">آلي</string>
+    <string name="rd_stereo">ستيريو</string>
+    <string name="rd_reverse_stereo">ستيريو عكسي</string>
+    <string name="rd_left">يسار</string>
+    <string name="rd_right">يمين</string>
+    <string name="rd_dolby_surround">Dolby  محيط</string>
+    <string name="rd_audio_delay">تأخير الصوت</string>
 </resources>

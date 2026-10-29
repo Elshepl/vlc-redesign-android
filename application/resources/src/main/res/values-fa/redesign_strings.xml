@@ -50,4 +50,13 @@
     <string name="rd_remove">حذف</string>
     <string name="rd_save">ذخیره</string>
     <string name="rd_cancel">انصراف</string>
+    <string name="rd_audio_output">خروجی</string>
+    <string name="rd_speaker_setup">چیدمان بلندگوها</string>
+    <string name="rd_automatic">خودکار</string>
+    <string name="rd_stereo">استریو</string>
+    <string name="rd_reverse_stereo">استریوی معکوس</string>
+    <string name="rd_left">چپ</string>
+    <string name="rd_right">راست</string>
+    <string name="rd_dolby_surround">دالبی سراند</string>
+    <string name="rd_audio_delay">تأخیر صدا</string>
 </resources>

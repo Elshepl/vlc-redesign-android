@@ -148,7 +148,7 @@ class PreferencesAudio : BasePreferenceFragment(), SharedPreferences.OnSharedPre
         when (key) {
             KEY_AUDIO_DIGITAL_OUTPUT -> updatePassThroughSummary()
             KEY_AUDIO_PREFERRED_LANGUAGE -> updatePreferredAudioTrack()
-            KEY_AUDIO_REPLAY_GAIN_ENABLE, KEY_AUDIO_REPLAY_GAIN_MODE, KEY_AUDIO_REPLAY_GAIN_PEAK_PROTECTION -> lifecycleScope.launch { restartLibVLC() }
+            KEY_AUDIO_REPLAY_GAIN_ENABLE, KEY_AUDIO_REPLAY_GAIN_MODE, KEY_AUDIO_REPLAY_GAIN_PEAK_PROTECTION, "rd_stereo_mode", "rd_audio_desync" -> lifecycleScope.launch { restartLibVLC() }
             KEY_AUDIO_REPLAY_GAIN_DEFAULT, KEY_AUDIO_REPLAY_GAIN_PREAMP -> {
                 val defValue = if (key == KEY_AUDIO_REPLAY_GAIN_DEFAULT) "-7.0" else "0.0"
                 val newValue = sharedPreferences.getString(key, defValue)

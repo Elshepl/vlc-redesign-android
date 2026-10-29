@@ -50,4 +50,13 @@
     <string name="rd_remove">เอาออก</string>
     <string name="rd_save">บันทึก</string>
     <string name="rd_cancel">ยกเลิก</string>
+    <string name="rd_audio_output">ส่วนแสดงผล</string>
+    <string name="rd_speaker_setup">การจัดลำโพง</string>
+    <string name="rd_automatic">อัตโนมัติ</string>
+    <string name="rd_stereo">สเตริโอ</string>
+    <string name="rd_reverse_stereo">สเตริโอสลับข้าง</string>
+    <string name="rd_left">ซ้าย</string>
+    <string name="rd_right">ขวา</string>
+    <string name="rd_dolby_surround">ดอลบีเซอร์ราวนด์</string>
+    <string name="rd_audio_delay">หน่วงเวลาเสียง</string>
 </resources>

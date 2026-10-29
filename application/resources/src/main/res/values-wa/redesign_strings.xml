@@ -50,4 +50,13 @@
     <string name="rd_remove">Waester</string>
     <string name="rd_save">Schaper</string>
     <string name="rd_cancel">Rinoncî</string>
+    <string name="rd_audio_output">Rexhowe</string>
+    <string name="rd_speaker_setup">Apontiaedje des hôt-pårleus</string>
+    <string name="rd_automatic">Otomatike</string>
+    <string name="rd_stereo">Stereyo</string>
+    <string name="rd_reverse_stereo">Stereyo årvier</string>
+    <string name="rd_left">Hintche</string>
+    <string name="rd_right">Droete</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Ritårdmint odio</string>
 </resources>

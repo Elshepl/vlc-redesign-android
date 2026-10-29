@@ -50,4 +50,13 @@
     <string name="rd_remove">Hiq</string>
     <string name="rd_save">Ruaj</string>
     <string name="rd_cancel">Anulo</string>
+    <string name="rd_audio_output">Dalja</string>
+    <string name="rd_speaker_setup">Konfigurimi i altoparlantëve</string>
+    <string name="rd_automatic">Automatik</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Kthe në stereo</string>
+    <string name="rd_left">Majtas</string>
+    <string name="rd_right">Djathtas</string>
+    <string name="rd_dolby_surround">Dolby Përreth</string>
+    <string name="rd_audio_delay">Vonesa e audios</string>
 </resources>

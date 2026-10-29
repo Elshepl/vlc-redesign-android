@@ -50,4 +50,13 @@
     <string name="rd_remove">Pašalinti</string>
     <string name="rd_save">Įrašyti</string>
     <string name="rd_cancel">Atšaukti</string>
+    <string name="rd_audio_output">Išvestis</string>
+    <string name="rd_speaker_setup">Garsiakalbių konfigūracija</string>
+    <string name="rd_automatic">Automatinis</string>
+    <string name="rd_stereo">Stereofoninis</string>
+    <string name="rd_reverse_stereo">Sukeisti kairį ir dešinį kanalus</string>
+    <string name="rd_left">Kairėje</string>
+    <string name="rd_right">Dešinėje</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Garso vėlinimas</string>
 </resources>

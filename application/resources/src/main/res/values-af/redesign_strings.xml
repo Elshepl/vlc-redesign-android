@@ -50,4 +50,13 @@
     <string name="rd_remove">Verwyder</string>
     <string name="rd_save">Stoor</string>
     <string name="rd_cancel">Kanselleer</string>
+    <string name="rd_audio_output">Afvoer</string>
+    <string name="rd_speaker_setup">Luidsprekeropstelling</string>
+    <string name="rd_automatic">Outomaties</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Omgekeerde stereo</string>
+    <string name="rd_left">Links</string>
+    <string name="rd_right">Regs</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Oudiovertraging</string>
 </resources>

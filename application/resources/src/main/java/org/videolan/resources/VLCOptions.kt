@@ -243,6 +243,10 @@ object VLCOptions {
                 else
                     options.add("--no-audio-replay-gain-peak-protection")
             }
+            // VLC Redesign: the desktop's Speaker setup (stereo-mode, Automatic = 0) and its Audio delay for every
+            // media (audio-desync, ms), both libvlc 3 options
+            pref.getString("rd_stereo_mode", "0")?.toIntOrNull()?.takeIf { it in 1..5 }?.let { options.add("--stereo-mode=$it") }
+            pref.getString("rd_audio_desync", "0")?.trim()?.toIntOrNull()?.takeIf { it != 0 }?.let { options.add("--audio-desync=$it") }
             val soundFontFile = getSoundFontFile(context)
             if (soundFontFile.exists()) {
                 options.add("--soundfont=${soundFontFile.path}")

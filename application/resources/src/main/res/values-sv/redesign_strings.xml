@@ -50,4 +50,13 @@
     <string name="rd_remove">Ta bort</string>
     <string name="rd_save">Spara</string>
     <string name="rd_cancel">Avbryt</string>
+    <string name="rd_audio_output">Utmatning</string>
+    <string name="rd_speaker_setup">Högtalarkonfiguration</string>
+    <string name="rd_automatic">Automatisk</string>
+    <string name="rd_stereo">Stereo</string>
+    <string name="rd_reverse_stereo">Omvänd stereo</string>
+    <string name="rd_left">Vänster</string>
+    <string name="rd_right">Höger</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Ljudfördröjning</string>
 </resources>

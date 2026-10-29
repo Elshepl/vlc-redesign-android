@@ -50,4 +50,13 @@
     <string name="rd_remove">យកចេញ</string>
     <string name="rd_save">រក្សាទុក</string>
     <string name="rd_cancel">បោះបង់</string>
+    <string name="rd_audio_output">លទ្ធផល</string>
+    <string name="rd_speaker_setup">ការរៀបចំឧបករណ៍បំពងសំឡេង</string>
+    <string name="rd_automatic">ស្វ័យប្រវត្តិ</string>
+    <string name="rd_stereo">ស្តេរ៉េអូ</string>
+    <string name="rd_reverse_stereo">ស្តេរ៉េអូ​បញ្ច្រាស</string>
+    <string name="rd_left">ឆ្វេង</string>
+    <string name="rd_right">ស្ដាំ</string>
+    <string name="rd_dolby_surround">ដុលប៊ី​សឹរោន</string>
+    <string name="rd_audio_delay">ការពន្យារពេលអូឌីយ៉ូ</string>
 </resources>

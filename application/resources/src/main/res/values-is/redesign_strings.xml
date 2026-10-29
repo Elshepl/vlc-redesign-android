@@ -50,4 +50,13 @@
     <string name="rd_remove">Fjarlægja</string>
     <string name="rd_save">Vista</string>
     <string name="rd_cancel">Hætta við</string>
+    <string name="rd_audio_output">Úttak</string>
+    <string name="rd_speaker_setup">Uppsetning hátalara</string>
+    <string name="rd_automatic">Sjálfvirkt</string>
+    <string name="rd_stereo">Víðóma</string>
+    <string name="rd_reverse_stereo">Spegla víðómi</string>
+    <string name="rd_left">Vinstri</string>
+    <string name="rd_right">Hægri</string>
+    <string name="rd_dolby_surround">Dolby Surround hljóðumhverfi</string>
+    <string name="rd_audio_delay">Töf hljóðs</string>
 </resources>

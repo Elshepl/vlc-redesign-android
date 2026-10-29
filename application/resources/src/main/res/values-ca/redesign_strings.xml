@@ -50,4 +50,13 @@
     <string name="rd_remove">Elimina</string>
     <string name="rd_save">Desa</string>
     <string name="rd_cancel">Cancel·la</string>
+    <string name="rd_audio_output">Sortida</string>
+    <string name="rd_speaker_setup">Configuració dels altaveus</string>
+    <string name="rd_automatic">Automàtic</string>
+    <string name="rd_stereo">Estèreo</string>
+    <string name="rd_reverse_stereo">Estèreo invers</string>
+    <string name="rd_left">Esquerra</string>
+    <string name="rd_right">Dreta</string>
+    <string name="rd_dolby_surround">Dolby Surround</string>
+    <string name="rd_audio_delay">Retard de l\'àudio</string>
 </resources>

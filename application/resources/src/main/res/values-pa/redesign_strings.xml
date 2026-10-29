@@ -50,4 +50,13 @@
     <string name="rd_remove">ਹਟਾਓ</string>
     <string name="rd_save">ਸੰਭਾਲੋ</string>
     <string name="rd_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="rd_audio_output">ਆਉਟਪੁੱਟ</string>
+    <string name="rd_speaker_setup">ਸਪੀਕਰ ਸੈੱਟਅੱਪ</string>
+    <string name="rd_automatic">ਆਟੋਮੈਟਿਕ</string>
+    <string name="rd_stereo">ਸਟੀਰਿਓ</string>
+    <string name="rd_reverse_stereo">ਰੀਵਰਸ ਸਟੀਰਿਓ</string>
+    <string name="rd_left">ਖੱਬੇ</string>
+    <string name="rd_right">ਸੱਜੇ</string>
+    <string name="rd_dolby_surround">ਡੋਲਬੀ ਸਰਾਊਂਡਿੰਗ</string>
+    <string name="rd_audio_delay">ਆਡੀਓ ਦੇਰੀ</string>
 </resources>

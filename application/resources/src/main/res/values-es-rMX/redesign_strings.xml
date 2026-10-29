@@ -50,4 +50,13 @@
     <string name="rd_remove">Eliminar</string>
     <string name="rd_save">Guardar</string>
     <string name="rd_cancel">Cancelar</string>
+    <string name="rd_audio_output">Salida</string>
+    <string name="rd_speaker_setup">Configuración de altavoces</string>
+    <string name="rd_automatic">Automática</string>
+    <string name="rd_stereo">Estéreo</string>
+    <string name="rd_reverse_stereo">Estéreo invertido</string>
+    <string name="rd_left">Izquierda</string>
+    <string name="rd_right">Derecha</string>
+    <string name="rd_dolby_surround">Sonido Dolby Envolvente</string>
+    <string name="rd_audio_delay">Retraso de audio</string>
 </resources>
