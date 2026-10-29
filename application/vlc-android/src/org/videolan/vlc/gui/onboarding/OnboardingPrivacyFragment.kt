@@ -41,6 +41,10 @@ class OnboardingPrivacyFragment : OnboardingFragment() {
         row(rows, getString(R.string.rd_save_recent), getString(R.string.rd_ob_history_help), settings.getBoolean(PLAYBACK_HISTORY, true)) {
             settings.putSingle(PLAYBACK_HISTORY, it)
         }
+        // VLC Redesign, Live TV: its add-on, on by default as the desktop's (gui/livetv)
+        row(rows, getString(R.string.rd_tv_addon), getString(R.string.rd_tv_addon_help), settings.getBoolean(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, true)) {
+            settings.putSingle(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, it)
+        }
         // the update check only exists in test builds (AutoUpdate)
         if (BuildConfig.DEBUG) row(rows, getString(R.string.rd_check_updates), getString(R.string.rd_ob_updates_help), settings.getBoolean(KEY_SHOW_UPDATE, true)) {
             settings.putSingle(KEY_SHOW_UPDATE, it)

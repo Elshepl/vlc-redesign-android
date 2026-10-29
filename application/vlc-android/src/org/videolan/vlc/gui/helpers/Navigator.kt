@@ -91,10 +91,15 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
         // VLC Redesign: the icons carry their own colours (the active one is filled in the accent with a cut-out)
         navigationView.forEach { it.itemIconTintList = null }
         appbarLayout = findViewById(R.id.appbar)
+        // VLC Redesign: the pages in the user's order, TV while the Live TV add-on is on (gui/livetv)
+        org.videolan.vlc.gui.livetv.TvNavigation.install(this)
+        org.videolan.vlc.gui.livetv.TvNavigation.apply(this, navigationView, currentFragmentId)
     }
 
     override fun onStart(owner: LifecycleOwner) {
-        if (currentFragment === null && !currentIdIsExtension()) showFragment(if (currentFragmentId != 0) currentFragmentId else settings.getInt(KEY_FRAGMENT_ID, defaultFragmentId))
+        refreshPages()
+        if (currentFragmentId == R.id.nav_tv && !org.videolan.vlc.livetv.LiveTv.enabled) currentFragmentId = defaultFragmentId
+        if (currentFragment === null && !currentIdIsExtension()) showFragment(if (currentFragmentId != 0) currentFragmentId else settings.getInt(KEY_FRAGMENT_ID, defaultFragmentId).let { if (it == R.id.nav_tv && !org.videolan.vlc.livetv.LiveTv.enabled) defaultFragmentId else it })
         navigationView.forEach { it.setOnItemSelectedListener(this) }
     }
 
@@ -111,6 +116,7 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
             R.id.nav_playlists -> PlaylistFragment()
             R.id.nav_more -> MoreFragment()
             R.id.nav_home -> HomeFragment()
+            R.id.nav_tv -> org.videolan.vlc.gui.livetv.TvFragment()
             else -> VideoBrowserFragment()
         }
     }
@@ -161,7 +167,22 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
     private fun getTag(id: Int) = when (id) {
         R.id.nav_audio -> ID_AUDIO
         R.id.nav_directories -> ID_DIRECTORIES
+        R.id.nav_tv -> "tv"
         else -> ID_VIDEO
+    }
+
+    /** VLC Redesign: the bars in the user's order again (Edit Sidebar, the Live TV add-on switched). */
+    override fun refreshPages() {
+        if (!::navigationView.isInitialized) return
+        org.videolan.vlc.gui.livetv.TvNavigation.apply(activity, navigationView, currentFragmentId)
+        if (currentFragmentId == R.id.nav_tv && !org.videolan.vlc.livetv.LiveTv.enabled && currentFragment != null) showFragment(defaultFragmentId)
+    }
+
+    /** VLC Redesign: a page that is not in the bar (listed in More) opened in its place. */
+    override fun openPage(id: Int) {
+        if (currentFragmentId == id || !::activity.isInitialized) return
+        activity.slideDownAudioPlayer()
+        showFragment(id)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -216,4 +237,6 @@ interface INavigator {
     fun reloadPreferences()
     fun configurationChanged(size: Int)
     fun getFragmentWidth(activity: Activity): Int
+    fun refreshPages()
+    fun openPage(id: Int)
 }

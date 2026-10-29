@@ -46,6 +46,8 @@ class RdSettingsSidebar : Fragment() {
         }
         var group = 0
         for (page in RdPage.entries) {
+            // Live TV: its page while its add-on is on
+            if (page == RdPage.TV && !org.videolan.vlc.livetv.LiveTv.let { it.init(ctx); it.enabled }) continue
             if (page.group != group) {
                 group = page.group
                 list.addView(heading(getString(group)))

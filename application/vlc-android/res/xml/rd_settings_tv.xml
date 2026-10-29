@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Settings > Live TV, the desktop's page (SettingsTv.qml above the options of the add-on; sections
+     and wording of SettingsPresentation.qml). The sources rows are made by gui/livetv/TvSettings. -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/rd_tv_live_tv">
+    <PreferenceCategory
+        android:key="iptv_sources"
+        android:title="@string/rd_tv_sources">
+        <org.videolan.vlc.gui.preferences.rd.RdActionPreference
+            android:key="iptv_manage"
+            android:persistent="false"
+            android:title="@string/rd_tv_manage_help"
+            app:actionText="@string/rd_tv_manage" />
+        <org.videolan.vlc.gui.preferences.rd.RdActionPreference
+            android:key="iptv_catalog"
+            android:persistent="false"
+            android:title="@string/rd_tv_free_lists"
+            app:actionText="@string/rd_tv_browse_catalog" />
+        <Preference
+            android:key="iptv_languages_found"
+            android:persistent="false"
+            android:selectable="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_tv_sec_guide">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="3"
+            android:entries="@array/rd_tv_refresh_entries"
+            android:entryValues="@array/rd_tv_refresh_values"
+            android:key="iptv_refresh"
+            android:summary="@string/rd_tv_refresh_help"
+            android:title="@string/rd_tv_refresh" />
+        <SeekBarPreference
+            android:defaultValue="7"
+            android:key="iptv_guide_days"
+            android:max="14"
+            app:min="1"
+            app:showSeekBarValue="true"
+            android:summary="@string/rd_tv_guide_days_help"
+            android:title="@string/rd_tv_guide_days" />
+        <SeekBarPreference
+            android:defaultValue="3"
+            android:key="iptv_guide_hours"
+            android:max="12"
+            app:min="1"
+            app:showSeekBarValue="true"
+            android:summary="@string/rd_tv_guide_hours_help"
+            android:title="@string/rd_tv_guide_hours" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:defaultValue=""
+            android:key="iptv_languages"
+            android:summary="@string/rd_tv_guide_languages_help"
+            android:title="@string/rd_tv_guide_languages" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_tv_sec_watching">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="0"
+            android:entries="@array/rd_tv_banner_entries"
+            android:entryValues="@array/rd_tv_banner_values"
+            android:key="iptv_banner"
+            android:summary="@string/rd_tv_banner_help"
+            android:title="@string/rd_tv_banner" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="iptv_start_last"
+            android:summary="@string/rd_tv_start_last_help"
+            android:title="@string/rd_tv_start_last" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_tv_sec_lists">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="iptv_descriptions"
+            android:summary="@string/rd_tv_descriptions_help"
+            android:title="@string/rd_tv_descriptions" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="iptv_progress"
+            android:summary="@string/rd_tv_progress_help"
+            android:title="@string/rd_tv_progress" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="iptv_next"
+            android:summary="@string/rd_tv_show_next_help"
+            android:title="@string/rd_tv_show_next" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="iptv_adult"
+            android:summary="@string/rd_tv_adult_help"
+            android:title="@string/rd_tv_adult" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

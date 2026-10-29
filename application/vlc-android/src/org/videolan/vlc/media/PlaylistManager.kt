@@ -604,6 +604,8 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
             //todo in VLC 4.0, this should be done by using libvlc_media_player_set_time instead of start-time
             media.addOption(":start-time=${start/1000L}")
             media.addOption(":no-sout-chromecast-video")
+            // VLC Redesign, Live TV: the options of the channel (its user agent, its referrer)
+            org.videolan.vlc.livetv.TvPlayback.mediaOptions(mw.uri.toString()).forEach { media.addOption(it) }
             VLCOptions.setMediaOptions(media, ctx, flags or mw.flags, PlaybackService.hasRenderer())
             applySubtitleCharset(media, uri)
             /* keeping only video during benchmark */
@@ -750,6 +752,7 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
         val titleIdx = player.getTitleIdx()
         val currentMedia = getCurrentMedia() ?: return@outerLaunch
         if (currentMedia.uri.scheme.isSchemeFD()) return@outerLaunch
+        if (org.videolan.vlc.livetv.TvPlayback.isTvUrl(currentMedia.uri.toString())) return@outerLaunch
         if (Settings.getInstance(AppContextProvider.appContext).getBoolean(KEY_INCOGNITO, false)) return@outerLaunch
         //Save progress
         val time = player.mediaplayer.time
@@ -903,6 +906,8 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
         if (settings.getBoolean(KEY_INCOGNITO, false)) return
         val currentMedia = getCurrentMedia() ?: return
         if (currentMedia.uri.scheme.isSchemeFD()) return
+        // VLC Redesign, Live TV: a channel is no queue to resume
+        if (org.videolan.vlc.livetv.TvPlayback.isTvUrl(currentMedia.uri.toString())) return
         val locations = StringBuilder()
         val isAudio = isAudioList() || forceVideo
         withContext(Dispatchers.Default) {
@@ -1378,6 +1383,8 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
 
     private suspend fun savePlaycount(mw: MediaWrapper) {
         if (Settings.getInstance(AppContextProvider.appContext).getBoolean(KEY_INCOGNITO, false)) return
+        // VLC Redesign, Live TV: a channel is kept neither in the history nor in the library (as the desktop's)
+        if (org.videolan.vlc.livetv.TvPlayback.isTvUrl(mw.uri.toString())) return
         var currentMedia = mw
         if (settings.getBoolean(PLAYBACK_HISTORY, true) && !mw.uri.scheme.isSchemeFD()) withContext(Dispatchers.IO) {
             var id = mw.id

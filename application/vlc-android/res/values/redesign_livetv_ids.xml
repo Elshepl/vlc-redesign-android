@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign, Live TV: the TV page of the bottom bar and the rail -->
+    <item name="nav_tv" type="id" />
+</resources>

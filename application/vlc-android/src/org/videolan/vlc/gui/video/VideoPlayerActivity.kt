@@ -402,6 +402,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     private val switchAudioRunnable = Runnable {
         if (displayManager.isPrimary && service?.hasMedia() == true && service?.videoTracksCount == 0) {
+            // VLC Redesign, Live TV: a channel being switched has no picture for a moment, it stays in the player
+            if (org.videolan.vlc.livetv.TvPlayback.isCurrent(service?.currentMediaLocation)) return@Runnable
             Log.i(TAG, "Video track lost, switching to audio")
             switchingView = true
             exit(RESULT_VIDEO_TRACK_LOST)
