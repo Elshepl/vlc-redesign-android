@@ -473,7 +473,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
             onMainActionClick(v, position, item)
             return
         }
-        if ((item.itemType == MediaLibraryItem.TYPE_ARTIST || item.itemType == MediaLibraryItem.TYPE_GENRE) && detailWanted()) {
+        if ((item.itemType == MediaLibraryItem.TYPE_ARTIST || item.itemType == MediaLibraryItem.TYPE_GENRE
+                    || item.itemType == MediaLibraryItem.TYPE_ALBUM || item.itemType == MediaLibraryItem.TYPE_PLAYLIST) && detailWanted()) {
             detailPane?.show(item)
             (getCurrentAdapter() as? AudioBrowserAdapter)?.rdDetailItem = item
             return
@@ -506,7 +507,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         }
     }
 
-    private fun detailWanted() = (currentTab == 0 || currentTab == 3) && view != null &&
+    /** every tab but Tracks (artists, albums, genres, playlists: the desktop's list + detail views) */
+    private fun detailWanted() = currentTab in DETAIL_TABS && view != null &&
             binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
 
     /** Shows or hides the detail pane for the window's width and the tab; the first entry is selected at first. */
@@ -537,7 +539,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
     }
 
     /**
-     * VLC Redesign, tablets: beside the detail pane the Artists and Genres lists are rows (the desktop's
+     * VLC Redesign, tablets: beside the detail pane the lists (artists, albums, genres, playlists) are rows (the desktop's
      * MusicArtistsAlbums list), not cards sized for the whole window; the cards come back on a narrow window.
      * The saved display mode is not changed.
      */
@@ -547,7 +549,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
     private fun tabletPaneListMode() {
         if (!requireContext().isTablet() || view == null) return
         val wide = binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
-        for (i in intArrayOf(0, 3)) {
+        for (i in DETAIL_TABS) {
             if (i >= lists.size || i >= adapters.size) continue
             val want = wide
             if (want != paneListMode[i]) {
@@ -595,6 +597,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
 
         private const val KEY_LISTS_POSITIONS = "key_lists_position"
         private const val MODE_TOTAL = 5 // Number of audio lists
+        /** the tabs with a detail pane on a wide window: Artists, Albums, Genres, Playlists */
+        private val DETAIL_TABS = intArrayOf(0, 1, 3, 4)
 
         const val TAG_ITEM = "ML_ITEM"
     }
