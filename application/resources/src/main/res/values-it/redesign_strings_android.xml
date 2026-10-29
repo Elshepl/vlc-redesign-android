@@ -34,4 +34,5 @@
         <item>I sottotitoli non in Unicode vengono mostrati correttamente: i file in ebraico, arabo, russo, greco, turco, giapponese, cinese, coreano e thailandese sono riconosciuti dalle loro lettere e dalla lingua nel nome.</item>
         <item>Informazioni attribuisce il design dell\'interfaccia a Juxtopposed, con i link del design, come nella versione desktop.</item>
     </string-array>
+    <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
 </resources>

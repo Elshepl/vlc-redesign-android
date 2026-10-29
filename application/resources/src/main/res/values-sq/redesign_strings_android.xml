@@ -36,4 +36,5 @@
         <item>Titrat që nuk janë Unicode shfaqen saktë: skedarët në hebraisht, arabisht, rusisht, greqisht, turqisht, japonisht, kinezisht, koreanisht dhe tajlandisht njihen nga shkronjat e tyre dhe gjuha në emrin e tyre.</item>
         <item>Faqja Rreth i jep merita për dizajnin e ndërfaqes Juxtopposed, me lidhjet e dizajnit, si në desktop.</item>
     </string-array>
+    <string name="rd_subtitle_size">Madhësia e titrave</string>
 </resources>

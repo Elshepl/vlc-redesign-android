@@ -34,4 +34,5 @@
         <item>非 Unicode 字幕也能正確顯示：希伯來文、阿拉伯文、俄文、希臘文、土耳其文、日文、中文、韓文與泰文檔案，會依其中的文字與檔名中的語言辨識。</item>
         <item>「關於」頁面與桌面版一樣，註明介面由 Juxtopposed 設計，並附上設計連結。</item>
     </string-array>
+    <string name="rd_subtitle_size">字幕大小</string>
 </resources>

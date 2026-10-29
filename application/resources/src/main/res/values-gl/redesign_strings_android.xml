@@ -34,4 +34,5 @@
         <item>Os subtítulos que non están en Unicode amósanse ben: os ficheiros en hebreo, árabe, ruso, grego, turco, xaponés, chinés, coreano e tailandés recoñécense polas súas letras e polo idioma do seu nome.</item>
         <item>Acerca de atribúe o deseño da interface a Juxtopposed, coas ligazóns do deseño, como no escritorio.</item>
     </string-array>
+    <string name="rd_subtitle_size">Tamaño dos subtítulos</string>
 </resources>

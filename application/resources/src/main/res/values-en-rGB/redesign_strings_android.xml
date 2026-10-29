@@ -14,4 +14,5 @@
     <string name="rd_help_target_level">How loud normalised sound may get: higher is louder.</string>
     <string name="rd_accent_named">Accent colour %1$s</string>
     <string name="rd_ob_theme_title">Select your preferred theme and colour.</string>
+    <string name="rd_subtitle_size">Subtitle size</string>
 </resources>

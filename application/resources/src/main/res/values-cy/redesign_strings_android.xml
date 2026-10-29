@@ -35,4 +35,5 @@
         <item>Mae isdeitlau nad ydynt yn Unicode yn dangos yn gywir: mae ffeiliau Hebraeg, Arabeg, Rwsieg, Groeg, Tyrceg, Japaneg, Tsieinëeg, Coreeg a Thai yn cael eu hadnabod wrth eu llythrennau a\'r iaith yn eu henw.</item>
         <item>Mae Ynghylch yn cydnabod Juxtopposed am ddylunio\'r rhyngwyneb, gyda dolenni at y dyluniad, fel ar y bwrdd gwaith.</item>
     </string-array>
+    <string name="rd_subtitle_size">Maint isdeitlau</string>
 </resources>

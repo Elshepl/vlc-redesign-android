@@ -10,4 +10,5 @@
     <string name="rd_move_later">ወደ ቀኝ አንቀሳቅስ</string>
     <string name="rd_ob_whole_device">መላው መሣሪያ</string>
     <string name="rd_about_whats_new">በ%1$s ውስጥ ምን አዲስ ነገር አለ</string>
+    <string name="rd_subtitle_size">የንዑስ ርዕስ መጠን</string>
 </resources>

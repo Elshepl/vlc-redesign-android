@@ -34,4 +34,5 @@
         <item>Ne Unicode subtitrai rodomi teisingai: hebrajų, arabų, rusų, graikų, turkų, japonų, kinų, korėjiečių ir tajų failai atpažįstami pagal jų raides ir pavadinime nurodytą kalbą.</item>
         <item>Skiltyje Apie Juxtopposed nurodomas kaip sąsajos dizaino autorius, su nuorodomis į dizainą, kaip kompiuterio versijoje.</item>
     </string-array>
+    <string name="rd_subtitle_size">Subtitrų dydis</string>
 </resources>

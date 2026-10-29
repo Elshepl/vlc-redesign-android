@@ -187,6 +187,8 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         }
         setup()
         rootView.visibility = View.VISIBLE
+        // VLC Redesign (#10): the settings button shows the menu is open
+        (activity as? VideoPlayerActivity)?.setSurfaceOpen("settings", true)
         if (Settings.showTvUi) AppScope.launch {
             withContext(Dispatchers.IO){ delay(100L) }
             val position = (recyclerview.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
@@ -203,6 +205,7 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
     fun hide() {
         // (a control of the bar acts without the menu ever shown)
         if (::rootView.isInitialized) rootView.visibility = View.GONE
+        (activity as? VideoPlayerActivity)?.setSurfaceOpen("settings", false)
     }
 
     fun setBookmarkClickedListener(listener:()->Unit) {
@@ -225,6 +228,7 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
                 }
                 service.repeatType = type
                 (activity as? VideoPlayerActivity)?.overlayDelegate?.showInfo(activity.getString(text), 1000)
+                (activity as? VideoPlayerActivity)?.overlayDelegate?.refreshActiveButtons()
                 return
             }
             "bookmarks" -> ID_BOOKMARK

@@ -34,4 +34,5 @@
         <item>Unicode olmayan altyazılar doğru görünür: İbranice, Arapça, Rusça, Yunanca, Türkçe, Japonca, Çince, Korece ve Tayca dosyalar harflerinden ve adlarındaki dilden tanınır.</item>
         <item>Hakkında bölümü, masaüstündeki gibi tasarım bağlantılarıyla birlikte arayüz tasarımının Juxtopposed\'a ait olduğunu belirtir.</item>
     </string-array>
+    <string name="rd_subtitle_size">Altyazı boyutu</string>
 </resources>

@@ -36,4 +36,5 @@
         <item>Onderskrifte wat nie Unicode is nie, word reg gewys: Hebreeuse, Arabiese, Russiese, Griekse, Turkse, Japannese, Chinese, Koreaanse en Thaise lêers word herken aan hul letters en die taal in hul naam.</item>
         <item>Oor erken Juxtopposed as die ontwerper van die koppelvlak, met die skakels na die ontwerp, soos op die rekenaar.</item>
     </string-array>
+    <string name="rd_subtitle_size">Onderskrifgrootte</string>
 </resources>

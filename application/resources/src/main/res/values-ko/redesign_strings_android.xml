@@ -34,4 +34,5 @@
         <item>Unicode가 아닌 자막도 올바르게 표시됩니다. 히브리어, 아랍어, 러시아어, 그리스어, 터키어, 일본어, 중국어, 한국어, 태국어 파일을 글자와 파일 이름에 있는 언어로 알아봅니다.</item>
         <item>정보 화면에 데스크톱처럼 인터페이스 디자이너 Juxtopposed의 크레딧과 디자인 링크가 표시됩니다.</item>
     </string-array>
+    <string name="rd_subtitle_size">자막 크기</string>
 </resources>

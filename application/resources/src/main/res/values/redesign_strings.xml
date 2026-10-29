@@ -356,4 +356,6 @@
     <string name="rd_eq_two_pass">Two-pass equalizer</string>
     <string name="rd_eq_preset">Equalizer preset</string>
     <string name="rd_eq_custom">Custom</string>
+    <!-- #10: the subtitle size slider of the tracks panel, and the player's message "Subtitle size 120 %" (Ctrl + wheel) -->
+    <string name="rd_subtitle_size">Subtitle size</string>
 </resources>

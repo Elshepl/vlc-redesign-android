@@ -36,4 +36,5 @@
         <item>Taispeántar fotheidil nach bhfuil in Unicode i gceart: aithnítear comhaid Eabhraise, Araibise, Rúisise, Gréigise, Tuircise, Seapáinise, Sínise, Cóiréise agus Téalainnise óna litreacha agus ón teanga ina n-ainm.</item>
         <item>Tugann Maidir Le creidiúint do Juxtopposed as dearadh na comhéadaine, le naisc chuig an dearadh, mar a dhéantar ar an deasc.</item>
     </string-array>
+    <string name="rd_subtitle_size">Méid na bhfotheideal</string>
 </resources>

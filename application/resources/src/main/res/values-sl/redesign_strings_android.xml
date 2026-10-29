@@ -34,4 +34,5 @@
         <item>Podnapisi, ki niso v Unicode, se prikažejo pravilno: datoteke v hebrejščini, arabščini, ruščini, grščini, turščini, japonščini, kitajščini, korejščini in tajščini se prepoznajo po črkah in po jeziku v imenu.</item>
         <item>Razdelek O programu navaja avtorja oblikovanja vmesnika, Juxtopposed, s povezavami do oblikovanja, kot v namizni različici.</item>
     </string-array>
+    <string name="rd_subtitle_size">Velikost podnapisov</string>
 </resources>

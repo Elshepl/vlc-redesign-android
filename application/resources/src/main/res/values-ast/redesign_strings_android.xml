@@ -34,4 +34,5 @@
         <item>Los sotítulos que nun tán n\'Unicode amuésense bien: los ficheros n\'hebréu, árabe, rusu, griegu, turcu, xaponés, chinu, coreanu y tailandés reconócense poles sos lletres y pola llingua del so nome.</item>
         <item>Tocante a atribúi\'l diseñu de la interfaz a Juxtopposed, colos enllaces del diseñu, como nel escritoriu.</item>
     </string-array>
+    <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
 </resources>

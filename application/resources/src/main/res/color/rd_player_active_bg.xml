@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign (#10): a player button whose panel is open, or a toggle that is ON: the dim accent behind the
+     glyph (the checked state of the player panels), no border -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="0.22" android:color="?attr/colorPrimary" android:state_activated="true" />
+    <item android:color="@android:color/transparent" />
+</selector>
