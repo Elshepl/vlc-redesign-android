@@ -248,6 +248,22 @@
     <string name="rd_toggle_off">OFF</string>
     <string name="rd_default_value">Default</string>
     <string name="rd_accent_named">Accent color %1$s</string>
+    <string name="rd_ob_welcome">Welcome to VLC!</string>
+    <string name="rd_ob_welcome_text">VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.</string>
+    <string name="rd_ob_choose_folder">Choose a Media Folder to get started with</string>
+    <string name="rd_ob_no_folder">No folder selected</string>
+    <string name="rd_ob_remove_folder">Remove the folder</string>
+    <string name="rd_ob_browse">Browse</string>
+    <string name="rd_ob_theme_title">Select your preferred theme and color.</string>
+    <string name="rd_ob_online_title">Choose what VLC does online by itself.</string>
+    <string name="rd_back">Back</string>
+    <string name="rd_next">Next</string>
+    <string name="rd_finish">Finish</string>
+    <string name="rd_ob_whole_device">The whole device</string>
+    <string name="rd_ob_folders_count">%1$s and %2$d more</string>
+    <string name="rd_ob_online_text">No telemetry, no ads, no account: VLC for Android sends nothing by itself. These choices stay in Settings, Privacy.</string>
+    <string name="rd_ob_history_help">Kept on this device only, to continue where you left off.</string>
+    <string name="rd_ob_updates_help">Looks for a newer test build of VLC for Android once a day.</string>
     <string-array name="rd_accent_entries" translatable="false">
         <item>@string/rd_orange</item>
         <item>@string/rd_red</item>

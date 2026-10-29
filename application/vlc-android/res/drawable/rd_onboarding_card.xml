@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The design credit on the last step: the A4 panel, radius 10, its window border -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/rd_dark_bg_a4" />
+    <stroke android:width="1dp" android:color="@color/rd_dark_window_border_token" />
+    <corners android:radius="10dp" />
+</shape>

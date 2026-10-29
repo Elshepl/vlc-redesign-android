@@ -519,6 +519,7 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
             // the desktop switches its language at once: this screen now, the others as they come back
             KEY_SET_LOCALE -> {
                 activity.setRestart()
+                AppContextProvider.setLocale(sharedPreferences.getString(KEY_SET_LOCALE, ""))
                 activity.recreate()
             }
             // the desktop changes its theme at once: every open screen is drawn again in it

@@ -1073,4 +1073,29 @@
         <item name="cardElevation">0dp</item>
     </style>
 
+    <!-- VLC Redesign: the buttons of the onboarding (OnboardingButton.qml): 40 high, radius 6, Inter 16 SemiBold -->
+    <style name="Widget.Redesign.Onboarding.Button" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Widget.Redesign.Onboarding.TextButton" parent="Widget.Redesign.Onboarding.Button">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/rd_dark_fg_a3</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
 </resources>

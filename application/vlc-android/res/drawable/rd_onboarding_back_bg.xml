@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OnboardingButton.qml: #1B1B1B, radius 6 (pressed #303030) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"><shape><solid android:color="#FF303030" /><corners android:radius="6dp" /></shape></item>
+    <item><shape><solid android:color="@color/rd_dark_bg_a3" /><corners android:radius="6dp" /></shape></item>
+</selector>

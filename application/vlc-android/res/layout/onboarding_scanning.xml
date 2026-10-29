@@ -1,89 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<!-- VLC Redesign: the media folder of WelcomeStep.qml: "Choose a Media Folder to get started with", the folder in its
+     field, Browse, and the cross that removes it -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        tools:background="@color/onboarding_grey">
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
 
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/rd_ic_duo_folder_open" />
 
-    <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.25" />
-
-    <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/scanning_title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/ic_onboarding_scan" />
-
-    <TextView
+        <TextView
             android:id="@+id/scanning_title"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/onboarding_scan_title"
-            android:textAlignment="center"
-            android:textAppearance="@style/VLC.Onboarding.Title"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:text="@string/rd_ob_choose_folder"
+            android:textColor="@color/rd_dark_fg_a1"
+            android:textSize="22sp"
+            android:accessibilityHeading="true" />
 
-    <TextView
-            android:id="@+id/textView4"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
             android:text="@string/medialibrary_scan_explanation"
-            android:textAlignment="center"
-            android:textAppearance="@style/VLC.Onboarding.Text"
-            app:layout_constraintBottom_toTopOf="@+id/scanningEnableSwitch"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scanning_title" />
+            android:textColor="@color/rd_dark_fg_a2"
+            android:textSize="14sp" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/scanningEnableSwitch"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:checked="true"
-            android:text="@string/onboarding_scanning_enable"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/customizeButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_chainStyle="packed" />
+            android:layout_marginTop="28dp"
+            android:maxWidth="520dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    <Button
-            android:id="@+id/customizeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/customize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scanningEnableSwitch" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="@drawable/rd_onboarding_field_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="4dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/folder_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter"
+                    android:singleLine="true"
+                    android:ellipsize="start"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/rd_dark_fg_1"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/folder_clear"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/rd_ob_remove_folder"
+                    android:src="@drawable/rd_ic_close" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/customizeButton"
+                style="@style/Widget.Redesign.Onboarding.Button"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rd_onboarding_back_bg"
+                android:text="@string/rd_ob_browse"
+                android:textColor="@color/rd_dark_fg_2" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

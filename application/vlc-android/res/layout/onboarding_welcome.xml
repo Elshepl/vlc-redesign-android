@@ -1,57 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<!-- VLC Redesign: WelcomeStep.qml (Figma 1899:3055): the logo, "Welcome to VLC!", the text, and the interface
+     language (on Android the language is chosen here, the desktop's installer asks it) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        tools:background="@color/onboarding_grey">
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
 
-    <ImageView
+        <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline"
-            app:srcCompat="@drawable/ic_icon" />
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_icon" />
 
-    <TextView
+        <TextView
             android:id="@+id/welcome_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/welcome_title"
-            android:textAlignment="center"
-            android:textAppearance="@style/VLC.Onboarding.Title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:text="@string/welcome_subtitle"
-            android:textAlignment="center"
-            android:textAppearance="@style/VLC.Onboarding.Text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome_title" />
-
-    <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.25" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter_light"
+            android:text="@string/rd_ob_welcome"
+            android:textColor="@color/rd_dark_fg_1"
+            android:textSize="26sp"
+            android:accessibilityHeading="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxWidth="520dp"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.25"
+            android:text="@string/rd_ob_welcome_text"
+            android:textColor="@color/rd_dark_fg_a2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:maxWidth="420dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/rd_interface_language"
+            android:textAlignment="viewStart"
+            android:textColor="@color/rd_dark_fg_a2"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/language_well"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:maxWidth="420dp"
+            android:background="@drawable/rd_onboarding_field_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/language_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAlignment="viewStart"
+                android:textColor="@color/rd_dark_fg_1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/rd_ic_chevron_down" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

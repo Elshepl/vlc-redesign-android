@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -47,7 +48,11 @@ import org.videolan.vlc.util.Permissions
 const val ONBOARDING_DONE_KEY = "app_onboarding_done"
 
 class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
-    private lateinit var nextButton: Button
+    private lateinit var nextButton: TextView
+    // VLC Redesign: the interface language chosen on the welcome step applies at once
+    private var localeDelegate: androidx.appcompat.app.AppCompatDelegate? = null
+    override fun getDelegate() = localeDelegate
+            ?: androidx.appcompat.app.BaseContextWrappingDelegate(super.getDelegate()).apply { localeDelegate = this }
     private val viewModel: OnboardingViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         if (AndroidDevices.canUseSystemNightMode()) enableEdgeToEdge()
@@ -82,6 +87,7 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
             FragmentName.NO_PERMISSION -> OnboardingNoPermissionFragment.newInstance()
             FragmentName.NOTIFICATION_PERMISSION -> OnboardingNotificationPermissionFragment.newInstance()
             FragmentName.THEME -> OnboardingThemeFragment.newInstance()
+            FragmentName.PRIVACY -> OnboardingPrivacyFragment.newInstance()
         }
         (fragment as OnboardingFragment).onboardingFragmentListener = this
         supportFragmentManager.commit {
@@ -98,10 +104,21 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
             )
             replace(R.id.fragment_onboarding_placeholder, fragment, fragmentName.name)
         }
+        if (!backward && viewModel.currentFragment != fragmentName && viewModel.history.lastOrNull() != viewModel.currentFragment)
+            viewModel.history.add(viewModel.currentFragment)
         viewModel.currentFragment = fragmentName
         findViewById<View>(R.id.skip_button).setOnClickListener { onDone() }
         nextButton = findViewById(R.id.next_button)
         nextButton.setOnClickListener { onNext() }
+        // Back: the step before (not to a permission question already answered)
+        val back = findViewById<View>(R.id.back_button)
+        viewModel.history.removeAll { it == FragmentName.ASK_PERMISSION || it == FragmentName.NOTIFICATION_PERMISSION || it == FragmentName.NO_PERMISSION }
+        back.visibility = if (viewModel.history.isEmpty() || fragmentName == FragmentName.WELCOME) View.GONE else View.VISIBLE
+        back.setOnClickListener {
+            viewModel.history.removeLastOrNull()?.let { showFragment(it, backward = true) }
+        }
+        nextButton.text = getString(if (fragmentName == FragmentName.PRIVACY) R.string.rd_finish else R.string.rd_next)
+        findViewById<View>(R.id.skip_button).visibility = if (fragmentName == FragmentName.PRIVACY) View.INVISIBLE else View.VISIBLE
     }
 
     override fun onDestroy() {
@@ -184,11 +201,11 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
                 )
             }
             FragmentName.NO_PERMISSION -> showFragment(if (Permissions.canReadStorage(applicationContext)) FragmentName.SCAN else FragmentName.THEME)
+            FragmentName.THEME -> showFragment(FragmentName.PRIVACY)
             FragmentName.NOTIFICATION_PERMISSION -> if(!Permissions.canSendNotifications(applicationContext) && !viewModel.notificationPermissionAlreadyAsked) askNotificationPermission() else showFragment(FragmentName.THEME)
             FragmentName.SCAN -> if (Build.VERSION.SDK_INT > Build.VERSION_CODES.S && !Permissions.canSendNotifications(applicationContext)) showFragment(FragmentName.NOTIFICATION_PERMISSION) else showFragment(FragmentName.THEME)
             else ->  onDone()
         }
-        if (viewModel.currentFragment == FragmentName.THEME) nextButton.text = getString(R.string.done)
     }
 
 }
@@ -199,7 +216,8 @@ enum class FragmentName {
     SCAN,
     NO_PERMISSION,
     NOTIFICATION_PERMISSION,
-    THEME
+    THEME,
+    PRIVACY
 }
 
 fun Activity.startOnboarding() = startActivityForResult(Intent(this, OnboardingActivity::class.java), ACTIVITY_RESULT_PREFERENCES)
