@@ -59,6 +59,16 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
 
     override fun initialFocusedView(): View = title
 
+    /**
+     * VLC Redesign, tablets: the desktop's editor, a centred window with the three zones side by side (a side
+     * sheet stacks them)
+     */
+    private val sideBySide get() = resources.getBoolean(R.bool.is_tablet) && resources.configuration.screenWidthDp >= 720
+
+    override fun useSideSheet() = !sideBySide && super.useSideSheet()
+
+    override fun windowWidth() = if (sideBySide) minOf(920.dp, (resources.displayMetrics.widthPixels * 0.92f).toInt()) else super.windowWidth()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val ctx = requireContext()
         val prefs = Settings.getInstance(ctx)
@@ -108,6 +118,8 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
         // the bar in edit mode: three zones, the one that receives in the accent
         val labels = listOf(R.string.rd_zone_left, R.string.rd_zone_center, R.string.rd_zone_right)
         zoneRows = ArrayList()
+        // left, center, right as on the bar, which keeps its order in right-to-left languages
+        val zoneParent = if (sideBySide) LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; layoutDirection = View.LAYOUT_DIRECTION_LTR; column.addView(this) } else column
         zoneBoxes = labels.mapIndexed { i, label ->
             LinearLayout(ctx).apply {
                 orientation = LinearLayout.VERTICAL
@@ -120,12 +132,13 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
                 setOnClickListener { zone = i; refresh() }
                 // drag and drop, as the desktop's editor: a control dropped in a zone goes where it was let go
                 setOnDragListener { _, e -> onZoneDrag(i, icons, e) }
-                column.addView(this, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = 6.dp })
+                if (sideBySide) zoneParent.addView(this, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f).apply { topMargin = 6.dp; if (i > 0) marginStart = 8.dp })
+                else column.addView(this, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = 6.dp })
             }
         }
 
         // the catalogue
-        val grid = GridLayout(ctx).apply { columnCount = 4; setPadding(0, 14.dp, 0, 0) }
+        val grid = GridLayout(ctx).apply { columnCount = if (sideBySide) 8 else 4; setPadding(0, 14.dp, 0, 0) }
         PlayerBarLayout.CATALOGUE.forEach { c ->
             val cell = LinearLayout(ctx).apply {
                 orientation = LinearLayout.VERTICAL

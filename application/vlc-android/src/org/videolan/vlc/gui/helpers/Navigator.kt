@@ -178,6 +178,7 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
     override fun refreshPages() {
         if (!::navigationView.isInitialized) return
         org.videolan.vlc.gui.livetv.TvNavigation.apply(activity, navigationView, currentFragmentId)
+        with(TabletSidebar) { activity.refreshTabletSidebar() }
         if (currentFragmentId == R.id.nav_tv && !org.videolan.vlc.livetv.LiveTv.enabled && currentFragment != null) showFragment(defaultFragmentId)
     }
 

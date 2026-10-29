@@ -104,6 +104,8 @@ class SecondaryActivity : ContentActivity(), IDialogManager {
         }
         setContentView(R.layout.secondary)
         initAudioPlayerContainerActivity()
+        // VLC Redesign, tablets: the media library's folder picker as a centred window (gui/tablet)
+        if (intent.getStringExtra(KEY_FRAGMENT) == STORAGE_BROWSER) org.videolan.vlc.gui.tablet.TabletSheets.floatActivity(this)
 
         if (isOnboarding) WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
