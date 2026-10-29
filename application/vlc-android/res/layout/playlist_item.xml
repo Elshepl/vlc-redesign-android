@@ -124,6 +124,7 @@
 
         <TextView
                 android:id="@+id/audio_item_title"
+                android:textAlignment="viewStart"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -151,6 +152,7 @@
 
         <TextView
                 android:id="@+id/audio_item_subtitle"
+                android:textAlignment="viewStart"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
