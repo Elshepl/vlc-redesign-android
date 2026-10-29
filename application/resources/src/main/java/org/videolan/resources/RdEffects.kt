@@ -73,6 +73,11 @@ object RdEffects {
     private val anaglyphSchemes = listOf("red-green" to R.string.rd_fx_anaglyph_rg, "red-blue" to R.string.rd_fx_anaglyph_rb,
             "red-cyan" to R.string.rd_fx_anaglyph_rc, "trioscopic" to R.string.rd_fx_anaglyph_gm, "magenta-cyan" to R.string.rd_fx_anaglyph_mc)
 
+    /** the marq module's colours (its list on the desktop), as 0xRRGGBB */
+    private val colours = listOf("0xFF0000" to R.string.rd_fx_red, "0xFFFF00" to R.string.rd_fx_yellow, "0x00FF00" to R.string.rd_fx_lime,
+            "0x008000" to R.string.rd_fx_green, "0x00FFFF" to R.string.rd_fx_aqua, "0x0000FF" to R.string.rd_fx_blue,
+            "0xFF00FF" to R.string.rd_fx_fuchsia, "0xFFFFFF" to R.string.rd_fx_white, "0x808080" to R.string.rd_fx_gray, "0x000000" to R.string.rd_fx_black)
+
     val essential = listOf(
             Filter("adjust", R.string.rd_fx_image_adjust, listOf(
                     Param("hue", R.string.rd_fx_hue, -180f, 180f, 0f, 1f),
@@ -83,7 +88,21 @@ object RdEffects {
             Filter("gradfun", R.string.rd_fx_gradfun, listOf(
                     Param("gradfun-radius", R.string.rd_fx_gradfun, 4f, 32f, 16f, 1f)))
     )
+    /** the desktop's Crop panel (VLC 4's crop-top...): libvlc 3's croppadd filter, in pixels of the video */
+    val crop = listOf(
+            Filter("croppadd", R.string.rd_fx_crop, listOf(
+                    Param("croppadd-croptop", R.string.rd_fx_top, 0f, 540f, 0f, 1f, R.string.rd_fx_unit_px),
+                    Param("croppadd-cropbottom", R.string.rd_fx_bottom, 0f, 540f, 0f, 1f, R.string.rd_fx_unit_px),
+                    Param("croppadd-cropleft", R.string.rd_fx_left, 0f, 960f, 0f, 1f, R.string.rd_fx_unit_px),
+                    Param("croppadd-cropright", R.string.rd_fx_right, 0f, 960f, 0f, 1f, R.string.rd_fx_unit_px)))
+    )
     val colors = listOf(
+            Filter("extract", R.string.rd_fx_extract, listOf(
+                    Param("extract-component", R.string.rd_fx_color, choices = colours, defChoice = "0xFF0000"))),
+            Filter("colorthres", R.string.rd_fx_colorthres, listOf(
+                    Param("colorthres-color", R.string.rd_fx_color, choices = colours, defChoice = "0xFF0000"),
+                    Param("colorthres-saturationthres", R.string.rd_fx_saturation, 0f, 100f, 20f, 1f),
+                    Param("colorthres-similaritythres", R.string.rd_fx_similarity, 0f, 100f, 15f, 1f))),
             Filter("invert", R.string.rd_fx_invert),
             Filter("sepia", R.string.rd_fx_sepia, listOf(Param("sepia-intensity", R.string.rd_fx_sepia, 0f, 255f, 120f, 1f)))
     )
@@ -92,6 +111,12 @@ object RdEffects {
                     Param("transform-type", R.string.rd_fx_transform_type, choices = transformTypes, defChoice = "90"))),
             Filter("rotate", R.string.rd_fx_rotate, listOf(Param("rotate-angle", R.string.rd_fx_angle, 0f, 359f, 30f, 1f)))
     )
+    /*
+     * The desktop's Overlay section (Add Logo, Add Text, Logo Erase) is not possible with libvlc 3 on Android:
+     * the media player creates its own "logo-file", "marq-*" and "sub-source" variables (for libvlc's logo and
+     * marquee API, which VLC for Android's libvlc does not expose), so an option of libvlc never reaches them
+     * (checked in the -vv log: "no logo file specified", no sub source loaded); erase is not built.
+     */
     val advanced = listOf(
             Filter("anaglyph", R.string.rd_fx_anaglyph, listOf(
                     Param("anaglyph-scheme", R.string.rd_fx_color_scheme, choices = anaglyphSchemes, defChoice = "red-cyan"))),
@@ -105,9 +130,10 @@ object RdEffects {
                     Param("hqdn3d-luma-temp", R.string.rd_fx_luma_temp, 0f, 254f, 6f, 0.5f),
                     Param("hqdn3d-chroma-temp", R.string.rd_fx_chroma_temp, 0f, 254f, 4.5f, 0.5f)))
     )
-    val videoSections = listOf(R.string.rd_fx_essential to essential, R.string.rd_fx_colors to colors,
+    /** the desktop's sections that libvlc 3 can apply, in its order (Overlay: see above) */
+    val videoSections = listOf(R.string.rd_fx_essential to essential, R.string.rd_fx_crop to crop, R.string.rd_fx_colors to colors,
             R.string.rd_fx_geometry to geometry, R.string.rd_fx_advanced to advanced)
-    val video get() = essential + colors + geometry + advanced
+    val video get() = essential + crop + colors + geometry + advanced
 
     fun isOn(prefs: SharedPreferences, f: Filter) = prefs.getBoolean(f.key, false)
 

@@ -601,7 +601,8 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                 }
             }
             // VLC Redesign: opened again for the video effects: where it was, without asking
-            if (effectsResumeTime >= 0L) {
+            val reopening = effectsResumeTime >= 0L
+            if (reopening) {
                 start = effectsResumeTime
                 effectsResumeTime = -1L
             }
@@ -626,7 +627,10 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
             openedNoVideo = (flags or mw.flags) and MediaWrapper.MEDIA_VIDEO == 0
             // VLC Redesign, Live TV: the options of the channel (its user agent, its referrer)
             org.videolan.vlc.livetv.TvPlayback.mediaOptions(mw.uri.toString()).forEach { media.addOption(it) }
+            // (Start paused: a channel switch of Live TV or the same media opened again starts playing)
+            VLCOptions.rdReopening = reopening || org.videolan.vlc.livetv.TvPlayback.isTvUrl(mw.uri.toString())
             VLCOptions.setMediaOptions(media, ctx, flags or mw.flags, PlaybackService.hasRenderer())
+            VLCOptions.rdReopening = false
             applySubtitleCharset(media, uri)
             /* keeping only video during benchmark */
             if (isBenchmark) {

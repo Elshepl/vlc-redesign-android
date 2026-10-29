@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the subtitle font (freetype-font): the families of Android's font list (fonts.xml) -->
+<resources>
+    <string-array name="rd_sub_font_entries">
+        <item>@string/rd_font_default</item>
+        <item>@string/rd_font_sans</item>
+        <item>@string/rd_font_serif</item>
+        <item>@string/rd_font_mono</item>
+        <item>@string/rd_font_condensed</item>
+        <item>@string/rd_font_casual</item>
+        <item>@string/rd_font_cursive</item>
+    </string-array>
+    <string-array name="rd_sub_font_values" translatable="false">
+        <item></item>
+        <item>sans-serif</item>
+        <item>serif</item>
+        <item>monospace</item>
+        <item>sans-serif-condensed</item>
+        <item>casual</item>
+        <item>cursive</item>
+    </string-array>
+</resources>
