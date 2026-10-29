@@ -217,6 +217,14 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
             val inAdvanced = pref<androidx.preference.PreferenceGroup>(page.key + "_advanced")?.findPreference<Preference>(key) != null
             if (inAdvanced) bar?.expand()
             scrollToPreference(key)
+            // the page's late rows (the accent swatches, the language list) change the list after the first
+            // layout and left it at the top on a phone: scroll once more when they are in, and mark the row
+            view.postDelayed({
+                if (!isAdded) return@postDelayed
+                scrollToPreference(key)
+                val position = (listView?.adapter as? androidx.preference.PreferenceGroup.PreferencePositionCallback)?.getPreferenceAdapterPosition(key) ?: -1
+                if (position >= 0) listView?.postDelayed({ listView?.findViewHolderForAdapterPosition(position)?.itemView?.isPressed = true }, 300)
+            }, 250)
             arguments?.remove(RD_SCROLL_TO)
         }
         requireActivity().supportFragmentManager.setFragmentResultListener(CONFIRM_PREFERENCE_CHANGE_DIALOG_RESULT, viewLifecycleOwner) { _, bundle ->
