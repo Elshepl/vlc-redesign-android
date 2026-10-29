@@ -606,13 +606,10 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                 settings.getString(org.videolan.tools.KEY_SET_LOCALE, null))
         withContext(Dispatchers.IO) {
             val video = java.io.File(path)
-            val others = ArrayList<Pair<java.io.File, String>>()
-            val charset = org.videolan.vlc.util.SubtitleCharset.forVideo(video, hints, others) ?: return@withContext
-            android.util.Log.i("VLC/SubtitleCharset", "${video.name}: subtitles in $charset" + if (others.isEmpty()) "" else ", others $others")
-            if (others.isEmpty()) {
-                media.addOption(":subsdec-encoding=$charset")
-                return@withContext
-            }
+            if (!org.videolan.vlc.util.SubtitleCharset.needsCopies(video, hints)) return@withContext
+            // a file that is not UTF-8 or an ASS file whose styles fix the text direction is read from a UTF-8
+            // copy, as the desktop converts it itself: libvlc's subsdec-encoding does not reach ASS/SSA (libass
+            // reads the bytes as they are), nor UTF-16 without a mark or UTF-32
             media.addOption(":no-sub-autodetect-file")
             org.videolan.vlc.util.SubtitleCharset.siblings(video).forEach { f ->
                 val source = android.net.Uri.fromFile(f)
