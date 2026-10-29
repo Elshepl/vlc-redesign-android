@@ -151,7 +151,12 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
                     text = getString(c.label)
                     gravity = Gravity.CENTER
                     textAlignment = View.TEXT_ALIGNMENT_CENTER
-                    maxLines = 2
+                    // a long German word ("Wiedergabegeschwindigkeit") is hyphenated, on up to three lines,
+                    // instead of broken anywhere and its end cut
+                    maxLines = 3
+                    ellipsize = android.text.TextUtils.TruncateAt.END
+                    hyphenationFrequency = android.text.Layout.HYPHENATION_FREQUENCY_NORMAL
+                    breakStrategy = android.text.Layout.BREAK_STRATEGY_HIGH_QUALITY
                     setPadding(0, 6.dp, 0, 0)
                 })
                 setOnClickListener { add(c.key) }

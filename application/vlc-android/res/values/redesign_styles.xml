@@ -152,6 +152,9 @@
         <item name="android:maxLines">3</item>
         <item name="android:singleLine">false</item>
         <item name="android:ellipsize">none</item>
+        <!-- long German words hyphenated rather than broken anywhere (a line was cut at font 1.3) -->
+        <item name="android:hyphenationFrequency">normal</item>
+        <item name="android:breakStrategy">high_quality</item>
         <item name="android:paddingTop">4dp</item>
         <item name="android:paddingBottom">4dp</item>
         <item name="backgroundTint">@color/rd_player_button_bg</item>

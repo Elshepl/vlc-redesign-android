@@ -1314,7 +1314,7 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                             showAudioPlayer.value = true
                         }
                         savePlaycount(mw)
-                        if (mw.title == mw.fileName || (mw.type == MediaWrapper.TYPE_STREAM && (mw.title != player.mediaplayer.media?.getMeta(IMedia.Meta.Title, true) || mw.artistName != player.mediaplayer.media?.getMeta(IMedia.Meta.Artist, true)))) {
+                        if (mw.title == mw.fileName || (mw.type == MediaWrapper.TYPE_STREAM && (mw.title != playingMeta(IMedia.Meta.Title) || mw.artistName != playingMeta(IMedia.Meta.Artist)))) {
                             // used for initial metadata update. We avoid the metadata load when the initial MediaPlayer.Event.ESSelected is sent to avoid race conditions
                             refreshTrackMeta(mw)
                         }
@@ -1393,7 +1393,7 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                 MediaPlayer.Event.ESSelected -> {
                     getCurrentMedia()?.let { media ->
                         if (player.isPlaying()) {
-                            if (media.type == MediaWrapper.TYPE_STREAM && (media.title != player.mediaplayer.media?.getMeta(IMedia.Meta.Title, true) || media.artistName != player.mediaplayer.media?.getMeta(IMedia.Meta.Artist, true))) {
+                            if (media.type == MediaWrapper.TYPE_STREAM && (media.title != playingMeta(IMedia.Meta.Title) || media.artistName != playingMeta(IMedia.Meta.Artist))) {
                                 refreshTrackMeta(media)
                             }
                         }
@@ -1402,6 +1402,11 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
             }
             service.onMediaPlayerEvent(event)
         }
+    }
+
+    /** A meta of the media playing: MediaPlayer.getMedia() retains it, so it is released at once (it leaked) */
+    private fun playingMeta(meta: Int): String? = player.mediaplayer.media?.let {
+        try { it.getMeta(meta, true) } finally { it.release() }
     }
 
     /**

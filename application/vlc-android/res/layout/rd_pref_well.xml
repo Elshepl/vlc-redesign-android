@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- The dropdown of the design (SettingsDropdown.qml): the A4 face in its B2 well, radius 4, the value in FG/A2 -->
+<!-- The dropdown of the design (SettingsDropdown.qml): the A4 face in its B2 well, radius 4, the value in FG/A2.
+     36 dp high; a long translation goes on to a second line instead of being cut. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rd_well"
     android:layout_width="wrap_content"
-    android:layout_height="36dp"
+    android:layout_height="wrap_content"
+    android:minHeight="36dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
     android:minWidth="120dp"
     android:background="@drawable/rd_pref_well_bg"
     android:gravity="center_vertical"
@@ -21,7 +25,7 @@
         android:fontFamily="@font/inter"
         android:textSize="14sp"
         android:textColor="@color/rd_fg_a2"
-        android:singleLine="true"
+        android:maxLines="2"
         android:ellipsize="end"
         android:textAlignment="viewStart" />
 
