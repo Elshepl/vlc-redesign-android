@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, tablets: music cards about 180 dp wide (the desktop grid), counted on the window width less the
+     navigation rail or sidebar; the phone buckets (w600dp: 5, w800dp: 7) made 100 dp cards beside the rail. -->
+<resources>
+    <integer name="mobile_card_columns">4</integer>
+</resources>

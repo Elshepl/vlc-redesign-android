@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- a single-column page (More, the stream field): a readable column, not the whole tablet width -->
     <dimen name="rd_tablet_content_max_width">760dp</dimen>
+    <!-- library tabs as wide as their text, as the desktop's (Material makes each tab 160 dp wide on a tablet:
+         five tabs did not fit a portrait tablet or a half-screen window, "Playlists" was cut) -->
+    <dimen name="design_tab_scrollable_min_width" tools:override="true">72dp</dimen>
 </resources>
