@@ -5,6 +5,8 @@
 -->
 <resources>
     <string name="rd_nav_music">Music</string>
+    <string name="rd_nav_videos">Videos</string>
+    <string name="rd_nav_network">Network</string>
     <string name="rd_continue_watching">Continue Watching</string>
     <string name="rd_listen_again">Listen Again</string>
     <string name="rd_frequent_folders">Frequently Visited Folders</string>

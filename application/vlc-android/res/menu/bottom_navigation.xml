@@ -34,7 +34,7 @@
             android:icon="@drawable/rd_nav_sel_home" />
     <item
             android:id="@+id/nav_video"
-            android:title="@string/default_action_videos"
+            android:title="@string/rd_nav_videos"
             android:icon="@drawable/rd_nav_sel_videos" />
     <item
             android:id="@+id/nav_audio"
@@ -42,7 +42,7 @@
             android:icon="@drawable/rd_nav_sel_music" />
     <item
             android:id="@+id/nav_directories"
-            android:title="@string/network"
+            android:title="@string/rd_nav_network"
             android:icon="@drawable/rd_nav_sel_browse" />
     <item
             android:id="@+id/nav_more"

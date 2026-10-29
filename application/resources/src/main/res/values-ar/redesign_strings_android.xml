@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Arabic of strings that neither VLC for Android nor the desktop catalogues translate
+     (import_strings.py does not rewrite this file) -->
+<resources>
+    <string name="home">الرئيسية</string>
+</resources>
