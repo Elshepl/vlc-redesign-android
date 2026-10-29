@@ -16,7 +16,10 @@ import device, media, mockserver, tour
 
 ROOT = r"D:\vlc-redesign-tmp\android-autotour"
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-APK = os.path.join(REPO, "application", "app", "build", "outputs", "apk", "debug", "VLC-Android-3.7.2-debug-all.apk")
+import glob
+# the debug APK of this checkout, whatever its version name (VLC-Android-<version>-debug-all.apk)
+APK = (sorted(glob.glob(os.path.join(REPO, "application", "app", "build", "outputs", "apk", "debug", "VLC-Android-*-debug-all.apk")),
+              key=os.path.getmtime) or [""])[-1]
 
 # device -> AVD, orientations (user_rotation 0 = the device's natural orientation)
 DEVICES = {
@@ -93,6 +96,7 @@ def main():
     ap.add_argument("--resume", action="store_true", help="skip the cells the run folder already has")
     ap.add_argument("--report-only", action="store_true")
     ap.add_argument("--run", default=os.path.join(ROOT, "run"))
+    ap.add_argument("--report", default=os.path.join(ROOT, "report"), help="the folder of the report")
     a = ap.parse_args()
     os.makedirs(a.run, exist_ok=True)
     logf = open(os.path.join(a.run, "autotour.log"), "a", encoding="utf-8")
@@ -158,7 +162,7 @@ def main():
         log("tour done in %.0f min" % ((time.time() - t_all) / 60))
         srv.shutdown()
     import report
-    path = report.build(a.run, os.path.join(ROOT, "report"), REPO)
+    path = report.build(a.run, a.report, REPO)
     log("report: " + path)
 
 

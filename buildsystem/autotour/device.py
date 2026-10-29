@@ -6,14 +6,16 @@ import gzip, hashlib, json, os, re, socket, subprocess, time
 SDK = os.path.join(os.environ.get("LOCALAPPDATA", ""), "Android", "Sdk")
 ADB = os.path.join(SDK, "platform-tools", "adb.exe")
 EMULATOR = os.path.join(SDK, "emulator", "emulator.exe")
-SERIAL = "emulator-5558"
-PORT = 5558
+# another agent's run can choose its own emulator port, AVD folder and forwarded port (AUTOTOUR_PORT,
+# AUTOTOUR_AVD_HOME, AUTOTOUR_FWD_PORT): still one emulator of its own, never a real phone
+PORT = int(os.environ.get("AUTOTOUR_PORT", "5558"))
+SERIAL = "emulator-%d" % PORT
 PKG = "org.videolan.vlc.debug"
 RECEIVER = PKG + "/org.videolan.vlc.autotour.AutoTourReceiver"
 DUMP_FILE = "/sdcard/Android/data/%s/files/autotour-dump.json" % PKG
-AVD_HOME = r"D:\vlc-redesign-tmp\android-autotour\avd"
+AVD_HOME = os.environ.get("AUTOTOUR_AVD_HOME", r"D:\vlc-redesign-tmp\android-autotour\avd")
 MIN_FREE_MB = 4096
-FWD_PORT = 27583
+FWD_PORT = int(os.environ.get("AUTOTOUR_FWD_PORT", "27583"))
 # taps never go to a renderer row other than the fake one, nor to anything that deletes or resets
 DANGER = re.compile(r"delete|remove|clear|reset_|erase|uninstall|renderers_disconnect|bedroom", re.I)
 

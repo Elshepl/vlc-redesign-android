@@ -135,7 +135,7 @@ def check_dump(dump, step, cell, idx):
                 for k, label in (("cutw", "wider than its view, cut with no ellipsis"), ("cuth", "taller than its view, the bottom cut"),
                                  ("cutlines", "more lines than maxLines, cut with no ellipsis")):
                     if v.get(k):
-                        add("high" if ui else "medium", "text-cut", "'%s' %s (%s px)" % (txt[:60], label, v[k]), v)
+                        add("high" if ui else "medium", "text-cut", "'%s' %s (%s %s)" % (txt[:60], label, v[k], "lines" if k == "cutlines" else "px"), v)
                 if v.get("tr") and area(v["tr"]) > 0:
                     texts.append((i, v))
                 # translation
