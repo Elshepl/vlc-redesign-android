@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the detail pane of the library on a wide window (MusicArtistsAlbums.qml: the artist list on the
+     start side, the selected artist's albums and tracks beside it). A 1 px divider on its start edge. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/rd_divider_dim" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rd_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="2"
+            android:textColor="@color/rd_fg_1"
+            android:textFontWeight="600"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rd_detail_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/rd_fg_a1"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rd_detail_play"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/rd_onboarding_next_bg"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/play_all"
+                android:textColor="@android:color/white"
+                android:textFontWeight="500"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rd_detail_shuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rd_pref_button_bg"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/shuffle_play"
+                android:textColor="@color/rd_fg_1"
+                android:textFontWeight="500"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rd_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="96dp" />
+    </LinearLayout>
+</LinearLayout>

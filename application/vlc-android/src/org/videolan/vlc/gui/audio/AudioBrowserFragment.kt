@@ -103,6 +103,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
 
     private val lists = mutableListOf<RecyclerView>()
     private lateinit var settings: SharedPreferences
+    private var detailPane: RdLibraryDetailPane? = null
     override val hasTabs = true
     private var spacing = 0
     private var restorePositions: SparseArray<Int> = SparseArray()
@@ -129,6 +130,10 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         val fab = view.rootView.findViewById<FloatingActionButton>(R.id.fab)
         binding.songsFastScroller.attachToCoordinator(appbar, coordinator, fab)
         binding.audioEmptyLoading.setOnNoMediaClickListener { requireActivity().setResult(RESULT_RESTART) }
+        // VLC Redesign: list + detail on a wide window (artists and genres), as the desktop's library
+        binding.root.addOnLayoutChangeListener { v, left, _, right, _, oldLeft, _, oldRight, _ ->
+            if (right - left != oldRight - oldLeft) v.post { if (isAdded) updateDetailPane() }
+        }
 
         val views = ArrayList<View>(MODE_TOTAL)
         for (i in 0 until MODE_TOTAL) {
@@ -417,6 +422,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         super.onTabSelected(tab)
         binding.songsFastScroller.setRecyclerView(lists[tab.position], viewModel.providers[tab.position])
         settings.putSingle(KEY_AUDIO_CURRENT_TAB, tab.position)
+        detailPane?.clear()
+        updateDetailPane()
         if (Medialibrary.getInstance().isInitiated) setRefreshing(viewModel.providers[currentTab].isRefreshing)
         activity?.invalidateOptionsMenu()
     }
@@ -452,6 +459,10 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
             onMainActionClick(v, position, item)
             return
         }
+        if ((item.itemType == MediaLibraryItem.TYPE_ARTIST || item.itemType == MediaLibraryItem.TYPE_GENRE) && detailWanted()) {
+            detailPane?.show(item)
+            return
+        }
         val i: Intent
         when (item.itemType) {
             MediaLibraryItem.TYPE_ARTIST, MediaLibraryItem.TYPE_GENRE -> {
@@ -474,9 +485,38 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
             if (adapter === getCurrentAdapter()) {
                 swipeRefreshLayout.isEnabled = (getCurrentRV().layoutManager as LinearLayoutManager).findFirstVisibleItemPosition() <= 0
                 binding.songsFastScroller.setRecyclerView(getCurrentRV(), viewModel.providers[currentTab])
+                if (detailPane?.item == null) updateDetailPane()
             } else
                 setFabPlayShuffleAllVisibility()
         }
+    }
+
+    private fun detailWanted() = (currentTab == 0 || currentTab == 3) && view != null &&
+            binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
+
+    /** Shows or hides the detail pane for the window's width and the tab; the first entry is selected at first. */
+    private fun updateDetailPane() {
+        val container = binding.rdDetailContainer
+        // no entries (an empty tab shows its empty state over the whole width): no pane
+        if (!detailWanted() || (getCurrentAdapter()?.itemCount ?: 0) == 0) {
+            container.visibility = View.GONE
+            detailPane?.clear()
+            return
+        }
+        if (detailPane == null) {
+            val paneView = RdLibraryDetailPane.inflate(container)
+            container.addView(paneView)
+            detailPane = RdLibraryDetailPane(paneView, viewLifecycleOwner.lifecycleScope)
+        }
+        container.visibility = View.VISIBLE
+        if (detailPane?.item == null) (getCurrentAdapter() as? AudioBrowserAdapter)?.let { a ->
+            if (a.itemCount > 0) a.getItem(0)?.let { detailPane?.show(it) }
+        }
+    }
+
+    override fun onDestroyView() {
+        detailPane = null
+        super.onDestroyView()
     }
 
     override fun getCurrentRV() = lists[currentTab]
