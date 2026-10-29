@@ -27,6 +27,7 @@ import kotlinx.coroutines.launch
 import org.videolan.resources.AndroidDevices
 import org.videolan.tools.Settings
 import org.videolan.vlc.R
+import org.videolan.vlc.gui.tablet.TabletSheets
 import org.videolan.vlc.gui.video.VideoPlayerActivity
 import org.videolan.vlc.gui.video.VideoPlayerActivity.Companion.videoRemoteFlow
 import org.videolan.vlc.util.isTalkbackIsEnabled
@@ -90,6 +91,8 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
         lifecycleScope.launchWhenStarted {
             dialog?.window?.setLayout(resources.getDimensionPixelSize(R.dimen.default_context_width), ViewGroup.LayoutParams.MATCH_PARENT)
             if (useSideSheet()) applySideSheet(view)
+            // VLC Redesign, tablets: a centred framed window instead of a sheet on the bottom edge (gui/tablet)
+            else if (TabletSheets.wanted(dialog) && !AndroidDevices.isTv) dialog?.let { TabletSheets.applyCentered(it, view) }
             dialog?.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)?.let {
                 val bsb = BottomSheetBehavior.from(it)
                 if (bsb.state == BottomSheetBehavior.STATE_COLLAPSED) bsb.state = getDefaultState()

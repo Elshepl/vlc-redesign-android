@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, tablets: widths that keep single-column pages from stretching over a wide window. -->
+<resources>
+    <!-- a single-column page (More): no limit on a phone -->
+    <dimen name="rd_tablet_content_max_width">4000dp</dimen>
+</resources>

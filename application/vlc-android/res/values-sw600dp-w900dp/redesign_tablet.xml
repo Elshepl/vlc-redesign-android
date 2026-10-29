@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, a tablet window at least 900 dp wide (landscape, a wide split screen): the desktop sidebar. -->
+<resources>
+    <bool name="rd_tablet_sidebar">true</bool>
+    <!-- the sidebar's width: the pages, the top bar and the mini player start after it -->
+    <dimen name="navigation_margin">200dp</dimen>
+</resources>
