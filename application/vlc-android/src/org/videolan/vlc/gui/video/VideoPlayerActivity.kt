@@ -1154,7 +1154,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         is org.videolan.vlc.gui.dialogs.EqualizerFragmentDialog -> "equalizer"
         is org.videolan.vlc.gui.dialogs.RdEffectsDialog -> "effects"
         is org.videolan.vlc.gui.dialogs.CustomizePlayerDialog -> "customize"
-        is org.videolan.vlc.gui.dialogs.RenderersDialog -> "cast"
+        is org.videolan.vlc.gui.dialogs.CastSheet -> "cast"
         else -> null
     }
 
