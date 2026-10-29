@@ -564,6 +564,65 @@ def legacy_launcher(design, version):
     print("legacy launcher: 4")
 
 
+# More VLC Android icons still shown (player menu, audio player, album header, context sheet) as the desktop's
+# glyphs: name -> glyph under icons/svg (a "+" name: one of EXTRAS). The size and the colour stay the original's
+# (read from the drawable it replaces: its first theme attribute colour), unless a colour is given.
+GLYPH_OVERRIDES = {
+    "ic_jumpto": ("duo/go-to", None), "ic_playasaudio_on": ("glyphs/audio/default", None),
+    "ic_playasaudio_off": ("glyphs/video/default", None), "ic_popup_dim": ("glyphs/PiP/default", None),
+    "ic_player_shuffle": ("glyphs/shuffle/default", None), "ic_shuffle_audio": ("glyphs/shuffle/default", None),
+    "ic_album_shuffle": ("glyphs/shuffle/default", None), "ic_shuffle_on": ("glyphs/shuffle/default", "?attr/colorPrimary"),
+    "ic_shuffle_on_48dp": ("glyphs/shuffle/default", "?attr/colorPrimary"),
+    "ic_video_stats": ("glyphs/info/default", None), "ic_chapter": ("glyphs/chapters/default", None),
+    "ic_addtoplaylist": ("glyphs/playlist/default", None), "ic_album_addtoplaylist": ("glyphs/playlist/default", None),
+    "ic_add_to_playlist": ("glyphs/playlist/default", None),
+    "ic_video_controls": ("glyphs/playback-settings/default", None), "ic_audio_controls": ("glyphs/playback-settings/default", None),
+    "ic_share": ("duo/export", None), "ic_videotips": ("duo/help", None), "ic_audiotips": ("duo/help", None),
+    "ic_playlisttips": ("duo/help", None),
+    "ic_fav_add": ("glyphs/favorite/default", None), "ic_fav_remove": ("glyphs/favorite/default", "?attr/colorPrimary"),
+    "ic_playlist_audio": ("glyphs/queue/default", None), "ic_playlist_audio_on": ("glyphs/queue/default", "?attr/colorPrimary"),
+    "ic_repeat_audio": ("+repeat", None), "ic_repeat_all": ("+repeat", "?attr/colorPrimary"),
+    "ic_repeat_all_audio": ("+repeat", "?attr/colorPrimary"), "ic_repeat_one_audio": ("+repeat_one", "?attr/colorPrimary"),
+    "ic_search_audio": ("glyphs/search/default", None), "ic_overflow_audio": ("glyphs/more/default", None),
+    "ic_play_all": ("glyphs/play/default", None), "ic_play_append": ("duo/queue", None),
+    "ic_play_next": ("glyphs/next/default", None), "ic_delete": ("duo/remove", None),
+    "ic_remove_from_playlist": ("duo/remove", None), "ic_play_from_start": ("glyphs/replay/default", None),
+    "ic_speed_all": ("+speed", None), "ic_stop_after_this": ("glyphs/stop/default", None),
+    "ic_mark_as_played": ("glyphs/check/default", None), "ic_mark_all_as_played": ("glyphs/check/default", None),
+    "ic_download_subtitles": ("glyphs/subtitle/default", None), "ic_link": ("glyphs/link/default", None),
+    "ic_album": ("glyphs/album/default", None), "ic_browse_parent": ("glyphs/folder/default", None),
+    "ic_add_to_scan": ("glyphs/new-folder/default", None), "ic_pin_lock": ("+lock", None),
+    # (new: the Effects row of the player menu)
+    "rd_ic_effects": ("glyphs/spectrum/default", None),
+}
+
+
+def glyph_overrides(design, version):
+    ddir = os.path.join(RES, "drawable")
+    hdr = '<?xml version="1.0" encoding="utf-8"?>\n' + HEADER % version
+    done = 0
+    for name, (src, colour) in GLYPH_OVERRIDES.items():
+        path = os.path.join(ddir, name + ".xml")
+        size, orig = 24, "?attr/colorControlNormal"
+        if os.path.exists(path):
+            old = open(path, encoding="utf-8").read()
+            m = re.search(r'android:width="(\d+)dp"', old)
+            if m:
+                size = int(m.group(1))
+            attrs = re.findall(r'android:(?:fill|stroke)Color="(\?attr/[^"]+|@color/[^"]+)"', old)
+            if attrs:
+                orig = attrs[0]
+        colour = colour or orig
+        if src.startswith("+"):
+            xml = extra_xml(src[1:], colour, size)
+        else:
+            xml, _ = convert(os.path.join(design, "icons", "svg", src + ".svg"), None, size)
+            xml = re.sub(r'(android:(?:fill|stroke)Color=)"(?!#00000000)[^"]*"', r'\1"%s"' % colour, xml)
+        write(path, hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android icon.") + xml)
+        done += 1
+    print("glyph overrides:", done)
+
+
 def main():
     design = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.expanduser("~"), "source", "repos", "vlc", "design")
     with open(os.path.join(design, "tokens.json"), encoding="utf-8") as f:
@@ -574,6 +633,7 @@ def main():
     icons(design, version)
     overrides(design, version)
     mono(design, version)
+    glyph_overrides(design, version)
     logos(design, version)
     speed_icons(design, version)
     legacy_launcher(design, version)

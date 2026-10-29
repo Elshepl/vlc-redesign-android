@@ -111,7 +111,7 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         options.add(PlayerOption(ID_JUMP_TO, R.drawable.ic_jumpto, res.getString(R.string.jump_to_time)))
         options.add(PlayerOption(ID_EQUALIZER, R.drawable.ic_equalizer, res.getString(R.string.equalizer)))
         // VLC Redesign: the desktop's Effects dialog (audio and video effects)
-        if (!isChromecast) options.add(PlayerOption(ID_EFFECTS, R.drawable.ic_equalizer, res.getString(R.string.rd_fx_effects)))
+        if (!isChromecast) options.add(PlayerOption(ID_EFFECTS, R.drawable.rd_ic_effects, res.getString(R.string.rd_fx_effects)))
         if (video) {
             if (primary && !Settings.showTvUi && service.audioTracksCount > 0)
                 options.add(PlayerOption(ID_PLAY_AS_AUDIO, R.drawable.ic_playasaudio_on, res.getString(R.string.play_as_audio)))
