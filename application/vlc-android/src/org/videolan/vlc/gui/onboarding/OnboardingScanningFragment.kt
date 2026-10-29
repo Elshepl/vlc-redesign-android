@@ -35,7 +35,7 @@ class OnboardingScanningFragment : OnboardingFragment() {
         super.onViewCreated(view, savedInstanceState)
         titleView = view.findViewById(R.id.scanning_title)
         folderValue = view.findViewById(R.id.folder_value)
-        if (BuildConfig.DEBUG && !viewModel.folderChosen && MediaParsingService.preselectedStorages.isEmpty()) setScan(false)
+        if (BuildConfig.DEBUG && !viewModel.rerun && !viewModel.folderChosen && MediaParsingService.preselectedStorages.isEmpty()) setScan(false)
         view.findViewById<View>(R.id.folder_clear).setOnClickListener {
             MediaParsingService.preselectedStorages.clear()
             viewModel.folderChosen = true
@@ -68,7 +68,12 @@ class OnboardingScanningFragment : OnboardingFragment() {
     }
 
     private fun showFolder() {
-        val folders = MediaParsingService.preselectedStorages
+        // opened again from Settings: the library's own folders until the step changes them
+        val folders = if (viewModel.rerun && !viewModel.folderChosen) viewModel.rerunFolders.ifEmpty {
+            // the library may have started after the step was created
+            (try { org.videolan.medialibrary.interfaces.Medialibrary.getInstance().foldersList?.toList() } catch (e: Exception) { null } ?: emptyList())
+                .also { viewModel.rerunFolders = it }
+        } else MediaParsingService.preselectedStorages
         val text = when {
             !viewModel.scanStorages -> getString(R.string.rd_ob_no_folder)
             folders.isEmpty() -> getString(R.string.rd_ob_whole_device)

@@ -10,6 +10,9 @@ class OnboardingViewModel : ViewModel() {
     var scanStorages = true
     // VLC Redesign: the media folder was chosen or removed on its step (else a debug build starts with none)
     var folderChosen = false
+    // opened again from Settings: the library stays as it is unless the folder step changes it
+    var rerun = false
+    var rerunFolders: List<String> = emptyList()
     // the steps shown, for Back
     val history = ArrayList<FragmentName>()
     var permissionType: PermissionType = PermissionType.ALL

@@ -60,6 +60,11 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
         applyAccent(alwaysDark = true)
         super.onCreate(savedInstanceState)
+        if (savedInstanceState == null && Settings.getInstance(this).getBoolean(ONBOARDING_DONE_KEY, false)) {
+            viewModel.rerun = true
+            viewModel.scanStorages = Settings.getInstance(this).getInt(KEY_MEDIALIBRARY_SCAN, ML_SCAN_ON) == ML_SCAN_ON
+            viewModel.rerunFolders = try { org.videolan.medialibrary.interfaces.Medialibrary.getInstance().foldersList?.toList() } catch (e: Exception) { null } ?: emptyList()
+        }
 //        viewModel.permissionGranted = Permissions.canReadStorage(applicationContext)
         setContentView(R.layout.activity_onboarding)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.container)) { v, windowInsets ->
@@ -131,12 +136,18 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
         Settings.getInstance(this).edit {
             putInt(PREF_FIRST_RUN, BuildConfig.VLC_VERSION_CODE)
             putBoolean(ONBOARDING_DONE_KEY, true)
-            putInt(KEY_MEDIALIBRARY_SCAN, if (viewModel.scanStorages) ML_SCAN_ON else ML_SCAN_OFF)
-            putInt(KEY_FRAGMENT_ID, if (viewModel.scanStorages) R.id.nav_home else R.id.nav_directories)
+            // opened again from Settings with the folder step untouched: the library and its scanning stay
+            val keepLibrary = viewModel.rerun && !viewModel.folderChosen
+            if (!keepLibrary) {
+                putInt(KEY_MEDIALIBRARY_SCAN, if (viewModel.scanStorages) ML_SCAN_ON else ML_SCAN_OFF)
+                putInt(KEY_FRAGMENT_ID, if (viewModel.scanStorages) R.id.nav_home else R.id.nav_directories)
+            }
             putString(KEY_APP_THEME, viewModel.theme.toString())
         }
-        if (!viewModel.scanStorages) MediaParsingService.preselectedStorages.clear()
-        startMedialibrary(firstRun = true, upgrade = true, parse = viewModel.scanStorages)
+        if (!(viewModel.rerun && !viewModel.folderChosen)) {
+            if (!viewModel.scanStorages) MediaParsingService.preselectedStorages.clear()
+            startMedialibrary(firstRun = true, upgrade = true, parse = viewModel.scanStorages)
+        }
         val intent = Intent(this@OnboardingActivity, MainActivity::class.java)
             .putExtra(EXTRA_FIRST_RUN, true)
             .putExtra(EXTRA_UPGRADE, true)

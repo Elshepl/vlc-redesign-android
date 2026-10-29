@@ -221,8 +221,10 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
             // layout and left it at the top on a phone: scroll once more when they are in, and mark the row
             view.postDelayed({
                 if (!isAdded) return@postDelayed
-                scrollToPreference(key)
                 val position = (listView?.adapter as? androidx.preference.PreferenceGroup.PreferencePositionCallback)?.getPreferenceAdapterPosition(key) ?: -1
+                // the row in the upper part of the page, not on its bottom edge
+                val lm = listView?.layoutManager as? androidx.recyclerview.widget.LinearLayoutManager
+                if (position >= 0 && lm != null) lm.scrollToPositionWithOffset(position, (listView?.height ?: 0) / 4) else scrollToPreference(key)
                 if (position >= 0) listView?.postDelayed({ listView?.findViewHolderForAdapterPosition(position)?.itemView?.isPressed = true }, 300)
             }, 250)
             arguments?.remove(RD_SCROLL_TO)

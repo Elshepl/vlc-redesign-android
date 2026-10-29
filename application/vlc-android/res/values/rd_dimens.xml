@@ -4,4 +4,7 @@
     <dimen name="rd_onboarding_side">24dp</dimen>
     <!-- the settings sidebar of a two-pane window -->
     <dimen name="rd_settings_sidebar_width">248dp</dimen>
+    <!-- the onboarding's logo and its gaps: smaller on a short window (phone landscape) so the step fits -->
+    <dimen name="rd_ob_logo">56dp</dimen>
+    <dimen name="rd_ob_gap">12dp</dimen>
 </resources>

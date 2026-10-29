@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="@dimen/rd_ob_logo"
+            android:layout_height="@dimen/rd_ob_logo"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_icon" />
 
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/rd_ob_gap"
             android:maxWidth="420dp"
             android:fontFamily="@font/inter"
             android:text="@string/rd_interface_language"
