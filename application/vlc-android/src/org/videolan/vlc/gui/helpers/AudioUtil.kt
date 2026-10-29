@@ -27,7 +27,7 @@ import android.os.Build
 import android.provider.MediaStore
 import android.util.Log
 import android.webkit.MimeTypeMap
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.annotation.WorkerThread
 import androidx.core.content.contentValuesOf
 import androidx.fragment.app.FragmentActivity

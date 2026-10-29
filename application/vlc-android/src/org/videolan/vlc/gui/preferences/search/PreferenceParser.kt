@@ -31,7 +31,7 @@ import android.content.res.XmlResourceParser
 import android.net.Uri
 import android.os.Parcelable
 import android.util.Log
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.annotation.XmlRes
 import androidx.core.content.edit
 import androidx.fragment.app.FragmentActivity

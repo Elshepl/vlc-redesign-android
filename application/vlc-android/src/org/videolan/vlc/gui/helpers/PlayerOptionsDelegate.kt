@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityEvent
 import android.widget.FrameLayout
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.appcompat.widget.ViewStubCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity

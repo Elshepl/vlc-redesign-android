@@ -3,7 +3,7 @@ package org.videolan.vlc.media
 import android.content.Context
 import android.net.Uri
 import android.support.v4.media.session.PlaybackStateCompat
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.annotation.MainThread
 import androidx.core.net.toUri
 import androidx.lifecycle.MutableLiveData

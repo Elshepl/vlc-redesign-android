@@ -35,7 +35,7 @@ import android.text.InputFilter
 import android.text.InputType
 import android.util.Log
 import android.view.View
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.core.os.bundleOf

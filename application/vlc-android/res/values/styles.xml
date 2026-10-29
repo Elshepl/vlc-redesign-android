@@ -592,6 +592,10 @@
         <item name="android:windowBackground">@color/transparent</item>
         <item name="windowActionBarOverlay">true</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="p">shortEdges</item>
+        <!-- VLC Redesign: the framed snackbar (the player's messages) -->
+        <item name="snackbarStyle">@style/Widget.Redesign.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Redesign.Snackbar.Text</item>
+        <item name="snackbarButtonStyle">@style/Widget.Redesign.Snackbar.Button</item>
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
         </item>
 

@@ -55,7 +55,7 @@ import android.text.style.StyleSpan
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.annotation.MainThread
 import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes

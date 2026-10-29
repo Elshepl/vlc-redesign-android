@@ -12,7 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Toast
+import org.videolan.vlc.util.RdToast as Toast
 import androidx.annotation.StringRes
 import androidx.core.os.bundleOf
 import androidx.core.widget.NestedScrollView

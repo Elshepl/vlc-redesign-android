@@ -81,6 +81,8 @@ class AppSetupDelegate : AppDelegate,
     @TargetApi(Build.VERSION_CODES.O)
     override fun Application.setupApplication() {
         appContextProvider.init(this)
+        // VLC Redesign: the app's floating messages as the framed snackbar of the activity in front
+        org.videolan.vlc.util.RdToast.init(this)
         NotificationHelper.createNotificationChannels(this)
 
         // Service loaders
