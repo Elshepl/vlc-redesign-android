@@ -120,7 +120,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/video_information"
-                                android:textColor="@color/orange500"
+                                android:textColor="?attr/colorPrimary"
                                 vlc:layout_constraintEnd_toEndOf="parent"
                                 vlc:layout_constraintStart_toStartOf="parent"
                                 vlc:layout_constraintTop_toTopOf="parent" />

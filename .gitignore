@@ -78,3 +78,4 @@ libvlcpp.pc
 lib/
 /buildsystem/automation/certificates/
 /buildsystem/.check-commits/
+__pycache__/

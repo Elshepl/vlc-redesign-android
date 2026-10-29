@@ -1,5 +1,6 @@
 package org.videolan.vlc.gui
 
+import org.videolan.vlc.gui.helpers.rdAccent
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -301,7 +302,7 @@ fun EqualizerWithBands.getBitmap(context: Context): Bitmap {
     canvas.clipPath(path)
 
 
-    paint.color = if (equalizerEntry.presetIndex == -1) ContextCompat.getColor(context, R.color.orange500focus) else color
+    paint.color = if (equalizerEntry.presetIndex == -1) context.rdAccent(0.53f) else color
     var x = 0
     bands.sortedBy { it.index }.forEach {
         val heightPc = (it.bandValue + 20) / 40

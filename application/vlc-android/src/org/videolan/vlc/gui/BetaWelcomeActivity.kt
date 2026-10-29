@@ -1,5 +1,6 @@
 package org.videolan.vlc.gui
 
+import org.videolan.vlc.gui.helpers.applyAccent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -11,6 +12,7 @@ class BetaWelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBetaWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        applyAccent()
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_beta_welcome)
         binding.betaOkButton.setOnClickListener {

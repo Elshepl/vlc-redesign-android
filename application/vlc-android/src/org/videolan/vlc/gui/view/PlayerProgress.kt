@@ -24,6 +24,7 @@
 
 package org.videolan.vlc.gui.view
 
+import org.videolan.vlc.gui.helpers.rdAccent
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -44,7 +45,7 @@ class PlayerProgress : View {
         get() = if (isDouble) value.toFloat() / 200 else value.toFloat() / 100
 
     private val progressColor = ContextCompat.getColor(context, R.color.white)
-    private val boostColor = ContextCompat.getColor(context, R.color.orange700)
+    private val boostColor = context.rdAccent()
     private val shadowColor = ContextCompat.getColor(context, R.color.blacktransparent)
     private val backgroundColor = ContextCompat.getColor(context, R.color.white_transparent_50)
 

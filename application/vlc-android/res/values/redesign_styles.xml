@@ -185,8 +185,7 @@
 
     <!-- Dialogs: the panel (radius 14, A4, the 1 px window border), title 16, buttons in the accent. -->
     <style name="ThemeOverlay.Redesign.Dialog.Dark" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="colorPrimary">@color/rd_accent_orange_main</item>
-        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <!-- colorPrimary / colorSecondary: the window's (the accent chosen in Settings) -->
         <item name="colorSurface">@color/rd_dark_bg_a4</item>
         <item name="colorOnSurface">@color/rd_dark_fg_1</item>
         <item name="android:textColorPrimary">@color/rd_dark_fg_1</item>
@@ -202,8 +201,7 @@
         <item name="fontFamily">@font/inter</item>
     </style>
     <style name="ThemeOverlay.Redesign.Dialog.Light" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="colorPrimary">@color/rd_accent_orange_main</item>
-        <item name="colorSecondary">@color/rd_accent_orange_main</item>
+        <!-- colorPrimary / colorSecondary: the window's (the accent chosen in Settings) -->
         <item name="colorSurface">@color/rd_light_bg_a4</item>
         <item name="colorOnSurface">@color/rd_light_fg_1</item>
         <item name="android:textColorPrimary">@color/rd_light_fg_1</item>
@@ -237,7 +235,7 @@
         <item name="android:textSize">14sp</item>
     </style>
     <style name="Widget.Redesign.Snackbar.Button" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
-        <item name="android:textColor">@color/rd_accent_text</item>
+        <item name="android:textColor">@color/rd_accent_text_theme</item>
         <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textAppearance">@style/TextAppearance.Redesign.Button</item>
     </style>

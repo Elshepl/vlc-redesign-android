@@ -26,5 +26,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
         android:shape="rectangle" >
     <corners android:radius="8dp"/>
-    <solid android:color="@color/orange200transparent"/>
+    <solid android:color="@color/rd_accent_a39"/>
 </shape>

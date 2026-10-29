@@ -24,6 +24,7 @@
 
 package org.videolan.vlc.gui.onboarding
 
+import org.videolan.vlc.gui.helpers.rdAccent
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.os.Bundle
@@ -74,7 +75,7 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
         permAll.setOnClickListener(this)
         currentlySelected = permAllImage
 
-        currentlySelected.setColorFilter(ContextCompat.getColor(requireActivity(), R.color.orange500))
+        currentlySelected.setColorFilter(requireActivity().rdAccent())
     }
 
     override fun onResume() {
@@ -125,7 +126,7 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
 
     private fun animateColor() {
 
-        val colorFrom = ContextCompat.getColor(requireActivity(), R.color.orange500)
+        val colorFrom = requireActivity().rdAccent()
         val colorTo = ContextCompat.getColor(requireActivity(), R.color.white)
         val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
         colorAnimation.duration = 250 // milliseconds
@@ -137,7 +138,7 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
         colorAnimation.start()
 
         val colorFrom2 = ContextCompat.getColor(requireActivity(), R.color.white)
-        val colorTo2 = ContextCompat.getColor(requireActivity(), R.color.orange500)
+        val colorTo2 = requireActivity().rdAccent()
         val colorAnimation2 = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom2, colorTo2)
         colorAnimation2.duration = 250 // milliseconds
 

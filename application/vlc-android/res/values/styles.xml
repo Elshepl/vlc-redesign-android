@@ -67,7 +67,7 @@
         <item name="font_audio_light">@color/rd_light_fg_a1</item>
         <item name="list_subtitle">@color/rd_light_fg_a1</item>
         <item name="list_title">@color/rd_light_fg_1</item>
-        <item name="donate_card">@color/orange500</item>
+        <item name="donate_card">?attr/colorPrimary</item>
         <item name="donate_item_background">@drawable/donate_background_color</item>
         <item name="android:windowBackground">@color/rd_light_bg_b1</item>
         <item name="audio_chips_color">@color/black_transparent_75</item>
@@ -171,11 +171,11 @@
 
     <style name="VLC.Tooltip" parent="Widget.MaterialComponents.Tooltip">
         <item name="android:textAppearance">@style/TextAppearance.VLC.Tooltip</item>
-        <item name="backgroundTint">@color/orange800</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
     </style>
     <style name="VLC.Tooltip.Dark" parent="Widget.MaterialComponents.Tooltip">
         <item name="android:textAppearance">@style/TextAppearance.VLC.Tooltip</item>
-        <item name="backgroundTint">@color/orange500</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
     </style>
 
     <style name="TextAppearance.VLC.Tooltip" parent="TextAppearance.Material3.BodySmall">
@@ -187,9 +187,9 @@
     <style name="Theme.VLC.PickerDialog.Dark" parent="Theme.VLC.PickerDialog.Dark.7"/>
     <style name="Theme.VLC.PickerDialog.Light" parent="Theme.VLC.PickerDialog.Light.7"/>
     <style name="Theme.VLC.PickerDialog.Dark.7" parent="Theme.MaterialComponents.Dialog">
-        <item name="colorPrimary">@color/orange500</item>
-        <item name="colorPrimaryDark">@color/orange700</item>
-        <item name="colorSecondary">@color/orange500</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorPrimaryDark">@color/rd_accent_orange_dim</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
         <item name="windowNoTitle">true</item>
         <item name="android:gridViewStyle">@style/Theme.VLC.List</item>
         <item name="background_default">@color/grey850</item>
@@ -207,12 +207,15 @@
         <item name="fast_scroller_bubble">@drawable/fastscroller_bubble</item>
         <item name="fast_scroller_handle">@drawable/fastscroller_handle</item>
         <item name="gridview_progressbar">@drawable/gridview_progressbar_w</item>
+        <!-- VLC Redesign: the accent tones the redesign drawables use -->
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
     </style>
 
     <style name="Theme.VLC.PickerDialog.Light.7" parent="Theme.MaterialComponents.Dialog">
-        <item name="colorPrimary">@color/orange500</item>
-        <item name="colorPrimaryDark">@color/orange700</item>
-        <item name="colorSecondary">@color/orange500</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorPrimaryDark">@color/rd_accent_orange_dim</item>
+        <item name="colorSecondary">@color/rd_accent_orange_main</item>
         <item name="windowNoTitle">true</item>
         <item name="android:gridViewStyle">@style/Theme.VLC.List</item>
         <item name="background_default">@color/white</item>
@@ -231,13 +234,19 @@
         <item name="fast_scroller_bubble">@drawable/fastscroller_bubble</item>
         <item name="fast_scroller_handle">@drawable/fastscroller_handle</item>
         <item name="gridview_progressbar">@drawable/gridview_progressbar</item>
+        <!-- VLC Redesign: the accent tones the redesign drawables use -->
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
     </style>
 
     <style name="Theme.VLC.SendCrashDialog" parent="Theme.MaterialComponents.Dialog">
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/orange800</item>
-        <item name="colorPrimaryDark">@color/orange700</item>
-        <item name="colorAccent">@color/orange500</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorPrimaryDark">@color/rd_accent_orange_dim</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
+        <!-- VLC Redesign: the accent tones the redesign drawables use -->
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
     </style>
 
     <style name="Theme.VLC.Black" parent="Theme.VLC.Black.7" />
@@ -308,7 +317,7 @@
         <item name="font_audio_light">@color/rd_dark_fg_a1</item>
         <item name="list_subtitle">@color/rd_dark_fg_a1</item>
         <item name="list_title">@color/rd_dark_fg_1</item>
-        <item name="donate_card">@color/orange500transparent</item>
+        <item name="donate_card">@color/rd_accent_a71</item>
         <item name="donate_item_background">@drawable/donate_background_color_dark</item>
         <item name="android:windowBackground">@color/rd_dark_bg_b1</item>
         <item name="audio_chips_color">@color/white_transparent_90</item>
@@ -407,10 +416,10 @@
         <item name="subtitleTextStyle">@style/ActionModeSubtitleTextStyle</item>
     </style>
     <style name="ActionModeTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
-        <item name="android:textColor">@color/orange800</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
     <style name="ActionModeSubtitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle">
-        <item name="android:textColor">@color/orange800</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
     <style name="ActionMode.Dark" parent="Widget.AppCompat.ActionBar.Solid">
@@ -419,17 +428,17 @@
         <item name="subtitleTextStyle">@style/ActionModeSubtitleTextStyleDark</item>
     </style>
     <style name="ActionModeTitleTextStyleDark" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
-        <item name="android:textColor">@color/orange500</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
     <style name="ActionModeSubtitleTextStyleDark" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle">
-        <item name="android:textColor">@color/orange500</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
     <style name="ThemeOverlay.ActionMode" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="colorControlNormal">@color/orange800</item>
+        <item name="colorControlNormal">?attr/colorPrimary</item>
     </style>
     <style name="ThemeOverlay.ActionMode.Dark" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="colorControlNormal">@color/orange500</item>
+        <item name="colorControlNormal">?attr/colorPrimary</item>
     </style>
 
     <style name="Theme.VLC.Onboarding" parent="Theme.VLC.Onboarding.7"/>
@@ -569,12 +578,15 @@
     </style>
 
     <style name="Theme.VLC.Transparent" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="colorPrimary">@color/orange800</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/transparent</item>
-        <item name="colorAccent">@color/orange500</item>
-        <item name="android:colorAccent">@color/orange500</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
+        <item name="android:colorAccent">@color/rd_accent_orange_main</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
+        <!-- VLC Redesign: the accent tones the redesign drawables use -->
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
     </style>
 
     <style name="Theme.VLC.Transparent.NoUI" parent="Theme.VLC.Transparent">
@@ -660,9 +672,9 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="background">@android:color/transparent</item>
 
-        <item name="colorPrimary">@color/orange500</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/transparent</item>
-        <item name="colorAccent">@color/orange500</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
 
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
@@ -671,6 +683,9 @@
         <item name="android:windowAnimationStyle">@android:color/transparent</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+        <!-- VLC Redesign: the accent tones the redesign drawables use -->
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright_light</item>
     </style>
 
     <style name="VLCTransparentThemeDark" parent="Theme.MaterialComponents.Dialog.MinWidth">
@@ -678,9 +693,9 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="background">@android:color/transparent</item>
 
-        <item name="colorPrimary">@color/orange500</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/transparent</item>
-        <item name="colorAccent">@color/orange500</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
 
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
@@ -689,6 +704,9 @@
         <item name="android:windowAnimationStyle">@android:color/transparent</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+        <!-- VLC Redesign: the accent tones the redesign drawables use -->
+        <item name="rd_accent_dim">@color/rd_accent_orange_dim</item>
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
     </style>
 
     <style name="Theme.VLC.NoStatus" parent="Theme.VLC">
@@ -930,7 +948,7 @@
     <!-- Tips Apearance-->
 
     <style name="TipsFontStyle">
-        <item name="android:textColor">@color/orange700</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textStyle">bold</item>
     </style>
 

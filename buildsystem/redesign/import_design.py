@@ -10,7 +10,8 @@ Writes into application/resources/src/main/res:
   drawable/rd_ic_*.xml              vector drawables from icons/svg and icons/svg/duo (rd_ic_duo_*)
 and the font licences into application/resources/src/main/assets/licenses/.
 
-Standard library only. The SVGs use a small subset (path, rect, circle, ellipse, line, g with
+Standard library only, except the speed icons (fontTools) and the old launcher bitmaps (Pillow), skipped
+without them. The SVGs use a small subset (path, rect, circle, ellipse, line, g with
 translate/matrix); this converter handles exactly that subset.
 """
 import json, math, os, re, shutil, sys
@@ -34,7 +35,7 @@ THEME = {
 SVG_COLORS = {
     "#8F8F8F": "@color/rd_fg_a2", "#6B6B6B": "@color/rd_fg_a3", "#161616": "@color/rd_fg_b1",
     "#D37918": "?attr/colorPrimary", "#090909": "@color/rd_bg_b2", "#262626": "#FF262626",
-    "#FF00FF": "@color/rd_fg_a2", "#FF8800": "@color/rd_accent_dim", "#00FFFF": "?attr/colorPrimary",
+    "#FF00FF": "@color/rd_fg_a2", "#FF8800": "?attr/rd_accent_dim", "#00FFFF": "?attr/colorPrimary",
 }
 
 
@@ -367,7 +368,7 @@ def overrides(design, version):
         if src.startswith("+"):
             write(os.path.join(ddir, name + ".xml"), hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android icon.") + extra_xml(src[1:], colour, size))
             continue
-        cmap = {"@color/rd_fg_a2": colour, "@color/rd_fg_a3": colour, "@color/rd_accent_dim": colour}
+        cmap = {"@color/rd_fg_a2": colour, "@color/rd_fg_a3": colour, "?attr/rd_accent_dim": colour}
         if src == "sort":
             cmap["?attr/colorPrimary"] = None  # the "sorted" dot is drawn by the sort button itself
         xml, _ = convert(os.path.join(design, "icons", "svg", src + ".svg"), cmap, size)
@@ -414,6 +415,155 @@ def mono(design, version):
     print("mono:", len(MONO))
 
 
+def _paths(xml):
+    """The <path> lines of a converted 24-unit icon (convert() output), to put inside a group."""
+    return [l.strip() for l in xml.split("\n") if l.strip().startswith(("<path", "<group", "</group"))]
+
+
+def _remove_bitmaps(name, prefix="drawable"):
+    for d in ("ldpi", "mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"):
+        png = os.path.join(RES, prefix + "-" + d, name + ".png")
+        if os.path.exists(png):
+            os.remove(png)
+
+
+# VLC Android's cone, wherever the phone interface draws it, as the redesign's logo (icons/svg/logo.svg, the 24-unit
+# logo of the desktop's app icon share/icons/scalable/vlc.svg): name -> (width dp, height dp, viewport w, viewport h,
+# scale of the 24-unit logo, colour, alpha). The logo's own orange is the brand colour (rd_logo), not the accent.
+# ic_default_cone stays (only the TV interface draws it), as ic_icon_vlc4 (VLC 4 debug builds) and ic_no_media (the
+# media session's artwork, drawn outside the app).
+LOGOS = {
+    "ic_cone_o": (46, 46, 24, 24, 1, "@color/rd_logo", 1),                      # the player while it opens a media
+    "ic_about_logo": (112, 112, 24, 24, 1, "@color/rd_logo", 1),                # About
+    "ic_renderer_background_cone": (510, 600, 272, 320, 13, "@color/rd_logo", 0.85),  # the player while it casts
+    "ic_stat_vlc": (24, 24, 24, 24, 1, "#FFFFFFFF", 1),                         # the debug log's notification
+    "ic_icon": (54, 54, 24, 24, 1, "@color/rd_logo", 1),                        # onboarding, toolbar, pinned shortcuts
+}
+
+
+def logos(design, version):
+    ddir = os.path.join(RES, "drawable")
+    hdr = '<?xml version="1.0" encoding="utf-8"?>\n' + HEADER % version
+    xml, _ = convert(os.path.join(design, "icons", "svg", "logo.svg"))
+    paths = _paths(xml)
+    for name, (w, h, vw, vh, scale, colour, alpha) in LOGOS.items():
+        body = [re.sub(r'android:fillColor="[^"]*"', 'android:fillColor="%s"' % colour
+                       + ('' if alpha == 1 else ' android:fillAlpha="%s"' % fmt(alpha)), p) for p in paths]
+        # the logo's own box is 3..21 x 1.2..22.5: centred in the viewport
+        tx, ty = vw / 2 - 12 * scale, vh / 2 - 11.85 * scale
+        out = ['<vector xmlns:android="http://schemas.android.com/apk/res/android"',
+               '    android:width="%sdp" android:height="%sdp" android:viewportWidth="%s" android:viewportHeight="%s">'
+               % (fmt(w), fmt(h), fmt(vw), fmt(vh)),
+               '    <group android:translateX="%s" android:translateY="%s" android:scaleX="%s" android:scaleY="%s">'
+               % (fmt(tx), fmt(ty), fmt(scale), fmt(scale))]
+        out += ["        " + p for p in body] + ["    </group>", "</vector>", ""]
+        write(os.path.join(ddir, name + ".xml"), hdr.replace("Do not edit.", "Do not edit; the redesign's logo in place of the VLC cone.") + "\n".join(out))
+        _remove_bitmaps(name)
+    print("logos:", len(LOGOS))
+
+
+# The playback speed shown in the media notification: the design's speed glyph over the speed, in Inter SemiBold,
+# white (the system tints it), 36 dp as the bitmaps it replaces. The figures are drawn as paths (a notification
+# action icon can't use a font): needs fontTools, skipped without it.
+SPEEDS = ["0_50", "0_80", "1_00", "1_10", "1_20", "1_50", "2_00"]
+
+
+def speed_icons(design, version):
+    try:
+        from fontTools.ttLib import TTFont
+        from fontTools.varLib.instancer import instantiateVariableFont
+        from fontTools.pens.svgPathPen import SVGPathPen
+        from fontTools.pens.transformPen import TransformPen
+    except ImportError:
+        print("speed icons: skipped (no fontTools)")
+        return
+    font = instantiateVariableFont(TTFont(os.path.join(design, "fonts", "InterVariable.ttf")), {"wght": 600})
+    glyphs, cmap, upem = font.getGlyphSet(), font.getBestCmap(), font["head"].unitsPerEm
+    xml, _ = convert(os.path.join(design, "icons", "svg", "glyphs", "speed", "default.svg"))
+    glyph = [re.sub(r'android:(fill|stroke)Color="[^"]*"', r'android:\1Color="#FFFFFFFF"', p) for p in _paths(xml)]
+    ddir = os.path.join(RES, "drawable")
+    hdr = '<?xml version="1.0" encoding="utf-8"?>\n' + HEADER % version
+    for sp in SPEEDS:
+        text = sp.replace("_", ".") + "x"
+        advance = sum(glyphs[cmap[ord(c)]].width for c in text)
+        size = min(7.5, 22.0 * upem / advance)           # font size in viewport units, the line at most 22 wide
+        k = size / upem
+        x, baseline = (36 - advance * k) / 2, 28.0
+        figures = []
+        for c in text:
+            g = glyphs[cmap[ord(c)]]
+            pen = SVGPathPen(glyphs)
+            g.draw(TransformPen(pen, (k, 0, 0, -k, x, baseline)))
+            if pen.getCommands():
+                d = re.sub(r"-?\d+\.\d+", lambda m: fmt(round(float(m.group()), 3)), pen.getCommands())
+                figures.append('<path android:pathData="%s" android:fillColor="#FFFFFFFF" />' % d)
+            x += g.width * k
+        out = ['<vector xmlns:android="http://schemas.android.com/apk/res/android"',
+               '    android:width="36dp" android:height="36dp" android:viewportWidth="36" android:viewportHeight="36">',
+               # the 24-unit glyph (its circle 3..21) at 0.75, centred above the figures (as the bitmaps)
+               '    <group android:translateX="9" android:translateY="5.25" android:scaleX="0.75" android:scaleY="0.75">']
+        out += ["        " + p for p in glyph] + ["    </group>"] + ["    " + f for f in figures] + ["</vector>", ""]
+        name = "ic_notif_speed_%s_w" % sp
+        write(os.path.join(ddir, name + ".xml"), hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android bitmap.") + "\n".join(out))
+        _remove_bitmaps(name)
+    print("speed icons:", len(SPEEDS))
+
+
+def _flatten(d, steps=24):
+    """Polygons of an SVG path made of absolute M L H V C Z (the logo's)."""
+    toks = re.findall(r"[MLHVCZ]|-?\d*\.?\d+(?:e-?\d+)?", d)
+    polys, cur, i, cmd, pos = [], [], 0, None, (0.0, 0.0)
+    while i < len(toks):
+        if re.match(r"[MLHVCZ]", toks[i]):
+            cmd = toks[i]; i += 1
+            if cmd == "Z":
+                if cur: polys.append(cur); cur = []
+                continue
+        n = lambda j: float(toks[i + j])
+        if cmd == "M":
+            if cur: polys.append(cur)
+            pos = (n(0), n(1)); cur = [pos]; i += 2; cmd = "L"
+        elif cmd == "L":
+            pos = (n(0), n(1)); cur.append(pos); i += 2
+        elif cmd == "H":
+            pos = (n(0), pos[1]); cur.append(pos); i += 1
+        elif cmd == "V":
+            pos = (pos[0], n(0)); cur.append(pos); i += 1
+        elif cmd == "C":
+            p0, p1, p2, p3 = pos, (n(0), n(1)), (n(2), n(3)), (n(4), n(5))
+            for s in range(1, steps + 1):
+                t = s / steps; u = 1 - t
+                cur.append((u**3*p0[0] + 3*u*u*t*p1[0] + 3*u*t*t*p2[0] + t**3*p3[0],
+                            u**3*p0[1] + 3*u*u*t*p1[1] + 3*u*t*t*p2[1] + t**3*p3[1]))
+            pos = p3; i += 6
+    if cur: polys.append(cur)
+    return polys
+
+
+def legacy_launcher(design, version):
+    """The launcher icon of Android 7.1 and older (no adaptive icon): the desktop's app icon (share/icons/scalable/
+    vlc.svg: the logo on its #191919 card with the #373737 line) as PNGs of the sizes VLC Android had. Needs Pillow."""
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        print("legacy launcher: skipped (no Pillow)")
+        return
+    logo = ET.parse(os.path.join(design, "icons", "svg", "logo.svg")).getroot()
+    ds = [el.get("d") for el in logo.iter() if el.tag.split("}")[-1] == "path"]
+    for density, px in (("mdpi", 80), ("hdpi", 120), ("xhdpi", 160), ("xxhdpi", 240)):
+        ss = 8; big = px * ss; k = big / 1024
+        im = Image.new("RGBA", (big, big), (0, 0, 0, 0))
+        dr = ImageDraw.Draw(im)
+        dr.rounded_rectangle([100 * k, 100 * k, 924 * k, 924 * k], radius=185 * k, fill=(0x19, 0x19, 0x19, 255),
+                             outline=(0x37, 0x37, 0x37, 255), width=max(1, round(4 * k)))
+        for d in ds:
+            for poly in _flatten(d):
+                dr.polygon([((512 + (x - 12) * 24) * k, (512 + (y - 12) * 24) * k) for x, y in poly], fill=(0xD3, 0x79, 0x18, 255))
+        out = os.path.join(ROOT, "application", "vlc-android", "res", "mipmap-" + density, "ic_launcher.png")
+        im.resize((px, px), Image.LANCZOS).save(out, optimize=True)
+    print("legacy launcher: 4")
+
+
 def main():
     design = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.expanduser("~"), "source", "repos", "vlc", "design")
     with open(os.path.join(design, "tokens.json"), encoding="utf-8") as f:
@@ -424,6 +574,9 @@ def main():
     icons(design, version)
     overrides(design, version)
     mono(design, version)
+    logos(design, version)
+    speed_icons(design, version)
+    legacy_launcher(design, version)
     print("done:", version)
 
 
