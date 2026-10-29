@@ -4,5 +4,5 @@
     android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
     <path android:pathData="M6.5,7.75h11a2.75,2.75 0,0 1,2.75,2.75v7a2.75,2.75 0,0 1,-2.75,2.75h-11a2.75,2.75 0,0 1,-2.75,-2.75v-7a2.75,2.75 0,0 1,2.75,-2.75z" android:strokeColor="@color/rd_fg_a2" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
     <path android:pathData="M8.5 3.5L12 7.25L15.5 3.5" android:strokeColor="@color/rd_fg_a2" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
-    <path android:pathData="M10.5 11.85Q10.5 11.25 11 11.58L14.25 13.67Q14.75 14 14.25 14.33L11 16.42Q10.5 16.75 10.5 16.15Z" android:fillColor="@color/rd_accent_dim" />
+    <path android:pathData="M10.5 11.85Q10.5 11.25 11 11.58L14.25 13.67Q14.75 14 14.25 14.33L11 16.42Q10.5 16.75 10.5 16.15Z" android:fillColor="?attr/rd_accent_dim" />
 </vector>

@@ -1188,13 +1188,22 @@ fun trackNumber(v: View, media: MediaWrapper) {
 
 /**
  * VLC Redesign: the accent colour chosen in Settings (the desktop's nine), as a theme overlay over the activity's
- * theme. The colours the theme gives (colorPrimary, colorSecondary, colorAccent, rd_accent_bright) follow it; the
- * views that name the orange directly keep it.
+ * theme. The colours the theme gives (colorPrimary, colorSecondary, colorAccent, rd_accent_dim, rd_accent_bright)
+ * follow it, and the views use them. [alwaysDark]: a window that is dark whatever the app theme (the video player).
  */
-fun android.app.Activity.applyAccent() {
+/** VLC Redesign: the theme's accent (colorPrimary, the accent chosen in Settings) at [alpha] (0..1) */
+fun Context.rdAccent(alpha: Float = 1f): Int {
+    val value = android.util.TypedValue()
+    val color = if (theme.resolveAttribute(androidx.appcompat.R.attr.colorPrimary, value, true)) value.data
+    else ContextCompat.getColor(this, R.color.rd_accent_orange_main)
+    return if (alpha >= 1f) color else androidx.core.graphics.ColorUtils.setAlphaComponent(color, (alpha * 255).toInt())
+}
+
+fun android.app.Activity.applyAccent(alwaysDark: Boolean = false) {
     val name = Settings.getInstance(this).getString("rd_accent", "orange") ?: "orange"
     if (name == "orange") return
-    val res = resources.getIdentifier("ThemeOverlay.Redesign.Accent." + name.replaceFirstChar { it.uppercase() }, "style", packageName)
+    val overlay = if (alwaysDark) "ThemeOverlay.Redesign.AccentDark." else "ThemeOverlay.Redesign.Accent."
+    val res = resources.getIdentifier(overlay + name.replaceFirstChar { it.uppercase() }, "style", packageName)
     if (res != 0) theme.applyStyle(res, true)
 }
 
@@ -1210,6 +1219,7 @@ fun BaseActivity.applyTheme() {
             }
             AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
         }
+        if (!Settings.showTvUi) applyAccent(alwaysDark = it == R.style.Theme_VLC_Onboarding)
         return
     }
     if (Settings.showTvUi) {

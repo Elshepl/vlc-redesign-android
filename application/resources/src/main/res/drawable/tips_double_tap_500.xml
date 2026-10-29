@@ -10,16 +10,16 @@
 
             <stroke
                     android:width="2dp"
-                    android:color="@color/orange500" />
+                    android:color="?attr/colorPrimary" />
 
         </shape>
     </item>
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/orange_500_transparent_20" />
+            <solid android:color="@color/rd_accent_a20" />
             <stroke
                     android:width="2dp"
-                    android:color="@color/orange500" />
+                    android:color="?attr/colorPrimary" />
         </shape>
 
     </item>

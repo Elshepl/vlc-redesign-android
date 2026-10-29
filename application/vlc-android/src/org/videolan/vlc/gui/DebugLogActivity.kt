@@ -20,6 +20,7 @@
  */
 package org.videolan.vlc.gui
 
+import org.videolan.vlc.gui.helpers.applyAccent
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.os.Bundle
@@ -80,6 +81,7 @@ class DebugLogActivity : AppCompatActivity(), DebugLogService.Client.Callback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
+        applyAccent()
         super.onCreate(savedInstanceState)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById<View>(android.R.id.content)) { v, windowInsets ->
             val bars = windowInsets.getInsets(

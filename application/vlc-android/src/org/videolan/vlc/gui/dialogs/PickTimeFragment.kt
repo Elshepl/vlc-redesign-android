@@ -22,6 +22,7 @@
  */
 package org.videolan.vlc.gui.dialogs
 
+import org.videolan.vlc.gui.helpers.rdAccent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -91,7 +92,7 @@ abstract class PickTimeFragment : PlaybackBottomSheetDialogFragment(), View.OnCl
 
     override fun onFocusChange(v: View, hasFocus: Boolean) {
         if (v is TextView) {
-            v.setTextColor(if (hasFocus) ContextCompat.getColor(requireActivity(), R.color.orange500) else mTextColor)
+            v.setTextColor(if (hasFocus) requireActivity().rdAccent() else mTextColor)
         }
     }
 

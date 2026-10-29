@@ -34,7 +34,7 @@ THEME = {
 SVG_COLORS = {
     "#8F8F8F": "@color/rd_fg_a2", "#6B6B6B": "@color/rd_fg_a3", "#161616": "@color/rd_fg_b1",
     "#D37918": "?attr/colorPrimary", "#090909": "@color/rd_bg_b2", "#262626": "#FF262626",
-    "#FF00FF": "@color/rd_fg_a2", "#FF8800": "@color/rd_accent_dim", "#00FFFF": "?attr/colorPrimary",
+    "#FF00FF": "@color/rd_fg_a2", "#FF8800": "?attr/rd_accent_dim", "#00FFFF": "?attr/colorPrimary",
 }
 
 
@@ -367,7 +367,7 @@ def overrides(design, version):
         if src.startswith("+"):
             write(os.path.join(ddir, name + ".xml"), hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android icon.") + extra_xml(src[1:], colour, size))
             continue
-        cmap = {"@color/rd_fg_a2": colour, "@color/rd_fg_a3": colour, "@color/rd_accent_dim": colour}
+        cmap = {"@color/rd_fg_a2": colour, "@color/rd_fg_a3": colour, "?attr/rd_accent_dim": colour}
         if src == "sort":
             cmap["?attr/colorPrimary"] = None  # the "sorted" dot is drawn by the sort button itself
         xml, _ = convert(os.path.join(design, "icons", "svg", src + ".svg"), cmap, size)

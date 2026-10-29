@@ -24,6 +24,7 @@
 
 package org.videolan.vlc.gui.view
 
+import org.videolan.vlc.gui.helpers.rdAccent
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.ColorFilter
@@ -47,7 +48,7 @@ open class FocusableTextView : androidx.appcompat.widget.AppCompatTextView {
     val paint: Paint by lazy {
         Paint().apply {
             isAntiAlias = true
-            color = ContextCompat.getColor(context, R.color.orange500focus)
+            color = context.rdAccent(0.53f)
             style = Paint.Style.FILL
             textSize = this@FocusableTextView.textSize
             typeface = this@FocusableTextView.typeface

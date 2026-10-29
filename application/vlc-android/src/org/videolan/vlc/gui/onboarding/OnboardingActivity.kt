@@ -1,5 +1,6 @@
 package org.videolan.vlc.gui.onboarding
 
+import org.videolan.vlc.gui.helpers.applyAccent
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
@@ -52,6 +53,7 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
         if (AndroidDevices.canUseSystemNightMode()) enableEdgeToEdge()
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightNavigationBars = false
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
+        applyAccent(alwaysDark = true)
         super.onCreate(savedInstanceState)
 //        viewModel.permissionGranted = Permissions.canReadStorage(applicationContext)
         setContentView(R.layout.activity_onboarding)

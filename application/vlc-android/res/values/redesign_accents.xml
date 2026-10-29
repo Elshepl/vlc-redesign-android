@@ -74,4 +74,33 @@
         <item name="rd_accent_bright">@color/rd_accent_grey_bright_light</item>
         <item name="rd_accent_dim">@color/rd_accent_grey_dim</item>
     </style>
+
+    <!-- The always dark windows (the video player): the dark tints whatever the app theme -->
+    <style name="ThemeOverlay.Redesign.AccentDark.Orange" parent="ThemeOverlay.Redesign.Accent.Orange">
+        <item name="rd_accent_bright">@color/rd_accent_orange_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Red" parent="ThemeOverlay.Redesign.Accent.Red">
+        <item name="rd_accent_bright">@color/rd_accent_red_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Yellow" parent="ThemeOverlay.Redesign.Accent.Yellow">
+        <item name="rd_accent_bright">@color/rd_accent_yellow_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Green" parent="ThemeOverlay.Redesign.Accent.Green">
+        <item name="rd_accent_bright">@color/rd_accent_green_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Cyan" parent="ThemeOverlay.Redesign.Accent.Cyan">
+        <item name="rd_accent_bright">@color/rd_accent_cyan_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Blue" parent="ThemeOverlay.Redesign.Accent.Blue">
+        <item name="rd_accent_bright">@color/rd_accent_blue_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Purple" parent="ThemeOverlay.Redesign.Accent.Purple">
+        <item name="rd_accent_bright">@color/rd_accent_purple_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Pink" parent="ThemeOverlay.Redesign.Accent.Pink">
+        <item name="rd_accent_bright">@color/rd_accent_pink_bright</item>
+    </style>
+    <style name="ThemeOverlay.Redesign.AccentDark.Grey" parent="ThemeOverlay.Redesign.Accent.Grey">
+        <item name="rd_accent_bright">@color/rd_accent_grey_bright</item>
+    </style>
 </resources>

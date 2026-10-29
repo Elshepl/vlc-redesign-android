@@ -20,6 +20,7 @@
 
 package org.videolan.vlc.gui.video
 
+import org.videolan.vlc.gui.helpers.applyAccent
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
@@ -529,6 +530,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
+        // VLC Redesign: the accent chosen in Settings (the player is not a BaseActivity)
+        applyAccent(alwaysDark = true)
         super.onCreate(savedInstanceState)
 
         dialogsDelegate.observeDialogs(this, this)

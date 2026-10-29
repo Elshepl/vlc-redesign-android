@@ -133,7 +133,7 @@
             android:text="@string/permission_onboarding_perm_all"
             android:textAlignment="center"
             android:textAppearance="@style/VLC.Onboarding.Text"
-            android:textColor="@color/orange500"
+            android:textColor="?attr/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

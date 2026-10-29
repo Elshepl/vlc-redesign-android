@@ -28,7 +28,7 @@
         <selector>
             <item android:state_selected="true">
                 <shape android:shape="oval">
-                    <solid android:color="@color/orange500transparent"/>
+                    <solid android:color="@color/rd_accent_a71"/>
                 </shape>
             </item>
         </selector>

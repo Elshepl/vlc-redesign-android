@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: text in the accent (the dim tone on the light theme, rd_accent_text) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="?attr/rd_accent_dim" />
+</selector>

@@ -3,5 +3,5 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
     <path android:pathData="M13.1429 5C16.9299 5 20 8.13401 20 12C20 15.866 16.9299 19 13.1429 19C9.3558 19 6.2857 15.866 6.2857 12V10.4444M3.5715 13.1587L6.2857 10.4444L9 13.1587" android:strokeColor="@color/rd_fg_a2" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
-    <path android:pathData="M13 8V11.1429C13 11.6162 13.3838 12 13.8571 12H15.5" android:strokeColor="@color/rd_accent_dim" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path android:pathData="M13 8V11.1429C13 11.6162 13.3838 12 13.8571 12H15.5" android:strokeColor="?attr/rd_accent_dim" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
 </vector>
