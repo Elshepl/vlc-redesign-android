@@ -75,7 +75,7 @@
                             vlc:layout_constraintBottom_toBottomOf="parent"
                             vlc:layout_constraintStart_toStartOf="parent"
                             vlc:layout_constraintEnd_toEndOf="parent"
-                            android:src="?attr/background_default_darker" />
+                            android:src="@color/rd_bg_a3" />
 
                     <ImageView
                             android:id="@+id/playlist_cover"
@@ -101,8 +101,8 @@
                             android:maxLines="3"
                             android:text="@{playlist.title}"
                             android:contentDescription="@{TalkbackUtil.INSTANCE.getAlbumTitle(context, playlist.title)}"
-                            android:textColor="?attr/font_default"
-                            android:textSize="@dimen/lb_browse_header_text_size"
+                            android:textColor="@color/rd_fg_a1"
+                            android:textSize="22sp"
                             tools:text="Title"
                             vlc:layout_constraintEnd_toEndOf="parent"
                             vlc:layout_constraintStart_toEndOf="@id/playlist_cover"
@@ -119,7 +119,8 @@
                             android:maxLines="2"
                             android:background="?attr/selectableItemBackground"
                             android:text="@{playlist.description}"
-                            android:textColor="?attr/font_default"
+                            android:textColor="@color/rd_fg_a2"
+                            android:textSize="15sp"
                             android:contentDescription="@{TalkbackUtil.INSTANCE.getArtist(context, playlist.description)}"
                             android:visibility="@{TextUtils.isEmpty(playlist.description) ? View.GONE : View.VISIBLE, default=gone}"
                             tools:text="Artist"
@@ -136,6 +137,8 @@
                             android:layout_marginEnd="@dimen/default_margin"
                             tools:text="2000"
                             android:text="@{releaseYear}"
+                            android:textColor="@color/rd_fg_a3"
+                            android:textSize="14sp"
                             android:contentDescription="@{TalkbackUtil.INSTANCE.getReleaseDate(context, releaseYear)}"
                             vlc:layout_constraintStart_toEndOf="@+id/playlist_cover"
                             vlc:layout_constraintTop_toBottomOf="@+id/header_list_artist" />
@@ -148,6 +151,8 @@
                             android:layout_marginTop="@dimen/half_default_margin"
                             android:layout_marginEnd="@dimen/default_margin"
                             android:text="@{Tools.millisToTextLarge(totalDuration)}"
+                            android:textColor="@color/rd_fg_a3"
+                            android:textSize="14sp"
                             android:contentDescription="@{TalkbackUtil.INSTANCE.getDuration(context, totalDuration)}"
                             tools:text="30:00"
                             vlc:layout_constraintStart_toEndOf="@+id/playlist_cover"

@@ -283,11 +283,21 @@ open class HeaderMediaListActivity : AudioPlayerContainerActivity(), IEventsHand
                 binding.appbar.setExpanded(true, true)
                 if (showBackground) {
                     val radius = if (isPlaylist) 25f else 15f
-                    UiTools.blurView(binding.backgroundView, cover, radius, UiTools.getColorFromAttribute(context, R.attr.audio_player_background_tint))
+                    // VLC Redesign: the desktop's banner (ArtistTopBanner.qml): the blurred artwork under a veil
+                    // (black 50 to 70 % on the dark theme; white on the light one, where the texts stay dark)
+                    val dark = (resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
+                    UiTools.blurView(binding.backgroundView, cover, radius, if (dark) android.graphics.Color.argb(153, 0, 0, 0) else android.graphics.Color.argb(170, 255, 255, 255))
                 }
             }
         }
 
+        // VLC Redesign: the cover with the desktop's rounded corners (6)
+        binding.playlistCover.outlineProvider = object : android.view.ViewOutlineProvider() {
+            override fun getOutline(view: android.view.View, outline: android.graphics.Outline) {
+                outline.setRoundRect(0, 0, view.width, view.height, 6 * view.resources.displayMetrics.density)
+            }
+        }
+        binding.playlistCover.clipToOutline = true
         binding.playBtn.setOnClickListener(this)
 
         //swipe layout is only here to be able to make the recyclerview dispatch the scroll events

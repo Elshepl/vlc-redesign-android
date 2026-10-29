@@ -85,8 +85,11 @@ class CoverMediaSwitcher(context: Context, attrs: AttributeSet) : AudioMediaSwit
             onChapterSwitching(!LocaleUtil.isRtl())
         }
 
-        titleView.text = title
+        // VLC Redesign: the desktop's music view (AudioContent.qml): "Title - Artist" under the cover, nothing else
+        titleView.text = if (!title.isNullOrEmpty() && !artist.isNullOrEmpty()) "$title - $artist" else title
+        titleView.contentDescription = TextUtils.separatedString(title, artist)
         artistView.text = TextUtils.separatedString(artist, album)
+        artistView.visibility = GONE
         trackInfoView?.text = trackInfo
 
         setEllipsizeModeByPref(titleView, true)

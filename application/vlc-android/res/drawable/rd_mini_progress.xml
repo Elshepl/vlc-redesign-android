@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the desktop mini player's seek bar (LibraryMiniPlayer.qml): the dark well, radius 6 scaled to the
+     6 dp track, the played part in the accent 1 dp inside it -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape><solid android:color="?attr/rd_well" /><corners android:radius="3dp" /></shape>
+    </item>
+    <item android:id="@android:id/progress" android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <clip>
+            <shape><solid android:color="?attr/colorAccent" /><corners android:radius="2dp" /></shape>
+        </clip>
+    </item>
+</layer-list>

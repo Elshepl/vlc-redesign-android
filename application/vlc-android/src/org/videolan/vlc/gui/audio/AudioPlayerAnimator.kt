@@ -242,7 +242,10 @@ internal class AudioPlayerAnimator : IAudioPlayerAnimator, LifecycleObserver {
                 val cover = withContext(Dispatchers.IO) { AudioUtil.readCoverBitmap(Uri.decode(mw.artworkMrl), width) }
                 if (cover == null) setDefaultBackground()
                 else {
-                    UiTools.blurView(binding.backgroundView, cover, 15F, UiTools.getColorFromAttribute(activity, R.attr.audio_player_background_tint))
+                    // VLC Redesign: the desktop's backdrop (ArtworkBackdrop.qml): the artwork as it is in the dark
+                    // theme, under a white veil in the light one
+                    val dark = (activity.resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
+                    UiTools.blurView(binding.backgroundView, cover, 20F, if (dark) android.graphics.Color.TRANSPARENT else android.graphics.Color.argb(153, 255, 255, 255))
                     binding.backgroundView.setVisible()
                 }
             }
