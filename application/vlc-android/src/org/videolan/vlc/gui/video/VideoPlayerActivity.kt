@@ -1755,8 +1755,11 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 }
                 MediaPlayer.Event.Vout -> {
                     updateNavStatus()
-                    if (event.voutCount > 0)
+                    if (event.voutCount > 0) {
                         service.mediaplayer.updateVideoSurfaces()
+                        // VideoHelper reset the aspect ratio: a custom one is laid over it again
+                        customAspect.onVideoOutput()
+                    }
                     if (menuIdx == -1)
                         handleVout(event.voutCount)
                 }

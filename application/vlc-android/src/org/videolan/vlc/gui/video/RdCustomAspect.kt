@@ -58,7 +58,6 @@ class RdCustomAspect(private val player: VideoPlayerActivity) {
     var current: String? = null
         private set
     private var layout: VLCVideoLayout? = null
-    private var appliedToLibvlc = false
     private val listener = ViewTreeObserver.OnGlobalLayoutListener { apply() }
 
     fun attach(videoLayout: VLCVideoLayout?) {
@@ -76,7 +75,6 @@ class RdCustomAspect(private val player: VideoPlayerActivity) {
     /** choose a custom ratio (null: back to the fixed list, whose choice the caller makes) */
     fun set(value: String?, persist: Boolean = true) {
         current = value
-        appliedToLibvlc = false
         if (persist) Settings.getInstance(player).putSingle(KEY_CURRENT, value.orEmpty())
         val mp = player.service?.mediaplayer
         if (value != null && mp != null) {
@@ -98,15 +96,12 @@ class RdCustomAspect(private val player: VideoPlayerActivity) {
         val lp = video.layoutParams ?: return
         val ar = ratioOf(value)
         if (lp.width == ViewGroup.LayoutParams.MATCH_PARENT && lp.height == ViewGroup.LayoutParams.MATCH_PARENT) {
-            // the size of the video is not known yet (or an OpenGL output): libvlc places it with its aspect ratio
-            if (!appliedToLibvlc) player.service?.mediaplayer?.let {
-                it.aspectRatio = value
-                it.scale = 0f
-                appliedToLibvlc = true
-            }
+            // the size of the video is not known (an OpenGL output: software decoding, a video filter): libvlc places
+            // it with its aspect ratio. VideoHelper resets that ratio from a runnable it posts on each layout, so ours
+            // is posted after it
+            video.post { applyToLibvlc(value) }
             return
         }
-        appliedToLibvlc = false
         var dw = sw.toDouble()
         var dh = sh.toDouble()
         if (dw / dh < ar) dh = dw / ar else dw = dh * ar
@@ -119,5 +114,19 @@ class RdCustomAspect(private val player: VideoPlayerActivity) {
         frame.findViewById<View>(org.videolan.R.id.surface_subtitles)?.let { subs ->
             subs.layoutParams = subs.layoutParams.apply { width = w; height = h }
         }
+    }
+
+    private fun applyToLibvlc(value: String) {
+        if (current != value) return
+        val mp = player.service?.mediaplayer ?: return
+        if (mp.isReleased || mp.aspectRatio == value) return
+        mp.aspectRatio = value
+        mp.scale = 0f
+    }
+
+    /** a new video output (a filter switched on, another video): VideoHelper lays it out again, then ours */
+    fun onVideoOutput() {
+        if (current == null) return
+        layout?.let { it.postDelayed({ apply() }, 300L) }
     }
 }
