@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Visi ekranai paimti iš „VLC Redesign (Community)“ Figma failo, licencijuoto pagal CC BY 4.0. Jie pritaikyti Android, o piktogramos nupieštos iš naujo.</string>
+    <string name="rd_about_whats_new">Kas naujo %1$s versijoje</string>
+    <string name="rd_customize_hint">Nuvilkite valdiklį į juostos zoną arba pasirinkite zoną ir bakstelėkite valdiklius, kuriuos norite joje įdėti. Bakstelėkite juostos valdiklį, kad jį perkeltumėte arba pašalintumėte.</string>
+    <string name="rd_move_earlier">Perkelti į kairę</string>
+    <string name="rd_move_later">Perkelti į dešinę</string>
+    <string name="rd_audio_delay_summary">Vėlina garsą vaizdo atžvilgiu visoje medijoje, ms; neigiama reikšmė jį groja anksčiau.</string>
+    <string name="rd_orange">Oranžinė</string>
+    <string name="rd_cyan">Žydra</string>
+    <string name="rd_pink">Rožinė</string>
+    <string name="rd_sec_notifications">Pranešimai</string>
+    <string name="rd_fuzzy_1">Bet kuris subtitrų failas</string>
+    <string name="rd_fuzzy_2">Turi vaizdo įrašo pavadinimą</string>
+    <string name="rd_fuzzy_3">Vaizdo įrašo pavadinimas ir daugiau</string>
+    <string name="rd_fuzzy_4">Tiksliai vaizdo įrašo pavadinimas</string>
+    <string name="rd_help_fuzzy">Kiek subtitrų failo pavadinimas turi atitikti vaizdo įrašo pavadinimą, kad būtų įkeltas savaime.</string>
+    <string name="rd_help_normalize">Suvienodina garsumą tarp tylios ir garsios medijos.</string>
+    <string name="rd_help_target_level">Kiek garsus gali būti normalizuotas garsas: didesnė reikšmė – garsiau.</string>
+    <string name="rd_help_night_mode">Patylina garsias scenas ir pagarsina tylų dialogą, klausymuisi vėlai.</string>
+    <string name="rd_help_loudness_android">Taiko Android garso efektus VLC garsui (Android 9 ir naujesnėse); ne su perdavimu be apdorojimo.</string>
+    <string name="rd_help_shadow_distance">Kaip toli nuo teksto krinta šešėlis.</string>
+    <string name="rd_help_welcome">Vėl atveria pirmojo paleidimo sąranką: kalba, išvaizda, biblioteka ir privatumas.</string>
+    <string name="rd_help_deinterlace">Pašalina persipynusio vaizdo (TV įrašų) šukų linijas. Veikia vaizdui, kurį iškoduoja VLC, ne aparatinis iškoduotuvas.</string>
+    <string name="rd_ob_whole_device">Visas įrenginys</string>
+    <string name="rd_ob_folders_count">%1$s ir dar %2$d</string>
+    <string name="rd_ob_online_text">Jokios telemetrijos, jokių reklamų, jokios paskyros: VLC for Android pati nieko nesiunčia. Šie pasirinkimai lieka skiltyje Nuostatos, Privatumas.</string>
+    <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
+    <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Vaizdo grotuvo valdymo juosta tokia pati kaip kompiuterio versijoje: viena juosta iki ekrano kraštų, grojimo mygtukas tarp Ankstesnis ir Kitas, slinkimo juosta su laikais šonuose; viena eilutė plačiame ekrane, dvi – siaurame.</item>
+        <item>Ne Unicode subtitrai rodomi teisingai: hebrajų, arabų, rusų, graikų, turkų, japonų, kinų, korėjiečių ir tajų failai atpažįstami pagal jų raides ir pavadinime nurodytą kalbą.</item>
+        <item>Skiltyje Apie Juxtopposed nurodomas kaip sąsajos dizaino autorius, su nuorodomis į dizainą, kaip kompiuterio versijoje.</item>
+    </string-array>
+</resources>

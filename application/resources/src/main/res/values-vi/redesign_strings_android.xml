@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Mọi màn hình đều lấy từ tập tin Figma \"VLC Redesign (Community)\", được cấp phép theo CC BY 4.0. Thiết kế đã được chuyển sang Android và các biểu tượng đã được vẽ lại.</string>
+    <string name="rd_about_whats_new">Có gì mới trong %1$s</string>
+    <string name="rd_customize_hint">Kéo một nút điều khiển vào một vùng của thanh, hoặc chọn một vùng rồi chạm vào các nút muốn đặt vào đó. Chạm vào một nút trên thanh để di chuyển hoặc gỡ nó ra.</string>
+    <string name="rd_move_earlier">Dời sang trái</string>
+    <string name="rd_move_later">Dời sang phải</string>
+    <string name="rd_audio_delay_summary">Làm trễ âm thanh so với hình ảnh trong mọi nội dung, tính bằng ms; giá trị âm sẽ phát âm thanh sớm hơn.</string>
+    <string name="rd_orange">Cam</string>
+    <string name="rd_cyan">Xanh lơ</string>
+    <string name="rd_pink">Hồng</string>
+    <string name="rd_sec_notifications">Thông báo</string>
+    <string name="rd_fuzzy_1">Mọi tập tin phụ đề</string>
+    <string name="rd_fuzzy_2">Có chứa tên video</string>
+    <string name="rd_fuzzy_3">Tên video và thêm phần khác</string>
+    <string name="rd_fuzzy_4">Đúng chính xác tên video</string>
+    <string name="rd_help_fuzzy">Tên tập tin phụ đề phải gần với tên video đến mức nào thì mới được tự động tải.</string>
+    <string name="rd_help_normalize">Cân bằng âm lượng giữa nội dung nhỏ tiếng và lớn tiếng.</string>
+    <string name="rd_help_target_level">Âm thanh đã chuẩn hóa được phép to đến mức nào: càng cao càng to.</string>
+    <string name="rd_help_night_mode">Giảm âm lượng cảnh ồn và tăng lời thoại nhỏ, để nghe vào đêm khuya.</string>
+    <string name="rd_help_loudness_android">Dùng hiệu ứng âm thanh của Android cho âm thanh của VLC (Android 9 trở lên); không dùng được khi truyền thẳng.</string>
+    <string name="rd_help_shadow_distance">Khoảng cách từ bóng đổ đến chữ.</string>
+    <string name="rd_help_welcome">Mở lại phần thiết lập ban đầu: ngôn ngữ, giao diện, thư viện và quyền riêng tư.</string>
+    <string name="rd_help_deinterlace">Xóa các đường răng lược của video quét xen kẽ (bản ghi truyền hình). Chỉ có tác dụng với video do VLC giải mã, không phải bộ giải mã phần cứng.</string>
+    <string name="rd_ob_whole_device">Toàn bộ thiết bị</string>
+    <string name="rd_ob_folders_count">%1$s và %2$d mục khác</string>
+    <string name="rd_ob_online_text">Không thu thập dữ liệu sử dụng, không quảng cáo, không cần tài khoản: VLC for Android không tự gửi đi bất cứ thứ gì. Các lựa chọn này nằm trong Thiết lập, Quyền riêng tư.</string>
+    <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
+    <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Thanh điều khiển của trình phát video giống bản máy tính: một thanh trải đến mép màn hình, nút phát nằm giữa Trước và Tiếp, thanh tua có thời gian ở hai bên; một hàng trên màn hình rộng, hai hàng trên màn hình hẹp.</item>
+        <item>Phụ đề không phải Unicode hiển thị đúng: các tập tin tiếng Do Thái, Ả Rập, Nga, Hy Lạp, Thổ Nhĩ Kỳ, Nhật, Trung, Hàn và Thái được nhận biết qua chữ viết và ngôn ngữ trong tên tập tin.</item>
+        <item>Trang Giới thiệu ghi công thiết kế giao diện cho Juxtopposed, kèm các liên kết của bản thiết kế, giống như trên máy tính.</item>
+    </string-array>
+</resources>

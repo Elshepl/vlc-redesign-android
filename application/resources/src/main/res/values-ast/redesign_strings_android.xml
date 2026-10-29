@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Toles pantalles vienen del ficheru de Figma «VLC Redesign (Community)», con llicencia CC BY 4.0. Adaptóse a Android y redibuxáronse los sos iconos.</string>
+    <string name="rd_about_whats_new">Novedaes de %1$s</string>
+    <string name="rd_customize_hint">Arrastra un control a una zona de la barra, o escueyi una zona y toca los controles que quies poner nella. Toca un control de la barra pa movelu o quitalu.</string>
+    <string name="rd_move_earlier">Mover a la esquierda</string>
+    <string name="rd_move_later">Mover a la drecha</string>
+    <string name="rd_audio_delay_summary">Retrasa\'l soníu respeuto a la imaxe en tolos medios, en ms; un valor negativu reprodúzlu enantes.</string>
+    <string name="rd_orange">Naranxa</string>
+    <string name="rd_cyan">Cian</string>
+    <string name="rd_pink">Rosa</string>
+    <string name="rd_sec_notifications">Avisos</string>
+    <string name="rd_fuzzy_1">Cualesquier ficheru de sotítulos</string>
+    <string name="rd_fuzzy_2">Que contenga\'l nome del videu</string>
+    <string name="rd_fuzzy_3">El nome del videu y más</string>
+    <string name="rd_fuzzy_4">Exactamente\'l nome del videu</string>
+    <string name="rd_help_fuzzy">Cuánto tien de paecese\'l nome d\'un ficheru de sotítulos al del videu pa cargalu automáticamente.</string>
+    <string name="rd_help_normalize">Iguala\'l volume ente medios baxos y altos.</string>
+    <string name="rd_help_target_level">Hasta ónde pue xubir el soníu normalizáu: más alto ye más fuerte.</string>
+    <string name="rd_help_night_mode">Baxa les escenes ruidoses y xube los diálogos baxos, pa escuchar de nueche.</string>
+    <string name="rd_help_loudness_android">Usa los efeutos d\'audiu d\'Android nel soníu de VLC (Android 9 y posteriores); non col pasu direutu.</string>
+    <string name="rd_help_shadow_distance">A qué distancia del testu cai la solombra.</string>
+    <string name="rd_help_welcome">Vuelve abrir la configuración inicial: llingua, aspeutu, biblioteca y privacidá.</string>
+    <string name="rd_help_deinterlace">Quita les llinies de peñe del videu entrelazáu (grabaciones de TV). Funciona col videu que descodifica VLC, non col descodificador de hardware.</string>
+    <string name="rd_ob_whole_device">Tol preséu</string>
+    <string name="rd_ob_folders_count">%1$s y %2$d más</string>
+    <string name="rd_ob_online_text">Ensin telemetría, ensin anuncios, ensin cuenta: VLC for Android nun unvia nada pela so cuenta. Estes opciones queden n\'Axustes, Privacidá.</string>
+    <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
+    <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
+    <string-array name="rd_whats_new_items">
+        <item>La barra de controles del reproductor de videu ye la del escritoriu: una barra hasta los berbesos de la pantalla, el botón de reproducción ente Anterior y Siguiente, la barra de busca colos tiempos a los llaos; una filera nuna pantalla ancha, dos nuna estrecha.</item>
+        <item>Los sotítulos que nun tán n\'Unicode amuésense bien: los ficheros n\'hebréu, árabe, rusu, griegu, turcu, xaponés, chinu, coreanu y tailandés reconócense poles sos lletres y pola llingua del so nome.</item>
+        <item>Tocante a atribúi\'l diseñu de la interfaz a Juxtopposed, colos enllaces del diseñu, como nel escritoriu.</item>
+    </string-array>
+</resources>

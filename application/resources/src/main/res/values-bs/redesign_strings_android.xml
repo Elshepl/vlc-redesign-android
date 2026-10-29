@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Svaki ekran potiče iz Figma datoteke „VLC Redesign (Community)”, licencirane pod CC BY 4.0. Prilagođen je za Android, a ikone su ponovo nacrtane.</string>
+    <string name="rd_about_whats_new">Šta je novo u %1$s</string>
+    <string name="rd_customize_hint">Prevucite kontrolu u zonu trake ili izaberite zonu i dodirnite kontrole koje želite staviti u nju. Dodirnite kontrolu na traci da je pomjerite ili uklonite.</string>
+    <string name="rd_move_earlier">Pomjeri lijevo</string>
+    <string name="rd_move_later">Pomjeri desno</string>
+    <string name="rd_audio_delay_summary">Odgađa zvuk u odnosu na sliku u svim medijima, u ms; negativna vrijednost ga reprodukuje ranije.</string>
+    <string name="rd_orange">Narandžasta</string>
+    <string name="rd_cyan">Cijan</string>
+    <string name="rd_pink">Ružičasta</string>
+    <string name="rd_sec_notifications">Obavještenja</string>
+    <string name="rd_fuzzy_1">Bilo koja datoteka podtitlova</string>
+    <string name="rd_fuzzy_2">Sadrži naziv videa</string>
+    <string name="rd_fuzzy_3">Naziv videa i još nešto</string>
+    <string name="rd_fuzzy_4">Tačno naziv videa</string>
+    <string name="rd_help_fuzzy">Koliko naziv datoteke podtitlova mora biti blizu nazivu videa da bi se sama učitala.</string>
+    <string name="rd_help_normalize">Ujednačava jačinu zvuka između tihih i glasnih medija.</string>
+    <string name="rd_help_target_level">Koliko glasan smije biti normalizovani zvuk: više je glasnije.</string>
+    <string name="rd_help_night_mode">Utišava glasne scene i pojačava tihe dijaloge, za slušanje kasno uveče.</string>
+    <string name="rd_help_loudness_android">Primjenjuje zvučne efekte Androida na zvuk VLC-a (Android 9 i noviji); ne uz prosljeđivanje komprimovanog zvuka.</string>
+    <string name="rd_help_shadow_distance">Koliko daleko od teksta pada sjena.</string>
+    <string name="rd_help_welcome">Ponovo otvara početno podešavanje: jezik, izgled, biblioteku i privatnost.</string>
+    <string name="rd_help_deinterlace">Uklanja „češalj” isprepletenog videa (TV snimci). Radi na videu koji dekodira VLC, a ne hardverski dekoder.</string>
+    <string name="rd_help_threads">Broj niti koje se koriste za dekodiranje, 0 znači automatski</string>
+    <string name="rd_ob_whole_device">Cijeli uređaj</string>
+    <string name="rd_ob_folders_count">%1$s i još %2$d</string>
+    <string name="rd_ob_online_text">Bez telemetrije, bez reklama, bez računa: VLC for Android sam ništa ne šalje. Ovi izbori ostaju u Postavkama, pod Privatnost.</string>
+    <string name="rd_ob_history_help">Čuva se samo na ovom uređaju, da nastavite gdje ste stali.</string>
+    <string name="rd_ob_updates_help">Jednom dnevno traži noviju probnu verziju VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Kontrolna traka video plejera ista je kao u verziji za računar: jedna traka do ivica ekrana, dugme za reprodukciju između Prethodno i Sljedeće, traka za premotavanje s vremenima sa strane; jedan red na širokom ekranu, dva na uskom.</item>
+        <item>Podtitlovi koji nisu u Unicodeu prikazuju se ispravno: datoteke na hebrejskom, arapskom, ruskom, grčkom, turskom, japanskom, kineskom, korejskom i tajlandskom prepoznaju se po slovima i po jeziku u nazivu.</item>
+        <item>Odjeljak O programu navodi autora dizajna interfejsa, Juxtopposed, s linkovima na dizajn, kao u verziji za računar.</item>
+    </string-array>
+</resources>

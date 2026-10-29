@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">ਹਰ ਸਕਰੀਨ \"VLC Redesign (Community)\" Figma ਫਾਇਲ ਤੋਂ ਆਈ ਹੈ, ਜੋ CC BY 4.0 ਲਾਇਸੰਸ ਅਧੀਨ ਹੈ। ਇਸ ਨੂੰ Android ਲਈ ਢਾਲਿਆ ਗਿਆ ਅਤੇ ਇਸ ਦੇ ਆਈਕਾਨ ਮੁੜ ਬਣਾਏ ਗਏ।</string>
+    <string name="rd_about_whats_new">%1$s ਵਿੱਚ ਨਵਾਂ ਕੀ ਹੈ</string>
+    <string name="rd_customize_hint">ਕਿਸੇ ਕੰਟਰੋਲ ਨੂੰ ਬਾਰ ਦੇ ਕਿਸੇ ਖੇਤਰ ਵਿੱਚ ਖਿੱਚੋ, ਜਾਂ ਕੋਈ ਖੇਤਰ ਚੁਣੋ ਅਤੇ ਉਸ ਵਿੱਚ ਰੱਖਣ ਵਾਲੇ ਕੰਟਰੋਲਾਂ ਉੱਤੇ ਟੈਪ ਕਰੋ। ਬਾਰ ਦੇ ਕਿਸੇ ਕੰਟਰੋਲ ਨੂੰ ਹਿਲਾਉਣ ਜਾਂ ਹਟਾਉਣ ਲਈ ਉਸ ਉੱਤੇ ਟੈਪ ਕਰੋ।</string>
+    <string name="rd_move_earlier">ਖੱਬੇ ਲਿਜਾਓ</string>
+    <string name="rd_move_later">ਸੱਜੇ ਲਿਜਾਓ</string>
+    <string name="rd_audio_delay_summary">ਹਰ ਮੀਡਿਆ ਵਿੱਚ ਆਵਾਜ਼ ਨੂੰ ਤਸਵੀਰ ਦੇ ਮੁਕਾਬਲੇ ਮਿਲੀਸਕਿੰਟਾਂ ਵਿੱਚ ਦੇਰੀ ਨਾਲ ਚਲਾਉਂਦਾ ਹੈ; ਰਿਣਾਤਮਕ ਮੁੱਲ ਇਸ ਨੂੰ ਪਹਿਲਾਂ ਚਲਾਉਂਦਾ ਹੈ।</string>
+    <string name="rd_orange">ਸੰਤਰੀ</string>
+    <string name="rd_cyan">ਅਸਮਾਨੀ</string>
+    <string name="rd_pink">ਗੁਲਾਬੀ</string>
+    <string name="rd_sec_notifications">ਸੂਚਨਾਵਾਂ</string>
+    <string name="rd_fuzzy_1">ਕੋਈ ਵੀ ਸਬ-ਟਾਈਟਲ ਫਾਇਲ</string>
+    <string name="rd_fuzzy_2">ਵੀਡੀਓ ਦਾ ਨਾਂ ਸ਼ਾਮਲ ਹੋਵੇ</string>
+    <string name="rd_fuzzy_3">ਵੀਡੀਓ ਦਾ ਨਾਂ ਅਤੇ ਹੋਰ</string>
+    <string name="rd_fuzzy_4">ਬਿਲਕੁਲ ਵੀਡੀਓ ਦਾ ਨਾਂ</string>
+    <string name="rd_help_fuzzy">ਸਬ-ਟਾਈਟਲ ਫਾਇਲ ਦਾ ਨਾਂ ਵੀਡੀਓ ਦੇ ਨਾਂ ਦੇ ਕਿੰਨਾ ਨੇੜੇ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ਤਾਂ ਜੋ ਉਹ ਆਪਣੇ ਆਪ ਲੋਡ ਹੋਵੇ।</string>
+    <string name="rd_help_normalize">ਹੌਲੀ ਅਤੇ ਉੱਚੀ ਮੀਡਿਆ ਵਿਚਕਾਰ ਆਵਾਜ਼ ਨੂੰ ਬਰਾਬਰ ਕਰਦਾ ਹੈ।</string>
+    <string name="rd_help_target_level">ਨਾਰਮਲਾਈਜ਼ ਕੀਤੀ ਆਵਾਜ਼ ਕਿੰਨੀ ਉੱਚੀ ਹੋ ਸਕਦੀ ਹੈ: ਵੱਧ ਦਾ ਅਰਥ ਉੱਚੀ।</string>
+    <string name="rd_help_night_mode">ਉੱਚੀ ਆਵਾਜ਼ ਵਾਲੇ ਦ੍ਰਿਸ਼ਾਂ ਨੂੰ ਹੌਲੀ ਅਤੇ ਹੌਲੀ ਗੱਲਬਾਤ ਨੂੰ ਉੱਚੀ ਕਰਦਾ ਹੈ, ਦੇਰ ਰਾਤ ਸੁਣਨ ਲਈ।</string>
+    <string name="rd_help_loudness_android">VLC ਦੀ ਆਵਾਜ਼ ਉੱਤੇ Android ਦੇ ਆਡੀਓ ਪ੍ਰਭਾਵ ਵਰਤਦਾ ਹੈ (Android 9 ਅਤੇ ਬਾਅਦ ਵਾਲੇ); ਪਾਸਥਰੂ ਨਾਲ ਨਹੀਂ।</string>
+    <string name="rd_help_shadow_distance">ਪਰਛਾਵਾਂ ਲਿਖਤ ਤੋਂ ਕਿੰਨੀ ਦੂਰ ਪੈਂਦਾ ਹੈ।</string>
+    <string name="rd_help_welcome">ਸ਼ੁਰੂਆਤੀ ਸੈੱਟਅੱਪ ਮੁੜ ਖੋਲ੍ਹਦਾ ਹੈ: ਭਾਸ਼ਾ, ਦਿੱਖ, ਲਾਇਬ੍ਰੇਰੀ ਅਤੇ ਪਰਾਈਵੇਸੀ।</string>
+    <string name="rd_help_deinterlace">ਇੰਟਰਲੇਸਡ ਵੀਡੀਓ (ਟੀਵੀ ਰਿਕਾਰਡਿੰਗਾਂ) ਦੀਆਂ ਕੰਘੀ ਵਰਗੀਆਂ ਲਕੀਰਾਂ ਹਟਾਉਂਦਾ ਹੈ। VLC ਵੱਲੋਂ ਡੀਕੋਡ ਕੀਤੀ ਵੀਡੀਓ ਉੱਤੇ ਕੰਮ ਕਰਦਾ ਹੈ, ਹਾਰਡਵੇਅਰ ਡੀਕੋਡਰ ਵਾਲੀ ਉੱਤੇ ਨਹੀਂ।</string>
+    <string name="rd_help_sub_margin">ਤੁਸੀਂ ਇਸ ਚੋਣ ਨਾਲ ਸਬ-ਟਾਈਟਲਾਂ ਨੂੰ ਫ਼ਿਲਮ ਦੇ ਉੱਤੇ ਦੀ ਬਜਾਏ ਫ਼ਿਲਮ ਦੇ ਹੇਠਾਂ ਰੱਖ ਸਕਦੇ ਹੋ। ਕਈ ਥਾਂਵਾਂ ਅਜ਼ਮਾਓ।</string>
+    <string name="rd_help_threads">ਡੀਕੋਡਿੰਗ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਥਰੈੱਡਾਂ ਦੀ ਗਿਣਤੀ, 0 ਦਾ ਅਰਥ ਆਟੋਮੈਟਿਕ</string>
+    <string name="rd_ob_whole_device">ਪੂਰਾ ਡਿਵਾਈਸ</string>
+    <string name="rd_ob_folders_count">%1$s ਅਤੇ %2$d ਹੋਰ</string>
+    <string name="rd_ob_online_text">ਕੋਈ ਟੈਲੀਮੈਟਰੀ ਨਹੀਂ, ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ, ਕੋਈ ਖਾਤਾ ਨਹੀਂ: VLC for Android ਆਪਣੇ ਆਪ ਕੁਝ ਨਹੀਂ ਭੇਜਦਾ। ਇਹ ਚੋਣਾਂ ਸੈਟਿੰਗ, ਪਰਾਈਵੇਸੀ ਵਿੱਚ ਰਹਿੰਦੀਆਂ ਹਨ।</string>
+    <string name="rd_ob_history_help">ਸਿਰਫ਼ ਇਸੇ ਡਿਵਾਈਸ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕੋ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ।</string>
+    <string name="rd_ob_updates_help">ਦਿਨ ਵਿੱਚ ਇੱਕ ਵਾਰ VLC for Android ਦਾ ਨਵਾਂ ਟੈਸਟ ਬਿਲਡ ਲੱਭਦਾ ਹੈ।</string>
+    <string-array name="rd_whats_new_items">
+        <item>ਵੀਡੀਓ ਪਲੇਅਰ ਦੀ ਕੰਟਰੋਲ ਬਾਰ ਡੈਸਕਟਾਪ ਵਾਲੀ ਹੈ: ਸਕਰੀਨ ਦੇ ਕਿਨਾਰਿਆਂ ਤੱਕ ਇੱਕ ਬਾਰ, ਪਿਛਲਾ ਅਤੇ ਅਗਲਾ ਵਿਚਕਾਰ ਪਲੇ ਬਟਨ, ਦੋਵੇਂ ਪਾਸੇ ਸਮਿਆਂ ਵਾਲੀ ਸੀਕ ਪੱਟੀ; ਚੌੜੀ ਸਕਰੀਨ ਉੱਤੇ ਇੱਕ ਕਤਾਰ, ਤੰਗ ਸਕਰੀਨ ਉੱਤੇ ਦੋ।</item>
+        <item>ਜੋ ਸਬ-ਟਾਈਟਲ Unicode ਨਹੀਂ ਹਨ ਉਹ ਸਹੀ ਦਿਸਦੇ ਹਨ: ਹਿਬਰੂ, ਅਰਬੀ, ਰੂਸੀ, ਯੂਨਾਨੀ, ਤੁਰਕੀ, ਜਪਾਨੀ, ਚੀਨੀ, ਕੋਰੀਆਈ ਅਤੇ ਥਾਈ ਫਾਇਲਾਂ ਨੂੰ ਉਹਨਾਂ ਦੇ ਅੱਖਰਾਂ ਅਤੇ ਨਾਂ ਵਿੱਚਲੀ ਭਾਸ਼ਾ ਤੋਂ ਪਛਾਣਿਆ ਜਾਂਦਾ ਹੈ।</item>
+        <item>ਇਸ ਬਾਰੇ ਪੰਨਾ ਇੰਟਰਫੇਸ ਦੇ ਡਿਜ਼ਾਈਨ ਦਾ ਸਿਹਰਾ Juxtopposed ਨੂੰ ਦਿੰਦਾ ਹੈ, ਡਿਜ਼ਾਈਨ ਦੇ ਲਿੰਕਾਂ ਸਮੇਤ, ਜਿਵੇਂ ਡੈਸਕਟਾਪ ਉੱਤੇ।</item>
+    </string-array>
+</resources>

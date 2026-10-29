@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Fiecare ecran provine din fișierul Figma „VLC Redesign (Community)”, licențiat sub CC BY 4.0. A fost adaptat pentru Android, iar pictogramele sale au fost redesenate.</string>
+    <string name="rd_about_whats_new">Noutăți în %1$s</string>
+    <string name="rd_customize_hint">Trageți un control într-o zonă a barei sau alegeți o zonă și atingeți controalele de pus în ea. Atingeți un control din bară pentru a-l muta sau a-l scoate.</string>
+    <string name="rd_move_earlier">Mută la stânga</string>
+    <string name="rd_move_later">Mută la dreapta</string>
+    <string name="rd_audio_delay_summary">Întârzie sunetul față de imagine pentru toate fișierele media, în ms; o valoare negativă îl redă mai devreme.</string>
+    <string name="rd_orange">Portocaliu</string>
+    <string name="rd_cyan">Cyan</string>
+    <string name="rd_pink">Roz</string>
+    <string name="rd_sec_notifications">Notificări</string>
+    <string name="rd_fuzzy_1">Orice fișier de subtitrare</string>
+    <string name="rd_fuzzy_2">Care conține numele videoclipului</string>
+    <string name="rd_fuzzy_3">Numele videoclipului și altceva</string>
+    <string name="rd_fuzzy_4">Exact numele videoclipului</string>
+    <string name="rd_help_fuzzy">Cât de apropiat trebuie să fie numele unui fișier de subtitrare de cel al videoclipului pentru a fi încărcat automat.</string>
+    <string name="rd_help_normalize">Egalizează volumul între fișierele media încete și cele zgomotoase.</string>
+    <string name="rd_help_target_level">Cât de tare poate ajunge sunetul normalizat: mai mare înseamnă mai tare.</string>
+    <string name="rd_help_night_mode">Face scenele zgomotoase mai încete și dialogul încet mai tare, pentru ascultarea târzie.</string>
+    <string name="rd_help_loudness_android">Folosește efectele audio Android pe sunetul VLC (Android 9 și ulterior); nu și cu transmiterea directă.</string>
+    <string name="rd_help_shadow_distance">Cât de departe de text cade umbra.</string>
+    <string name="rd_help_welcome">Redeschide configurarea inițială: limbă, aspect, bibliotecă și confidențialitate.</string>
+    <string name="rd_help_deinterlace">Elimină liniile în pieptene ale videoclipurilor întrețesute (înregistrări TV). Funcționează pe video decodat de VLC, nu de decodorul hardware.</string>
+    <string name="rd_ob_whole_device">Tot dispozitivul</string>
+    <string name="rd_ob_folders_count">%1$s și încă %2$d</string>
+    <string name="rd_ob_online_text">Fără telemetrie, fără reclame, fără cont: VLC for Android nu trimite nimic de la sine. Aceste opțiuni rămân în Setări, Confidențialitate.</string>
+    <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
+    <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Bara de control a playerului video este cea de pe desktop: o singură bară până la marginile ecranului, butonul de redare între Anterior și Următor, bara de derulare cu timpii pe laturi; un rând pe un ecran lat, două pe unul îngust.</item>
+        <item>Subtitrările care nu sunt Unicode se afișează corect: fișierele în ebraică, arabă, rusă, greacă, turcă, japoneză, chineză, coreeană și thailandeză sunt recunoscute după litere și după limba din nume.</item>
+        <item>Despre atribuie designul interfeței lui Juxtopposed, cu linkurile designului, ca pe desktop.</item>
+    </string-array>
+</resources>

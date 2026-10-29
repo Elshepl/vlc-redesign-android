@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Daw pob sgrin o ffeil Figma \"VLC Redesign (Community)\", wedi\'i thrwyddedu dan CC BY 4.0. Cafodd ei haddasu i Android a chafodd ei heiconau eu hail-lunio.</string>
+    <string name="rd_about_whats_new">Beth sy\'n newydd yn %1$s</string>
+    <string name="rd_customize_hint">Llusgwch reolydd i un o gylchfaoedd y bar, neu dewiswch gylchfa a thapio\'r rheolyddion i\'w rhoi ynddi. Tapiwch reolydd ar y bar i\'w symud neu i\'w dynnu allan.</string>
+    <string name="rd_move_earlier">Symud i\'r chwith</string>
+    <string name="rd_move_later">Symud i\'r dde</string>
+    <string name="rd_audio_delay_summary">Yn oedi\'r sain o\'i gymharu â\'r llun ym mhob cyfrwng, mewn ms; mae gwerth negatif yn ei chwarae\'n gynharach.</string>
+    <string name="rd_orange">Oren</string>
+    <string name="rd_cyan">Gwyrddlas</string>
+    <string name="rd_pink">Pinc</string>
+    <string name="rd_sec_notifications">Hysbysiadau</string>
+    <string name="rd_fuzzy_1">Unrhyw ffeil isdeitlau</string>
+    <string name="rd_fuzzy_2">Yn cynnwys enw\'r fideo</string>
+    <string name="rd_fuzzy_3">Enw\'r fideo a mwy</string>
+    <string name="rd_fuzzy_4">Union enw\'r fideo</string>
+    <string name="rd_help_fuzzy">Pa mor agos y mae\'n rhaid i enw ffeil isdeitlau fod at enw\'r fideo er mwyn ei llwytho ohoni ei hun.</string>
+    <string name="rd_help_normalize">Yn gwastatáu\'r lefel sain rhwng cyfryngau tawel a swnllyd.</string>
+    <string name="rd_help_target_level">Pa mor uchel y caiff sain wedi\'i normaleiddio fynd: uwch yw cryfach.</string>
+    <string name="rd_help_night_mode">Yn gwneud golygfeydd swnllyd yn dawelach a deialog tawel yn uwch, ar gyfer gwrando\'n hwyr.</string>
+    <string name="rd_help_loudness_android">Yn defnyddio effeithiau sain Android ar sain VLC (Android 9 ac wedyn); nid gyda phasio sain drwodd.</string>
+    <string name="rd_help_shadow_distance">Pa mor bell o\'r testun y mae\'r cysgod yn disgyn.</string>
+    <string name="rd_help_welcome">Yn agor y gosod cychwynnol eto: iaith, golwg, llyfrgell a phreifatrwydd.</string>
+    <string name="rd_help_deinterlace">Yn tynnu llinellau crib fideo cydblethedig (recordiadau teledu). Yn gweithio ar fideo y mae VLC yn ei ddatgodio, nid y datgodiwr caledwedd.</string>
+    <string name="rd_help_threads">Nifer yr edafedd a ddefnyddir i ddatgodio, mae 0 yn golygu awtomatig</string>
+    <string name="rd_ob_whole_device">Y ddyfais gyfan</string>
+    <string name="rd_ob_folders_count">%1$s a %2$d arall</string>
+    <string name="rd_ob_online_text">Dim telemetreg, dim hysbysebion, dim cyfrif: nid yw VLC for Android yn anfon dim ohono\'i hun. Mae\'r dewisiadau hyn yn aros yn Gosodiadau, Preifatrwydd.</string>
+    <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
+    <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Bar rheoli\'r chwaraewr fideo yw un y fersiwn bwrdd gwaith: un bar hyd at ymylon y sgrin, y botwm chwarae rhwng Blaenorol a Nesaf, y bar chwilio gyda\'r amseroedd ar ei ochrau; un rhes ar sgrin lydan, dwy ar sgrin gul.</item>
+        <item>Mae isdeitlau nad ydynt yn Unicode yn dangos yn gywir: mae ffeiliau Hebraeg, Arabeg, Rwsieg, Groeg, Tyrceg, Japaneg, Tsieinëeg, Coreeg a Thai yn cael eu hadnabod wrth eu llythrennau a\'r iaith yn eu henw.</item>
+        <item>Mae Ynghylch yn cydnabod Juxtopposed am ddylunio\'r rhyngwyneb, gyda dolenni at y dyluniad, fel ar y bwrdd gwaith.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">すべての画面は、CC BY 4.0 でライセンスされた Figma ファイル「VLC Redesign (Community)」に基づいています。Android 向けに調整され、アイコンは描き直されています。</string>
+    <string name="rd_about_whats_new">%1$s の新機能</string>
+    <string name="rd_customize_hint">コントロールをバーのゾーンにドラッグするか、ゾーンを選んでそこに置くコントロールをタップします。バー上のコントロールをタップすると、移動または取り外しができます。</string>
+    <string name="rd_move_earlier">左へ移動</string>
+    <string name="rd_move_later">右へ移動</string>
+    <string name="rd_audio_delay_summary">すべてのメディアで音声を映像に対して遅らせます (ミリ秒)。負の値にすると早く再生されます。</string>
+    <string name="rd_orange">オレンジ</string>
+    <string name="rd_cyan">シアン</string>
+    <string name="rd_pink">ピンク</string>
+    <string name="rd_sec_notifications">通知</string>
+    <string name="rd_fuzzy_1">すべての字幕ファイル</string>
+    <string name="rd_fuzzy_2">動画名を含む</string>
+    <string name="rd_fuzzy_3">動画名 + 追加の文字</string>
+    <string name="rd_fuzzy_4">動画名と完全一致</string>
+    <string name="rd_help_fuzzy">字幕ファイルを自動で読み込むために、そのファイル名がどれだけ動画名に近い必要があるかを指定します。</string>
+    <string name="rd_help_normalize">静かなメディアと大きなメディアの音量差をならします。</string>
+    <string name="rd_help_target_level">正規化した音の大きさの上限です。高いほど大きくなります。</string>
+    <string name="rd_help_night_mode">大きなシーンを抑え、小さな会話を聞き取りやすくします。夜間の視聴向けです。</string>
+    <string name="rd_help_loudness_android">VLC の音声に Android のオーディオエフェクトを使います (Android 9 以降)。パススルー時は使えません。</string>
+    <string name="rd_help_shadow_distance">影を文字からどれだけ離すかを指定します。</string>
+    <string name="rd_help_welcome">初期設定 (言語、外観、ライブラリ、プライバシー) をもう一度開きます。</string>
+    <string name="rd_help_deinterlace">インターレース映像 (テレビ録画など) の櫛状の線を取り除きます。VLC がデコードする映像に有効で、ハードウェアデコーダーには効きません。</string>
+    <string name="rd_ob_whole_device">デバイス全体</string>
+    <string name="rd_ob_folders_count">%1$s ほか %2$d 件</string>
+    <string name="rd_ob_online_text">テレメトリー、広告、アカウントは一切ありません。VLC for Android が自分から何かを送信することはありません。これらの選択は「設定」の「プライバシー」でいつでも変更できます。</string>
+    <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
+    <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
+    <string-array name="rd_whats_new_items">
+        <item>動画プレーヤーのコントロールバーはデスクトップ版と同じになりました。画面端まで届く 1 本のバー、「前へ」と「次へ」の間にある再生ボタン、両側に時間を表示するシークバー。広い画面では 1 行、狭い画面では 2 行で表示されます。</item>
+        <item>Unicode 以外の字幕も正しく表示されます。ヘブライ語、アラビア語、ロシア語、ギリシャ語、トルコ語、日本語、中国語、韓国語、タイ語のファイルは、文字とファイル名の言語から判別されます。</item>
+        <item>「情報」画面にインターフェースのデザイナー Juxtopposed のクレジットとデザインへのリンクを、デスクトップ版と同じように表示します。</item>
+    </string-array>
+</resources>

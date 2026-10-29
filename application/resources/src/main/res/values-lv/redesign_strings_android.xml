@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Katrs ekrāns ir ņemts no \"VLC Redesign (Community)\" Figma datnes, kas licencēta ar CC BY 4.0. Dizains tika pielāgots Android, un tā ikonas tika pārzīmētas.</string>
+    <string name="rd_about_whats_new">Jaunumi versijā %1$s</string>
+    <string name="rd_customize_hint">Velciet vadīklu uz joslas zonu vai izvēlieties zonu un pieskarieties vadīklām, ko tajā ievietot. Pieskarieties joslas vadīklai, lai to pārvietotu vai izņemtu.</string>
+    <string name="rd_move_earlier">Pārvietot pa kreisi</string>
+    <string name="rd_move_later">Pārvietot pa labi</string>
+    <string name="rd_audio_delay_summary">Aiztur skaņu attiecībā pret attēlu visos medijos, ms; negatīva vērtība to atskaņo agrāk.</string>
+    <string name="rd_orange">Oranža</string>
+    <string name="rd_cyan">Ciāna</string>
+    <string name="rd_pink">Rozā</string>
+    <string name="rd_sec_notifications">Paziņojumi</string>
+    <string name="rd_fuzzy_1">Jebkura subtitru datne</string>
+    <string name="rd_fuzzy_2">Satur video nosaukumu</string>
+    <string name="rd_fuzzy_3">Video nosaukums un vēl kas</string>
+    <string name="rd_fuzzy_4">Tieši video nosaukums</string>
+    <string name="rd_help_fuzzy">Cik tuvu video nosaukumam jābūt subtitru datnes nosaukumam, lai to ielādētu automātiski.</string>
+    <string name="rd_help_normalize">Izlīdzina skaļumu starp klusiem un skaļiem medijiem.</string>
+    <string name="rd_help_target_level">Cik skaļa drīkst būt normalizētā skaņa: lielāka vērtība ir skaļāka.</string>
+    <string name="rd_help_night_mode">Padara skaļas ainas klusākas un klusus dialogus skaļākus, klausīšanās vēlā stundā.</string>
+    <string name="rd_help_loudness_android">Izmanto Android audio efektus VLC skaņai (Android 9 un jaunākā); ne ar caurlaidi.</string>
+    <string name="rd_help_shadow_distance">Cik tālu no teksta krīt ēna.</string>
+    <string name="rd_help_welcome">Vēlreiz atver sākotnējo iestatīšanu: valoda, izskats, bibliotēka un privātums.</string>
+    <string name="rd_help_deinterlace">Noņem rindpārleces video (TV ierakstu) ķemmes līnijas. Darbojas ar video, ko atkodē VLC, nevis aparatūras atkodētājs.</string>
+    <string name="rd_ob_whole_device">Visa ierīce</string>
+    <string name="rd_ob_folders_count">%1$s un vēl %2$d</string>
+    <string name="rd_ob_online_text">Bez telemetrijas, bez reklāmām, bez konta: VLC for Android pati neko nesūta. Šīs izvēles paliek sadaļā Iestatījumi, Privātums.</string>
+    <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
+    <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Video atskaņotāja vadības josla ir tāda pati kā datora versijā: viena josla līdz ekrāna malām, atskaņošanas poga starp Iepriekšējais un Nākamais, pārtīšanas josla ar laikiem tās malās; viena rinda platā ekrānā, divas šaurā.</item>
+        <item>Subtitri, kas nav Unicode, tiek rādīti pareizi: ivrita, arābu, krievu, grieķu, turku, japāņu, ķīniešu, korejiešu un taju datnes tiek atpazītas pēc to burtiem un valodas to nosaukumā.</item>
+        <item>Sadaļā Par kā saskarnes dizaina autors norādīts Juxtopposed, ar saitēm uz dizainu, kā datora versijā.</item>
+    </string-array>
+</resources>

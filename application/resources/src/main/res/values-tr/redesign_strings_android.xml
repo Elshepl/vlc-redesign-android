@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Tüm ekranlar, CC BY 4.0 lisanslı “VLC Redesign (Community)” Figma dosyasından alınmıştır. Android\'e uyarlanmış ve simgeleri yeniden çizilmiştir.</string>
+    <string name="rd_about_whats_new">%1$s sürümündeki yenilikler</string>
+    <string name="rd_customize_hint">Bir denetimi çubuğun bir bölgesine sürükleyin ya da bir bölge seçip içine konacak denetimlere dokunun. Taşımak ya da çıkarmak için çubuktaki bir denetime dokunun.</string>
+    <string name="rd_move_earlier">Sola taşı</string>
+    <string name="rd_move_later">Sağa taşı</string>
+    <string name="rd_audio_delay_summary">Tüm ortamlarda sesi görüntüye göre geciktirir, ms cinsinden; negatif bir değer sesi daha erken çalar.</string>
+    <string name="rd_orange">Turuncu</string>
+    <string name="rd_cyan">Camgöbeği</string>
+    <string name="rd_pink">Pembe</string>
+    <string name="rd_sec_notifications">Bildirimler</string>
+    <string name="rd_fuzzy_1">Herhangi bir altyazı dosyası</string>
+    <string name="rd_fuzzy_2">Videonun adını içeren</string>
+    <string name="rd_fuzzy_3">Videonun adı ve fazlası</string>
+    <string name="rd_fuzzy_4">Tam olarak videonun adı</string>
+    <string name="rd_help_fuzzy">Bir altyazı dosyasının kendiliğinden yüklenmesi için adının videonun adına ne kadar yakın olması gerektiği.</string>
+    <string name="rd_help_normalize">Sessiz ve gürültülü ortamlar arasında ses düzeyini dengeler.</string>
+    <string name="rd_help_target_level">Normalleştirilmiş sesin ne kadar yükselebileceği: daha yüksek, daha güçlüdür.</string>
+    <string name="rd_help_night_mode">Gece geç saatlerde dinlemek için yüksek sesli sahneleri kısar, sessiz konuşmaları yükseltir.</string>
+    <string name="rd_help_loudness_android">Android\'in ses efektlerini VLC\'nin sesine uygular (Android 9 ve sonrası); doğrudan aktarımla çalışmaz.</string>
+    <string name="rd_help_shadow_distance">Gölgenin metinden ne kadar uzağa düştüğü.</string>
+    <string name="rd_help_welcome">İlk kurulumu yeniden açar: dil, görünüm, kitaplık ve gizlilik.</string>
+    <string name="rd_help_deinterlace">Geçmeli videonun tarak çizgilerini kaldırır (TV kayıtları). Donanım kod çözücüsünün değil, VLC\'nin çözdüğü videoda çalışır.</string>
+    <string name="rd_ob_whole_device">Tüm aygıt</string>
+    <string name="rd_ob_folders_count">%1$s ve %2$d tane daha</string>
+    <string name="rd_ob_online_text">Telemetri yok, reklam yok, hesap yok: VLC for Android kendiliğinden hiçbir şey göndermez. Bu seçimler Ayarlar, Gizlilik bölümünde kalır.</string>
+    <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
+    <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Video oynatıcının denetim çubuğu artık masaüstündekiyle aynı: ekranın kenarlarına kadar tek bir çubuk, Önceki ile Sonraki arasında oynat düğmesi, iki yanında süreler bulunan arama çubuğu; geniş ekranda tek satır, dar ekranda iki satır.</item>
+        <item>Unicode olmayan altyazılar doğru görünür: İbranice, Arapça, Rusça, Yunanca, Türkçe, Japonca, Çince, Korece ve Tayca dosyalar harflerinden ve adlarındaki dilden tanınır.</item>
+        <item>Hakkında bölümü, masaüstündeki gibi tasarım bağlantılarıyla birlikte arayüz tasarımının Juxtopposed\'a ait olduğunu belirtir.</item>
+    </string-array>
+</resources>

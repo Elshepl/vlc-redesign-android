@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Все экраны взяты из файла Figma «VLC Redesign (Community)» под лицензией CC BY 4.0. Они адаптированы под Android, а значки перерисованы.</string>
+    <string name="rd_about_whats_new">Что нового в %1$s</string>
+    <string name="rd_customize_hint">Перетащите элемент управления в зону панели или выберите зону и нажмите на элементы, которые нужно в неё поместить. Нажмите на элемент панели, чтобы переместить или убрать его.</string>
+    <string name="rd_move_earlier">Сдвинуть влево</string>
+    <string name="rd_move_later">Сдвинуть вправо</string>
+    <string name="rd_audio_delay_summary">Задерживает звук относительно изображения во всех медиа, в мс; отрицательное значение воспроизводит его раньше.</string>
+    <string name="rd_orange">Оранжевый</string>
+    <string name="rd_cyan">Голубой</string>
+    <string name="rd_pink">Розовый</string>
+    <string name="rd_sec_notifications">Уведомления</string>
+    <string name="rd_fuzzy_1">Любой файл субтитров</string>
+    <string name="rd_fuzzy_2">Содержит имя видео</string>
+    <string name="rd_fuzzy_3">Имя видео и что-то ещё</string>
+    <string name="rd_fuzzy_4">Точно имя видео</string>
+    <string name="rd_help_fuzzy">Насколько имя файла субтитров должно совпадать с именем видео, чтобы он загружался сам.</string>
+    <string name="rd_help_normalize">Выравнивает громкость между тихими и громкими медиа.</string>
+    <string name="rd_help_target_level">Насколько громким может быть нормализованный звук: чем выше, тем громче.</string>
+    <string name="rd_help_night_mode">Делает громкие сцены тише, а тихие диалоги громче, для прослушивания поздно вечером.</string>
+    <string name="rd_help_loudness_android">Применяет звуковые эффекты Android к звуку VLC (Android 9 и новее); не работает при передаче сжатого звука.</string>
+    <string name="rd_help_shadow_distance">Насколько далеко тень отстоит от текста.</string>
+    <string name="rd_help_welcome">Снова открывает начальную настройку: язык, внешний вид, медиатека и конфиденциальность.</string>
+    <string name="rd_help_deinterlace">Убирает «гребёнку» чересстрочного видео (записи с ТВ). Работает с видео, которое декодирует VLC, а не аппаратный декодер.</string>
+    <string name="rd_ob_whole_device">Всё устройство</string>
+    <string name="rd_ob_folders_count">%1$s и ещё %2$d</string>
+    <string name="rd_ob_online_text">Без телеметрии, рекламы и учётной записи: VLC for Android ничего не отправляет сам. Эти параметры остаются в разделе «Настройки», «Конфиденциальность».</string>
+    <string name="rd_ob_history_help">Хранится только на этом устройстве, чтобы продолжить с того места, где вы остановились.</string>
+    <string name="rd_ob_updates_help">Раз в день проверяет, нет ли более новой тестовой сборки VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Панель управления видеоплеера теперь такая же, как в версии для компьютера: одна панель до краёв экрана, кнопка воспроизведения между «Предыдущим» и «Следующим», полоса перемотки со временем по бокам; одна строка на широком экране, две на узком.</item>
+        <item>Субтитры не в Unicode отображаются правильно: файлы на иврите, арабском, русском, греческом, турецком, японском, китайском, корейском и тайском распознаются по их буквам и по языку в имени файла.</item>
+        <item>В разделе «О программе» указан автор дизайна интерфейса, Juxtopposed, со ссылками на дизайн, как в версии для компьютера.</item>
+    </string-array>
+</resources>

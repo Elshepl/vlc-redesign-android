@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Všechny obrazovky pocházejí ze souboru Figma „VLC Redesign (Community)“ s licencí CC BY 4.0. Návrh byl přizpůsoben pro Android a jeho ikony byly překresleny.</string>
+    <string name="rd_about_whats_new">Co je nového ve verzi %1$s</string>
+    <string name="rd_customize_hint">Přetáhněte ovládací prvek do zóny panelu, nebo vyberte zónu a klepněte na prvky, které do ní chcete umístit. Klepnutím na prvek panelu ho přesunete nebo odeberete.</string>
+    <string name="rd_move_earlier">Posunout doleva</string>
+    <string name="rd_move_later">Posunout doprava</string>
+    <string name="rd_audio_delay_summary">Zpozdí zvuk vůči obrazu u všech médií, v ms; záporná hodnota ho přehraje dříve.</string>
+    <string name="rd_orange">Oranžová</string>
+    <string name="rd_cyan">Azurová</string>
+    <string name="rd_pink">Růžová</string>
+    <string name="rd_sec_notifications">Oznámení</string>
+    <string name="rd_fuzzy_1">Jakýkoli soubor titulků</string>
+    <string name="rd_fuzzy_2">Obsahuje název videa</string>
+    <string name="rd_fuzzy_3">Název videa a něco navíc</string>
+    <string name="rd_fuzzy_4">Přesně název videa</string>
+    <string name="rd_help_fuzzy">Jak moc se musí název souboru titulků podobat názvu videa, aby se načetl sám.</string>
+    <string name="rd_help_normalize">Vyrovnává hlasitost mezi tichými a hlasitými médii.</string>
+    <string name="rd_help_target_level">Jak hlasitý smí být normalizovaný zvuk: vyšší je hlasitější.</string>
+    <string name="rd_help_night_mode">Ztiší hlasité scény a zesílí tiché dialogy, pro poslech pozdě večer.</string>
+    <string name="rd_help_loudness_android">Použije zvukové efekty Androidu na zvuk VLC (Android 9 a novější); ne při předávání komprimovaného zvuku.</string>
+    <string name="rd_help_shadow_distance">Jak daleko od textu padá stín.</string>
+    <string name="rd_help_welcome">Znovu otevře úvodní nastavení: jazyk, vzhled, knihovnu a soukromí.</string>
+    <string name="rd_help_deinterlace">Odstraní „hřebínek“ prokládaného videa (televizní záznamy). Funguje u videa dekódovaného VLC, ne hardwarovým dekodérem.</string>
+    <string name="rd_ob_whole_device">Celé zařízení</string>
+    <string name="rd_ob_folders_count">%1$s a další (%2$d)</string>
+    <string name="rd_ob_online_text">Žádná telemetrie, žádné reklamy, žádný účet: VLC for Android sám nic neodesílá. Tyto volby zůstávají v Nastavení, v části Soukromí.</string>
+    <string name="rd_ob_history_help">Uchovává se jen v tomto zařízení, abyste mohli pokračovat tam, kde jste skončili.</string>
+    <string name="rd_ob_updates_help">Jednou denně hledá novější testovací sestavení VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Ovládací panel přehrávače videa je stejný jako v počítačové verzi: jeden panel až k okrajům obrazovky, tlačítko přehrávání mezi Předchozí a Další, lišta posunu s časy po stranách; jeden řádek na široké obrazovce, dva na úzké.</item>
+        <item>Titulky, které nejsou v Unicode, se zobrazují správně: soubory v hebrejštině, arabštině, ruštině, řečtině, turečtině, japonštině, čínštině, korejštině a thajštině se rozpoznají podle písmen a podle jazyka v názvu.</item>
+        <item>Sekce O aplikaci uvádí autora návrhu rozhraní, Juxtopposed, s odkazy na návrh, stejně jako v počítačové verzi.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Allir skjáir koma úr Figma-skránni „VLC Redesign (Community)“, sem er með CC BY 4.0 notkunarleyfi. Hún var aðlöguð að Android og táknmyndirnar endurteiknaðar.</string>
+    <string name="rd_about_whats_new">Hvað er nýtt í %1$s</string>
+    <string name="rd_customize_hint">Dragðu stýringu á svæði á stikunni, eða veldu svæði og ýttu á stýringarnar sem eiga að fara þangað. Ýttu á stýringu á stikunni til að færa hana eða fjarlægja.</string>
+    <string name="rd_move_earlier">Færa til vinstri</string>
+    <string name="rd_move_later">Færa til hægri</string>
+    <string name="rd_audio_delay_summary">Seinkar hljóðinu miðað við myndina í öllum miðlum, í ms; neikvætt gildi spilar það fyrr.</string>
+    <string name="rd_orange">Appelsínugult</string>
+    <string name="rd_cyan">Blágrænt</string>
+    <string name="rd_pink">Bleikt</string>
+    <string name="rd_sec_notifications">Tilkynningar</string>
+    <string name="rd_fuzzy_1">Hvaða skjátextaskrá sem er</string>
+    <string name="rd_fuzzy_2">Inniheldur heiti myndskeiðsins</string>
+    <string name="rd_fuzzy_3">Heiti myndskeiðsins og meira</string>
+    <string name="rd_fuzzy_4">Nákvæmlega heiti myndskeiðsins</string>
+    <string name="rd_help_fuzzy">Hversu nálægt heiti myndskeiðsins heiti skjátextaskrár þarf að vera til að hún hlaðist inn sjálfkrafa.</string>
+    <string name="rd_help_normalize">Jafnar hljóðstyrkinn milli hljóðlátra og hávaðasamra miðla.</string>
+    <string name="rd_help_target_level">Hversu hátt jafnað hljóð má verða: hærra gildi er hærra hljóð.</string>
+    <string name="rd_help_night_mode">Lækkar í háværum atriðum og hækkar í lágværu tali, til að hlusta seint á kvöldin.</string>
+    <string name="rd_help_loudness_android">Notar hljóðbrellur Android á hljóð VLC (Android 9 og nýrra); ekki með gegnumstreymi.</string>
+    <string name="rd_help_shadow_distance">Hversu langt frá textanum skugginn fellur.</string>
+    <string name="rd_help_welcome">Opnar upphafsuppsetninguna aftur: tungumál, útlit, safn og persónuvernd.</string>
+    <string name="rd_help_deinterlace">Fjarlægir kambalínur úr fléttuðu myndefni (sjónvarpsupptökum). Virkar á myndefni sem VLC afkóðar, ekki vélbúnaðarafkóðarinn.</string>
+    <string name="rd_help_sub_margin">Þú getur notað þennan valkost til að setja skjátextana fyrir neðan myndina í stað þess að hafa þá yfir henni. Prófaðu nokkrar staðsetningar.</string>
+    <string name="rd_help_threads">Fjöldi þráða sem notaðir eru við afkóðun, 0 þýðir sjálfvirkt</string>
+    <string name="rd_ob_whole_device">Allt tækið</string>
+    <string name="rd_ob_folders_count">%1$s og %2$d í viðbót</string>
+    <string name="rd_ob_online_text">Engin fjarmæling, engar auglýsingar, enginn aðgangur: VLC for Android sendir ekkert af sjálfsdáðum. Þessir valkostir eru áfram í Stillingum, Persónuvernd.</string>
+    <string name="rd_ob_history_help">Geymt eingöngu á þessu tæki, til að halda áfram þar sem frá var horfið.</string>
+    <string name="rd_ob_updates_help">Leitar einu sinni á dag að nýrri prófunarútgáfu af VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Stjórnstika myndspilarans er sú sama og í tölvuútgáfunni: ein stika út að jöðrum skjásins, spilunarhnappurinn á milli Fyrra og Næsta, leitarstikan með tímana sitt hvorum megin; ein röð á breiðum skjá, tvær á mjóum.</item>
+        <item>Skjátextar sem ekki eru í Unicode birtast rétt: skrár á hebresku, arabísku, rússnesku, grísku, tyrknesku, japönsku, kínversku, kóresku og taílensku þekkjast á stöfunum og tungumálinu í heiti þeirra.</item>
+        <item>Um getur Juxtopposed sem hönnuðar viðmótsins, með tenglum á hönnunina, eins og í tölvuútgáfunni.</item>
+    </string-array>
+</resources>

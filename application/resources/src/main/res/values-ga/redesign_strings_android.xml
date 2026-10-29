@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Tagann gach scáileán ón gcomhad Figma \"VLC Redesign (Community)\", atá ceadúnaithe faoi CC BY 4.0. Cuireadh in oiriúint do Android é agus tarraingíodh a dheilbhíní as an nua.</string>
+    <string name="rd_about_whats_new">Cad atá nua in %1$s</string>
+    <string name="rd_customize_hint">Tarraing rialtán chuig crios den bharra, nó roghnaigh crios agus tapáil na rialtáin le cur ann. Tapáil rialtán den bharra chun é a bhogadh nó a bhaint.</string>
+    <string name="rd_move_earlier">Bog ar chlé</string>
+    <string name="rd_move_later">Bog ar dheis</string>
+    <string name="rd_audio_delay_summary">Cuireann sé moill ar an bhfuaim i gcomparáid leis an bpictiúr i ngach meán, in ms; seinneann luach diúltach níos luaithe í.</string>
+    <string name="rd_orange">Oráiste</string>
+    <string name="rd_cyan">Cian</string>
+    <string name="rd_pink">Bándearg</string>
+    <string name="rd_sec_notifications">Fógraí</string>
+    <string name="rd_fuzzy_1">Aon chomhad fotheideal</string>
+    <string name="rd_fuzzy_2">Ina bhfuil ainm an fhíseáin</string>
+    <string name="rd_fuzzy_3">Ainm an fhíseáin agus tuilleadh</string>
+    <string name="rd_fuzzy_4">Ainm an fhíseáin go díreach</string>
+    <string name="rd_help_fuzzy">Cé chomh gar is a chaithfidh ainm comhaid fotheideal a bheith d’ainm an fhíseáin chun é a lódáil leis féin.</string>
+    <string name="rd_help_normalize">Cothromaíonn sé an airde fuaime idir meáin chiúine agus meáin ghlóracha.</string>
+    <string name="rd_help_target_level">Cé chomh hard is féidir le fuaim normalaithe a bheith: níos airde, níos glóraí.</string>
+    <string name="rd_help_night_mode">Ciúnaíonn sé radhairc ghlóracha agus ardaíonn sé comhrá ciúin, le haghaidh éisteachta go déanach.</string>
+    <string name="rd_help_loudness_android">Úsáideann sé maisíochtaí fuaime Android ar fhuaim VLC (Android 9 agus níos déanaí); ní le tréchur.</string>
+    <string name="rd_help_shadow_distance">Cé chomh fada ón téacs a thiteann an scáth.</string>
+    <string name="rd_help_welcome">Osclaíonn sé an socrú tosaigh arís: teanga, cuma, leabharlann agus príobháideachas.</string>
+    <string name="rd_help_deinterlace">Baineann sé línte círe d’fhíseán idirfhite (taifeadtaí teilifíse). Oibríonn sé ar fhíseán a dhíchódaíonn VLC, ní an díchódóir crua-earraí.</string>
+    <string name="rd_help_sub_margin">Is féidir leat an rogha seo a úsáid chun na fotheidil a chur faoin scannán, in áit os cionn an scannáin. Bain triail as roinnt ionad.</string>
+    <string name="rd_help_threads">Líon na snáitheanna a úsáidtear le haghaidh díchódaithe, ciallaíonn 0 uathoibríoch</string>
+    <string name="rd_ob_whole_device">An gléas ar fad</string>
+    <string name="rd_ob_folders_count">%1$s agus %2$d eile</string>
+    <string name="rd_ob_online_text">Gan teiliméadracht, gan fógraí, gan chuntas: ní sheolann VLC for Android aon rud uaidh féin. Fanann na roghanna seo i Socruithe, Príobháideachas.</string>
+    <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
+    <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Is é barra rialaithe an tseinnteora físe barra an leagain deisce: barra amháin go himill an scáileáin, an cnaipe seinnte idir Roimhe Seo agus Ar Aghaidh, an barra cuardaigh agus na hamanna ar a thaobhanna; ró amháin ar scáileán leathan, dhá ró ar scáileán cúng.</item>
+        <item>Taispeántar fotheidil nach bhfuil in Unicode i gceart: aithnítear comhaid Eabhraise, Araibise, Rúisise, Gréigise, Tuircise, Seapáinise, Sínise, Cóiréise agus Téalainnise óna litreacha agus ón teanga ina n-ainm.</item>
+        <item>Tugann Maidir Le creidiúint do Juxtopposed as dearadh na comhéadaine, le naisc chuig an dearadh, mar a dhéantar ar an deasc.</item>
+    </string-array>
+</resources>

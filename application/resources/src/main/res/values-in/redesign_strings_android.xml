@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Setiap layar berasal dari file Figma \"VLC Redesign (Community)\", berlisensi CC BY 4.0. Desain ini diadaptasi ke Android dan ikonnya digambar ulang.</string>
+    <string name="rd_about_whats_new">Yang baru di %1$s</string>
+    <string name="rd_customize_hint">Seret kontrol ke salah satu zona bilah, atau pilih zona lalu ketuk kontrol yang ingin dimasukkan. Ketuk kontrol di bilah untuk memindahkan atau mengeluarkannya.</string>
+    <string name="rd_move_earlier">Pindah ke kiri</string>
+    <string name="rd_move_later">Pindah ke kanan</string>
+    <string name="rd_audio_delay_summary">Menunda suara terhadap gambar di semua media, dalam ms; nilai negatif memutarnya lebih awal.</string>
+    <string name="rd_orange">Oranye</string>
+    <string name="rd_cyan">Sian</string>
+    <string name="rd_pink">Merah muda</string>
+    <string name="rd_sec_notifications">Notifikasi</string>
+    <string name="rd_fuzzy_1">File subtitle apa pun</string>
+    <string name="rd_fuzzy_2">Mengandung nama video</string>
+    <string name="rd_fuzzy_3">Nama video dan tambahan</string>
+    <string name="rd_fuzzy_4">Persis nama video</string>
+    <string name="rd_help_fuzzy">Seberapa mirip nama file subtitle dengan nama video agar dimuat dengan sendirinya.</string>
+    <string name="rd_help_normalize">Menyamakan volume antara media yang pelan dan yang keras.</string>
+    <string name="rd_help_target_level">Seberapa keras suara yang dinormalkan boleh terdengar: makin tinggi makin keras.</string>
+    <string name="rd_help_night_mode">Membuat adegan keras lebih pelan dan dialog pelan lebih keras, untuk mendengarkan larut malam.</string>
+    <string name="rd_help_loudness_android">Menggunakan efek audio Android pada suara VLC (Android 9 dan yang lebih baru); tidak dengan passthrough.</string>
+    <string name="rd_help_shadow_distance">Seberapa jauh bayangan jatuh dari teks.</string>
+    <string name="rd_help_welcome">Membuka lagi penyiapan awal: bahasa, tampilan, pustaka, dan privasi.</string>
+    <string name="rd_help_deinterlace">Menghilangkan garis sisir pada video interlaced (rekaman TV). Berlaku untuk video yang didekode oleh VLC, bukan oleh dekoder perangkat keras.</string>
+    <string name="rd_ob_whole_device">Seluruh perangkat</string>
+    <string name="rd_ob_folders_count">%1$s dan %2$d lainnya</string>
+    <string name="rd_ob_online_text">Tanpa telemetri, tanpa iklan, tanpa akun: VLC for Android tidak mengirim apa pun dengan sendirinya. Pilihan ini tetap ada di Pengaturan, Privasi.</string>
+    <string name="rd_ob_history_help">Hanya disimpan di perangkat ini, untuk melanjutkan dari tempat terakhir Anda berhenti.</string>
+    <string name="rd_ob_updates_help">Mencari build uji VLC for Android yang lebih baru sekali sehari.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Bilah kontrol pemutar video sama dengan versi desktop: satu bilah sampai ke tepi layar, tombol putar di antara Sebelumnya dan Berikutnya, bilah pencarian dengan waktu di kedua sisinya; satu baris di layar lebar, dua baris di layar sempit.</item>
+        <item>Subtitle yang bukan Unicode tampil dengan benar: file berbahasa Ibrani, Arab, Rusia, Yunani, Turki, Jepang, Tionghoa, Korea, dan Thai dikenali dari hurufnya dan bahasa di namanya.</item>
+        <item>Tentang memberikan kredit desain antarmuka kepada Juxtopposed, beserta tautan desainnya, seperti di desktop.</item>
+    </string-array>
+</resources>

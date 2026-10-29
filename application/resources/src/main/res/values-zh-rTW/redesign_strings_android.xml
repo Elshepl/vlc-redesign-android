@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">所有畫面皆來自「VLC Redesign (Community)」Figma 檔案，採用 CC BY 4.0 授權，並已改編為 Android 版本、重新繪製圖示。</string>
+    <string name="rd_about_whats_new">%1$s 的新功能</string>
+    <string name="rd_customize_hint">將控制項拖曳到控制列的某個區域，或選擇一個區域後點選要放入的控制項。點選控制列上的控制項即可移動或移除。</string>
+    <string name="rd_move_earlier">向左移</string>
+    <string name="rd_move_later">向右移</string>
+    <string name="rd_audio_delay_summary">在所有媒體中讓聲音相對於畫面延遲，單位為毫秒；負值會讓聲音提早播放。</string>
+    <string name="rd_orange">橘</string>
+    <string name="rd_cyan">青</string>
+    <string name="rd_pink">粉紅</string>
+    <string name="rd_sec_notifications">通知</string>
+    <string name="rd_fuzzy_1">任何字幕檔案</string>
+    <string name="rd_fuzzy_2">包含影片名稱</string>
+    <string name="rd_fuzzy_3">影片名稱加上其他字元</string>
+    <string name="rd_fuzzy_4">與影片名稱完全相同</string>
+    <string name="rd_help_fuzzy">字幕檔案名稱需要與影片名稱多接近，才會自動載入。</string>
+    <string name="rd_help_normalize">讓安靜與大聲的媒體之間音量更一致。</string>
+    <string name="rd_help_target_level">正規化後的聲音最大能有多大聲：數值越高越大聲。</string>
+    <string name="rd_help_night_mode">降低大聲場景的音量，並提高輕聲對白，適合深夜收聽。</string>
+    <string name="rd_help_loudness_android">在 VLC 的聲音上使用 Android 音訊效果（Android 9 以上）；直通時無法使用。</string>
+    <string name="rd_help_shadow_distance">陰影與文字之間的距離。</string>
+    <string name="rd_help_welcome">重新開啟首次執行設定：語言、外觀、媒體櫃與隱私權。</string>
+    <string name="rd_help_deinterlace">移除交錯式影片（電視錄影）的梳狀線條。只對 VLC 解碼的影片有效，對硬體解碼器無效。</string>
+    <string name="rd_ob_whole_device">整個裝置</string>
+    <string name="rd_ob_folders_count">%1$s 等 %2$d 個</string>
+    <string name="rd_ob_online_text">沒有遙測、沒有廣告、不需要帳號：VLC for Android 不會自行傳送任何內容。這些選項隨時可在「設定 &gt; 隱私權」中變更。</string>
+    <string name="rd_ob_history_help">只儲存在這部裝置上，用來從上次停止的地方繼續。</string>
+    <string name="rd_ob_updates_help">每天檢查一次是否有較新的 VLC for Android 測試版。</string>
+    <string-array name="rd_whats_new_items">
+        <item>影片播放器的控制列與桌面版相同：一條延伸到螢幕邊緣的控制列，播放按鈕位於「上一個」與「下一個」之間，進度列兩側顯示時間；寬螢幕顯示為一列，窄螢幕顯示為兩列。</item>
+        <item>非 Unicode 字幕也能正確顯示：希伯來文、阿拉伯文、俄文、希臘文、土耳其文、日文、中文、韓文與泰文檔案，會依其中的文字與檔名中的語言辨識。</item>
+        <item>「關於」頁面與桌面版一樣，註明介面由 Juxtopposed 設計，並附上設計連結。</item>
+    </string-array>
+</resources>

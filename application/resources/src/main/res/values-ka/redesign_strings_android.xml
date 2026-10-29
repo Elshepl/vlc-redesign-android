@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">ყველა ეკრანი აღებულია Figma-ს ფაილიდან \"VLC Redesign (Community)\", რომელიც CC BY 4.0 ლიცენზიით ვრცელდება. იგი Android-ზე მოერგო, ხატულები კი ხელახლა დაიხატა.</string>
+    <string name="rd_about_whats_new">რა არის ახალი %1$s-ში</string>
+    <string name="rd_customize_hint">გადაიტანეთ მართვის ელემენტი ზოლის რომელიმე არეში, ან აირჩიეთ არე და შეეხეთ ელემენტებს, რომლებიც მასში უნდა მოთავსდეს. ზოლის ელემენტს შეეხეთ მის გადასაადგილებლად ან ამოსაღებად.</string>
+    <string name="rd_move_earlier">მარცხნივ გადატანა</string>
+    <string name="rd_move_later">მარჯვნივ გადატანა</string>
+    <string name="rd_audio_delay_summary">აყოვნებს ხმას გამოსახულებასთან შედარებით ყველა მედიაში, მილიწამებში; უარყოფითი მნიშვნელობა მას უფრო ადრე უკრავს.</string>
+    <string name="rd_orange">ნარინჯისფერი</string>
+    <string name="rd_cyan">ცისფერი</string>
+    <string name="rd_pink">ვარდისფერი</string>
+    <string name="rd_sec_notifications">შეტყობინებები</string>
+    <string name="rd_fuzzy_1">ტიტრების ნებისმიერი ფაილი</string>
+    <string name="rd_fuzzy_2">შეიცავს ვიდეოს სახელს</string>
+    <string name="rd_fuzzy_3">ვიდეოს სახელი და მეტი</string>
+    <string name="rd_fuzzy_4">ზუსტად ვიდეოს სახელი</string>
+    <string name="rd_help_fuzzy">რამდენად ახლოს უნდა იყოს ტიტრების ფაილის სახელი ვიდეოს სახელთან, რომ თავისით ჩაიტვირთოს.</string>
+    <string name="rd_help_normalize">ათანაბრებს ხმას ჩუმ და ხმამაღალ მედიას შორის.</string>
+    <string name="rd_help_target_level">რამდენად ხმამაღალი შეიძლება იყოს ნორმალიზებული ხმა: მეტი ნიშნავს უფრო ხმამაღალს.</string>
+    <string name="rd_help_night_mode">ხმამაღალ სცენებს აჩუმებს, ჩუმ დიალოგს კი აძლიერებს, გვიან მოსასმენად.</string>
+    <string name="rd_help_loudness_android">იყენებს Android-ის აუდიოეფექტებს VLC-ის ხმაზე (Android 9 და უფრო ახალი); არა პირდაპირ გადაცემასთან ერთად.</string>
+    <string name="rd_help_shadow_distance">რამდენად შორს ეცემა ჩრდილი ტექსტისგან.</string>
+    <string name="rd_help_welcome">ხელახლა ხსნის საწყის დაყენებას: ენა, იერსახე, ბიბლიოთეკა და კონფიდენციალურობა.</string>
+    <string name="rd_help_deinterlace">აშორებს ჩართულ-ხაზოვანი ვიდეოს (ტელევიზიის ჩანაწერები) სავარცხლისებრ ხაზებს. მუშაობს VLC-ის მიერ დეკოდირებულ ვიდეოზე და არა აპარატურული დეკოდერისაზე.</string>
+    <string name="rd_help_sub_margin">ამ პარამეტრით შეგიძლიათ ტიტრები ფილმის ქვემოთ მოათავსოთ, ფილმის ზემოთ ნაცვლად. სცადეთ რამდენიმე მდებარეობა.</string>
+    <string name="rd_help_threads">დეკოდირებისთვის გამოყენებული ნაკადების რაოდენობა, 0 ნიშნავს ავტომატურს</string>
+    <string name="rd_ob_whole_device">მთელი მოწყობილობა</string>
+    <string name="rd_ob_folders_count">%1$s და კიდევ %2$d</string>
+    <string name="rd_ob_online_text">არანაირი ტელემეტრია, რეკლამა ან ანგარიში: VLC for Android თავისით არაფერს აგზავნის. ეს არჩევანი რჩება პარამეტრებში, კონფიდენციალურობაში.</string>
+    <string name="rd_ob_history_help">ინახება მხოლოდ ამ მოწყობილობაზე, რომ იქიდან გააგრძელოთ, სადაც შეჩერდით.</string>
+    <string name="rd_ob_updates_help">დღეში ერთხელ ეძებს VLC for Android-ის უფრო ახალ სატესტო ვერსიას.</string>
+    <string-array name="rd_whats_new_items">
+        <item>ვიდეოდამკვრელის მართვის ზოლი კომპიუტერის ვერსიისაა: ერთი ზოლი ეკრანის კიდეებამდე, დაკვრის ღილაკი წინასა და შემდეგს შორის, გადახვევის ზოლი დროებით ორივე მხარეს; ფართო ეკრანზე ერთი რიგი, ვიწროზე ორი.</item>
+        <item>ტიტრები, რომლებიც Unicode არ არის, სწორად ჩანს: ებრაული, არაბული, რუსული, ბერძნული, თურქული, იაპონური, ჩინური, კორეული და ტაილანდური ფაილები ამოიცნობა მათი ასოებითა და სახელში მითითებული ენით.</item>
+        <item>„შესახებ“ გვერდზე ინტერფეისის დიზაინის ავტორად Juxtopposed არის მითითებული, დიზაინის ბმულებით, როგორც კომპიუტერის ვერსიაში.</item>
+    </string-array>
+</resources>

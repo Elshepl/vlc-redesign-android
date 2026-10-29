@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">ทุกหน้าจอมาจากแฟ้ม Figma \"VLC Redesign (Community)\" ซึ่งใช้สัญญาอนุญาต CC BY 4.0 โดยได้ดัดแปลงให้ใช้กับ Android และวาดไอคอนขึ้นใหม่</string>
+    <string name="rd_about_whats_new">มีอะไรใหม่ใน %1$s</string>
+    <string name="rd_customize_hint">ลากตัวควบคุมไปยังโซนหนึ่งของแถบ หรือเลือกโซนแล้วแตะตัวควบคุมที่จะใส่ลงไป แตะตัวควบคุมบนแถบเพื่อย้ายหรือนำออก</string>
+    <string name="rd_move_earlier">ย้ายไปทางซ้าย</string>
+    <string name="rd_move_later">ย้ายไปทางขวา</string>
+    <string name="rd_audio_delay_summary">หน่วงเสียงเทียบกับภาพในสื่อทุกชิ้น หน่วยเป็นมิลลิวินาที ค่าติดลบจะเล่นเสียงเร็วขึ้น</string>
+    <string name="rd_orange">ส้ม</string>
+    <string name="rd_cyan">ฟ้าอมเขียว</string>
+    <string name="rd_pink">ชมพู</string>
+    <string name="rd_sec_notifications">การแจ้งเตือน</string>
+    <string name="rd_fuzzy_1">แฟ้มคำบรรยายใดก็ได้</string>
+    <string name="rd_fuzzy_2">มีชื่อวิดีโออยู่ด้วย</string>
+    <string name="rd_fuzzy_3">ชื่อวิดีโอและส่วนเพิ่มเติม</string>
+    <string name="rd_fuzzy_4">ตรงกับชื่อวิดีโอทุกตัวอักษร</string>
+    <string name="rd_help_fuzzy">ชื่อแฟ้มคำบรรยายต้องใกล้เคียงกับชื่อวิดีโอแค่ไหนจึงจะโหลดเองโดยอัตโนมัติ</string>
+    <string name="rd_help_normalize">ปรับระดับเสียงระหว่างสื่อที่เสียงเบาและเสียงดังให้ใกล้เคียงกัน</string>
+    <string name="rd_help_target_level">เสียงที่ปรับระดับแล้วดังได้มากแค่ไหน ยิ่งสูงยิ่งดัง</string>
+    <string name="rd_help_night_mode">ลดเสียงฉากที่ดังและเพิ่มเสียงบทพูดที่เบา สำหรับการฟังตอนดึก</string>
+    <string name="rd_help_loudness_android">ใช้เอฟเฟกต์เสียงของ Android กับเสียงของ VLC (Android 9 ขึ้นไป) ใช้ไม่ได้เมื่อส่งผ่านเสียงโดยตรง</string>
+    <string name="rd_help_shadow_distance">ระยะที่เงาอยู่ห่างจากข้อความ</string>
+    <string name="rd_help_welcome">เปิดการตั้งค่าครั้งแรกอีกครั้ง: ภาษา รูปลักษณ์ คลังสื่อ และความเป็นส่วนตัว</string>
+    <string name="rd_help_deinterlace">ลบเส้นหวีของวิดีโอแบบอินเทอร์เลซ (การบันทึกรายการทีวี) ใช้ได้กับวิดีโอที่ VLC ถอดรหัส ไม่ใช่ตัวถอดรหัสฮาร์ดแวร์</string>
+    <string name="rd_help_sub_margin">ใช้ตัวเลือกนี้เพื่อวางคำบรรยายไว้ใต้ภาพยนตร์แทนที่จะซ้อนบนภาพยนตร์ ลองหลายตำแหน่งดู</string>
+    <string name="rd_help_threads">จำนวนเธรดที่ใช้ถอดรหัส 0 หมายถึงอัตโนมัติ</string>
+    <string name="rd_ob_whole_device">ทั้งอุปกรณ์</string>
+    <string name="rd_ob_folders_count">%1$s และอีก %2$d รายการ</string>
+    <string name="rd_ob_online_text">ไม่มีการเก็บข้อมูลการใช้งาน ไม่มีโฆษณา ไม่ต้องมีบัญชี: VLC for Android ไม่ส่งสิ่งใดออกไปเอง ตัวเลือกเหล่านี้อยู่ในค่าตั้ง ความเป็นส่วนตัว</string>
+    <string name="rd_ob_history_help">เก็บไว้บนอุปกรณ์นี้เท่านั้น เพื่อเล่นต่อจากจุดที่หยุดไว้</string>
+    <string name="rd_ob_updates_help">ตรวจหารุ่นทดสอบที่ใหม่กว่าของ VLC for Android วันละครั้ง</string>
+    <string-array name="rd_whats_new_items">
+        <item>แถบควบคุมของเครื่องเล่นวิดีโอเหมือนกับบนเดสก์ท็อป: แถบเดียวยาวถึงขอบจอ ปุ่มเล่นอยู่ระหว่างก่อนหน้าและถัดไป แถบเลื่อนตำแหน่งมีเวลาอยู่สองข้าง แสดงเป็นแถวเดียวบนจอกว้าง และสองแถวบนจอแคบ</item>
+        <item>คำบรรยายที่ไม่ใช่ Unicode แสดงผลถูกต้อง: แฟ้มภาษาฮีบรู อาหรับ รัสเซีย กรีก ตุรกี ญี่ปุ่น จีน เกาหลี และไทย จะถูกจดจำได้จากตัวอักษรและภาษาในชื่อแฟ้ม</item>
+        <item>หน้าเกี่ยวกับให้เครดิตการออกแบบส่วนติดต่อแก่ Juxtopposed พร้อมลิงก์ของงานออกแบบ เหมือนบนเดสก์ท็อป</item>
+    </string-array>
+</resources>

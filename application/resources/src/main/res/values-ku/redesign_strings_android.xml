@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). Sorani, as in redesign_strings.xml. -->
+<resources>
+    <string name="rd_about_design_source">هەموو شاشەیەک لە پەڕگەی Figmaـی \"VLC Redesign (Community)\" ەوە هاتووە، کە بە مۆڵەتی CC BY 4.0 ـە. بۆ Android گونجێنراوە و ئایکۆنەکانی دووبارە کێشراونەتەوە.</string>
+    <string name="rd_about_whats_new">چی نوێیە لە %1$s</string>
+    <string name="rd_customize_hint">کۆنتڕۆڵێک ڕابکێشە بۆ ناوچەیەکی شریتەکە، یان ناوچەیەک هەڵبژێرە و دەست لەو کۆنتڕۆڵانە بدە کە دەتەوێت تێیدا دابنرێن. دەست لە کۆنتڕۆڵێکی شریتەکە بدە بۆ جووڵاندنی یان لابردنی.</string>
+    <string name="rd_move_earlier">بردن بۆ چەپ</string>
+    <string name="rd_move_later">بردن بۆ ڕاست</string>
+    <string name="rd_audio_delay_summary">دەنگ بە بەراورد بە وێنە لە هەموو ڕەنگاڵەیەکدا دوادەخات، بە میلیچرکە؛ نرخی نەرێنی زووتر لێی دەدات.</string>
+    <string name="rd_orange">پرتەقاڵی</string>
+    <string name="rd_cyan">شینی ئاسمانی</string>
+    <string name="rd_pink">پەمەیی</string>
+    <string name="rd_sec_notifications">ئاگادارکردنەوەکان</string>
+    <string name="rd_fuzzy_1">هەر پەڕگەیەکی ژێرنووس</string>
+    <string name="rd_fuzzy_2">ناوی ڤیدیۆکەی تێدایە</string>
+    <string name="rd_fuzzy_3">ناوی ڤیدیۆکە و زیاتر</string>
+    <string name="rd_fuzzy_4">ڕێک ناوی ڤیدیۆکە</string>
+    <string name="rd_help_fuzzy">ناوی پەڕگەی ژێرنووس دەبێت چەندە لە ناوی ڤیدیۆکە نزیک بێت بۆ ئەوەی خۆکارانە باربکرێت.</string>
+    <string name="rd_help_normalize">بەرزیی دەنگ لە نێوان ڕەنگاڵەی کپ و بەرزدا یەکسان دەکات.</string>
+    <string name="rd_help_target_level">دەنگی یەکسانکراو تا چەند دەتوانێت بەرز بێت: زیاتر واتە بەرزتر.</string>
+    <string name="rd_help_night_mode">دیمەنە بەرزەکان نزمتر و گفتوگۆی کپ بەرزتر دەکات، بۆ گوێگرتن لە درەنگانی شەو.</string>
+    <string name="rd_help_loudness_android">کاریگەرییە دەنگییەکانی Android لەسەر دەنگی VLC بەکاردەهێنێت (Android 9 و دواتر)؛ نەک لەگەڵ تێپەڕاندنی ڕاستەوخۆ.</string>
+    <string name="rd_help_shadow_distance">سێبەرەکە چەندە لە دەقەکە دوور دەکەوێتەوە.</string>
+    <string name="rd_help_welcome">ڕێکخستنی سەرەتایی دووبارە دەکاتەوە: زمان، ڕووکار، کتێبخانە و تایبەتمەندی.</string>
+    <string name="rd_help_deinterlace">هێڵە شانەییەکانی ڤیدیۆی تێکهەڵکێش (تۆمارەکانی تەلەفزیۆن) لادەبات. لەسەر ئەو ڤیدیۆیە کاردەکات کە VLC کۆدەکەی دەکاتەوە، نەک کۆدکەرەوەی ڕەقەکاڵا.</string>
+    <string name="rd_help_sub_margin">دەتوانیت ئەم هەڵبژاردەیە بەکاربهێنیت بۆ دانانی ژێرنووسەکان لە ژێر فیلمەکەوە، لە جیاتی سەر فیلمەکە. چەند شوێنێک تاقی بکەرەوە.</string>
+    <string name="rd_help_threads">ژمارەی ئەو داوانەی بۆ کۆدکردنەوە بەکاردێن، 0 واتە خۆکار</string>
+    <string name="rd_ob_whole_device">هەموو ئامێرەکە</string>
+    <string name="rd_ob_folders_count">%1$s و %2$d ی تر</string>
+    <string name="rd_ob_online_text">بێ تێلێمێتری، بێ ڕیکلام، بێ هەژمار: VLC for Android خۆی هیچ شتێک نانێرێت. ئەم هەڵبژاردنانە لە ڕێکخستنەکان، تایبەتمەندی دەمێننەوە.</string>
+    <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
+    <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
+    <string-array name="rd_whats_new_items">
+        <item>شریتی کۆنتڕۆڵی لێدەری ڤیدیۆ هەمان شریتی وەشانی کۆمپیوتەرە: یەک شریت تا لێوارەکانی شاشە، دوگمەی لێدان لە نێوان پێشوو و دواتردا، شریتی گەڕان و کاتەکان لە هەردوو لایدا؛ یەک ڕیز لە شاشەی پان، دوو ڕیز لە شاشەی تەسک.</item>
+        <item>ئەو ژێرنووسانەی Unicode نین بە دروستی پیشان دەدرێن: پەڕگە عیبری، عەرەبی، ڕووسی، یۆنانی، تورکی، ژاپۆنی، چینی، کۆری و تایلەندییەکان لە پیتەکانیان و ئەو زمانەی لە ناوەکەیاندایە دەناسرێنەوە.</item>
+        <item>دەربارە دیزاینی ڕووکارەکە دەداتە پاڵ Juxtopposed، لەگەڵ بەستەرەکانی دیزاینەکە، وەک لە وەشانی کۆمپیوتەر.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">हरेक स्क्रिन CC BY 4.0 अन्तर्गत इजाजतप्राप्त \"VLC Redesign (Community)\" Figma फाइलबाट लिइएको हो। यसलाई Android मा ढालिएको छ र यसका आइकनहरू पुनः कोरिएका छन्।</string>
+    <string name="rd_about_whats_new">%1$s मा के नयाँ छ</string>
+    <string name="rd_customize_hint">कुनै नियन्त्रणलाई बारको कुनै क्षेत्रमा तान्नुहोस्, वा कुनै क्षेत्र छानेर त्यसमा राख्ने नियन्त्रणहरूमा ट्याप गर्नुहोस्। बारको नियन्त्रण सार्न वा हटाउन त्यसमा ट्याप गर्नुहोस्।</string>
+    <string name="rd_move_earlier">बायाँ सार्नुहोस्</string>
+    <string name="rd_move_later">दायाँ सार्नुहोस्</string>
+    <string name="rd_audio_delay_summary">हरेक मिडियामा आवाजलाई चित्रको तुलनामा मिलिसेकेन्डमा ढिलो गर्छ; ऋणात्मक मानले यसलाई चाँडो बजाउँछ।</string>
+    <string name="rd_orange">सुन्तले</string>
+    <string name="rd_cyan">आकाशे</string>
+    <string name="rd_pink">गुलाबी</string>
+    <string name="rd_sec_notifications">सूचनाहरू</string>
+    <string name="rd_fuzzy_1">कुनै पनि उपशीर्षक फाइल</string>
+    <string name="rd_fuzzy_2">भिडियोको नाम समावेश भएको</string>
+    <string name="rd_fuzzy_3">भिडियोको नाम र थप</string>
+    <string name="rd_fuzzy_4">ठ्याक्कै भिडियोको नाम</string>
+    <string name="rd_help_fuzzy">उपशीर्षक फाइल आफैँ लोड हुन यसको नाम भिडियोको नामसँग कति नजिक हुनुपर्छ।</string>
+    <string name="rd_help_normalize">शान्त र चर्को मिडियाबीच आवाज बराबर बनाउँछ।</string>
+    <string name="rd_help_target_level">सामान्य बनाइएको आवाज कति चर्को हुन सक्छ: बढी भनेको चर्को।</string>
+    <string name="rd_help_night_mode">चर्का दृश्यहरू मधुरो र मधुरो संवाद चर्को बनाउँछ, राति अबेर सुन्नका लागि।</string>
+    <string name="rd_help_loudness_android">VLC को आवाजमा Android का अडियो प्रभावहरू प्रयोग गर्छ (Android 9 र पछिका); पासथ्रूसँग होइन।</string>
+    <string name="rd_help_shadow_distance">छाया पाठबाट कति टाढा पर्छ।</string>
+    <string name="rd_help_welcome">पहिलो पटकको सेटअप फेरि खोल्छ: भाषा, रूप, पुस्तकालय र गोपनीयता।</string>
+    <string name="rd_help_deinterlace">इन्टरलेस्ड भिडियो (टिभी रेकर्डिङ) का काइयोजस्ता रेखाहरू हटाउँछ। VLC ले डिकोड गरेको भिडियोमा काम गर्छ, हार्डवेयर डिकोडरको होइन।</string>
+    <string name="rd_help_threads">डिकोडिङका लागि प्रयोग हुने थ्रेडहरूको सङ्ख्या, 0 भनेको स्वचालित</string>
+    <string name="rd_ob_whole_device">सम्पूर्ण यन्त्र</string>
+    <string name="rd_ob_folders_count">%1$s र थप %2$d</string>
+    <string name="rd_ob_online_text">टेलिमेट्री छैन, विज्ञापन छैन, खाता छैन: VLC for Android ले आफैँ केही पठाउँदैन। यी छनोटहरू सेटिङ्हरू, गोपनीयतामा रहन्छन्।</string>
+    <string name="rd_ob_history_help">यसै यन्त्रमा मात्र राखिन्छ, तपाईंले छोडेको ठाउँबाट जारी राख्न।</string>
+    <string name="rd_ob_updates_help">दिनमा एक पटक VLC for Android को नयाँ परीक्षण बिल्ड खोज्छ।</string>
+    <string-array name="rd_whats_new_items">
+        <item>भिडियो प्लेयरको नियन्त्रण बार डेस्कटपकै हो: स्क्रिनका किनारसम्म एउटै बार, अघिल्लो र अर्कोबीच प्ले बटन, दुवैतिर समय भएको सिक पट्टी; फराकिलो स्क्रिनमा एक पङ्क्ति, साँघुरो स्क्रिनमा दुई।</item>
+        <item>Unicode नभएका उपशीर्षकहरू ठीकसँग देखिन्छन्: हिब्रू, अरबी, रुसी, ग्रीक, टर्किस, जापानी, चिनियाँ, कोरियाली र थाई फाइलहरू तिनका अक्षर र नाममा भएको भाषाबाट चिनिन्छन्।</item>
+        <item>बारेमा पृष्ठले इन्टरफेसको डिजाइनको श्रेय Juxtopposed लाई दिन्छ, डिजाइनका लिङ्कहरूसहित, डेस्कटपमा जस्तै।</item>
+    </string-array>
+</resources>

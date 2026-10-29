@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Minden képernyő a CC BY 4.0 licencű „VLC Redesign (Community)” Figma-fájlból származik. Androidra lett átültetve, az ikonjait pedig újrarajzolták.</string>
+    <string name="rd_about_whats_new">A(z) %1$s újdonságai</string>
+    <string name="rd_customize_hint">Húzzon egy vezérlőt a sáv egyik zónájába, vagy válasszon egy zónát, és koppintson a bele kerülő vezérlőkre. Koppintson a sáv egy vezérlőjére az áthelyezéséhez vagy eltávolításához.</string>
+    <string name="rd_move_earlier">Mozgatás balra</string>
+    <string name="rd_move_later">Mozgatás jobbra</string>
+    <string name="rd_audio_delay_summary">Késlelteti a hangot a képhez képest minden médiában, ms-ban; a negatív érték korábban játssza le.</string>
+    <string name="rd_orange">Narancs</string>
+    <string name="rd_cyan">Ciánkék</string>
+    <string name="rd_pink">Rózsaszín</string>
+    <string name="rd_sec_notifications">Értesítések</string>
+    <string name="rd_fuzzy_1">Bármely feliratfájl</string>
+    <string name="rd_fuzzy_2">Tartalmazza a videó nevét</string>
+    <string name="rd_fuzzy_3">A videó neve és még valami</string>
+    <string name="rd_fuzzy_4">Pontosan a videó neve</string>
+    <string name="rd_help_fuzzy">Mennyire kell a feliratfájl nevének a videó nevéhez hasonlítania, hogy magától betöltődjön.</string>
+    <string name="rd_help_normalize">Kiegyenlíti a hangerőt a halk és a hangos médiák között.</string>
+    <string name="rd_help_target_level">Milyen hangos lehet a normalizált hang: a magasabb hangosabb.</string>
+    <string name="rd_help_night_mode">Halkítja a hangos jeleneteket és felerősíti a halk párbeszédet, késői hallgatáshoz.</string>
+    <string name="rd_help_loudness_android">Az Android hangeffektusait alkalmazza a VLC hangjára (Android 9 és újabb); tömörített hang továbbításakor nem.</string>
+    <string name="rd_help_shadow_distance">Milyen messze esik az árnyék a szövegtől.</string>
+    <string name="rd_help_welcome">Újra megnyitja a kezdeti beállítást: nyelv, megjelenés, médiatár és adatvédelem.</string>
+    <string name="rd_help_deinterlace">Eltávolítja a váltottsoros videó „fésűs” vonalait (tévéfelvételek). A VLC által dekódolt videón működik, a hardveres dekóderén nem.</string>
+    <string name="rd_ob_whole_device">A teljes eszköz</string>
+    <string name="rd_ob_folders_count">%1$s és még %2$d</string>
+    <string name="rd_ob_online_text">Nincs telemetria, nincs reklám, nincs fiók: a VLC for Android magától semmit sem küld. Ezek a beállítások a Beállítások, Adatvédelem részben maradnak.</string>
+    <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
+    <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
+    <string-array name="rd_whats_new_items">
+        <item>A videolejátszó vezérlősávja az asztali változaté: egy sáv a képernyő széléig, a lejátszás gomb az Előző és a Következő között, a tekerősáv mellett két oldalt az idők; széles képernyőn egy sor, keskenyen kettő.</item>
+        <item>A nem Unicode feliratok helyesen jelennek meg: a héber, arab, orosz, görög, török, japán, kínai, koreai és thai fájlokat a betűik és a nevükben szereplő nyelv alapján ismeri fel.</item>
+        <item>A Névjegy feltünteti a kezelőfelület tervezőjét, Juxtopposedot, a terv hivatkozásaival, ahogy az asztali változatban.</item>
+    </string-array>
+</resources>

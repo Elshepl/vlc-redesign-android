@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Çdo ekran vjen nga skedari Figma \"VLC Redesign (Community)\", i licencuar sipas CC BY 4.0. U përshtat për Android dhe ikonat e tij u rivizatuan.</string>
+    <string name="rd_about_whats_new">Çfarë ka të re në %1$s</string>
+    <string name="rd_customize_hint">Tërhiqni një kontroll në një zonë të shiritit, ose zgjidhni një zonë dhe prekni kontrollet që doni të vendosni në të. Prekni një kontroll të shiritit për ta zhvendosur ose për ta hequr.</string>
+    <string name="rd_move_earlier">Zhvendos majtas</string>
+    <string name="rd_move_later">Zhvendos djathtas</string>
+    <string name="rd_audio_delay_summary">Vonon zërin ndaj figurës në çdo media, në milisekonda; një vlerë negative e luan më herët.</string>
+    <string name="rd_orange">Portokalli</string>
+    <string name="rd_cyan">Cian</string>
+    <string name="rd_pink">Rozë</string>
+    <string name="rd_sec_notifications">Njoftimet</string>
+    <string name="rd_fuzzy_1">Çdo skedar titrash</string>
+    <string name="rd_fuzzy_2">Që përmban emrin e videos</string>
+    <string name="rd_fuzzy_3">Emri i videos dhe më tepër</string>
+    <string name="rd_fuzzy_4">Saktësisht emri i videos</string>
+    <string name="rd_help_fuzzy">Sa afër emrit të videos duhet të jetë emri i një skedari titrash që të ngarkohet vetvetiu.</string>
+    <string name="rd_help_normalize">Barazon volumin mes medieve të qeta dhe të zhurmshme.</string>
+    <string name="rd_help_target_level">Sa i fortë mund të bëhet zëri i normalizuar: më i lartë do të thotë më i fortë.</string>
+    <string name="rd_help_night_mode">Ul skenat e zhurmshme dhe ngre dialogun e qetë, për dëgjim natën vonë.</string>
+    <string name="rd_help_loudness_android">Përdor efektet audio të Android mbi zërin e VLC (Android 9 e më vonë); jo me kalimin e drejtpërdrejtë.</string>
+    <string name="rd_help_shadow_distance">Sa larg nga teksti bie hija.</string>
+    <string name="rd_help_welcome">Hap sërish konfigurimin fillestar: gjuha, pamja, biblioteka dhe privatësia.</string>
+    <string name="rd_help_deinterlace">Heq vijat si krehër të videos së ndërthurur (regjistrime televizive). Punon me videon që dekodon VLC, jo me atë të dekoduesit të harduerit.</string>
+    <string name="rd_help_sub_margin">Mund ta përdorni këtë mundësi për të vendosur titrat nën film, në vend të sipër filmit. Provoni disa pozicione.</string>
+    <string name="rd_help_threads">Numri i rrjedhave të përdorura për dekodim, 0 do të thotë automatik</string>
+    <string name="rd_ob_whole_device">E gjithë pajisja</string>
+    <string name="rd_ob_folders_count">%1$s dhe %2$d të tjera</string>
+    <string name="rd_ob_online_text">Pa telemetri, pa reklama, pa llogari: VLC for Android nuk dërgon asgjë vetvetiu. Këto zgjedhje mbeten te Cilësimet, Privatësia.</string>
+    <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
+    <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Shiriti i kontrolleve të luajtësit të videos është ai i desktopit: një shirit deri në skajet e ekranit, butoni i luajtjes mes Mëparshmes dhe Pasardhëses, shiriti i kërkimit me kohët në anët e tij; një rresht në ekran të gjerë, dy në ekran të ngushtë.</item>
+        <item>Titrat që nuk janë Unicode shfaqen saktë: skedarët në hebraisht, arabisht, rusisht, greqisht, turqisht, japonisht, kinezisht, koreanisht dhe tajlandisht njihen nga shkronjat e tyre dhe gjuha në emrin e tyre.</item>
+        <item>Faqja Rreth i jep merita për dizajnin e ndërfaqes Juxtopposed, me lidhjet e dizajnit, si në desktop.</item>
+    </string-array>
+</resources>

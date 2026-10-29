@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Każdy ekran pochodzi z pliku Figma „VLC Redesign (Community)” na licencji CC BY 4.0. Został przeniesiony do Androida, a jego ikony narysowano od nowa.</string>
+    <string name="rd_about_whats_new">Co nowego w %1$s</string>
+    <string name="rd_customize_hint">Przeciągnij element sterujący do strefy paska albo wybierz strefę i dotknij elementów, które mają się w niej znaleźć. Dotknij elementu paska, aby go przesunąć lub usunąć.</string>
+    <string name="rd_move_earlier">Przesuń w lewo</string>
+    <string name="rd_move_later">Przesuń w prawo</string>
+    <string name="rd_audio_delay_summary">Opóźnia dźwięk względem obrazu we wszystkich multimediach, w ms; wartość ujemna odtwarza go wcześniej.</string>
+    <string name="rd_orange">Pomarańczowy</string>
+    <string name="rd_cyan">Cyjan</string>
+    <string name="rd_pink">Różowy</string>
+    <string name="rd_sec_notifications">Powiadomienia</string>
+    <string name="rd_fuzzy_1">Dowolny plik napisów</string>
+    <string name="rd_fuzzy_2">Zawierający nazwę wideo</string>
+    <string name="rd_fuzzy_3">Nazwa wideo i coś więcej</string>
+    <string name="rd_fuzzy_4">Dokładnie nazwa wideo</string>
+    <string name="rd_help_fuzzy">Jak bardzo nazwa pliku napisów musi przypominać nazwę wideo, aby został wczytany sam.</string>
+    <string name="rd_help_normalize">Wyrównuje głośność między cichymi a głośnymi multimediami.</string>
+    <string name="rd_help_target_level">Jak głośny może być znormalizowany dźwięk: im wyżej, tym głośniej.</string>
+    <string name="rd_help_night_mode">Ścisza głośne sceny i podgłaśnia ciche dialogi, do słuchania późną porą.</string>
+    <string name="rd_help_loudness_android">Stosuje efekty dźwiękowe Androida do dźwięku VLC (Android 9 i nowsze); nie działa z przekazywaniem dźwięku.</string>
+    <string name="rd_help_shadow_distance">Jak daleko od tekstu pada cień.</string>
+    <string name="rd_help_welcome">Ponownie otwiera konfigurację początkową: język, wygląd, bibliotekę i prywatność.</string>
+    <string name="rd_help_deinterlace">Usuwa „grzebień” wideo z przeplotem (nagrania telewizyjne). Działa na wideo dekodowanym przez VLC, a nie przez dekoder sprzętowy.</string>
+    <string name="rd_ob_whole_device">Całe urządzenie</string>
+    <string name="rd_ob_folders_count">%1$s i jeszcze %2$d</string>
+    <string name="rd_ob_online_text">Bez telemetrii, reklam i konta: VLC for Android sam niczego nie wysyła. Te ustawienia pozostają w Ustawieniach, w sekcji Prywatność.</string>
+    <string name="rd_ob_history_help">Przechowywana tylko na tym urządzeniu, aby kontynuować od miejsca, w którym przerwano.</string>
+    <string name="rd_ob_updates_help">Raz dziennie sprawdza, czy jest nowsza testowa wersja VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Pasek sterowania odtwarzacza wideo jest taki jak w wersji na komputer: jeden pasek do krawędzi ekranu, przycisk odtwarzania między Poprzednim a Następnym, pasek przewijania z czasami po bokach; jeden rząd na szerokim ekranie, dwa na wąskim.</item>
+        <item>Napisy nie w Unicode wyświetlają się poprawnie: pliki po hebrajsku, arabsku, rosyjsku, grecku, turecku, japońsku, chińsku, koreańsku i tajsku są rozpoznawane po literach i po języku w nazwie.</item>
+        <item>Sekcja O programie podaje autora projektu interfejsu, Juxtopposed, z odnośnikami do projektu, tak jak w wersji na komputer.</item>
+    </string-array>
+</resources>

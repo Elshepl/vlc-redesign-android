@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">ഓരോ സ്ക്രീനും CC BY 4.0 ലൈസൻസിലുള്ള \"VLC Redesign (Community)\" Figma ഫയലിൽ നിന്നുള്ളതാണ്. ഇത് Android-ലേക്ക് അനുരൂപമാക്കുകയും ഇതിന്റെ ഐക്കണുകൾ പുതുതായി വരയ്ക്കുകയും ചെയ്തു.</string>
+    <string name="rd_about_whats_new">%1$s-ൽ പുതിയതെന്ത്</string>
+    <string name="rd_customize_hint">ഒരു നിയന്ത്രണം ബാറിലെ ഒരു മേഖലയിലേക്ക് വലിച്ചിടുക, അല്ലെങ്കിൽ ഒരു മേഖല തിരഞ്ഞെടുത്ത് അതിൽ വെക്കേണ്ട നിയന്ത്രണങ്ങളിൽ ടാപ്പ് ചെയ്യുക. ബാറിലെ ഒരു നിയന്ത്രണം നീക്കാനോ മാറ്റാനോ അതിൽ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="rd_move_earlier">ഇടത്തേക്ക് നീക്കുക</string>
+    <string name="rd_move_later">വലത്തേക്ക് നീക്കുക</string>
+    <string name="rd_audio_delay_summary">എല്ലാ മീഡിയയിലും ശബ്ദത്തെ ചിത്രവുമായി താരതമ്യം ചെയ്ത് മില്ലിസെക്കൻഡിൽ വൈകിപ്പിക്കുന്നു; നെഗറ്റീവ് മൂല്യം അത് നേരത്തെ പ്ലേ ചെയ്യുന്നു.</string>
+    <string name="rd_orange">ഓറഞ്ച്</string>
+    <string name="rd_cyan">സിയാൻ</string>
+    <string name="rd_pink">പിങ്ക്</string>
+    <string name="rd_sec_notifications">അറിയിപ്പുകൾ</string>
+    <string name="rd_fuzzy_1">ഏത് ഉപശീർഷക ഫയലും</string>
+    <string name="rd_fuzzy_2">വീഡിയോയുടെ പേര് ഉൾപ്പെടുന്നത്</string>
+    <string name="rd_fuzzy_3">വീഡിയോയുടെ പേരും കൂടുതലും</string>
+    <string name="rd_fuzzy_4">കൃത്യമായി വീഡിയോയുടെ പേര്</string>
+    <string name="rd_help_fuzzy">ഉപശീർഷക ഫയൽ സ്വയം ലോഡ് ആകാൻ അതിന്റെ പേര് വീഡിയോയുടെ പേരിനോട് എത്രത്തോളം അടുത്തായിരിക്കണം.</string>
+    <string name="rd_help_normalize">ശാന്തമായതും ഉച്ചത്തിലുള്ളതുമായ മീഡിയകൾക്കിടയിൽ ശബ്ദം തുല്യമാക്കുന്നു.</string>
+    <string name="rd_help_target_level">നോർമലൈസ് ചെയ്ത ശബ്ദം എത്ര ഉച്ചത്തിലാകാം: കൂടുതൽ എന്നാൽ ഉച്ചത്തിൽ.</string>
+    <string name="rd_help_night_mode">ഉച്ചത്തിലുള്ള രംഗങ്ങൾ മൃദുവാക്കുകയും മൃദുവായ സംഭാഷണം ഉച്ചത്തിലാക്കുകയും ചെയ്യുന്നു, രാത്രി വൈകി കേൾക്കാൻ.</string>
+    <string name="rd_help_loudness_android">VLC-യുടെ ശബ്ദത്തിൽ Android-ന്റെ ഓഡിയോ ഇഫക്റ്റുകൾ ഉപയോഗിക്കുന്നു (Android 9-ഉം അതിനുശേഷവും); പാസ്‌ത്രൂവിനൊപ്പം അല്ല.</string>
+    <string name="rd_help_shadow_distance">നിഴൽ വാചകത്തിൽ നിന്ന് എത്ര ദൂരെ വീഴുന്നു.</string>
+    <string name="rd_help_welcome">ആദ്യ സജ്ജീകരണം വീണ്ടും തുറക്കുന്നു: ഭാഷ, രൂപം, ലൈബ്രറി, സ്വകാര്യത.</string>
+    <string name="rd_help_deinterlace">ഇന്റർലേസ്ഡ് വീഡിയോയുടെ (ടിവി റെക്കോർഡിംഗുകൾ) ചീപ്പുവരകൾ നീക്കുന്നു. VLC ഡീകോഡ് ചെയ്യുന്ന വീഡിയോയിൽ പ്രവർത്തിക്കുന്നു, ഹാർഡ്‌വെയർ ഡീകോഡറിന്റേതിൽ അല്ല.</string>
+    <string name="rd_ob_whole_device">മുഴുവൻ ഉപകരണവും</string>
+    <string name="rd_ob_folders_count">%1$s-ഉം %2$d എണ്ണം കൂടിയും</string>
+    <string name="rd_ob_online_text">ടെലിമെട്രിയില്ല, പരസ്യങ്ങളില്ല, അക്കൗണ്ടില്ല: VLC for Android സ്വയം ഒന്നും അയയ്ക്കുന്നില്ല. ഈ തിരഞ്ഞെടുപ്പുകൾ സജ്ജീകരണങ്ങൾ, സ്വകാര്യത എന്നിടത്ത് നിലനിൽക്കും.</string>
+    <string name="rd_ob_history_help">ഈ ഉപകരണത്തിൽ മാത്രം സൂക്ഷിക്കുന്നു, നിങ്ങൾ നിർത്തിയിടത്തുനിന്ന് തുടരാൻ.</string>
+    <string name="rd_ob_updates_help">ദിവസത്തിൽ ഒരിക്കൽ VLC for Android-ന്റെ പുതിയ ടെസ്റ്റ് ബിൽഡിനായി തിരയുന്നു.</string>
+    <string-array name="rd_whats_new_items">
+        <item>വീഡിയോ പ്ലേയറിന്റെ നിയന്ത്രണ ബാർ ഡെസ്ക്ടോപ്പിലേതാണ്: സ്ക്രീനിന്റെ അരികുകൾ വരെ ഒരു ബാർ, മുമ്പത്തേതിനും അടുത്തതിനും ഇടയിൽ പ്ലേ ബട്ടൺ, ഇരുവശത്തും സമയങ്ങളുള്ള സീക്ക് ബാർ; വീതിയുള്ള സ്ക്രീനിൽ ഒരു വരി, ഇടുങ്ങിയതിൽ രണ്ട്.</item>
+        <item>Unicode അല്ലാത്ത ഉപശീർഷകങ്ങൾ ശരിയായി കാണിക്കുന്നു: ഹീബ്രു, അറബിക്, റഷ്യൻ, ഗ്രീക്ക്, ടർക്കിഷ്, ജാപ്പനീസ്, ചൈനീസ്, കൊറിയൻ, തായ് ഫയലുകൾ അവയുടെ അക്ഷരങ്ങളും പേരിലെ ഭാഷയും വഴി തിരിച്ചറിയുന്നു.</item>
+        <item>വിവരം പേജ് ഇന്റർഫേസ് ഡിസൈനിന്റെ ക്രെഡിറ്റ് Juxtopposed-ന് നൽകുന്നു, ഡിസൈനിന്റെ ലിങ്കുകൾ സഹിതം, ഡെസ്ക്ടോപ്പിലെപ്പോലെ.</item>
+    </string-array>
+</resources>

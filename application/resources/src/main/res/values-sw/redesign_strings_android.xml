@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Kila skrini inatoka kwenye faili la Figma \"VLC Redesign (Community)\", lenye leseni ya CC BY 4.0. Imerekebishwa kwa ajili ya Android na aikoni zake zimechorwa upya.</string>
+    <string name="rd_about_whats_new">Mapya katika %1$s</string>
+    <string name="rd_customize_hint">Buruta kidhibiti hadi kwenye eneo la upau, au chagua eneo kisha gusa vidhibiti vya kuweka humo. Gusa kidhibiti cha upau ili kukihamisha au kukiondoa.</string>
+    <string name="rd_move_earlier">Sogeza kushoto</string>
+    <string name="rd_move_later">Sogeza kulia</string>
+    <string name="rd_audio_delay_summary">Huchelewesha sauti dhidi ya picha katika kila media, kwa ms; thamani hasi huicheza mapema zaidi.</string>
+    <string name="rd_orange">Machungwa</string>
+    <string name="rd_cyan">Samawati-kijani</string>
+    <string name="rd_pink">Waridi</string>
+    <string name="rd_sec_notifications">Arifa</string>
+    <string name="rd_fuzzy_1">Faili lolote la manukuu</string>
+    <string name="rd_fuzzy_2">Lenye jina la video</string>
+    <string name="rd_fuzzy_3">Jina la video na zaidi</string>
+    <string name="rd_fuzzy_4">Jina la video kamili</string>
+    <string name="rd_help_fuzzy">Jinsi jina la faili la manukuu linavyopaswa kukaribiana na la video ili lipakiwe lenyewe.</string>
+    <string name="rd_help_normalize">Husawazisha sauti kati ya media tulivu na yenye kelele.</string>
+    <string name="rd_help_target_level">Kiwango ambacho sauti iliyosawazishwa inaweza kufikia: juu zaidi ni kubwa zaidi.</string>
+    <string name="rd_help_night_mode">Hupunguza sauti ya matukio makubwa na kuongeza mazungumzo ya chini, kwa kusikiliza usiku.</string>
+    <string name="rd_help_loudness_android">Hutumia athari za sauti za Android kwenye sauti ya VLC (Android 9 na zaidi); si pamoja na passthrough.</string>
+    <string name="rd_help_shadow_distance">Umbali wa kivuli kutoka kwenye maandishi.</string>
+    <string name="rd_help_welcome">Hufungua tena mipangilio ya mwanzo: lugha, mwonekano, maktaba na faragha.</string>
+    <string name="rd_help_deinterlace">Huondoa mistari ya kitana ya video iliyoingiliana (rekodi za TV). Hufanya kazi kwenye video inayosimbuliwa na VLC, si na kisimbuzi cha maunzi.</string>
+    <string name="rd_ob_whole_device">Kifaa chote</string>
+    <string name="rd_ob_folders_count">%1$s na %2$d zaidi</string>
+    <string name="rd_ob_online_text">Hakuna telemetria, hakuna matangazo, hakuna akaunti: VLC for Android haitumi chochote yenyewe. Chaguo hizi zinabaki katika Mipangilio, Faragha.</string>
+    <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
+    <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Upau wa vidhibiti wa kicheza video ni ule wa kompyuta: upau mmoja hadi kingo za skrini, kitufe cha kucheza kati ya Iliyotangulia na Inayofuata, upau wa kutafuta wenye muda pande zake; safu moja kwenye skrini pana, safu mbili kwenye skrini nyembamba.</item>
+        <item>Manukuu yasiyo ya Unicode yanaonyeshwa sawasawa: faili za Kiebrania, Kiarabu, Kirusi, Kigiriki, Kituruki, Kijapani, Kichina, Kikorea na Kithai zinatambuliwa kwa herufi zake na lugha iliyo katika jina lake.</item>
+        <item>Kuhusu inatoa sifa ya muundo wa kiolesura kwa Juxtopposed, pamoja na viungo vya muundo, kama kwenye kompyuta.</item>
+    </string-array>
+</resources>

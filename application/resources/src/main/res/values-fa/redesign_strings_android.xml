@@ -3,4 +3,37 @@
      (import_strings.py does not rewrite this file) -->
 <resources>
     <string name="home">خانه</string>
+    <string name="rd_about_design_source">همهٔ صفحه‌ها از پروندهٔ Figma با نام «VLC Redesign (Community)‎» با مجوز CC BY 4.0 گرفته شده‌اند. این طرح برای Android تطبیق داده شده و نمادهای آن دوباره کشیده شده‌اند.</string>
+    <string name="rd_about_whats_new">تازه‌های %1$s</string>
+    <string name="rd_customize_hint">یک کنترل را به ناحیه‌ای از نوار بکشید، یا ناحیه‌ای را انتخاب کنید و روی کنترل‌هایی که باید در آن قرار گیرند ضربه بزنید. با ضربه روی کنترلی در نوار، آن را جابه‌جا یا حذف کنید.</string>
+    <string name="rd_move_earlier">انتقال به چپ</string>
+    <string name="rd_move_later">انتقال به راست</string>
+    <string name="rd_audio_delay_summary">صدا را نسبت به تصویر در همهٔ رسانه‌ها به میلی‌ثانیه به تأخیر می‌اندازد؛ مقدار منفی آن را زودتر پخش می‌کند.</string>
+    <string name="rd_orange">نارنجی</string>
+    <string name="rd_cyan">فیروزه‌ای</string>
+    <string name="rd_pink">صورتی</string>
+    <string name="rd_sec_notifications">اعلان‌ها</string>
+    <string name="rd_fuzzy_1">هر پروندهٔ زیرنویس</string>
+    <string name="rd_fuzzy_2">شامل نام ویدیو</string>
+    <string name="rd_fuzzy_3">نام ویدیو و بیشتر</string>
+    <string name="rd_fuzzy_4">دقیقاً نام ویدیو</string>
+    <string name="rd_help_fuzzy">نام پروندهٔ زیرنویس چقدر باید به نام ویدیو نزدیک باشد تا خودبه‌خود بارگذاری شود.</string>
+    <string name="rd_help_normalize">بلندی صدا را میان رسانه‌های آرام و پرصدا یکسان می‌کند.</string>
+    <string name="rd_help_target_level">صدای یکنواخت‌شده تا چه حد می‌تواند بلند شود: بیشتر یعنی بلندتر.</string>
+    <string name="rd_help_night_mode">صحنه‌های پرصدا را آرام‌تر و گفت‌وگوهای آرام را بلندتر می‌کند، برای شنیدن در دیروقت.</string>
+    <string name="rd_help_loudness_android">جلوه‌های صوتی Android را روی صدای VLC به کار می‌برد (Android 9 و بالاتر)؛ نه همراه با عبور مستقیم صدا.</string>
+    <string name="rd_help_shadow_distance">فاصلهٔ سایه از متن.</string>
+    <string name="rd_help_welcome">راه‌اندازی اولیه را دوباره باز می‌کند: زبان، ظاهر، کتابخانه و حریم خصوصی.</string>
+    <string name="rd_help_deinterlace">خطوط شانه‌ای ویدیوی درهم‌بافته (ضبط‌های تلویزیونی) را حذف می‌کند. روی ویدیویی کار می‌کند که VLC رمزگشایی می‌کند، نه رمزگشای سخت‌افزاری.</string>
+    <string name="rd_help_threads">تعداد رشته‌های مورد استفاده برای رمزگشایی، 0 یعنی خودکار</string>
+    <string name="rd_ob_whole_device">کل دستگاه</string>
+    <string name="rd_ob_folders_count">%1$s و %2$d مورد دیگر</string>
+    <string name="rd_ob_online_text">بدون تله‌متری، بدون تبلیغ، بدون حساب کاربری: VLC for Android خودبه‌خود چیزی نمی‌فرستد. این انتخاب‌ها در تنظیمات، حریم خصوصی می‌مانند.</string>
+    <string name="rd_ob_history_help">فقط روی همین دستگاه نگه داشته می‌شود، تا از جایی که رها کرده‌اید ادامه دهید.</string>
+    <string name="rd_ob_updates_help">روزی یک بار به دنبال نسخهٔ آزمایشی تازه‌تری از VLC for Android می‌گردد.</string>
+    <string-array name="rd_whats_new_items">
+        <item>نوار کنترل پخش‌کنندهٔ ویدیو همان نوار نسخهٔ رایانه است: یک نوار تا لبه‌های صفحه، دکمهٔ پخش میان قبلی و بعدی، نوار جست‌وجو با زمان‌ها در دو طرفش؛ یک ردیف در صفحهٔ پهن و دو ردیف در صفحهٔ باریک.</item>
+        <item>زیرنویس‌هایی که Unicode نیستند درست نمایش داده می‌شوند: پرونده‌های عبری، عربی، روسی، یونانی، ترکی، ژاپنی، چینی، کره‌ای و تایلندی از روی حروفشان و زبانی که در نامشان آمده شناخته می‌شوند.</item>
+        <item>بخش «درباره» طراحی رابط را به Juxtopposed نسبت می‌دهد، همراه با پیوندهای طرح، مانند نسخهٔ رایانه.</item>
+    </string-array>
 </resources>

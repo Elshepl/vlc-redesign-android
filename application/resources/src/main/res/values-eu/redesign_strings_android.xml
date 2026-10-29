@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Pantaila guztiak \"VLC Redesign (Community)\" Figma fitxategitik datoz, CC BY 4.0 lizentziapean. Android-era egokitu da eta ikonoak berriro marraztu dira.</string>
+    <string name="rd_about_whats_new">%1$s bertsioaren berrikuntzak</string>
+    <string name="rd_customize_hint">Arrastatu kontrol bat barrako eremu batera, edo aukeratu eremu bat eta sakatu bertan jarri nahi dituzun kontrolak. Sakatu barrako kontrol bat hura mugitzeko edo kentzeko.</string>
+    <string name="rd_move_earlier">Mugitu ezkerrera</string>
+    <string name="rd_move_later">Mugitu eskuinera</string>
+    <string name="rd_audio_delay_summary">Soinua irudiarekiko atzeratzen du multimedia guztietan, ms-tan; balio negatibo batek lehenago erreproduzitzen du.</string>
+    <string name="rd_orange">Laranja</string>
+    <string name="rd_cyan">Ziana</string>
+    <string name="rd_pink">Arrosa</string>
+    <string name="rd_sec_notifications">Jakinarazpenak</string>
+    <string name="rd_fuzzy_1">Edozein azpititulu-fitxategi</string>
+    <string name="rd_fuzzy_2">Bideoaren izena duena</string>
+    <string name="rd_fuzzy_3">Bideoaren izena eta gehiago</string>
+    <string name="rd_fuzzy_4">Bideoaren izen zehatza</string>
+    <string name="rd_help_fuzzy">Azpititulu-fitxategi baten izenak bideoarenaren zenbaterainoko antza izan behar duen berez kargatzeko.</string>
+    <string name="rd_help_normalize">Bolumena berdintzen du multimedia isil eta zaratatsuen artean.</string>
+    <string name="rd_help_target_level">Soinu normalizatua zenbateraino igo daitekeen: handiagoa ozenagoa da.</string>
+    <string name="rd_help_night_mode">Eszena zaratatsuak baxuago eta elkarrizketa isilak ozenago jartzen ditu, gauean entzuteko.</string>
+    <string name="rd_help_loudness_android">Android-en audio-efektuak erabiltzen ditu VLC-ren soinuan (Android 9 eta berriagoak); ez zuzeneko igarotzearekin.</string>
+    <string name="rd_help_shadow_distance">Itzala testutik zenbat urruntzen den.</string>
+    <string name="rd_help_welcome">Hasierako konfigurazioa berriro irekitzen du: hizkuntza, itxura, liburutegia eta pribatutasuna.</string>
+    <string name="rd_help_deinterlace">Bideo gurutzelarkatuaren orrazi-lerroak kentzen ditu (telebista-grabazioak). VLC-k deskodetutako bideoan dabil, ez hardware-deskodetzailean.</string>
+    <string name="rd_ob_whole_device">Gailu osoa</string>
+    <string name="rd_ob_folders_count">%1$s eta beste %2$d</string>
+    <string name="rd_ob_online_text">Telemetriarik, iragarkirik eta konturik gabe: VLC for Android-ek ez du ezer bidaltzen bere kabuz. Aukera hauek Ezarpenak, Pribatutasuna atalean geratzen dira.</string>
+    <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
+    <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Bideo-erreproduzitzailearen kontrol-barra mahaigainekoa da: barra bat pantailaren ertzeraino, erreproduzitzeko botoia Aurrekoa eta Hurrengoaren artean, bilaketa-barra denborak alboetan dituela; lerro bat pantaila zabalean, bi pantaila estuan.</item>
+        <item>Unicode ez diren azpitituluak ondo erakusten dira: hebreera, arabiera, errusiera, greziera, turkiera, japoniera, txinera, koreera eta thailandierako fitxategiak beren letren eta izeneko hizkuntzaren bidez ezagutzen dira.</item>
+        <item>Honi buruz atalak interfazearen diseinua Juxtopposed-i aitortzen dio, diseinuaren estekekin, mahaigainean bezala.</item>
+    </string-array>
+</resources>

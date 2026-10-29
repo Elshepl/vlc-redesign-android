@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Hver skjerm kommer fra Figma-filen «VLC Redesign (Community)», lisensiert under CC BY 4.0. Den ble tilpasset Android, og ikonene ble tegnet på nytt.</string>
+    <string name="rd_about_whats_new">Nyheter i %1$s</string>
+    <string name="rd_customize_hint">Dra en kontroll til en sone på linjen, eller velg en sone og trykk på kontrollene som skal stå der. Trykk på en kontroll på linjen for å flytte den eller ta den bort.</string>
+    <string name="rd_move_earlier">Flytt til venstre</string>
+    <string name="rd_move_later">Flytt til høyre</string>
+    <string name="rd_audio_delay_summary">Forsinker lyden i forhold til bildet i alle medier, i ms; en negativ verdi spiller den av tidligere.</string>
+    <string name="rd_orange">Oransje</string>
+    <string name="rd_cyan">Cyan</string>
+    <string name="rd_pink">Rosa</string>
+    <string name="rd_sec_notifications">Varsler</string>
+    <string name="rd_fuzzy_1">Hvilken som helst undertekstfil</string>
+    <string name="rd_fuzzy_2">Inneholder videoens navn</string>
+    <string name="rd_fuzzy_3">Videoens navn og mer</string>
+    <string name="rd_fuzzy_4">Nøyaktig videoens navn</string>
+    <string name="rd_help_fuzzy">Hvor nær videoens navn navnet på en undertekstfil må være for at den lastes inn av seg selv.</string>
+    <string name="rd_help_normalize">Jevner ut lydstyrken mellom stille og høye medier.</string>
+    <string name="rd_help_target_level">Hvor høy normalisert lyd kan bli: høyere er sterkere.</string>
+    <string name="rd_help_night_mode">Demper høye scener og forsterker stille dialog, for lytting sent på kvelden.</string>
+    <string name="rd_help_loudness_android">Bruker Androids lydeffekter på lyden fra VLC (Android 9 og nyere); ikke med lydgjennomføring.</string>
+    <string name="rd_help_shadow_distance">Hvor langt skyggen faller fra teksten.</string>
+    <string name="rd_help_welcome">Åpner førstegangsoppsettet igjen: språk, utseende, bibliotek og personvern.</string>
+    <string name="rd_help_deinterlace">Fjerner kamlinjene i linjeflettet video (TV-opptak). Virker på video som VLC dekoder, ikke maskinvaredekoderen.</string>
+    <string name="rd_ob_whole_device">Hele enheten</string>
+    <string name="rd_ob_folders_count">%1$s og %2$d til</string>
+    <string name="rd_ob_online_text">Ingen telemetri, ingen reklame, ingen konto: VLC for Android sender ingenting av seg selv. Disse valgene ligger i Innstillinger, Personvern.</string>
+    <string name="rd_ob_history_help">Lagres bare på denne enheten, så du kan fortsette der du slapp.</string>
+    <string name="rd_ob_updates_help">Ser etter en nyere testversjon av VLC for Android én gang om dagen.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Videospillerens kontrollinje er den samme som på datamaskinen: én linje helt ut til skjermkantene, avspillingsknappen mellom Forrige og Neste, søkefeltet med tidene på hver side; én rad på en bred skjerm, to på en smal.</item>
+        <item>Undertekster som ikke er Unicode, vises riktig: hebraiske, arabiske, russiske, greske, tyrkiske, japanske, kinesiske, koreanske og thailandske filer gjenkjennes på bokstavene og språket i navnet.</item>
+        <item>Om krediterer Juxtopposed for utformingen av grensesnittet, med lenkene til designet, som på datamaskinen.</item>
+    </string-array>
+</resources>

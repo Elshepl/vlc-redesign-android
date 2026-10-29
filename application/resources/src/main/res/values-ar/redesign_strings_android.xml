@@ -3,4 +3,37 @@
      (import_strings.py does not rewrite this file) -->
 <resources>
     <string name="home">الرئيسية</string>
+    <string name="rd_about_design_source">كل الشاشات مأخوذة من ملف Figma \"VLC Redesign (Community)\"‎ المرخّص بموجب CC BY 4.0. وقد كُيّفت لـ Android وأُعيد رسم أيقوناتها.</string>
+    <string name="rd_about_whats_new">ما الجديد في %1$s</string>
+    <string name="rd_customize_hint">اسحب عنصر تحكم إلى منطقة في الشريط، أو اختر منطقة واضغط على عناصر التحكم التي تريد وضعها فيها. اضغط على عنصر تحكم في الشريط لنقله أو إزالته.</string>
+    <string name="rd_move_earlier">نقل إلى اليسار</string>
+    <string name="rd_move_later">نقل إلى اليمين</string>
+    <string name="rd_audio_delay_summary">يؤخّر الصوت بالنسبة إلى الصورة في كل الوسائط، بالمللي ثانية؛ والقيمة السالبة تشغّله أبكر.</string>
+    <string name="rd_orange">برتقالي</string>
+    <string name="rd_cyan">سماوي</string>
+    <string name="rd_pink">وردي</string>
+    <string name="rd_sec_notifications">الإشعارات</string>
+    <string name="rd_fuzzy_1">أي ملف ترجمة</string>
+    <string name="rd_fuzzy_2">يحتوي على اسم الفيديو</string>
+    <string name="rd_fuzzy_3">اسم الفيديو وأكثر</string>
+    <string name="rd_fuzzy_4">اسم الفيديو تمامًا</string>
+    <string name="rd_help_fuzzy">مدى قرب اسم ملف الترجمة من اسم الفيديو حتى يُحمَّل تلقائيًا.</string>
+    <string name="rd_help_normalize">يوازن مستوى الصوت بين الوسائط الهادئة والصاخبة.</string>
+    <string name="rd_help_target_level">إلى أي حد يمكن أن يرتفع الصوت الموحَّد: القيمة الأعلى أعلى صوتًا.</string>
+    <string name="rd_help_night_mode">يخفض صوت المشاهد الصاخبة ويرفع الحوار الهادئ، للاستماع في وقت متأخر.</string>
+    <string name="rd_help_loudness_android">يستخدم مؤثرات الصوت في Android على صوت VLC (‏Android 9 وما بعده)؛ لا يعمل مع التمرير المباشر.</string>
+    <string name="rd_help_shadow_distance">مدى بُعد الظل عن النص.</string>
+    <string name="rd_help_welcome">يفتح الإعداد الأولي مجددًا: اللغة والمظهر والمكتبة والخصوصية.</string>
+    <string name="rd_help_deinterlace">يزيل خطوط المشط من الفيديو المتشابك (تسجيلات التلفاز). يعمل على الفيديو الذي يفك VLC ترميزه، لا على مفكّك ترميز العتاد.</string>
+    <string name="rd_help_threads">عدد مسارات المعالجة المستخدمة لفك الترميز، و0 يعني تلقائيًا</string>
+    <string name="rd_ob_whole_device">الجهاز بأكمله</string>
+    <string name="rd_ob_folders_count">%1$s و%2$d أخرى</string>
+    <string name="rd_ob_online_text">لا قياس عن بُعد، ولا إعلانات، ولا حساب: لا يرسل VLC for Android أي شيء من تلقاء نفسه. تبقى هذه الخيارات في الإعدادات، الخصوصية.</string>
+    <string name="rd_ob_history_help">يُحفظ على هذا الجهاز فقط، للمتابعة من حيث توقفت.</string>
+    <string name="rd_ob_updates_help">يبحث مرة في اليوم عن إصدار تجريبي أحدث من VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>شريط التحكم في مشغل الفيديو هو نفسه في نسخة سطح المكتب: شريط واحد حتى حواف الشاشة، وزر التشغيل بين السابق والتالي، وشريط التقديم والأوقات على جانبيه؛ صف واحد على الشاشة العريضة، وصفّان على الشاشة الضيقة.</item>
+        <item>تظهر الترجمات غير المرمّزة بـ Unicode بشكل صحيح: يُتعرَّف على ملفات العبرية والعربية والروسية واليونانية والتركية واليابانية والصينية والكورية والتايلاندية من حروفها ومن اللغة الواردة في اسمها.</item>
+        <item>تنسب صفحة «حول» تصميم الواجهة إلى Juxtopposed، مع روابط التصميم، كما في نسخة سطح المكتب.</item>
+    </string-array>
 </resources>

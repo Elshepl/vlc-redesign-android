@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Iga ekraan pärineb Figma failist „VLC Redesign (Community)“, mis on litsentsitud CC BY 4.0 alusel. See kohandati Androidi jaoks ja selle ikoonid joonistati uuesti.</string>
+    <string name="rd_about_whats_new">Mis on uut versioonis %1$s</string>
+    <string name="rd_customize_hint">Lohista juhtnupp riba tsooni või vali tsoon ja puuduta juhtnuppe, mis sinna tulevad. Puuduta riba juhtnuppu, et seda liigutada või eemaldada.</string>
+    <string name="rd_move_earlier">Liiguta vasakule</string>
+    <string name="rd_move_later">Liiguta paremale</string>
+    <string name="rd_audio_delay_summary">Viivitab heli pildi suhtes kõigis meediafailides, millisekundites; negatiivne väärtus esitab selle varem.</string>
+    <string name="rd_orange">Oranž</string>
+    <string name="rd_cyan">Tsüaan</string>
+    <string name="rd_pink">Roosa</string>
+    <string name="rd_sec_notifications">Teavitused</string>
+    <string name="rd_fuzzy_1">Iga subtiitrifail</string>
+    <string name="rd_fuzzy_2">Sisaldab video nime</string>
+    <string name="rd_fuzzy_3">Video nimi ja muud</string>
+    <string name="rd_fuzzy_4">Täpselt video nimi</string>
+    <string name="rd_help_fuzzy">Kui lähedane peab subtiitrifaili nimi olema video nimele, et see iseenesest laaditaks.</string>
+    <string name="rd_help_normalize">Ühtlustab helitugevust vaikse ja valju meedia vahel.</string>
+    <string name="rd_help_target_level">Kui valjuks normaliseeritud heli võib minna: suurem on valjem.</string>
+    <string name="rd_help_night_mode">Muudab valjud stseenid vaiksemaks ja vaikse kõne valjemaks, hiliseks kuulamiseks.</string>
+    <string name="rd_help_loudness_android">Kasutab VLC helil Androidi heliefekte (Android 9 ja uuemad); mitte koos läbilaskmisega.</string>
+    <string name="rd_help_shadow_distance">Kui kaugele tekstist vari langeb.</string>
+    <string name="rd_help_welcome">Avab uuesti algseadistuse: keel, välimus, meediakogu ja privaatsus.</string>
+    <string name="rd_help_deinterlace">Eemaldab ülerealaotusega video (telesalvestiste) kammjooned. Toimib videol, mida dekodeerib VLC, mitte riistvaraline dekooder.</string>
+    <string name="rd_ob_whole_device">Kogu seade</string>
+    <string name="rd_ob_folders_count">%1$s ja veel %2$d</string>
+    <string name="rd_ob_online_text">Telemeetriat, reklaame ega kontot pole: VLC for Android ei saada iseenesest midagi. Need valikud jäävad menüüsse Sätted, Privaatsus.</string>
+    <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
+    <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Videopleieri juhtriba on sama mis arvutiversioonis: üks riba ekraani servadeni, esitusnupp nuppude Eelmine ja Järgmine vahel, kerimisriba, mille kõrval on ajad; üks rida laial ekraanil, kaks kitsal.</item>
+        <item>Subtiitrid, mis pole Unicode’is, kuvatakse õigesti: heebrea, araabia, vene, kreeka, türgi, jaapani, hiina, korea ja tai failid tuvastatakse nende tähtede ja nimes oleva keele järgi.</item>
+        <item>Teave tunnustab Juxtopposedit kasutajaliidese kujunduse eest ja annab lingid kujundusele, nagu arvutiversioonis.</item>
+    </string-array>
+</resources>

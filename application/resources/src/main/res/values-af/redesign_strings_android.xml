@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Elke skerm kom uit die Figma-lêer \"VLC Redesign (Community)\", gelisensieer onder CC BY 4.0. Dit is na Android aangepas en sy ikone is oorgeteken.</string>
+    <string name="rd_about_whats_new">Wat is nuut in %1$s</string>
+    <string name="rd_customize_hint">Sleep ’n kontrole na ’n sone van die balk, of kies ’n sone en tik op die kontroles wat daarin moet kom. Tik op ’n kontrole van die balk om dit te skuif of uit te haal.</string>
+    <string name="rd_move_earlier">Skuif links</string>
+    <string name="rd_move_later">Skuif regs</string>
+    <string name="rd_audio_delay_summary">Vertraag die klank teenoor die beeld in alle media, in ms; ’n negatiewe waarde speel dit vroeër.</string>
+    <string name="rd_orange">Oranje</string>
+    <string name="rd_cyan">Siaan</string>
+    <string name="rd_pink">Pienk</string>
+    <string name="rd_sec_notifications">Kennisgewings</string>
+    <string name="rd_fuzzy_1">Enige onderskriflêer</string>
+    <string name="rd_fuzzy_2">Bevat die video se naam</string>
+    <string name="rd_fuzzy_3">Die video se naam en meer</string>
+    <string name="rd_fuzzy_4">Presies die video se naam</string>
+    <string name="rd_help_fuzzy">Hoe na die naam van ’n onderskriflêer aan dié van die video moet wees om dit vanself te laai.</string>
+    <string name="rd_help_normalize">Maak die volume eweredig tussen stil en harde media.</string>
+    <string name="rd_help_target_level">Hoe hard genormaliseerde klank mag word: hoër is harder.</string>
+    <string name="rd_help_night_mode">Maak harde tonele sagter en sagte dialoog harder, om laat te luister.</string>
+    <string name="rd_help_loudness_android">Gebruik Android se oudio-effekte op VLC se klank (Android 9 en later); nie met deurlaat nie.</string>
+    <string name="rd_help_shadow_distance">Hoe ver die skadu van die teks af val.</string>
+    <string name="rd_help_welcome">Maak die eerste opstelling weer oop: taal, voorkoms, biblioteek en privaatheid.</string>
+    <string name="rd_help_deinterlace">Verwyder die kamlyne van geïnterlinieerde video (TV-opnames). Werk op video wat VLC dekodeer, nie die hardeware-dekodeerder nie.</string>
+    <string name="rd_help_sub_margin">U kan hierdie opsie gebruik om die onderskrifte onder die fliek te plaas, in plaas van oor die fliek. Probeer verskeie posisies.</string>
+    <string name="rd_help_threads">Aantal drade wat vir dekodering gebruik word, 0 beteken outomaties</string>
+    <string name="rd_ob_whole_device">Die hele toestel</string>
+    <string name="rd_ob_folders_count">%1$s en nog %2$d</string>
+    <string name="rd_ob_online_text">Geen telemetrie, geen advertensies, geen rekening nie: VLC for Android stuur niks uit sy eie nie. Hierdie keuses bly in Instellings, Privaatheid.</string>
+    <string name="rd_ob_history_help">Net op hierdie toestel gehou, om voort te gaan waar jy opgehou het.</string>
+    <string name="rd_ob_updates_help">Soek een keer per dag na ’n nuwer toetsweergawe van VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Die videospeler se kontrolebalk is dié van die rekenaarweergawe: een balk tot by die skermrande, die speelknoppie tussen Vorige en Volgende, die soekbalk met die tye aan weerskante; een ry op ’n breë skerm, twee op ’n smal skerm.</item>
+        <item>Onderskrifte wat nie Unicode is nie, word reg gewys: Hebreeuse, Arabiese, Russiese, Griekse, Turkse, Japannese, Chinese, Koreaanse en Thaise lêers word herken aan hul letters en die taal in hul naam.</item>
+        <item>Oor erken Juxtopposed as die ontwerper van die koppelvlak, met die skakels na die ontwerp, soos op die rekenaar.</item>
+    </string-array>
+</resources>

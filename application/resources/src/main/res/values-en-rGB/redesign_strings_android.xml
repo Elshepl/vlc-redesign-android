@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: British spelling of the redesign strings whose English differs (there is no desktop
+     en_GB redesign catalogue, and import_strings.py, which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_customize_player">Customise Player</string>
+    <string name="rd_zone_center">Centre</string>
+    <string name="rd_accent_color">Accent colour</string>
+    <string name="rd_gray">Grey</string>
+    <string name="rd_normalize_loudness">Normalise loudness</string>
+    <string name="rd_text_color">Text colour</string>
+    <string name="rd_outline_color">Outline colour</string>
+    <string name="rd_shadow_color">Shadow colour</string>
+    <string name="rd_background_color">Background colour</string>
+    <string name="rd_help_target_level">How loud normalised sound may get: higher is louder.</string>
+    <string name="rd_accent_named">Accent colour %1$s</string>
+    <string name="rd_ob_theme_title">Select your preferred theme and colour.</string>
+</resources>

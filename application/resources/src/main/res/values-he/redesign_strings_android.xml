@@ -2,6 +2,8 @@
 <!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
      which rewrites redesign_strings.xml, keeps away from this file). -->
 <resources>
+    <string name="rd_about_design_source">כל המסכים לקוחים מקובץ ה־Figma „VLC Redesign (Community)“, ברישיון CC BY 4.0. הם הותאמו ל־Android והסמלים צוירו מחדש.</string>
+    <string name="rd_about_whats_new">מה חדש ב־%1$s</string>
     <string name="rd_customize_hint">גררו פקד אל אזור בסרגל, או בחרו אזור והקישו על הפקדים שיוצבו בו. הקשה על פקד בסרגל מזיזה אותו או מוציאה אותו.</string>
     <string name="rd_move_earlier">הזזה שמאלה</string>
     <string name="rd_move_later">הזזה ימינה</string>
@@ -22,4 +24,14 @@
     <string name="rd_help_shadow_distance">כמה רחוק הצל נופל מהטקסט.</string>
     <string name="rd_help_welcome">פותח שוב את ההגדרה הראשונית: שפה, מראה, ספרייה ופרטיות.</string>
     <string name="rd_help_deinterlace">מסיר את קווי המסרק של וידאו משולב (הקלטות טלוויזיה). פועל על וידאו ש-VLC מפענח, לא המפענח של החומרה.</string>
+    <string name="rd_ob_whole_device">המכשיר כולו</string>
+    <string name="rd_ob_folders_count">%1$s ועוד %2$d</string>
+    <string name="rd_ob_online_text">ללא טלמטריה, ללא פרסומות, ללא חשבון: VLC for Android לא שולח דבר מעצמו. הבחירות האלה נשארות בהגדרות, תחת פרטיות.</string>
+    <string name="rd_ob_history_help">נשמר במכשיר הזה בלבד, כדי להמשיך מהמקום שבו הפסקת.</string>
+    <string name="rd_ob_updates_help">מחפש גרסת בדיקה חדשה יותר של VLC for Android פעם ביום.</string>
+    <string-array name="rd_whats_new_items">
+        <item>סרגל הפקדים של נגן הווידאו הוא זה של גרסת המחשב: סרגל אחד עד קצות המסך, כפתור הניגון בין הקודם להבא, פס ההרצה עם הזמנים משני צדדיו; שורה אחת במסך רחב, שתיים במסך צר.</item>
+        <item>כתוביות שאינן ב־Unicode מוצגות כראוי: קבצים בעברית, ערבית, רוסית, יוונית, טורקית, יפנית, סינית, קוריאנית ותאית מזוהים לפי האותיות שלהם והשפה שבשמם.</item>
+        <item>מסך האודות נותן קרדיט על עיצוב הממשק ל־Juxtopposed, עם הקישורים לעיצוב, כמו בגרסת המחשב.</item>
+    </string-array>
 </resources>

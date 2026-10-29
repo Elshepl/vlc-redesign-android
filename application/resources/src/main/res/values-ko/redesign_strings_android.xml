@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">모든 화면은 CC BY 4.0 라이선스로 배포되는 \"VLC Redesign (Community)\" Figma 파일에서 가져왔습니다. Android에 맞게 조정했으며 아이콘은 새로 그렸습니다.</string>
+    <string name="rd_about_whats_new">%1$s의 새로운 기능</string>
+    <string name="rd_customize_hint">컨트롤을 바의 영역으로 끌어 놓거나, 영역을 선택한 다음 넣을 컨트롤을 누르세요. 바에 있는 컨트롤을 누르면 옮기거나 뺄 수 있습니다.</string>
+    <string name="rd_move_earlier">왼쪽으로 이동</string>
+    <string name="rd_move_later">오른쪽으로 이동</string>
+    <string name="rd_audio_delay_summary">모든 미디어에서 소리를 화면보다 늦춥니다(밀리초 단위). 음수 값은 소리를 더 일찍 재생합니다.</string>
+    <string name="rd_orange">주황색</string>
+    <string name="rd_cyan">청록색</string>
+    <string name="rd_pink">분홍색</string>
+    <string name="rd_sec_notifications">알림</string>
+    <string name="rd_fuzzy_1">모든 자막 파일</string>
+    <string name="rd_fuzzy_2">동영상 이름 포함</string>
+    <string name="rd_fuzzy_3">동영상 이름과 추가 문자</string>
+    <string name="rd_fuzzy_4">동영상 이름과 정확히 일치</string>
+    <string name="rd_help_fuzzy">자막 파일이 자동으로 불러와지려면 그 이름이 동영상 이름과 얼마나 비슷해야 하는지 정합니다.</string>
+    <string name="rd_help_normalize">조용한 미디어와 시끄러운 미디어의 음량 차이를 고르게 맞춥니다.</string>
+    <string name="rd_help_target_level">정규화된 소리가 얼마나 커질 수 있는지 정합니다. 높을수록 커집니다.</string>
+    <string name="rd_help_night_mode">큰 장면은 작게, 작은 대사는 크게 만들어 늦은 시간에 듣기 좋게 합니다.</string>
+    <string name="rd_help_loudness_android">VLC의 소리에 Android 오디오 효과를 사용합니다(Android 9 이상). 패스스루와는 함께 쓸 수 없습니다.</string>
+    <string name="rd_help_shadow_distance">그림자가 글자에서 얼마나 떨어져 있는지 정합니다.</string>
+    <string name="rd_help_welcome">초기 설정(언어, 모양, 라이브러리, 개인정보)을 다시 엽니다.</string>
+    <string name="rd_help_deinterlace">인터레이스 동영상(TV 녹화)의 빗살 무늬를 없앱니다. VLC가 디코딩하는 동영상에만 적용되며 하드웨어 디코더에는 적용되지 않습니다.</string>
+    <string name="rd_ob_whole_device">기기 전체</string>
+    <string name="rd_ob_folders_count">%1$s 외 %2$d개</string>
+    <string name="rd_ob_online_text">원격 분석, 광고, 계정이 없습니다. VLC for Android는 스스로 아무것도 보내지 않습니다. 이 선택은 설정의 개인정보에서 언제든 바꿀 수 있습니다.</string>
+    <string name="rd_ob_history_help">이 기기에만 저장되며, 멈춘 곳부터 이어서 보는 데 쓰입니다.</string>
+    <string name="rd_ob_updates_help">하루에 한 번 VLC for Android의 새 테스트 빌드를 확인합니다.</string>
+    <string-array name="rd_whats_new_items">
+        <item>동영상 플레이어의 컨트롤 바가 데스크톱과 같아졌습니다. 화면 끝까지 이어지는 하나의 바, 이전과 다음 사이의 재생 버튼, 양옆에 시간이 표시되는 탐색 막대. 넓은 화면에서는 한 줄, 좁은 화면에서는 두 줄로 표시됩니다.</item>
+        <item>Unicode가 아닌 자막도 올바르게 표시됩니다. 히브리어, 아랍어, 러시아어, 그리스어, 터키어, 일본어, 중국어, 한국어, 태국어 파일을 글자와 파일 이름에 있는 언어로 알아봅니다.</item>
+        <item>정보 화면에 데스크톱처럼 인터페이스 디자이너 Juxtopposed의 크레딧과 디자인 링크가 표시됩니다.</item>
+    </string-array>
+</resources>

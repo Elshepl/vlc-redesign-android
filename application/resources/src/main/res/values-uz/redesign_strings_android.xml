@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Barcha ekranlar CC BY 4.0 litsenziyasi ostidagi \"VLC Redesign (Community)\" Figma faylidan olingan. U Android uchun moslashtirilgan va belgilari qayta chizilgan.</string>
+    <string name="rd_about_whats_new">%1$s versiyasida nima yangi</string>
+    <string name="rd_customize_hint">Boshqaruv elementini panelning biror hududiga torting yoki hududni tanlab, unga qo‘yiladigan elementlarga bosing. Paneldagi elementni ko‘chirish yoki olib tashlash uchun unga bosing.</string>
+    <string name="rd_move_earlier">Chapga surish</string>
+    <string name="rd_move_later">O‘ngga surish</string>
+    <string name="rd_audio_delay_summary">Barcha medialarda ovozni tasvirga nisbatan kechiktiradi, millisekundlarda; manfiy qiymat uni oldinroq ijro etadi.</string>
+    <string name="rd_orange">To‘q sariq</string>
+    <string name="rd_cyan">Moviy</string>
+    <string name="rd_pink">Pushti</string>
+    <string name="rd_sec_notifications">Bildirishnomalar</string>
+    <string name="rd_fuzzy_1">Istalgan subtitr fayli</string>
+    <string name="rd_fuzzy_2">Video nomini o‘z ichiga olgan</string>
+    <string name="rd_fuzzy_3">Video nomi va qo‘shimcha</string>
+    <string name="rd_fuzzy_4">Aynan video nomi</string>
+    <string name="rd_help_fuzzy">Subtitr fayli o‘z-o‘zidan yuklanishi uchun uning nomi video nomiga qanchalik yaqin bo‘lishi kerakligi.</string>
+    <string name="rd_help_normalize">Past va baland ovozli medialar orasidagi ovoz balandligini tenglashtiradi.</string>
+    <string name="rd_help_target_level">Normallashtirilgan ovoz qanchalik baland bo‘lishi mumkin: qiymat yuqori bo‘lsa, ovoz balandroq.</string>
+    <string name="rd_help_night_mode">Kechqurun tinglash uchun shovqinli sahnalarni pasaytiradi va past ovozdagi suhbatni balandlatadi.</string>
+    <string name="rd_help_loudness_android">VLC ovoziga Android audio effektlarini qo‘llaydi (Android 9 va undan yuqori); passthrough bilan ishlamaydi.</string>
+    <string name="rd_help_shadow_distance">Soya matndan qanchalik uzoqqa tushishi.</string>
+    <string name="rd_help_welcome">Dastlabki sozlashni qayta ochadi: til, ko‘rinish, kutubxona va maxfiylik.</string>
+    <string name="rd_help_deinterlace">Satrlararo videodagi (TV yozuvlari) taroqsimon chiziqlarni olib tashlaydi. Apparat dekoderi emas, VLC dekodlagan videoda ishlaydi.</string>
+    <string name="rd_ob_whole_device">Butun qurilma</string>
+    <string name="rd_ob_folders_count">%1$s va yana %2$d ta</string>
+    <string name="rd_ob_online_text">Telemetriya yo‘q, reklama yo‘q, hisob yo‘q: VLC for Android o‘zicha hech narsa yubormaydi. Bu tanlovlar Sozlamalar, Maxfiylik bo‘limida qoladi.</string>
+    <string name="rd_ob_history_help">Faqat shu qurilmada saqlanadi, to‘xtagan joyingizdan davom ettirish uchun.</string>
+    <string name="rd_ob_updates_help">Kuniga bir marta VLC for Android ning yangiroq sinov versiyasini qidiradi.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Video pleyerning boshqaruv paneli kompyuter versiyasidagidek: ekran chetlarigacha bitta panel, Oldingi va Keyingi orasida ijro tugmasi, ikki yonida vaqt ko‘rsatilgan o‘tkazish chizig‘i; keng ekranda bir qator, tor ekranda ikki qator.</item>
+        <item>Unicode bo‘lmagan subtitrlar to‘g‘ri ko‘rsatiladi: ibroniy, arab, rus, yunon, turk, yapon, xitoy, koreys va tay tilidagi fayllar harflari va nomidagi til orqali aniqlanadi.</item>
+        <item>“Haqida” bo‘limi kompyuter versiyasidagidek interfeys dizayni uchun Juxtopposed ni dizayn havolalari bilan birga ko‘rsatadi.</item>
+    </string-array>
+</resources>

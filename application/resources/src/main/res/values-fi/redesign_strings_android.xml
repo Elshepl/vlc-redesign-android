@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Jokainen näkymä on peräisin Figma-tiedostosta ”VLC Redesign (Community)”, jonka lisenssi on CC BY 4.0. Se on sovitettu Androidille ja sen kuvakkeet on piirretty uudelleen.</string>
+    <string name="rd_about_whats_new">Uutta versiossa %1$s</string>
+    <string name="rd_customize_hint">Vedä säädin palkin alueelle, tai valitse alue ja napauta säätimiä, jotka siihen tulevat. Napauta palkin säädintä siirtääksesi sen tai poistaaksesi sen.</string>
+    <string name="rd_move_earlier">Siirrä vasemmalle</string>
+    <string name="rd_move_later">Siirrä oikealle</string>
+    <string name="rd_audio_delay_summary">Viivästää ääntä suhteessa kuvaan kaikessa mediassa, millisekunteina; negatiivinen arvo toistaa sen aikaisemmin.</string>
+    <string name="rd_orange">Oranssi</string>
+    <string name="rd_cyan">Syaani</string>
+    <string name="rd_pink">Vaaleanpunainen</string>
+    <string name="rd_sec_notifications">Ilmoitukset</string>
+    <string name="rd_fuzzy_1">Mikä tahansa tekstitystiedosto</string>
+    <string name="rd_fuzzy_2">Sisältää videon nimen</string>
+    <string name="rd_fuzzy_3">Videon nimi ja muuta</string>
+    <string name="rd_fuzzy_4">Täsmälleen videon nimi</string>
+    <string name="rd_help_fuzzy">Kuinka lähellä videon nimeä tekstitystiedoston nimen on oltava, jotta se ladataan itsestään.</string>
+    <string name="rd_help_normalize">Tasoittaa äänenvoimakkuutta hiljaisen ja äänekkään median välillä.</string>
+    <string name="rd_help_target_level">Kuinka voimakkaaksi normalisoitu ääni saa nousta: suurempi on voimakkaampi.</string>
+    <string name="rd_help_night_mode">Hiljentää äänekkäitä kohtauksia ja voimistaa hiljaista puhetta myöhäistä kuuntelua varten.</string>
+    <string name="rd_help_loudness_android">Käyttää Androidin äänitehosteita VLC:n ääneen (Android 9 ja uudemmat); ei läpiviennin kanssa.</string>
+    <string name="rd_help_shadow_distance">Kuinka kauas tekstistä varjo osuu.</string>
+    <string name="rd_help_welcome">Avaa ensimmäisen käynnistyksen asetukset uudelleen: kieli, ulkoasu, kirjasto ja tietosuoja.</string>
+    <string name="rd_help_deinterlace">Poistaa lomitetun videon (TV-tallenteiden) kampamaiset viivat. Toimii videoon, jonka VLC dekoodaa, ei laitteistodekooderiin.</string>
+    <string name="rd_ob_whole_device">Koko laite</string>
+    <string name="rd_ob_folders_count">%1$s ja %2$d muuta</string>
+    <string name="rd_ob_online_text">Ei telemetriaa, ei mainoksia, ei tiliä: VLC for Android ei lähetä mitään itsestään. Nämä valinnat löytyvät kohdasta Asetukset, Tietosuoja.</string>
+    <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
+    <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Videosoittimen ohjauspalkki on sama kuin työpöytäversiossa: yksi palkki näytön reunoihin asti, toistopainike Edellisen ja Seuraavan välissä, siirtymäpalkki ajat sivuillaan; yksi rivi leveällä näytöllä, kaksi kapealla.</item>
+        <item>Muut kuin Unicode-tekstitykset näkyvät oikein: heprean-, arabian-, venäjän-, kreikan-, turkin-, japanin-, kiinan-, korean- ja thainkieliset tiedostot tunnistetaan kirjaimistaan ja nimessä olevasta kielestä.</item>
+        <item>Tietoja-näkymä mainitsee käyttöliittymän suunnittelijana Juxtopposedin ja antaa linkit suunnitelmaan, kuten työpöytäversiossa.</item>
+    </string-array>
+</resources>

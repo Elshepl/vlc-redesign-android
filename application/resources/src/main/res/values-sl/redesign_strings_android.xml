@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_about_design_source">Vsak zaslon izhaja iz datoteke Figma »VLC Redesign (Community)«, ki je na voljo pod licenco CC BY 4.0. Prilagojena je bila za Android, njene ikone pa so bile na novo narisane.</string>
+    <string name="rd_about_whats_new">Novosti v različici %1$s</string>
+    <string name="rd_customize_hint">Kontrolnik povlecite v območje vrstice ali izberite območje in tapnite kontrolnike, ki naj bodo v njem. Tapnite kontrolnik v vrstici, da ga premaknete ali odstranite.</string>
+    <string name="rd_move_earlier">Premakni levo</string>
+    <string name="rd_move_later">Premakni desno</string>
+    <string name="rd_audio_delay_summary">Zamakne zvok glede na sliko pri vseh medijih, v ms; negativna vrednost ga predvaja prej.</string>
+    <string name="rd_orange">Oranžna</string>
+    <string name="rd_cyan">Cian</string>
+    <string name="rd_pink">Rožnata</string>
+    <string name="rd_sec_notifications">Obvestila</string>
+    <string name="rd_fuzzy_1">Katera koli datoteka podnapisov</string>
+    <string name="rd_fuzzy_2">Vsebuje ime videa</string>
+    <string name="rd_fuzzy_3">Ime videa in še kaj</string>
+    <string name="rd_fuzzy_4">Natanko ime videa</string>
+    <string name="rd_help_fuzzy">Kako blizu imenu videa mora biti ime datoteke podnapisov, da se naloži sama.</string>
+    <string name="rd_help_normalize">Izenači glasnost med tihimi in glasnimi mediji.</string>
+    <string name="rd_help_target_level">Kako glasen sme biti normaliziran zvok: višje je glasneje.</string>
+    <string name="rd_help_night_mode">Utiša glasne prizore in ojača tihe pogovore, za poslušanje pozno zvečer.</string>
+    <string name="rd_help_loudness_android">Uporabi zvočne učinke Androida na zvoku VLC (Android 9 in novejši); ne pri posredovanju stisnjenega zvoka.</string>
+    <string name="rd_help_shadow_distance">Kako daleč od besedila pade senca.</string>
+    <string name="rd_help_welcome">Znova odpre začetno nastavitev: jezik, videz, zbirko in zasebnost.</string>
+    <string name="rd_help_deinterlace">Odstrani »glavnik« prepletenega videa (televizijski posnetki). Deluje pri videu, ki ga dekodira VLC, ne strojni dekodirnik.</string>
+    <string name="rd_ob_whole_device">Celotna naprava</string>
+    <string name="rd_ob_folders_count">%1$s in drugih: %2$d</string>
+    <string name="rd_ob_online_text">Brez telemetrije, brez oglasov, brez računa: VLC for Android sam ne pošilja ničesar. Te izbire ostanejo v Nastavitvah, pod Zasebnost.</string>
+    <string name="rd_ob_history_help">Shranjeno samo v tej napravi, da lahko nadaljujete tam, kjer ste končali.</string>
+    <string name="rd_ob_updates_help">Enkrat na dan poišče novejšo preizkusno izdajo VLC for Android.</string>
+    <string-array name="rd_whats_new_items">
+        <item>Vrstica kontrolnikov predvajalnika videa je enaka kot v namizni različici: ena vrstica do robov zaslona, gumb za predvajanje med Prejšnji in Naslednji, drsnik za iskanje s časi ob straneh; ena vrstica na širokem zaslonu, dve na ozkem.</item>
+        <item>Podnapisi, ki niso v Unicode, se prikažejo pravilno: datoteke v hebrejščini, arabščini, ruščini, grščini, turščini, japonščini, kitajščini, korejščini in tajščini se prepoznajo po črkah in po jeziku v imenu.</item>
+        <item>Razdelek O programu navaja avtorja oblikovanja vmesnika, Juxtopposed, s povezavami do oblikovanja, kot v namizni različici.</item>
+    </string-array>
+</resources>
