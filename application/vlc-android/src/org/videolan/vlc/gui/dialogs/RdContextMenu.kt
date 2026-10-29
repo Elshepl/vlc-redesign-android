@@ -183,10 +183,12 @@ object RdContextMenu {
                 typeface = inter
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
                 setTextColor(textColor)
-                maxLines = 1
+                // the menu is as wide as its longest entry (up to 300 dp): a longer one (German, a large font) takes
+                // a second line rather than an ellipsis
+                maxLines = 2
                 ellipsize = android.text.TextUtils.TruncateAt.END
                 textAlignment = View.TEXT_ALIGNMENT_VIEW_START
-                // the menu is as wide as its longest entry (up to 300 dp): a longer one is cut with an ellipsis
+                setPadding(0, 4.dp, 0, 4.dp)
                 maxWidth = (MAX_WIDTH_DP - 60).dp
             }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT))
             column.addView(row, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
