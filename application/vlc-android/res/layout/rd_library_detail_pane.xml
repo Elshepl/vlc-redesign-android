@@ -42,19 +42,29 @@
             android:textColor="@color/rd_fg_a1"
             android:textSize="14sp" />
 
-        <LinearLayout
+        <!-- the two buttons never wider than the pane: a long translation ("Zufallswiedergabe" at a large font)
+             goes on to a second line instead of being cut -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="horizontal">
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/rd_detail_play"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
+                android:minHeight="36dp"
+                android:maxLines="2"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rd_detail_shuffle"
+                app:layout_constraintTop_toTopOf="parent"
                 android:background="@drawable/rd_onboarding_next_bg"
                 android:drawablePadding="6dp"
                 android:fontFamily="@font/inter"
@@ -69,7 +79,14 @@
             <TextView
                 android:id="@+id/rd_detail_shuffle"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
+                android:minHeight="36dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toEndOf="@+id/rd_detail_play"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/rd_pref_button_bg"
                 android:fontFamily="@font/inter"
@@ -80,7 +97,7 @@
                 android:textColor="@color/rd_fg_1"
                 android:textFontWeight="500"
                 android:textSize="14sp" />
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rd_detail_list"

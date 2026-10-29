@@ -541,6 +541,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         // too, also when the app or the system is light (they were light cards and toggles over the video)
         delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
         super.onCreate(savedInstanceState)
+        // with a light system, the night mode above rebuilds the theme in super.onCreate() and drops the accent
+        // (the player was orange with the blue accent in light mode only): applied again before the views
+        applyAccent(alwaysDark = true)
 
         dialogsDelegate.observeDialogs(this, this)
         Util.checkCpuCompatibility(this)
