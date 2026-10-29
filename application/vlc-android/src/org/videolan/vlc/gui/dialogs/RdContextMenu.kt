@@ -184,9 +184,11 @@ object RdContextMenu {
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
                 setTextColor(textColor)
                 // the menu is as wide as its longest entry (up to 300 dp): a longer one (German, a large font) takes
-                // a second line rather than an ellipsis
-                maxLines = 2
+                // more lines rather than an ellipsis, a long word ("Wiedergabewarteschlange") hyphenated
+                maxLines = 3
                 ellipsize = android.text.TextUtils.TruncateAt.END
+                hyphenationFrequency = android.text.Layout.HYPHENATION_FREQUENCY_NORMAL
+                breakStrategy = android.text.Layout.BREAK_STRATEGY_HIGH_QUALITY
                 textAlignment = View.TEXT_ALIGNMENT_VIEW_START
                 setPadding(0, 4.dp, 0, 4.dp)
                 maxWidth = (MAX_WIDTH_DP - 60).dp
