@@ -10,8 +10,8 @@ Writes into application/resources/src/main/res:
   drawable/rd_ic_*.xml              vector drawables from icons/svg and icons/svg/duo (rd_ic_duo_*)
 and the font licences into application/resources/src/main/assets/licenses/.
 
-Standard library only, except the speed icons (fontTools) and the old launcher bitmaps (Pillow), skipped
-without them. The SVGs use a small subset (path, rect, circle, ellipse, line, g with
+Standard library only, except the speed icons (fontTools), skipped without it. The launcher icon, its bitmaps and
+the TV banner are made by make_app_icon.py. The SVGs use a small subset (path, rect, circle, ellipse, line, g with
 translate/matrix); this converter handles exactly that subset.
 """
 import json, math, os, re, shutil, sys
@@ -509,61 +509,6 @@ def speed_icons(design, version):
     print("speed icons:", len(SPEEDS))
 
 
-def _flatten(d, steps=24):
-    """Polygons of an SVG path made of absolute M L H V C Z (the logo's)."""
-    toks = re.findall(r"[MLHVCZ]|-?\d*\.?\d+(?:e-?\d+)?", d)
-    polys, cur, i, cmd, pos = [], [], 0, None, (0.0, 0.0)
-    while i < len(toks):
-        if re.match(r"[MLHVCZ]", toks[i]):
-            cmd = toks[i]; i += 1
-            if cmd == "Z":
-                if cur: polys.append(cur); cur = []
-                continue
-        n = lambda j: float(toks[i + j])
-        if cmd == "M":
-            if cur: polys.append(cur)
-            pos = (n(0), n(1)); cur = [pos]; i += 2; cmd = "L"
-        elif cmd == "L":
-            pos = (n(0), n(1)); cur.append(pos); i += 2
-        elif cmd == "H":
-            pos = (n(0), pos[1]); cur.append(pos); i += 1
-        elif cmd == "V":
-            pos = (pos[0], n(0)); cur.append(pos); i += 1
-        elif cmd == "C":
-            p0, p1, p2, p3 = pos, (n(0), n(1)), (n(2), n(3)), (n(4), n(5))
-            for s in range(1, steps + 1):
-                t = s / steps; u = 1 - t
-                cur.append((u**3*p0[0] + 3*u*u*t*p1[0] + 3*u*t*t*p2[0] + t**3*p3[0],
-                            u**3*p0[1] + 3*u*u*t*p1[1] + 3*u*t*t*p2[1] + t**3*p3[1]))
-            pos = p3; i += 6
-    if cur: polys.append(cur)
-    return polys
-
-
-def legacy_launcher(design, version):
-    """The launcher icon of Android 7.1 and older (no adaptive icon): the desktop's app icon (share/icons/scalable/
-    vlc.svg: the logo on its #191919 card with the #373737 line) as PNGs of the sizes VLC Android had. Needs Pillow."""
-    try:
-        from PIL import Image, ImageDraw
-    except ImportError:
-        print("legacy launcher: skipped (no Pillow)")
-        return
-    logo = ET.parse(os.path.join(design, "icons", "svg", "logo.svg")).getroot()
-    ds = [el.get("d") for el in logo.iter() if el.tag.split("}")[-1] == "path"]
-    for density, px in (("mdpi", 80), ("hdpi", 120), ("xhdpi", 160), ("xxhdpi", 240)):
-        ss = 8; big = px * ss; k = big / 1024
-        im = Image.new("RGBA", (big, big), (0, 0, 0, 0))
-        dr = ImageDraw.Draw(im)
-        dr.rounded_rectangle([100 * k, 100 * k, 924 * k, 924 * k], radius=185 * k, fill=(0x19, 0x19, 0x19, 255),
-                             outline=(0x37, 0x37, 0x37, 255), width=max(1, round(4 * k)))
-        for d in ds:
-            for poly in _flatten(d):
-                dr.polygon([((512 + (x - 12) * 24) * k, (512 + (y - 12) * 24) * k) for x, y in poly], fill=(0xD3, 0x79, 0x18, 255))
-        out = os.path.join(ROOT, "application", "vlc-android", "res", "mipmap-" + density, "ic_launcher.png")
-        im.resize((px, px), Image.LANCZOS).save(out, optimize=True)
-    print("legacy launcher: 4")
-
-
 # More VLC Android icons still shown (player menu, audio player, album header, context sheet) as the desktop's
 # glyphs: name -> glyph under icons/svg (a "+" name: one of EXTRAS). The size and the colour stay the original's
 # (read from the drawable it replaces: its first theme attribute colour), unless a colour is given.
@@ -636,7 +581,6 @@ def main():
     glyph_overrides(design, version)
     logos(design, version)
     speed_icons(design, version)
-    legacy_launcher(design, version)
     print("done:", version)
 
 
