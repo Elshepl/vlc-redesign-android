@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleX="0.8"
             android:scaleY="0.8"
             app:layout_constraintBottom_toBottomOf="@+id/permMedia"
@@ -72,8 +72,9 @@
 
         <ImageView
                 android:id="@+id/permNoneImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="56dp"
+                android:layout_height="84dp"
+                android:scaleType="fitCenter"
                 android:contentDescription="@string/permission_onboarding_no_perm"
                 app:srcCompat="@drawable/ic_perm_none" />
     </FrameLayout>
@@ -82,12 +83,12 @@
             android:id="@+id/permMedia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="24dp"
-            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="12dp"
             android:scaleX="0.8"
             android:scaleY="0.8"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintBottom_toTopOf="@+id/permDescription"
             app:layout_constraintEnd_toStartOf="@+id/permAll"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/permNone"
@@ -95,8 +96,9 @@
 
         <ImageView
                 android:id="@+id/permMediaImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="56dp"
+                android:layout_height="84dp"
+                android:scaleType="fitCenter"
                 android:contentDescription="@string/permission_onboarding_perm_media"
                 app:srcCompat="@drawable/ic_perm_media" />
     </FrameLayout>
@@ -106,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/theme_selection_rounded"
-            android:padding="16dp"
+            android:padding="12dp"
             app:layout_constraintBottom_toBottomOf="@+id/permMedia"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/permMedia"
@@ -114,8 +116,9 @@
 
         <ImageView
                 android:id="@+id/permAllImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="56dp"
+                android:layout_height="84dp"
+                android:scaleType="fitCenter"
                 android:contentDescription="@string/permission_onboarding_perm_all"
                 app:srcCompat="@drawable/ic_perm_all" />
     </FrameLayout>

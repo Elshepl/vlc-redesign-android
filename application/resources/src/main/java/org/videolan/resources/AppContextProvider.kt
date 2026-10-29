@@ -29,6 +29,7 @@ import android.app.Application
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.res.Resources
+import org.videolan.tools.resetToSystemLocale
 import org.videolan.tools.wrap
 import java.lang.reflect.InvocationTargetException
 
@@ -69,7 +70,7 @@ object AppContextProvider {
     fun updateContext() {
         locale.takeIf { !it.isNullOrEmpty() }?.let {
             init(ContextWrapper(appContext).wrap(it))
-        }
+        } ?: ContextWrapper(appContext).resetToSystemLocale()
     }
 
     /**

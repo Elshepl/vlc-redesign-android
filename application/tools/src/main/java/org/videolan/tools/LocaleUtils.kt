@@ -165,7 +165,22 @@ fun Context.getContextWithLocale(appLocale: String?): Context {
     appLocale.takeIf { !it.isNullOrEmpty() }?.let {
         return ContextWrapper(this).wrap(it)
     }
+    // VLC Redesign: "Device default" after another language: wrap() changed the shared configuration, so put
+    // the device's language back (else the app stays in the last language chosen until it restarts)
+    ContextWrapper(this).resetToSystemLocale()
     return this
+}
+
+/** The configuration of this context's resources back to the device's language, if a chosen one replaced it. */
+fun ContextWrapper.resetToSystemLocale() {
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) return
+    val system = android.content.res.Resources.getSystem().configuration.locales[0] ?: return
+    val config = baseContext.resources.configuration
+    if (config.locales[0] == system) return
+    Locale.setDefault(system)
+    config.setLocales(android.os.LocaleList.getDefault().takeIf { it[0] == system } ?: android.os.LocaleList(system))
+    @Suppress("DEPRECATION")
+    baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
 }
 
 fun String.substrlng(value: Int): String {
