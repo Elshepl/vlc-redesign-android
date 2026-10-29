@@ -61,6 +61,7 @@ import org.videolan.vlc.gui.browser.BaseBrowserFragment
 import org.videolan.vlc.gui.browser.MainBrowserFragment
 import org.videolan.vlc.gui.helpers.UiTools.isTablet
 import org.videolan.vlc.gui.helpers.UiTools.useNavigationRail
+import org.videolan.vlc.gui.tablet.TabletSidebar
 import org.videolan.vlc.gui.video.VideoBrowserFragment
 import org.videolan.vlc.util.getScreenWidth
 
@@ -151,6 +152,8 @@ class Navigator : NavigationBarView.OnItemSelectedListener, DefaultLifecycleObse
         // VLC Redesign: a phone in landscape has no room for the large play button above the five entries:
         // the rail keeps only the entries and the play button floats at the bottom end of the content
         if (activity.useNavigationRail() && !activity.isTablet()) (activity.findViewById<View>(R.id.navigation_rail) as? NavigationRailView)?.removeHeaderView()
+        // VLC Redesign, tablets: the desktop's expanded sidebar on a wide tablet window (gui/tablet)
+        with(TabletSidebar) { activity.applyTabletSidebar() }
     }
 
     override fun getFragmentWidth(activity: Activity): Int {

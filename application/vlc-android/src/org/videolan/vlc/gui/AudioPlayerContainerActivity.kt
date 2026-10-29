@@ -725,7 +725,7 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
             if (this is MainActivity) {
                 lp.anchorId = if (useNavigationRail()) R.id.fragment_placeholder else R.id.navigation
                 lp.anchorGravity = if (useNavigationRail()) Gravity.BOTTOM else Gravity.TOP
-                lp.marginStart = if (useNavigationRail()) 72.dp else 0.dp
+                lp.marginStart = if (useNavigationRail()) resources.getDimensionPixelSize(R.dimen.navigation_margin) else 0.dp
             }
             it.layoutParams = lp
         }

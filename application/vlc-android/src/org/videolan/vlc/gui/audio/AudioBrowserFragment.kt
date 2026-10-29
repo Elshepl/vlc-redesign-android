@@ -24,6 +24,10 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
+import android.widget.FrameLayout
+import android.view.Gravity
+import androidx.core.view.updateLayoutParams
+import android.graphics.Color
 import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.Menu
@@ -75,6 +79,7 @@ import org.videolan.vlc.gui.helpers.DefaultPlaybackAction
 import org.videolan.vlc.gui.helpers.DefaultPlaybackActionMediaType
 import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.gui.helpers.UiTools.addFavoritesIcon
+import org.videolan.vlc.gui.helpers.UiTools.isTablet
 import org.videolan.vlc.gui.helpers.UiTools.removeDrawables
 import org.videolan.vlc.gui.view.EmptyLoadingState
 import org.videolan.vlc.media.MediaUtils
@@ -413,6 +418,9 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
     override fun onPageSelected(position: Int) {
         updateEmptyView()
         setFabPlayShuffleAllVisibility()
+        // the tab listener can run before the pager has moved (currentTab still the old page): the detail pane
+        // follows the page actually shown (it stayed over the Tracks tab)
+        if (view != null) updateDetailPane()
     }
 
     override fun onTabSelected(tab: TabLayout.Tab) {
@@ -497,6 +505,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
 
     /** Shows or hides the detail pane for the window's width and the tab; the first entry is selected at first. */
     private fun updateDetailPane() {
+        tabletPaneListMode()
         val container = binding.rdDetailContainer
         // no entries (an empty tab shows its empty state over the whole width): no pane
         if (!detailWanted() || (getCurrentAdapter()?.itemCount ?: 0) == 0) {
@@ -514,6 +523,37 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         detailPane?.item?.let { (getCurrentAdapter() as? AudioBrowserAdapter)?.rdDetailItem = it }
         if (detailPane?.item == null) (getCurrentAdapter() as? AudioBrowserAdapter)?.let { a ->
             if (a.itemCount > 0) a.getItem(0)?.let { detailPane?.show(it); a.rdDetailItem = it }
+        }
+    }
+
+    /**
+     * VLC Redesign, tablets: beside the detail pane the Artists and Genres lists are rows (the desktop's
+     * MusicArtistsAlbums list), not cards sized for the whole window; the cards come back on a narrow window.
+     * The saved display mode is not changed.
+     */
+    private val paneListMode = BooleanArray(MODE_TOTAL)
+    private fun tabletPaneListMode() {
+        if (!requireContext().isTablet() || view == null) return
+        val wide = binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
+        for (i in intArrayOf(0, 3)) {
+            if (i >= lists.size || i >= adapters.size) continue
+            val want = wide
+            if (want != paneListMode[i]) {
+                paneListMode[i] = want
+                @Suppress("UNCHECKED_CAST")
+                setupLayoutManager(!want && viewModel.providersInCard[i], lists[i], viewModel.providers[i] as MedialibraryProvider<MediaLibraryItem>, adapters[i], spacing)
+                lists[i].adapter = adapters[i]
+                if (!want) lists[i].updateLayoutParams<FrameLayout.LayoutParams> { gravity = Gravity.CENTER_HORIZONTAL }
+            }
+            // the rows fill the side left of the pane (the pane is drawn over the pages, 58 % of the width)
+            if (want) {
+                lists[i].updateLayoutParams<FrameLayout.LayoutParams> {
+                    width = (binding.root.width * (1f - 0.58f /* rd_detail_container layout_constraintWidth_percent */)).toInt()
+                    gravity = Gravity.START
+                }
+                lists[i].setBackgroundColor(Color.TRANSPARENT)
+                (lists[i].parent as? View)?.setBackgroundColor(Color.TRANSPARENT)
+            }
         }
     }
 

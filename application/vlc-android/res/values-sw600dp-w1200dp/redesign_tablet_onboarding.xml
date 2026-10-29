@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, tablets: the onboarding column stays about 720-800 dp wide on a wide window -->
+<resources>
+    <dimen name="rd_onboarding_side">260dp</dimen>
+</resources>

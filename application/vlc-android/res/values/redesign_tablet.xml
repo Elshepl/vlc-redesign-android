@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, tablets: ids and switches of the tablet-only layout code (gui/tablet). -->
+<resources>
+    <item name="rd_tablet_sidebar" type="id" />
+    <item name="rd_tablet_sidebar_indicator" type="id" />
+    <item name="rd_tablet_sidebar_icon" type="id" />
+    <item name="rd_tablet_sidebar_label" type="id" />
+    <!-- the desktop's expanded sidebar instead of the navigation rail (values-sw600dp-w900dp) -->
+    <bool name="rd_tablet_sidebar">false</bool>
+</resources>
