@@ -570,6 +570,7 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
             media.addOption(":start-time=${start/1000L}")
             media.addOption(":no-sout-chromecast-video")
             VLCOptions.setMediaOptions(media, ctx, flags or mw.flags, PlaybackService.hasRenderer())
+            applySubtitleCharset(media, uri)
             /* keeping only video during benchmark */
             if (isBenchmark) {
                 media.addOption(":no-audio")
@@ -589,6 +590,35 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
         } else { //Start VideoPlayer for first video, it will trigger playIndex when ready.
             if (player.isPlaying()) player.stop()
             VideoPlayerActivity.startOpened(ctx, mw.uri, currentIndex)
+        }
+    }
+
+    /**
+     * VLC Redesign: the character set of the subtitle files beside a local video, which libvlc 3 cannot guess
+     * (it read every file that is not UTF-8 as Windows-1252). One character set for all of them: libvlc is told
+     * it; several (a Hebrew and an Arabic file in their own code pages): each is read as UTF-8 from a converted
+     * copy, added to the media instead of libvlc's own search.
+     */
+    private suspend fun applySubtitleCharset(media: IMedia, uri: android.net.Uri) {
+        if (uri.scheme != "file") return
+        val path = uri.path ?: return
+        val hints = org.videolan.vlc.util.SubtitleCharset.appHints(settings.getString(org.videolan.tools.KEY_SUBTITLE_PREFERRED_LANGUAGE, null),
+                settings.getString(org.videolan.tools.KEY_SET_LOCALE, null))
+        withContext(Dispatchers.IO) {
+            val video = java.io.File(path)
+            val others = ArrayList<Pair<java.io.File, String>>()
+            val charset = org.videolan.vlc.util.SubtitleCharset.forVideo(video, hints, others) ?: return@withContext
+            android.util.Log.i("VLC/SubtitleCharset", "${video.name}: subtitles in $charset" + if (others.isEmpty()) "" else ", others $others")
+            if (others.isEmpty()) {
+                media.addOption(":subsdec-encoding=$charset")
+                return@withContext
+            }
+            media.addOption(":no-sub-autodetect-file")
+            org.videolan.vlc.util.SubtitleCharset.siblings(video).forEach { f ->
+                val source = android.net.Uri.fromFile(f)
+                val target = org.videolan.vlc.util.SubtitleCharset.utf8Copy(ctx, source, f.name, hints) ?: source
+                media.addSlave(IMedia.Slave(IMedia.Slave.Type.Subtitle, 4, target.toString()))
+            }
         }
     }
 

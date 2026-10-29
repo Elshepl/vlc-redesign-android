@@ -50,6 +50,7 @@ import org.videolan.tools.KEY_ENABLE_VERBOSE_MODE
 import org.videolan.tools.KEY_HARDWARE_ACCELERATION
 import org.videolan.tools.KEY_NETWORK_CACHING_VALUE
 import org.videolan.tools.KEY_OPENGL
+import org.videolan.tools.KEY_SET_LOCALE
 import org.videolan.tools.KEY_PREFERRED_RESOLUTION
 import org.videolan.tools.KEY_PREFER_SMBV1
 import org.videolan.tools.KEY_SUBTITLES_AUTOLOAD
@@ -167,7 +168,11 @@ object VLCOptions {
             options.add("--avcodec-skip-idct")
             options.add(if (frameSkip) "2" else "0")
             options.add("--subsdec-encoding")
-            options.add(subtitlesEncoding)
+            // VLC Redesign: "Default" guesses the code page of a subtitle file that is not Unicode from the language,
+            // as the desktop does through its "GetACP" translation (libvlc on Android has no translations, so it
+            // always guessed Windows-1252: a Hebrew or Arabic SRT came out as Latin letters). UTF-8 files are still
+            // detected as such.
+            options.add(subtitlesEncoding.ifEmpty { defaultSubtitlesEncoding(pref.getString(KEY_SET_LOCALE, "") ?: "") })
             // VLC Redesign: lay out each subtitle line in the direction of its own text (Hebrew and Arabic right to
             // left), as VLC 4 on the desktop does; VLC 3.0's default is left to right for every line
             options.add("--freetype-text-direction=2")
@@ -331,4 +336,28 @@ object VLCOptions {
     }
 
     fun getSoundFontFile(context: Context)= File( context.getDir("soundfont", Context.MODE_PRIVATE)!!.path+"/soundfont.sf2")
+
+    /**
+     * VLC Redesign: the Windows code page most used for a language (the desktop's "GetACP" translations), the guess
+     * for subtitle files that are not Unicode. The app's language, else the system's.
+     */
+    fun defaultSubtitlesEncoding(appLocale: String): String {
+        val lang = appLocale.ifEmpty { java.util.Locale.getDefault().toString() }.replace('-', '_').lowercase()
+        val base = lang.substringBefore('_')
+        return when {
+            base == "he" || base == "iw" || base == "yi" -> "CP1255"
+            base in setOf("ar", "fa", "ur", "ps", "ckb", "ku", "sd", "ug") -> "CP1256"
+            base in setOf("ru", "uk", "be", "bg", "mk", "sr", "kk", "ky", "tg", "mn", "tt", "ba") -> "CP1251"
+            base == "el" -> "CP1253"
+            base == "tr" || base == "az" -> "CP1254"
+            base in setOf("lt", "lv", "et") -> "CP1257"
+            base == "vi" -> "CP1258"
+            base in setOf("pl", "cs", "sk", "hu", "ro", "hr", "sl", "bs", "sq") -> "CP1250"
+            base == "th" -> "CP874"
+            base == "ja" -> "CP932"
+            base == "ko" -> "CP949"
+            base == "zh" -> if (lang.contains("tw") || lang.contains("hk") || lang.contains("hant")) "BIG5" else "GB18030"
+            else -> "CP1252"
+        }
+    }
 }

@@ -170,9 +170,18 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
 
     fun setVideoTrackEnabled(enabled: Boolean) = mediaplayer.setVideoTrackEnabled(enabled)
 
-    fun addSubtitleTrack(path: String, select: Boolean) = mediaplayer.addSlave(IMedia.Slave.Type.Subtitle, path, select)
+    fun addSubtitleTrack(path: String, select: Boolean) = addSubtitleTrack(Uri.fromFile(java.io.File(path)), select)
 
-    fun addSubtitleTrack(uri: Uri, select: Boolean) = mediaplayer.addSlave(IMedia.Slave.Type.Subtitle, uri, select)
+    // VLC Redesign: a subtitle file that is not Unicode is read from a UTF-8 copy (libvlc 3 would read it as
+    // Windows-1252)
+    fun addSubtitleTrack(uri: Uri, select: Boolean): Boolean {
+        val name = uri.lastPathSegment?.substringAfterLast('/') ?: ""
+        val settings = org.videolan.tools.Settings.getInstance(context)
+        val hints = org.videolan.vlc.util.SubtitleCharset.appHints(settings.getString(org.videolan.tools.KEY_SUBTITLE_PREFERRED_LANGUAGE, null),
+                settings.getString(org.videolan.tools.KEY_SET_LOCALE, null))
+        val target = org.videolan.vlc.util.SubtitleCharset.utf8Copy(context, uri, name, hints) ?: uri
+        return mediaplayer.addSlave(IMedia.Slave.Type.Subtitle, target, select)
+    }
 
     fun getSpuTracks(): Array<out VlcTrack>? = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.getAllSpuTracks() else emptyArray()
 
