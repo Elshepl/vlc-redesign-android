@@ -116,6 +116,8 @@ class AudioAlbumsSongsFragment : BaseAudioBrowser<AlbumSongsViewModel>(), SwipeR
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // VLC Redesign: the desktop's artist banner over the albums and tracks
+        (view as? android.widget.RelativeLayout)?.let { RdArtistBanner.install(it, viewModel.parent, viewLifecycleOwner.lifecycleScope) }
 
         spacing = resources.getDimension(R.dimen.kl_small).toInt()
         val itemSize = RecyclerSectionItemGridDecoration.getItemSize(requireActivity().getScreenWidth(), nbColumns, spacing, 16.dp)

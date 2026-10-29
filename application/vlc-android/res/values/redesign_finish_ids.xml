@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- the artist page's banner (gui/audio/RdArtistBanner) -->
+    <item name="rd_artist_banner" type="id" />
+</resources>
