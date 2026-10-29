@@ -36,7 +36,7 @@ android {
         buildConfigField 'int', 'VLC_VERSION_CODE', "${rootProject.ext.versionCode}"
         buildConfigField 'String', 'VLC_VERSION_NAME', "\"${rootProject.ext.versionName}\""
         // VLC Redesign: the version of the redesign (the desktop's), shown in About
-        buildConfigField 'String', 'RD_VERSION_NAME', "\"0.4.0\""
+        buildConfigField 'String', 'RD_VERSION_NAME', "\"${rootProject.ext.redesignVersionName}\""
         buildConfigField 'String[]', 'TRANSLATION_ARRAY', generateTranslation()
         buildConfigField 'int', 'VLC_MAJOR_VERSION', "${rootProject.ext.vlcMajorVersion}"
 

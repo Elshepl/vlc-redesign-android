@@ -50,7 +50,18 @@ android {
             storealias=androiddebugkey
             storepwd=android
              */
-            if (project.hasProperty('keyStoreFile')) {
+            // VLC Redesign: the release key is given at release time only, never kept in the repository:
+            // RD_KEYSTORE_FILE (path), RD_KEYSTORE_PASSWORD, RD_KEY_ALIAS, RD_KEY_PASSWORD (defaults to the store's).
+            // Build: gradle :application:app:assembleSignedRelease (docs/android-release.md)
+            def rdStore = System.getenv('RD_KEYSTORE_FILE')
+            if (rdStore != null && !rdStore.isEmpty()) {
+                storeFile file(rdStore)
+                storePassword = System.getenv('RD_KEYSTORE_PASSWORD')
+                keyAlias = System.getenv('RD_KEY_ALIAS')
+                keyPassword = System.getenv('RD_KEY_PASSWORD') ?: System.getenv('RD_KEYSTORE_PASSWORD')
+                enableV1Signing = true
+                enableV2Signing = true
+            } else if (project.hasProperty('keyStoreFile')) {
                 storeFile file(project.findProperty('keyStoreFile'))
                 keyAlias project.findProperty('storealias')
                 if (System.getenv('PASSWORD_KEYSTORE') != null && !System.getenv('PASSWORD_KEYSTORE').isEmpty()) {
