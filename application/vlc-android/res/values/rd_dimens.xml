@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign: the side margins of the onboarding steps (a tablet keeps them to a card's width) -->
+    <dimen name="rd_onboarding_side">24dp</dimen>
+    <!-- the settings sidebar of a two-pane window -->
+    <dimen name="rd_settings_sidebar_width">248dp</dimen>
+</resources>

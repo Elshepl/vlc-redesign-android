@@ -16,7 +16,7 @@
 
         <FrameLayout
                 android:id="@+id/rd_settings_sidebar"
-                android:layout_width="248dp"
+                android:layout_width="@dimen/rd_settings_sidebar_width"
                 android:layout_height="match_parent"
                 android:visibility="gone" />
 

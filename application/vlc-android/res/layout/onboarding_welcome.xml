@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingStart="28dp"
-        android:paddingEnd="28dp"
+        android:paddingStart="@dimen/rd_onboarding_side"
+        android:paddingEnd="@dimen/rd_onboarding_side"
         android:paddingTop="24dp"
         android:paddingBottom="16dp">
 

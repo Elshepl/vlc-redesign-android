@@ -134,7 +134,7 @@ object SubtitleCharset {
                     val fields = body.split(',', limit = textIndex + 1)
                     if (fields.size == textIndex + 1) {
                         val parts = fields[textIndex].split("\\N")
-                        val wrapped = parts.map { if (startsRtl(it)) "\u202B" + it + "\u202C" else it }
+                        val wrapped = parts.map { p -> markBrackets(p, startsRtl(p)).let { if (startsRtl(p)) "\u202B" + it + "\u202C" else it } }
                         if (wrapped != parts) {
                             lines[i] = head + fields.dropLast(1).joinToString(",") + "," + wrapped.joinToString("\\N") + if (cr) "\r" else ""
                             changed = true
@@ -144,6 +144,48 @@ object SubtitleCharset {
             }
         }
         return if (changed) lines.joinToString("\n") else null
+    }
+
+    /**
+     * The desktop asks libass for ASS_FEATURE_BIDI_BRACKETS (the paired brackets rule N0 of the Unicode bidi
+     * algorithm); libvlc 3's libass is not asked, so a bracket pair around words of both directions can face the
+     * wrong way. Here the line is resolved with Android's own bidi (ICU, with N0) and each bracket of a line that
+     * mixes directions gets a mark of its resolved direction on both sides (RLM or LRM, zero width): between two
+     * marks of one direction a bracket resolves to it without N0 too. Override tags {...} are kept as they are.
+     */
+    internal fun markBrackets(line: String, rtl: Boolean): String {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.N) return line
+        if (line.none { it in "()[]{}<>" || android.icu.lang.UCharacter.getIntPropertyValue(it.code, android.icu.lang.UProperty.BIDI_PAIRED_BRACKET_TYPE) != 0 }) return line
+        // the visible text and where each of its characters is in the line
+        val visible = StringBuilder()
+        val at = ArrayList<Int>()
+        var tag = false
+        line.forEachIndexed { i, c ->
+            if (c == '{') tag = true
+            else if (c == '}' && tag) tag = false
+            else if (!tag) { visible.append(c); at.add(i) }
+        }
+        val text = visible.toString()
+        var hasR = false
+        var hasL = false
+        for (c in text) when (Character.getDirectionality(c)) {
+            Character.DIRECTIONALITY_RIGHT_TO_LEFT, Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC -> hasR = true
+            Character.DIRECTIONALITY_LEFT_TO_RIGHT -> hasL = true
+        }
+        if (!hasR || !hasL) return line
+        val bidi = android.icu.text.Bidi(text, if (rtl) android.icu.text.Bidi.DIRECTION_RIGHT_TO_LEFT else android.icu.text.Bidi.DIRECTION_LEFT_TO_RIGHT)
+        val marks = HashMap<Int, Char>()
+        text.forEachIndexed { i, c ->
+            if (android.icu.lang.UCharacter.getIntPropertyValue(c.code, android.icu.lang.UProperty.BIDI_PAIRED_BRACKET_TYPE) != 0)
+                marks[at[i]] = if (bidi.getLevelAt(i) % 2 == 1) '‏' else '‎'
+        }
+        if (marks.isEmpty()) return line
+        val out = StringBuilder(line.length + marks.size * 2)
+        line.forEachIndexed { i, c ->
+            val m = marks[i]
+            if (m != null) out.append(m).append(c).append(m) else out.append(c)
+        }
+        return out.toString()
     }
 
     /** Whether the first letter of a line of ASS text (its override tags skipped) is of a right-to-left script */
