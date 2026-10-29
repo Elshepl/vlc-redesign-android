@@ -326,8 +326,8 @@ class Tour:
             self.snap("player-cast-picker-main", self.tap(d, "ml_menu_renderers"))
         # the toolbar's overflow menu
         d = self.main("nav_home")
-        if d.find("abc_action_menu_overflow_description"):
-            d = self.tap(d, "abc_action_menu_overflow_description")
+        if d.find(cls="OverflowMenuButton"):
+            d = self.tap(d, cls="OverflowMenuButton")
             self.snap("main-overflow", d)
 
     def videos(self):
@@ -343,8 +343,13 @@ class Tour:
         if d.find("ml_menu_display_options"):
             self.snap(name, self.tap(d, "ml_menu_display_options"))
             return
-        d = self.tap(d, "abc_action_menu_overflow_description")
-        e = [v for v in d.find(window=d.windows[-1]) if v.sk in ("display_settings", "sortby", "display_options")]
+        ov = d.find(cls="OverflowMenuButton")
+        if not ov:
+            raise Lost("no overflow menu")
+        self.d.tap(ov[0])
+        d = self.d.settle()
+        want = {self.s(k) for k in ("display_settings", "sortby", "display_options")} - {""}
+        e = [v for v in d.find(window=d.windows[-1]) if v.txt in want]
         if not e:
             raise Lost("no display options")
         self.d.tap(d.clickable_ancestor(e[0]))
@@ -441,8 +446,8 @@ class Tour:
                         self.snap("ctx-album", self.tap(d, "item_more"))
                         self.main("nav_audio")
         d = self.main("nav_audio")
-        if d.find("abc_action_menu_overflow_description"):
-            self.snap("music-overflow", self.tap(d, "abc_action_menu_overflow_description"))
+        if d.find(cls="OverflowMenuButton"):
+            self.snap("music-overflow", self.tap(d, cls="OverflowMenuButton"))
         self.step("music-display", self.display_sheet, "nav_audio", "music-display-sheet")
 
     def tv(self):
@@ -469,24 +474,24 @@ class Tour:
                 self.d.tap(cur[0])
                 self.snap("tv-tab-%s" % slug(k), self.d.settle(timeout=5))
         # the toolbar's actions (display / guide / sources...), one at a time
-        acts = [v for v in d.find(cls="ActionMenuItemView")] + d.find("abc_action_menu_overflow_description")
-        names = [(v.id or v.sk or v.cdk or "a%d" % i) for i, v in enumerate(acts)]
+        acts = [v for v in d.find(cls="ActionMenuItemView")] + d.find(cls="OverflowMenuButton")
+        names = [("overflow" if v.c == "OverflowMenuButton" else (v.id or v.sk or v.cdk or "a%d" % i)) for i, v in enumerate(acts)]
         for i, nm in enumerate(names):
             if DENY_KEYS.search(nm) or nm == "ml_menu_filter":
                 continue
             d = self.main("nav_tv")
-            cur = [v for v in d.find(cls="ActionMenuItemView")] + d.find("abc_action_menu_overflow_description")
+            cur = [v for v in d.find(cls="ActionMenuItemView")] + d.find(cls="OverflowMenuButton")
             if i >= len(cur):
                 continue
             self.d.tap(cur[i])
             d = self.d.settle()
             self.snap("tv-action-%s" % slug(nm), d)
-            if nm == "abc_action_menu_overflow_description":
+            if nm == "overflow":
                 # the overflow's entries
                 entries = [v for v in d.find(window=d.windows[-1]) if v.txt and v.sk and not DENY_KEYS.search(v.sk)]
                 for e in entries[:6]:
                     d2 = self.main("nav_tv")
-                    d2 = self.tap(d2, "abc_action_menu_overflow_description")
+                    d2 = self.tap(d2, cls="OverflowMenuButton")
                     cur2 = [v for v in d2.find(window=d2.windows[-1]) if v.sk == e.sk]
                     if cur2:
                         self.d.tap(d2.clickable_ancestor(cur2[0]))

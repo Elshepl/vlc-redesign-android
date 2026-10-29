@@ -406,7 +406,15 @@ class Device:
         if font is not None:
             self.sh("settings put system font_scale %s" % font)
         if rotation is not None:
-            self.sh("settings put system accelerometer_rotation 0; settings put system user_rotation %d" % rotation)
+            self.sh("settings put system accelerometer_rotation 0; settings put system user_rotation %d; cmd window user-rotation lock %d" % (rotation, rotation))
+            want = "ROTATION_%d" % (rotation * 90)
+            for _ in range(20):
+                time.sleep(0.5)
+                if want in self.sh("dumpsys window displays | grep -m1 mCurrentRotation"):
+                    break
+                self.sh("cmd window user-rotation lock %d" % rotation)
+            else:
+                raise RuntimeError("the display did not turn to %s" % want)
 
     def prepare(self):
         """Once per boot: animations off, screen on and unlocked, no screen timeout, immersive confirmations off."""

@@ -18,6 +18,28 @@ def thumb(src, dst, width=220):
     im.resize((width, h)).save(dst, "JPEG", quality=72)
 
 
+def fix_rotation(cell_dir):
+    """The emulator's own screenshot is the panel as mounted: a turned display comes out sideways. Turned upright
+    from the window's shape in the dump (once: the file is rewritten)."""
+    from PIL import Image
+    import device
+    for png in glob.glob(os.path.join(cell_dir, "*.png")):
+        js = png[:-4] + ".json.gz"
+        if not os.path.exists(js):
+            continue
+        try:
+            d = device.load_dump(js)
+        except Exception:
+            continue
+        if not d.windows:
+            continue
+        b = d.windows[0]["b"]
+        land = (b[2] - b[0]) > (b[3] - b[1])
+        im = Image.open(png)
+        if land != (im.size[0] > im.size[1]):
+            im.rotate(90, expand=True).save(png)
+
+
 def build(run_dir, out_dir, repo):
     os.makedirs(os.path.join(out_dir, "thumbs"), exist_ok=True)
     os.makedirs(os.path.join(out_dir, "shots"), exist_ok=True)
@@ -26,6 +48,7 @@ def build(run_dir, out_dir, repo):
     for cd in sorted(glob.glob(os.path.join(run_dir, "cells", "*"))):
         if not os.path.exists(os.path.join(cd, "steps.json")):
             continue
+        fix_rotation(cd)
         dev = os.path.basename(cd).split("-")[0]
         lc = os.path.join(run_dir, "logs", "logcat-%s.txt" % dev)
         meta, found = checks.run_cell(cd, idx, lc)

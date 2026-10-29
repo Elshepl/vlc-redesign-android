@@ -166,7 +166,7 @@ def check_dump(dump, step, cell, idx):
             if v.get("insc") and txt.strip() and v.get("clk") and area(v["b"]) > 0:
                 # a button cut at the side of a row that scrolls sideways (the row wider than its window)
                 b = v["b"]
-                if (vis[0] > b[0] + 4 or vis[2] < b[2] - 4) and (vis[3] - vis[1]) > (b[3] - b[1]) * 0.8:
+                if (vis[0] > b[0] + 4 or vis[2] < b[2] - 4) and (vis[3] - vis[1]) > (b[3] - b[1]) * 0.8 and area(vis) < area(b) * 0.9:
                     add("medium" if w is not dump["windows"][0] else "low", "button-cut-at-edge", "'%s' shown %d%% at the window's edge (a row wider than its window)" % (txt[:40], 100 * area(vis) // area(b)), v)
             # content description
             if v.get("clk") and "Image" in v.get("c", "") and not v.get("cd") and not v.get("tip") and not v.get("ifa"):

@@ -60,7 +60,7 @@ def setup(d, log):
     d.start_app(wait=False)
     time.sleep(4)
     # the first-run dialog is a screen too: kept in the first cell's folder later; then never again
-    for k, t, v in (("app_onboarding_done", "b", "true"), ("show_update", "b", "false"), ("app_theme", "s", "-1"),
+    for k, t, v in (("app_onboarding_done", "b", "true"), ("show_update", "b", "false"), ("app_theme", "s", "-1"), ("incognito_mode", "b", "false"),
                     ("rd_accent", "s", "orange")):
         d.call("pref", key=k, type=t, value=v)
     d.stop_app()
@@ -90,6 +90,7 @@ def main():
     ap.add_argument("--only", default="", help="comma list of step prefixes")
     ap.add_argument("--quick", action="store_true")
     ap.add_argument("--keep", action="store_true", help="leave the emulator running at the end")
+    ap.add_argument("--resume", action="store_true", help="skip the cells the run folder already has")
     ap.add_argument("--report-only", action="store_true")
     ap.add_argument("--run", default=os.path.join(ROOT, "run"))
     a = ap.parse_args()
@@ -109,6 +110,8 @@ def main():
         t_all = time.time()
         for dev in a.devices.split(","):
             cells = [c for c in cells_for(dev, a.quick) if not want or c["name"] in want]
+            if a.resume:
+                cells = [c for c in cells if not os.path.exists(os.path.join(a.run, "cells", c["name"], "steps.json"))]
             if not cells:
                 continue
             avd = DEVICES[dev][0]
