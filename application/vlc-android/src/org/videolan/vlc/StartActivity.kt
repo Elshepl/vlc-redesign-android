@@ -130,6 +130,17 @@ class StartActivity : FragmentActivity() {
                 return
             }
         } catch (ignored: Exception) {}
+        // Debug builds only: the test folder is given by adb, so a test never browses the device's storage to add
+        // it (`am start ... --es debug_library_folder /sdcard/Download/<folder>`); the scope guard still refuses
+        // a whole storage or a top-level folder
+        if (BuildConfig.DEBUG) intent.getStringExtra("debug_library_folder")?.let { folder ->
+            val ctx = applicationContext
+            // once the library is ready: a discover before its init is dropped
+            if (org.videolan.vlc.util.LibraryScopeGuard.allowed(folder)) org.videolan.tools.AppScope.launch {
+                ctx.getFromMl { isStarted }
+                org.videolan.vlc.gui.helpers.MedialibraryUtils.addDir(folder, ctx)
+            }
+        }
         resume()
     }
 

@@ -102,6 +102,7 @@ import org.videolan.vlc.util.TextUtils
 import org.videolan.vlc.util.Util
 import org.videolan.vlc.util.cleanupWatchNextList
 import org.videolan.vlc.util.scanAllowed
+import org.videolan.vlc.util.LibraryScopeGuard
 
 private const val TAG = "VLC/MediaParsingService"
 
@@ -304,6 +305,7 @@ class MediaParsingService : LifecycleService(), DevicesDiscoveryCb {
 
     private fun reload(path: String?) {
         if (reload > 0) return
+        LibraryScopeGuard.pruneEntryPoints(medialibrary)
         if (path.isNullOrEmpty()) medialibrary.reload()
         else medialibrary.reload(path)
         val ctx = this@MediaParsingService
@@ -323,6 +325,8 @@ class MediaParsingService : LifecycleService(), DevicesDiscoveryCb {
         checkNewDevicesForDialog(context, parse, removeDevices)
         if (upgrade) medialibrary.forceParserRetry()
         medialibrary.start()
+        // before the start-up reload: it would scan a whole-storage entry point left in the database
+        LibraryScopeGuard.pruneEntryPoints(medialibrary)
         if (parse) startScan(shouldInit, upgrade)
         else exitCommand()
     }
@@ -360,11 +364,12 @@ class MediaParsingService : LifecycleService(), DevicesDiscoveryCb {
                 for (folder in Medialibrary.getBanList())
                     medialibrary.banFolder(AndroidDevices.EXTERNAL_PUBLIC_DIRECTORY + folder)
                 if (preselectedStorages.isEmpty()) {
-                    medialibrary.discover(AndroidDevices.EXTERNAL_PUBLIC_DIRECTORY)
+                    // debug builds start with no entry point: only a folder added on purpose is ever scanned
+                    if (LibraryScopeGuard.allowed(AndroidDevices.EXTERNAL_PUBLIC_DIRECTORY)) medialibrary.discover(AndroidDevices.EXTERNAL_PUBLIC_DIRECTORY)
                 }
                 else {
                     for (folder in preselectedStorages) {
-                        medialibrary.discover(folder)
+                        if (LibraryScopeGuard.allowed(folder)) medialibrary.discover(folder)
                     }
                     preselectedStorages.clear()
                 }
@@ -530,14 +535,14 @@ class MediaParsingService : LifecycleService(), DevicesDiscoveryCb {
     @OptIn(ObsoleteCoroutinesApi::class)
     private suspend fun ActorScope<MLAction>.processAction() {
         for (action in channel) when (action) {
-            is DiscoverStorage -> {
+            is DiscoverStorage -> if (LibraryScopeGuard.allowed(action.path)) {
                 for (folder in Medialibrary.getBanList()) medialibrary.banFolder(action.path + folder)
                 medialibrary.discover(action.path)
-            }
-            is DiscoverFolder -> {
+            } else exitCommand()
+            is DiscoverFolder -> if (LibraryScopeGuard.allowed(action.path)) {
                 addDeviceIfNeeded(action.path)
                 medialibrary.discover(action.path)
-            }
+            } else exitCommand()
             is Init -> {
                 if (medialibrary.isInitiated) {
                     exitCommand()
@@ -569,7 +574,10 @@ class MediaParsingService : LifecycleService(), DevicesDiscoveryCb {
             }
             UpdateStorages -> updateStorages()
             is Reload -> reload(action.path)
-            ForceReload -> medialibrary.forceRescan()
+            ForceReload -> {
+                LibraryScopeGuard.pruneEntryPoints(medialibrary)
+                medialibrary.forceRescan()
+            }
         }
     }
 

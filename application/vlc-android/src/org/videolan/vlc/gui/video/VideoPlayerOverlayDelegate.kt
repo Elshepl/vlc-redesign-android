@@ -893,8 +893,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     private fun buildBar(set: ConstraintSet, zones: PlayerBarLayout.Zones, oneRow: Boolean) = with(set) {
         val res = player.resources
         val edge = res.getDimensionPixelSize(R.dimen.rd_player_bar_edge) + if (oneRow) 4.dp else 0
-        val timeGap = 10.dp
-        val gap = res.getDimensionPixelSize(R.dimen.rd_player_seek_gap)
+        // the desktop's one-row bar (ControlBar.qml): the 76 dp time boxes touch the buttons beside them and the
+        // seek well (spacing 0), so the well takes all the room between the times
+        val timeGap = 0
+        val gap = 0
         val sides = intArrayOf(ConstraintSet.START, ConstraintSet.END, ConstraintSet.LEFT, ConstraintSet.RIGHT)
         val controls = PlayerBarLayout.CATALOGUE.map { barViewId(it.key) }.filter { it != View.NO_ID }
         (controls + listOf(R.id.player_space_left, R.id.player_space_right)).forEach { id ->
