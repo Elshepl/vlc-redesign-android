@@ -24,6 +24,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/mrlbar"
                     android:layout_width="0dp"
+                    app:layout_constraintWidth_max="@dimen/rd_tablet_content_max_width"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
