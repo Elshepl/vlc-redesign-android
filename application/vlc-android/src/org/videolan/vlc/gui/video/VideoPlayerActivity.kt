@@ -1499,13 +1499,27 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     // Directly managed here
     override fun isReadyForDirectional() = false
 
-    override fun showAdvancedOptions() {
+    private fun ensureOptionsDelegate() {
         if (optionsDelegate == null) service?.let {
             optionsDelegate = PlayerOptionsDelegate(this, it)
             optionsDelegate!!.setBookmarkClickedListener {
                 lifecycleScope.launch { if (!showPinIfNeeded()) overlayDelegate.showBookmarks() else overlayDelegate.showOverlay() }
             }
         }
+    }
+
+    /** VLC Redesign: a control of the player's menu that Customize Player put in the bar. */
+    fun onBarAction(action: String) {
+        if (action == "queue") {
+            overlayDelegate.togglePlaylist()
+            return
+        }
+        ensureOptionsDelegate()
+        optionsDelegate?.performAction(action)
+    }
+
+    override fun showAdvancedOptions() {
+        ensureOptionsDelegate()
         optionsDelegate?.show()
         overlayDelegate.hideOverlay(fromUser = false, forceTalkback = true)
     }

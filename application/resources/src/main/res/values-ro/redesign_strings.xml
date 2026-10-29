@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Construit pe baza VLC media player de</string>
     <string name="rd_about_videolan">echipa VideoLAN și contribuitori</string>
     <string name="rd_about_unofficial">O versiune neoficială, neafiliată cu VideoLAN sau Juxtopposed și neaprobată de acestea. VLC, VLC media player și sigla con sunt mărci comerciale ale VideoLAN. Software liber sub licența GNU GPL v2 sau ulterioară.</string>
+    <string name="rd_customize_player">Personalizează playerul</string>
+    <string name="rd_zone_left">Stânga</string>
+    <string name="rd_zone_center">Centru</string>
+    <string name="rd_zone_right">Dreapta</string>
+    <string name="rd_bar_backward">Înapoi 10 s</string>
+    <string name="rd_bar_forward">Înainte 10 s</string>
+    <string name="rd_bar_rotate">Rotire</string>
+    <string name="rd_bar_settings">Setări</string>
+    <string name="rd_bar_queue">Coadă</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Implicit</string>
+    <string name="rd_profile_minimalist">Stil minimalist</string>
+    <string name="rd_profile_one_liner">Stil pe un rând</string>
+    <string name="rd_profile_simplest">Stil foarte simplu</string>
+    <string name="rd_profile_classic">Stil clasic</string>
+    <string name="rd_new_profile">Profil nou</string>
+    <string name="rd_rename_profile">Redenumește profilul</string>
+    <string name="rd_delete_profile">Șterge profilul</string>
+    <string name="rd_delete_named">Ștergeți %1$s?</string>
+    <string name="rd_profile_name">Numele profilului</string>
+    <string name="rd_remove">Elimină</string>
+    <string name="rd_save">Salvează</string>
+    <string name="rd_cancel">Renunță</string>
 </resources>

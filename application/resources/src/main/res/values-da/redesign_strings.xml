@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Bygget på VLC media player af</string>
     <string name="rd_about_videolan">VideoLAN-holdet og bidragydere</string>
     <string name="rd_about_unofficial">En uofficiel version, der hverken er tilknyttet eller godkendt af VideoLAN eller Juxtopposed. VLC, VLC media player og kegle-logoet er varemærker tilhørende VideoLAN. Fri software under GNU GPL v2 eller senere.</string>
+    <string name="rd_customize_player">Tilpas afspiller</string>
+    <string name="rd_zone_left">Venstre</string>
+    <string name="rd_zone_center">Midten</string>
+    <string name="rd_zone_right">Højre</string>
+    <string name="rd_bar_backward">10 s tilbage</string>
+    <string name="rd_bar_forward">10 s frem</string>
+    <string name="rd_bar_rotate">Drej</string>
+    <string name="rd_bar_settings">Indstillinger</string>
+    <string name="rd_bar_queue">Kø</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Standard</string>
+    <string name="rd_profile_minimalist">Minimalistisk stil</string>
+    <string name="rd_profile_one_liner">Enkeltlinjestil</string>
+    <string name="rd_profile_simplest">Enkleste stil</string>
+    <string name="rd_profile_classic">Klassisk stil</string>
+    <string name="rd_new_profile">Ny profil</string>
+    <string name="rd_rename_profile">Omdøb profil</string>
+    <string name="rd_delete_profile">Slet profil</string>
+    <string name="rd_delete_named">Slet %1$s?</string>
+    <string name="rd_profile_name">Profilnavn</string>
+    <string name="rd_remove">Fjern</string>
+    <string name="rd_save">Gem</string>
+    <string name="rd_cancel">Annullér</string>
 </resources>

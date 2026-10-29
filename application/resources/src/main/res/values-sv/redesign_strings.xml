@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Bygger på VLC media player av</string>
     <string name="rd_about_videolan">VideoLAN-teamet och bidragsgivare</string>
     <string name="rd_about_unofficial">En inofficiell version, inte ansluten till eller godkänd av VideoLAN eller Juxtopposed. VLC, VLC media player och konlogotypen är varumärken som tillhör VideoLAN. Fri programvara under GNU GPL v2 eller senare.</string>
+    <string name="rd_customize_player">Anpassa spelaren</string>
+    <string name="rd_zone_left">Vänster</string>
+    <string name="rd_zone_center">Centrerad</string>
+    <string name="rd_zone_right">Höger</string>
+    <string name="rd_bar_backward">Bakåt 10 s</string>
+    <string name="rd_bar_forward">Framåt 10 s</string>
+    <string name="rd_bar_rotate">Rotering</string>
+    <string name="rd_bar_settings">Inställningar</string>
+    <string name="rd_bar_queue">Kö</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Standard</string>
+    <string name="rd_profile_minimalist">Minimalistisk stil</string>
+    <string name="rd_profile_one_liner">Enradsstil</string>
+    <string name="rd_profile_simplest">Enklaste stil</string>
+    <string name="rd_profile_classic">Klassisk stil</string>
+    <string name="rd_new_profile">Ny profil</string>
+    <string name="rd_rename_profile">Byt namn på profil</string>
+    <string name="rd_delete_profile">Ta bort profil</string>
+    <string name="rd_delete_named">Ta bort %1$s?</string>
+    <string name="rd_profile_name">Profilnamn</string>
+    <string name="rd_remove">Ta bort</string>
+    <string name="rd_save">Spara</string>
+    <string name="rd_cancel">Avbryt</string>
 </resources>

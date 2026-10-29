@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">ساخته‌شده بر پایهٔ پخش‌کنندهٔ رسانهٔ VLC از</string>
     <string name="rd_about_videolan">تیم VideoLAN و مشارکت‌کنندگان</string>
     <string name="rd_about_unofficial">نسخه‌ای غیررسمی که وابسته به VideoLAN یا Juxtopposed نیست و مورد تأیید آن‌ها هم نیست. VLC، VLC media player و نشان مخروط علامت‌های تجاری VideoLAN هستند. نرم‌افزار آزاد تحت GNU GPL نسخهٔ 2 یا بالاتر.</string>
+    <string name="rd_customize_player">سفارشی‌سازی پخش‌کننده</string>
+    <string name="rd_zone_left">چپ</string>
+    <string name="rd_zone_center">وسط</string>
+    <string name="rd_zone_right">راست</string>
+    <string name="rd_bar_backward">10 ثانیه عقب</string>
+    <string name="rd_bar_forward">10 ثانیه جلو</string>
+    <string name="rd_bar_rotate">چرخش</string>
+    <string name="rd_bar_settings">تنظیمات</string>
+    <string name="rd_bar_queue">صف</string>
+    <string name="rd_profile">نمایه</string>
+    <string name="rd_profile_default">پیش‌فرض</string>
+    <string name="rd_profile_minimalist">سبک مینیمال</string>
+    <string name="rd_profile_one_liner">سبک تک‌خطی</string>
+    <string name="rd_profile_simplest">ساده‌ترین سبک</string>
+    <string name="rd_profile_classic">سبک کلاسیک</string>
+    <string name="rd_new_profile">نمایهٔ جدید</string>
+    <string name="rd_rename_profile">تغییر نام نمایه</string>
+    <string name="rd_delete_profile">حذف نمایه</string>
+    <string name="rd_delete_named">حذف %1$s؟</string>
+    <string name="rd_profile_name">نام نمایه</string>
+    <string name="rd_remove">حذف</string>
+    <string name="rd_save">ذخیره</string>
+    <string name="rd_cancel">انصراف</string>
 </resources>

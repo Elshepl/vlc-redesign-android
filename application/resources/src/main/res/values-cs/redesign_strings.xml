@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Založeno na přehrávači VLC media player od</string>
     <string name="rd_about_videolan">týmu VideoLAN a přispěvatelů</string>
     <string name="rd_about_unofficial">Neoficiální sestavení, které není spojeno s VideoLAN ani Juxtopposed a není jimi schváleno. VLC, VLC media player a logo kužele jsou ochranné známky VideoLAN. Svobodný software pod licencí GNU GPL v2 nebo novější.</string>
+    <string name="rd_customize_player">Přizpůsobit přehrávač</string>
+    <string name="rd_zone_left">Vlevo</string>
+    <string name="rd_zone_center">Střed</string>
+    <string name="rd_zone_right">Vpravo</string>
+    <string name="rd_bar_backward">Zpět o 10 s</string>
+    <string name="rd_bar_forward">Vpřed o 10 s</string>
+    <string name="rd_bar_rotate">Otočit</string>
+    <string name="rd_bar_settings">Nastavení</string>
+    <string name="rd_bar_queue">Fronta</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Výchozí</string>
+    <string name="rd_profile_minimalist">Minimalistický styl</string>
+    <string name="rd_profile_one_liner">Jednořádkový styl</string>
+    <string name="rd_profile_simplest">Nejjednodušší styl</string>
+    <string name="rd_profile_classic">Klasický styl</string>
+    <string name="rd_new_profile">Nový profil</string>
+    <string name="rd_rename_profile">Přejmenovat profil</string>
+    <string name="rd_delete_profile">Smazat profil</string>
+    <string name="rd_delete_named">Smazat %1$s?</string>
+    <string name="rd_profile_name">Název profilu</string>
+    <string name="rd_remove">Odstranit</string>
+    <string name="rd_save">Uložit</string>
+    <string name="rd_cancel">Zrušit</string>
 </resources>

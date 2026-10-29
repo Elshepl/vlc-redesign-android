@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">VLC media player-en oinarritua, egileak</string>
     <string name="rd_about_videolan">VideoLAN taldea eta laguntzaileak</string>
     <string name="rd_about_unofficial">Bertsio ez-ofiziala da, VideoLAN-ekin edo Juxtopposed-ekin loturarik gabea eta haiek babestu gabea. VLC, VLC media player eta kono-logotipoa VideoLAN-en marka erregistratuak dira. Software librea, GNU GPL v2 edo berriagoaren lizentziapean.</string>
+    <string name="rd_customize_player">Pertsonalizatu erreproduzigailua</string>
+    <string name="rd_zone_left">Ezkerra</string>
+    <string name="rd_zone_center">Erdian</string>
+    <string name="rd_zone_right">Eskuina</string>
+    <string name="rd_bar_backward">Atzera 10 s</string>
+    <string name="rd_bar_forward">Aurrera 10 s</string>
+    <string name="rd_bar_rotate">Biratu</string>
+    <string name="rd_bar_settings">Ezarpenak</string>
+    <string name="rd_bar_queue">Ilara</string>
+    <string name="rd_profile">Profila</string>
+    <string name="rd_profile_default">Lehenetsia</string>
+    <string name="rd_profile_minimalist">Estilo minimalista</string>
+    <string name="rd_profile_one_liner">Lerro bakarreko estiloa</string>
+    <string name="rd_profile_simplest">Estilo sinpleena</string>
+    <string name="rd_profile_classic">Estilo klasikoa</string>
+    <string name="rd_new_profile">Profil berria</string>
+    <string name="rd_rename_profile">Aldatu profilaren izena</string>
+    <string name="rd_delete_profile">Ezabatu profila</string>
+    <string name="rd_delete_named">%1$s ezabatu?</string>
+    <string name="rd_profile_name">Profilaren izena</string>
+    <string name="rd_remove">Kendu</string>
+    <string name="rd_save">Gorde</string>
+    <string name="rd_cancel">Utzi</string>
 </resources>

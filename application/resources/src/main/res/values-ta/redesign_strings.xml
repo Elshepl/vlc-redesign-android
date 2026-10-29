@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">இதன் அடிப்படை VLC ஊடக இயக்கி, உருவாக்கியவர்கள்</string>
     <string name="rd_about_videolan">VideoLAN குழுவும் பங்களிப்பாளர்களும்</string>
     <string name="rd_about_unofficial">அதிகாரப்பூர்வமற்ற உருவாக்கம்; VideoLAN அல்லது Juxtopposed உடன் தொடர்புடையதோ அவற்றால் அங்கீகரிக்கப்பட்டதோ அல்ல. VLC, VLC media player மற்றும் கூம்புச் சின்னம் ஆகியவை VideoLAN-இன் வர்த்தகமுத்திரைகள். GNU GPL v2 அல்லது அதற்குப் பிந்தைய உரிமத்தின் கீழ் இலவச மென்பொருள்.</string>
+    <string name="rd_customize_player">இயக்கியைத் தனிப்பயனாக்கு</string>
+    <string name="rd_zone_left">இடது</string>
+    <string name="rd_zone_center">மையம்</string>
+    <string name="rd_zone_right">வலது</string>
+    <string name="rd_bar_backward">10வி பின்னோக்கி</string>
+    <string name="rd_bar_forward">10வி முன்னோக்கி</string>
+    <string name="rd_bar_rotate">சுழல்</string>
+    <string name="rd_bar_settings">அமைப்புகள்</string>
+    <string name="rd_bar_queue">வரிசை</string>
+    <string name="rd_profile">சுயவிவரம்</string>
+    <string name="rd_profile_default">இயல்புநிலை</string>
+    <string name="rd_profile_minimalist">குறைந்தபட்சப் பாணி</string>
+    <string name="rd_profile_one_liner">ஒற்றை வரிப் பாணி</string>
+    <string name="rd_profile_simplest">மிக எளிய பாணி</string>
+    <string name="rd_profile_classic">பாரம்பரியப் பாணி</string>
+    <string name="rd_new_profile">புதிய சுயவிவரம்</string>
+    <string name="rd_rename_profile">சுயவிவரத்தின் பெயரை மாற்று</string>
+    <string name="rd_delete_profile">சுயவிவரத்தை நீக்கு</string>
+    <string name="rd_delete_named">%1$s-ஐ நீக்கவா?</string>
+    <string name="rd_profile_name">சுயவிவரப் பெயர்</string>
+    <string name="rd_remove">அகற்று</string>
+    <string name="rd_save">சேமி</string>
+    <string name="rd_cancel">ரத்துசெய்</string>
 </resources>

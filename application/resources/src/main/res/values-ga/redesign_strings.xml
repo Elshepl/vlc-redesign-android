@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Tógtha ar sheinnteoir meán VLC le</string>
     <string name="rd_about_videolan">foireann VideoLAN agus rannpháirtithe</string>
     <string name="rd_about_unofficial">Leagan neamhoifigiúil é seo, nach bhfuil baint aige le VideoLAN ná le Juxtopposed agus nach bhfuil faofa acu. Is trádmharcanna de chuid VideoLAN iad VLC, seinnteoir meán VLC agus lógó an choirn. Bogearraí saora faoi GNU GPL v2 nó leagan níos déanaí.</string>
+    <string name="rd_customize_player">Saincheap an seinnteoir</string>
+    <string name="rd_zone_left">Clé</string>
+    <string name="rd_zone_center">Lár</string>
+    <string name="rd_zone_right">Deas</string>
+    <string name="rd_bar_backward">Siar 10s</string>
+    <string name="rd_bar_forward">Ar aghaidh 10s</string>
+    <string name="rd_bar_rotate">Rothlaigh</string>
+    <string name="rd_bar_settings">Socruithe</string>
+    <string name="rd_bar_queue">Scuaine</string>
+    <string name="rd_profile">Beathaisnéisín</string>
+    <string name="rd_profile_default">Réamhshocrú</string>
+    <string name="rd_profile_minimalist">Stíl íostach</string>
+    <string name="rd_profile_one_liner">Stíl aonlíne</string>
+    <string name="rd_profile_simplest">An stíl is simplí</string>
+    <string name="rd_profile_classic">Stíl chlasaiceach</string>
+    <string name="rd_new_profile">Próifíl nua</string>
+    <string name="rd_rename_profile">Athainmnigh an phróifíl</string>
+    <string name="rd_delete_profile">Scrios an phróifíl</string>
+    <string name="rd_delete_named">Scrios %1$s?</string>
+    <string name="rd_profile_name">Ainm na próifíle</string>
+    <string name="rd_remove">Bain</string>
+    <string name="rd_save">Cuir i dtaisce</string>
+    <string name="rd_cancel">Cealaigh</string>
 </resources>

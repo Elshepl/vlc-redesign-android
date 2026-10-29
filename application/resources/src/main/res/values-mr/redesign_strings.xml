@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">VLC media player वर आधारित; निर्माते</string>
     <string name="rd_about_videolan">VideoLAN संघ आणि योगदानकर्ते</string>
     <string name="rd_about_unofficial">ही अनधिकृत आवृत्ती आहे, ती VideoLAN किंवा Juxtopposed शी संलग्न नाही आणि त्यांनी तिला मान्यता दिलेली नाही. VLC, VLC media player आणि शंकू लोगो हे VideoLAN चे ट्रेडमार्क आहेत. GNU GPL v2 किंवा नंतरच्या आवृत्तीअंतर्गत मुक्त सॉफ्टवेअर.</string>
+    <string name="rd_customize_player">प्लेअर सानुकूलित करा</string>
+    <string name="rd_zone_left">डावे</string>
+    <string name="rd_zone_center">केंद्र</string>
+    <string name="rd_zone_right">उजवे</string>
+    <string name="rd_bar_backward">१० सेकंद मागे</string>
+    <string name="rd_bar_forward">१० सेकंद पुढे</string>
+    <string name="rd_bar_rotate">फिरवा</string>
+    <string name="rd_bar_settings">रचना</string>
+    <string name="rd_bar_queue">रांग</string>
+    <string name="rd_profile">स्वरुप</string>
+    <string name="rd_profile_default">पूर्वनिर्धारित</string>
+    <string name="rd_profile_minimalist">किमान शैली</string>
+    <string name="rd_profile_one_liner">एक-ओळ शैली</string>
+    <string name="rd_profile_simplest">सर्वात सोपी शैली</string>
+    <string name="rd_profile_classic">पारंपरिक शैली</string>
+    <string name="rd_new_profile">नवीन प्रोफाइल</string>
+    <string name="rd_rename_profile">प्रोफाइलचे नाव बदला</string>
+    <string name="rd_delete_profile">प्रोफाइल हटवा</string>
+    <string name="rd_delete_named">%1$s हटवायचे?</string>
+    <string name="rd_profile_name">प्रोफाइलचे नाव</string>
+    <string name="rd_remove">काढून टाका</string>
+    <string name="rd_save">साठवा</string>
+    <string name="rd_cancel">रद्द करा</string>
 </resources>

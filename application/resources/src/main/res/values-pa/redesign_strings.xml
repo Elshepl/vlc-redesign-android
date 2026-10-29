@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">VLC ਮੀਡਿਆ ਪਲੇਅਰ ਉੱਤੇ ਆਧਾਰਿਤ, ਜਿਸ ਦੇ ਨਿਰਮਾਤਾ ਹਨ</string>
     <string name="rd_about_videolan">VideoLAN ਟੀਮ ਅਤੇ ਯੋਗਦਾਨੀ</string>
     <string name="rd_about_unofficial">ਇੱਕ ਗ਼ੈਰ-ਅਧਿਕਾਰਤ ਬਿਲਡ, ਜੋ VideoLAN ਜਾਂ Juxtopposed ਨਾਲ ਜੁੜਿਆ ਨਹੀਂ ਅਤੇ ਨਾ ਹੀ ਉਹਨਾਂ ਵੱਲੋਂ ਸਮਰਥਿਤ ਹੈ। VLC, VLC ਮੀਡਿਆ ਪਲੇਅਰ ਅਤੇ ਕੋਨ ਲੋਗੋ VideoLAN ਦੇ ਟਰੇਡਮਾਰਕ ਹਨ। GNU GPL v2 ਜਾਂ ਨਵੇਂ ਵਰਜਨ ਅਧੀਨ ਮੁਫ਼ਤ ਸਾਫ਼ਟਵੇਅਰ।</string>
+    <string name="rd_customize_player">ਪਲੇਅਰ ਕਸਟਮਾਈਜ਼ ਕਰੋ</string>
+    <string name="rd_zone_left">ਖੱਬੇ</string>
+    <string name="rd_zone_center">ਸੈਂਟਰ</string>
+    <string name="rd_zone_right">ਸੱਜੇ</string>
+    <string name="rd_bar_backward">10s ਪਿੱਛੇ</string>
+    <string name="rd_bar_forward">10s ਅੱਗੇ</string>
+    <string name="rd_bar_rotate">ਘੁੰਮਾਓ</string>
+    <string name="rd_bar_settings">ਸੈਟਿੰਗ</string>
+    <string name="rd_bar_queue">ਕਤਾਰ</string>
+    <string name="rd_profile">ਪਰੋਫਾਇਲ</string>
+    <string name="rd_profile_default">ਡਿਫਾਲਟ</string>
+    <string name="rd_profile_minimalist">ਘੱਟੋ-ਘੱਟ ਸਟਾਈਲ</string>
+    <string name="rd_profile_one_liner">ਇੱਕ-ਲਾਈਨ ਸਟਾਈਲ</string>
+    <string name="rd_profile_simplest">ਸਭ ਤੋਂ ਸਧਾਰਨ ਸਟਾਈਲ</string>
+    <string name="rd_profile_classic">ਕਲਾਸਿਕ ਸਟਾਈਲ</string>
+    <string name="rd_new_profile">ਨਵਾਂ ਪਰੋਫਾਇਲ</string>
+    <string name="rd_rename_profile">ਪਰੋਫਾਇਲ ਦਾ ਨਾਂ ਬਦਲੋ</string>
+    <string name="rd_delete_profile">ਪਰੋਫਾਇਲ ਹਟਾਓ</string>
+    <string name="rd_delete_named">ਕੀ %1$s ਹਟਾਉਣਾ ਹੈ?</string>
+    <string name="rd_profile_name">ਪਰੋਫਾਇਲ ਦਾ ਨਾਂ</string>
+    <string name="rd_remove">ਹਟਾਓ</string>
+    <string name="rd_save">ਸੰਭਾਲੋ</string>
+    <string name="rd_cancel">ਰੱਦ ਕਰੋ</string>
 </resources>

@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Baseado no VLC media player, de</string>
     <string name="rd_about_videolan">a equipe VideoLAN e colaboradores</string>
     <string name="rd_about_unofficial">Uma versão não oficial, sem vínculo com a VideoLAN ou o Juxtopposed e sem aprovação deles. VLC, VLC media player e o logotipo do cone são marcas registradas da VideoLAN. Software livre sob a GNU GPL v2 ou posterior.</string>
+    <string name="rd_customize_player">Personalizar o player</string>
+    <string name="rd_zone_left">Esquerda</string>
+    <string name="rd_zone_center">Centro</string>
+    <string name="rd_zone_right">Direita</string>
+    <string name="rd_bar_backward">Voltar 10 s</string>
+    <string name="rd_bar_forward">Avançar 10 s</string>
+    <string name="rd_bar_rotate">Rotacionar</string>
+    <string name="rd_bar_settings">Configurações</string>
+    <string name="rd_bar_queue">Fila</string>
+    <string name="rd_profile">Perfil</string>
+    <string name="rd_profile_default">Padrão</string>
+    <string name="rd_profile_minimalist">Estilo minimalista</string>
+    <string name="rd_profile_one_liner">Estilo de uma linha</string>
+    <string name="rd_profile_simplest">Estilo mais simples</string>
+    <string name="rd_profile_classic">Estilo clássico</string>
+    <string name="rd_new_profile">Novo perfil</string>
+    <string name="rd_rename_profile">Renomear perfil</string>
+    <string name="rd_delete_profile">Excluir perfil</string>
+    <string name="rd_delete_named">Excluir %1$s?</string>
+    <string name="rd_profile_name">Nome do perfil</string>
+    <string name="rd_remove">Remover</string>
+    <string name="rd_save">Salvar</string>
+    <string name="rd_cancel">Cancelar</string>
 </resources>

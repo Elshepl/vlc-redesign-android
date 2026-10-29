@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Balstīts uz VLC multimediju atskaņotāju, ko veidojusi</string>
     <string name="rd_about_videolan">VideoLAN komanda un līdzstrādnieki</string>
     <string name="rd_about_unofficial">Neoficiāla versija, kas nav saistīta ar VideoLAN vai Juxtopposed un ko tie nav apstiprinājuši. VLC, VLC media player un konusa logotips ir VideoLAN preču zīmes. Brīva programmatūra ar GNU GPL v2 vai jaunākas versijas licenci.</string>
+    <string name="rd_customize_player">Pielāgot atskaņotāju</string>
+    <string name="rd_zone_left">Kreisais</string>
+    <string name="rd_zone_center">Centrā</string>
+    <string name="rd_zone_right">Labais</string>
+    <string name="rd_bar_backward">Atpakaļ 10 s</string>
+    <string name="rd_bar_forward">Uz priekšu 10 s</string>
+    <string name="rd_bar_rotate">Rotēt</string>
+    <string name="rd_bar_settings">Iestatījumi</string>
+    <string name="rd_bar_queue">Rinda</string>
+    <string name="rd_profile">Profils</string>
+    <string name="rd_profile_default">Noklusējuma</string>
+    <string name="rd_profile_minimalist">Minimālistisks stils</string>
+    <string name="rd_profile_one_liner">Vienas rindas stils</string>
+    <string name="rd_profile_simplest">Visvienkāršākais stils</string>
+    <string name="rd_profile_classic">Klasisks stils</string>
+    <string name="rd_new_profile">Jauns profils</string>
+    <string name="rd_rename_profile">Pārdēvēt profilu</string>
+    <string name="rd_delete_profile">Dzēst profilu</string>
+    <string name="rd_delete_named">Vai dzēst %1$s?</string>
+    <string name="rd_profile_name">Profila nosaukums</string>
+    <string name="rd_remove">Noņemt</string>
+    <string name="rd_save">Saglabāt</string>
+    <string name="rd_cancel">Atcelt</string>
 </resources>

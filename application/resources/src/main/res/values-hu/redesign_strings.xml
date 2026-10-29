@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">A VLC médialejátszóra épül, amelynek készítői</string>
     <string name="rd_about_videolan">a VideoLAN csapata és közreműködői</string>
     <string name="rd_about_unofficial">Nem hivatalos kiadás: sem a VideoLAN, sem a Juxtopposed nem áll kapcsolatban vele, és nem is támogatja. A VLC, a VLC media player és a kúp logó a VideoLAN védjegyei. Szabad szoftver a GNU GPL v2 vagy újabb licenc alatt.</string>
+    <string name="rd_customize_player">Lejátszó testreszabása</string>
+    <string name="rd_zone_left">Bal</string>
+    <string name="rd_zone_center">Középre</string>
+    <string name="rd_zone_right">Jobb</string>
+    <string name="rd_bar_backward">10 mp vissza</string>
+    <string name="rd_bar_forward">10 mp előre</string>
+    <string name="rd_bar_rotate">Forgatás</string>
+    <string name="rd_bar_settings">Beállítások</string>
+    <string name="rd_bar_queue">Sor</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Alapértelmezett</string>
+    <string name="rd_profile_minimalist">Minimalista stílus</string>
+    <string name="rd_profile_one_liner">Egysoros stílus</string>
+    <string name="rd_profile_simplest">Legegyszerűbb stílus</string>
+    <string name="rd_profile_classic">Klasszikus stílus</string>
+    <string name="rd_new_profile">Új profil</string>
+    <string name="rd_rename_profile">Profil átnevezése</string>
+    <string name="rd_delete_profile">Profil törlése</string>
+    <string name="rd_delete_named">%1$s törlése?</string>
+    <string name="rd_profile_name">Profil neve</string>
+    <string name="rd_remove">Eltávolítás</string>
+    <string name="rd_save">Mentés</string>
+    <string name="rd_cancel">Mégse</string>
 </resources>

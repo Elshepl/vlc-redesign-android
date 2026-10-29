@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">基於 VLC media player，開發者為</string>
     <string name="rd_about_videolan">VideoLAN 團隊與貢獻者</string>
     <string name="rd_about_unofficial">非官方版本，與 VideoLAN 或 Juxtopposed 無關，亦未經其認可。VLC、VLC media player 及三角錐標誌為 VideoLAN 的商標。依 GNU GPL v2 或更新版本授權的自由軟體。</string>
+    <string name="rd_customize_player">自訂播放器</string>
+    <string name="rd_zone_left">左邊</string>
+    <string name="rd_zone_center">中央</string>
+    <string name="rd_zone_right">右邊</string>
+    <string name="rd_bar_backward">倒退 10 秒</string>
+    <string name="rd_bar_forward">快轉 10 秒</string>
+    <string name="rd_bar_rotate">旋轉</string>
+    <string name="rd_bar_settings">設定</string>
+    <string name="rd_bar_queue">佇列</string>
+    <string name="rd_profile">設定檔</string>
+    <string name="rd_profile_default">預設</string>
+    <string name="rd_profile_minimalist">極簡樣式</string>
+    <string name="rd_profile_one_liner">單行樣式</string>
+    <string name="rd_profile_simplest">最簡樣式</string>
+    <string name="rd_profile_classic">經典樣式</string>
+    <string name="rd_new_profile">新增設定檔</string>
+    <string name="rd_rename_profile">重新命名設定檔</string>
+    <string name="rd_delete_profile">刪除設定檔</string>
+    <string name="rd_delete_named">要刪除 %1$s 嗎？</string>
+    <string name="rd_profile_name">設定檔名稱</string>
+    <string name="rd_remove">移除</string>
+    <string name="rd_save">儲存</string>
+    <string name="rd_cancel">取消</string>
 </resources>

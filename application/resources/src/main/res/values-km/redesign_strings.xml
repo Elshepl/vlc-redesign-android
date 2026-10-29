@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">សាងសង់លើកម្មវិធីចាក់មេឌៀ VLC ដោយ</string>
     <string name="rd_about_videolan">ក្រុម VideoLAN និងអ្នករួមចំណែក</string>
     <string name="rd_about_unofficial">កំណែមិនផ្លូវការ មិនមានទំនាក់ទំនង ឬការគាំទ្រពី VideoLAN ឬ Juxtopposed ទេ។ VLC, កម្មវិធីចាក់មេឌៀ VLC និងរូបសញ្ញាកោណ គឺជាពាណិជ្ជសញ្ញារបស់ VideoLAN។ កម្មវិធីឥតគិតថ្លៃក្រោម GNU GPL v2 ឬក្រោយ។</string>
+    <string name="rd_customize_player">ប្ដូរកម្មវិធីចាក់តាមបំណង</string>
+    <string name="rd_zone_left">ឆ្វេង</string>
+    <string name="rd_zone_center">កណ្ដាល</string>
+    <string name="rd_zone_right">ស្ដាំ</string>
+    <string name="rd_bar_backward">ថយក្រោយ 10 វិ.</string>
+    <string name="rd_bar_forward">ទៅមុខ 10 វិ.</string>
+    <string name="rd_bar_rotate">បង្វិល</string>
+    <string name="rd_bar_settings">ការ​កំណត់</string>
+    <string name="rd_bar_queue">ជួរ</string>
+    <string name="rd_profile">ទម្រង់</string>
+    <string name="rd_profile_default">លំនាំដើម</string>
+    <string name="rd_profile_minimalist">រចនាប័ទ្មសាមញ្ញបំផុត</string>
+    <string name="rd_profile_one_liner">រចនាប័ទ្មមួយជួរ</string>
+    <string name="rd_profile_simplest">រចនាប័ទ្មងាយបំផុត</string>
+    <string name="rd_profile_classic">រចនាប័ទ្មបុរាណ</string>
+    <string name="rd_new_profile">ប្រវត្តិរូបថ្មី</string>
+    <string name="rd_rename_profile">ប្ដូរឈ្មោះប្រវត្តិរូប</string>
+    <string name="rd_delete_profile">លុបប្រវត្តិរូប</string>
+    <string name="rd_delete_named">លុប %1$s?</string>
+    <string name="rd_profile_name">ឈ្មោះប្រវត្តិរូប</string>
+    <string name="rd_remove">យកចេញ</string>
+    <string name="rd_save">រក្សាទុក</string>
+    <string name="rd_cancel">បោះបង់</string>
 </resources>

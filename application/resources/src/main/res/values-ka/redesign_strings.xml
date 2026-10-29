@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">დაფუძნებულია VLC მედიადამკვრელზე, რომელიც შექმნეს</string>
     <string name="rd_about_videolan">VideoLAN-ის გუნდმა და მონაწილეებმა</string>
     <string name="rd_about_unofficial">არაოფიციალური ანაწყობი, რომელიც არ არის დაკავშირებული VideoLAN-თან ან Juxtopposed-თან და არ არის მათ მიერ მოწონებული. VLC, VLC media player და კონუსის ლოგო VideoLAN-ის სავაჭრო ნიშნებია. თავისუფალი პროგრამა GNU GPL v2 ან უფრო ახალი ლიცენზიით.</string>
+    <string name="rd_customize_player">დამკვრელის მორგება</string>
+    <string name="rd_zone_left">მარცხენა</string>
+    <string name="rd_zone_center">ცენტრში</string>
+    <string name="rd_zone_right">მარჯვენა</string>
+    <string name="rd_bar_backward">უკან 10 წმ</string>
+    <string name="rd_bar_forward">წინ 10 წმ</string>
+    <string name="rd_bar_rotate">მობრუნება</string>
+    <string name="rd_bar_settings">პარამეტრები</string>
+    <string name="rd_bar_queue">რიგი</string>
+    <string name="rd_profile">პროფილი</string>
+    <string name="rd_profile_default">ნაგულისხმევი</string>
+    <string name="rd_profile_minimalist">მინიმალისტური სტილი</string>
+    <string name="rd_profile_one_liner">ერთხაზიანი სტილი</string>
+    <string name="rd_profile_simplest">უმარტივესი სტილი</string>
+    <string name="rd_profile_classic">კლასიკური სტილი</string>
+    <string name="rd_new_profile">ახალი პროფილი</string>
+    <string name="rd_rename_profile">პროფილის გადარქმევა</string>
+    <string name="rd_delete_profile">პროფილის წაშლა</string>
+    <string name="rd_delete_named">წაიშალოს %1$s?</string>
+    <string name="rd_profile_name">პროფილის სახელი</string>
+    <string name="rd_remove">ამოშლა</string>
+    <string name="rd_save">შენახვა</string>
+    <string name="rd_cancel">გაუქმება</string>
 </resources>

@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Izgrađeno na medijskom izvođaču VLC, koji su izradili</string>
     <string name="rd_about_videolan">tim VideoLAN i suradnici</string>
     <string name="rd_about_unofficial">Neslužbena inačica, nije povezana s VideoLAN-om ni s Juxtopposedom niti je oni podržavaju. VLC, VLC media player i logotip čunja zaštitni su znakovi VideoLAN-a. Slobodan softver pod licencom GNU GPL v2 ili novijom.</string>
+    <string name="rd_customize_player">Prilagodi izvođač</string>
+    <string name="rd_zone_left">Lijevo</string>
+    <string name="rd_zone_center">Sredina</string>
+    <string name="rd_zone_right">Desno</string>
+    <string name="rd_bar_backward">Unatrag 10 s</string>
+    <string name="rd_bar_forward">Naprijed 10 s</string>
+    <string name="rd_bar_rotate">Zakretanje</string>
+    <string name="rd_bar_settings">Postavke</string>
+    <string name="rd_bar_queue">Red izvođenja</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Zadano</string>
+    <string name="rd_profile_minimalist">Minimalistički stil</string>
+    <string name="rd_profile_one_liner">Stil u jednom retku</string>
+    <string name="rd_profile_simplest">Najjednostavniji stil</string>
+    <string name="rd_profile_classic">Klasičan stil</string>
+    <string name="rd_new_profile">Novi profil</string>
+    <string name="rd_rename_profile">Preimenuj profil</string>
+    <string name="rd_delete_profile">Izbriši profil</string>
+    <string name="rd_delete_named">Izbrisati %1$s?</string>
+    <string name="rd_profile_name">Naziv profila</string>
+    <string name="rd_remove">Ukloni</string>
+    <string name="rd_save">Spremi</string>
+    <string name="rd_cancel">Odustani</string>
 </resources>

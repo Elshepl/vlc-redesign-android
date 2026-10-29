@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Byggjer på VLC media player av</string>
     <string name="rd_about_videolan">VideoLAN-teamet og bidragsytarar</string>
     <string name="rd_about_unofficial">Ein uoffisiell versjon, ikkje tilknytt eller godkjend av VideoLAN eller Juxtopposed. VLC, VLC media player og kjeglelogoen er varemerke for VideoLAN. Fri programvare under GNU GPL v2 eller seinare.</string>
+    <string name="rd_customize_player">Tilpass spelaren</string>
+    <string name="rd_zone_left">Venstre</string>
+    <string name="rd_zone_center">Midten</string>
+    <string name="rd_zone_right">Høgre</string>
+    <string name="rd_bar_backward">Bakover 10 s</string>
+    <string name="rd_bar_forward">Framover 10 s</string>
+    <string name="rd_bar_rotate">Snu</string>
+    <string name="rd_bar_settings">Innstillingar</string>
+    <string name="rd_bar_queue">Kø</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Standard</string>
+    <string name="rd_profile_minimalist">Minimalistisk stil</string>
+    <string name="rd_profile_one_liner">Éinlinjestil</string>
+    <string name="rd_profile_simplest">Enklaste stil</string>
+    <string name="rd_profile_classic">Klassisk stil</string>
+    <string name="rd_new_profile">Ny profil</string>
+    <string name="rd_rename_profile">Endra namn på profilen</string>
+    <string name="rd_delete_profile">Slett profil</string>
+    <string name="rd_delete_named">Sletta %1$s?</string>
+    <string name="rd_profile_name">Profilnamn</string>
+    <string name="rd_remove">Fjern</string>
+    <string name="rd_save">Lagre</string>
+    <string name="rd_cancel">Avbryt</string>
 </resources>

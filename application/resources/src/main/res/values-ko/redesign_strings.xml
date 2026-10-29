@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">VLC 미디어 재생기 기반, 개발:</string>
     <string name="rd_about_videolan">VideoLAN 팀 및 기여자</string>
     <string name="rd_about_unofficial">VideoLAN 또는 Juxtopposed와 제휴하거나 그 보증을 받지 않은 비공식 빌드입니다. VLC, VLC media player 및 원뿔 로고는 VideoLAN의 상표입니다. GNU GPL v2 이상에 따른 자유 소프트웨어입니다.</string>
+    <string name="rd_customize_player">플레이어 사용자 지정</string>
+    <string name="rd_zone_left">왼쪽</string>
+    <string name="rd_zone_center">가운데</string>
+    <string name="rd_zone_right">오른쪽</string>
+    <string name="rd_bar_backward">10초 뒤로</string>
+    <string name="rd_bar_forward">10초 앞으로</string>
+    <string name="rd_bar_rotate">회전</string>
+    <string name="rd_bar_settings">설정</string>
+    <string name="rd_bar_queue">대기열</string>
+    <string name="rd_profile">프로파일</string>
+    <string name="rd_profile_default">기본</string>
+    <string name="rd_profile_minimalist">미니멀 스타일</string>
+    <string name="rd_profile_one_liner">한 줄 스타일</string>
+    <string name="rd_profile_simplest">가장 단순한 스타일</string>
+    <string name="rd_profile_classic">클래식 스타일</string>
+    <string name="rd_new_profile">새 프로필</string>
+    <string name="rd_rename_profile">프로필 이름 바꾸기</string>
+    <string name="rd_delete_profile">프로필 삭제</string>
+    <string name="rd_delete_named">%1$s을(를) 삭제할까요?</string>
+    <string name="rd_profile_name">프로필 이름</string>
+    <string name="rd_remove">삭제</string>
+    <string name="rd_save">저장</string>
+    <string name="rd_cancel">취소</string>
 </resources>

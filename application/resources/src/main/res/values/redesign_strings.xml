@@ -33,4 +33,31 @@
     <string name="rd_about_videolan">the VideoLAN team and contributors</string>
     <string name="rd_about_unofficial">An unofficial build, not affiliated with or endorsed by VideoLAN or Juxtopposed. VLC, VLC media player and the cone logo are trademarks of VideoLAN. Free software under the GNU GPL v2 or later.</string>
     <string name="rd_about_whats_new">What\'s new in %1$s</string>
+    <!-- Customize Player (the desktop's toolbar editor) -->
+    <string name="rd_customize_player">Customize Player</string>
+    <string name="rd_customize_hint">Choose a zone of the bar, then tap the controls to put in it. Tap a control of the bar to move it or take it out.</string>
+    <string name="rd_zone_left">Left</string>
+    <string name="rd_zone_center">Center</string>
+    <string name="rd_zone_right">Right</string>
+    <string name="rd_bar_backward">Backward 10s</string>
+    <string name="rd_bar_forward">Forward 10s</string>
+    <string name="rd_bar_rotate">Rotate</string>
+    <string name="rd_bar_settings">Settings</string>
+    <string name="rd_bar_queue">Queue</string>
+    <string name="rd_profile">Profile</string>
+    <string name="rd_profile_default">Default</string>
+    <string name="rd_profile_minimalist">Minimalist Style</string>
+    <string name="rd_profile_one_liner">One-liner Style</string>
+    <string name="rd_profile_simplest">Simplest Style</string>
+    <string name="rd_profile_classic">Classic Style</string>
+    <string name="rd_new_profile">New Profile</string>
+    <string name="rd_rename_profile">Rename Profile</string>
+    <string name="rd_delete_profile">Delete Profile</string>
+    <string name="rd_delete_named">Delete %1$s?</string>
+    <string name="rd_profile_name">Profile name</string>
+    <string name="rd_remove">Remove</string>
+    <string name="rd_move_earlier">Move left</string>
+    <string name="rd_move_later">Move right</string>
+    <string name="rd_save">Save</string>
+    <string name="rd_cancel">Cancel</string>
 </resources>

@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Temel alınan VLC ortam oynatıcının yapımcıları:</string>
     <string name="rd_about_videolan">VideoLAN ekibi ve katkıda bulunanlar</string>
     <string name="rd_about_unofficial">Resmî olmayan bir derlemedir; VideoLAN ya da Juxtopposed ile bağlantılı değildir ve onlarca onaylanmamıştır. VLC, VLC media player ve koni logosu VideoLAN\'ın ticari markalarıdır. GNU GPL v2 ya da sonraki sürümleri kapsamında özgür yazılımdır.</string>
+    <string name="rd_customize_player">Oynatıcıyı Özelleştir</string>
+    <string name="rd_zone_left">Sol</string>
+    <string name="rd_zone_center">Ortada</string>
+    <string name="rd_zone_right">Sağ</string>
+    <string name="rd_bar_backward">Geri 10s</string>
+    <string name="rd_bar_forward">İleri 10s</string>
+    <string name="rd_bar_rotate">Çevirme</string>
+    <string name="rd_bar_settings">Ayarlar</string>
+    <string name="rd_bar_queue">Kuyruk</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Varsayılan</string>
+    <string name="rd_profile_minimalist">Minimalist Stil</string>
+    <string name="rd_profile_one_liner">Tek Satır Stili</string>
+    <string name="rd_profile_simplest">En Yalın Stil</string>
+    <string name="rd_profile_classic">Klasik Stil</string>
+    <string name="rd_new_profile">Yeni Profil</string>
+    <string name="rd_rename_profile">Profili Yeniden Adlandır</string>
+    <string name="rd_delete_profile">Profili Sil</string>
+    <string name="rd_delete_named">%1$s silinsin mi?</string>
+    <string name="rd_profile_name">Profil adı</string>
+    <string name="rd_remove">Kaldır</string>
+    <string name="rd_save">Kaydet</string>
+    <string name="rd_cancel">İptal</string>
 </resources>

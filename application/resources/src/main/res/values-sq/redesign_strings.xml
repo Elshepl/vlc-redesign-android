@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Ndërtuar mbi VLC media player nga</string>
     <string name="rd_about_videolan">ekipi i VideoLAN dhe kontribuuesit</string>
     <string name="rd_about_unofficial">Një ndërtim jozyrtar, që nuk lidhet me VideoLAN ose Juxtopposed dhe nuk miratohet prej tyre. VLC, VLC media player dhe logoja e konit janë marka tregtare të VideoLAN. Softuer i lirë sipas GNU GPL v2 ose më të re.</string>
+    <string name="rd_customize_player">Personalizo luajtësin</string>
+    <string name="rd_zone_left">Majtas</string>
+    <string name="rd_zone_center">Qëndër</string>
+    <string name="rd_zone_right">Djathtas</string>
+    <string name="rd_bar_backward">Prapa 10 s</string>
+    <string name="rd_bar_forward">Përpara 10 s</string>
+    <string name="rd_bar_rotate">Rrotullo</string>
+    <string name="rd_bar_settings">Cilësimet</string>
+    <string name="rd_bar_queue">Radha</string>
+    <string name="rd_profile">Profili</string>
+    <string name="rd_profile_default">Parazgjedhje</string>
+    <string name="rd_profile_minimalist">Stil minimalist</string>
+    <string name="rd_profile_one_liner">Stil me një rresht</string>
+    <string name="rd_profile_simplest">Stili më i thjeshtë</string>
+    <string name="rd_profile_classic">Stil klasik</string>
+    <string name="rd_new_profile">Profil i ri</string>
+    <string name="rd_rename_profile">Riemërto profilin</string>
+    <string name="rd_delete_profile">Fshi profilin</string>
+    <string name="rd_delete_named">Të fshihet %1$s?</string>
+    <string name="rd_profile_name">Emri i profilit</string>
+    <string name="rd_remove">Hiq</string>
+    <string name="rd_save">Ruaj</string>
+    <string name="rd_cancel">Anulo</string>
 </resources>

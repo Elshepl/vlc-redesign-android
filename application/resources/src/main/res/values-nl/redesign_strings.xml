@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Gebouwd op VLC media player door</string>
     <string name="rd_about_videolan">het VideoLAN-team en de bijdragers</string>
     <string name="rd_about_unofficial">Een onofficiële build, niet verbonden aan of goedgekeurd door VideoLAN of Juxtopposed. VLC, VLC media player en het kegellogo zijn handelsmerken van VideoLAN. Vrije software onder de GNU GPL v2 of later.</string>
+    <string name="rd_customize_player">Speler aanpassen</string>
+    <string name="rd_zone_left">Links</string>
+    <string name="rd_zone_center">Gecentreerd</string>
+    <string name="rd_zone_right">Rechts</string>
+    <string name="rd_bar_backward">10 s terug</string>
+    <string name="rd_bar_forward">10 s vooruit</string>
+    <string name="rd_bar_rotate">Roteren</string>
+    <string name="rd_bar_settings">Instellingen</string>
+    <string name="rd_bar_queue">Wachtrij</string>
+    <string name="rd_profile">Profiel</string>
+    <string name="rd_profile_default">Standaard</string>
+    <string name="rd_profile_minimalist">Minimalistische stijl</string>
+    <string name="rd_profile_one_liner">Stijl op één regel</string>
+    <string name="rd_profile_simplest">Eenvoudigste stijl</string>
+    <string name="rd_profile_classic">Klassieke stijl</string>
+    <string name="rd_new_profile">Nieuw profiel</string>
+    <string name="rd_rename_profile">Naam van profiel wijzigen</string>
+    <string name="rd_delete_profile">Profiel verwijderen</string>
+    <string name="rd_delete_named">%1$s verwijderen?</string>
+    <string name="rd_profile_name">Profielnaam</string>
+    <string name="rd_remove">Verwijderen</string>
+    <string name="rd_save">Opslaan</string>
+    <string name="rd_cancel">Annuleren</string>
 </resources>

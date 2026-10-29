@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Заснавана на медыяпрайгравальніку VLC, створаным</string>
     <string name="rd_about_videolan">камандай VideoLAN і ўдзельнікамі</string>
     <string name="rd_about_unofficial">Неафіцыйная зборка, не звязаная з VideoLAN або Juxtopposed і не ўхваленая імі. VLC, VLC media player і лагатып з конусам — гандлёвыя маркі VideoLAN. Свабоднае праграмнае забеспячэнне па ліцэнзіі GNU GPL v2 або пазнейшай.</string>
+    <string name="rd_customize_player">Наладзіць прайгравальнік</string>
+    <string name="rd_zone_left">Улева</string>
+    <string name="rd_zone_center">Па цэнтры</string>
+    <string name="rd_zone_right">Управа</string>
+    <string name="rd_bar_backward">Назад на 10 с</string>
+    <string name="rd_bar_forward">Наперад на 10 с</string>
+    <string name="rd_bar_rotate">Кручэнне</string>
+    <string name="rd_bar_settings">Настаўленні</string>
+    <string name="rd_bar_queue">Чарга</string>
+    <string name="rd_profile">Профіль</string>
+    <string name="rd_profile_default">Стандартна</string>
+    <string name="rd_profile_minimalist">Мінімалістычны стыль</string>
+    <string name="rd_profile_one_liner">Аднарадковы стыль</string>
+    <string name="rd_profile_simplest">Найпрасцейшы стыль</string>
+    <string name="rd_profile_classic">Класічны стыль</string>
+    <string name="rd_new_profile">Новы профіль</string>
+    <string name="rd_rename_profile">Перайменаваць профіль</string>
+    <string name="rd_delete_profile">Выдаліць профіль</string>
+    <string name="rd_delete_named">Выдаліць %1$s?</string>
+    <string name="rd_profile_name">Назва профілю</string>
+    <string name="rd_remove">Выдаліць</string>
+    <string name="rd_save">Захаваць</string>
+    <string name="rd_cancel">Скасаваць</string>
 </resources>

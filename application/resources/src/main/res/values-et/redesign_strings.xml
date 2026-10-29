@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">VLC meediaesitaja põhjal, mille lõid</string>
     <string name="rd_about_videolan">VideoLAN-i meeskond ja kaastöötajad</string>
     <string name="rd_about_unofficial">Mitteametlik väljalase, mis pole seotud VideoLAN-i ega Juxtopposediga ega nende poolt heaks kiidetud. VLC, VLC media player ja koonuse logo on VideoLAN-i kaubamärgid. Vaba tarkvara GNU GPL v2 või uuema litsentsi alusel.</string>
+    <string name="rd_customize_player">Kohanda mängijat</string>
+    <string name="rd_zone_left">Vasakult</string>
+    <string name="rd_zone_center">Keskel</string>
+    <string name="rd_zone_right">Paremalt</string>
+    <string name="rd_bar_backward">10 s tagasi</string>
+    <string name="rd_bar_forward">10 s edasi</string>
+    <string name="rd_bar_rotate">Pööramine</string>
+    <string name="rd_bar_settings">Sätted</string>
+    <string name="rd_bar_queue">Järjekord</string>
+    <string name="rd_profile">Profiil</string>
+    <string name="rd_profile_default">Vaikimisi</string>
+    <string name="rd_profile_minimalist">Minimalistlik stiil</string>
+    <string name="rd_profile_one_liner">Üherealine stiil</string>
+    <string name="rd_profile_simplest">Lihtsaim stiil</string>
+    <string name="rd_profile_classic">Klassikaline stiil</string>
+    <string name="rd_new_profile">Uus profiil</string>
+    <string name="rd_rename_profile">Nimeta profiil ümber</string>
+    <string name="rd_delete_profile">Kustuta profiil</string>
+    <string name="rd_delete_named">Kas kustutada %1$s?</string>
+    <string name="rd_profile_name">Profiili nimi</string>
+    <string name="rd_remove">Eemalda</string>
+    <string name="rd_save">Salvesta</string>
+    <string name="rd_cancel">Loobu</string>
 </resources>

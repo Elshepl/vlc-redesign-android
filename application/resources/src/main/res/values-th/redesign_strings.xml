@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">สร้างบนโปรแกรมเล่นสื่อ VLC โดย</string>
     <string name="rd_about_videolan">ทีม VideoLAN และผู้ร่วมพัฒนา</string>
     <string name="rd_about_unofficial">รุ่นที่ไม่เป็นทางการ ไม่มีส่วนเกี่ยวข้องหรือได้รับการรับรองจาก VideoLAN หรือ Juxtopposed VLC, VLC media player และโลโก้กรวยเป็นเครื่องหมายการค้าของ VideoLAN ซอฟต์แวร์เสรีภายใต้สัญญาอนุญาต GNU GPL v2 หรือใหม่กว่า</string>
+    <string name="rd_customize_player">ปรับแต่งตัวเล่น</string>
+    <string name="rd_zone_left">ซ้าย</string>
+    <string name="rd_zone_center">กลาง</string>
+    <string name="rd_zone_right">ขวา</string>
+    <string name="rd_bar_backward">ย้อนกลับ 10 วินาที</string>
+    <string name="rd_bar_forward">ไปข้างหน้า 10 วินาที</string>
+    <string name="rd_bar_rotate">หมุน</string>
+    <string name="rd_bar_settings">ค่าตั้ง</string>
+    <string name="rd_bar_queue">คิว</string>
+    <string name="rd_profile">โพรไฟล์</string>
+    <string name="rd_profile_default">ปริยาย</string>
+    <string name="rd_profile_minimalist">รูปแบบเรียบง่าย</string>
+    <string name="rd_profile_one_liner">รูปแบบบรรทัดเดียว</string>
+    <string name="rd_profile_simplest">รูปแบบเรียบง่ายที่สุด</string>
+    <string name="rd_profile_classic">รูปแบบคลาสสิก</string>
+    <string name="rd_new_profile">โพรไฟล์ใหม่</string>
+    <string name="rd_rename_profile">เปลี่ยนชื่อโพรไฟล์</string>
+    <string name="rd_delete_profile">ลบโพรไฟล์</string>
+    <string name="rd_delete_named">ลบ %1$s หรือไม่?</string>
+    <string name="rd_profile_name">ชื่อโพรไฟล์</string>
+    <string name="rd_remove">เอาออก</string>
+    <string name="rd_save">บันทึก</string>
+    <string name="rd_cancel">ยกเลิก</string>
 </resources>

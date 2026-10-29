@@ -80,6 +80,7 @@ private const val ID_AUDIO_CONTROL_SETTING = 20L
 private const val ID_SAFE_MODE_LOCK = 21L
 private const val ID_SAFE_MODE_UNLOCK = 22L
 private const val ID_SHARE = 23L
+private const val ID_CUSTOMIZE_PLAYER = 24L
 @SuppressLint("ShowToast")
 class PlayerOptionsDelegate(val activity: FragmentActivity, val service: PlaybackService, private val showABReapeat:Boolean = true)  {
 
@@ -131,6 +132,8 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         if (video) {
             if (PinCodeDelegate.pinUnlocked.value == true) options.add(PlayerOption(ID_SAFE_MODE_LOCK, R.drawable.ic_pin_lock, res.getString(R.string.lock_with_pin)))
             if (Settings.safeMode && PinCodeDelegate.pinUnlocked.value == false) options.add(PlayerOption(ID_SAFE_MODE_UNLOCK, R.drawable.ic_pin_unlock, res.getString(R.string.unlock_with_pin)))
+            // VLC Redesign: the desktop's Customize Player
+            options.add(PlayerOption(ID_CUSTOMIZE_PLAYER, R.drawable.rd_ic_duo_ui, res.getString(R.string.rd_customize_player)))
             options.add(PlayerOption(ID_VIDEO_CONTROL_SETTING, R.drawable.ic_video_controls, res.getString(R.string.control_setting)))
         } else if (!Settings.showTvUi) {
             options.add(PlayerOption(ID_SHARE, R.drawable.ic_share, res.getString(R.string.share_track_info)))
@@ -195,11 +198,38 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
     }
 
     fun hide() {
-        rootView.visibility = View.GONE
+        // (a control of the bar acts without the menu ever shown)
+        if (::rootView.isInitialized) rootView.visibility = View.GONE
     }
 
     fun setBookmarkClickedListener(listener:()->Unit) {
         this.bookmarkClickedListener = listener
+    }
+
+    /** VLC Redesign: a control of the menu put in the player's bar by Customize Player. */
+    fun performAction(action: String) {
+        val id = when (action) {
+            "speed" -> ID_PLAYBACK_SPEED
+            "sleep" -> ID_SLEEP
+            "jump" -> ID_JUMP_TO
+            "lock" -> ID_LOCK_PLAYER
+            "repeat" -> {
+                // the menu's row is not there to show the mode: cycle it and say it
+                val (type, text) = when (service.repeatType) {
+                    PlaybackStateCompat.REPEAT_MODE_NONE -> PlaybackStateCompat.REPEAT_MODE_ONE to R.string.repeat_single
+                    PlaybackStateCompat.REPEAT_MODE_ONE -> if (service.hasPlaylist()) PlaybackStateCompat.REPEAT_MODE_ALL to R.string.repeat_all else PlaybackStateCompat.REPEAT_MODE_NONE to R.string.repeat_none
+                    else -> PlaybackStateCompat.REPEAT_MODE_NONE to R.string.repeat_none
+                }
+                service.repeatType = type
+                (activity as? VideoPlayerActivity)?.overlayDelegate?.showInfo(activity.getString(text), 1000)
+                return
+            }
+            "bookmarks" -> ID_BOOKMARK
+            "popup" -> ID_POPUP_VIDEO
+            "equalizer" -> ID_EQUALIZER
+            else -> return
+        }
+        onClick(PlayerOption(id, 0, ""))
     }
 
     fun onClick(option: PlayerOption) {
@@ -260,6 +290,10 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
             ID_BOOKMARK -> {
                 hide()
                 bookmarkClickedListener.invoke()
+            }
+            ID_CUSTOMIZE_PLAYER -> {
+                hide()
+                org.videolan.vlc.gui.dialogs.CustomizePlayerDialog().show(activity.supportFragmentManager, "rd_customize_player")
             }
             ID_VIDEO_CONTROL_SETTING -> {
                 hide()
@@ -410,7 +444,7 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
         toast.show()
     }
 
-    fun isShowing() = rootView.visibility == View.VISIBLE
+    fun isShowing() = ::rootView.isInitialized && rootView.visibility == View.VISIBLE
 
     private inner class OptionsAdapter : DiffUtilAdapter<PlayerOption, OptionsAdapter.ViewHolder>() {
 

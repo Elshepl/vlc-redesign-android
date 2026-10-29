@@ -105,6 +105,7 @@ import org.videolan.vlc.gui.view.PlayerProgress
 import org.videolan.vlc.isVLC4
 import org.videolan.vlc.manageAbRepeatStep
 import org.videolan.vlc.media.MediaUtils
+import org.videolan.vlc.util.PlayerBarLayout
 import org.videolan.vlc.util.FileUtils
 import org.videolan.vlc.util.getScreenWidth
 import org.videolan.vlc.util.isSchemeFile
@@ -850,72 +851,138 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     }
 
     /**
-     * VLC Redesign: the layouts of the control bar (ControlBar.qml of the desktop).
-     * The XML is the two-row bar (the seek row above the controls row, the zones spread by two spaces); the
-     * one-row bar of a wide window is made from it: [previous, rewind, play, forward, next] time | seek well |
-     * duration [tracks, orientation, aspect, settings]. As the desktop's, the bar keeps this order in right to
-     * left languages too (ControlBar.qml: the time runs left to right, Previous Play Next as in English).
-     * Visibility stays with the code that shows and hides the buttons.
+     * VLC Redesign: the layouts of the control bar (ControlBar.qml of the desktop), from the profile of Customize
+     * Player (PlayerBarLayout): a narrow window has two rows, the seek row (XML) above the controls (left zone from
+     * the left edge, center zone centred, right zone to the right edge); a wide one has one row: left zone, time,
+     * seek well, duration, center and right zones. As the desktop's, the bar keeps this order in right to left
+     * languages too (the time runs left to right, Previous Play Next as in English). The controls of the menu
+     * the profile puts in the bar are made here; a control out of the profile is gone.
      */
-    private var barTwoRows: ConstraintSet? = null
-    private var barOneRow: ConstraintSet? = null
+    private var barBase: ConstraintSet? = null
+    private var barZones: PlayerBarLayout.Zones? = null
+    private val barExtras = HashMap<String, ImageView>()
+
+    /** After Customize Player saved a profile. */
+    fun refreshBarLayout() {
+        if (::hudBinding.isInitialized) updateHudMargins()
+    }
 
     private fun applyBarLayout(oneRow: Boolean) {
         val root = hudBinding.progressOverlay
-        val twoRows = barTwoRows ?: ConstraintSet().also {
-            it.clone(root)
-            ignoreVisibility(root, it)
-            barTwoRows = it
+        val prefs = Settings.getInstance(player)
+        val zones = PlayerBarLayout.effective(prefs, oneRow, prefs.getBoolean(ENABLE_SEEK_BUTTONS, false))
+        // the XML's constraints, before anything is moved
+        val base = barBase ?: ConstraintSet().also { it.clone(root); barBase = it }
+        zones.all.mapNotNull { PlayerBarLayout.control(it) }.filter { it.view == 0 }.forEach { c ->
+            if (!barExtras.containsKey(c.key)) barExtras[c.key] = createBarExtra(root, c)
         }
-        val set = if (!oneRow) twoRows else barOneRow ?: buildOneRowBar(twoRows).also { barOneRow = it }
+        barZones = zones
+        val set = ConstraintSet().apply { clone(base) }
+        buildBar(set, zones, oneRow)
+        for (i in 0 until root.childCount) root.getChildAt(i).id.let { if (it != View.NO_ID) set.setVisibilityMode(it, ConstraintSet.VISIBILITY_MODE_IGNORE) }
         set.applyTo(root)
         hudBinding.rdBarDivider.visibility = if (oneRow) View.GONE else View.VISIBLE
-        hudBinding.playerSpaceLeft.visibility = if (oneRow) View.GONE else View.VISIBLE
-        hudBinding.playerSpaceRight.visibility = if (oneRow) View.GONE else View.VISIBLE
+        hudBinding.playerSpaceLeft.visibility = View.GONE
+        hudBinding.playerSpaceRight.visibility = View.GONE
         // (applyTo puts back the alpha of the clone)
-        updatePlaylistButtons()
+        enforceBarMembership()
     }
 
-    private fun ignoreVisibility(root: ViewGroup, set: ConstraintSet) {
-        for (i in 0 until root.childCount) root.getChildAt(i).id.let { if (it != View.NO_ID) set.setVisibilityMode(it, ConstraintSet.VISIBILITY_MODE_IGNORE) }
-    }
+    private fun barViewId(key: String): Int = PlayerBarLayout.control(key)?.view?.takeIf { it != 0 } ?: barExtras[key]?.id ?: View.NO_ID
 
-    private fun buildOneRowBar(twoRows: ConstraintSet) = ConstraintSet().apply {
-        clone(twoRows)
-        ignoreVisibility(hudBinding.progressOverlay, this)
+    private fun buildBar(set: ConstraintSet, zones: PlayerBarLayout.Zones, oneRow: Boolean) = with(set) {
         val res = player.resources
-        val edge = res.getDimensionPixelSize(R.dimen.rd_player_bar_edge) + 4.dp
+        val edge = res.getDimensionPixelSize(R.dimen.rd_player_bar_edge) + if (oneRow) 4.dp else 0
         val timeGap = 10.dp
         val gap = res.getDimensionPixelSize(R.dimen.rd_player_seek_gap)
-        constrainHeight(R.id.rd_bar, res.getDimensionPixelSize(R.dimen.rd_player_bar_row))
-        val transport = intArrayOf(R.id.playlist_previous, R.id.player_overlay_rewind, R.id.player_overlay_play, R.id.player_overlay_forward, R.id.playlist_next)
-        val tools = intArrayOf(R.id.player_overlay_tracks, R.id.orientation_toggle, R.id.player_resize, R.id.player_overlay_adv_function)
-        val seek = intArrayOf(R.id.player_overlay_time, R.id.player_overlay_seekbar, R.id.player_overlay_length)
         val sides = intArrayOf(ConstraintSet.START, ConstraintSet.END, ConstraintSet.LEFT, ConstraintSet.RIGHT)
-        (transport + tools + seek + intArrayOf(R.id.player_space_left, R.id.player_space_right)).forEach { id ->
+        val controls = PlayerBarLayout.CATALOGUE.map { barViewId(it.key) }.filter { it != View.NO_ID }
+        (controls + listOf(R.id.player_space_left, R.id.player_space_right)).forEach { id ->
             sides.forEach { side -> clear(id, side); setMargin(id, side, 0) }
             clear(id, ConstraintSet.TOP)
             clear(id, ConstraintSet.BOTTOM)
             connect(id, ConstraintSet.TOP, R.id.rd_guide_row, ConstraintSet.TOP)
             connect(id, ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM)
         }
-        val left = transport
-        val right = tools
+        barExtras.values.forEach { constrainWidth(it.id, 48.dp); constrainHeight(it.id, 48.dp) }
+        val left = zones.left.map { barViewId(it) }.filter { it != View.NO_ID }
+        val center = zones.center.map { barViewId(it) }.filter { it != View.NO_ID }
+        val right = zones.right.map { barViewId(it) }.filter { it != View.NO_ID }
         left.forEachIndexed { i, id ->
             if (i == 0) connect(id, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, edge)
             else connect(id, ConstraintSet.LEFT, left[i - 1], ConstraintSet.RIGHT)
         }
-        right.indices.reversed().forEach { i ->
-            val id = right[i]
-            if (i == right.lastIndex) connect(id, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, edge)
-            else connect(id, ConstraintSet.RIGHT, right[i + 1], ConstraintSet.LEFT)
+        val tail = if (oneRow) center + right else right
+        tail.indices.reversed().forEach { i ->
+            if (i == tail.lastIndex) connect(tail[i], ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, edge)
+            else connect(tail[i], ConstraintSet.RIGHT, tail[i + 1], ConstraintSet.LEFT)
         }
-        connect(R.id.player_overlay_time, ConstraintSet.LEFT, left.last(), ConstraintSet.RIGHT, timeGap)
-        connect(R.id.player_overlay_length, ConstraintSet.RIGHT, right.first(), ConstraintSet.LEFT, timeGap)
+        if (!oneRow) {
+            // the center zone in the middle of the room the side zones leave (the middle of the bar when they are
+            // as wide)
+            val (fromId, fromSide) = if (left.isEmpty()) ConstraintSet.PARENT_ID to ConstraintSet.LEFT else left.last() to ConstraintSet.RIGHT
+            val (toId, toSide) = if (right.isEmpty()) ConstraintSet.PARENT_ID to ConstraintSet.RIGHT else right.first() to ConstraintSet.LEFT
+            when (center.size) {
+                0 -> {}
+                1 -> centerHorizontally(center[0], fromId, fromSide, 0, toId, toSide, 0, 0.5f)
+                else -> createHorizontalChain(fromId, fromSide, toId, toSide, center.toIntArray(), null, ConstraintSet.CHAIN_PACKED)
+            }
+            return@with
+        }
+        constrainHeight(R.id.rd_bar, res.getDimensionPixelSize(R.dimen.rd_player_bar_row))
+        intArrayOf(R.id.player_overlay_time, R.id.player_overlay_seekbar, R.id.player_overlay_length).forEach { id ->
+            sides.forEach { side -> clear(id, side); setMargin(id, side, 0) }
+            clear(id, ConstraintSet.TOP)
+            clear(id, ConstraintSet.BOTTOM)
+            connect(id, ConstraintSet.TOP, R.id.rd_guide_row, ConstraintSet.TOP)
+            connect(id, ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM)
+        }
+        if (left.isEmpty()) connect(R.id.player_overlay_time, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, edge + 8.dp)
+        else connect(R.id.player_overlay_time, ConstraintSet.LEFT, left.last(), ConstraintSet.RIGHT, timeGap)
+        if (tail.isEmpty()) connect(R.id.player_overlay_length, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, edge + 8.dp)
+        else connect(R.id.player_overlay_length, ConstraintSet.RIGHT, tail.first(), ConstraintSet.LEFT, timeGap)
         connect(R.id.player_overlay_seekbar, ConstraintSet.LEFT, R.id.player_overlay_time, ConstraintSet.RIGHT, gap)
         connect(R.id.player_overlay_seekbar, ConstraintSet.RIGHT, R.id.player_overlay_length, ConstraintSet.LEFT, gap)
-        connect(R.id.player_space_left, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT)
-        connect(R.id.player_space_right, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT)
+    }
+
+    /** A control of the player's menu put in the bar: the bar's button, the menu's action. */
+    private fun createBarExtra(root: ViewGroup, c: PlayerBarLayout.Control) = ImageView(player, null, 0, R.style.RD_Player_BarButton).apply {
+        id = View.generateViewId()
+        layoutParams = ConstraintLayout.LayoutParams(48.dp, 48.dp)
+        setImageResource(c.icon)
+        val color = android.util.TypedValue().also { player.theme.resolveAttribute(R.attr.player_icon_color, it, true) }.data
+        imageTintList = android.content.res.ColorStateList.valueOf(color)
+        contentDescription = player.getString(c.label)
+        androidx.appcompat.widget.TooltipCompat.setTooltipText(this, contentDescription)
+        visibility = View.INVISIBLE
+        setOnClickListener { c.action?.let { player.onBarAction(it) } }
+        root.addView(this)
+    }
+
+    /** The controls out of the profile are gone; the jump buttons and the menu's controls follow the bar. */
+    private fun enforceBarMembership() {
+        if (!::hudBinding.isInitialized) return
+        val zones = barZones ?: return
+        val shown = hudBinding.playerOverlayPlay.visibility == View.VISIBLE && !player.isLocked
+        PlayerBarLayout.CATALOGUE.forEach { c ->
+            val view = if (c.view != 0) hudBinding.progressOverlay.findViewById<View>(c.view) else barExtras[c.key]
+            view ?: return@forEach
+            val inBar = c.key in zones.all
+            when {
+                !inBar -> view.visibility = View.GONE
+                c.view == 0 || c.key == "backward" || c.key == "forward" -> view.visibility = if (shown) View.VISIBLE else View.INVISIBLE
+                view.visibility == View.GONE -> view.visibility = if (shown) View.VISIBLE else View.INVISIBLE
+            }
+        }
+        hudBinding.playerOverlayRewindText.visibility = hudBinding.playerOverlayRewind.visibility
+        hudBinding.playerOverlayForwardText.visibility = hudBinding.playerOverlayForward.visibility
+        hudBinding.playerOverlayRewindText.text = "${Settings.videoJumpDelay}"
+        hudBinding.playerOverlayForwardText.text = "${Settings.videoJumpDelay}"
+        val enabled = player.service?.hasPlaylist() == true && !player.isLocked
+        arrayOf(hudBinding.playlistPrevious, hudBinding.playlistNext).forEach {
+            it.isEnabled = enabled
+            it.alpha = if (enabled) 1F else 0.4F
+        }
     }
 
     /**
@@ -986,15 +1053,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         touchHelper.attachToRecyclerView(playlist)
     }
 
-    fun updatePlaylistButtons() {
-        if (!::hudBinding.isInitialized) return
-        val enabled = player.service?.hasPlaylist() == true && !player.isLocked
-        arrayOf(hudBinding.playlistPrevious, hudBinding.playlistNext).forEach {
-            if (it.visibility == View.GONE) it.visibility = View.VISIBLE
-            it.isEnabled = enabled
-            it.alpha = if (enabled) 1F else 0.4F
-        }
-    }
+    fun updatePlaylistButtons() = enforceBarMembership()
+
 
     fun togglePlaylist() {
         if (player.isPlaylistVisible) {

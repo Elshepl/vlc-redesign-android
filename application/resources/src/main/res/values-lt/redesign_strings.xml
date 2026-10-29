@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Sukurta remiantis VLC media player, kurį kuria</string>
     <string name="rd_about_videolan">VideoLAN komanda ir talkininkai</string>
     <string name="rd_about_unofficial">Neoficiali versija, nesusijusi su VideoLAN ar Juxtopposed ir jų nepatvirtinta. VLC, VLC media player ir kūgio logotipas yra VideoLAN prekių ženklai. Laisvoji programinė įranga pagal GNU GPL v2 ar vėlesnę licenciją.</string>
+    <string name="rd_customize_player">Tinkinti grotuvą</string>
+    <string name="rd_zone_left">Kairėje</string>
+    <string name="rd_zone_center">Centrinė</string>
+    <string name="rd_zone_right">Dešinėje</string>
+    <string name="rd_bar_backward">Atgal 10 s</string>
+    <string name="rd_bar_forward">Pirmyn 10 s</string>
+    <string name="rd_bar_rotate">Sukimas</string>
+    <string name="rd_bar_settings">Nuostatos</string>
+    <string name="rd_bar_queue">Eilė</string>
+    <string name="rd_profile">Profilis</string>
+    <string name="rd_profile_default">Numatytasis</string>
+    <string name="rd_profile_minimalist">Minimalistinis stilius</string>
+    <string name="rd_profile_one_liner">Vienos eilutės stilius</string>
+    <string name="rd_profile_simplest">Paprasčiausias stilius</string>
+    <string name="rd_profile_classic">Klasikinis stilius</string>
+    <string name="rd_new_profile">Naujas profilis</string>
+    <string name="rd_rename_profile">Pervadinti profilį</string>
+    <string name="rd_delete_profile">Ištrinti profilį</string>
+    <string name="rd_delete_named">Ištrinti „%1$s“?</string>
+    <string name="rd_profile_name">Profilio pavadinimas</string>
+    <string name="rd_remove">Pašalinti</string>
+    <string name="rd_save">Įrašyti</string>
+    <string name="rd_cancel">Atšaukti</string>
 </resources>

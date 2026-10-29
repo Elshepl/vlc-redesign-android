@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Dibina di atas pemain media VLC oleh</string>
     <string name="rd_about_videolan">pasukan VideoLAN dan para penyumbang</string>
     <string name="rd_about_unofficial">Binaan tidak rasmi, tidak bergabung dengan atau disokong oleh VideoLAN atau Juxtopposed. VLC, VLC media player dan logo kon ialah tanda dagangan VideoLAN. Perisian bebas di bawah GNU GPL v2 atau lebih baharu.</string>
+    <string name="rd_customize_player">Suaikan Pemain</string>
+    <string name="rd_zone_left">Kiri</string>
+    <string name="rd_zone_center">Tengah</string>
+    <string name="rd_zone_right">Kanan</string>
+    <string name="rd_bar_backward">Undur 10s</string>
+    <string name="rd_bar_forward">Maju 10s</string>
+    <string name="rd_bar_rotate">Pusing</string>
+    <string name="rd_bar_settings">Tetapan</string>
+    <string name="rd_bar_queue">Baris Gilir</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Lalai</string>
+    <string name="rd_profile_minimalist">Gaya Minimalis</string>
+    <string name="rd_profile_one_liner">Gaya Satu Baris</string>
+    <string name="rd_profile_simplest">Gaya Paling Ringkas</string>
+    <string name="rd_profile_classic">Gaya Klasik</string>
+    <string name="rd_new_profile">Profil Baharu</string>
+    <string name="rd_rename_profile">Namakan Semula Profil</string>
+    <string name="rd_delete_profile">Padam Profil</string>
+    <string name="rd_delete_named">Padam %1$s?</string>
+    <string name="rd_profile_name">Nama profil</string>
+    <string name="rd_remove">Buang</string>
+    <string name="rd_save">Simpan</string>
+    <string name="rd_cancel">Batal</string>
 </resources>

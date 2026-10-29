@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">دروستکراوە لەسەر لێدەری ڕەنگاڵەی VLC لە لایەن</string>
     <string name="rd_about_videolan">تیمی VideoLAN و بەشداربووان</string>
     <string name="rd_about_unofficial">بنیاتێکی نافەرمی، پەیوەست نییە بە VideoLAN یان Juxtopposed ەوە و لە لایەن ئەوانەوە پشتگیری نەکراوە. VLC، VLC media player و لۆگۆی قووچەکەکە نیشانەی بازرگانیی VideoLAN ن. نەرمەکاڵای ئازاد لە ژێر GNU GPL v2 یان دواتر.</string>
+    <string name="rd_customize_player">تایبەتکردنی لێدەر</string>
+    <string name="rd_zone_left">چەپ</string>
+    <string name="rd_zone_center">ناوەند</string>
+    <string name="rd_zone_right">ڕاست</string>
+    <string name="rd_bar_backward">10s بۆ دواوە</string>
+    <string name="rd_bar_forward">10s بۆ پێشەوە</string>
+    <string name="rd_bar_rotate">خولاندنەوە</string>
+    <string name="rd_bar_settings">ڕێکخستنەکان</string>
+    <string name="rd_bar_queue">ڕیز</string>
+    <string name="rd_profile">پرۆفایل</string>
+    <string name="rd_profile_default">بنەڕەت</string>
+    <string name="rd_profile_minimalist">شێوازی کەمینە</string>
+    <string name="rd_profile_one_liner">شێوازی یەک هێڵی</string>
+    <string name="rd_profile_simplest">سادەترین شێواز</string>
+    <string name="rd_profile_classic">شێوازی کلاسیک</string>
+    <string name="rd_new_profile">پرۆفایلی نوێ</string>
+    <string name="rd_rename_profile">گۆڕینی ناوی پرۆفایل</string>
+    <string name="rd_delete_profile">سڕینەوەی پرۆفایل</string>
+    <string name="rd_delete_named">%1$s بسڕدرێتەوە؟</string>
+    <string name="rd_profile_name">ناوی پرۆفایل</string>
+    <string name="rd_remove">لابردن</string>
+    <string name="rd_save">پاشەکەوتکردن</string>
+    <string name="rd_cancel">پاشگەزبوونەوە</string>
 </resources>

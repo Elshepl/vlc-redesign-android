@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Bati sol djouweu d\' media VLC pa</string>
     <string name="rd_about_videolan">l\' ekipe VideoLAN et ses contribouweus</string>
     <string name="rd_about_unofficial">Ene modêye nén oficiele, nén loyeye a VideoLAN ni a Juxtopposed, ni sopoirtêye pa zels. VLC, VLC media player et l\' logo do cône sont des markes di VideoLAN. Libe programe dizo l\' GNU GPL v2 ou pus nouve.</string>
+    <string name="rd_customize_player">Adjuster l\' djouweu</string>
+    <string name="rd_zone_left">Hintche</string>
+    <string name="rd_zone_center">Mitan</string>
+    <string name="rd_zone_right">Droete</string>
+    <string name="rd_bar_backward">10s en erî</string>
+    <string name="rd_bar_forward">10s en avant</string>
+    <string name="rd_bar_rotate">Fé tourner</string>
+    <string name="rd_bar_settings">Apontiaedjes</string>
+    <string name="rd_bar_queue">Rote</string>
+    <string name="rd_profile">Profil</string>
+    <string name="rd_profile_default">Prémetou</string>
+    <string name="rd_profile_minimalist">Stîle minimå</string>
+    <string name="rd_profile_one_liner">Stîle so ene roye</string>
+    <string name="rd_profile_simplest">Stîle li pus simpe</string>
+    <string name="rd_profile_classic">Stîle classike</string>
+    <string name="rd_new_profile">Novea profil</string>
+    <string name="rd_rename_profile">Rilomer l\' profil</string>
+    <string name="rd_delete_profile">Disfacer l\' profil</string>
+    <string name="rd_delete_named">Disfacer %1$s?</string>
+    <string name="rd_profile_name">No do profil</string>
+    <string name="rd_remove">Waester</string>
+    <string name="rd_save">Schaper</string>
+    <string name="rd_cancel">Rinoncî</string>
 </resources>

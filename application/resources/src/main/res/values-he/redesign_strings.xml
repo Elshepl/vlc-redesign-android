@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">מבוסס על נגן המדיה VLC מאת</string>
     <string name="rd_about_videolan">צוות VideoLAN והתורמים</string>
     <string name="rd_about_unofficial">גרסה לא רשמית, שאינה קשורה ל־VideoLAN או ל־Juxtopposed ואינה מאושרת על ידיהם. VLC,‏ VLC media player ולוגו הקונוס הם סימנים מסחריים של VideoLAN. תוכנה חופשית תחת GNU GPL v2 ואילך.</string>
+    <string name="rd_customize_player">התאמת הנגן</string>
+    <string name="rd_zone_left">שמאל</string>
+    <string name="rd_zone_center">מרכז</string>
+    <string name="rd_zone_right">ימין</string>
+    <string name="rd_bar_backward">10 שנ׳ אחורה</string>
+    <string name="rd_bar_forward">10 שנ׳ קדימה</string>
+    <string name="rd_bar_rotate">הטיה</string>
+    <string name="rd_bar_settings">הגדרות</string>
+    <string name="rd_bar_queue">תור</string>
+    <string name="rd_profile">פרופיל</string>
+    <string name="rd_profile_default">ברירת מחדל</string>
+    <string name="rd_profile_minimalist">סגנון מינימליסטי</string>
+    <string name="rd_profile_one_liner">סגנון שורה אחת</string>
+    <string name="rd_profile_simplest">הסגנון הפשוט ביותר</string>
+    <string name="rd_profile_classic">סגנון קלאסי</string>
+    <string name="rd_new_profile">פרופיל חדש</string>
+    <string name="rd_rename_profile">שינוי שם הפרופיל</string>
+    <string name="rd_delete_profile">מחיקת פרופיל</string>
+    <string name="rd_delete_named">למחוק את %1$s?</string>
+    <string name="rd_profile_name">שם הפרופיל</string>
+    <string name="rd_remove">הסרה</string>
+    <string name="rd_save">שמירה</string>
+    <string name="rd_cancel">ביטול</string>
 </resources>

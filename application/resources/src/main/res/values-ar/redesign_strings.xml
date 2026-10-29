@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">مبني على مشغل الوسائط VLC من تطوير</string>
     <string name="rd_about_videolan">فريق VideoLAN والمساهمين</string>
     <string name="rd_about_unofficial">إصدار غير رسمي، لا يرتبط بـ VideoLAN أو Juxtopposed ولا يحظى بتأييدهما. ‏VLC ومشغل الوسائط VLC وشعار المخروط علامات تجارية لـ VideoLAN. برنامج حر بموجب رخصة GNU GPL الإصدار 2 أو أحدث.</string>
+    <string name="rd_customize_player">تخصيص المشغل</string>
+    <string name="rd_zone_left">يسار</string>
+    <string name="rd_zone_center">وسط</string>
+    <string name="rd_zone_right">يمين</string>
+    <string name="rd_bar_backward">رجوع 10 ث</string>
+    <string name="rd_bar_forward">تقدّم 10 ث</string>
+    <string name="rd_bar_rotate">دوّر</string>
+    <string name="rd_bar_settings">الإعدادات</string>
+    <string name="rd_bar_queue">قائمة الانتظار</string>
+    <string name="rd_profile">الطور</string>
+    <string name="rd_profile_default">المبدئي</string>
+    <string name="rd_profile_minimalist">نمط بسيط</string>
+    <string name="rd_profile_one_liner">نمط السطر الواحد</string>
+    <string name="rd_profile_simplest">النمط الأبسط</string>
+    <string name="rd_profile_classic">النمط الكلاسيكي</string>
+    <string name="rd_new_profile">ملف تعريف جديد</string>
+    <string name="rd_rename_profile">إعادة تسمية ملف التعريف</string>
+    <string name="rd_delete_profile">حذف ملف التعريف</string>
+    <string name="rd_delete_named">هل تريد حذف %1$s؟</string>
+    <string name="rd_profile_name">اسم ملف التعريف</string>
+    <string name="rd_remove">إزالة</string>
+    <string name="rd_save">حفظ</string>
+    <string name="rd_cancel">إلغاء</string>
 </resources>

@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Byggt á VLC-miðlaspilaranum eftir</string>
     <string name="rd_about_videolan">VideoLAN-teymið og þátttakendur</string>
     <string name="rd_about_unofficial">Óopinber útgáfa, hvorki tengd né studd af VideoLAN eða Juxtopposed. VLC, VLC media player og keilumerkið eru vörumerki VideoLAN. Frjáls hugbúnaður samkvæmt GNU GPL v2 eða nýrri.</string>
+    <string name="rd_customize_player">Sérsníða spilara</string>
+    <string name="rd_zone_left">Vinstri</string>
+    <string name="rd_zone_center">Miðja</string>
+    <string name="rd_zone_right">Hægri</string>
+    <string name="rd_bar_backward">10 s afturábak</string>
+    <string name="rd_bar_forward">10 s áfram</string>
+    <string name="rd_bar_rotate">Snúa</string>
+    <string name="rd_bar_settings">Stillingar</string>
+    <string name="rd_bar_queue">Röð</string>
+    <string name="rd_profile">Snið</string>
+    <string name="rd_profile_default">Sjálfgefið</string>
+    <string name="rd_profile_minimalist">Naumhyggjustíll</string>
+    <string name="rd_profile_one_liner">Einnar línu stíll</string>
+    <string name="rd_profile_simplest">Einfaldasti stíll</string>
+    <string name="rd_profile_classic">Hefðbundinn stíll</string>
+    <string name="rd_new_profile">Nýtt snið</string>
+    <string name="rd_rename_profile">Endurnefna snið</string>
+    <string name="rd_delete_profile">Eyða sniði</string>
+    <string name="rd_delete_named">Eyða %1$s?</string>
+    <string name="rd_profile_name">Heiti sniðs</string>
+    <string name="rd_remove">Fjarlægja</string>
+    <string name="rd_save">Vista</string>
+    <string name="rd_cancel">Hætta við</string>
 </resources>

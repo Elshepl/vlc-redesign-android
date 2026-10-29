@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Βασίζεται στον αναπαραγωγό πολυμέσων VLC από</string>
     <string name="rd_about_videolan">την ομάδα του VideoLAN και τους συνεισφέροντες</string>
     <string name="rd_about_unofficial">Ανεπίσημη έκδοση, χωρίς σχέση με το VideoLAN ή τον Juxtopposed και χωρίς την έγκρισή τους. Τα VLC, VLC media player και το λογότυπο του κώνου είναι εμπορικά σήματα του VideoLAN. Ελεύθερο λογισμικό υπό την άδεια GNU GPL v2 ή νεότερη.</string>
+    <string name="rd_customize_player">Προσαρμογή αναπαραγωγού</string>
+    <string name="rd_zone_left">Αριστερά</string>
+    <string name="rd_zone_center">Κέντρο</string>
+    <string name="rd_zone_right">Δεξιά</string>
+    <string name="rd_bar_backward">Πίσω 10s</string>
+    <string name="rd_bar_forward">Εμπρός 10s</string>
+    <string name="rd_bar_rotate">Περιστροφή</string>
+    <string name="rd_bar_settings">Ρυθμίσεις</string>
+    <string name="rd_bar_queue">Ουρά</string>
+    <string name="rd_profile">Προφίλ</string>
+    <string name="rd_profile_default">Προεπιλογή</string>
+    <string name="rd_profile_minimalist">Μινιμαλιστικό στυλ</string>
+    <string name="rd_profile_one_liner">Στυλ μίας γραμμής</string>
+    <string name="rd_profile_simplest">Απλούστατο στυλ</string>
+    <string name="rd_profile_classic">Κλασικό στυλ</string>
+    <string name="rd_new_profile">Νέο προφίλ</string>
+    <string name="rd_rename_profile">Μετονομασία προφίλ</string>
+    <string name="rd_delete_profile">Διαγραφή προφίλ</string>
+    <string name="rd_delete_named">Διαγραφή «%1$s»;</string>
+    <string name="rd_profile_name">Όνομα προφίλ</string>
+    <string name="rd_remove">Αφαίρεση</string>
+    <string name="rd_save">Αποθήκευση</string>
+    <string name="rd_cancel">Άκυρο</string>
 </resources>

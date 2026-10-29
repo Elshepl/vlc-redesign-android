@@ -27,4 +27,27 @@
     <string name="rd_about_built_on">Wedi\'i adeiladu ar chwaraeydd cyfryngau VLC gan</string>
     <string name="rd_about_videolan">dîm VideoLAN a\'r cyfranwyr</string>
     <string name="rd_about_unofficial">Adeiledd answyddogol, heb gysylltiad â VideoLAN na Juxtopposed na\'u cymeradwyaeth. Mae VLC, chwaraeydd cyfryngau VLC a logo\'r côn yn nodau masnach VideoLAN. Meddalwedd rydd dan y GNU GPL v2 neu ddiweddarach.</string>
+    <string name="rd_customize_player">Addasu\'r Chwaraeydd</string>
+    <string name="rd_zone_left">Chwith</string>
+    <string name="rd_zone_center">Canol</string>
+    <string name="rd_zone_right">De</string>
+    <string name="rd_bar_backward">Yn ôl 10s</string>
+    <string name="rd_bar_forward">Ymlaen 10s</string>
+    <string name="rd_bar_rotate">Cylchdroi</string>
+    <string name="rd_bar_settings">Gosodiadau</string>
+    <string name="rd_bar_queue">Ciw</string>
+    <string name="rd_profile">Proffil</string>
+    <string name="rd_profile_default">Rhagosodedig</string>
+    <string name="rd_profile_minimalist">Arddull Finimalaidd</string>
+    <string name="rd_profile_one_liner">Arddull Un Llinell</string>
+    <string name="rd_profile_simplest">Arddull Symlaf</string>
+    <string name="rd_profile_classic">Arddull Glasurol</string>
+    <string name="rd_new_profile">Proffil Newydd</string>
+    <string name="rd_rename_profile">Ailenwi\'r Proffil</string>
+    <string name="rd_delete_profile">Dileu\'r Proffil</string>
+    <string name="rd_delete_named">Dileu %1$s?</string>
+    <string name="rd_profile_name">Enw\'r proffil</string>
+    <string name="rd_remove">Tynnu</string>
+    <string name="rd_save">Cadw</string>
+    <string name="rd_cancel">Diddymu</string>
 </resources>
