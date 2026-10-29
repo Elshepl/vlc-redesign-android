@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Equalizer med to gennemløb</string>
     <string name="rd_eq_preset">Forudindstilling for equalizer</string>
     <string name="rd_eq_custom">Brugerdefineret</string>
+    <string name="rd_cast_to">Cast til</string>
+    <string name="rd_cast_to_tv">Cast til tv</string>
+    <string name="rd_casting_to">Caster til %1$s</string>
+    <string name="rd_cast_connecting">Opretter forbindelse…</string>
+    <string name="rd_cast_sound_only">Kun lyd</string>
+    <string name="rd_cast_not_playing_retry">Afspiller ikke: vælg den for at prøve igen</string>
+    <string name="rd_cast_looking">Leder efter tv\'er og Chromecasts på dit netværk…</string>
+    <string name="rd_cast_playing_on">Afspiller på %1$s</string>
+    <string name="rd_cast_connecting_to">Opretter forbindelse til %1$s…</string>
+    <string name="rd_cast_not_playing_on">Afspiller ikke på %1$s</string>
+    <string name="rd_cast_sound_plays_on">Lyden afspilles på %1$s</string>
+    <string name="rd_cast_hint">Sæt på pause, spol og skift undertekster her: tv\'et følger med.</string>
+    <string name="rd_cast_try_again">Prøv igen</string>
+    <string name="rd_cast_play_here">Afspil her</string>
+    <string name="rd_cast_stop">Stop casting</string>
+    <string name="rd_cast_refused">%1$s nægtede at afspille denne video.</string>
+    <string name="rd_cast_stopped">%1$s stoppede afspilningen.</string>
+    <string name="rd_cast_taken">%1$s afspiller noget andet nu.</string>
+    <string name="rd_cast_could_not_play">%1$s kunne ikke afspille videoen.</string>
+    <string name="rd_cast_subtitles_note">De viste undertekster sendes til tv\'et sammen med billedet.</string>
+    <string name="rd_cast_subtitles_on">Undertekster på tv\'et: %1$s</string>
+    <string name="rd_cast_subtitles_off">Undertekster slået fra på tv\'et</string>
 </resources>

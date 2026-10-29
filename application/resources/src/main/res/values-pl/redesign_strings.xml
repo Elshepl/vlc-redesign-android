@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Korektor dwuprzebiegowy</string>
     <string name="rd_eq_preset">Domyślne ustawienia korektora</string>
     <string name="rd_eq_custom">Własny</string>
+    <string name="rd_cast_to">Przesyłaj na</string>
+    <string name="rd_cast_to_tv">Przesyłaj na TV</string>
+    <string name="rd_casting_to">Przesyłanie na %1$s</string>
+    <string name="rd_cast_connecting">Łączenie…</string>
+    <string name="rd_cast_sound_only">Tylko dźwięk</string>
+    <string name="rd_cast_not_playing_retry">Nie odtwarza: wybierz, aby spróbować ponownie</string>
+    <string name="rd_cast_looking">Szukanie telewizorów i urządzeń Chromecast w Twojej sieci…</string>
+    <string name="rd_cast_playing_on">Odtwarzanie na %1$s</string>
+    <string name="rd_cast_connecting_to">Łączenie z %1$s…</string>
+    <string name="rd_cast_not_playing_on">Nie jest odtwarzane na %1$s</string>
+    <string name="rd_cast_sound_plays_on">Dźwięk jest odtwarzany na %1$s</string>
+    <string name="rd_cast_hint">Wstrzymuj, przewijaj i zmieniaj napisy tutaj: telewizor się dostosuje.</string>
+    <string name="rd_cast_try_again">Spróbuj ponownie</string>
+    <string name="rd_cast_play_here">Odtwarzaj tutaj</string>
+    <string name="rd_cast_stop">Zatrzymaj przesyłanie</string>
+    <string name="rd_cast_refused">Urządzenie %1$s odmówiło odtworzenia tego wideo.</string>
+    <string name="rd_cast_stopped">Urządzenie %1$s przestało odtwarzać.</string>
+    <string name="rd_cast_taken">Urządzenie %1$s odtwarza teraz coś innego.</string>
+    <string name="rd_cast_could_not_play">Urządzenie %1$s nie mogło odtworzyć wideo.</string>
+    <string name="rd_cast_subtitles_note">Wyświetlane napisy trafiają na telewizor razem z obrazem.</string>
+    <string name="rd_cast_subtitles_on">Napisy na telewizorze: %1$s</string>
+    <string name="rd_cast_subtitles_off">Napisy na telewizorze wyłączone</string>
 </resources>

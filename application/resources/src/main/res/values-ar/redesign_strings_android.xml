@@ -37,4 +37,8 @@
         <item>تنسب صفحة «حول» تصميم الواجهة إلى Juxtopposed، مع روابط التصميم، كما في نسخة سطح المكتب.</item>
     </string-array>
     <string name="rd_subtitle_size">حجم الترجمة</string>
+    <string name="rd_cast_this_phone">هذا الهاتف</string>
+    <string name="rd_cast_this_tablet">هذا الجهاز اللوحي</string>
+    <string name="rd_cast_none_found">لم يُعثر على أي جهاز. شغّل التلفزيون أو جهاز Chromecast على الشبكة نفسها التي يتصل بها هذا الجهاز.</string>
+    <string name="rd_cast_no_answer">الجهاز %1$s لا يستجيب. تحقق من أنه قيد التشغيل وعلى الشبكة نفسها التي يتصل بها هذا الجهاز.</string>
 </resources>

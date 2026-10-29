@@ -35,4 +35,8 @@
         <item>Informazioni attribuisce il design dell\'interfaccia a Juxtopposed, con i link del design, come nella versione desktop.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
+    <string name="rd_cast_this_phone">Questo telefono</string>
+    <string name="rd_cast_this_tablet">Questo tablet</string>
+    <string name="rd_cast_none_found">Nessun dispositivo trovato. Accendi la TV o il Chromecast, sulla stessa rete di questo dispositivo.</string>
+    <string name="rd_cast_no_answer">%1$s non risponde. Verifica che sia acceso e sulla stessa rete di questo dispositivo.</string>
 </resources>

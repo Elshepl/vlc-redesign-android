@@ -269,4 +269,26 @@
     <string name="rd_eq_two_pass">Equalizer dua tahap</string>
     <string name="rd_eq_preset">Praset equalizer</string>
     <string name="rd_eq_custom">Kustom</string>
+    <string name="rd_cast_to">Transmisikan ke</string>
+    <string name="rd_cast_to_tv">Transmisikan ke TV</string>
+    <string name="rd_casting_to">Mentransmisikan ke %1$s</string>
+    <string name="rd_cast_connecting">Menghubungkan…</string>
+    <string name="rd_cast_sound_only">Hanya suara</string>
+    <string name="rd_cast_not_playing_retry">Tidak diputar: pilih untuk mencoba lagi</string>
+    <string name="rd_cast_looking">Mencari TV dan Chromecast di jaringan Anda…</string>
+    <string name="rd_cast_playing_on">Diputar di %1$s</string>
+    <string name="rd_cast_connecting_to">Menghubungkan ke %1$s…</string>
+    <string name="rd_cast_not_playing_on">Tidak diputar di %1$s</string>
+    <string name="rd_cast_sound_plays_on">Suara diputar di %1$s</string>
+    <string name="rd_cast_hint">Jeda, geser posisi, dan ganti subtitle di sini: TV akan mengikuti.</string>
+    <string name="rd_cast_try_again">Coba lagi</string>
+    <string name="rd_cast_play_here">Putar di sini</string>
+    <string name="rd_cast_stop">Hentikan transmisi</string>
+    <string name="rd_cast_refused">%1$s menolak memutar video ini.</string>
+    <string name="rd_cast_stopped">%1$s berhenti memutar.</string>
+    <string name="rd_cast_taken">%1$s sekarang sedang memutar konten lain.</string>
+    <string name="rd_cast_could_not_play">%1$s tidak dapat memutar video.</string>
+    <string name="rd_cast_subtitles_note">Subtitle yang ditampilkan dikirim ke TV bersama gambar.</string>
+    <string name="rd_cast_subtitles_on">Subtitle di TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Subtitle di TV mati</string>
 </resources>

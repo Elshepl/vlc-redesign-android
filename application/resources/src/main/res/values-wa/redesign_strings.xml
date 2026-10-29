@@ -272,4 +272,26 @@
     <string name="rd_eq_two_pass">Ewalijheu a deus passaedjes</string>
     <string name="rd_eq_preset">Prézapontiaedje di l\' ewalijheu</string>
     <string name="rd_eq_custom">Da vosse</string>
+    <string name="rd_cast_to">Difuzer so</string>
+    <string name="rd_cast_to_tv">Difuzer sol TV</string>
+    <string name="rd_casting_to">Difuzaedje so %1$s</string>
+    <string name="rd_cast_connecting">Raloyaedje…</string>
+    <string name="rd_cast_sound_only">Seulmint l\' son</string>
+    <string name="rd_cast_not_playing_retry">Nou djouwaedje: tchoezixhoz-l po rsayî</string>
+    <string name="rd_cast_looking">Dji cwir des TVs et des Chromecasts so vosse rantoele…</string>
+    <string name="rd_cast_playing_on">Djouwaedje so %1$s</string>
+    <string name="rd_cast_connecting_to">Raloyaedje a %1$s…</string>
+    <string name="rd_cast_not_playing_on">Nou djouwaedje so %1$s</string>
+    <string name="rd_cast_sound_plays_on">Li son djowe so %1$s</string>
+    <string name="rd_cast_hint">Djokez, bodjîz et candjîz les sortites chal: li TV shut.</string>
+    <string name="rd_cast_try_again">Rissayî</string>
+    <string name="rd_cast_play_here">Djouwer chal</string>
+    <string name="rd_cast_stop">Arester l\' difuzaedje</string>
+    <string name="rd_cast_refused">%1$s a rfuzé d\' djouwer cisse videyo ci.</string>
+    <string name="rd_cast_stopped">%1$s a aresté d\' djouwer.</string>
+    <string name="rd_cast_taken">%1$s djowe ôte tchoi asteure.</string>
+    <string name="rd_cast_could_not_play">%1$s n\' a savou djouwer li videyo.</string>
+    <string name="rd_cast_subtitles_note">Les sortites håynêyes vont sol TV avou l\' imådje.</string>
+    <string name="rd_cast_subtitles_on">Sortites sol televuzion : %1$s</string>
+    <string name="rd_cast_subtitles_off">Sortites distindowes sol televuzion</string>
 </resources>

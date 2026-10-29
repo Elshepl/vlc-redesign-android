@@ -271,4 +271,26 @@
     <string name="rd_eq_two_pass">Equalizer i två pass</string>
     <string name="rd_eq_preset">Förval för equalizer</string>
     <string name="rd_eq_custom">Anpassad</string>
+    <string name="rd_cast_to">Casta till</string>
+    <string name="rd_cast_to_tv">Casta till tv</string>
+    <string name="rd_casting_to">Castar till %1$s</string>
+    <string name="rd_cast_connecting">Ansluter…</string>
+    <string name="rd_cast_sound_only">Endast ljud</string>
+    <string name="rd_cast_not_playing_retry">Spelas inte: välj den för att försöka igen</string>
+    <string name="rd_cast_looking">Letar efter tv-apparater och Chromecast-enheter i ditt nätverk…</string>
+    <string name="rd_cast_playing_on">Spelas på %1$s</string>
+    <string name="rd_cast_connecting_to">Ansluter till %1$s…</string>
+    <string name="rd_cast_not_playing_on">Spelas inte på %1$s</string>
+    <string name="rd_cast_sound_plays_on">Ljudet spelas på %1$s</string>
+    <string name="rd_cast_hint">Pausa, spola och byt undertexter här: tv:n följer med.</string>
+    <string name="rd_cast_try_again">Försök igen</string>
+    <string name="rd_cast_play_here">Spela upp här</string>
+    <string name="rd_cast_stop">Sluta casta</string>
+    <string name="rd_cast_refused">%1$s vägrade spela upp den här videon.</string>
+    <string name="rd_cast_stopped">%1$s slutade spela.</string>
+    <string name="rd_cast_taken">%1$s spelar något annat nu.</string>
+    <string name="rd_cast_could_not_play">%1$s kunde inte spela upp videon.</string>
+    <string name="rd_cast_subtitles_note">Undertexterna som visas skickas till tv:n tillsammans med bilden.</string>
+    <string name="rd_cast_subtitles_on">Undertexter på tv:n: %1$s</string>
+    <string name="rd_cast_subtitles_off">Undertexter av på tv:n</string>
 </resources>

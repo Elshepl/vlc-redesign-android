@@ -268,4 +268,26 @@
     <string name="rd_eq_two_pass">Tvíumferða tónjafnari</string>
     <string name="rd_eq_preset">Forstillingar tónjafnara</string>
     <string name="rd_eq_custom">Sérsnið</string>
+    <string name="rd_cast_to">Varpa á</string>
+    <string name="rd_cast_to_tv">Varpa í sjónvarp</string>
+    <string name="rd_casting_to">Varpa á %1$s</string>
+    <string name="rd_cast_connecting">Tengist…</string>
+    <string name="rd_cast_sound_only">Aðeins hljóð</string>
+    <string name="rd_cast_not_playing_retry">Ekki í spilun: veldu það til að reyna aftur</string>
+    <string name="rd_cast_looking">Leita að sjónvörpum og Chromecast-tækjum á netinu þínu…</string>
+    <string name="rd_cast_playing_on">Spilar á %1$s</string>
+    <string name="rd_cast_connecting_to">Tengist %1$s…</string>
+    <string name="rd_cast_not_playing_on">Ekki í spilun á %1$s</string>
+    <string name="rd_cast_sound_plays_on">Hljóðið spilast á %1$s</string>
+    <string name="rd_cast_hint">Gerðu hlé, spólaðu og breyttu skjátextum hér: sjónvarpið fylgir með.</string>
+    <string name="rd_cast_try_again">Reyna aftur</string>
+    <string name="rd_cast_play_here">Spila hér</string>
+    <string name="rd_cast_stop">Hætta að varpa</string>
+    <string name="rd_cast_refused">%1$s neitaði að spila þetta myndskeið.</string>
+    <string name="rd_cast_stopped">%1$s hætti að spila.</string>
+    <string name="rd_cast_taken">%1$s er að spila eitthvað annað núna.</string>
+    <string name="rd_cast_could_not_play">%1$s gat ekki spilað myndskeiðið.</string>
+    <string name="rd_cast_subtitles_note">Skjátextarnir sem birtast fara í sjónvarpið með myndinni.</string>
+    <string name="rd_cast_subtitles_on">Skjátextar í sjónvarpinu: %1$s</string>
+    <string name="rd_cast_subtitles_off">Slökkt á skjátextum í sjónvarpinu</string>
 </resources>

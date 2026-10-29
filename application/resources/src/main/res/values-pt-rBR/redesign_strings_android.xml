@@ -35,4 +35,8 @@
         <item>Sobre credita o design da interface a Juxtopposed, com os links do design, como na versão para computador.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
+    <string name="rd_cast_this_phone">Este celular</string>
+    <string name="rd_cast_this_tablet">Este tablet</string>
+    <string name="rd_cast_none_found">Nenhum dispositivo encontrado. Ligue sua TV ou Chromecast, na mesma rede deste dispositivo.</string>
+    <string name="rd_cast_no_answer">%1$s não responde. Verifique se está ligado e na mesma rede deste dispositivo.</string>
 </resources>

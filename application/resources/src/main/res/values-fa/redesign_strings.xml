@@ -264,4 +264,26 @@
     <string name="rd_eq_two_pass">اکولایزر دومرحله‌ای</string>
     <string name="rd_eq_preset">پیش‌تنظیم اکولایزر</string>
     <string name="rd_eq_custom">سفارشی</string>
+    <string name="rd_cast_to">ارسال به</string>
+    <string name="rd_cast_to_tv">ارسال به تلویزیون</string>
+    <string name="rd_casting_to">در حال ارسال به %1$s</string>
+    <string name="rd_cast_connecting">در حال اتصال…</string>
+    <string name="rd_cast_sound_only">فقط صدا</string>
+    <string name="rd_cast_not_playing_retry">پخش نمی‌شود: برای تلاش دوباره آن را انتخاب کنید</string>
+    <string name="rd_cast_looking">در حال جستجوی تلویزیون‌ها و دستگاه‌های Chromecast در شبکهٔ شما…</string>
+    <string name="rd_cast_playing_on">در حال پخش روی %1$s</string>
+    <string name="rd_cast_connecting_to">در حال اتصال به %1$s…</string>
+    <string name="rd_cast_not_playing_on">روی %1$s پخش نمی‌شود</string>
+    <string name="rd_cast_sound_plays_on">صدا روی %1$s پخش می‌شود</string>
+    <string name="rd_cast_hint">مکث، جابه‌جایی و تغییر زیرنویس را اینجا انجام دهید: تلویزیون هم دنبال می‌کند.</string>
+    <string name="rd_cast_try_again">تلاش دوباره</string>
+    <string name="rd_cast_play_here">پخش در اینجا</string>
+    <string name="rd_cast_stop">توقف ارسال</string>
+    <string name="rd_cast_refused">%1$s از پخش این ویدئو خودداری کرد.</string>
+    <string name="rd_cast_stopped">%1$s پخش را متوقف کرد.</string>
+    <string name="rd_cast_taken">%1$s اکنون چیز دیگری پخش می‌کند.</string>
+    <string name="rd_cast_could_not_play">%1$s نتوانست ویدئو را پخش کند.</string>
+    <string name="rd_cast_subtitles_note">زیرنویس‌های نمایش‌داده‌شده همراه تصویر به تلویزیون فرستاده می‌شوند.</string>
+    <string name="rd_cast_subtitles_on">زیرنویس در تلویزیون: %1$s</string>
+    <string name="rd_cast_subtitles_off">زیرنویس در تلویزیون خاموش است</string>
 </resources>

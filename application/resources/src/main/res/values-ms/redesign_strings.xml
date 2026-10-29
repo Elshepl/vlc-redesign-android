@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Penyama dua laluan</string>
     <string name="rd_eq_preset">Praset penyama</string>
     <string name="rd_eq_custom">Langganan</string>
+    <string name="rd_cast_to">Hantar ke</string>
+    <string name="rd_cast_to_tv">Hantar ke TV</string>
+    <string name="rd_casting_to">Menghantar ke %1$s</string>
+    <string name="rd_cast_connecting">Menyambung…</string>
+    <string name="rd_cast_sound_only">Bunyi sahaja</string>
+    <string name="rd_cast_not_playing_retry">Tidak dimainkan: pilihnya untuk cuba lagi</string>
+    <string name="rd_cast_looking">Mencari TV dan Chromecast dalam rangkaian anda…</string>
+    <string name="rd_cast_playing_on">Dimainkan pada %1$s</string>
+    <string name="rd_cast_connecting_to">Menyambung ke %1$s…</string>
+    <string name="rd_cast_not_playing_on">Tidak dimainkan pada %1$s</string>
+    <string name="rd_cast_sound_plays_on">Bunyi dimainkan pada %1$s</string>
+    <string name="rd_cast_hint">Jeda, jangkau dan tukar sarikata di sini: TV akan mengikut.</string>
+    <string name="rd_cast_try_again">Cuba lagi</string>
+    <string name="rd_cast_play_here">Main di sini</string>
+    <string name="rd_cast_stop">Henti menghantar</string>
+    <string name="rd_cast_refused">%1$s enggan memainkan video ini.</string>
+    <string name="rd_cast_stopped">%1$s berhenti memainkan media.</string>
+    <string name="rd_cast_taken">%1$s sedang memainkan sesuatu yang lain sekarang.</string>
+    <string name="rd_cast_could_not_play">%1$s tidak dapat memainkan video.</string>
+    <string name="rd_cast_subtitles_note">Sarikata yang dipaparkan dihantar ke TV bersama gambar.</string>
+    <string name="rd_cast_subtitles_on">Sarikata pada TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Sarikata pada TV dimatikan</string>
 </resources>

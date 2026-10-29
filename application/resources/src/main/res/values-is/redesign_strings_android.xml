@@ -37,4 +37,8 @@
         <item>Um getur Juxtopposed sem hönnuðar viðmótsins, með tenglum á hönnunina, eins og í tölvuútgáfunni.</item>
     </string-array>
     <string name="rd_subtitle_size">Stærð skjátexta</string>
+    <string name="rd_cast_this_phone">Þessi sími</string>
+    <string name="rd_cast_this_tablet">Þessi spjaldtölva</string>
+    <string name="rd_cast_none_found">Ekkert tæki fannst. Kveiktu á sjónvarpinu eða Chromecast-tækinu, á sama neti og þetta tæki.</string>
+    <string name="rd_cast_no_answer">%1$s svarar ekki. Athugaðu hvort kveikt sé á því og það sé á sama neti og þetta tæki.</string>
 </resources>

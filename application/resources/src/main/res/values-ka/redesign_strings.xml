@@ -257,4 +257,26 @@
     <string name="rd_eq_two_pass">ორგავლიანი ეკვალაიზერი</string>
     <string name="rd_eq_preset">ეკვალაიზერის შაბლონი</string>
     <string name="rd_eq_custom">მორგებული</string>
+    <string name="rd_cast_to">ტრანსლირება მოწყობილობაზე</string>
+    <string name="rd_cast_to_tv">ტრანსლირება ტელევიზორზე</string>
+    <string name="rd_casting_to">ტრანსლირება: %1$s</string>
+    <string name="rd_cast_connecting">დაკავშირება…</string>
+    <string name="rd_cast_sound_only">მხოლოდ ხმა</string>
+    <string name="rd_cast_not_playing_retry">არ იკვრება: ხელახლა საცდელად აირჩიეთ</string>
+    <string name="rd_cast_looking">თქვენს ქსელში ტელევიზორებისა და Chromecast-ების ძებნა…</string>
+    <string name="rd_cast_playing_on">იკვრება %1$s-ზე</string>
+    <string name="rd_cast_connecting_to">%1$s-თან დაკავშირება…</string>
+    <string name="rd_cast_not_playing_on">%1$s-ზე არ იკვრება</string>
+    <string name="rd_cast_sound_plays_on">ხმა იკვრება %1$s-ზე</string>
+    <string name="rd_cast_hint">დაპაუზება, გადახვევა და ტიტრების შეცვლა აქედან შეგიძლიათ: ტელევიზორი მიჰყვება.</string>
+    <string name="rd_cast_try_again">ხელახლა ცდა</string>
+    <string name="rd_cast_play_here">აქ დაკვრა</string>
+    <string name="rd_cast_stop">ტრანსლირების შეწყვეტა</string>
+    <string name="rd_cast_refused">%1$s-მა უარი თქვა ამ ვიდეოს დაკვრაზე.</string>
+    <string name="rd_cast_stopped">%1$s-მა დაკვრა შეწყვიტა.</string>
+    <string name="rd_cast_taken">%1$s ახლა სხვა რამეს უკრავს.</string>
+    <string name="rd_cast_could_not_play">%1$s-მა ვერ დაუკრა ვიდეო.</string>
+    <string name="rd_cast_subtitles_note">ნაჩვენები ტიტრები ტელევიზორზე გამოსახულებასთან ერთად იგზავნება.</string>
+    <string name="rd_cast_subtitles_on">ტიტრები ტელევიზორზე: %1$s</string>
+    <string name="rd_cast_subtitles_off">ტიტრები ტელევიზორზე გამორთულია</string>
 </resources>

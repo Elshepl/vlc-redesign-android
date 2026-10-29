@@ -37,4 +37,8 @@
         <item>Faqja Rreth i jep merita për dizajnin e ndërfaqes Juxtopposed, me lidhjet e dizajnit, si në desktop.</item>
     </string-array>
     <string name="rd_subtitle_size">Madhësia e titrave</string>
+    <string name="rd_cast_this_phone">Ky telefon</string>
+    <string name="rd_cast_this_tablet">Ky tablet</string>
+    <string name="rd_cast_none_found">Nuk u gjet asnjë pajisje. Ndizni televizorin ose Chromecast-in, në të njëjtin rrjet me këtë pajisje.</string>
+    <string name="rd_cast_no_answer">%1$s nuk përgjigjet. Kontrolloni që është i ndezur dhe në të njëjtin rrjet me këtë pajisje.</string>
 </resources>

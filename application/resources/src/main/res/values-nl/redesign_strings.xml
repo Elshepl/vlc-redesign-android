@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Equalizer dubbel toepassen</string>
     <string name="rd_eq_preset">Equalizer voorkeuren</string>
     <string name="rd_eq_custom">Aangepast</string>
+    <string name="rd_cast_to">Casten naar</string>
+    <string name="rd_cast_to_tv">Casten naar tv</string>
+    <string name="rd_casting_to">Casten naar %1$s</string>
+    <string name="rd_cast_connecting">Verbinden…</string>
+    <string name="rd_cast_sound_only">Alleen geluid</string>
+    <string name="rd_cast_not_playing_retry">Speelt niet af: kies het om opnieuw te proberen</string>
+    <string name="rd_cast_looking">Zoeken naar tv\'s en Chromecasts in uw netwerk…</string>
+    <string name="rd_cast_playing_on">Speelt af op %1$s</string>
+    <string name="rd_cast_connecting_to">Verbinden met %1$s…</string>
+    <string name="rd_cast_not_playing_on">Speelt niet af op %1$s</string>
+    <string name="rd_cast_sound_plays_on">Het geluid speelt af op %1$s</string>
+    <string name="rd_cast_hint">Pauzeer, spoel en wijzig de ondertitels hier: de tv volgt.</string>
+    <string name="rd_cast_try_again">Opnieuw proberen</string>
+    <string name="rd_cast_play_here">Hier afspelen</string>
+    <string name="rd_cast_stop">Casten stoppen</string>
+    <string name="rd_cast_refused">%1$s weigerde deze video af te spelen.</string>
+    <string name="rd_cast_stopped">%1$s is gestopt met afspelen.</string>
+    <string name="rd_cast_taken">%1$s speelt nu iets anders af.</string>
+    <string name="rd_cast_could_not_play">%1$s kon de video niet afspelen.</string>
+    <string name="rd_cast_subtitles_note">De weergegeven ondertitels gaan met het beeld mee naar de tv.</string>
+    <string name="rd_cast_subtitles_on">Ondertitels op de tv: %1$s</string>
+    <string name="rd_cast_subtitles_off">Ondertitels op de tv uit</string>
 </resources>

@@ -36,4 +36,8 @@
         <item>Om krediterer Juxtopposed for utforminga av grensesnittet, med lenkjene til designet, som på datamaskina.</item>
     </string-array>
     <string name="rd_subtitle_size">Storleik på tekstinga</string>
+    <string name="rd_cast_this_phone">Denne telefonen</string>
+    <string name="rd_cast_this_tablet">Dette nettbrettet</string>
+    <string name="rd_cast_none_found">Fann inga eining. Slå på TV-en eller Chromecasten på same nettverk som denne eininga.</string>
+    <string name="rd_cast_no_answer">%1$s svarar ikkje. Kontroller at eininga er slått på og på same nettverk som denne eininga.</string>
 </resources>

@@ -269,4 +269,26 @@
     <string name="rd_eq_two_pass">Bộ cân bằng hai lượt</string>
     <string name="rd_eq_preset">Thiết lập chế độ cân bằng âm</string>
     <string name="rd_eq_custom">Tự chọn</string>
+    <string name="rd_cast_to">Truyền tới</string>
+    <string name="rd_cast_to_tv">Truyền tới TV</string>
+    <string name="rd_casting_to">Đang truyền tới %1$s</string>
+    <string name="rd_cast_connecting">Đang kết nối…</string>
+    <string name="rd_cast_sound_only">Chỉ âm thanh</string>
+    <string name="rd_cast_not_playing_retry">Không phát: chọn để thử lại</string>
+    <string name="rd_cast_looking">Đang tìm TV và Chromecast trong mạng của bạn…</string>
+    <string name="rd_cast_playing_on">Đang phát trên %1$s</string>
+    <string name="rd_cast_connecting_to">Đang kết nối tới %1$s…</string>
+    <string name="rd_cast_not_playing_on">Không phát trên %1$s</string>
+    <string name="rd_cast_sound_plays_on">Âm thanh đang phát trên %1$s</string>
+    <string name="rd_cast_hint">Tạm dừng, tua và đổi phụ đề tại đây: TV sẽ làm theo.</string>
+    <string name="rd_cast_try_again">Thử lại</string>
+    <string name="rd_cast_play_here">Phát tại đây</string>
+    <string name="rd_cast_stop">Dừng truyền</string>
+    <string name="rd_cast_refused">%1$s từ chối phát video này.</string>
+    <string name="rd_cast_stopped">%1$s đã dừng phát.</string>
+    <string name="rd_cast_taken">%1$s hiện đang phát nội dung khác.</string>
+    <string name="rd_cast_could_not_play">%1$s không thể phát video.</string>
+    <string name="rd_cast_subtitles_note">Phụ đề đang hiển thị sẽ được gửi tới TV cùng với hình ảnh.</string>
+    <string name="rd_cast_subtitles_on">Phụ đề trên TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Đã tắt phụ đề trên TV</string>
 </resources>

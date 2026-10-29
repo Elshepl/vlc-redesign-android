@@ -35,4 +35,8 @@
         <item>「關於」頁面與桌面版一樣，註明介面由 Juxtopposed 設計，並附上設計連結。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
+    <string name="rd_cast_this_phone">這支手機</string>
+    <string name="rd_cast_this_tablet">這台平板電腦</string>
+    <string name="rd_cast_none_found">找不到裝置。請開啟電視或 Chromecast，並連上與這部裝置相同的網路。</string>
+    <string name="rd_cast_no_answer">%1$s 沒有回應。請確認它已開啟，並與這部裝置連上相同的網路。</string>
 </resources>

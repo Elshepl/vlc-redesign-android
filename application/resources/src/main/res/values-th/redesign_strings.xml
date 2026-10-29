@@ -264,4 +264,26 @@
     <string name="rd_eq_two_pass">ตัวปรับสมดุลสองรอบ</string>
     <string name="rd_eq_preset">ชุดค่าตั้งตัวปรับสมดุล</string>
     <string name="rd_eq_custom">กำหนดเอง</string>
+    <string name="rd_cast_to">แคสต์ไปยัง</string>
+    <string name="rd_cast_to_tv">แคสต์ไปยังทีวี</string>
+    <string name="rd_casting_to">กำลังแคสต์ไปยัง %1$s</string>
+    <string name="rd_cast_connecting">กำลังเชื่อมต่อ…</string>
+    <string name="rd_cast_sound_only">เสียงเท่านั้น</string>
+    <string name="rd_cast_not_playing_retry">ไม่ได้เล่น: เลือกเพื่อลองอีกครั้ง</string>
+    <string name="rd_cast_looking">กำลังค้นหาทีวีและ Chromecast ในเครือข่ายของคุณ…</string>
+    <string name="rd_cast_playing_on">กำลังเล่นบน %1$s</string>
+    <string name="rd_cast_connecting_to">กำลังเชื่อมต่อกับ %1$s…</string>
+    <string name="rd_cast_not_playing_on">ไม่ได้เล่นบน %1$s</string>
+    <string name="rd_cast_sound_plays_on">เสียงเล่นบน %1$s</string>
+    <string name="rd_cast_hint">พัก เลื่อนตำแหน่ง และเปลี่ยนบทบรรยายได้ที่นี่: ทีวีจะทำตาม</string>
+    <string name="rd_cast_try_again">ลองอีกครั้ง</string>
+    <string name="rd_cast_play_here">เล่นที่นี่</string>
+    <string name="rd_cast_stop">หยุดการแคสต์</string>
+    <string name="rd_cast_refused">%1$s ปฏิเสธการเล่นวีดิทัศน์นี้</string>
+    <string name="rd_cast_stopped">%1$s หยุดเล่นแล้ว</string>
+    <string name="rd_cast_taken">%1$s กำลังเล่นอย่างอื่นอยู่</string>
+    <string name="rd_cast_could_not_play">%1$s ไม่สามารถเล่นวีดิทัศน์ได้</string>
+    <string name="rd_cast_subtitles_note">บทบรรยายที่แสดงอยู่จะไปยังทีวีพร้อมกับภาพ</string>
+    <string name="rd_cast_subtitles_on">บทบรรยายบนทีวี: %1$s</string>
+    <string name="rd_cast_subtitles_off">ปิดบทบรรยายบนทีวีแล้ว</string>
 </resources>

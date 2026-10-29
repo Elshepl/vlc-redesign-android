@@ -264,4 +264,26 @@
     <string name="rd_eq_two_pass">Двопролазни еквилајзер</string>
     <string name="rd_eq_preset">Подешавање Еквилајзера</string>
     <string name="rd_eq_custom">Прилагођено</string>
+    <string name="rd_cast_to">Пребаци на</string>
+    <string name="rd_cast_to_tv">Пребаци на ТВ</string>
+    <string name="rd_casting_to">Пребацивање на %1$s</string>
+    <string name="rd_cast_connecting">Повезивање…</string>
+    <string name="rd_cast_sound_only">Само звук</string>
+    <string name="rd_cast_not_playing_retry">Не репродукује се: изаберите га да бисте покушали поново</string>
+    <string name="rd_cast_looking">Тражење телевизора и Chromecast уређаја у вашој мрежи…</string>
+    <string name="rd_cast_playing_on">Репродукује се на %1$s</string>
+    <string name="rd_cast_connecting_to">Повезивање са %1$s…</string>
+    <string name="rd_cast_not_playing_on">Не репродукује се на %1$s</string>
+    <string name="rd_cast_sound_plays_on">Звук се пушта на %1$s</string>
+    <string name="rd_cast_hint">Паузирајте, премотавајте и мењајте титлове овде: ТВ прати.</string>
+    <string name="rd_cast_try_again">Покушај поново</string>
+    <string name="rd_cast_play_here">Пусти овде</string>
+    <string name="rd_cast_stop">Заустави пребацивање</string>
+    <string name="rd_cast_refused">%1$s је одбио да репродукује овај видео.</string>
+    <string name="rd_cast_stopped">%1$s је престао да репродукује.</string>
+    <string name="rd_cast_taken">%1$s сада репродукује нешто друго.</string>
+    <string name="rd_cast_could_not_play">%1$s није могао да репродукује видео.</string>
+    <string name="rd_cast_subtitles_note">Приказани титлови шаљу се на ТВ заједно са сликом.</string>
+    <string name="rd_cast_subtitles_on">Титлови на телевизору: %1$s</string>
+    <string name="rd_cast_subtitles_off">Титлови на телевизору искључени</string>
 </resources>

@@ -269,4 +269,26 @@
     <string name="rd_eq_two_pass">二次過濾等化器</string>
     <string name="rd_eq_preset">等化器樣式</string>
     <string name="rd_eq_custom">自訂</string>
+    <string name="rd_cast_to">投放到</string>
+    <string name="rd_cast_to_tv">投放到電視</string>
+    <string name="rd_casting_to">正在投放到 %1$s</string>
+    <string name="rd_cast_connecting">正在連線…</string>
+    <string name="rd_cast_sound_only">僅聲音</string>
+    <string name="rd_cast_not_playing_retry">未播放：選擇它以再試一次</string>
+    <string name="rd_cast_looking">正在網路上尋找電視與 Chromecast…</string>
+    <string name="rd_cast_playing_on">正在 %1$s 上播放</string>
+    <string name="rd_cast_connecting_to">正在連線到 %1$s…</string>
+    <string name="rd_cast_not_playing_on">未在 %1$s 上播放</string>
+    <string name="rd_cast_sound_plays_on">聲音在 %1$s 上播放</string>
+    <string name="rd_cast_hint">在這裡暫停、跳轉及變更字幕：電視會同步跟進。</string>
+    <string name="rd_cast_try_again">再試一次</string>
+    <string name="rd_cast_play_here">在這裡播放</string>
+    <string name="rd_cast_stop">停止投放</string>
+    <string name="rd_cast_refused">%1$s 拒絕播放此影片。</string>
+    <string name="rd_cast_stopped">%1$s 已停止播放。</string>
+    <string name="rd_cast_taken">%1$s 正在播放其他內容。</string>
+    <string name="rd_cast_could_not_play">%1$s 無法播放影片。</string>
+    <string name="rd_cast_subtitles_note">顯示的字幕會隨畫面一起傳送到電視。</string>
+    <string name="rd_cast_subtitles_on">電視字幕：%1$s</string>
+    <string name="rd_cast_subtitles_off">電視字幕已關閉</string>
 </resources>

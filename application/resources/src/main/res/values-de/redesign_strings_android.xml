@@ -35,4 +35,8 @@
         <item>„Über“ nennt Juxtopposed als Urheber des Oberflächendesigns, mit den Links zum Design, wie in der Desktop-Version.</item>
     </string-array>
     <string name="rd_subtitle_size">Untertitelgröße</string>
+    <string name="rd_cast_this_phone">Dieses Telefon</string>
+    <string name="rd_cast_this_tablet">Dieses Tablet</string>
+    <string name="rd_cast_none_found">Kein Gerät gefunden. Schalten Sie Ihren Fernseher oder Chromecast ein, im selben Netzwerk wie dieses Gerät.</string>
+    <string name="rd_cast_no_answer">%1$s antwortet nicht. Prüfen Sie, ob das Gerät eingeschaltet und im selben Netzwerk wie dieses Gerät ist.</string>
 </resources>

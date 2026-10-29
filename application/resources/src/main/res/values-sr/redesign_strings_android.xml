@@ -36,4 +36,8 @@
         <item>Одељак О програму наводи аутора дизајна интерфејса, Juxtopposed, са везама ка дизајну, као у верзији за рачунар.</item>
     </string-array>
     <string name="rd_subtitle_size">Величина титлова</string>
+    <string name="rd_cast_this_phone">Овај телефон</string>
+    <string name="rd_cast_this_tablet">Овај таблет</string>
+    <string name="rd_cast_none_found">Није пронађен ниједан уређај. Укључите ТВ или Chromecast у истој мрежи у којој је овај уређај.</string>
+    <string name="rd_cast_no_answer">%1$s не одговара. Проверите да ли је укључен и у истој мрежи као овај уређај.</string>
 </resources>

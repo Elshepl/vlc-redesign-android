@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">द्वि-पास संतुलक</string>
     <string name="rd_eq_preset">संतुलक पूर्वरचना</string>
     <string name="rd_eq_custom">पद्धत</string>
+    <string name="rd_cast_to">यावर कास्ट करा</string>
+    <string name="rd_cast_to_tv">टीव्हीवर कास्ट करा</string>
+    <string name="rd_casting_to">%1$s वर कास्ट होत आहे</string>
+    <string name="rd_cast_connecting">जोडत आहे…</string>
+    <string name="rd_cast_sound_only">केवळ आवाज</string>
+    <string name="rd_cast_not_playing_retry">चालू नाही: पुन्हा प्रयत्न करण्यासाठी ते निवडा</string>
+    <string name="rd_cast_looking">तुमच्या नेटवर्कवर टीव्ही आणि Chromecast शोधत आहे…</string>
+    <string name="rd_cast_playing_on">%1$s वर चालू आहे</string>
+    <string name="rd_cast_connecting_to">%1$s शी जोडत आहे…</string>
+    <string name="rd_cast_not_playing_on">%1$s वर चालू नाही</string>
+    <string name="rd_cast_sound_plays_on">आवाज %1$s वर वाजत आहे</string>
+    <string name="rd_cast_hint">येथे विराम द्या, स्थान बदला आणि अनुवादपट्ट्या बदला: टीव्ही त्याचे अनुसरण करतो.</string>
+    <string name="rd_cast_try_again">पुन्हा प्रयत्न करा</string>
+    <string name="rd_cast_play_here">येथे चालवा</string>
+    <string name="rd_cast_stop">कास्टिंग थांबवा</string>
+    <string name="rd_cast_refused">%1$s ने ही ध्वनीचित्रफित चालवण्यास नकार दिला.</string>
+    <string name="rd_cast_stopped">%1$s ने चालवणे थांबवले.</string>
+    <string name="rd_cast_taken">%1$s आता दुसरे काहीतरी चालवत आहे.</string>
+    <string name="rd_cast_could_not_play">%1$s ध्वनीचित्रफित चालवू शकले नाही.</string>
+    <string name="rd_cast_subtitles_note">दाखवलेल्या अनुवादपट्ट्या चित्रासह टीव्हीवर जातात.</string>
+    <string name="rd_cast_subtitles_on">टीव्हीवर अनुवादपट्ट्या: %1$s</string>
+    <string name="rd_cast_subtitles_off">टीव्हीवर अनुवादपट्ट्या बंद</string>
 </resources>

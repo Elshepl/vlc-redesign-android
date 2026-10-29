@@ -274,4 +274,26 @@
     <string name="rd_eq_two_pass">Ekvilizator s dva prolaza</string>
     <string name="rd_eq_preset">Postava ekvilizatora</string>
     <string name="rd_eq_custom">Prilagođeno</string>
+    <string name="rd_cast_to">Emitiraj na</string>
+    <string name="rd_cast_to_tv">Emitiraj na TV</string>
+    <string name="rd_casting_to">Emitiranje na %1$s</string>
+    <string name="rd_cast_connecting">Povezivanje…</string>
+    <string name="rd_cast_sound_only">Samo zvuk</string>
+    <string name="rd_cast_not_playing_retry">Ne izvodi se: odaberite ga za ponovni pokušaj</string>
+    <string name="rd_cast_looking">Traženje televizora i Chromecastova u Vašoj mreži…</string>
+    <string name="rd_cast_playing_on">Izvodi se na %1$s</string>
+    <string name="rd_cast_connecting_to">Povezivanje s %1$s…</string>
+    <string name="rd_cast_not_playing_on">Ne izvodi se na %1$s</string>
+    <string name="rd_cast_sound_plays_on">Zvuk se izvodi na %1$s</string>
+    <string name="rd_cast_hint">Ovdje zastanite, premotavajte i mijenjajte podnaslove: TV će pratiti.</string>
+    <string name="rd_cast_try_again">Pokušaj ponovno</string>
+    <string name="rd_cast_play_here">Izvedi ovdje</string>
+    <string name="rd_cast_stop">Zaustavi emitiranje</string>
+    <string name="rd_cast_refused">%1$s je odbio izvesti ovaj video.</string>
+    <string name="rd_cast_stopped">%1$s je prestao izvoditi.</string>
+    <string name="rd_cast_taken">%1$s sada izvodi nešto drugo.</string>
+    <string name="rd_cast_could_not_play">%1$s nije mogao izvesti video.</string>
+    <string name="rd_cast_subtitles_note">Prikazani podnaslovi šalju se na TV zajedno sa slikom.</string>
+    <string name="rd_cast_subtitles_on">Podnaslovi na televizoru: %1$s</string>
+    <string name="rd_cast_subtitles_off">Podnaslovi na televizoru isključeni</string>
 </resources>

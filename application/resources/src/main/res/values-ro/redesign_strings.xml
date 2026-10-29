@@ -269,4 +269,26 @@
     <string name="rd_eq_two_pass">Egalizator în două treceri</string>
     <string name="rd_eq_preset">Preset egalizator</string>
     <string name="rd_eq_custom">Personalizat</string>
+    <string name="rd_cast_to">Proiectează pe</string>
+    <string name="rd_cast_to_tv">Proiectează pe TV</string>
+    <string name="rd_casting_to">Se proiectează pe %1$s</string>
+    <string name="rd_cast_connecting">Se conectează…</string>
+    <string name="rd_cast_sound_only">Doar sunet</string>
+    <string name="rd_cast_not_playing_retry">Nu se redă: alegeți-l pentru a încerca din nou</string>
+    <string name="rd_cast_looking">Se caută televizoare și dispozitive Chromecast în rețea…</string>
+    <string name="rd_cast_playing_on">Se redă pe %1$s</string>
+    <string name="rd_cast_connecting_to">Se conectează la %1$s…</string>
+    <string name="rd_cast_not_playing_on">Nu se redă pe %1$s</string>
+    <string name="rd_cast_sound_plays_on">Sunetul se redă pe %1$s</string>
+    <string name="rd_cast_hint">Puneți pe pauză, derulați și schimbați subtitlurile de aici: televizorul urmează.</string>
+    <string name="rd_cast_try_again">Încearcă din nou</string>
+    <string name="rd_cast_play_here">Redă aici</string>
+    <string name="rd_cast_stop">Oprește proiectarea</string>
+    <string name="rd_cast_refused">%1$s a refuzat să redea acest videoclip.</string>
+    <string name="rd_cast_stopped">%1$s a oprit redarea.</string>
+    <string name="rd_cast_taken">%1$s redă acum altceva.</string>
+    <string name="rd_cast_could_not_play">%1$s nu a putut reda videoclipul.</string>
+    <string name="rd_cast_subtitles_note">Subtitlurile afișate ajung la televizor odată cu imaginea.</string>
+    <string name="rd_cast_subtitles_on">Subtitluri pe televizor: %1$s</string>
+    <string name="rd_cast_subtitles_off">Subtitluri oprite pe televizor</string>
 </resources>

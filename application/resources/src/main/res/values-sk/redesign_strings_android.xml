@@ -35,4 +35,8 @@
         <item>Sekcia O aplikácii uvádza autora návrhu rozhrania, Juxtopposed, s odkazmi na návrh, rovnako ako v počítačovej verzii.</item>
     </string-array>
     <string name="rd_subtitle_size">Veľkosť titulkov</string>
+    <string name="rd_cast_this_phone">Tento telefón</string>
+    <string name="rd_cast_this_tablet">Tento tablet</string>
+    <string name="rd_cast_none_found">Nenašlo sa žiadne zariadenie. Zapnite televízor alebo Chromecast v tej istej sieti, v ktorej je toto zariadenie.</string>
+    <string name="rd_cast_no_answer">Zariadenie %1$s neodpovedá. Skontrolujte, či je zapnuté a v tej istej sieti ako toto zariadenie.</string>
 </resources>

@@ -10,4 +10,8 @@
     <string name="rd_ob_whole_device">ឧបករណ៍ទាំងមូល</string>
     <string name="rd_fuzzy_1">ឯកសារចំណងជើងរងណាមួយ</string>
     <string name="rd_subtitle_size">ទំហំចំណងជើងរង</string>
+    <string name="rd_cast_this_phone">ទូរសព្ទនេះ</string>
+    <string name="rd_cast_this_tablet">ថេប្លេតនេះ</string>
+    <string name="rd_cast_none_found">រកមិនឃើញឧបករណ៍ទេ។ បើកទូរទស្សន៍ ឬ Chromecast របស់អ្នក នៅលើបណ្ដាញដូចគ្នានឹងឧបករណ៍នេះ។</string>
+    <string name="rd_cast_no_answer">%1$s មិនឆ្លើយតបទេ។ ពិនិត្យថាវាបើក ហើយនៅលើបណ្ដាញដូចគ្នានឹងឧបករណ៍នេះ។</string>
 </resources>

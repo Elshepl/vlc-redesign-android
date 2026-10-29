@@ -35,4 +35,8 @@
         <item>Tietoja-näkymä mainitsee käyttöliittymän suunnittelijana Juxtopposedin ja antaa linkit suunnitelmaan, kuten työpöytäversiossa.</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
+    <string name="rd_cast_this_phone">Tämä puhelin</string>
+    <string name="rd_cast_this_tablet">Tämä tabletti</string>
+    <string name="rd_cast_none_found">Laitteita ei löytynyt. Käynnistä TV tai Chromecast samassa verkossa tämän laitteen kanssa.</string>
+    <string name="rd_cast_no_answer">%1$s ei vastaa. Tarkista, että laite on päällä ja samassa verkossa tämän laitteen kanssa.</string>
 </resources>

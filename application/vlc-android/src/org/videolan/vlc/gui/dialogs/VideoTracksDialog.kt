@@ -94,17 +94,12 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
                 binding.audioTracks.trackTitle.contentDescription = getString(R.string.talkback_audio_tracks)
             }
             playbackService.spuTracks?.let { trackList ->
-                if (!playbackService.hasRenderer()) {
-                    val trackAdapter = TrackAdapter(generateTrackList(trackList), trackList.firstOrNull { it.getId() == playbackService.spuTrack }, getString(R.string.track_text))
-                    trackAdapter.setOnTrackSelectedListener { track ->
-                        trackSelectionListener.invoke(track.getId(), TrackType.SPU)
-                    }
-                    binding.subtitleTracks.trackList.adapter = trackAdapter
-                } else {
-                    binding.subtitleTracks.emptyView.text = getString(R.string.no_sub_renderer)
-                    binding.subtitleTracks.emptyView.setVisible()
-                    binding.subtitleTracks.trackMore.setGone()
+                // VLC Redesign, casting: the subtitles too (the Chromecast output burns them into the picture)
+                val trackAdapter = TrackAdapter(generateTrackList(trackList), trackList.firstOrNull { it.getId() == playbackService.spuTrack }, getString(R.string.track_text))
+                trackAdapter.setOnTrackSelectedListener { track ->
+                    trackSelectionListener.invoke(track.getId(), TrackType.SPU)
                 }
+                binding.subtitleTracks.trackList.adapter = trackAdapter
                 if (trackList.isEmpty()) binding.subtitleTracks.emptyView.setVisible()
                 binding.subtitleTracks.trackTitle.contentDescription = getString(R.string.talkback_subtitle_tracks)
             }

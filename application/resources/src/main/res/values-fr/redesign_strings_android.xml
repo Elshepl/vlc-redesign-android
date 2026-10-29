@@ -35,4 +35,8 @@
         <item>À propos crédite le design de l\'interface à Juxtopposed, avec les liens du design, comme sur la version de bureau.</item>
     </string-array>
     <string name="rd_subtitle_size">Taille des sous-titres</string>
+    <string name="rd_cast_this_phone">Ce téléphone</string>
+    <string name="rd_cast_this_tablet">Cette tablette</string>
+    <string name="rd_cast_none_found">Aucun appareil trouvé. Allumez votre TV ou votre Chromecast, sur le même réseau que cet appareil.</string>
+    <string name="rd_cast_no_answer">%1$s ne répond pas. Vérifiez qu\'il est allumé et sur le même réseau que cet appareil.</string>
 </resources>

@@ -159,6 +159,7 @@ import org.videolan.tools.POSITION_IN_AUDIO_LIST
 import org.videolan.tools.POSITION_IN_SONG
 import org.videolan.tools.SHOW_SEEK_IN_COMPACT_NOTIFICATION
 import org.videolan.tools.Settings
+import org.videolan.tools.isAppStarted
 import org.videolan.tools.formatRateString
 import org.videolan.tools.getContextWithLocale
 import org.videolan.tools.getResourceUri
@@ -324,6 +325,12 @@ class PlaybackService : MediaBrowserServiceCompat(), LifecycleOwner, CoroutineSc
     }
 
     private val mediaPlayerListener = MediaPlayer.EventListener { event ->
+        // VLC Redesign, casting: connecting, playing there, failed
+        if (hasRenderer()) {
+            if (BuildConfig.DEBUG && event.type != MediaPlayer.Event.TimeChanged && event.type != MediaPlayer.Event.PositionChanged && event.type != MediaPlayer.Event.Buffering)
+                Log.d("VLC/Cast", "event 0x${Integer.toHexString(event.type)}")
+            org.videolan.vlc.cast.CastController.onEvent(this, event)
+        }
         when (event.type) {
             MediaPlayer.Event.Playing -> {
                 if (BuildConfig.DEBUG) Log.i(TAG, "MediaPlayer.Event.Playing")
@@ -1882,15 +1889,64 @@ class PlaybackService : MediaBrowserServiceCompat(), LifecycleOwner, CoroutineSc
     @MainThread
     fun hasRenderer() = playlistManager.player.hasRenderer
 
+    /**
+     * VLC Redesign: casting to [item], or back here (null). Back here, the media goes on where the device was (it
+     * opens again if the cast had failed), and a video comes back on the phone's screen: the player opens when it
+     * does not show (the cast was started from the library). The old order tested "back here" after the renderer
+     * was still set: the video never came back.
+     */
     @MainThread
     fun setRenderer(item: RendererItem?) {
         val wasOnRenderer = hasRenderer()
-        if (wasOnRenderer && !hasRenderer() && canSwitchToVideo())
-            VideoPlayerActivity.startOpened(applicationContext,
-                    playlistManager.getCurrentMedia()!!.uri, playlistManager.currentIndex)
-        playlistManager.setRenderer(item)
-        if (!wasOnRenderer && item != null) audioFocusHelper.changeAudioFocus(false)
-        else if (wasOnRenderer && item == null && isPlaying) audioFocusHelper.changeAudioFocus(true)
+        if (item != null && org.videolan.vlc.cast.sameDevice(item, playlistManager.player.renderer) && wasOnRenderer) return
+        // (a cast that failed, or never played: its output is stopped or stuck, the media opens again)
+        val failed = org.videolan.vlc.cast.CastState.state.value.status.let {
+            it == org.videolan.vlc.cast.CastState.Status.FAILED || it == org.videolan.vlc.cast.CastState.Status.CONNECTING }
+        val castTime = if (wasOnRenderer) org.videolan.vlc.cast.CastController.time else -1L
+        val hadMedia = playlistManager.hasCurrentMedia()
+        val video = playlistManager.getCurrentMedia()?.type == MediaWrapper.TYPE_VIDEO
+        // a video is opened again for the device, where it was: libvlc 3 moves only its sound to the device when the
+        // output changes under a playing video (checked with the test Chromecast: an audio-only stream)
+        val reopen = hadMedia && item != null && (video || playlistManager.openedWithoutVideo() || failed)
+        playlistManager.setRenderer(item, live = !reopen)
+        org.videolan.vlc.cast.CastController.rendererChanged(item)
+        org.videolan.vlc.cast.CastVolume.rendererChanged(item)
+        updateVolumeProvider()
+        if (!hadMedia) return
+        if (!wasOnRenderer && item != null) {
+            audioFocusHelper.changeAudioFocus(false)
+            if (reopen) playlistManager.restartAt(getTime(), !isPlaying)
+        } else if (wasOnRenderer && item == null) {
+            if (failed) playlistManager.restartAt(castTime.coerceAtLeast(0L), false)
+            else if (castTime > 0L) setTime(castTime)
+            if (isPlaying || failed) audioFocusHelper.changeAudioFocus(true)
+            val mw = playlistManager.getCurrentMedia()
+            if (mw != null && mw.type == MediaWrapper.TYPE_VIDEO && !mw.hasFlag(MediaWrapper.MEDIA_FORCE_AUDIO)
+                    && !VideoPlayerActivity.visible && isAppStarted())
+                VideoPlayerActivity.startOpened(applicationContext, mw.uri, playlistManager.currentIndex)
+        } else if (item != null && reopen) {
+            // another device: the output starts again there, from where it was
+            playlistManager.restartAt(castTime.coerceAtLeast(0L), false)
+        }
+    }
+
+    /** VLC Redesign, casting: Try again (the same device, from [time]) */
+    @MainThread
+    fun restartCast(item: RendererItem, time: Long) {
+        if (!playlistManager.hasCurrentMedia()) return
+        playlistManager.player.setRenderer(item, live = false)
+        playlistManager.restartAt(time, false)
+    }
+
+    /**
+     * VLC Redesign, casting: the volume keys and the system's volume panel change the device's volume while it
+     * casts (a remote volume on the media session), the phone's otherwise.
+     */
+    private fun updateVolumeProvider() {
+        if (!::mediaSession.isInitialized) return
+        val provider = org.videolan.vlc.cast.CastVolume.provider
+        if (hasRenderer() && provider != null) mediaSession.setPlaybackToRemote(provider)
+        else mediaSession.setPlaybackToLocal(android.media.AudioManager.STREAM_MUSIC)
     }
 
     @MainThread

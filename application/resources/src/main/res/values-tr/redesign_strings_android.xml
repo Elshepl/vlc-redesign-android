@@ -35,4 +35,8 @@
         <item>Hakkında bölümü, masaüstündeki gibi tasarım bağlantılarıyla birlikte arayüz tasarımının Juxtopposed\'a ait olduğunu belirtir.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
+    <string name="rd_cast_this_phone">Bu telefon</string>
+    <string name="rd_cast_this_tablet">Bu tablet</string>
+    <string name="rd_cast_none_found">Aygıt bulunamadı. TV\'nizi ya da Chromecast\'inizi bu aygıtla aynı ağda açın.</string>
+    <string name="rd_cast_no_answer">%1$s yanıt vermiyor. Açık olduğunu ve bu aygıtla aynı ağda bulunduğunu denetleyin.</string>
 </resources>

@@ -37,4 +37,8 @@
         <item>ਇਸ ਬਾਰੇ ਪੰਨਾ ਇੰਟਰਫੇਸ ਦੇ ਡਿਜ਼ਾਈਨ ਦਾ ਸਿਹਰਾ Juxtopposed ਨੂੰ ਦਿੰਦਾ ਹੈ, ਡਿਜ਼ਾਈਨ ਦੇ ਲਿੰਕਾਂ ਸਮੇਤ, ਜਿਵੇਂ ਡੈਸਕਟਾਪ ਉੱਤੇ।</item>
     </string-array>
     <string name="rd_subtitle_size">ਉਪਸਿਰਲੇਖ ਦਾ ਆਕਾਰ</string>
+    <string name="rd_cast_this_phone">ਇਹ ਫ਼ੋਨ</string>
+    <string name="rd_cast_this_tablet">ਇਹ ਟੈਬਲੈੱਟ</string>
+    <string name="rd_cast_none_found">ਕੋਈ ਜੰਤਰ ਨਹੀਂ ਲੱਭਿਆ। ਆਪਣਾ TV ਜਾਂ Chromecast ਇਸ ਜੰਤਰ ਵਾਲੇ ਨੈੱਟਵਰਕ ਉੱਤੇ ਹੀ ਚਾਲੂ ਕਰੋ।</string>
+    <string name="rd_cast_no_answer">%1$s ਜਵਾਬ ਨਹੀਂ ਦਿੰਦਾ। ਜਾਂਚ ਕਰੋ ਕਿ ਇਹ ਚਾਲੂ ਹੈ, ਅਤੇ ਇਸ ਜੰਤਰ ਵਾਲੇ ਨੈੱਟਵਰਕ ਉੱਤੇ ਹੀ ਹੈ।</string>
 </resources>

@@ -35,4 +35,8 @@
         <item>Tocante a atribúi\'l diseñu de la interfaz a Juxtopposed, colos enllaces del diseñu, como nel escritoriu.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
+    <string name="rd_cast_this_phone">Esti teléfonu</string>
+    <string name="rd_cast_this_tablet">Esta tableta</string>
+    <string name="rd_cast_none_found">Nun s\'atopó nengún preséu. Prendi la TV o\'l Chromecast na mesma rede qu\'esti preséu.</string>
+    <string name="rd_cast_no_answer">%1$s nun respuende. Comprueba que tea prendíu y na mesma rede qu\'esti preséu.</string>
 </resources>

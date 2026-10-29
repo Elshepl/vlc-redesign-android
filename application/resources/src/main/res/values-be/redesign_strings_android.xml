@@ -35,4 +35,8 @@
         <item>У раздзеле «Пра праграму» пазначаны аўтар дызайну інтэрфейсу, Juxtopposed, са спасылкамі на дызайн, як у версіі для камп’ютара.</item>
     </string-array>
     <string name="rd_subtitle_size">Памер субтытраў</string>
+    <string name="rd_cast_this_phone">Гэты тэлефон</string>
+    <string name="rd_cast_this_tablet">Гэты планшэт</string>
+    <string name="rd_cast_none_found">Прылады не знойдзены. Уключыце тэлевізар або Chromecast у той жа сетцы, што і гэтая прылада.</string>
+    <string name="rd_cast_no_answer">%1$s не адказвае. Праверце, што прылада ўключана і знаходзіцца ў той жа сетцы, што і гэтая прылада.</string>
 </resources>

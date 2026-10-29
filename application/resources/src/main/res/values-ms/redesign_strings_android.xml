@@ -35,4 +35,8 @@
         <item>Perihal memberi kredit reka bentuk antara muka kepada Juxtopposed, bersama pautan reka bentuknya, seperti di desktop.</item>
     </string-array>
     <string name="rd_subtitle_size">Saiz sari kata</string>
+    <string name="rd_cast_this_phone">Telefon ini</string>
+    <string name="rd_cast_this_tablet">Tablet ini</string>
+    <string name="rd_cast_none_found">Tiada peranti ditemui. Hidupkan TV atau Chromecast anda, pada rangkaian yang sama dengan peranti ini.</string>
+    <string name="rd_cast_no_answer">%1$s tidak menjawab. Pastikan ia dihidupkan, dan berada pada rangkaian yang sama dengan peranti ini.</string>
 </resources>

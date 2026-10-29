@@ -35,4 +35,8 @@
         <item>Acerca de atribúe o deseño da interface a Juxtopposed, coas ligazóns do deseño, como no escritorio.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamaño dos subtítulos</string>
+    <string name="rd_cast_this_phone">Este teléfono</string>
+    <string name="rd_cast_this_tablet">Esta tableta</string>
+    <string name="rd_cast_none_found">Non se atopou ningún dispositivo. Acenda o televisor ou o Chromecast, na mesma rede que este dispositivo.</string>
+    <string name="rd_cast_no_answer">%1$s non responde. Comprobe que estea acendido e na mesma rede que este dispositivo.</string>
 </resources>

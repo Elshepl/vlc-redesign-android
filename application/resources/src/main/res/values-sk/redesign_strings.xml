@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Dvojprechodový ekvalizér</string>
     <string name="rd_eq_preset">Nastavenie ekvalizéra</string>
     <string name="rd_eq_custom">Vlastné</string>
+    <string name="rd_cast_to">Prenášať do</string>
+    <string name="rd_cast_to_tv">Prenášať do TV</string>
+    <string name="rd_casting_to">Prenáša sa do %1$s</string>
+    <string name="rd_cast_connecting">Pripája sa…</string>
+    <string name="rd_cast_sound_only">Iba zvuk</string>
+    <string name="rd_cast_not_playing_retry">Neprehráva sa: vyberte ho a skúste to znova</string>
+    <string name="rd_cast_looking">Hľadajú sa televízory a zariadenia Chromecast vo vašej sieti…</string>
+    <string name="rd_cast_playing_on">Prehráva sa na %1$s</string>
+    <string name="rd_cast_connecting_to">Pripája sa k %1$s…</string>
+    <string name="rd_cast_not_playing_on">Neprehráva sa na %1$s</string>
+    <string name="rd_cast_sound_plays_on">Zvuk hrá na %1$s</string>
+    <string name="rd_cast_hint">Pozastavenie, posun aj zmenu titulkov ovládate tu: televízor sa prispôsobí.</string>
+    <string name="rd_cast_try_again">Skúsiť znova</string>
+    <string name="rd_cast_play_here">Prehrať tu</string>
+    <string name="rd_cast_stop">Zastaviť prenos</string>
+    <string name="rd_cast_refused">Zariadenie %1$s odmietlo prehrať toto video.</string>
+    <string name="rd_cast_stopped">Zariadenie %1$s prestalo prehrávať.</string>
+    <string name="rd_cast_taken">Zariadenie %1$s teraz prehráva niečo iné.</string>
+    <string name="rd_cast_could_not_play">Zariadenie %1$s nemohlo prehrať video.</string>
+    <string name="rd_cast_subtitles_note">Zobrazené titulky sa posielajú do TV spolu s obrazom.</string>
+    <string name="rd_cast_subtitles_on">Titulky na televízore: %1$s</string>
+    <string name="rd_cast_subtitles_off">Titulky na televízore vypnuté</string>
 </resources>

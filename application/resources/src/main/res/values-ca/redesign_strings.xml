@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Equalitzador de dues passades</string>
     <string name="rd_eq_preset">Valors predefinits de l\'equalitzador</string>
     <string name="rd_eq_custom">Personalitzat</string>
+    <string name="rd_cast_to">Emet a</string>
+    <string name="rd_cast_to_tv">Emet a la TV</string>
+    <string name="rd_casting_to">S\'està emetent a %1$s</string>
+    <string name="rd_cast_connecting">S\'està connectant…</string>
+    <string name="rd_cast_sound_only">Només so</string>
+    <string name="rd_cast_not_playing_retry">No s\'està reproduint: trieu-lo per tornar-ho a provar</string>
+    <string name="rd_cast_looking">S\'estan cercant televisors i Chromecast a la xarxa…</string>
+    <string name="rd_cast_playing_on">S\'està reproduint a %1$s</string>
+    <string name="rd_cast_connecting_to">S\'està connectant a %1$s…</string>
+    <string name="rd_cast_not_playing_on">No s\'està reproduint a %1$s</string>
+    <string name="rd_cast_sound_plays_on">El so es reprodueix a %1$s</string>
+    <string name="rd_cast_hint">Poseu en pausa, cerqueu i canvieu els subtítols aquí: la TV ho segueix.</string>
+    <string name="rd_cast_try_again">Torna-ho a provar</string>
+    <string name="rd_cast_play_here">Reprodueix aquí</string>
+    <string name="rd_cast_stop">Atura l\'emissió</string>
+    <string name="rd_cast_refused">%1$s s\'ha negat a reproduir aquest vídeo.</string>
+    <string name="rd_cast_stopped">%1$s ha deixat de reproduir.</string>
+    <string name="rd_cast_taken">Ara %1$s està reproduint una altra cosa.</string>
+    <string name="rd_cast_could_not_play">%1$s no ha pogut reproduir el vídeo.</string>
+    <string name="rd_cast_subtitles_note">Els subtítols que es mostren s\'envien a la TV amb la imatge.</string>
+    <string name="rd_cast_subtitles_on">Subtítols a la TV: %1$s</string>
+    <string name="rd_cast_subtitles_off">Subtítols desactivats a la TV</string>
 </resources>

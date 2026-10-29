@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the casting card (the desktop's, Player.qml): #141414, radius 14, the 1 px window border.
+     The player is always dark. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#FF141414" />
+    <corners android:radius="14dp" />
+    <stroke android:width="1dp" android:color="@color/rd_dark_window_border_token" />
+</shape>

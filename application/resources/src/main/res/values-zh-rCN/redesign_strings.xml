@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">两轮均衡器</string>
     <string name="rd_eq_preset">均衡器预设</string>
     <string name="rd_eq_custom">自定义</string>
+    <string name="rd_cast_to">投屏到</string>
+    <string name="rd_cast_to_tv">投屏到电视</string>
+    <string name="rd_casting_to">正在投屏到 %1$s</string>
+    <string name="rd_cast_connecting">正在连接…</string>
+    <string name="rd_cast_sound_only">仅声音</string>
+    <string name="rd_cast_not_playing_retry">未在播放：选择它以重试</string>
+    <string name="rd_cast_looking">正在网络中查找电视和 Chromecast…</string>
+    <string name="rd_cast_playing_on">正在 %1$s 上播放</string>
+    <string name="rd_cast_connecting_to">正在连接到 %1$s…</string>
+    <string name="rd_cast_not_playing_on">未在 %1$s 上播放</string>
+    <string name="rd_cast_sound_plays_on">声音在 %1$s 上播放</string>
+    <string name="rd_cast_hint">在此处暂停、跳转和更改字幕：电视会同步跟随。</string>
+    <string name="rd_cast_try_again">重试</string>
+    <string name="rd_cast_play_here">在此播放</string>
+    <string name="rd_cast_stop">停止投屏</string>
+    <string name="rd_cast_refused">%1$s 拒绝播放此视频。</string>
+    <string name="rd_cast_stopped">%1$s 已停止播放。</string>
+    <string name="rd_cast_taken">%1$s 现在正在播放其他内容。</string>
+    <string name="rd_cast_could_not_play">%1$s 无法播放该视频。</string>
+    <string name="rd_cast_subtitles_note">显示的字幕会与画面一起发送到电视。</string>
+    <string name="rd_cast_subtitles_on">电视字幕：%1$s</string>
+    <string name="rd_cast_subtitles_off">电视字幕已关闭</string>
 </resources>

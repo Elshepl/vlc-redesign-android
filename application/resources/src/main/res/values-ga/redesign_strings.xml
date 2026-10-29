@@ -267,4 +267,26 @@
     <string name="rd_eq_two_pass">Cothromóir dhá phas</string>
     <string name="rd_eq_preset">Réamhshocrú an chothromóra</string>
     <string name="rd_eq_custom">Saincheaptha</string>
+    <string name="rd_cast_to">Teilg chuig</string>
+    <string name="rd_cast_to_tv">Teilg chuig an teilifís</string>
+    <string name="rd_casting_to">Ag teilgean chuig %1$s</string>
+    <string name="rd_cast_connecting">Ag ceangal…</string>
+    <string name="rd_cast_sound_only">Fuaim amháin</string>
+    <string name="rd_cast_not_playing_retry">Níl sé ag seinm: roghnaigh é chun triail eile a bhaint as</string>
+    <string name="rd_cast_looking">Ag lorg teilifíseán agus gléasanna Chromecast ar do líonra…</string>
+    <string name="rd_cast_playing_on">Á sheinm ar %1$s</string>
+    <string name="rd_cast_connecting_to">Ag ceangal le %1$s…</string>
+    <string name="rd_cast_not_playing_on">Níl sé á sheinm ar %1$s</string>
+    <string name="rd_cast_sound_plays_on">Seinntear an fhuaim ar %1$s</string>
+    <string name="rd_cast_hint">Cuir ar sos, léim agus athraigh na fotheidil anseo: leanfaidh an teilifís.</string>
+    <string name="rd_cast_try_again">Bain triail eile as</string>
+    <string name="rd_cast_play_here">Seinn anseo</string>
+    <string name="rd_cast_stop">Stop an teilgean</string>
+    <string name="rd_cast_refused">Dhiúltaigh %1$s an físeán seo a sheinm.</string>
+    <string name="rd_cast_stopped">Stop %1$s ag seinm.</string>
+    <string name="rd_cast_taken">Tá %1$s ag seinm rud éigin eile anois.</string>
+    <string name="rd_cast_could_not_play">Níorbh fhéidir le %1$s an físeán a sheinm.</string>
+    <string name="rd_cast_subtitles_note">Téann na fotheidil a thaispeántar chuig an teilifís leis an bpictiúr.</string>
+    <string name="rd_cast_subtitles_on">Fotheidil ar an teilifís: %1$s</string>
+    <string name="rd_cast_subtitles_off">Fotheidil múchta ar an teilifís</string>
 </resources>

@@ -266,4 +266,26 @@
     <string name="rd_eq_two_pass">معادِل بمرورين</string>
     <string name="rd_eq_preset">تضبيط مسبق للمعادِل</string>
     <string name="rd_eq_custom">مخصص</string>
+    <string name="rd_cast_to">البث إلى</string>
+    <string name="rd_cast_to_tv">البث إلى التلفزيون</string>
+    <string name="rd_casting_to">جارٍ البث إلى %1$s</string>
+    <string name="rd_cast_connecting">جارٍ الاتصال…</string>
+    <string name="rd_cast_sound_only">الصوت فقط</string>
+    <string name="rd_cast_not_playing_retry">لا يُشغَّل: اختره لإعادة المحاولة</string>
+    <string name="rd_cast_looking">جارٍ البحث عن أجهزة التلفزيون وأجهزة Chromecast في شبكتك…</string>
+    <string name="rd_cast_playing_on">يُشغَّل على %1$s</string>
+    <string name="rd_cast_connecting_to">جارٍ الاتصال بـ %1$s…</string>
+    <string name="rd_cast_not_playing_on">لا يُشغَّل على %1$s</string>
+    <string name="rd_cast_sound_plays_on">يُشغَّل الصوت على %1$s</string>
+    <string name="rd_cast_hint">أوقف مؤقتًا وتنقّل وغيّر الترجمة من هنا: يتبعك التلفزيون.</string>
+    <string name="rd_cast_try_again">إعادة المحاولة</string>
+    <string name="rd_cast_play_here">التشغيل هنا</string>
+    <string name="rd_cast_stop">إيقاف البث</string>
+    <string name="rd_cast_refused">رفض %1$s تشغيل هذا الفيديو.</string>
+    <string name="rd_cast_stopped">توقف %1$s عن التشغيل.</string>
+    <string name="rd_cast_taken">يُشغِّل %1$s شيئًا آخر الآن.</string>
+    <string name="rd_cast_could_not_play">تعذّر على %1$s تشغيل الفيديو.</string>
+    <string name="rd_cast_subtitles_note">تُرسَل الترجمة المعروضة إلى التلفزيون مع الصورة.</string>
+    <string name="rd_cast_subtitles_on">الترجمة على التلفاز: %1$s</string>
+    <string name="rd_cast_subtitles_off">الترجمة متوقفة على التلفاز</string>
 </resources>

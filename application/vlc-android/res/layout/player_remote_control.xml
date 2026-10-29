@@ -27,12 +27,8 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true">
 
-        <ImageView
-                android:id="@+id/renderer_background_cone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_renderer_background_cone" />
+        <!-- VLC Redesign: the casting card (the desktop's) instead of the cone -->
+        <include layout="@layout/rd_casting_card" />
 
         <androidx.appcompat.widget.ViewStubCompat
                 android:id="@+id/player_info_stub"

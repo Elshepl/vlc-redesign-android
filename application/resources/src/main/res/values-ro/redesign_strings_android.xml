@@ -35,4 +35,8 @@
         <item>Despre atribuie designul interfeței lui Juxtopposed, cu linkurile designului, ca pe desktop.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
+    <string name="rd_cast_this_phone">Acest telefon</string>
+    <string name="rd_cast_this_tablet">Această tabletă</string>
+    <string name="rd_cast_none_found">Nu s-a găsit niciun dispozitiv. Porniți televizorul sau Chromecastul, în aceeași rețea cu acest dispozitiv.</string>
+    <string name="rd_cast_no_answer">%1$s nu răspunde. Verificați dacă este pornit și în aceeași rețea cu acest dispozitiv.</string>
 </resources>

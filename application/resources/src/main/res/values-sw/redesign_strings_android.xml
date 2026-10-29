@@ -35,4 +35,8 @@
         <item>Kuhusu inatoa sifa ya muundo wa kiolesura kwa Juxtopposed, pamoja na viungo vya muundo, kama kwenye kompyuta.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
+    <string name="rd_cast_this_phone">Simu hii</string>
+    <string name="rd_cast_this_tablet">Kompyuta kibao hii</string>
+    <string name="rd_cast_none_found">Hakuna kifaa kilichopatikana. Washa TV au Chromecast yako, kwenye mtandao mmoja na kifaa hiki.</string>
+    <string name="rd_cast_no_answer">%1$s haijibu. Hakikisha kimewashwa, na kiko kwenye mtandao mmoja na kifaa hiki.</string>
 </resources>

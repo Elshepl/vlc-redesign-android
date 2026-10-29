@@ -35,4 +35,8 @@
         <item>വിവരം പേജ് ഇന്റർഫേസ് ഡിസൈനിന്റെ ക്രെഡിറ്റ് Juxtopposed-ന് നൽകുന്നു, ഡിസൈനിന്റെ ലിങ്കുകൾ സഹിതം, ഡെസ്ക്ടോപ്പിലെപ്പോലെ.</item>
     </string-array>
     <string name="rd_subtitle_size">ഉപശീർഷക വലുപ്പം</string>
+    <string name="rd_cast_this_phone">ഈ ഫോൺ</string>
+    <string name="rd_cast_this_tablet">ഈ ടാബ്‌ലെറ്റ്</string>
+    <string name="rd_cast_none_found">ഉപകരണമൊന്നും കണ്ടെത്തിയില്ല. ഈ ഉപകരണത്തിന്റെ അതേ നെറ്റ്വർക്കിൽ നിങ്ങളുടെ ടിവി അല്ലെങ്കിൽ Chromecast ഓണാക്കുക.</string>
+    <string name="rd_cast_no_answer">%1$s പ്രതികരിക്കുന്നില്ല. അത് ഓണാണെന്നും ഈ ഉപകരണത്തിന്റെ അതേ നെറ്റ്വർക്കിലാണെന്നും പരിശോധിക്കുക.</string>
 </resources>

@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Tonekontroll i to omganger</string>
     <string name="rd_eq_preset">Tonekontrollforhåndsinnstilling</string>
     <string name="rd_eq_custom">Tilpasset</string>
+    <string name="rd_cast_to">Cast til</string>
+    <string name="rd_cast_to_tv">Cast til TV</string>
+    <string name="rd_casting_to">Caster til %1$s</string>
+    <string name="rd_cast_connecting">Kobler til…</string>
+    <string name="rd_cast_sound_only">Bare lyd</string>
+    <string name="rd_cast_not_playing_retry">Spilles ikke av: velg den for å prøve igjen</string>
+    <string name="rd_cast_looking">Ser etter TV-er og Chromecast-enheter i nettverket ditt…</string>
+    <string name="rd_cast_playing_on">Spilles av på %1$s</string>
+    <string name="rd_cast_connecting_to">Kobler til %1$s…</string>
+    <string name="rd_cast_not_playing_on">Spilles ikke av på %1$s</string>
+    <string name="rd_cast_sound_plays_on">Lyden spilles av på %1$s</string>
+    <string name="rd_cast_hint">Sett på pause, spol og bytt undertekster her: TV-en følger med.</string>
+    <string name="rd_cast_try_again">Prøv igjen</string>
+    <string name="rd_cast_play_here">Spill av her</string>
+    <string name="rd_cast_stop">Stopp casting</string>
+    <string name="rd_cast_refused">%1$s nektet å spille av denne videoen.</string>
+    <string name="rd_cast_stopped">%1$s sluttet å spille av.</string>
+    <string name="rd_cast_taken">%1$s spiller av noe annet nå.</string>
+    <string name="rd_cast_could_not_play">%1$s kunne ikke spille av videoen.</string>
+    <string name="rd_cast_subtitles_note">Undertekstene som vises, sendes til TV-en sammen med bildet.</string>
+    <string name="rd_cast_subtitles_on">Undertekster på TV-en: %1$s</string>
+    <string name="rd_cast_subtitles_off">Undertekster av på TV-en</string>
 </resources>

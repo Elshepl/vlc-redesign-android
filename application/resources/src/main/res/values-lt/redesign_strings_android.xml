@@ -35,4 +35,8 @@
         <item>Skiltyje Apie Juxtopposed nurodomas kaip sąsajos dizaino autorius, su nuorodomis į dizainą, kaip kompiuterio versijoje.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
+    <string name="rd_cast_this_phone">Šis telefonas</string>
+    <string name="rd_cast_this_tablet">Ši planšetė</string>
+    <string name="rd_cast_none_found">Įrenginių nerasta. Įjunkite televizorių arba Chromecast tame pačiame tinkle kaip ir šis įrenginys.</string>
+    <string name="rd_cast_no_answer">%1$s neatsako. Patikrinkite, ar įrenginys įjungtas ir prijungtas prie to paties tinklo kaip šis įrenginys.</string>
 </resources>

@@ -266,4 +266,26 @@
     <string name="rd_eq_two_pass">दो-पास इक्वेलाइज़र</string>
     <string name="rd_eq_preset">इक्वेलाइज़र प्रीसेट</string>
     <string name="rd_eq_custom">कस्टम</string>
+    <string name="rd_cast_to">इस पर कास्ट करें</string>
+    <string name="rd_cast_to_tv">TV पर कास्ट करें</string>
+    <string name="rd_casting_to">%1$s पर कास्ट हो रहा है</string>
+    <string name="rd_cast_connecting">कनेक्ट हो रहा है…</string>
+    <string name="rd_cast_sound_only">केवल ध्वनि</string>
+    <string name="rd_cast_not_playing_retry">नहीं चल रहा: फिर से प्रयास करने के लिए इसे चुनें</string>
+    <string name="rd_cast_looking">आपके नेटवर्क पर TV और Chromecast खोजे जा रहे हैं…</string>
+    <string name="rd_cast_playing_on">%1$s पर चल रहा है</string>
+    <string name="rd_cast_connecting_to">%1$s से कनेक्ट हो रहा है…</string>
+    <string name="rd_cast_not_playing_on">%1$s पर नहीं चल रहा</string>
+    <string name="rd_cast_sound_plays_on">ध्वनि %1$s पर चल रही है</string>
+    <string name="rd_cast_hint">यहाँ से विराम दें, सीक करें और उपशीर्षक बदलें: TV इसका अनुसरण करता है।</string>
+    <string name="rd_cast_try_again">फिर से प्रयास करें</string>
+    <string name="rd_cast_play_here">यहाँ चलाएँ</string>
+    <string name="rd_cast_stop">कास्टिंग रोकें</string>
+    <string name="rd_cast_refused">%1$s ने यह वीडियो चलाने से मना कर दिया।</string>
+    <string name="rd_cast_stopped">%1$s ने चलाना बंद कर दिया।</string>
+    <string name="rd_cast_taken">%1$s अभी कुछ और चला रहा है।</string>
+    <string name="rd_cast_could_not_play">%1$s वीडियो नहीं चला सका।</string>
+    <string name="rd_cast_subtitles_note">दिखाए गए उपशीर्षक चित्र के साथ TV पर जाते हैं।</string>
+    <string name="rd_cast_subtitles_on">टीवी पर उपशीर्षक: %1$s</string>
+    <string name="rd_cast_subtitles_off">टीवी पर उपशीर्षक बंद</string>
 </resources>

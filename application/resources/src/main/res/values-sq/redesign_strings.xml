@@ -258,4 +258,26 @@
     <string name="rd_eq_two_pass">Barazues me dy kalime</string>
     <string name="rd_eq_preset">Paracaktimi i barazuesit</string>
     <string name="rd_eq_custom">E personalizuar</string>
+    <string name="rd_cast_to">Transmeto në</string>
+    <string name="rd_cast_to_tv">Transmeto në TV</string>
+    <string name="rd_casting_to">Po transmetohet në %1$s</string>
+    <string name="rd_cast_connecting">Po lidhet…</string>
+    <string name="rd_cast_sound_only">Vetëm zë</string>
+    <string name="rd_cast_not_playing_retry">Nuk po luhet: zgjidheni për të provuar sërish</string>
+    <string name="rd_cast_looking">Po kërkohen televizorë dhe Chromecast në rrjetin tuaj…</string>
+    <string name="rd_cast_playing_on">Po luhet në %1$s</string>
+    <string name="rd_cast_connecting_to">Po lidhet me %1$s…</string>
+    <string name="rd_cast_not_playing_on">Nuk po luhet në %1$s</string>
+    <string name="rd_cast_sound_plays_on">Zëri luhet në %1$s</string>
+    <string name="rd_cast_hint">Pauzoni, kërkoni në kohë dhe ndryshoni titrat këtu: televizori ndjek.</string>
+    <string name="rd_cast_try_again">Provo sërish</string>
+    <string name="rd_cast_play_here">Luaj këtu</string>
+    <string name="rd_cast_stop">Ndalo transmetimin</string>
+    <string name="rd_cast_refused">%1$s refuzoi ta luajë këtë video.</string>
+    <string name="rd_cast_stopped">%1$s ndaloi luajtjen.</string>
+    <string name="rd_cast_taken">%1$s po luan diçka tjetër tani.</string>
+    <string name="rd_cast_could_not_play">%1$s nuk mundi ta luante videon.</string>
+    <string name="rd_cast_subtitles_note">Titrat e shfaqura shkojnë te televizori bashkë me figurën.</string>
+    <string name="rd_cast_subtitles_on">Titrat në televizor: %1$s</string>
+    <string name="rd_cast_subtitles_off">Titrat në televizor janë fikur</string>
 </resources>

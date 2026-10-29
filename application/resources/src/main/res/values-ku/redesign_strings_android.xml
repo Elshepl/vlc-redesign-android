@@ -37,4 +37,8 @@
         <item>دەربارە دیزاینی ڕووکارەکە دەداتە پاڵ Juxtopposed، لەگەڵ بەستەرەکانی دیزاینەکە، وەک لە وەشانی کۆمپیوتەر.</item>
     </string-array>
     <string name="rd_subtitle_size">قەبارەی ژێرنووس</string>
+    <string name="rd_cast_this_phone">ئەم مۆبایلە</string>
+    <string name="rd_cast_this_tablet">ئەم تابلێتە</string>
+    <string name="rd_cast_none_found">هیچ ئامێرێک نەدۆزرایەوە. تەلەفزیۆن یان Chromecast ـەکەت هەڵبکە، لەسەر هەمان ڕایەڵەی ئەم ئامێرە.</string>
+    <string name="rd_cast_no_answer">%1$s وەڵام ناداتەوە. دڵنیابە کە هەڵکراوە و لەسەر هەمان ڕایەڵەی ئەم ئامێرەیە.</string>
 </resources>

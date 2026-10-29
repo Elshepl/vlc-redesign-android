@@ -42,4 +42,8 @@
     <string name="rd_fx_anaglyph_gm">ירוק טהור (שמאל)  מג׳נטה טהורה (ימין)</string>
     <string name="rd_fx_anaglyph_mc">מג׳נטה (שמאל)  ציאן (ימין)</string>
     <string name="rd_subtitle_size">גודל הכתוביות</string>
+    <string name="rd_cast_this_phone">טלפון זה</string>
+    <string name="rd_cast_this_tablet">טאבלט זה</string>
+    <string name="rd_cast_none_found">לא נמצא התקן. הפעל את הטלוויזיה או את ה־Chromecast באותה רשת שבה נמצא מכשיר זה.</string>
+    <string name="rd_cast_no_answer">%1$s אינו מגיב. ודא שהוא פועל ומחובר לאותה רשת כמו מכשיר זה.</string>
 </resources>

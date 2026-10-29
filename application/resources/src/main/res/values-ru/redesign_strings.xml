@@ -276,4 +276,26 @@
     <string name="rd_eq_two_pass">Двухпроходный эквалайзер</string>
     <string name="rd_eq_preset">Предустановка эквалайзера:</string>
     <string name="rd_eq_custom">другое</string>
+    <string name="rd_cast_to">Транслировать на</string>
+    <string name="rd_cast_to_tv">Транслировать на ТВ</string>
+    <string name="rd_casting_to">Трансляция на %1$s</string>
+    <string name="rd_cast_connecting">Подключение…</string>
+    <string name="rd_cast_sound_only">Только звук</string>
+    <string name="rd_cast_not_playing_retry">Не воспроизводится: выберите, чтобы повторить попытку</string>
+    <string name="rd_cast_looking">Поиск телевизоров и Chromecast в вашей сети…</string>
+    <string name="rd_cast_playing_on">Воспроизводится на %1$s</string>
+    <string name="rd_cast_connecting_to">Подключение к %1$s…</string>
+    <string name="rd_cast_not_playing_on">Не воспроизводится на %1$s</string>
+    <string name="rd_cast_sound_plays_on">Звук воспроизводится на %1$s</string>
+    <string name="rd_cast_hint">Ставьте на паузу, перематывайте и меняйте субтитры здесь — телевизор повторит.</string>
+    <string name="rd_cast_try_again">Повторить попытку</string>
+    <string name="rd_cast_play_here">Воспроизвести здесь</string>
+    <string name="rd_cast_stop">Остановить трансляцию</string>
+    <string name="rd_cast_refused">%1$s отказывается воспроизводить это видео.</string>
+    <string name="rd_cast_stopped">%1$s: воспроизведение остановлено.</string>
+    <string name="rd_cast_taken">%1$s сейчас воспроизводит что-то другое.</string>
+    <string name="rd_cast_could_not_play">%1$s: не удалось воспроизвести видео.</string>
+    <string name="rd_cast_subtitles_note">Показанные субтитры передаются на телевизор вместе с изображением.</string>
+    <string name="rd_cast_subtitles_on">Субтитры на телевизоре: %1$s</string>
+    <string name="rd_cast_subtitles_off">Субтитры на телевизоре выключены</string>
 </resources>

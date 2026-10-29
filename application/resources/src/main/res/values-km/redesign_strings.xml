@@ -277,4 +277,26 @@
     <string name="rd_eq_two_pass">អេគ្វាឡាយហ្ស៊ឺពីរជុំ</string>
     <string name="rd_eq_preset">អេគ្វាឡាយហ្ស៊ឺ​ការកំណត់​ស្រេច</string>
     <string name="rd_eq_custom">តាម​តម្រូវការ</string>
+    <string name="rd_cast_to">បញ្ជូនទៅ</string>
+    <string name="rd_cast_to_tv">បញ្ជូនទៅទូរទស្សន៍</string>
+    <string name="rd_casting_to">កំពុងបញ្ជូនទៅ %1$s</string>
+    <string name="rd_cast_connecting">កំពុងតភ្ជាប់…</string>
+    <string name="rd_cast_sound_only">តែសំឡេង</string>
+    <string name="rd_cast_not_playing_retry">មិនកំពុងចាក់៖ ជ្រើសវាដើម្បីព្យាយាមម្ដងទៀត</string>
+    <string name="rd_cast_looking">កំពុងស្វែងរកទូរទស្សន៍ និង Chromecast នៅលើបណ្ដាញរបស់អ្នក…</string>
+    <string name="rd_cast_playing_on">កំពុងចាក់លើ %1$s</string>
+    <string name="rd_cast_connecting_to">កំពុងតភ្ជាប់ទៅ %1$s…</string>
+    <string name="rd_cast_not_playing_on">មិនកំពុងចាក់លើ %1$s ទេ</string>
+    <string name="rd_cast_sound_plays_on">សំឡេងចាក់លើ %1$s</string>
+    <string name="rd_cast_hint">ផ្អាក រំកិល និងប្ដូរចំណងជើងរងនៅទីនេះ៖ ទូរទស្សន៍នឹងធ្វើតាម។</string>
+    <string name="rd_cast_try_again">ព្យាយាមម្ដងទៀត</string>
+    <string name="rd_cast_play_here">ចាក់នៅទីនេះ</string>
+    <string name="rd_cast_stop">បញ្ឈប់ការបញ្ជូន</string>
+    <string name="rd_cast_refused">%1$s បានបដិសេធមិនចាក់វីដេអូនេះ។</string>
+    <string name="rd_cast_stopped">%1$s បានឈប់ចាក់។</string>
+    <string name="rd_cast_taken">%1$s កំពុងចាក់អ្វីផ្សេងទៀតឥឡូវនេះ។</string>
+    <string name="rd_cast_could_not_play">%1$s មិនអាចចាក់វីដេអូបានទេ។</string>
+    <string name="rd_cast_subtitles_note">ចំណងជើងរងដែលបង្ហាញ ទៅកាន់ទូរទស្សន៍ជាមួយរូបភាព។</string>
+    <string name="rd_cast_subtitles_on">ចំណងជើងរងនៅលើទូរទស្សន៍៖ %1$s</string>
+    <string name="rd_cast_subtitles_off">បានបិទចំណងជើងរងនៅលើទូរទស្សន៍</string>
 </resources>

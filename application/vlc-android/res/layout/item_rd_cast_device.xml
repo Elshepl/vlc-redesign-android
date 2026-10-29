@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a row of the cast list (the desktop's DeviceRow): its icon, its name, how it does under it
+     ("Connecting…", "Sound only", the failure in the accent), a check mark when it plays there. The whole row
+     is the button. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="6dp">
+
+    <ImageView
+            android:id="@+id/rd_cast_row_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            tools:src="@drawable/rd_ic_tv" />
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <!-- (a Latin name in a right to left layout: at the start of the row all the same) -->
+        <TextView
+                android:id="@+id/rd_cast_row_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textDirection="firstStrong"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="15sp"
+                tools:text="Living room TV" />
+
+        <TextView
+                android:id="@+id/rd_cast_row_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/inter"
+                android:textAlignment="viewStart"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="13sp"
+                android:visibility="gone"
+                tools:text="@string/rd_cast_connecting"
+                tools:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/rd_cast_row_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="12dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/rd_ic_track_check_active"
+            android:visibility="invisible" />
+</LinearLayout>

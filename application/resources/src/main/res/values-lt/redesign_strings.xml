@@ -269,4 +269,26 @@
     <string name="rd_eq_two_pass">Dviejų praėjimų glodintuvas</string>
     <string name="rd_eq_preset">Glodintuvo derinys</string>
     <string name="rd_eq_custom">Pasirinktinis</string>
+    <string name="rd_cast_to">Perduoti į</string>
+    <string name="rd_cast_to_tv">Perduoti į TV</string>
+    <string name="rd_casting_to">Perduodama į %1$s</string>
+    <string name="rd_cast_connecting">Jungiamasi…</string>
+    <string name="rd_cast_sound_only">Tik garsas</string>
+    <string name="rd_cast_not_playing_retry">Negroja: pasirinkite, kad bandytumėte dar kartą</string>
+    <string name="rd_cast_looking">Ieškoma televizorių ir Chromecast įrenginių jūsų tinkle…</string>
+    <string name="rd_cast_playing_on">Grojama įrenginyje %1$s</string>
+    <string name="rd_cast_connecting_to">Jungiamasi prie %1$s…</string>
+    <string name="rd_cast_not_playing_on">Negrojama įrenginyje %1$s</string>
+    <string name="rd_cast_sound_plays_on">Garsas grojamas įrenginyje %1$s</string>
+    <string name="rd_cast_hint">Pristabdykite, pereikite ir keiskite subtitrus čia: televizorius seka paskui.</string>
+    <string name="rd_cast_try_again">Bandyti dar kartą</string>
+    <string name="rd_cast_play_here">Groti čia</string>
+    <string name="rd_cast_stop">Stabdyti perdavimą</string>
+    <string name="rd_cast_refused">%1$s atsisakė groti šį vaizdo įrašą.</string>
+    <string name="rd_cast_stopped">%1$s nustojo groti.</string>
+    <string name="rd_cast_taken">%1$s dabar groja kažką kita.</string>
+    <string name="rd_cast_could_not_play">%1$s nepavyko groti vaizdo įrašo.</string>
+    <string name="rd_cast_subtitles_note">Rodomi subtitrai siunčiami į televizorių kartu su vaizdu.</string>
+    <string name="rd_cast_subtitles_on">Subtitrai televizoriuje: %1$s</string>
+    <string name="rd_cast_subtitles_off">Subtitrai televizoriuje išjungti</string>
 </resources>

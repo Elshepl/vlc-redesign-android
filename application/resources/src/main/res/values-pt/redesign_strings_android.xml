@@ -35,4 +35,8 @@
         <item>Acerca atribui o design da interface a Juxtopposed, com as ligações do design, como na versão de computador.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
+    <string name="rd_cast_this_phone">Este telemóvel</string>
+    <string name="rd_cast_this_tablet">Este tablet</string>
+    <string name="rd_cast_none_found">Nenhum dispositivo encontrado. Ligue a TV ou o Chromecast na mesma rede que este dispositivo.</string>
+    <string name="rd_cast_no_answer">%1$s não responde. Verifique se está ligado e na mesma rede que este dispositivo.</string>
 </resources>
