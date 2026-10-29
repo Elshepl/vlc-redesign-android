@@ -469,7 +469,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 }
                 if (!isBookmarkShown()) dimStatusBar(false)
 
-                enterAnimate(arrayOf(hudBinding.progressOverlay, hudBackground), 100.dp.toFloat()) {
+                enterAnimate(arrayOf(hudBinding.progressOverlay, hudBackground), 0F) {
                     if (overlayTimeout != VideoPlayerActivity.OVERLAY_INFINITE)
                         player.handler.sendMessageDelayed(player.handler.obtainMessage(VideoPlayerActivity.FADE_OUT), overlayTimeout.toLong())
                     hudBinding.playerOverlayPlay.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
@@ -478,7 +478,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                     } catch (e: Exception) {
                     }
                 }
-                enterAnimate(arrayOf(hudRightBinding.hudRightOverlay, hudRightBackground), -100.dp.toFloat())
+                enterAnimate(arrayOf(hudRightBinding.hudRightOverlay, hudRightBackground), 0F)
 
                 hingeArrowLeft?.animate()?.alpha(1F)
                 hingeArrowRight?.animate()?.alpha(1F)
@@ -531,21 +531,26 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         }
     }
 
+    // VLC Redesign: the bars fade in and out as the desktop's (no slide); a fade that is reversed half way
+    // starts from where it is, drawn in a hardware layer
     private fun enterAnimate(views: Array<View?>, translationStart: Float, endListener:(()->Unit)? = null) = views.forEach { view ->
+        if (view == null) return@forEach
+        view.animate().cancel()
+        if (view.visibility != View.VISIBLE) view.alpha = 0f
         view.setVisible()
-        view?.alpha = 0f
-        view?.translationY = translationStart
-        view?.animate()?.alpha(1F)?.translationY(0F)?.setDuration(150L)?.setListener(null)?.withEndAction {
+        view.translationY = translationStart
+        view.animate().alpha(1F).translationY(0F).setDuration(150L).setListener(null).withLayer().withEndAction {
             endListener?.invoke()
         }
     }
 
     private fun exitAnimate(views: Array<View?>, translationEnd: Float) = views.forEach { view ->
-        view?.animate()?.alpha(0F)?.translationY(translationEnd)?.setDuration(150L)?.setListener(object : Animator.AnimatorListener {
+        view?.animate()?.alpha(0F)?.translationY(translationEnd)?.setDuration(250L)?.withLayer()?.setListener(object : Animator.AnimatorListener {
+            private var cancelled = false
             override fun onAnimationEnd(animation: Animator) {
-                view.setInvisible()
+                if (!cancelled) view.setInvisible()
             }
-            override fun onAnimationCancel(animation: Animator) {}
+            override fun onAnimationCancel(animation: Animator) { cancelled = true }
             override fun onAnimationRepeat(animation: Animator) {}
             override fun onAnimationStart(animation: Animator) {}
         })
@@ -620,6 +625,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 manageTitleConstraints()
                 updateTitleConstraints()
                 updateHudMargins()
+                hudBinding.rdBar.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> syncHudBackground() }
 
                 initSeekButton()
 
@@ -822,51 +828,113 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         val overscanHorizontal = if (player.isTv) 32.dp else 8.dp
         val overscanVertical = if (player.isTv) player.resources.getDimension(R.dimen.tv_overscan_vertical).toInt() else 8.dp
         if (::hudBinding.isInitialized) {
-            val largeMargin = player.resources.getDimension(R.dimen.large_margins_center)
-            val smallMargin = player.resources.getDimension(R.dimen.small_margins_sides)
-
-
-            applyMargin(hudBinding.playerOverlayTracks, if (!player.isTv) smallMargin.toInt() else overscanHorizontal, false)
-            applyMargin(hudBinding.playerOverlayAdvFunction, if (!player.isTv) smallMargin.toInt() else overscanHorizontal, true)
-
-            hudBinding.playerOverlaySeekbar.setPadding(overscanHorizontal, 0, overscanHorizontal, 0)
-            hudBinding.bookmarkMarkerContainer.setPadding(overscanHorizontal, 0, overscanHorizontal, 0)
+            // VLC Redesign: the desktop's control bar, one row on a wide window, two rows on a narrow one
+            // (the window's width now: the activity's configuration can be a stale copy, kept for its locale)
+            val dm = android.util.DisplayMetrics()
+            @Suppress("DEPRECATION") player.windowManager.defaultDisplay.getMetrics(dm)
+            applyBarLayout(dm.widthPixels / dm.density >= 600)
 
             if (player.isTv) {
+                applyMargin(hudBinding.playerOverlayTracks, overscanHorizontal, false)
+                applyMargin(hudBinding.playerOverlayAdvFunction, overscanHorizontal, true)
+                hudBinding.playerOverlaySeekbar.setPadding(overscanHorizontal, 8.dp, overscanHorizontal, 8.dp)
+                hudBinding.bookmarkMarkerContainer.setPadding(overscanHorizontal + 6.dp, 0, overscanHorizontal + 6.dp, 0)
                 applyVerticalMargin(hudBinding.playerOverlayPlay, overscanVertical)
                 applyMargin(hudBinding.playerOverlayTime, overscanHorizontal, false)
                 applyMargin(hudBinding.playerOverlayLength, overscanHorizontal, true)
-            }
-
-            if (player.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
-                hudBinding.playerSpaceLeft.setGone()
-                hudBinding.playerSpaceRight.setGone()
-                applyMargin(hudBinding.playerOverlaySeekbar, 0, true)
-                applyMargin(hudBinding.playerOverlaySeekbar, 0, false)
-
-                applyMargin(hudBinding.playlistPrevious, 0, true)
-                applyMargin(hudBinding.playerOverlayRewind, 0, true)
-                applyMargin(hudBinding.playlistNext, 0, false)
-                applyMargin(hudBinding.playerOverlayForward, 0, false)
-                applyMargin(hudBinding.orientationToggle, 0, false)
-                applyMargin(hudBinding.playerResize, 0, true)
-            } else {
-                hudBinding.playerSpaceLeft.setVisible()
-                hudBinding.playerSpaceRight.setVisible()
-                applyMargin(hudBinding.playerOverlaySeekbar, 20.dp, true)
-                applyMargin(hudBinding.playerOverlaySeekbar, 20.dp, false)
-
-                applyMargin(hudBinding.playlistPrevious, largeMargin.toInt(), true)
-                applyMargin(hudBinding.playerOverlayRewind, largeMargin.toInt(), true)
-                applyMargin(hudBinding.playlistNext, largeMargin.toInt(), false)
-                applyMargin(hudBinding.playerOverlayForward, largeMargin.toInt(), false)
-                applyMargin(hudBinding.orientationToggle, smallMargin.toInt(), false)
-                applyMargin(hudBinding.playerResize, smallMargin.toInt(), true)
             }
         }
         if (::hudRightBinding.isInitialized) {
             applyVerticalMargin(hudRightBinding.playerOverlayTitle, overscanVertical)
         }
+    }
+
+    /**
+     * VLC Redesign: the layouts of the control bar (ControlBar.qml of the desktop).
+     * The XML is the two-row bar (the seek row above the controls row, the zones spread by two spaces); the
+     * one-row bar of a wide window is made from it: [previous, rewind, play, forward, next] time | seek well |
+     * duration [tracks, orientation, aspect, settings]. As the desktop's, the bar keeps this order in right to
+     * left languages too (ControlBar.qml: the time runs left to right, Previous Play Next as in English).
+     * Visibility stays with the code that shows and hides the buttons.
+     */
+    private var barTwoRows: ConstraintSet? = null
+    private var barOneRow: ConstraintSet? = null
+
+    private fun applyBarLayout(oneRow: Boolean) {
+        val root = hudBinding.progressOverlay
+        val twoRows = barTwoRows ?: ConstraintSet().also {
+            it.clone(root)
+            ignoreVisibility(root, it)
+            barTwoRows = it
+        }
+        val set = if (!oneRow) twoRows else barOneRow ?: buildOneRowBar(twoRows).also { barOneRow = it }
+        set.applyTo(root)
+        hudBinding.rdBarDivider.visibility = if (oneRow) View.GONE else View.VISIBLE
+        hudBinding.playerSpaceLeft.visibility = if (oneRow) View.GONE else View.VISIBLE
+        hudBinding.playerSpaceRight.visibility = if (oneRow) View.GONE else View.VISIBLE
+        // (applyTo puts back the alpha of the clone)
+        updatePlaylistButtons()
+    }
+
+    private fun ignoreVisibility(root: ViewGroup, set: ConstraintSet) {
+        for (i in 0 until root.childCount) root.getChildAt(i).id.let { if (it != View.NO_ID) set.setVisibilityMode(it, ConstraintSet.VISIBILITY_MODE_IGNORE) }
+    }
+
+    private fun buildOneRowBar(twoRows: ConstraintSet) = ConstraintSet().apply {
+        clone(twoRows)
+        ignoreVisibility(hudBinding.progressOverlay, this)
+        val res = player.resources
+        val edge = res.getDimensionPixelSize(R.dimen.rd_player_bar_edge) + 4.dp
+        val timeGap = 10.dp
+        val gap = res.getDimensionPixelSize(R.dimen.rd_player_seek_gap)
+        constrainHeight(R.id.rd_bar, res.getDimensionPixelSize(R.dimen.rd_player_bar_row))
+        val transport = intArrayOf(R.id.playlist_previous, R.id.player_overlay_rewind, R.id.player_overlay_play, R.id.player_overlay_forward, R.id.playlist_next)
+        val tools = intArrayOf(R.id.player_overlay_tracks, R.id.orientation_toggle, R.id.player_resize, R.id.player_overlay_adv_function)
+        val seek = intArrayOf(R.id.player_overlay_time, R.id.player_overlay_seekbar, R.id.player_overlay_length)
+        val sides = intArrayOf(ConstraintSet.START, ConstraintSet.END, ConstraintSet.LEFT, ConstraintSet.RIGHT)
+        (transport + tools + seek + intArrayOf(R.id.player_space_left, R.id.player_space_right)).forEach { id ->
+            sides.forEach { side -> clear(id, side); setMargin(id, side, 0) }
+            clear(id, ConstraintSet.TOP)
+            clear(id, ConstraintSet.BOTTOM)
+            connect(id, ConstraintSet.TOP, R.id.rd_guide_row, ConstraintSet.TOP)
+            connect(id, ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM)
+        }
+        val left = transport
+        val right = tools
+        left.forEachIndexed { i, id ->
+            if (i == 0) connect(id, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, edge)
+            else connect(id, ConstraintSet.LEFT, left[i - 1], ConstraintSet.RIGHT)
+        }
+        right.indices.reversed().forEach { i ->
+            val id = right[i]
+            if (i == right.lastIndex) connect(id, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, edge)
+            else connect(id, ConstraintSet.RIGHT, right[i + 1], ConstraintSet.LEFT)
+        }
+        connect(R.id.player_overlay_time, ConstraintSet.LEFT, left.last(), ConstraintSet.RIGHT, timeGap)
+        connect(R.id.player_overlay_length, ConstraintSet.RIGHT, right.first(), ConstraintSet.LEFT, timeGap)
+        connect(R.id.player_overlay_seekbar, ConstraintSet.LEFT, R.id.player_overlay_time, ConstraintSet.RIGHT, gap)
+        connect(R.id.player_overlay_seekbar, ConstraintSet.RIGHT, R.id.player_overlay_length, ConstraintSet.LEFT, gap)
+        connect(R.id.player_space_left, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT)
+        connect(R.id.player_space_right, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT)
+    }
+
+    /**
+     * VLC Redesign: the bar's colour (hud_background, outside the inset container) covers the bar and what is
+     * under it to the screen's edges: the navigation bar, and the cutout and navigation sides in landscape.
+     */
+    private fun syncHudBackground() {
+        val bg = hudBackground ?: return
+        val parent = bg.parent as? ViewGroup ?: return
+        if (!::hudBinding.isInitialized || parent.height == 0) return
+        val bar = hudBinding.rdBar
+        val r = android.graphics.Rect(0, 0, bar.width, bar.height)
+        try {
+            parent.offsetDescendantRectToMyCoords(bar, r)
+        } catch (e: IllegalArgumentException) {
+            return
+        }
+        val height = parent.height - r.top
+        if (height > 0 && bg.layoutParams.height != height) bg.layoutParams = bg.layoutParams.apply { this.height = height }
     }
 
     private fun applyMargin(view: View, margin: Int, isEnd: Boolean) = (view.layoutParams as ConstraintLayout.LayoutParams).apply {
@@ -898,11 +966,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         }
         if (player.service?.hasPlaylist() == true) {
             hudRightBinding.playlistToggle.setVisible()
-            if (::hudBinding.isInitialized) {
-                hudBinding.playlistPrevious.setVisible()
-                hudBinding.playlistNext.setVisible()
-            }
         } else hudRightBinding.playlistToggle.setGone()
+        updatePlaylistButtons()
         hudRightBinding.playlistToggle.setOnClickListener(player)
         closeButton.setOnClickListener { togglePlaylist() }
         hingeArrowLeft?.setOnClickListener {
@@ -919,6 +984,16 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         val callback = SwipeDragItemTouchHelperCallback(playlistAdapter, true)
         val touchHelper = ItemTouchHelper(callback)
         touchHelper.attachToRecyclerView(playlist)
+    }
+
+    fun updatePlaylistButtons() {
+        if (!::hudBinding.isInitialized) return
+        val enabled = player.service?.hasPlaylist() == true && !player.isLocked
+        arrayOf(hudBinding.playlistPrevious, hudBinding.playlistNext).forEach {
+            if (it.visibility == View.GONE) it.visibility = View.VISIBLE
+            it.isEnabled = enabled
+            it.alpha = if (enabled) 1F else 0.4F
+        }
     }
 
     fun togglePlaylist() {
@@ -953,10 +1028,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             hudBinding.playerOverlayTracks.visibility = if (show) View.VISIBLE else View.INVISIBLE
             hudBinding.playerOverlayAdvFunction.visibility = if (show) View.VISIBLE else View.INVISIBLE
             hudBinding.playerResize.visibility = if (show) View.VISIBLE else View.INVISIBLE
-            if (hasPlaylist) {
-                hudBinding.playlistPrevious.visibility = if (show) View.VISIBLE else View.INVISIBLE
-                hudBinding.playlistNext.visibility = if (show) View.VISIBLE else View.INVISIBLE
-            }
+            // VLC Redesign: Previous and Next frame the play pill as on the desktop, dimmed without a playlist
+            hudBinding.playlistPrevious.visibility = if (show) View.VISIBLE else View.INVISIBLE
+            hudBinding.playlistNext.visibility = if (show) View.VISIBLE else View.INVISIBLE
+            updatePlaylistButtons()
             hudBinding.orientationToggle.visibility = if (player.isTv || AndroidDevices.isChromeBook) View.INVISIBLE else if (show) View.VISIBLE else View.INVISIBLE
             if (!show) hudBinding.playerOverlaySeekbar.disableAccessibilityEvents() else hudBinding.playerOverlaySeekbar.enableAccessibilityEvents()
         }
@@ -1016,8 +1091,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 overlayBackground.setInvisible()
             }
 
-            exitAnimate(arrayOf(hudBinding.progressOverlay, hudBackground),100.dp.toFloat())
-            exitAnimate(arrayOf(hudRightBinding.hudRightOverlay, hudRightBackground),-100.dp.toFloat())
+            exitAnimate(arrayOf(hudBinding.progressOverlay, hudBackground), 0F)
+            exitAnimate(arrayOf(hudRightBinding.hudRightOverlay, hudRightBackground), 0F)
             hingeArrowLeft?.animate()?.alpha(0F)
             hingeArrowRight?.animate()?.alpha(0F)
 
@@ -1093,11 +1168,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             hudBinding.playerOverlayTime.isEnabled = true
             hudBinding.playerOverlaySeekbar.isEnabled = player.service?.isSeekable != false
             hudBinding.playerOverlayLength.isEnabled = true
-            hudBinding.playlistNext.isEnabled = true
-            hudBinding.playlistPrevious.isEnabled = true
         }
         player.isShowing = false
         player.isLocked = false
+        updatePlaylistButtons()
         showOverlay()
         updateOrientationIcon()
         updateScreenshotButton()

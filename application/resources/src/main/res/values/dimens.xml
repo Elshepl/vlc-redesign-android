@@ -118,6 +118,14 @@
 
     <!-- VLC Redesign: the player top bar under the status bar -->
     <dimen name="rd_player_topbar_height">112dp</dimen>
+    <!-- VLC Redesign: the player control bar (redesign.controlHeight 54 per row; the 16 dp side padding less the
+         button's own 12 dp, or the time text's 4 dp) -->
+    <dimen name="rd_player_bar_row">54dp</dimen>
+    <dimen name="rd_player_bar_two_rows">108dp</dimen>
+    <dimen name="rd_player_bar_edge">4dp</dimen>
+    <dimen name="rd_player_time_side">8dp</dimen>
+    <dimen name="rd_player_time_width">76dp</dimen>
+    <dimen name="rd_player_seek_gap">10dp</dimen>
     <!-- VLC Redesign: Home cards (a video 16:9, a cover or a folder square) -->
     <dimen name="rd_home_video_width">168dp</dimen>
     <dimen name="rd_home_square_width">120dp</dimen>

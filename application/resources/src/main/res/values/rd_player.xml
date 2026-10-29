@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: colours of the video player's control bar that design/tokens.json does not name (the desktop's
+     ControlBar.qml values). -->
+<resources>
+    <!-- the 1 px separator on top of the bar (redesign.separator) -->
+    <color name="rd_player_separator">#FF222222</color>
+    <!-- the line between the seek row and the controls row of the two-row bar -->
+    <color name="rd_player_row_divider">#FF212121</color>
+    <!-- a pressed bar button: the desktop's control hover (#222222) made a little stronger for touch -->
+    <color name="rd_player_button_pressed">#1FFFFFFF</color>
+</resources>

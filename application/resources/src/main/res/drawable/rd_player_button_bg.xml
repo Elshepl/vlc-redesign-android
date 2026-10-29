@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the pressed state of a control bar button, a neutral rounded square (the desktop's control hover,
+     redesign.controlHoverBackground over the bar, radius 6), never a Material accent circle. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/rd_player_button_pressed">
+    <item android:id="@android:id/mask" android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</ripple>

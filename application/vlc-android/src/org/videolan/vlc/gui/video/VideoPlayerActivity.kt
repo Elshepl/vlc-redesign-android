@@ -2666,9 +2666,22 @@ data class PlayerOrientationMode(
 @BindingAdapter("length", "time")
 fun setPlaybackTime(view: TextView, length: Long, time: Long) {
     view.text = if (VideoPlayerActivity.sDisplayRemainingTime && length > 0)
-        "-" + '\u00A0'.toString() + Tools.millisToString(length - time)
+        "-" + PlayerBarTime.format(length - time)
     else
-        Tools.millisToString(length)
+        PlayerBarTime.format(length)
+}
+
+/**
+ * VLC Redesign: the times of the control bar as the desktop writes them, hours, minutes and seconds of two digits
+ * each ("00:02:10"), in Latin digits in every language.
+ */
+object PlayerBarTime {
+    @JvmStatic
+    fun format(millis: Long): String {
+        val seconds = (if (millis < 0) -millis else millis) / 1000
+        val text = String.format(java.util.Locale.US, "%02d:%02d:%02d", seconds / 3600, seconds / 60 % 60, seconds % 60)
+        return if (millis < 0) "-$text" else text
+    }
 }
 
 @BindingAdapter("constraintPercent")

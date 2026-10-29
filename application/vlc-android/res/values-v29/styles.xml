@@ -35,6 +35,15 @@
         <item name="android:windowLightNavigationBar">true</item>
     </style>
 
+    <!-- VLC Redesign: the player's control bar continues under the navigation bar, no system scrim over it -->
+    <style name="Theme.VLC.Player" parent="Theme.VLC.Player.7">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+    </style>
+
     <style name="Theme.VLC.Black" parent="Theme.VLC.Black.19">
         <item name="android:enforceNavigationBarContrast">false</item>
         <item name="android:enforceStatusBarContrast">false</item>
