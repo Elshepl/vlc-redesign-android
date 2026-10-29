@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a row of the More panel added in code (a page that does not fit the bottom bar, Edit Sidebar) -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Redesign.MoreRow" />

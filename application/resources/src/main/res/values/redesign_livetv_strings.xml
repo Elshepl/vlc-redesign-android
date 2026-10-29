@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, Live TV (IPTV): the desktop's texts (modules/gui/qt/iptv, SettingsTv.qml, the add-on's options),
+     word for word, so buildsystem/redesign/import_livetv_strings.py finds their translations in the desktop's
+     catalogues. -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="rd_nav_tv">TV</string>
+    <string name="rd_tv_live_tv">Live TV</string>
+    <string name="rd_tv_addon">Live TV (IPTV) add-on</string>
+    <string name="rd_tv_addon_help">Shows TV in the library: the channels of your IPTV playlists and accounts, with their programme guide. Off, nothing of it is loaded.</string>
+    <string name="rd_tv_channels">Channels</string>
+    <string name="rd_tv_guide">Guide</string>
+    <string name="rd_tv_films">Films</string>
+    <string name="rd_tv_series">Series</string>
+    <string name="rd_tv_sources">Sources</string>
+    <string name="rd_tv_watch_in_vlc">Watch TV in VLC</string>
+    <string name="rd_tv_empty_help">Add the playlist link of your TV provider (M3U) or its Xtream Codes login, or a free channel list of the catalog. Its programme guide comes with it.</string>
+    <string name="rd_tv_add_link">Add a Link</string>
+    <string name="rd_tv_browse_catalog">Browse the Catalog</string>
+    <string name="rd_tv_all">All</string>
+    <string name="rd_tv_favorites">Favorites</string>
+    <string name="rd_tv_recent">Recently Watched</string>
+    <string name="rd_tv_updating_guide_of">Updating the guide of %1$s… %2$s MB</string>
+    <string name="rd_tv_updating_channels_of">Updating the channels of %1$s…</string>
+    <string name="rd_tv_could_not_load">%1$s could not be loaded: %2$s</string>
+    <string name="rd_tv_no_match">No channel matches the search</string>
+    <string name="rd_tv_no_favorite">No favorite channel yet: right-click a channel to add it</string>
+    <string name="rd_tv_no_recent">No channel watched yet</string>
+    <string name="rd_tv_loading_channels">Loading the channels…</string>
+    <string name="rd_tv_no_channels">No channels</string>
+    <string name="rd_tv_no_guide">No guide</string>
+    <string name="rd_tv_next_at">Next at %1$s</string>
+    <plurals name="rd_tv_days_short">
+        <item quantity="one">%1$d d</item>
+        <item quantity="other">%1$d d</item>
+    </plurals>
+    <plurals name="rd_tv_catchup_tip">
+        <item quantity="one">Catch-up: the past %1$d day</item>
+        <item quantity="other">Catch-up: the past %1$d days</item>
+    </plurals>
+
+    <!-- a channel's menu -->
+    <string name="rd_tv_watch">Watch</string>
+    <string name="rd_tv_watch_from_start">Watch from the start</string>
+    <string name="rd_tv_unfavorite">Remove from Favorites</string>
+    <string name="rd_tv_favorite">Favorite</string>
+    <string name="rd_tv_show_in_guide">Show in the Guide</string>
+    <string name="rd_tv_whats_on">What\'s On</string>
+
+    <!-- the guide -->
+    <string name="rd_tv_now">Now</string>
+    <string name="rd_tv_earlier">Earlier</string>
+    <string name="rd_tv_later">Later</string>
+    <string name="rd_tv_no_guide_channel">No guide for this channel</string>
+    <string name="rd_tv_today">Today</string>
+    <string name="rd_tv_yesterday">Yesterday</string>
+    <string name="rd_tv_tomorrow">Tomorrow</string>
+
+    <!-- the banner over the video -->
+    <string name="rd_tv_archive">Archive</string>
+    <string name="rd_tv_programme_before">Programme before</string>
+    <string name="rd_tv_programme_after">Programme after</string>
+    <string name="rd_tv_watch_from_the_start">Watch from the Start</string>
+    <string name="rd_tv_remind_me">Remind Me</string>
+    <string name="rd_tv_reminder_set">Reminder Set</string>
+    <string name="rd_tv_left">%1$s left</string>
+    <string name="rd_tv_in">in %1$s</string>
+    <string name="rd_tv_ended_ago">ended %1$s ago</string>
+    <string name="rd_tv_on_now">on now</string>
+    <string name="rd_tv_from_archive">From the archive, %1$s</string>
+    <string name="rd_tv_next">Next: %1$s · %2$s</string>
+    <string name="rd_tv_loading_guide">Loading the guide…</string>
+    <string name="rd_tv_programme">Programme</string>
+    <string name="rd_tv_h_min">%1$s h %2$s min</string>
+    <plurals name="rd_tv_min">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="rd_tv_h">
+        <item quantity="one">%1$d h</item>
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <string name="rd_tv_back_to_live">Back to Live</string>
+
+    <!-- a programme -->
+    <string name="rd_tv_close">Close</string>
+    <string name="rd_tv_remove_reminder">Remove Reminder</string>
+    <string name="rd_tv_over_no_archive">This programme is over and the channel keeps no archive.</string>
+    <string name="rd_tv_channel">Channel</string>
+    <string name="rd_tv_time">Time</string>
+    <string name="rd_tv_time_left">Left</string>
+    <string name="rd_tv_category">Category</string>
+    <string name="rd_tv_catchup">Catch-up</string>
+    <plurals name="rd_tv_past_days">
+        <item quantity="one">The past %1$d day</item>
+        <item quantity="other">The past %1$d days</item>
+    </plurals>
+    <string name="rd_tv_none">None</string>
+
+    <!-- messages -->
+    <string name="rd_tv_cannot_play">This channel cannot be played</string>
+    <string name="rd_tv_too_old">This programme is older than the channel\'s archive</string>
+    <string name="rd_tv_not_yet">This programme has not started yet</string>
+    <string name="rd_tv_no_archive">This channel has no archive: past programmes cannot be played</string>
+    <string name="rd_tv_guide_unknown">The guide does not say what is on</string>
+    <string name="rd_tv_no_channel">No channel %1$s</string>
+
+    <!-- the sources -->
+    <string name="rd_tv_tv_sources">TV Sources</string>
+    <string name="rd_tv_your_sources_n">Your Sources (%1$s)</string>
+    <string name="rd_tv_catalog">Catalog</string>
+    <string name="rd_tv_your_tv_sources">Your TV sources</string>
+    <string name="rd_tv_sources_order_help">The guides of the first sources come first when several name the same channel.</string>
+    <string name="rd_tv_no_source_help">No source yet: add the link of your provider, or one of the catalog.</string>
+    <plurals name="rd_tv_n_channels">
+        <item quantity="one">%1$d channel</item>
+        <item quantity="other">%1$d channels</item>
+    </plurals>
+    <plurals name="rd_tv_guide_n">
+        <item quantity="one">Guide %1$d</item>
+        <item quantity="other">Guide %1$d</item>
+    </plurals>
+    <plurals name="rd_tv_catchup_n">
+        <item quantity="one">Catch-up %1$d d</item>
+        <item quantity="other">Catch-up %1$d d</item>
+    </plurals>
+    <string name="rd_tv_updating_guide">Updating the guide… %1$s MB</string>
+    <string name="rd_tv_updating_channels">Updating the channels…</string>
+    <string name="rd_tv_updated_at">Updated %1$s at %2$s</string>
+    <string name="rd_tv_move_up">Move up</string>
+    <string name="rd_tv_move_down">Move down</string>
+    <string name="rd_tv_turn_off">Turn Off</string>
+    <string name="rd_tv_turn_on">Turn On</string>
+    <string name="rd_tv_update">Update</string>
+    <string name="rd_tv_edit">Edit</string>
+    <string name="rd_tv_remove">Remove</string>
+    <string name="rd_tv_update_all">Update All</string>
+    <string name="rd_tv_kind_m3u">Playlist (M3U)</string>
+    <string name="rd_tv_kind_xtream">Xtream Codes</string>
+    <string name="rd_tv_kind_epg">Guide (XMLTV)</string>
+    <string name="rd_tv_name">Name</string>
+    <string name="rd_tv_optional">(optional)</string>
+    <string name="rd_tv_name_hint">e.g., My TV</string>
+    <string name="rd_tv_playlist_link">Playlist link or file</string>
+    <string name="rd_tv_playlist_link_help">The M3U link your provider gave you; its guide is found in it when it names one.</string>
+    <string name="rd_tv_playlist_hint">e.g., https://example.com/playlist.m3u</string>
+    <string name="rd_tv_browse">Browse</string>
+    <string name="rd_tv_server">Server</string>
+    <string name="rd_tv_server_help">The address of the provider\'s panel, with its port (http://host:8080).</string>
+    <string name="rd_tv_server_hint">e.g., http://example.com:8080</string>
+    <string name="rd_tv_user_name">User name</string>
+    <string name="rd_tv_password">Password</string>
+    <string name="rd_tv_password_unchanged">(empty: unchanged)</string>
+    <string name="rd_tv_for_source">For the source</string>
+    <string name="rd_tv_for_source_help">Its channels are matched by their guide id, then by their name.</string>
+    <string name="rd_tv_add_source_first">Add a source first.</string>
+    <string name="rd_tv_guide_links">Guide links</string>
+    <string name="rd_tv_guide_links_help">XMLTV guides (.xml or .xml.gz), one per line; several are merged, the first first.</string>
+    <string name="rd_tv_guide_hint">e.g., https://example.com/guide.xml.gz</string>
+    <string name="rd_tv_secrets_help">Links and passwords are kept in the keystore of VLC, never written to its log.</string>
+    <string name="rd_tv_save">Save</string>
+    <string name="rd_tv_add_guide">Add Guide</string>
+    <string name="rd_tv_add_source">Add Source</string>
+    <string name="rd_tv_back">Back</string>
+    <string name="rd_tv_fill_fields">This source cannot be added: fill in the fields marked as needed.</string>
+    <string name="rd_tv_search_catalog">Search the catalog</string>
+    <string name="rd_tv_language">Language</string>
+    <string name="rd_tv_country">Country</string>
+    <string name="rd_tv_sort_az">A-Z</string>
+    <string name="rd_tv_sort_most">Most channels</string>
+    <string name="rd_tv_free">Free</string>
+    <string name="rd_tv_guides">Guides</string>
+    <string name="rd_tv_paid">Paid</string>
+    <string name="rd_tv_added">Added</string>
+    <string name="rd_tv_add">Add</string>
+    <string name="rd_tv_loading_catalog">Loading the catalog…</string>
+    <string name="rd_tv_catalog_empty">The catalog is empty in this version.</string>
+    <string name="rd_tv_catalog_no_match">Nothing in the catalog matches</string>
+    <string name="rd_tv_catalog_legal">Only free, legal sources are listed. Suggestions are reviewed before they reach the catalog.</string>
+    <string name="rd_tv_suggest">Suggest a Service</string>
+
+    <!-- Settings > TV -->
+    <string name="rd_tv_updating">Updating…</string>
+    <plurals name="rd_tv_n_with_guide">
+        <item quantity="one">%1$d with a guide</item>
+        <item quantity="other">%1$d with a guide</item>
+    </plurals>
+    <plurals name="rd_tv_catchup_days_short">
+        <item quantity="one">catch-up %1$d d</item>
+        <item quantity="other">catch-up %1$d d</item>
+    </plurals>
+    <string name="rd_tv_manage_help">Add, edit or remove sources</string>
+    <string name="rd_tv_no_source">No source yet</string>
+    <string name="rd_tv_manage">Manage Sources</string>
+    <string name="rd_tv_add_a_source">Add a Source</string>
+    <string name="rd_tv_free_lists">Free channel lists</string>
+    <string name="rd_tv_guide_languages_found">The guides give their programmes in: %1$s</string>
+    <string name="rd_tv_sec_guide">Guide</string>
+    <string name="rd_tv_sec_watching">Watching</string>
+    <string name="rd_tv_sec_lists">Lists</string>
+    <string name="rd_tv_refresh">Update the channels and the guide</string>
+    <string name="rd_tv_refresh_help">How often the playlists and the programme guides are downloaded again, in the background. Update in the sources does it at once.</string>
+    <string name="rd_tv_refresh_never">Never</string>
+    <string name="rd_tv_refresh_6">Every 6 hours</string>
+    <string name="rd_tv_refresh_12">Every 12 hours</string>
+    <string name="rd_tv_refresh_day">Every day</string>
+    <string name="rd_tv_refresh_week">Every week</string>
+    <string name="rd_tv_guide_days">Days of the guide kept</string>
+    <string name="rd_tv_guide_days_help">How many days of programmes are kept before and after today. Fewer use less memory with a large guide; the archives of the channels reach back as far as this.</string>
+    <string name="rd_tv_guide_hours">Hours across the guide</string>
+    <string name="rd_tv_guide_hours_help">The time the guide shows across its width.</string>
+    <string name="rd_tv_guide_languages">Guide languages</string>
+    <string name="rd_tv_guide_languages_help">Keeps only the programmes in these languages when a guide gives several (codes such as en, he, fr, separated by commas). Empty: every language.</string>
+    <string name="rd_tv_banner">Channel banner</string>
+    <string name="rd_tv_banner_help">What the banner shows over the video when the channel changes.</string>
+    <string name="rd_tv_banner_all">Channel, now and next</string>
+    <string name="rd_tv_banner_now">Channel and now</string>
+    <string name="rd_tv_banner_channel">Channel only</string>
+    <string name="rd_tv_banner_nothing">Nothing</string>
+    <string name="rd_tv_descriptions">Show programme descriptions</string>
+    <string name="rd_tv_descriptions_help">Shows the description of what is on in the channel lists and the banner.</string>
+    <string name="rd_tv_progress">Show the progress of what is on</string>
+    <string name="rd_tv_progress_help">A bar of how much of the programme has played, from its start and end in the guide.</string>
+    <string name="rd_tv_show_next">Show what is next</string>
+    <string name="rd_tv_show_next_help">Shows the next programme in the channel lists and the banner.</string>
+    <string name="rd_tv_start_last">Start on the last channel</string>
+    <string name="rd_tv_start_last_help">When VLC opens with nothing to play, the channel watched last plays.</string>
+    <string name="rd_tv_adult">Show adult channels</string>
+    <string name="rd_tv_adult_help">Lists the channels whose group or name says they are for adults.</string>
+
+    <!-- Edit Sidebar (the bottom bar and the rail) -->
+    <string name="rd_tv_edit_sidebar">Edit Sidebar</string>
+    <string name="rd_tv_reset_default">Reset to Default</string>
+    <string name="rd_tv_sidebar_pages">The pages of the sidebar</string>
+    <string name="rd_tv_sidebar_pages_help">Drag a page by its handle, or move it with the arrows. Hidden pages stay one click away here.</string>
+    <string name="rd_tv_show_page">Show %1$s</string>
+    <string name="rd_tv_hidden">hidden</string>
+    <string name="rd_tv_playlists">Playlists</string>
+    <string name="rd_tv_recent_page">Recent</string>
+
+    <!-- films and series -->
+    <string name="rd_tv_no_library">No account with films or series</string>
+    <string name="rd_tv_loading">Loading…</string>
+    <string name="rd_tv_nothing_here">Nothing here</string>
+    <string name="rd_tv_season_episode">S%1$s E%2$s</string>
+    <string name="rd_tv_reminder_due">%1$s starts now on %2$s</string>
+</resources>

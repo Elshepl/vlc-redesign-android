@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, Live TV: the colours of the desktop's TV views (modules/gui/qt/iptv/qml) that are no token of the
+     design: the light theme's from VLCStyle.redesign.color, the dark ones in values-night. -->
+<resources>
+    <!-- TvLogo.qml: the thumbnail well of the library -->
+    <color name="rd_tv_logo_well">#FFDEDEDE</color>
+    <!-- the guide's cells: past, to come, on now -->
+    <color name="rd_tv_cell_past">#FFBDBDBC</color>
+    <color name="rd_tv_cell">#FFABABAA</color>
+    <color name="rd_tv_cell_now">#FFA3A3A2</color>
+    <!-- the banner over the video: the menus' card (#191919) at 92 %, the dark theme always -->
+    <color name="rd_tv_banner">#EB191919</color>
+</resources>

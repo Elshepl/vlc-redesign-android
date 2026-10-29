@@ -127,6 +127,8 @@ class AppSetupDelegate : AppDelegate,
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
             override fun onActivityDestroyed(activity: Activity) {}
         })
+        // VLC Redesign, Live TV: its banner and keys over the video player of a channel
+        org.videolan.vlc.gui.livetv.TvPlayerHook.install(this)
     }
 
     /**

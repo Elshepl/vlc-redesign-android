@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, Live TV: the dark theme's colours of the desktop's TV views (see values/). -->
+<resources>
+    <color name="rd_tv_logo_well">#FF171717</color>
+    <color name="rd_tv_cell_past">#FF121212</color>
+    <color name="rd_tv_cell">#FF191919</color>
+    <color name="rd_tv_cell_now">#FF1F1F1F</color>
+</resources>

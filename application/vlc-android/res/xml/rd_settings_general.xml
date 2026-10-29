@@ -32,6 +32,12 @@
             android:key="show_whats_new"
             android:title="@string/rd_show_whats_new"
             android:defaultValue="true" />
+        <!-- VLC Redesign, Live TV (gui/livetv): on by default, as the desktop's iptv-enabled -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="iptv_enabled"
+            android:summary="@string/rd_tv_addon_help"
+            android:title="@string/rd_tv_addon" />
         <CheckBoxPreference
             android:key="tv_ui"
             android:summary="@string/tv_ui_summary"

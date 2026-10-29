@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, Live TV: the choices of Settings > Live TV (the desktop's iptv-refresh and iptv-banner) -->
+<resources>
+    <string-array name="rd_tv_refresh_entries">
+        <item>@string/rd_tv_refresh_never</item>
+        <item>@string/rd_tv_refresh_6</item>
+        <item>@string/rd_tv_refresh_12</item>
+        <item>@string/rd_tv_refresh_day</item>
+        <item>@string/rd_tv_refresh_week</item>
+    </string-array>
+    <string-array name="rd_tv_refresh_values" translatable="false">
+        <item>0</item><item>1</item><item>2</item><item>3</item><item>4</item>
+    </string-array>
+    <string-array name="rd_tv_banner_entries">
+        <item>@string/rd_tv_banner_all</item>
+        <item>@string/rd_tv_banner_now</item>
+        <item>@string/rd_tv_banner_channel</item>
+        <item>@string/rd_tv_banner_nothing</item>
+    </string-array>
+    <string-array name="rd_tv_banner_values" translatable="false">
+        <item>0</item><item>1</item><item>2</item><item>3</item>
+    </string-array>
+</resources>

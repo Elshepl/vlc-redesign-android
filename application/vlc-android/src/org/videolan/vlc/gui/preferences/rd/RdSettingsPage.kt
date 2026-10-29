@@ -116,6 +116,8 @@ enum class RdPage(val key: String, val label: Int, val title: Int, val xml: Int,
     AUDIO("audio", R.string.rd_set_audio, R.string.rd_title_audio, R.xml.rd_settings_audio, R.drawable.rd_ic_set_audio, R.drawable.rd_ic_set_audio_active, R.string.rd_set_media),
     SUBTITLES("subtitles", R.string.rd_set_subtitles, R.string.rd_title_subtitles, R.xml.rd_settings_subtitles, R.drawable.rd_ic_set_subtitles, R.drawable.rd_ic_set_subtitles_active, R.string.rd_set_media),
     LIBRARY("library", R.string.rd_set_library, R.string.rd_title_library, R.xml.rd_settings_library, R.drawable.rd_ic_set_library, R.drawable.rd_ic_set_library_active, R.string.rd_set_media),
+    // VLC Redesign, Live TV: its sources above its options; in the sidebar while the add-on is on (gui/livetv)
+    TV("tv", R.string.rd_tv_live_tv, R.string.rd_tv_live_tv, R.xml.rd_settings_tv, R.drawable.rd_ic_set_tv, R.drawable.rd_ic_set_tv_active, R.string.rd_set_media),
     NETWORK("network", R.string.rd_set_network, R.string.rd_title_network, R.xml.rd_settings_network, R.drawable.rd_ic_set_network, R.drawable.rd_ic_set_network_active, R.string.rd_set_system),
     PERFORMANCE("performance", R.string.rd_set_performance, R.string.rd_title_performance, R.xml.rd_settings_performance, R.drawable.rd_ic_set_performance, R.drawable.rd_ic_set_performance_active, R.string.rd_set_system),
     EXTENSIONS("extensions", R.string.rd_set_extensions, R.string.rd_set_extensions, R.xml.rd_settings_extensions, R.drawable.rd_ic_set_extensions, R.drawable.rd_ic_set_extensions_active, R.string.rd_set_system);
@@ -206,6 +208,7 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         }
         // Advanced Options start closed on every page, as on the desktop
         pref<Preference>(page.key + "_advanced")?.isVisible = false
+        if (page == RdPage.TV) org.videolan.vlc.gui.livetv.TvSettings.setup(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -303,6 +306,7 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         val key = preference.key ?: return false
         val activity = requireActivity()
+        if (org.videolan.vlc.gui.livetv.TvSettings.click(this, key)) return true
         when (key) {
             // Library
             "directories" -> {
@@ -524,6 +528,7 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         val activity = activity as? PreferencesActivity ?: return
         if (sharedPreferences == null || key == null) return
+        org.videolan.vlc.gui.livetv.TvSettings.changed(activity, key)
         when (key) {
             // General / Interface
             // the desktop switches its language at once: this screen now, the others as they come back
