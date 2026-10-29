@@ -9,4 +9,19 @@
     <string name="rd_orange">כתום</string>
     <string name="rd_cyan">טורקיז</string>
     <string name="rd_pink">ורוד</string>
+    <string name="rd_sec_notifications">התראות</string>
+    <string name="rd_fuzzy_0">כבוי</string>
+    <string name="rd_fuzzy_1">כל קובץ כתוביות</string>
+    <string name="rd_fuzzy_2">מכיל את שם הסרטון</string>
+    <string name="rd_fuzzy_3">שם הסרטון ותוספת</string>
+    <string name="rd_fuzzy_4">בדיוק שם הסרטון</string>
+    <string name="rd_help_fuzzy">עד כמה שם קובץ הכתוביות צריך להיות קרוב לשם הסרטון כדי שייטען מעצמו.</string>
+    <string name="rd_help_normalize">משווה את עוצמת הקול בין מדיה שקטה לרועשת.</string>
+    <string name="rd_help_target_level">עד כמה חזק יכול להיות הצליל המנורמל: גבוה יותר הוא חזק יותר.</string>
+    <string name="rd_help_night_mode">מנמיך סצנות רועשות ומגביר דיבור שקט, להאזנה בשעות מאוחרות.</string>
+    <string name="rd_help_loudness_android">משתמש באפקטי השמע של Android על הצליל של VLC (Android 9 ואילך); לא עם מעבר ישיר.</string>
+    <string name="rd_help_shadow_distance">כמה רחוק הצל נופל מהטקסט.</string>
+    <string name="rd_help_live_caching">ערך המטמון למצלמות ומיקרופונים, באלפיות שנייה.</string>
+    <string name="rd_help_welcome">פותח שוב את ההגדרה הראשונית: שפה, מראה, ספרייה ופרטיות.</string>
+    <string name="rd_help_deinterlace">מסיר את קווי המסרק של וידאו משולב (הקלטות טלוויזיה). פועל על וידאו ש-VLC מפענח, לא המפענח של החומרה.</string>
 </resources>

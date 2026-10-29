@@ -516,11 +516,18 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         if (sharedPreferences == null || key == null) return
         when (key) {
             // General / Interface
+            // the desktop switches its language at once: this screen now, the others as they come back
             KEY_SET_LOCALE -> {
                 activity.setRestart()
-                UiTools.restartDialog(activity)
+                activity.recreate()
             }
-            KEY_APP_THEME -> UiTools.restartDialog(activity)
+            // the desktop changes its theme at once: every open screen is drawn again in it
+            KEY_APP_THEME -> {
+                activity.setRestart()
+                sharedPreferences.getString(KEY_APP_THEME, "-1")?.toIntOrNull()?.let { AppCompatDelegate.setDefaultNightMode(it) }
+                // drawn again from its theme, with the accent overlay (an in-place day/night update drops it)
+                activity.recreate()
+            }
             "rd_accent" -> {
                 // the accent of the desktop changes at once: this screen now, the others when they come back
                 activity.setRestart()
