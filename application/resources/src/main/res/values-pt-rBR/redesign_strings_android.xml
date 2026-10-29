@@ -34,4 +34,5 @@
         <item>Legendas que não estão em Unicode aparecem corretamente: arquivos em hebraico, árabe, russo, grego, turco, japonês, chinês, coreano e tailandês são reconhecidos pelas letras e pelo idioma no nome.</item>
         <item>Sobre credita o design da interface a Juxtopposed, com os links do design, como na versão para computador.</item>
     </string-array>
+    <string name="rd_subtitle_size">Tamanho das legendas</string>
 </resources>

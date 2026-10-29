@@ -137,6 +137,7 @@ class VideoPlayerResizeDelegate(private val player: VideoPlayerActivity) {
             sizeAdapter.selectedSize = MediaPlayer.ScaleType.entries.indexOf(player.service?.mediaplayer?.videoScale ?: MediaPlayer.ScaleType.SURFACE_BEST_FIT)
             scrollView.scrollTo(0, 0)
             resizeMainView.visibility = View.VISIBLE
+            player.setSurfaceOpen("aspect", true)
             if (Settings.showTvUi) AppScope.launch {
                 delay(100L)
                 val position = (sizeList.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
@@ -150,6 +151,7 @@ class VideoPlayerResizeDelegate(private val player: VideoPlayerActivity) {
      */
     fun hideResizeOverlay() {
         resizeMainView.setGone()
+        player.setSurfaceOpen("aspect", false)
     }
 
     /**

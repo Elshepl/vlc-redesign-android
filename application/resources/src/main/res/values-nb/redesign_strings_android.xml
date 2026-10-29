@@ -34,4 +34,5 @@
         <item>Undertekster som ikke er Unicode, vises riktig: hebraiske, arabiske, russiske, greske, tyrkiske, japanske, kinesiske, koreanske og thailandske filer gjenkjennes på bokstavene og språket i navnet.</item>
         <item>Om krediterer Juxtopposed for utformingen av grensesnittet, med lenkene til designet, som på datamaskinen.</item>
     </string-array>
+    <string name="rd_subtitle_size">Undertekststørrelse</string>
 </resources>

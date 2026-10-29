@@ -42,6 +42,7 @@ import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.tools.DependencyProvider
 import org.videolan.tools.dp
+import org.videolan.tools.putSingle
 import org.videolan.tools.setGone
 import org.videolan.tools.setVisible
 import org.videolan.vlc.PlaybackService
@@ -270,6 +271,45 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             textMark = if (textMark >= 0) -1L else rdService?.getTime() ?: -1L
             applyMarks()
         }
+        setupSize()
+    }
+
+    /**
+     * #10: the subtitle size, 25 to 500 % (SubtitleScale): the value follows the thumb, the playing subtitles take
+     * the size as it is let go (VideoPlayerActivity.setSubtitleScale: libvlc 3 reads it when it starts, so the
+     * video is opened again in place, as for the video effects); Reset: 100 %.
+     */
+    private fun setupSize() {
+        val timing = binding.rdSubTiming
+        val settings = org.videolan.tools.Settings.getInstance(requireContext())
+        val current = org.videolan.tools.SubtitleScale.get(settings)
+        timing.rdSubSizeSlider.value = (current / 5 * 5).toFloat().coerceIn(timing.rdSubSizeSlider.valueFrom, timing.rdSubSizeSlider.valueTo)
+        showSize(current)
+        timing.rdSubSizeSlider.addOnChangeListener { _, value, fromUser -> if (fromUser) showSize(value.toInt()) }
+        timing.rdSubSizeSlider.addOnSliderTouchListener(object : com.google.android.material.slider.Slider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: com.google.android.material.slider.Slider) {}
+            override fun onStopTrackingTouch(slider: com.google.android.material.slider.Slider) = applySize(slider.value.toInt())
+        })
+        // keys (D-pad, keyboard) move the slider without a touch
+        timing.rdSubSizeSlider.setOnKeyListener { v, _, event ->
+            if (event.action == android.view.KeyEvent.ACTION_UP) v.post { applySize(timing.rdSubSizeSlider.value.toInt()) }
+            false
+        }
+        timing.rdSubSizeReset.setOnClickListener {
+            timing.rdSubSizeSlider.value = org.videolan.tools.SubtitleScale.DEFAULT.toFloat()
+            showSize(org.videolan.tools.SubtitleScale.DEFAULT)
+            applySize(org.videolan.tools.SubtitleScale.DEFAULT)
+        }
+    }
+
+    private fun applySize(scale: Int) {
+        (activity as? org.videolan.vlc.gui.video.VideoPlayerActivity)?.setSubtitleScale(scale, osd = false)
+            ?: org.videolan.tools.Settings.getInstance(requireContext()).putSingle(org.videolan.tools.KEY_SUBTITLES_TEXT_SCALE, org.videolan.tools.SubtitleScale.clamp(scale))
+        showSize(scale)
+    }
+
+    private fun showSize(scale: Int) {
+        binding.rdSubTiming.rdSubSizeValue.text = String.format(java.util.Locale.getDefault(), "⁦%d %%⁩", scale) // (isolated: "100 %" in a right to left language too)
     }
 
     /** Once both are marked: the text came (text - voice) late, so the subtitles move that much earlier. */

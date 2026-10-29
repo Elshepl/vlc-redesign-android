@@ -34,4 +34,5 @@
         <item>Muut kuin Unicode-tekstitykset näkyvät oikein: heprean-, arabian-, venäjän-, kreikan-, turkin-, japanin-, kiinan-, korean- ja thainkieliset tiedostot tunnistetaan kirjaimistaan ja nimessä olevasta kielestä.</item>
         <item>Tietoja-näkymä mainitsee käyttöliittymän suunnittelijana Juxtopposedin ja antaa linkit suunnitelmaan, kuten työpöytäversiossa.</item>
     </string-array>
+    <string name="rd_subtitle_size">Tekstityksen koko</string>
 </resources>

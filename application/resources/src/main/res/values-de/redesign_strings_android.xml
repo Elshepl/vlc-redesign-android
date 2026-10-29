@@ -34,4 +34,5 @@
         <item>Untertitel, die nicht in Unicode sind, werden richtig angezeigt: Hebräische, arabische, russische, griechische, türkische, japanische, chinesische, koreanische und thailändische Dateien werden an ihren Buchstaben und der Sprache im Namen erkannt.</item>
         <item>„Über“ nennt Juxtopposed als Urheber des Oberflächendesigns, mit den Links zum Design, wie in der Desktop-Version.</item>
     </string-array>
+    <string name="rd_subtitle_size">Untertitelgröße</string>
 </resources>

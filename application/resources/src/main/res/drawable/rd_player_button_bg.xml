@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- VLC Redesign: the pressed state of a control bar button, a neutral rounded square (the desktop's control hover,
-     redesign.controlHoverBackground over the bar, radius 6), never a Material accent circle. -->
+     redesign.controlHoverBackground over the bar, radius 6), never a Material accent circle. The keyboard / D-pad
+     focus is the same neutral square (the ripple's focus layer), drawn over the open / ON state (#10): the dim
+     accent square of a button whose panel is open or a toggle that is ON (isActivated, see RdActiveState), faded
+     in and out in 120 ms. -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/rd_player_button_pressed">
+    <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+        <selector android:enterFadeDuration="120" android:exitFadeDuration="120">
+            <item android:state_activated="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@color/rd_player_active_bg" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@android:color/transparent" />
+                </shape>
+            </item>
+        </selector>
+    </item>
     <item android:id="@android:id/mask" android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
         <shape android:shape="rectangle">
             <corners android:radius="6dp" />

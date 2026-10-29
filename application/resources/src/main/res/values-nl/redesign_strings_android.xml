@@ -34,4 +34,5 @@
         <item>Ondertitels die geen Unicode zijn, worden goed weergegeven: Hebreeuwse, Arabische, Russische, Griekse, Turkse, Japanse, Chinese, Koreaanse en Thaise bestanden worden herkend aan hun letters en aan de taal in hun naam.</item>
         <item>Over vermeldt Juxtopposed als ontwerper van de interface, met de links naar het ontwerp, net als op de desktop.</item>
     </string-array>
+    <string name="rd_subtitle_size">Ondertitelgrootte</string>
 </resources>

@@ -34,4 +34,5 @@
         <item>Subtitri, kas nav Unicode, tiek rādīti pareizi: ivrita, arābu, krievu, grieķu, turku, japāņu, ķīniešu, korejiešu un taju datnes tiek atpazītas pēc to burtiem un valodas to nosaukumā.</item>
         <item>Sadaļā Par kā saskarnes dizaina autors norādīts Juxtopposed, ar saitēm uz dizainu, kā datora versijā.</item>
     </string-array>
+    <string name="rd_subtitle_size">Subtitru izmērs</string>
 </resources>

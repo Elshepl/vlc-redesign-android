@@ -35,4 +35,5 @@
         <item>Podtitlovi koji nisu u Unicodeu prikazuju se ispravno: datoteke na hebrejskom, arapskom, ruskom, grčkom, turskom, japanskom, kineskom, korejskom i tajlandskom prepoznaju se po slovima i po jeziku u nazivu.</item>
         <item>Odjeljak O programu navodi autora dizajna interfejsa, Juxtopposed, s linkovima na dizajn, kao u verziji za računar.</item>
     </string-array>
+    <string name="rd_subtitle_size">Veličina titlova</string>
 </resources>

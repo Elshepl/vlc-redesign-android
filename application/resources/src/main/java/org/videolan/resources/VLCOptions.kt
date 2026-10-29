@@ -182,7 +182,14 @@ object VLCOptions {
             options.add("soxr")
             options.add("--audiotrack-session-id=$audiotrackSessionId")
 
-            if (isVLC4()) options.add("--sub-text-scale=" + (1600 / freetypeRelFontsize!!.toFloat()).toString()) else options.add("--freetype-rel-fontsize=" + freetypeRelFontsize!!)
+            // VLC Redesign (#10): the size of the player's slider / Ctrl + wheel (percent) multiplies the size of
+            // the settings, as the desktop's sub-text-scale over its font size (libvlc 3 has both)
+            val subtitleScale = org.videolan.tools.SubtitleScale.get(pref)
+            if (isVLC4()) options.add("--sub-text-scale=" + (1600 / freetypeRelFontsize!!.toFloat() * subtitleScale / 100f).toInt().toString())
+            else {
+                options.add("--freetype-rel-fontsize=" + freetypeRelFontsize!!)
+                options.add("--sub-text-scale=$subtitleScale")
+            }
             if (freetypeBold) options.add("--freetype-bold")
             options.add("--freetype-color=$freetypeColor")
             options.add("--freetype-opacity=$freetypeColorOpacity")

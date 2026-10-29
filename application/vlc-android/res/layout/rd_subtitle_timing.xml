@@ -101,5 +101,68 @@
             android:text="@string/rd_mark_text_seen" />
 
     </LinearLayout>
+
+    <!-- #10: the subtitle size (percent of the size of the settings, 25 to 500, the desktop's Ctrl + wheel):
+         the playing subtitles take it as the slider is let go; Reset back to 100 % -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/rd_dark_divider_dim" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/inter"
+            android:text="@string/rd_subtitle_size"
+            android:textAlignment="viewStart"
+            android:textColor="@color/rd_dark_fg_1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rd_sub_size_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:fontFeatureSettings="tnum"
+            android:textColor="@color/rd_dark_fg_a1"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rd_sub_size_reset"
+            style="@style/Widget.Redesign.Button.Outlined.Player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:minHeight="32dp"
+            android:text="@string/rd_reset" />
+    </LinearLayout>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/rd_sub_size_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/rd_subtitle_size"
+        android:stepSize="5"
+        android:value="100"
+        android:valueFrom="25"
+        android:valueTo="500"
+        app:haloColor="@color/rd_ripple_dark"
+        app:labelBehavior="gone"
+        app:thumbColor="?attr/colorPrimary"
+        app:thumbRadius="7dp"
+        app:tickVisible="false"
+        app:trackColorActive="?attr/colorPrimary"
+        app:trackColorInactive="@color/rd_dark_bg_b2"
+        app:trackHeight="6dp" />
 </LinearLayout>
 </layout>

@@ -34,4 +34,5 @@
         <item>Subtitrările care nu sunt Unicode se afișează corect: fișierele în ebraică, arabă, rusă, greacă, turcă, japoneză, chineză, coreeană și thailandeză sunt recunoscute după litere și după limba din nume.</item>
         <item>Despre atribuie designul interfeței lui Juxtopposed, cu linkurile designului, ca pe desktop.</item>
     </string-array>
+    <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
 </resources>

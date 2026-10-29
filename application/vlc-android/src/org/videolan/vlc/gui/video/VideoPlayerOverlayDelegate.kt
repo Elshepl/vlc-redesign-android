@@ -290,6 +290,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                             service.unselectTrackType(trackType)
                         else
                             service.setSpuTrack(trackID)
+                        player.onSubtitleTrackChosen(trackID)
                         runIO {
                             val mw = player.medialibrary.findMedia(service.currentMediaWrapper)
                             if (mw != null && mw.id != 0L) mw.setStringMeta(MediaWrapper.META_SUBTITLE_TRACK, trackID)
@@ -769,6 +770,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 R.drawable.ic_player_lock_portrait
             }
             hudBinding.orientationToggle.setImageDrawable(ContextCompat.getDrawable(player, drawable))
+            refreshActiveButtons()
         }
         if (::hudRightBinding.isInitialized) {
             if (!player.isLocked && player.orientationMode.locked && Settings.getInstance(player).getBoolean(SHOW_ORIENTATION_BUTTON, true)) {
@@ -858,6 +860,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
      * languages too (the time runs left to right, Previous Play Next as in English). The controls of the menu
      * the profile puts in the bar are made here; a control out of the profile is gone.
      */
+    private val MENU_SURFACES = setOf("speed", "sleep", "jump", "bookmarks", "equalizer", "chapters", "effects", "customize")
     private var barBase: ConstraintSet? = null
     private var barZones: PlayerBarLayout.Zones? = null
     private val barExtras = HashMap<String, ImageView>()
@@ -985,6 +988,41 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             it.isEnabled = enabled
             it.alpha = if (enabled) 1F else 0.4F
         }
+        refreshActiveButtons()
+    }
+
+    /** When the bar was last hidden (a sheet opened from the bar shows it again, VideoPlayerActivity.setSurfaceOpen) */
+    var lastHideTime = 0L
+
+    /**
+     * VLC Redesign (#10): the open state of the bar's buttons (their sheet, panel or dialog is open) and the ON
+     * state of its toggles, all by RdActiveState. A sheet of the menu whose control is not in the bar (or chapters,
+     * effects, Customize Player) shows on the settings button, which opened it.
+     */
+    fun refreshActiveButtons() {
+        if (!::hudBinding.isInitialized) return
+        val zones = barZones
+        fun button(key: String): View? = when (key) {
+            "tracks" -> hudBinding.playerOverlayTracks
+            "settings" -> hudBinding.playerOverlayAdvFunction
+            "aspect" -> hudBinding.playerResize
+            "rotate" -> hudBinding.orientationToggle
+            else -> barExtras[key]
+        }?.takeIf { zones == null || key in zones.all }
+        val shown = player.openSurfaces.mapTo(HashSet()) { key ->
+            if (button(key) == null && key in MENU_SURFACES) "settings" else key
+        }
+        listOf("tracks", "settings", "aspect", "speed", "sleep", "jump", "bookmarks", "equalizer", "queue").forEach {
+            org.videolan.vlc.gui.helpers.RdActiveState.set(button(it), it in shown)
+        }
+        // the toggles: ON in the accent too
+        org.videolan.vlc.gui.helpers.RdActiveState.set(hudBinding.orientationToggle, player.orientationMode.locked)
+        org.videolan.vlc.gui.helpers.RdActiveState.set(barExtras["repeat"], (player.service?.repeatType ?: android.support.v4.media.session.PlaybackStateCompat.REPEAT_MODE_NONE) != android.support.v4.media.session.PlaybackStateCompat.REPEAT_MODE_NONE)
+        org.videolan.vlc.gui.helpers.RdActiveState.set(barExtras["lock"], player.isLocked)
+        if (::hudRightBinding.isInitialized) {
+            org.videolan.vlc.gui.helpers.RdActiveState.set(hudRightBinding.videoRenderer, "cast" in shown)
+            org.videolan.vlc.gui.helpers.RdActiveState.set(hudRightBinding.playlistToggle, "queue" in shown)
+        }
     }
 
     /**
@@ -1063,8 +1101,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             playlistContainer.setGone()
             playlist.setOnClickListener(null)
             UiTools.setKeyboardVisibility(playlistContainer, false)
+            player.setSurfaceOpen("queue", false)
             return
         }
+        player.setSurfaceOpen("queue", true)
         hideOverlay(true)
         // VLC Redesign: the queue panel keeps clear of the status bar, the cutout and the navigation bar (the
         // player draws under them: its header went under the status bar, its last rows under the buttons)
@@ -1153,6 +1193,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     fun hideOverlay(fromUser: Boolean, forceTalkback: Boolean = false) {
         if (!fromUser && (player.isTalkbackIsEnabled() && !forceTalkback)) return
         if (player.isShowing) {
+            lastHideTime = android.os.SystemClock.uptimeMillis()
             if (isBookmarkShown()) hideBookmarks()
             player.handler.removeMessages(VideoPlayerActivity.FADE_OUT)
             if (!player.displayManager.isPrimary) {
@@ -1269,6 +1310,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 bookmarkListDelegate?.visibilityListener = {
                     if (bookmarkListDelegate?.visible == true) showOverlayTimeout(VideoPlayerActivity.OVERLAY_INFINITE)
                     else showOverlayTimeout(Settings.videoHudDelay * 1000)
+                    player.setSurfaceOpen("bookmarks", bookmarkListDelegate?.visible == true)
                 }
                 bookmarkListDelegate?.seekListener = { forward, long ->
                     player.jump(forward, long)

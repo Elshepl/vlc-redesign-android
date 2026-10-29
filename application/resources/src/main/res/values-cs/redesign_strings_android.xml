@@ -34,4 +34,5 @@
         <item>Titulky, které nejsou v Unicode, se zobrazují správně: soubory v hebrejštině, arabštině, ruštině, řečtině, turečtině, japonštině, čínštině, korejštině a thajštině se rozpoznají podle písmen a podle jazyka v názvu.</item>
         <item>Sekce O aplikaci uvádí autora návrhu rozhraní, Juxtopposed, s odkazy na návrh, stejně jako v počítačové verzi.</item>
     </string-array>
+    <string name="rd_subtitle_size">Velikost titulků</string>
 </resources>

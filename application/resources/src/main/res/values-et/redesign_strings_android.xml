@@ -34,4 +34,5 @@
         <item>Subtiitrid, mis pole Unicode’is, kuvatakse õigesti: heebrea, araabia, vene, kreeka, türgi, jaapani, hiina, korea ja tai failid tuvastatakse nende tähtede ja nimes oleva keele järgi.</item>
         <item>Teave tunnustab Juxtopposedit kasutajaliidese kujunduse eest ja annab lingid kujundusele, nagu arvutiversioonis.</item>
     </string-array>
+    <string name="rd_subtitle_size">Subtiitrite suurus</string>
 </resources>

@@ -34,4 +34,5 @@
         <item>Phụ đề không phải Unicode hiển thị đúng: các tập tin tiếng Do Thái, Ả Rập, Nga, Hy Lạp, Thổ Nhĩ Kỳ, Nhật, Trung, Hàn và Thái được nhận biết qua chữ viết và ngôn ngữ trong tên tập tin.</item>
         <item>Trang Giới thiệu ghi công thiết kế giao diện cho Juxtopposed, kèm các liên kết của bản thiết kế, giống như trên máy tính.</item>
     </string-array>
+    <string name="rd_subtitle_size">Cỡ phụ đề</string>
 </resources>

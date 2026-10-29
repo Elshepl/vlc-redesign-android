@@ -539,6 +539,15 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
         dialogsDelegate.observeDialogs(this, this)
         Util.checkCpuCompatibility(this)
+        // VLC Redesign (#10): the button of an open sheet / dialog shows it (RdActiveState)
+        supportFragmentManager.registerFragmentLifecycleCallbacks(object : androidx.fragment.app.FragmentManager.FragmentLifecycleCallbacks() {
+            override fun onFragmentStarted(fm: androidx.fragment.app.FragmentManager, f: androidx.fragment.app.Fragment) {
+                surfaceKey(f)?.let { setSurfaceOpen(it, true) }
+            }
+            override fun onFragmentStopped(fm: androidx.fragment.app.FragmentManager, f: androidx.fragment.app.Fragment) {
+                surfaceKey(f)?.let { setSurfaceOpen(it, false) }
+            }
+        }, false)
 
         settings = Settings.getInstance(this)
 
@@ -1064,6 +1073,77 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     }
     private var isLoadingEffects = false
 
+    /**
+     * VLC Redesign (#10): the panels, sheets and dialogs of the player that are open, by the key of the bar's
+     * control that opens them (PlayerBarLayout: tracks, settings, aspect, speed, sleep, jump, bookmarks, equalizer,
+     * queue; cast for the renderers; chapters, effects, customize from the menu). Their buttons show it
+     * (VideoPlayerOverlayDelegate.refreshActiveButtons). A sheet opened from the bar keeps the bar shown while it is
+     * open (the click hid it), so that the open button can be seen beside a side sheet; it fades as usual after.
+     */
+    val openSurfaces = LinkedHashSet<String>()
+
+    fun setSurfaceOpen(key: String, open: Boolean) {
+        val changed = if (open) openSurfaces.add(key) else openSurfaces.remove(key)
+        if (!changed) return
+        fun canShowBar() = lifecycle.currentState.isAtLeast(androidx.lifecycle.Lifecycle.State.RESUMED) && !isInPictureInPictureMode && !isLocked
+        if (open && key != "queue") {
+            // after the caller is done: the settings menu hides the bar right after it shows (showAdvancedOptions)
+            handler.post {
+                if (key in openSurfaces && canShowBar() && android.os.SystemClock.uptimeMillis() - overlayDelegate.lastHideTime < 1000L)
+                    overlayDelegate.showOverlayTimeout(OVERLAY_INFINITE)
+            }
+        } else if (!open && openSurfaces.isEmpty() && isShowing && canShowBar())
+            overlayDelegate.showOverlayTimeout(Settings.videoHudDelay * 1000)
+        overlayDelegate.refreshActiveButtons()
+    }
+
+    /**
+     * VLC Redesign (#10): the subtitle size in percent (SubtitleScale, 25 to 500), kept in the settings
+     * (KEY_SUBTITLES_TEXT_SCALE) and given to libvlc as "--sub-text-scale" (VLCOptions). libvlc 3 cannot change it
+     * on a playing video (no API reaches the video output's variable): as for the video effects, libvlc and the media
+     * player start again and the video opens again where it was ([reloadForEffects]), once the size stops changing
+     * (600 ms), and only when a subtitle is shown; else on the next subtitle chosen ([onSubtitleTrackChosen]).
+     * [osd]: the message "Subtitle size 120 %" over the video.
+     */
+    fun setSubtitleScale(scale: Int, osd: Boolean = true) {
+        val value = org.videolan.tools.SubtitleScale.clamp(scale)
+        val old = org.videolan.tools.SubtitleScale.get(settings)
+        Log.i(TAG, "subtitle size $old -> $value %")
+        if (osd) overlayDelegate.showInfo("${getString(R.string.rd_subtitle_size)} ⁦$value %⁩", 1500)
+        if (value == old) return
+        settings.putSingle(org.videolan.tools.KEY_SUBTITLES_TEXT_SCALE, value)
+        subtitleScalePending = true
+        handler.removeCallbacks(subtitleScaleReload)
+        handler.postDelayed(subtitleScaleReload, 600L)
+    }
+
+    private var subtitleScalePending = false
+    private val subtitleScaleReload = Runnable {
+        val s = service ?: return@Runnable
+        if (s.spuTracksCount > 0 && s.spuTrack != "-1") {
+            subtitleScalePending = false
+            reloadForEffects()
+        }
+    }
+
+    /** A subtitle track was chosen: the size changed while none was shown is taken now (#10) */
+    fun onSubtitleTrackChosen(trackId: String) {
+        if (subtitleScalePending && trackId != "-1") handler.postDelayed(subtitleScaleReload, 300L)
+    }
+
+    private fun surfaceKey(f: androidx.fragment.app.Fragment): String? = when (f) {
+        is org.videolan.vlc.gui.dialogs.VideoTracksDialog -> "tracks"
+        is org.videolan.vlc.gui.dialogs.PlaybackSpeedDialog -> "speed"
+        is org.videolan.vlc.gui.dialogs.SleepTimerDialog -> "sleep"
+        is org.videolan.vlc.gui.dialogs.JumpToTimeDialog -> "jump"
+        is org.videolan.vlc.gui.dialogs.SelectChapterDialog -> "chapters"
+        is org.videolan.vlc.gui.dialogs.EqualizerFragmentDialog -> "equalizer"
+        is org.videolan.vlc.gui.dialogs.RdEffectsDialog -> "effects"
+        is org.videolan.vlc.gui.dialogs.CustomizePlayerDialog -> "customize"
+        is org.videolan.vlc.gui.dialogs.RenderersDialog -> "cast"
+        else -> null
+    }
+
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private fun startPlayback() {
         /* start playback only when audio service and both surfaces are ready */
@@ -1260,6 +1340,16 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     }
 
     override fun dispatchGenericMotionEvent(event: MotionEvent): Boolean {
+        // VLC Redesign (#10): Ctrl + mouse wheel over the video changes the subtitle size, as the classic desktop
+        // VLC's (a plain wheel keeps what it did)
+        if (event.action == MotionEvent.ACTION_SCROLL && event.metaState and KeyEvent.META_CTRL_ON != 0
+                && service != null && !isLoading && !isLocked && !isPlaylistVisible && !isOptionsListShowing) {
+            val v = event.getAxisValue(MotionEvent.AXIS_VSCROLL)
+            if (v != 0f) {
+                setSubtitleScale(org.videolan.tools.SubtitleScale.step(org.videolan.tools.SubtitleScale.get(settings), v > 0f))
+                return true
+            }
+        }
         val result = !isLoading && ::touchDelegate.isInitialized && touchDelegate.dispatchGenericMotionEvent(event)
         return if (result) true else super.dispatchGenericMotionEvent(event)
     }
@@ -1445,6 +1535,11 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
             }
             KeyEvent.KEYCODE_Z -> {
                 resizeVideo()
+                return true
+            }
+            // VLC Redesign (#10): Ctrl + 0, the subtitle size back to 100 % (the desktop's subtitle-text-scale-normal)
+            KeyEvent.KEYCODE_0, KeyEvent.KEYCODE_NUMPAD_0 -> if (event.isCtrlPressed) {
+                setSubtitleScale(org.videolan.tools.SubtitleScale.DEFAULT)
                 return true
             }
             KeyEvent.KEYCODE_VOLUME_DOWN -> {

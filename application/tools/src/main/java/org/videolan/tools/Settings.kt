@@ -381,6 +381,8 @@ const val KEY_CASTING_QUALITY = "casting_quality"
 const val KEY_DEBLOCKING = "deblocking"
 const val KEY_NETWORK_CACHING_VALUE = "network_caching_value"
 const val KEY_SUBTITLES_SIZE = "subtitles_size"
+/** VLC Redesign (#10): the subtitle size in percent of KEY_SUBTITLES_SIZE (SubtitleScale), the player's slider and Ctrl + wheel */
+const val KEY_SUBTITLES_TEXT_SCALE = "subtitles_text_scale"
 const val KEY_SUBTITLES_BOLD = "subtitles_bold"
 const val KEY_SUBTITLES_BACKGROUND_COLOR = "subtitles_background_color"
 const val KEY_SUBTITLES_COLOR_OPACITY = "subtitles_color_opacity"

@@ -34,4 +34,5 @@
         <item>Les sous-titres qui ne sont pas en Unicode s\'affichent correctement : les fichiers en hébreu, arabe, russe, grec, turc, japonais, chinois, coréen et thaï sont reconnus par leurs lettres et la langue indiquée dans leur nom.</item>
         <item>À propos crédite le design de l\'interface à Juxtopposed, avec les liens du design, comme sur la version de bureau.</item>
     </string-array>
+    <string name="rd_subtitle_size">Taille des sous-titres</string>
 </resources>

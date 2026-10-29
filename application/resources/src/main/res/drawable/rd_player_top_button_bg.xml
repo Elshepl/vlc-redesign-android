@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign (#10): a button of the player's top bar (cast, queue): the bar buttons' neutral pressed / focus
+     square and the dim accent square while its panel is open, around the whole 36 dp button -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/rd_player_button_pressed">
+    <item>
+        <selector android:enterFadeDuration="120" android:exitFadeDuration="120">
+            <item android:state_activated="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@color/rd_player_active_bg" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@android:color/transparent" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</ripple>

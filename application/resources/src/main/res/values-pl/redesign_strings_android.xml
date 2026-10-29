@@ -34,4 +34,5 @@
         <item>Napisy nie w Unicode wyświetlają się poprawnie: pliki po hebrajsku, arabsku, rosyjsku, grecku, turecku, japońsku, chińsku, koreańsku i tajsku są rozpoznawane po literach i po języku w nazwie.</item>
         <item>Sekcja O programie podaje autora projektu interfejsu, Juxtopposed, z odnośnikami do projektu, tak jak w wersji na komputer.</item>
     </string-array>
+    <string name="rd_subtitle_size">Rozmiar napisów</string>
 </resources>

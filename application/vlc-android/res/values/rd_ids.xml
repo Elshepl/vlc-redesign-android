@@ -2,4 +2,8 @@
 <resources>
     <!-- VLC Redesign: a list row whose foreground marks the entry of the detail pane -->
     <item name="rd_detail_marked" type="id" />
+    <!-- VLC Redesign (#10): the open / ON state of a player button (RdActiveState) -->
+    <item name="rd_active_state" type="id" />
+    <item name="rd_active_tint" type="id" />
+    <item name="rd_active_anim" type="id" />
 </resources>

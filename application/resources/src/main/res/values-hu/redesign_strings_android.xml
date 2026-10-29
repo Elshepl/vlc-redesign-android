@@ -34,4 +34,5 @@
         <item>A nem Unicode feliratok helyesen jelennek meg: a héber, arab, orosz, görög, török, japán, kínai, koreai és thai fájlokat a betűik és a nevükben szereplő nyelv alapján ismeri fel.</item>
         <item>A Névjegy feltünteti a kezelőfelület tervezőjét, Juxtopposedot, a terv hivatkozásaival, ahogy az asztali változatban.</item>
     </string-array>
+    <string name="rd_subtitle_size">Feliratméret</string>
 </resources>

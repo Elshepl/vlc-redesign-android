@@ -36,4 +36,5 @@
         <item>Skjátextar sem ekki eru í Unicode birtast rétt: skrár á hebresku, arabísku, rússnesku, grísku, tyrknesku, japönsku, kínversku, kóresku og taílensku þekkjast á stöfunum og tungumálinu í heiti þeirra.</item>
         <item>Um getur Juxtopposed sem hönnuðar viðmótsins, með tenglum á hönnunina, eins og í tölvuútgáfunni.</item>
     </string-array>
+    <string name="rd_subtitle_size">Stærð skjátexta</string>
 </resources>

@@ -41,4 +41,5 @@
     <string name="rd_fx_anaglyph_rc">אדום טהור (שמאל)  ציאן טהור (ימין)</string>
     <string name="rd_fx_anaglyph_gm">ירוק טהור (שמאל)  מג׳נטה טהורה (ימין)</string>
     <string name="rd_fx_anaglyph_mc">מג׳נטה (שמאל)  ציאן (ימין)</string>
+    <string name="rd_subtitle_size">גודל הכתוביות</string>
 </resources>
