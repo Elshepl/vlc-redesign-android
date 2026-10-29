@@ -256,8 +256,14 @@ object VLCOptions {
             text("rd_sub_fuzzy").toIntOrNull()?.takeIf { it in 0..4 && it != 3 }?.let { options.add("--sub-autodetect-fuzzy=$it") }
             text("rd_file_caching").toIntOrNull()?.takeIf { it in 0..60000 }?.let { options.add("--file-caching=$it") }
             text("rd_live_caching").toIntOrNull()?.takeIf { it in 0..60000 }?.let { options.add("--live-caching=$it") }
-            text("rd_http_proxy").takeIf { it.isNotEmpty() && !it.contains(' ') }?.let { options.add("--http-proxy=$it") }
-            text("rd_postproc").toIntOrNull()?.takeIf { it in 1..6 }?.let { options.add("--postproc-q=$it") }
+            // libvlc 3 on Android has no --http-proxy (it is the Windows build's only): its vlc_getProxyUrl() reads
+            // the Java properties http.proxyHost / http.proxyPort, so the desktop's HTTP proxy is set there
+            applyHttpProxy(text("rd_http_proxy"))
+            // the quality alone does nothing: as on the desktop, the "postproc" video filter has to run as well
+            text("rd_postproc").toIntOrNull()?.takeIf { it in 1..6 }?.let {
+                options.add("--video-filter=postproc")
+                options.add("--postproc-q=$it")
+            }
             text("rd_avcodec_threads").toIntOrNull()?.takeIf { it in 1..32 }?.let { options.add("--avcodec-threads=$it") }
             pref.getInt("rd_sub_margin", 0).takeIf { it in 1..400 }?.let { options.add("--sub-margin=$it") }
             if (pref.getBoolean(KEY_SUBTITLES_SHADOW, true)) pref.getInt("rd_shadow_distance", 6).takeIf { it in 0..20 && it != 6 }
@@ -270,6 +276,28 @@ object VLCOptions {
             if (BuildConfig.DEBUG) Log.d(this::class.java.simpleName, "VLC Options: ${options.joinToString(" ")}")
             return options
         }
+
+    /** The proxy this app set last, so that clearing the setting never removes a proxy the system set. */
+    private var rdProxySet: Pair<String, String>? = null
+
+    /** "host:port" or "http://[user@]host:port/" (the desktop's field) -> http.proxyHost / http.proxyPort; empty clears ours. */
+    private fun applyHttpProxy(value: String) {
+        val m = Regex("^(?:[a-zA-Z][a-zA-Z0-9+.-]*://)?(?:[^@/]*@)?(\\[[0-9a-fA-F:]+]|[^:/\\s]+)(?::(\\d{1,5}))?/?$").find(value)
+        if (m != null) {
+            val host = m.groupValues[1].removePrefix("[").removeSuffix("]")
+            val port = m.groupValues[2].ifEmpty { "80" }
+            System.setProperty("http.proxyHost", host)
+            System.setProperty("http.proxyPort", port)
+            rdProxySet = host to port
+            Log.d(TAG, "HTTP proxy $host:$port")
+        } else rdProxySet?.let { (host, port) ->
+            if (System.getProperty("http.proxyHost") == host && System.getProperty("http.proxyPort") == port) {
+                System.clearProperty("http.proxyHost")
+                System.clearProperty("http.proxyPort")
+            }
+            rdProxySet = null
+        }
+    }
 
     fun isAudioDigitalOutputEnabled(pref: SharedPreferences) = pref.getBoolean(KEY_AUDIO_DIGITAL_OUTPUT, false)
 
