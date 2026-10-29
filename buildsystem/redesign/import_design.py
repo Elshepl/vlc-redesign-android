@@ -262,7 +262,7 @@ def convert(svg_file, colour_map=None, size=None):
     return body + "\n".join(out) + "\n</vector>\n", missing
 
 
-HAND_DRAWN = {"rd_ic_chevron_right.xml"}
+HAND_DRAWN = {"rd_ic_chevron_right.xml", "rd_ic_mini_pause.xml", "rd_ic_mini_play.xml", "rd_ic_player_bar_settings.xml"}
 
 
 def icons(design, version):
@@ -375,6 +375,45 @@ def overrides(design, version):
     print("overrides:", len(OVERRIDES))
 
 
+# The last bitmap icons of VLC Android (notification, pop-up player, widgets, gesture overlays) as the desktop's
+# glyphs in one colour: name -> (glyph under icons/svg, size in dp, colour). A notification's small icon and its
+# media actions are white (the system tints them); the bitmaps of every density are removed.
+W = "#FFFFFFFF"
+WD = "#80FFFFFF"
+ACC = "@color/rd_accent"
+MONO = {
+    "ic_notif_audio": ("glyphs/music/default", 24, W), "ic_notif_video": ("glyphs/video/default", 24, W),
+    "ic_notif_scan": ("glyphs/refresh/default", 24, W), "ic_notif_remote_access": ("glyphs/streaming/default", 24, W),
+    "ic_notif_bookmark_add_w": ("glyphs/bookmark/default", 36, W),
+    "ic_notif_previous_w": ("glyphs/previous/default", 36, W), "ic_notif_previous_disabled": ("glyphs/previous/default", 36, WD),
+    "ic_notif_next_w": ("glyphs/next/default", 36, W), "ic_notif_next_disabled": ("glyphs/next/default", 36, WD),
+    "ic_notif_rewind_w": ("glyphs/backward-10-sec/default", 36, W), "ic_notif_rewind_disabled": ("glyphs/backward-10-sec/default", 36, WD),
+    "ic_notif_forward_w": ("glyphs/forward-10-sec/default", 36, W), "ic_notif_forward_disabled": ("glyphs/forward-10-sec/default", 36, WD),
+    "ic_play_notif": ("glyphs/play/default", 32, W), "ic_pause_notif": ("glyphs/pause/default", 32, W),
+    "ic_player_volume": ("volume-high", 36, W),
+    "ic_popup_close_w": ("glyphs/close/default", 48, W), "ic_popup_fullscreen": ("glyphs/fullscreen/default", 48, W),
+    "ic_popup_play": ("glyphs/play/default", 48, W), "ic_popup_pause": ("glyphs/pause/default", 48, W),
+    "ic_widget_close_normal": ("glyphs/close/default", 36, W), "ic_widget_close_normal_w": ("glyphs/close/default", 36, W),
+    "ic_widget_play_normal_w": ("glyphs/play/default", 40, W),
+    "ic_widget_pause_normal_w": ("glyphs/pause/default", 40, W),
+    "ic_widget_play_pressed": ("glyphs/play/default", 40, ACC), "ic_widget_pause_pressed": ("glyphs/pause/default", 40, ACC),
+}
+
+
+def mono(design, version):
+    ddir = os.path.join(RES, "drawable")
+    hdr = '<?xml version="1.0" encoding="utf-8"?>\n' + HEADER % version
+    for name, (src, size, colour) in MONO.items():
+        xml, _ = convert(os.path.join(design, "icons", "svg", src + ".svg"), None, size)
+        xml = re.sub(r'(android:(?:fill|stroke)Color=)"[^"]*"', r'\1"%s"' % colour, xml)
+        write(os.path.join(ddir, name + ".xml"), hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android bitmap.") + xml)
+        for d in ("mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"):
+            png = os.path.join(RES, "drawable-" + d, name + ".png")
+            if os.path.exists(png):
+                os.remove(png)
+    print("mono:", len(MONO))
+
+
 def main():
     design = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.expanduser("~"), "source", "repos", "vlc", "design")
     with open(os.path.join(design, "tokens.json"), encoding="utf-8") as f:
@@ -384,6 +423,7 @@ def main():
     fonts(design, version)
     icons(design, version)
     overrides(design, version)
+    mono(design, version)
     print("done:", version)
 
 

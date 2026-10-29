@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: brightness, drawn in the stroke of the desktop's glyphs (1.5, round): the desktop has no
+     brightness glyph. Replaces the VLC Android bitmap. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp" android:height="36dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path android:pathData="M12,8.5A3.5,3.5 0,1 1,12 15.5A3.5,3.5 0,1 1,12 8.5Z" android:strokeColor="#FFFFFFFF" android:strokeWidth="1.5" />
+    <path android:pathData="M12,3.75V5.5M12,18.5V20.25M3.75,12H5.5M18.5,12H20.25M6.17,6.17L7.4,7.4M16.6,16.6L17.83,17.83M6.17,17.83L7.4,16.6M16.6,7.4L17.83,6.17" android:strokeColor="#FFFFFFFF" android:strokeWidth="1.5" android:strokeLineCap="round" />
+</vector>

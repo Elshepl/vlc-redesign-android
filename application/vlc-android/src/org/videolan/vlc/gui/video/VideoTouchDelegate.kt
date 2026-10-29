@@ -432,8 +432,11 @@ class VideoTouchDelegate(private val player: VideoPlayerActivity,
         if (touchAction != TOUCH_NONE && touchAction != TOUCH_VOLUME) return
         val audioMax = player.audioMax
         val delta = -(y_changed / screenConfig.yRange * audioMax * 1.25f)
-        player.volume += delta
-        val vol = player.volume.toInt().coerceIn(0, audioMax * if (player.isAudioBoostEnabled) 2 else 1)
+        // VLC Redesign: the volume the finger sets stays in its range (it ran below zero and above the maximum, so
+        // the gesture did nothing until the finger came back)
+        val top = audioMax * if (player.isAudioBoostEnabled) 2 else 1
+        player.volume = (player.volume + delta).coerceIn(0f, top.toFloat())
+        val vol = player.volume.toInt().coerceIn(0, top)
         if (delta < 0) player.originalVol = vol.toFloat()
         if (delta != 0f) {
             if (vol > audioMax) {
@@ -449,6 +452,8 @@ class VideoTouchDelegate(private val player: VideoPlayerActivity,
             } else {
                 player.setAudioVolume(vol)
                 touchAction = TOUCH_VOLUME
+                // the bar follows the finger smoothly, not the system's steps (a 15-step volume moved it by 7 %)
+                if (vol > 0) player.overlayDelegate.showVolumeBar((player.volume * 100 / audioMax).roundToInt().coerceIn(0, 100))
             }
         }
     }
