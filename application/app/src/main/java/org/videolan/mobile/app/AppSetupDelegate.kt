@@ -83,6 +83,8 @@ class AppSetupDelegate : AppDelegate,
         appContextProvider.init(this)
         // VLC Redesign: the app's floating messages as the framed snackbar of the activity in front
         org.videolan.vlc.util.RdToast.init(this)
+        // VLC Redesign: the context menus as the desktop's, at the finger / pointer
+        org.videolan.vlc.gui.dialogs.RdContextMenu.install(this)
         NotificationHelper.createNotificationChannels(this)
 
         // Service loaders
