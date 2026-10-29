@@ -174,6 +174,13 @@ class Tour:
 
     def tap(self, d, key=None, string=None, index=0, settle=True, **kw):
         vs = self.find(d, key, string, **kw)
+        for _ in range(6):
+            # not there yet (a fragment still loading): a few more dumps before anything else
+            if len(vs) > index:
+                break
+            time.sleep(0.5)
+            d = self.d.dump()
+            vs = self.find(d, key, string, **kw)
         if len(vs) <= index and key and not string and index == 0:
             # off screen (a toolbar scrolled away, a bar hidden): click it in the app
             r = self.d.call("click", id=key)
@@ -196,6 +203,12 @@ class Tour:
         except Lost:
             if not retry:
                 raise
+        # the task brought to the front first (cheap), a cold start only when that is not enough
+        print("  main(): lost, to the front", flush=True)
+        self.d.sh("am start -W -n %s/org.videolan.vlc.StartActivity" % PKG, timeout=60)
+        try:
+            return self._main(tab)
+        except Lost:
             print("  main(): lost, relaunch", flush=True)
             self.d.stop_app()
             self.d.start_app()
@@ -321,9 +334,23 @@ class Tour:
         d = self.main("nav_video")
         self.snap("videos-grid", d)
         self.scroll_pages("videos-grid", d, max_pages=2)
-        d = self.main("nav_video")
-        self.snap("videos-display-sheet", self.tap(d, "ml_menu_display_options"))
-        self.main()
+        self.step("videos-display", self.display_sheet, "nav_video", "videos-display-sheet")
+        self.step("videos-ctx", self.videos_rest)
+
+    def display_sheet(self, tab, name):
+        """The display / sort sheet: the toolbar's button, else the overflow's entry."""
+        d = self.main(tab)
+        if d.find("ml_menu_display_options"):
+            self.snap(name, self.tap(d, "ml_menu_display_options"))
+            return
+        d = self.tap(d, "abc_action_menu_overflow_description")
+        e = [v for v in d.find(window=d.windows[-1]) if v.sk in ("display_settings", "sortby", "display_options")]
+        if not e:
+            raise Lost("no display options")
+        self.d.tap(d.clickable_ancestor(e[0]))
+        self.snap(name, self.d.settle())
+
+    def videos_rest(self):
         d = self.main("nav_video")
         cards = [v for v in d.find("item_more")]
         if len(cards) > 1:
@@ -416,6 +443,7 @@ class Tour:
         d = self.main("nav_audio")
         if d.find("abc_action_menu_overflow_description"):
             self.snap("music-overflow", self.tap(d, "abc_action_menu_overflow_description"))
+        self.step("music-display", self.display_sheet, "nav_audio", "music-display-sheet")
 
     def tv(self):
         d = self.main()
