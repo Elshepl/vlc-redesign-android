@@ -21,13 +21,16 @@
 package org.videolan.vlc.gui.tablet
 
 import android.app.Dialog
+import android.graphics.drawable.GradientDrawable
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import org.videolan.tools.dp
 import org.videolan.vlc.R
+import org.videolan.vlc.gui.helpers.UiTools
 
 /**
  * VLC Redesign, tablets: on a large screen a bottom sheet (context menu, sort and display options, speed, sleep
@@ -46,7 +49,13 @@ object TabletSheets {
         val parent = sheet.parent as? View ?: return
         dialog.window?.setGravity(Gravity.CENTER)
         sheet.background = null
-        view.background = ContextCompat.getDrawable(view.context, R.drawable.rd_panel_float)
+        // the sheet's own colour (light or dark theme) in the window frame: radius 14, 1 px window border
+        val ctx = view.context
+        view.background = GradientDrawable().apply {
+            cornerRadius = 14.dp.toFloat()
+            setColor(UiTools.getColorFromAttribute(ctx, R.attr.bottom_sheet_background))
+            setStroke(1, ContextCompat.getColor(ctx, R.color.rd_window_border_token))
+        }
         view.clipToOutline = true
         val behavior = BottomSheetBehavior.from(sheet).apply {
             skipCollapsed = true
@@ -57,9 +66,10 @@ object TabletSheets {
         // the behaviour keeps the sheet on the bottom edge: lift it so it is centred in the window
         val centre = View.OnLayoutChangeListener { _, _, _, _, _, _, _, _, _ ->
             val max = (parent.height * MAX_HEIGHT_FRACTION).toInt()
-            if (max > 0 && behavior.maxHeight != max) {
-                behavior.maxHeight = max
-                if (sheet.height > max) sheet.layoutParams = sheet.layoutParams.apply { height = max }
+            if (max > 0) {
+                if (behavior.maxHeight != max) behavior.maxHeight = max
+                // a list filled after the first layout can grow past the cap: keep it
+                if (sheet.height > max) sheet.post { sheet.layoutParams = sheet.layoutParams.apply { height = max } }
             }
             val lift = -((parent.height - sheet.height) / 2f).coerceAtLeast(0f)
             if (sheet.translationY != lift) sheet.translationY = lift
