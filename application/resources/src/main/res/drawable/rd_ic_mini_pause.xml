@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: pause of the mini player, the plain glyph (design/icons/svg/duo/pause.svg), no circle around it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path android:pathData="M8.5,6.75h1a0.75,0.75 0 0,1 0.75,0.75v9a0.75,0.75 0 0,1 -0.75,0.75h-1a0.75,0.75 0 0,1 -0.75,-0.75v-9a0.75,0.75 0 0,1 0.75,-0.75zM14.5,6.75h1a0.75,0.75 0 0,1 0.75,0.75v9a0.75,0.75 0 0,1 -0.75,0.75h-1a0.75,0.75 0 0,1 -0.75,-0.75v-9a0.75,0.75 0 0,1 0.75,-0.75z" android:fillColor="@color/rd_fg_1" android:strokeColor="@color/rd_fg_1" android:strokeWidth="1.5" android:strokeLineJoin="round" />
+</vector>

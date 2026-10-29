@@ -565,12 +565,13 @@ class AudioPlayer : Fragment(), PlaylistAdapter.IPlayer, TextWatcher, IAudioPlay
         val drawable = if (playing) playToPause else pauseToPlay
         val drawableSmall = if (playing) playToPauseSmall else pauseToPlaySmall
         val drawableHeaderLarge = if (playing) playToPauseHeader else pauseToPlayHeader
-        binding.playPause.setImageDrawable(drawable)
+        // VLC Redesign: the 54 x 28 accent play pill of the desktop's bar (no circle)
+        binding.playPause.setImageResource(if (playing) R.drawable.ic_pause_player else R.drawable.ic_play_player)
         binding.headerLargePlayPause.setImageDrawable(drawableHeaderLarge)
-        binding.headerPlayPause.setImageDrawable(drawableSmall)
+        // VLC Redesign: the mini player's play button is the plain glyph of the desktop's (an icon button has no
+        // circle or outline)
+        binding.headerPlayPause.setImageResource(if (playing) R.drawable.rd_ic_mini_pause else R.drawable.rd_ic_mini_play)
         if (playing != wasPlaying) {
-            drawable.start()
-            drawableSmall.start()
             drawableHeaderLarge.start()
         }
 
