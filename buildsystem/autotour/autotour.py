@@ -86,11 +86,26 @@ def setup(d, log):
     time.sleep(8)  # the library scan and the TV sources load
 
 
+def pref_sure(d, key, type, value, wait=60):
+    """Writes a preference through the probe, starting the app and retrying until the probe says ok: right
+    after a boot (or the system's font/night change) its socket is not up yet and a write went nowhere (the
+    first cell then ran in the last cell's language and accent)."""
+    deadline = time.time() + wait
+    while True:
+        r = d.call("pref", key=key, type=type, value=value)
+        if (r or "").startswith("ok") or time.time() > deadline:
+            return r
+        if r is None:
+            d.start_app(wait=False)
+        time.sleep(1)
+
+
 def configure(d, cell):
     d.set_system(night=cell["theme"] == "dark", font=cell["font"], rotation=cell["rotation"])
-    d.call("pref", key="set_locale", type="s", value=LOCALES[cell["lang"]])
-    d.call("pref", key="rd_accent", type="s", value=cell["accent"])
-    d.call("pref", key="app_theme", type="s", value="-1")
+    for k, t, v in (("set_locale", "s", LOCALES[cell["lang"]]), ("rd_accent", "s", cell["accent"]), ("app_theme", "s", "-1")):
+        r = pref_sure(d, k, t, v)
+        if not (r or "").startswith("ok"):
+            print("  configure(): pref %s not written: %s" % (k, r), flush=True)
     d.stop_app()
 
 
