@@ -8,7 +8,7 @@
 It boots one emulator of its own (port 5558, AVDs in D:\\vlc-redesign-tmp\\android-autotour\\avd; never the owner's
 phone), installs the debug APK, pushes generated media, starts the Live TV mock server, walks every screen in every
 cell of the matrix and writes the report (report.py) to D:\\vlc-redesign-tmp\\android-autotour\\report."""
-import argparse, json, os, subprocess, sys, time
+import argparse, json, os, re, subprocess, sys, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -63,11 +63,17 @@ def setup(d, log):
         d.sh("pm grant %s android.permission.%s" % (device.PKG, perm))
     d.stop_app()
     d.start_app(wait=False)
-    time.sleep(4)
-    # the first-run dialog is a screen too: kept in the first cell's folder later; then never again
+    # the first-run dialog is a screen too: kept in the first cell's folder later; then never again.
+    # The probe's socket comes up with the app: on a freshly booted 13" tablet 4 s were not enough, the
+    # writes went nowhere and the first cell stayed on the welcome screen
+    deadline = time.time() + 60
+    while time.time() < deadline and not (d.call("pref", key="app_onboarding_done", type="b", value="true") or "").startswith("ok"):
+        time.sleep(1)
     for k, t, v in (("app_onboarding_done", "b", "true"), ("show_update", "b", "false"), ("app_theme", "s", "-1"), ("incognito_mode", "b", "false"),
                     ("rd_accent", "s", "orange")):
-        d.call("pref", key=k, type=t, value=v)
+        r = d.call("pref", key=k, type=t, value=v)
+        if not (r or "").startswith("ok"):
+            log("pref %s not written: %s" % (k, r))
     d.stop_app()
     if first:
         # once per AVD: adding the folder again starts the parsing service again (see the findings: it crashed)
@@ -141,6 +147,7 @@ def main():
                 mem = {"start": d.meminfo()}
                 for cell in cells:
                     t0 = time.time()
+                    lc_from = os.path.getsize(logcat_path) if os.path.exists(logcat_path) else 0
                     configure(d, cell)
                     out = os.path.join(a.run, "cells", cell["name"])
                     t = tour.Tour(d, cell, out, logcat_path, only)
@@ -151,7 +158,15 @@ def main():
                     t.cell["mem_start"] = t.mem_start
                     t.save()
                     fails = sum(1 for s in t.steps if s.get("fail"))
-                    log("%s: %d screens, %d step failures, %.0f s" % (cell["name"], len(t.steps), fails, time.time() - t0))
+                    # ANRs and crashes of the app in this cell's part of the logcat: a step can still pass after
+                    # Android killed a frozen app and the tour started it again (the tablet Playlists loop did)
+                    with open(logcat_path, "rb") as f:
+                        f.seek(lc_from)
+                        part = f.read().decode("utf-8", "replace")
+                    anrs = part.count("ANR in " + device.PKG)
+                    crashes = len(re.findall(r"FATAL EXCEPTION.*\n.*Process: " + re.escape(device.PKG), part))
+                    log("%s: %d screens, %d step failures, %d ANRs, %d crashes, %.0f s"
+                        % (cell["name"], len(t.steps), fails, anrs, crashes, time.time() - t0))
                 mem["end"] = d.meminfo()
                 with open(os.path.join(a.run, "mem-%s.json" % dev), "w") as f:
                     json.dump(mem, f)

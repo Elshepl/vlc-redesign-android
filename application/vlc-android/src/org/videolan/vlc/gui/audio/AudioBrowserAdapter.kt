@@ -176,6 +176,9 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         set(value) {
             val old = field
             field = value
+            // the same entry again changes nothing: notifying would wake the list's change observers, and the
+            // Playlists page answers them by setting the entry again (an endless loop that froze the tablet)
+            if (old === value || (old != null && value != null && old.id == value.id && old.itemType == value.itemType)) return
             for (i in 0 until itemCount) {
                 val it = getItem(i) ?: continue
                 if ((old != null && it.id == old.id && it.itemType == old.itemType) || (value != null && it.id == value.id && it.itemType == value.itemType)) notifyItemChanged(i, UPDATE_DETAIL)
