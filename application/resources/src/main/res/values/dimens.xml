@@ -129,4 +129,6 @@
     <!-- VLC Redesign: Home cards (a video 16:9, a cover or a folder square) -->
     <dimen name="rd_home_video_width">168dp</dimen>
     <dimen name="rd_home_square_width">120dp</dimen>
+    <!-- VLC Redesign: the frame of the seek bar preview (the desktop: 252 at 100 %) -->
+    <dimen name="rd_seek_preview_width">168dp</dimen>
 </resources>

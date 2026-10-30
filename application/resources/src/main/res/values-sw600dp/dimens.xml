@@ -22,4 +22,5 @@
 
     <dimen name="dialog_sd_wisard_width">448dp</dimen>
     <dimen name="dialog_sd_wisard_height">576dp</dimen>
+    <dimen name="rd_seek_preview_width">252dp</dimen>
 </resources>

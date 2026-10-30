@@ -25,4 +25,6 @@
 <resources>
     <item type="id" name="sort" />
     <item type="id" name="sort_desc" />
+    <!-- VLC Redesign: the frame preview of the seek bar (SeekPreview) -->
+    <item type="id" name="rd_seek_preview" />
 </resources>

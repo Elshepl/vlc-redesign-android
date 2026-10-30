@@ -416,15 +416,24 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     /**
      * handle changes of the seekbar (slicer)
      */
+    // VLC Redesign: the frame of the time under the finger while the seek bar is dragged (local videos)
+    private val seekPreview by lazy(LazyThreadSafetyMode.NONE) { SeekPreview(this) }
+    private var seekPreviewShown = false
+
     val seekListener = object : OnSeekBarChangeListener {
 
         override fun onStartTrackingTouch(seekBar: SeekBar) {
             isDragging = true
             overlayDelegate.showOverlayTimeout(OVERLAY_INFINITE)
+            seekPreviewShown = !isBenchmark && !displayManager.isOnRenderer &&
+                    seekPreview.start(service?.currentMediaWrapper?.uri, (service?.videoTracksCount ?: 0) > 0)
+            if (seekPreviewShown) seekPreview.move(seekBar, seekBar.progress.toLong())
         }
 
         override fun onStopTrackingTouch(seekBar: SeekBar) {
             isDragging = false
+            if (seekPreviewShown) seekPreview.stop()
+            seekPreviewShown = false
             overlayDelegate.showOverlay(true)
             seek(seekBar.progress.toLong(), fromUser = true, fast = false)
         }
@@ -432,7 +441,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
             if (!isFinishing && fromUser && service?.isSeekable == true) {
                 seek(progress.toLong(), fromUser, isDragging)
-                if (service?.length != 0L) overlayDelegate.showInfo(Tools.millisToString(progress.toLong()), 1000)
+                // (the preview shows the time itself)
+                if (isDragging && seekPreviewShown) seekPreview.move(seekBar, progress.toLong())
+                else if (service?.length != 0L) overlayDelegate.showInfo(Tools.millisToString(progress.toLong()), 1000)
             }
             if (fromUser) {
                 overlayDelegate.showOverlay(true)
@@ -1048,6 +1059,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     override fun onDestroy() {
         super.onDestroy()
         customAspect.detach()
+        if (seekPreviewShown) seekPreview.stop()
+        seekPreview.release()
         castingCard.release()
         playlistModel?.run {
             dataset.removeObserver(playlistObserver)
