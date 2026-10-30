@@ -52,7 +52,9 @@ def cells_for(dev, quick=False):
 def setup(d, log):
     d.prepare()
     d.install(APK)
-    first = "yes" not in d.sh("[ -f /data/local/tmp/autotour-library ] && echo yes")
+    # once per AVD and app (the package name changed once: a new app has no library)
+    marker = "/data/local/tmp/autotour-library-" + device.PKG
+    first = "yes" not in d.sh("[ -f %s ] && echo yes" % marker)
     d.sh("mkdir -p /sdcard/Download")
     tree = media.generate(os.path.join(ROOT, "media"))
     log(device.adb_raw("push", tree, "/sdcard/Download/", timeout=900).strip()[-120:])
@@ -70,7 +72,7 @@ def setup(d, log):
     if first:
         # once per AVD: adding the folder again starts the parsing service again (see the findings: it crashed)
         d.start_app("--es debug_library_folder /storage/emulated/0/Download/vlc-redesign-test")
-        d.sh("touch /data/local/tmp/autotour-library")
+        d.sh("touch %s" % marker)
     else:
         d.start_app()
     spec = json.dumps(mockserver.sources())
