@@ -24,11 +24,6 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/rd_sec_startup">
         <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="show_update"
-            android:summary="@string/update_nightly_summary"
-            android:title="@string/rd_check_updates" />
-        <CheckBoxPreference
             android:key="show_whats_new"
             android:title="@string/rd_show_whats_new"
             android:defaultValue="true" />
@@ -75,9 +70,6 @@
             android:key="restore_settings"
             android:summary="@string/restore_settings_summary"
             android:title="@string/restore_settings" />
-        <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
-            android:key="nightly_install"
-            android:title="@string/install_nightly" />
         <org.videolan.vlc.gui.preferences.rd.RdLinkPreference
             android:enabled="true"
             android:key="quit_app"

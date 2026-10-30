@@ -131,8 +131,10 @@ class MainActivity : ContentActivity(),
         }
 
         lifecycleScope.launch {
-            if (!BuildConfig.DEBUG) return@launch
             AutoUpdate.clean(this@MainActivity.application)
+            // VideoLAN's nightlies are VideoLAN's app, not this one: no question about them, no
+            // check (VLC Redesign gets its own update channel)
+            if (!AutoUpdate.ENABLED) return@launch
             if (!settings.getBoolean(KEY_SHOW_UPDATE, true)) return@launch
             if (!settings.contains(KEY_SHOW_UPDATE)) {
                 AlertDialog.Builder(this@MainActivity)

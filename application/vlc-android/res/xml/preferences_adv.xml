@@ -150,10 +150,6 @@
                 android:key="debug_logs"
                 android:title="@string/debug_logs"/>
 
-        <PreferenceScreen
-                android:key="nightly_install"
-                android:title="@string/install_nightly"/>
-
         <CheckBoxPreference
                 app:singleLineTitle="false"
                 android:defaultValue="false"

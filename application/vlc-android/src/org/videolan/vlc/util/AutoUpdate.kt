@@ -54,6 +54,8 @@ import java.util.concurrent.TimeUnit
 
 object AutoUpdate {
     private const val TAG = "AutoUpdate"
+    /** VideoLAN's nightly updates (off in VLC Redesign: they are VideoLAN's app) */
+    const val ENABLED = false
 
     /**
      * Checks if an update is available in the nightlies
@@ -63,6 +65,8 @@ object AutoUpdate {
      * @param listener Function called when an update is found
      */
     suspend fun checkUpdate(context: Application, skipChecks:Boolean = false, listener: (String, Date) -> Unit) = withContext(Dispatchers.IO) {
+        // VLC Redesign: VideoLAN's nightlies would install VideoLAN's VLC over or beside this app
+        if (!ENABLED) return@withContext
         //limit to debug builds (nightlies are included)
         if (!BuildConfig.DEBUG && !skipChecks) return@withContext
 

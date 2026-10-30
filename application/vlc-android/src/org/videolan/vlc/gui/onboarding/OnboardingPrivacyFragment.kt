@@ -46,7 +46,7 @@ class OnboardingPrivacyFragment : OnboardingFragment() {
             settings.putSingle(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, it)
         }
         // the update check only exists in test builds (AutoUpdate)
-        if (BuildConfig.DEBUG) row(rows, getString(R.string.rd_check_updates), getString(R.string.rd_ob_updates_help), settings.getBoolean(KEY_SHOW_UPDATE, true)) {
+        if (org.videolan.vlc.util.AutoUpdate.ENABLED && BuildConfig.DEBUG) row(rows, getString(R.string.rd_check_updates), getString(R.string.rd_ob_updates_help), settings.getBoolean(KEY_SHOW_UPDATE, true)) {
             settings.putSingle(KEY_SHOW_UPDATE, it)
         }
         val accent = String.format("#%06X", 0xFFFFFF and requireContext().rdAttr(R.attr.colorPrimary))

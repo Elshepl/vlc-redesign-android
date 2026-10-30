@@ -79,7 +79,7 @@ object PreferenceVisibilityManager {
         KEY_AUDIO_TASK_REMOVED, "casting_category", "android_auto_category", SCREEN_ORIENTATION, -> !forTv
         //only on TV
         TV_FOLDERS_FIRST, BROWSER_SHOW_HIDDEN_FILES, PLAYLIST_MODE_VIDEO, PLAYLIST_MODE_AUDIO, KEY_REMOTE_ACCESS_INFO -> forTv
-        KEY_SHOW_UPDATE -> !forTv && BuildConfig.DEBUG
+        KEY_SHOW_UPDATE -> false // VideoLAN's nightlies (AutoUpdate.ENABLED)
         KEY_VIDEO_APP_SWITCH -> !forTv || AndroidDevices.hasPiP
         AUDIO_DUCKING -> !AndroidUtil.isOOrLater
         POPUP_FORCE_LEGACY -> AndroidDevices.pipAllowed
