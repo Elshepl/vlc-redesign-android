@@ -2,7 +2,7 @@
  * VLC Redesign: the waveform seek bar of the music view (WaveformSlider.qml of the desktop).
  *
  * Waveform.peaks() decodes the audio of a local file with the platform's codecs and keeps the loudest sample of
- * each of 512 equal parts of its length (the desktop's 512 bins); WaveformDrawable draws them in the seek well:
+ * each of 512 equal parts of its length (the desktop's 512 bins), kept in the app's cache for the next time; WaveformDrawable draws them in the seek well:
  * 2 dp bars every 5 dp, at most 14 dp high, inset 6 dp, the played ones in the accent (80 %), the others #404040
  * (#929291 in the light theme), and the 8 x 24 handle of the seek bar on top.
  *
@@ -45,6 +45,7 @@ object Waveform {
     fun peaks(context: Context, uri: Uri): FloatArray? {
         cache.get(uri.toString())?.let { return it }
         if (uri.scheme != "file" && uri.scheme != "content") return null
+        stored(context, uri)?.let { cache.put(uri.toString(), it); return it }
         val extractor = MediaExtractor()
         var codec: MediaCodec? = null
         try {
@@ -105,6 +106,7 @@ object Waveform {
                 if (Thread.currentThread().isInterrupted) return null
             }
             cache.put(uri.toString(), bins)
+            store(context, uri, bins)
             return bins
         } catch (e: Exception) {
             Log.w(TAG, "no waveform for $uri: $e")
@@ -202,6 +204,37 @@ object Waveform {
             try { codec?.stop() } catch (_: Exception) {}
             codec?.release()
             extractor.release()
+        }
+    }
+
+    /**
+     * The peaks of a local file kept on disk (the app's cache: waveforms/), so a song is decoded once and not at
+     * every start; a file changed since (size, date) is read again.
+     */
+    private fun diskFile(context: Context, uri: Uri): java.io.File? {
+        val key = if (uri.scheme == "file") java.io.File(uri.path ?: return null).let { if (!it.isFile) return null; "${it.absolutePath}|${it.length()}|${it.lastModified()}" }
+                else uri.toString()
+        return java.io.File(java.io.File(context.cacheDir, "waveforms"), Integer.toHexString(key.hashCode()) + "-" + key.length + ".bin")
+    }
+
+    private fun stored(context: Context, uri: Uri): FloatArray? = try {
+        diskFile(context, uri)?.takeIf { it.length() == BINS * 4L }?.let { f ->
+            val buf = java.nio.ByteBuffer.wrap(f.readBytes())
+            FloatArray(BINS) { buf.getFloat() }
+        }
+    } catch (e: Exception) {
+        null
+    }
+
+    private fun store(context: Context, uri: Uri, bins: FloatArray) {
+        try {
+            val f = diskFile(context, uri) ?: return
+            f.parentFile?.mkdirs()
+            val buf = java.nio.ByteBuffer.allocate(BINS * 4)
+            bins.forEach { buf.putFloat(it) }
+            f.writeBytes(buf.array())
+        } catch (e: Exception) {
+            Log.w(TAG, "waveform not kept: $e")
         }
     }
 
