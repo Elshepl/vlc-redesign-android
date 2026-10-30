@@ -10,7 +10,7 @@ EMULATOR = os.path.join(SDK, "emulator", "emulator.exe")
 # AUTOTOUR_AVD_HOME, AUTOTOUR_FWD_PORT): still one emulator of its own, never a real phone
 PORT = int(os.environ.get("AUTOTOUR_PORT", "5558"))
 SERIAL = "emulator-%d" % PORT
-PKG = "org.videolan.vlc.debug"
+PKG = "org.kuchisofts.vlcredesign.debug"
 RECEIVER = PKG + "/org.videolan.vlc.autotour.AutoTourReceiver"
 DUMP_FILE = "/sdcard/Android/data/%s/files/autotour-dump.json" % PKG
 AVD_HOME = os.environ.get("AUTOTOUR_AVD_HOME", r"D:\vlc-redesign-tmp\android-autotour\avd")

@@ -243,10 +243,10 @@ def logcat_findings(lines, step, pid):
     out = []
     pid = (pid or "").split()[0] if pid else ""
     for n, ln in enumerate(lines):
-        if "FATAL EXCEPTION" in ln or ("AndroidRuntime" in ln and "Process: org.videolan.vlc.debug" in ln):
+        if "FATAL EXCEPTION" in ln or ("AndroidRuntime" in ln and "Process: org.kuchisofts.vlcredesign.debug" in ln):
             ctx = " / ".join(l.strip()[-160:] for l in lines[n + 1:n + 4])
             out.append(("critical", "crash", ln.strip()[-200:] + " " + ctx, "crash|" + re.sub(r"\d+", "#", ctx[:120])))
-        elif "ANR in org.videolan.vlc.debug" in ln:
+        elif "ANR in org.kuchisofts.vlcredesign.debug" in ln:
             out.append(("critical", "anr", ln.strip()[-300:], "anr|" + step["name"]))
         elif "StrictMode" in ln and "policy violation" in ln and (not pid or (" %s " % pid) in ln):
             kind = re.search(r"strictmode\.(\w+)", ln)
