@@ -225,6 +225,8 @@ fun contextMenuItems(context: android.content.Context, flags: FlagSet<ContextOpt
     if (flags.contains(CTX_GO_TO_FOLDER)) add(Simple(CTX_GO_TO_FOLDER, context.getString(R.string.go_to_folder), R.drawable.ic_browse_parent))
     if (flags.contains(CTX_CUSTOM_REMOVE)) add(Simple(CTX_CUSTOM_REMOVE, context.getString(R.string.remove_custom_path), R.drawable.ic_delete))
     if (flags.contains(CTX_BAN_FOLDER)) add(Simple(CTX_BAN_FOLDER, context.getString(R.string.group_ban_folder), R.drawable.ic_hide_source))
+    if (flags.contains(ContextOption.CTX_PIN)) add(Simple(ContextOption.CTX_PIN, org.videolan.vlc.util.Pins.label(context, false), R.drawable.rd_ic_pin))
+    if (flags.contains(ContextOption.CTX_UNPIN)) add(Simple(ContextOption.CTX_UNPIN, org.videolan.vlc.util.Pins.label(context, true), R.drawable.rd_ic_pin))
 }
 
 sealed class CtxMenuItem(val id: ContextOption, val title: String, val icon: Int)

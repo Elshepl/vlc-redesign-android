@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Nie są wyświetlane żadne napisy.</string>
     <string name="rd_sync_no_cues">Nie można pokazać wierszy tej ścieżki napisów; opóźnienie nadal obowiązuje.</string>
     <string name="rd_sync_no_sound">Nie można pokazać dźwięku tego filmu.</string>
+    <string name="rd_pin_to_sidebar">Przypnij do paska bocznego</string>
+    <string name="rd_unpin_from_sidebar">Odepnij od paska bocznego</string>
+    <string name="rd_pin_to_home">Przypnij do ekranu głównego</string>
+    <string name="rd_unpin_from_home">Odepnij od ekranu głównego</string>
+    <string name="rd_pinned">Przypięte</string>
+    <string name="rd_pinned_missing">Ten przypięty folder lub lista odtwarzania już nie istnieje.</string>
 </resources>

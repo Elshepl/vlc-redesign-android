@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">표시되는 자막이 없습니다.</string>
     <string name="rd_sync_no_cues">이 자막 트랙의 줄을 표시할 수 없습니다. 지연은 계속 적용됩니다.</string>
     <string name="rd_sync_no_sound">이 동영상의 소리를 표시할 수 없습니다.</string>
+    <string name="rd_pin_to_sidebar">사이드바에 고정</string>
+    <string name="rd_unpin_from_sidebar">사이드바에서 고정 해제</string>
+    <string name="rd_pin_to_home">홈에 고정</string>
+    <string name="rd_unpin_from_home">홈에서 고정 해제</string>
+    <string name="rd_pinned">고정됨</string>
+    <string name="rd_pinned_missing">고정한 폴더나 재생 목록이 더 이상 없습니다.</string>
 </resources>

@@ -654,7 +654,7 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
                 CTX_ADD_SHORTCUT -> lifecycleScope.launch { requireActivity().createShortcut(media)}
                 else -> {}
             }
-            is Folder -> when (option) {
+            is Folder -> if (!org.videolan.vlc.util.Pins.handle(requireContext(), option, media)) when (option) {
                 CTX_PLAY -> viewModel.play(position)
                 CTX_APPEND -> viewModel.append(position)
                 CTX_ADD_TO_PLAYLIST -> viewModel.addItemToPlaylist(requireActivity(), position)
@@ -719,6 +719,7 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
                     is Folder -> {
                         val flags = createCtxFolderFlags().apply {
                             if (item.isFavorite) add(CTX_FAV_REMOVE) else add(CTX_FAV_ADD)
+                            org.videolan.vlc.util.Pins.option(requireContext(), item)?.let { add(it) }
                         }
                         showContext(requireActivity(), this@VideoGridFragment, position, item, flags)
                     }

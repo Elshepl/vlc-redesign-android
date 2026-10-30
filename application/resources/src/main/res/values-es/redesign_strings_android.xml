@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">No se muestran subtítulos.</string>
     <string name="rd_sync_no_cues">No se pueden mostrar las líneas de esta pista de subtítulos; el retraso se aplica igualmente.</string>
     <string name="rd_sync_no_sound">No se puede mostrar el sonido de este vídeo.</string>
+    <string name="rd_pin_to_sidebar">Fijar en la barra lateral</string>
+    <string name="rd_unpin_from_sidebar">Quitar de la barra lateral</string>
+    <string name="rd_pin_to_home">Fijar en Inicio</string>
+    <string name="rd_unpin_from_home">Quitar de Inicio</string>
+    <string name="rd_pinned">Fijados</string>
+    <string name="rd_pinned_missing">Esta carpeta o lista de reproducción fijada ya no existe.</string>
 </resources>

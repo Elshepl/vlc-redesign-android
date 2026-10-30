@@ -56,4 +56,10 @@
     <string name="rd_sync_no_track">لا تُعرض أي ترجمة.</string>
     <string name="rd_sync_no_cues">لا يمكن عرض أسطر مسار الترجمة هذا؛ التأخير ما زال يُطبَّق.</string>
     <string name="rd_sync_no_sound">لا يمكن عرض صوت هذا الفيديو.</string>
+    <string name="rd_pin_to_sidebar">تثبيت في الشريط الجانبي</string>
+    <string name="rd_unpin_from_sidebar">إلغاء التثبيت من الشريط الجانبي</string>
+    <string name="rd_pin_to_home">تثبيت في الرئيسية</string>
+    <string name="rd_unpin_from_home">إلغاء التثبيت من الرئيسية</string>
+    <string name="rd_pinned">المثبّتة</string>
+    <string name="rd_pinned_missing">لم يعد هذا المجلد أو قائمة التشغيل المثبّتة موجودًا.</string>
 </resources>

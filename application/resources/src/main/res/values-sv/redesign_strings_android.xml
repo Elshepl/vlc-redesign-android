@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Inga undertexter visas.</string>
     <string name="rd_sync_no_cues">Raderna i det här undertextspåret kan inte visas; fördröjningen gäller ändå.</string>
     <string name="rd_sync_no_sound">Ljudet i den här videon kan inte visas.</string>
+    <string name="rd_pin_to_sidebar">Fäst i sidofältet</string>
+    <string name="rd_unpin_from_sidebar">Lossa från sidofältet</string>
+    <string name="rd_pin_to_home">Fäst på Hem</string>
+    <string name="rd_unpin_from_home">Lossa från Hem</string>
+    <string name="rd_pinned">Fästa</string>
+    <string name="rd_pinned_missing">Den fästa mappen eller spellistan finns inte längre.</string>
 </resources>

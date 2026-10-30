@@ -5,6 +5,7 @@
     <item name="rd_tablet_sidebar_indicator" type="id" />
     <item name="rd_tablet_sidebar_icon" type="id" />
     <item name="rd_tablet_sidebar_label" type="id" />
+    <item name="rd_tablet_sidebar_pins" type="id" />
     <!-- the desktop's expanded sidebar instead of the navigation rail (values-sw600dp-w900dp) -->
     <bool name="rd_tablet_sidebar">false</bool>
 </resources>

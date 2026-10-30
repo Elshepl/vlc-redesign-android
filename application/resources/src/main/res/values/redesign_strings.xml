@@ -444,4 +444,11 @@
     <string name="rd_series_unavailable">A saved audio or subtitle track is unavailable in this episode.</string>
     <string name="rd_series_saved">Saved for episodes of %1$s.</string>
     <string name="rd_series_removed">Series preset removed.</string>
+    <!-- pinned folders and playlists (the tablet sidebar, Home on a phone) -->
+    <string name="rd_pin_to_sidebar">Pin to Sidebar</string>
+    <string name="rd_unpin_from_sidebar">Unpin from Sidebar</string>
+    <string name="rd_pin_to_home">Pin to Home</string>
+    <string name="rd_unpin_from_home">Unpin from Home</string>
+    <string name="rd_pinned">Pinned</string>
+    <string name="rd_pinned_missing">This pinned folder or playlist is no longer there.</string>
 </resources>

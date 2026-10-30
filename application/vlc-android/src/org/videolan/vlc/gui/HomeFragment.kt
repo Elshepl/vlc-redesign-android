@@ -52,6 +52,7 @@ import org.videolan.vlc.media.MediaUtils
 import org.videolan.vlc.util.ContextOption
 import org.videolan.vlc.util.ContextOption.*
 import org.videolan.vlc.util.FlagSet
+import org.videolan.vlc.util.Pins
 import org.videolan.vlc.util.share
 import org.videolan.vlc.util.showParentFolder
 
@@ -61,7 +62,7 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
         Medialibrary.OnMedialibraryReadyListener {
 
     /** One card: a media, or a folder (a directory media) of Frequently Visited Folders. */
-    private class Card(val media: MediaWrapper, val folder: Boolean = false, val playCount: Long = 0L)
+    private class Card(val media: MediaWrapper, val folder: Boolean = false, val playCount: Long = 0L, val pin: Pins.Pin? = null)
 
     private enum class Kind { VIDEO, AUDIO, FOLDER, MIXED }
 
@@ -132,11 +133,12 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
             b.progress = progress
             b.rdProgress.layoutParams = b.rdProgress.layoutParams.apply { this.width = width * progress / 1000 }
             b.scaleType = ImageView.ScaleType.CENTER_CROP
-            b.cover = if (card.folder) null else if (video) UiTools.getDefaultVideoDrawable(b.root.context)
+            b.cover = if (card.folder) null else if (card.pin != null) UiTools.getDefaultPlaylistDrawable(b.root.context)
+                    else if (video) UiTools.getDefaultVideoDrawable(b.root.context)
                     else getAudioIconDrawable(b.root.context, MediaWrapper.TYPE_AUDIO, true)
             if (!card.folder) b.scaleType = ImageView.ScaleType.CENTER_INSIDE
             b.executePendingBindings()
-            if (!card.folder) loadImage(b.rdCover, media, width, card = true)
+            if (!card.folder && card.pin == null) loadImage(b.rdCover, media, width, card = true)
             b.root.contentDescription = media.title
             b.root.setOnClickListener { onCardClick(section, holder.bindingAdapterPosition) }
             b.root.setOnLongClickListener {
@@ -147,6 +149,7 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
     }
 
     private lateinit var sections: List<Section>
+    private lateinit var pinned: Section
     private lateinit var continueWatching: Section
     private lateinit var listenAgain: Section
     private lateinit var folders: Section
@@ -173,7 +176,20 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
         favorites = Section(view.findViewById(R.id.rd_home_favorites), R.string.favorites, Kind.MIXED, null)
         newVideos = Section(view.findViewById(R.id.rd_home_new_videos), R.string.rd_new_videos, Kind.MIXED) { selectTab(R.id.nav_video) }
         newMusic = Section(view.findViewById(R.id.rd_home_new_music), R.string.rd_new_music, Kind.MIXED) { selectTab(R.id.nav_audio) }
-        sections = listOf(continueWatching, listenAgain, folders, favorites, newVideos, newMusic)
+        pinned = Section(view.findViewById(R.id.rd_home_pinned), R.string.rd_pinned, Kind.FOLDER, null)
+        sections = listOf(pinned, continueWatching, listenAgain, folders, favorites, newVideos, newMusic)
+        // a folder or a playlist pinned or unpinned anywhere
+        lifecycleScope.launch { Pins.pins(view.context).collect { if (it != null) refresh() } }
+    }
+
+    /** The pins, on Home only when the window has no sidebar to show them */
+    private fun pinnedCards(context: android.content.Context): List<Card> {
+        if (context.resources.getBoolean(R.bool.rd_tablet_sidebar)) return emptyList()
+        return Pins.list(context).map { pin ->
+            val uri = if (pin.kind == Pins.FOLDER) Uri.parse(pin.id) else Uri.parse("${pin.kind}:${pin.id}")
+            val media = MLServiceLocator.getAbstractMediaWrapper(uri).apply { title = pin.title; type = MediaWrapper.TYPE_DIR }
+            Card(media, folder = pin.kind != Pins.PLAYLIST, pin = pin)
+        }
     }
 
     override fun onStart() {
@@ -235,6 +251,7 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
                         ml.getPagedAudio(Medialibrary.SORT_INSERTIONDATE, true, false, false, MAX_CARDS, 0).map { Card(it) })
             } ?: return@launch
             if (!isAdded) return@launch
+            pinned.update(pinnedCards(context))
             continueWatching.update(data.continueWatching)
             listenAgain.update(data.listenAgain)
             folders.update(data.folders)
@@ -264,6 +281,7 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
     private fun onCardClick(section: Section, position: Int) {
         val card = section.cards.getOrNull(position) ?: return
         val activity = activity ?: return
+        card.pin?.let { Pins.open(activity, it); return }
         if (card.folder) {
             val intent = Intent(activity.applicationContext, SecondaryActivity::class.java)
             intent.putExtra(KEY_MEDIA, card.media)
@@ -280,6 +298,11 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
 
     private fun onCardLongClick(section: Section, position: Int) {
         val card = section.cards.getOrNull(position) ?: return
+        if (card.pin != null) {
+            ctxSection = section
+            showContext(requireActivity(), this, position, card.media, FlagSet(ContextOption::class.java).apply { add(ContextOption.CTX_UNPIN) })
+            return
+        }
         if (card.folder) return
         val media = card.media
         ctxSection = section
@@ -296,6 +319,10 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
 
     override fun onCtxAction(position: Int, option: ContextOption) {
         val section = ctxSection ?: return
+        section.cards.getOrNull(position)?.pin?.let { pin ->
+            if (option == ContextOption.CTX_UNPIN) Pins.unpin(requireContext(), pin)
+            return
+        }
         val media = section.cards.getOrNull(position)?.media ?: return
         val activity = activity ?: return
         when (option) {

@@ -70,4 +70,10 @@
     <string name="rd_sync_no_track">לא מוצגות כתוביות.</string>
     <string name="rd_sync_no_cues">אי אפשר להציג את השורות של רצועת הכתוביות הזו; ההשהיה עדיין חלה.</string>
     <string name="rd_sync_no_sound">אי אפשר להציג את הצליל של הסרטון הזה.</string>
+    <string name="rd_pin_to_sidebar">הצמדה לסרגל הצד</string>
+    <string name="rd_unpin_from_sidebar">ביטול הצמדה מסרגל הצד</string>
+    <string name="rd_pin_to_home">הצמדה לבית</string>
+    <string name="rd_unpin_from_home">ביטול הצמדה מהבית</string>
+    <string name="rd_pinned">מוצמדים</string>
+    <string name="rd_pinned_missing">התיקייה או רשימת ההשמעה המוצמדת כבר לא קיימת.</string>
 </resources>

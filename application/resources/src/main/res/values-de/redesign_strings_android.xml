@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Es werden keine Untertitel angezeigt.</string>
     <string name="rd_sync_no_cues">Die Zeilen dieser Untertitelspur können nicht angezeigt werden; die Verzögerung gilt trotzdem.</string>
     <string name="rd_sync_no_sound">Der Ton dieses Videos kann nicht angezeigt werden.</string>
+    <string name="rd_pin_to_sidebar">An Seitenleiste anheften</string>
+    <string name="rd_unpin_from_sidebar">Von Seitenleiste lösen</string>
+    <string name="rd_pin_to_home">An Start anheften</string>
+    <string name="rd_unpin_from_home">Von Start lösen</string>
+    <string name="rd_pinned">Angeheftet</string>
+    <string name="rd_pinned_missing">Dieser angeheftete Ordner oder diese Wiedergabeliste ist nicht mehr vorhanden.</string>
 </resources>

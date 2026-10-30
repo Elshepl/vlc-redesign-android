@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Aucun sous-titre n’est affiché.</string>
     <string name="rd_sync_no_cues">Les lignes de cette piste de sous-titres ne peuvent pas être affichées ; le décalage s’applique quand même.</string>
     <string name="rd_sync_no_sound">Le son de cette vidéo ne peut pas être affiché.</string>
+    <string name="rd_pin_to_sidebar">Épingler à la barre latérale</string>
+    <string name="rd_unpin_from_sidebar">Détacher de la barre latérale</string>
+    <string name="rd_pin_to_home">Épingler à l’accueil</string>
+    <string name="rd_unpin_from_home">Détacher de l’accueil</string>
+    <string name="rd_pinned">Épinglés</string>
+    <string name="rd_pinned_missing">Ce dossier ou cette playlist épinglé n’existe plus.</string>
 </resources>

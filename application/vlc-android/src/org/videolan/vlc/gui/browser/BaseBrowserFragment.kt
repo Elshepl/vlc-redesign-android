@@ -807,6 +807,8 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
                     if (isFileBrowser || isNetworkBrowser) {
                         val favExists = browserFavRepository.browserFavExists(mw.uri)
                         if (favExists) add(CTX_FAV_REMOVE) else add(CTX_FAV_ADD)
+                        // VLC Redesign: Pin to Sidebar
+                        org.videolan.vlc.util.Pins.option(requireContext(), mw)?.let { add(it) }
                     }
                     if (isFileBrowser && !isRootDirectory && !MedialibraryUtils.isScanned(item.uri.toString())) {
                         add(CTX_ADD_SCANNED)
@@ -851,6 +853,7 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
     override fun onCtxAction(position: Int, option: ContextOption) {
         val mw = adapter.getItem(position) as? MediaWrapper
                 ?: return
+        if (org.videolan.vlc.util.Pins.handle(requireContext(), option, mw)) return
         when (option) {
             CTX_PLAY -> lifecycleScope.launch { MediaUtils.openMedia(activity, getMediaWithMeta(mw)) }
             CTX_QUICK_PLAY -> lifecycleScope.launch {

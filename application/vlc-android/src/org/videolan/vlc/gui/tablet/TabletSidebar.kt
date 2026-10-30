@@ -45,6 +45,12 @@ import org.videolan.tools.dp
 import org.videolan.vlc.R
 import org.videolan.vlc.gui.MainActivity
 import org.videolan.vlc.gui.helpers.UiTools
+import org.videolan.vlc.gui.dialogs.RdContextMenu
+import org.videolan.vlc.gui.dialogs.Simple
+import org.videolan.vlc.util.ContextOption
+import org.videolan.vlc.util.Pins
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 /**
  * VLC Redesign, tablets: the desktop's expanded sidebar (SideNavigationPane / SideNavigationDelegate) instead of
@@ -111,6 +117,13 @@ object TabletSidebar {
         sidebar.addView(View(ctx), LinearLayout.LayoutParams(1, 4.dp))
         val menu = rail.menu
         for (i in 0 until menu.size()) sidebar.addView(row(activity, rail, menu.getItem(i)))
+        // the folders and playlists pinned (the desktop's "Pin to Sidebar"), under the pages
+        val pins = LinearLayout(ctx).apply {
+            id = R.id.rd_tablet_sidebar_pins
+            orientation = LinearLayout.VERTICAL
+        }
+        sidebar.addView(pins, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+        activity.lifecycleScope.launch { Pins.pins(activity).collect { list -> if (list != null) fillPins(activity, pins, list) } }
         sidebar.addView(View(ctx), LinearLayout.LayoutParams(1, 0, 1f))
         // the large play button of the rail's header, kept for "play all" of the current page
         rail.headerView?.let { header ->
@@ -169,6 +182,55 @@ object TabletSidebar {
         row.addView(label, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
         row.setTag(R.id.rd_tablet_sidebar_label, item.itemId)
         return row.also { it.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp } }
+    }
+
+    /** "Pinned", then a row per pin (a tap opens it; a long press offers Unpin from Sidebar) */
+    private fun fillPins(activity: MainActivity, box: LinearLayout, pins: List<Pins.Pin>) {
+        val ctx = activity
+        box.removeAllViews()
+        if (pins.isEmpty()) return
+        val muted = UiTools.getColorFromAttribute(ctx, R.attr.rd_icon)
+        box.addView(TextView(ctx).apply {
+            setText(R.string.rd_pinned)
+            typeface = ResourcesCompat.getFont(ctx, R.font.inter)
+            setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
+            setTextColor(muted)
+            textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+            setPaddingRelative(12.dp, 16.dp, 8.dp, 6.dp)
+        })
+        val hover = UiTools.getColorFromAttribute(ctx, R.attr.rd_hover)
+        for (pin in pins) {
+            val mask = GradientDrawable().apply { cornerRadius = 6.dp.toFloat(); setColor(0xFFFFFFFF.toInt()) }
+            val row = LinearLayout(ctx).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL
+                minimumHeight = 40.dp
+                setPaddingRelative(8.dp, 4.dp, 8.dp, 4.dp)
+                background = RippleDrawable(ColorStateList.valueOf(hover), null, mask)
+                isClickable = true
+                isFocusable = true
+                contentDescription = pin.title
+                setOnClickListener { Pins.open(activity, pin) }
+                setOnLongClickListener {
+                    RdContextMenu.show(activity, listOf(Simple(ContextOption.CTX_UNPIN, Pins.label(ctx, true), R.drawable.rd_ic_pin))) { Pins.unpin(ctx, pin) }
+                    true
+                }
+            }
+            row.addView(ImageView(ctx).apply {
+                setImageResource(Pins.icon(pin))
+                importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+            }, LinearLayout.LayoutParams(24.dp, 24.dp).apply { marginEnd = 12.dp })
+            row.addView(TextView(ctx).apply {
+                text = pin.title
+                typeface = ResourcesCompat.getFont(ctx, R.font.inter)
+                setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
+                setTextColor(muted)
+                maxLines = 1
+                ellipsize = TextUtils.TruncateAt.END
+                textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+            }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+            box.addView(row, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp })
+        }
     }
 
     /**

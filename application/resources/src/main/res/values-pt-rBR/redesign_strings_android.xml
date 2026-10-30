@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Nenhuma legenda é exibida.</string>
     <string name="rd_sync_no_cues">As linhas desta faixa de legendas não podem ser exibidas; o atraso ainda se aplica.</string>
     <string name="rd_sync_no_sound">O som deste vídeo não pode ser exibido.</string>
+    <string name="rd_pin_to_sidebar">Fixar na barra lateral</string>
+    <string name="rd_unpin_from_sidebar">Desafixar da barra lateral</string>
+    <string name="rd_pin_to_home">Fixar no Início</string>
+    <string name="rd_unpin_from_home">Desafixar do Início</string>
+    <string name="rd_pinned">Fixados</string>
+    <string name="rd_pinned_missing">Esta pasta ou playlist fixada não existe mais.</string>
 </resources>

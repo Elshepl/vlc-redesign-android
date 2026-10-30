@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Nezobrazují se žádné titulky.</string>
     <string name="rd_sync_no_cues">Řádky této stopy titulků nelze zobrazit; zpoždění přesto platí.</string>
     <string name="rd_sync_no_sound">Zvuk tohoto videa nelze zobrazit.</string>
+    <string name="rd_pin_to_sidebar">Připnout na postranní panel</string>
+    <string name="rd_unpin_from_sidebar">Odepnout z postranního panelu</string>
+    <string name="rd_pin_to_home">Připnout na Domů</string>
+    <string name="rd_unpin_from_home">Odepnout z Domů</string>
+    <string name="rd_pinned">Připnuté</string>
+    <string name="rd_pinned_missing">Tato připnutá složka nebo seznam skladeb už neexistuje.</string>
 </resources>

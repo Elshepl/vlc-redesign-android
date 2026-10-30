@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">未显示字幕。</string>
     <string name="rd_sync_no_cues">无法显示此字幕轨道的行；延迟仍然有效。</string>
     <string name="rd_sync_no_sound">无法显示此视频的声音。</string>
+    <string name="rd_pin_to_sidebar">固定到侧边栏</string>
+    <string name="rd_unpin_from_sidebar">从侧边栏取消固定</string>
+    <string name="rd_pin_to_home">固定到主页</string>
+    <string name="rd_unpin_from_home">从主页取消固定</string>
+    <string name="rd_pinned">已固定</string>
+    <string name="rd_pinned_missing">此固定的文件夹或播放列表已不存在。</string>
 </resources>

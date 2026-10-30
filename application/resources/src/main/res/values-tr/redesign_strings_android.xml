@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Altyazı gösterilmiyor.</string>
     <string name="rd_sync_no_cues">Bu altyazı parçasının satırları gösterilemiyor; gecikme yine de uygulanır.</string>
     <string name="rd_sync_no_sound">Bu videonun sesi gösterilemiyor.</string>
+    <string name="rd_pin_to_sidebar">Kenar çubuğuna sabitle</string>
+    <string name="rd_unpin_from_sidebar">Kenar çubuğundan kaldır</string>
+    <string name="rd_pin_to_home">Ana sayfaya sabitle</string>
+    <string name="rd_unpin_from_home">Ana sayfadan kaldır</string>
+    <string name="rd_pinned">Sabitlenenler</string>
+    <string name="rd_pinned_missing">Sabitlenen bu klasör veya çalma listesi artık yok.</string>
 </resources>

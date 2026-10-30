@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Субтитри не показуються.</string>
     <string name="rd_sync_no_cues">Рядки цієї доріжки субтитрів неможливо показати; затримка все одно застосовується.</string>
     <string name="rd_sync_no_sound">Звук цього відео неможливо показати.</string>
+    <string name="rd_pin_to_sidebar">Закріпити на бічній панелі</string>
+    <string name="rd_unpin_from_sidebar">Відкріпити від бічної панелі</string>
+    <string name="rd_pin_to_home">Закріпити на головній</string>
+    <string name="rd_unpin_from_home">Відкріпити від головної</string>
+    <string name="rd_pinned">Закріплені</string>
+    <string name="rd_pinned_missing">Цієї закріпленої теки або списку відтворення більше немає.</string>
 </resources>

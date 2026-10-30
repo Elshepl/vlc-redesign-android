@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">未顯示字幕。</string>
     <string name="rd_sync_no_cues">無法顯示此字幕軌的行；延遲仍然有效。</string>
     <string name="rd_sync_no_sound">無法顯示此影片的聲音。</string>
+    <string name="rd_pin_to_sidebar">釘選到側邊欄</string>
+    <string name="rd_unpin_from_sidebar">從側邊欄取消釘選</string>
+    <string name="rd_pin_to_home">釘選到首頁</string>
+    <string name="rd_unpin_from_home">從首頁取消釘選</string>
+    <string name="rd_pinned">已釘選</string>
+    <string name="rd_pinned_missing">此釘選的資料夾或播放清單已不存在。</string>
 </resources>

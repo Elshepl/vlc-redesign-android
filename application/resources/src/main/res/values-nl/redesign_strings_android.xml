@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Er worden geen ondertitels getoond.</string>
     <string name="rd_sync_no_cues">De regels van dit ondertitelspoor kunnen niet worden getoond; de vertraging geldt nog steeds.</string>
     <string name="rd_sync_no_sound">Het geluid van deze video kan niet worden getoond.</string>
+    <string name="rd_pin_to_sidebar">Vastmaken aan zijbalk</string>
+    <string name="rd_unpin_from_sidebar">Losmaken van zijbalk</string>
+    <string name="rd_pin_to_home">Vastmaken aan Start</string>
+    <string name="rd_unpin_from_home">Losmaken van Start</string>
+    <string name="rd_pinned">Vastgemaakt</string>
+    <string name="rd_pinned_missing">Deze vastgemaakte map of afspeellijst bestaat niet meer.</string>
 </resources>

@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">字幕は表示されていません。</string>
     <string name="rd_sync_no_cues">この字幕トラックの行は表示できません。遅延は引き続き適用されます。</string>
     <string name="rd_sync_no_sound">この動画の音声は表示できません。</string>
+    <string name="rd_pin_to_sidebar">サイドバーにピン留め</string>
+    <string name="rd_unpin_from_sidebar">サイドバーからピン留めを外す</string>
+    <string name="rd_pin_to_home">ホームにピン留め</string>
+    <string name="rd_unpin_from_home">ホームからピン留めを外す</string>
+    <string name="rd_pinned">ピン留め</string>
+    <string name="rd_pinned_missing">このピン留めされたフォルダーまたはプレイリストはもうありません。</string>
 </resources>

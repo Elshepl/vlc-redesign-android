@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Nessun sottotitolo visualizzato.</string>
     <string name="rd_sync_no_cues">Le righe di questa traccia di sottotitoli non possono essere mostrate; il ritardo si applica comunque.</string>
     <string name="rd_sync_no_sound">Il suono di questo video non può essere mostrato.</string>
+    <string name="rd_pin_to_sidebar">Fissa nella barra laterale</string>
+    <string name="rd_unpin_from_sidebar">Rimuovi dalla barra laterale</string>
+    <string name="rd_pin_to_home">Fissa nella Home</string>
+    <string name="rd_unpin_from_home">Rimuovi dalla Home</string>
+    <string name="rd_pinned">Fissati</string>
+    <string name="rd_pinned_missing">Questa cartella o playlist fissata non esiste più.</string>
 </resources>

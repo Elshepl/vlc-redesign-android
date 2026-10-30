@@ -54,4 +54,10 @@
     <string name="rd_sync_no_track">Субтитры не показываются.</string>
     <string name="rd_sync_no_cues">Строки этой дорожки субтитров нельзя показать; задержка всё равно применяется.</string>
     <string name="rd_sync_no_sound">Звук этого видео нельзя показать.</string>
+    <string name="rd_pin_to_sidebar">Закрепить на боковой панели</string>
+    <string name="rd_unpin_from_sidebar">Открепить от боковой панели</string>
+    <string name="rd_pin_to_home">Закрепить на главной</string>
+    <string name="rd_unpin_from_home">Открепить от главной</string>
+    <string name="rd_pinned">Закреплённые</string>
+    <string name="rd_pinned_missing">Этой закреплённой папки или плейлиста больше нет.</string>
 </resources>
