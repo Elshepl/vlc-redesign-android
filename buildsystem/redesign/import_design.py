@@ -59,7 +59,13 @@ def argb(hexc):
     raise ValueError(hexc)
 
 
+# arrows that turn round in a right to left layout
+AUTO_MIRRORED = {"ic_arrow_back.xml"}
+
+
 def write(path, text):
+    if os.path.basename(path) in AUTO_MIRRORED and "autoMirrored" not in text:
+        text = re.sub(r'(android:viewportHeight="[^"]*")>', r'\1' + '\n    android:autoMirrored="true">', text, count=1)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
@@ -263,7 +269,7 @@ def convert(svg_file, colour_map=None, size=None):
     return body + "\n".join(out) + "\n</vector>\n", missing
 
 
-HAND_DRAWN = {"rd_ic_chevron_right.xml", "rd_ic_mini_pause.xml", "rd_ic_mini_play.xml", "rd_ic_player_bar_settings.xml"}
+HAND_DRAWN = {"rd_ic_chevron_right.xml", "rd_ic_mini_pause.xml", "rd_ic_mini_play.xml", "rd_ic_player_bar_settings.xml", "rd_ic_phone.xml"}
 
 
 def icons(design, version):
@@ -533,7 +539,7 @@ GLYPH_OVERRIDES = {
     "ic_play_next": ("glyphs/next/default", None), "ic_delete": ("duo/remove", None),
     "ic_remove_from_playlist": ("duo/remove", None), "ic_play_from_start": ("glyphs/replay/default", None),
     "ic_speed_all": ("+speed", None), "ic_stop_after_this": ("glyphs/stop/default", None),
-    "ic_mark_as_played": ("glyphs/check/default", None), "ic_mark_all_as_played": ("glyphs/check/default", None),
+    "ic_mark_as_played": ("glyphs/check/selected", None), "ic_mark_all_as_played": ("glyphs/check/selected", None),
     "ic_download_subtitles": ("glyphs/subtitle/default", None), "ic_link": ("glyphs/link/default", None),
     "ic_album": ("glyphs/album/default", None), "ic_browse_parent": ("glyphs/folder/default", None),
     "ic_add_to_scan": ("glyphs/new-folder/default", None), "ic_pin_lock": ("+lock", None),
@@ -541,7 +547,34 @@ GLYPH_OVERRIDES = {
     "rd_ic_effects": ("glyphs/spectrum/default", None),
     # History's Clear history: the desktop's removal glyph (it has no trash can)
     "ic_trash": ("glyphs/remove/default", "?attr/colorControlNormal"),
+    # the last ones of the secondary screens: context menus, track options, display options, bookmarks, the
+    # playlist editor, the buttons of the lists and the About page
+    "ic_add_to_group": ("glyphs/add/default", None), "ic_remove_from_group": ("glyphs/remove/default", None),
+    "ic_app_shortcut": ("duo/open", None), "ic_go_to_folder": ("glyphs/folder/default", None),
+    "ic_group_auto": ("glyphs/lists/default", None), "ic_hide_source": ("glyphs/privacy/default", None),
+    "ic_set_ringtone": ("glyphs/audio/default", None), "ic_mark_as_not_played": ("glyphs/close/default", None),
+    "ic_mark_all_as_not_played": ("glyphs/close/default", None), "ic_delay": ("duo/sync", None),
+    "ic_subtitles_file": ("subtitle-file", None), "ic_check": ("glyphs/check/selected", None),
+    "ic_view_grid": ("grid", None), "ic_view_list": ("list", None),
+    "ic_fab_add": ("glyphs/add/default", None), "ic_fab_play": ("glyphs/play/default", None),
+    "ic_fab_shuffle": ("glyphs/shuffle/default", None), "ic_play": ("glyphs/play/default", None),
+    "ic_play_as_audio": ("glyphs/audio/default", None), "ic_refresh": ("glyphs/refresh/default", None),
+    "ic_next": ("glyphs/next/default", None), "ic_previous": ("glyphs/previous/default", None),
+    "ic_player_bookmark_next": ("glyphs/next/default", None), "ic_player_bookmark_previous": ("glyphs/previous/default", None),
+    "ic_bookmark_add": ("glyphs/bookmark/default", None), "ic_playlist_delete": ("glyphs/remove/default", None),
+    "ic_close_up": ("glyphs/close/default", None), "ic_arrow_left": ("glyphs/arrow-left/default", None),
+    "ic_arrow_right": ("glyphs/arrow-right/default", None), "ic_done": ("glyphs/check/selected", None),
+    "ic_options_check": ("glyphs/check/selected", None), "ic_export": ("duo/export", None),
+    "ic_import": ("glyphs/open/default", None), "ic_update": ("glyphs/refresh/default", None),
+    "ic_display_settings": ("glyphs/view/default", None), "ic_incognito": ("glyphs/privacy/default", None),
+    "ic_account": ("duo/profile", None), "ic_options_equalizer": ("glyphs/EQ/default", None),
+    "ic_storage": ("glyphs/folder/default", None),
+    # (new: Pin to Sidebar / Unpin from Sidebar; the desktop's push-pin, still only in its pixmaps)
+    "rd_ic_pin": ("@duo/pin", "?attr/colorControlNormal"),
 }
+
+# The desktop's pixmaps (an "@" source of GLYPH_OVERRIDES): glyphs added there before the design folder has them
+PIXMAPS = os.path.join("..", "modules", "gui", "qt", "pixmaps", "redesign")
 
 
 def glyph_overrides(design, version):
@@ -563,7 +596,11 @@ def glyph_overrides(design, version):
         if src.startswith("+"):
             xml = extra_xml(src[1:], colour, size)
         else:
-            xml, _ = convert(os.path.join(design, "icons", "svg", src + ".svg"), None, size)
+            svg = os.path.join(design, PIXMAPS, src[1:] + ".svg") if src.startswith("@") else os.path.join(design, "icons", "svg", src + ".svg")
+            xml, _ = convert(svg, None, size)
+            # an empty vector does not inflate ("no path defined": the screen showing it closes the app)
+            if "pathData" not in xml:
+                raise SystemExit("%s: %s has no path" % (name, src))
             xml = re.sub(r'(android:(?:fill|stroke)Color=)"(?!#00000000)[^"]*"', r'\1"%s"' % colour, xml)
         write(path, hdr.replace("Do not edit.", "Do not edit; replaces the VLC Android icon.") + xml)
         done += 1
