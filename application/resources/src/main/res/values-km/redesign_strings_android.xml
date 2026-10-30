@@ -14,4 +14,10 @@
     <string name="rd_cast_this_tablet">ថេប្លេតនេះ</string>
     <string name="rd_cast_none_found">រកមិនឃើញឧបករណ៍ទេ។ បើកទូរទស្សន៍ ឬ Chromecast របស់អ្នក នៅលើបណ្ដាញដូចគ្នានឹងឧបករណ៍នេះ។</string>
     <string name="rd_cast_no_answer">%1$s មិនឆ្លើយតបទេ។ ពិនិត្យថាវាបើក ហើយនៅលើបណ្ដាញដូចគ្នានឹងឧបករណ៍នេះ។</string>
+    <string name="rd_series_applies">អនុវត្តចំពោះភាគនៃ %1$s</string>
+    <string name="rd_series_play_local">ចាក់ភាគមូលដ្ឋានមួយ ដើម្បីរក្សាទុកជម្រើសបទ និងពេលវេលារបស់វា។</string>
+    <string name="rd_series_applied">បានអនុវត្តការកំណត់ស្រេចរឿងភាគ។</string>
+    <string name="rd_series_unavailable">បទអូឌីយ៉ូ ឬចំណងជើងរងដែលបានរក្សាទុកមួយមិនមាននៅក្នុងភាគនេះទេ។</string>
+    <string name="rd_series_saved">បានរក្សាទុកសម្រាប់ភាគនៃ %1$s។</string>
+    <string name="rd_series_removed">បានយកការកំណត់ស្រេចរឿងភាគចេញ។</string>
 </resources>

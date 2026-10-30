@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Această tabletă</string>
     <string name="rd_cast_none_found">Nu s-a găsit niciun dispozitiv. Porniți televizorul sau Chromecastul, în aceeași rețea cu acest dispozitiv.</string>
     <string name="rd_cast_no_answer">%1$s nu răspunde. Verificați dacă este pornit și în aceeași rețea cu acest dispozitiv.</string>
+    <string name="rd_series_applies">Se aplică episoadelor din %1$s</string>
+    <string name="rd_series_play_local">Redați un episod local pentru a-i salva alegerile de piste și sincronizare.</string>
+    <string name="rd_series_applied">Presetarea pentru serial a fost aplicată.</string>
+    <string name="rd_series_unavailable">O pistă audio sau de subtitlu salvată nu este disponibilă în acest episod.</string>
+    <string name="rd_series_saved">Salvat pentru episoadele din %1$s.</string>
+    <string name="rd_series_removed">Presetarea pentru serial a fost eliminată.</string>
 </resources>

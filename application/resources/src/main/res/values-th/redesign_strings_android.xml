@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">แท็บเล็ตเครื่องนี้</string>
     <string name="rd_cast_none_found">ไม่พบอุปกรณ์ เปิดทีวีหรือ Chromecast ของคุณ โดยให้อยู่ในเครือข่ายเดียวกับอุปกรณ์เครื่องนี้</string>
     <string name="rd_cast_no_answer">%1$s ไม่ตอบสนอง ตรวจสอบว่าเปิดอยู่และอยู่ในเครือข่ายเดียวกับอุปกรณ์เครื่องนี้</string>
+    <string name="rd_series_applies">ใช้กับตอนต่างๆ ของ %1$s</string>
+    <string name="rd_series_play_local">เล่นตอนที่อยู่ในเครื่องเพื่อบันทึกการเลือกร่องและจังหวะเวลา</string>
+    <string name="rd_series_applied">ใช้ค่าสำเร็จรูปของซีรีส์แล้ว</string>
+    <string name="rd_series_unavailable">ร่องเสียงหรือร่องบทบรรยายที่บันทึกไว้ไม่มีในตอนนี้</string>
+    <string name="rd_series_saved">บันทึกไว้สำหรับตอนต่างๆ ของ %1$s แล้ว</string>
+    <string name="rd_series_removed">เอาค่าสำเร็จรูปของซีรีส์ออกแล้ว</string>
 </resources>

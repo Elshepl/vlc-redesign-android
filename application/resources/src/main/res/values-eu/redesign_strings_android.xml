@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Tableta hau</string>
     <string name="rd_cast_none_found">Ez da gailurik aurkitu. Piztu zure telebista edo Chromecast-a, gailu honen sare berean.</string>
     <string name="rd_cast_no_answer">%1$s gailuak ez du erantzuten. Egiaztatu piztuta dagoela eta gailu honen sare berean dagoela.</string>
+    <string name="rd_series_applies">%1$s telesailaren atalei aplikatzen zaie</string>
+    <string name="rd_series_play_local">Erreproduzitu atal lokal bat haren pista- eta denbora-aukerak gordetzeko.</string>
+    <string name="rd_series_applied">Telesail-aurrezarpena aplikatu da.</string>
+    <string name="rd_series_unavailable">Gordetako audio- edo azpititulu-pista bat ez dago erabilgarri atal honetan.</string>
+    <string name="rd_series_saved">Gordeta %1$s telesailaren ataletarako.</string>
+    <string name="rd_series_removed">Telesail-aurrezarpena kendu da.</string>
 </resources>

@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Cette tablette</string>
     <string name="rd_cast_none_found">Aucun appareil trouvé. Allumez votre TV ou votre Chromecast, sur le même réseau que cet appareil.</string>
     <string name="rd_cast_no_answer">%1$s ne répond pas. Vérifiez qu\'il est allumé et sur le même réseau que cet appareil.</string>
+    <string name="rd_series_applies">S\'applique aux épisodes de %1$s</string>
+    <string name="rd_series_play_local">Lisez un épisode local pour enregistrer ses choix de pistes et de synchronisation.</string>
+    <string name="rd_series_applied">Préréglage de série appliqué.</string>
+    <string name="rd_series_unavailable">Une piste audio ou de sous-titres enregistrée n\'est pas disponible dans cet épisode.</string>
+    <string name="rd_series_saved">Enregistré pour les épisodes de %1$s.</string>
+    <string name="rd_series_removed">Préréglage de série supprimé.</string>
+    <string name="rd_series_remember">Mémoriser pour cette série</string>
 </resources>

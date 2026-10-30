@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">此平板电脑</string>
     <string name="rd_cast_none_found">未找到设备。请打开电视或 Chromecast，并确保其与此设备位于同一网络。</string>
     <string name="rd_cast_no_answer">%1$s 没有响应。请检查它是否已开启，并与此设备位于同一网络。</string>
+    <string name="rd_series_applies">应用于 %1$s 的各集</string>
+    <string name="rd_series_play_local">请播放本地剧集以保存其轨道和时间设置。</string>
+    <string name="rd_series_applied">已应用剧集预设。</string>
+    <string name="rd_series_unavailable">已保存的某个音频或字幕轨道在本集中不可用。</string>
+    <string name="rd_series_saved">已为 %1$s 的各集保存。</string>
+    <string name="rd_series_removed">已移除剧集预设。</string>
+    <string name="rd_series_remember">为此剧集记住</string>
 </resources>

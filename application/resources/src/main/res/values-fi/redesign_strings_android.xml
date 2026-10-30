@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Tämä tabletti</string>
     <string name="rd_cast_none_found">Laitteita ei löytynyt. Käynnistä TV tai Chromecast samassa verkossa tämän laitteen kanssa.</string>
     <string name="rd_cast_no_answer">%1$s ei vastaa. Tarkista, että laite on päällä ja samassa verkossa tämän laitteen kanssa.</string>
+    <string name="rd_series_applies">Koskee sarjan %1$s jaksoja</string>
+    <string name="rd_series_play_local">Toista paikallinen jakso tallentaaksesi sen raita- ja ajoitusvalinnat.</string>
+    <string name="rd_series_applied">Sarjan esiasetus otettu käyttöön.</string>
+    <string name="rd_series_unavailable">Tallennettu ääni- tai tekstitysraita ei ole käytettävissä tässä jaksossa.</string>
+    <string name="rd_series_saved">Tallennettu sarjan %1$s jaksoille.</string>
+    <string name="rd_series_removed">Sarjan esiasetus poistettu.</string>
+    <string name="rd_series_remember">Muista tälle sarjalle</string>
 </resources>

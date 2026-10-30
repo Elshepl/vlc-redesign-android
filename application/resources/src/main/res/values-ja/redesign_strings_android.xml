@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">このタブレット</string>
     <string name="rd_cast_none_found">デバイスが見つかりません。このデバイスと同じネットワーク上で、テレビまたはChromecastの電源を入れてください。</string>
     <string name="rd_cast_no_answer">%1$sから応答がありません。電源が入っていて、このデバイスと同じネットワーク上にあるか確認してください。</string>
+    <string name="rd_series_applies">%1$sのエピソードに適用</string>
+    <string name="rd_series_play_local">トラックとタイミングの選択を保存するには、ローカルのエピソードを再生してください。</string>
+    <string name="rd_series_applied">シリーズのプリセットを適用しました。</string>
+    <string name="rd_series_unavailable">保存されたオーディオまたは字幕トラックは、このエピソードでは利用できません。</string>
+    <string name="rd_series_saved">%1$sのエピソード用に保存しました。</string>
+    <string name="rd_series_removed">シリーズのプリセットを削除しました。</string>
+    <string name="rd_series_remember">このシリーズで記憶</string>
 </resources>

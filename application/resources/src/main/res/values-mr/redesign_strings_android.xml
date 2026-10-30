@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">हा टॅबलेट</string>
     <string name="rd_cast_none_found">कोणतेही साधन आढळले नाही. तुमचा टीव्ही किंवा Chromecast या साधनाच्याच नेटवर्कवर सुरू करा.</string>
     <string name="rd_cast_no_answer">%1$s उत्तर देत नाही. ते सुरू आहे आणि या साधनाच्याच नेटवर्कवर आहे का ते तपासा.</string>
+    <string name="rd_series_applies">%1$s च्या भागांना लागू होते</string>
+    <string name="rd_series_play_local">ट्रॅक आणि वेळेच्या निवडी साठवण्यासाठी स्थानिक भाग चालवा.</string>
+    <string name="rd_series_applied">मालिका पूर्वरचना लागू केली.</string>
+    <string name="rd_series_unavailable">साठवलेला ध्वनी किंवा अनुवादपट्टी ट्रॅक या भागात उपलब्ध नाही.</string>
+    <string name="rd_series_saved">%1$s च्या भागांसाठी साठवले.</string>
+    <string name="rd_series_removed">मालिका पूर्वरचना काढली.</string>
 </resources>

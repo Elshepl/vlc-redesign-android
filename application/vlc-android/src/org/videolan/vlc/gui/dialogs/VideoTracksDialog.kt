@@ -53,6 +53,7 @@ import org.videolan.vlc.getDisableTrack
 import org.videolan.vlc.gui.dialogs.adapters.TrackAdapter
 import org.videolan.vlc.gui.dialogs.adapters.VlcTrack
 import org.videolan.vlc.gui.helpers.getBitmapFromDrawable
+import org.videolan.vlc.util.SeriesPreset
 import org.videolan.vlc.util.isTalkbackIsEnabled
 import org.videolan.vlc.isVLC4
 import com.google.android.material.tabs.TabLayout
@@ -88,6 +89,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             playbackService.audioTracks?.let { trackList ->
                 val trackAdapter = TrackAdapter(generateTrackList(trackList), trackList.firstOrNull { it.getId() == playbackService.audioTrack }, getString(R.string.track_audio))
                 trackAdapter.setOnTrackSelectedListener { track ->
+                    rdChanged = true
                     trackSelectionListener.invoke(track.getId(), TrackType.AUDIO)
                 }
                 binding.audioTracks.trackList.adapter = trackAdapter
@@ -97,6 +99,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
                 // VLC Redesign, casting: the subtitles too (the Chromecast output burns them into the picture)
                 val trackAdapter = TrackAdapter(generateTrackList(trackList), trackList.firstOrNull { it.getId() == playbackService.spuTrack }, getString(R.string.track_text))
                 trackAdapter.setOnTrackSelectedListener { track ->
+                    rdChanged = true
                     trackSelectionListener.invoke(track.getId(), TrackType.SPU)
                 }
                 binding.subtitleTracks.trackList.adapter = trackAdapter
@@ -105,6 +108,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             }
             if (playbackService.spuTracks == null) binding.subtitleTracks.emptyView.setVisible()
             applyMediaKind(playbackService)
+            setupSeries(playbackService)
         }
     }
 
@@ -203,10 +207,52 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
 
     private var rdStream = false
 
-    private fun sections() = listOf(listOf<View>(binding.videoTracks.root), listOf<View>(binding.audioTracks.root),
-            if (rdStream) listOf<View>(binding.subtitleTracks.root) else listOf<View>(binding.subtitleTracks.root, binding.rdSubTiming.root))
+    // (the series preset under the audio tracks and under the subtitles: a local file only)
+    private fun sections() = listOf(listOf<View>(binding.videoTracks.root),
+            if (rdStream) listOf<View>(binding.audioTracks.root) else listOf<View>(binding.audioTracks.root, binding.rdSeries.root),
+            if (rdStream) listOf<View>(binding.subtitleTracks.root) else listOf<View>(binding.subtitleTracks.root, binding.rdSubTiming.root, binding.rdSeries.root))
 
-    private fun showSection(index: Int) = sections().forEachIndexed { i, views -> views.forEach { it.visibility = if (i == index) View.VISIBLE else View.GONE } }
+    private var rdSection = 2
+
+    private fun showSection(index: Int) {
+        rdSection = index
+        val shown = sections().getOrElse(index) { emptyList() }
+        (sections().flatten() + binding.rdSeries.root).distinct().forEach { it.visibility = if (it in shown) View.VISIBLE else View.GONE }
+    }
+
+    // The series preset: on, the choices are kept for the episodes of the series (and again as they change here)
+    private var rdSeriesKey: String? = null
+    private var rdChanged = false
+    private var rdSeriesBound = false
+
+    private fun setupSeries(service: PlaybackService) {
+        val series = binding.rdSeries
+        val key = SeriesPreset.key(service.currentMediaWrapper?.uri)
+        if (rdSeriesBound && key == rdSeriesKey) return
+        rdSeriesBound = true
+        rdSeriesKey = key
+        series.rdSeriesSwitch.setOnCheckedChangeListener(null)
+        series.rdSeriesSwitch.isEnabled = key != null
+        series.rdSeriesSwitch.isChecked = key != null && SeriesPreset.has(requireContext(), key)
+        series.rdSeriesDetail.text = if (key == null) getString(R.string.rd_series_play_local) else getString(R.string.rd_series_applies, SeriesPreset.label(key))
+        series.rdSeriesSwitch.setOnCheckedChangeListener { _, on ->
+            val k = rdSeriesKey ?: return@setOnCheckedChangeListener
+            if (on) {
+                if (SeriesPreset.save(requireContext(), service)) series.rdSeriesDetail.text = getString(R.string.rd_series_saved, SeriesPreset.label(k))
+            } else {
+                SeriesPreset.remove(requireContext(), k)
+                series.rdSeriesDetail.text = getString(R.string.rd_series_removed)
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        // a choice changed here while the series keeps its choices: kept again
+        val key = rdSeriesKey
+        val service = rdService
+        if (rdChanged && key != null && service != null && SeriesPreset.has(requireContext(), key)) SeriesPreset.save(requireContext(), service)
+        super.onDestroyView()
+    }
 
     /**
      * The owner's rule for every platform: subtitles are for films. Audio only: no Subtitles tab at all (and no
@@ -234,6 +280,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
         val streamHasSubs = (service.spuTracks?.size ?: 0) > 0
         rdStream = stream
         configureTabs(hasVideo, hasVideo && (!stream || streamHasSubs))
+        showSection(rdSection)
         if (stream) {
             binding.rdSubTiming.root.setGone()
             binding.subtitleTracks.trackMore.setGone()
@@ -249,11 +296,15 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
     private fun setupTiming() {
         val timing = binding.rdSubTiming
         timing.rdSubDelaySlider.addOnChangeListener { _, value, fromUser ->
-            if (fromUser) rdService?.setSpuDelay(value.toLong() * 1000L)
+            if (fromUser) {
+                rdService?.setSpuDelay(value.toLong() * 1000L)
+                rdChanged = true
+            }
             showDelay(value.toLong())
         }
         timing.rdSubDelayReset.setOnClickListener {
             rdService?.setSpuDelay(0L)
+            rdChanged = true
             voiceMark = -1L
             textMark = -1L
             updateTiming()
@@ -298,6 +349,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
     }
 
     private fun applySize(scale: Int) {
+        rdChanged = true
         (activity as? org.videolan.vlc.gui.video.VideoPlayerActivity)?.setSubtitleScale(scale, osd = false)
             ?: org.videolan.tools.Settings.getInstance(requireContext()).putSingle(org.videolan.tools.KEY_SUBTITLES_TEXT_SCALE, org.videolan.tools.SubtitleScale.clamp(scale))
         showSize(scale)
@@ -313,6 +365,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
         if (voiceMark >= 0 && textMark >= 0) {
             val delay = (service.spuDelay / 1000L + (voiceMark - textMark)).coerceIn(-10000L, 10000L)
             service.setSpuDelay(delay / 50L * 50L * 1000L)
+            rdChanged = true
             voiceMark = -1L
             textMark = -1L
         }

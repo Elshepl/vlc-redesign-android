@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Bu tablet</string>
     <string name="rd_cast_none_found">Aygıt bulunamadı. TV\'nizi ya da Chromecast\'inizi bu aygıtla aynı ağda açın.</string>
     <string name="rd_cast_no_answer">%1$s yanıt vermiyor. Açık olduğunu ve bu aygıtla aynı ağda bulunduğunu denetleyin.</string>
+    <string name="rd_series_applies">%1$s bölümlerine uygulanır</string>
+    <string name="rd_series_play_local">Kayıt ve zamanlama seçimlerini kaydetmek için yerel bir bölüm oynatın.</string>
+    <string name="rd_series_applied">Dizi önayarı uygulandı.</string>
+    <string name="rd_series_unavailable">Kayıtlı bir ses ya da altyazı kaydı bu bölümde kullanılamıyor.</string>
+    <string name="rd_series_saved">%1$s bölümleri için kaydedildi.</string>
+    <string name="rd_series_removed">Dizi önayarı kaldırıldı.</string>
+    <string name="rd_series_remember">Bu dizi için hatırla</string>
 </resources>

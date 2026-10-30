@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Tento tablet</string>
     <string name="rd_cast_none_found">Nebylo nalezeno žádné zařízení. Zapněte televizor nebo Chromecast ve stejné síti, ve které je toto zařízení.</string>
     <string name="rd_cast_no_answer">Zařízení %1$s neodpovídá. Zkontrolujte, zda je zapnuté a ve stejné síti jako toto zařízení.</string>
+    <string name="rd_series_applies">Platí pro epizody seriálu %1$s</string>
+    <string name="rd_series_play_local">Přehrajte místní epizodu, abyste mohli uložit její volbu stop a časování.</string>
+    <string name="rd_series_applied">Předvolba seriálu použita.</string>
+    <string name="rd_series_unavailable">Uložená zvuková stopa nebo stopa titulků není v této epizodě k dispozici.</string>
+    <string name="rd_series_saved">Uloženo pro epizody seriálu %1$s.</string>
+    <string name="rd_series_removed">Předvolba seriálu odebrána.</string>
+    <string name="rd_series_remember">Pamatovat pro tento seriál</string>
 </resources>

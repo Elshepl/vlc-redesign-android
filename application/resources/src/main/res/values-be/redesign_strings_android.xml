@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Гэты планшэт</string>
     <string name="rd_cast_none_found">Прылады не знойдзены. Уключыце тэлевізар або Chromecast у той жа сетцы, што і гэтая прылада.</string>
     <string name="rd_cast_no_answer">%1$s не адказвае. Праверце, што прылада ўключана і знаходзіцца ў той жа сетцы, што і гэтая прылада.</string>
+    <string name="rd_series_applies">Ужываецца да эпізодаў %1$s</string>
+    <string name="rd_series_play_local">Прайграйце лакальны эпізод, каб захаваць выбар дарожак і сінхранізацыі.</string>
+    <string name="rd_series_applied">Нарыхтоўка серыяла ўжыта.</string>
+    <string name="rd_series_unavailable">Захаваная аўдыёдарожка або дарожка субтытраў недаступная ў гэтым эпізодзе.</string>
+    <string name="rd_series_saved">Захавана для эпізодаў %1$s.</string>
+    <string name="rd_series_removed">Нарыхтоўка серыяла выдалена.</string>
 </resources>

@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">ਇਹ ਟੈਬਲੈੱਟ</string>
     <string name="rd_cast_none_found">ਕੋਈ ਜੰਤਰ ਨਹੀਂ ਲੱਭਿਆ। ਆਪਣਾ TV ਜਾਂ Chromecast ਇਸ ਜੰਤਰ ਵਾਲੇ ਨੈੱਟਵਰਕ ਉੱਤੇ ਹੀ ਚਾਲੂ ਕਰੋ।</string>
     <string name="rd_cast_no_answer">%1$s ਜਵਾਬ ਨਹੀਂ ਦਿੰਦਾ। ਜਾਂਚ ਕਰੋ ਕਿ ਇਹ ਚਾਲੂ ਹੈ, ਅਤੇ ਇਸ ਜੰਤਰ ਵਾਲੇ ਨੈੱਟਵਰਕ ਉੱਤੇ ਹੀ ਹੈ।</string>
+    <string name="rd_series_applies">%1$s ਦੇ ਐਪੀਸੋਡਾਂ ਉੱਤੇ ਲਾਗੂ ਹੁੰਦਾ ਹੈ</string>
+    <string name="rd_series_play_local">ਟਰੈਕ ਅਤੇ ਟਾਈਮਿੰਗ ਦੀਆਂ ਚੋਣਾਂ ਸੰਭਾਲਣ ਲਈ ਕੋਈ ਲੋਕਲ ਐਪੀਸੋਡ ਚਲਾਓ।</string>
+    <string name="rd_series_applied">ਲੜੀਵਾਰ ਪ੍ਰੀ-ਸੈੱਟ ਲਾਗੂ ਕੀਤਾ ਗਿਆ।</string>
+    <string name="rd_series_unavailable">ਇਸ ਐਪੀਸੋਡ ਵਿੱਚ ਇੱਕ ਸੰਭਾਲਿਆ ਆਡੀਓ ਜਾਂ ਸਬ-ਟਾਈਟਲ ਟਰੈਕ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।</string>
+    <string name="rd_series_saved">%1$s ਦੇ ਐਪੀਸੋਡਾਂ ਲਈ ਸੰਭਾਲਿਆ ਗਿਆ।</string>
+    <string name="rd_series_removed">ਲੜੀਵਾਰ ਪ੍ਰੀ-ਸੈੱਟ ਹਟਾਇਆ ਗਿਆ।</string>
 </resources>

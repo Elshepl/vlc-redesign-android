@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">ഈ ടാബ്‌ലെറ്റ്</string>
     <string name="rd_cast_none_found">ഉപകരണമൊന്നും കണ്ടെത്തിയില്ല. ഈ ഉപകരണത്തിന്റെ അതേ നെറ്റ്വർക്കിൽ നിങ്ങളുടെ ടിവി അല്ലെങ്കിൽ Chromecast ഓണാക്കുക.</string>
     <string name="rd_cast_no_answer">%1$s പ്രതികരിക്കുന്നില്ല. അത് ഓണാണെന്നും ഈ ഉപകരണത്തിന്റെ അതേ നെറ്റ്വർക്കിലാണെന്നും പരിശോധിക്കുക.</string>
+    <string name="rd_series_applies">%1$s-ന്റെ എപ്പിസോഡുകൾക്ക് ബാധകം</string>
+    <string name="rd_series_play_local">ട്രാക്ക്, സമയക്രമ തിരഞ്ഞെടുപ്പുകൾ സംരക്ഷിക്കാൻ ഒരു ലോക്കൽ എപ്പിസോഡ് പ്ലേ ചെയ്യുക.</string>
+    <string name="rd_series_applied">സീരീസ് പ്രീസെറ്റ് പ്രയോഗിച്ചു.</string>
+    <string name="rd_series_unavailable">സംരക്ഷിച്ച ഒരു ഓഡിയോ അല്ലെങ്കിൽ ഉപശീർഷക ട്രാക്ക് ഈ എപ്പിസോഡിൽ ലഭ്യമല്ല.</string>
+    <string name="rd_series_saved">%1$s-ന്റെ എപ്പിസോഡുകൾക്കായി സംരക്ഷിച്ചു.</string>
+    <string name="rd_series_removed">സീരീസ് പ്രീസെറ്റ് നീക്കം ചെയ്തു.</string>
 </resources>

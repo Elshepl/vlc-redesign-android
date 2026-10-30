@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">Hierdie tablet</string>
     <string name="rd_cast_none_found">Geen toestel gevind nie. Skakel u TV of Chromecast aan, op dieselfde netwerk as hierdie toestel.</string>
     <string name="rd_cast_no_answer">%1$s antwoord nie. Maak seker dat dit aan is, en op dieselfde netwerk as hierdie toestel.</string>
+    <string name="rd_series_applies">Geld vir episodes van %1$s</string>
+    <string name="rd_series_play_local">Speel ’n plaaslike episode om sy snit- en tydsberekeningskeuses te stoor.</string>
+    <string name="rd_series_applied">Reeksvoorafstelling toegepas.</string>
+    <string name="rd_series_unavailable">’n Gestoorde oudio- of onderskrifsnit is nie in hierdie episode beskikbaar nie.</string>
+    <string name="rd_series_saved">Gestoor vir episodes van %1$s.</string>
+    <string name="rd_series_removed">Reeksvoorafstelling verwyder.</string>
 </resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: translations of Android-only strings (not in the desktop catalogues, so import_strings.py,
+     which rewrites redesign_strings.xml, keeps away from this file). -->
+<resources>
+    <string name="rd_series_applies">Ça djowe po les episodes di %1$s</string>
+    <string name="rd_series_play_local">Djouwez èn episode locå po schaper ses tchuzes di bokets et d\' tins.</string>
+    <string name="rd_series_applied">Prézapontiaedje di séreye metou.</string>
+    <string name="rd_series_unavailable">On boket odio ou di sortites schapé n\' est nén disponibe dins ciste episode ci.</string>
+    <string name="rd_series_saved">Schapé po les episodes di %1$s.</string>
+    <string name="rd_series_removed">Prézapontiaedje di séreye oisté.</string>
+</resources>

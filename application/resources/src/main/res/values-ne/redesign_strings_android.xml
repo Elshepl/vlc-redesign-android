@@ -40,4 +40,10 @@
     <string name="rd_cast_this_tablet">यो ट्याब्लेट</string>
     <string name="rd_cast_none_found">कुनै यन्त्र फेला परेन। आफ्नो TV वा Chromecast यो यन्त्र भएकै सञ्जालमा खोल्नुहोस्।</string>
     <string name="rd_cast_no_answer">%1$s ले जवाफ दिँदैन। यो खुला छ र यो यन्त्र भएकै सञ्जालमा छ कि जाँच गर्नुहोस्।</string>
+    <string name="rd_series_applies">%1$s का एपिसोडहरूमा लागू हुन्छ</string>
+    <string name="rd_series_play_local">ट्रयाक र समयका छनोटहरू बचत गर्न स्थानीय एपिसोड बजाउनुहोस्।</string>
+    <string name="rd_series_applied">शृङ्खला प्रिसेट लागू गरियो।</string>
+    <string name="rd_series_unavailable">बचत गरिएको अडियो वा उपशीर्षक ट्रयाक यो एपिसोडमा उपलब्ध छैन।</string>
+    <string name="rd_series_saved">%1$s का एपिसोडहरूका लागि बचत गरियो।</string>
+    <string name="rd_series_removed">शृङ्खला प्रिसेट हटाइयो।</string>
 </resources>

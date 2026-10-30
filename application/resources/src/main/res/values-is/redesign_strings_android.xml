@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">Þessi spjaldtölva</string>
     <string name="rd_cast_none_found">Ekkert tæki fannst. Kveiktu á sjónvarpinu eða Chromecast-tækinu, á sama neti og þetta tæki.</string>
     <string name="rd_cast_no_answer">%1$s svarar ekki. Athugaðu hvort kveikt sé á því og það sé á sama neti og þetta tæki.</string>
+    <string name="rd_series_applies">Gildir fyrir þætti af %1$s</string>
+    <string name="rd_series_play_local">Spilaðu staðbundinn þátt til að vista val á sporum og tímasetningu.</string>
+    <string name="rd_series_applied">Þáttaraðarforstilling notuð.</string>
+    <string name="rd_series_unavailable">Vistað hljóð- eða skjátextaspor er ekki tiltækt í þessum þætti.</string>
+    <string name="rd_series_saved">Vistað fyrir þætti af %1$s.</string>
+    <string name="rd_series_removed">Þáttaraðarforstilling fjarlægð.</string>
 </resources>

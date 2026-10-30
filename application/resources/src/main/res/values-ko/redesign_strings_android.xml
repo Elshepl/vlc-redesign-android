@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">이 태블릿</string>
     <string name="rd_cast_none_found">장치를 찾을 수 없습니다. 이 기기와 같은 네트워크에 있는 TV 또는 Chromecast를 켜세요.</string>
     <string name="rd_cast_no_answer">%1$s이(가) 응답하지 않습니다. 장치가 켜져 있고 이 기기와 같은 네트워크에 있는지 확인하세요.</string>
+    <string name="rd_series_applies">%1$s의 에피소드에 적용</string>
+    <string name="rd_series_play_local">로컬 에피소드를 재생해야 트랙 및 타이밍 선택을 저장할 수 있습니다.</string>
+    <string name="rd_series_applied">시리즈 프리셋을 적용했습니다.</string>
+    <string name="rd_series_unavailable">저장된 오디오 또는 자막 트랙을 이 에피소드에서 사용할 수 없습니다.</string>
+    <string name="rd_series_saved">%1$s의 에피소드용으로 저장했습니다.</string>
+    <string name="rd_series_removed">시리즈 프리셋을 제거했습니다.</string>
+    <string name="rd_series_remember">이 시리즈에 기억</string>
 </resources>

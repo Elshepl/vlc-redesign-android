@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">Ky tablet</string>
     <string name="rd_cast_none_found">Nuk u gjet asnjë pajisje. Ndizni televizorin ose Chromecast-in, në të njëjtin rrjet me këtë pajisje.</string>
     <string name="rd_cast_no_answer">%1$s nuk përgjigjet. Kontrolloni që është i ndezur dhe në të njëjtin rrjet me këtë pajisje.</string>
+    <string name="rd_series_applies">Zbatohet për episodet e %1$s</string>
+    <string name="rd_series_play_local">Luani një episod lokal për të ruajtur zgjedhjet e tij të pistave dhe kohës.</string>
+    <string name="rd_series_applied">Paracaktimi i serialit u zbatua.</string>
+    <string name="rd_series_unavailable">Një pistë audio ose titrash e ruajtur nuk është e disponueshme në këtë episod.</string>
+    <string name="rd_series_saved">U ruajt për episodet e %1$s.</string>
+    <string name="rd_series_removed">Paracaktimi i serialit u hoq.</string>
 </resources>

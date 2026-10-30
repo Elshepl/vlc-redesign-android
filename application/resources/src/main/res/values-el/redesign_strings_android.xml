@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Αυτό το tablet</string>
     <string name="rd_cast_none_found">Δεν βρέθηκε συσκευή. Ενεργοποιήστε την τηλεόραση ή το Chromecast σας, στο ίδιο δίκτυο με αυτή τη συσκευή.</string>
     <string name="rd_cast_no_answer">Το %1$s δεν απαντά. Ελέγξτε ότι είναι ενεργοποιημένο και στο ίδιο δίκτυο με αυτή τη συσκευή.</string>
+    <string name="rd_series_applies">Ισχύει για τα επεισόδια του %1$s</string>
+    <string name="rd_series_play_local">Αναπαραγάγετε ένα τοπικό επεισόδιο για να αποθηκεύσετε τις επιλογές κομματιών και χρονισμού του.</string>
+    <string name="rd_series_applied">Η προρρύθμιση σειράς εφαρμόστηκε.</string>
+    <string name="rd_series_unavailable">Ένα αποθηκευμένο κομμάτι ήχου ή υποτίτλων δεν είναι διαθέσιμο σε αυτό το επεισόδιο.</string>
+    <string name="rd_series_saved">Αποθηκεύτηκε για τα επεισόδια του %1$s.</string>
+    <string name="rd_series_removed">Η προρρύθμιση σειράς καταργήθηκε.</string>
 </resources>

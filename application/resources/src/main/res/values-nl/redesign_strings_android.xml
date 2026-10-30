@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Deze tablet</string>
     <string name="rd_cast_none_found">Geen apparaat gevonden. Zet uw tv of Chromecast aan, op hetzelfde netwerk als dit apparaat.</string>
     <string name="rd_cast_no_answer">%1$s antwoordt niet. Controleer of het apparaat aan staat en op hetzelfde netwerk zit als dit apparaat.</string>
+    <string name="rd_series_applies">Geldt voor afleveringen van %1$s</string>
+    <string name="rd_series_play_local">Speel een lokale aflevering af om de keuzes voor sporen en timing op te slaan.</string>
+    <string name="rd_series_applied">Seriepreset toegepast.</string>
+    <string name="rd_series_unavailable">Een opgeslagen audio- of ondertitelspoor is niet beschikbaar in deze aflevering.</string>
+    <string name="rd_series_saved">Opgeslagen voor afleveringen van %1$s.</string>
+    <string name="rd_series_removed">Seriepreset verwijderd.</string>
+    <string name="rd_series_remember">Onthouden voor deze serie</string>
 </resources>

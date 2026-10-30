@@ -40,4 +40,10 @@
     <string name="rd_cast_this_tablet">Овај таблет</string>
     <string name="rd_cast_none_found">Није пронађен ниједан уређај. Укључите ТВ или Chromecast у истој мрежи у којој је овај уређај.</string>
     <string name="rd_cast_no_answer">%1$s не одговара. Проверите да ли је укључен и у истој мрежи као овај уређај.</string>
+    <string name="rd_series_applies">Примењује се на епизоде серије %1$s</string>
+    <string name="rd_series_play_local">Пустите локалну епизоду да бисте сачували њен избор трака и тајминга.</string>
+    <string name="rd_series_applied">Шаблон серије је примењен.</string>
+    <string name="rd_series_unavailable">Сачувана аудио трака или трака титла није доступна у овој епизоди.</string>
+    <string name="rd_series_saved">Сачувано за епизоде серије %1$s.</string>
+    <string name="rd_series_removed">Шаблон серије је уклоњен.</string>
 </resources>

@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Ez a táblagép</string>
     <string name="rd_cast_none_found">Nem található eszköz. Kapcsolja be a tévét vagy a Chromecastot ugyanazon a hálózaton, amelyen ez az eszköz is van.</string>
     <string name="rd_cast_no_answer">%1$s nem válaszol. Ellenőrizze, hogy be van-e kapcsolva, és ugyanazon a hálózaton van-e, mint ez az eszköz.</string>
+    <string name="rd_series_applies">Érvényes ennek a sorozatnak az epizódjaira: %1$s</string>
+    <string name="rd_series_play_local">Játsszon le egy helyi epizódot a sáv- és időzítési beállítások mentéséhez.</string>
+    <string name="rd_series_applied">Sorozat-előbeállítás alkalmazva.</string>
+    <string name="rd_series_unavailable">Egy mentett hang- vagy feliratsáv nem érhető el ebben az epizódban.</string>
+    <string name="rd_series_saved">Mentve ennek a sorozatnak az epizódjaihoz: %1$s.</string>
+    <string name="rd_series_removed">Sorozat-előbeállítás eltávolítva.</string>
 </resources>

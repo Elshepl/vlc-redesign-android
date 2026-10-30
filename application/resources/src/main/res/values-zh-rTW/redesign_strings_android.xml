@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">這台平板電腦</string>
     <string name="rd_cast_none_found">找不到裝置。請開啟電視或 Chromecast，並連上與這部裝置相同的網路。</string>
     <string name="rd_cast_no_answer">%1$s 沒有回應。請確認它已開啟，並與這部裝置連上相同的網路。</string>
+    <string name="rd_series_applies">套用到 %1$s 的各集</string>
+    <string name="rd_series_play_local">播放本機的一集，以儲存其軌道與時間選擇。</string>
+    <string name="rd_series_applied">已套用影集預置。</string>
+    <string name="rd_series_unavailable">已儲存的某個音訊軌或字幕軌在此集中無法使用。</string>
+    <string name="rd_series_saved">已為 %1$s 的各集儲存。</string>
+    <string name="rd_series_removed">已移除影集預置。</string>
+    <string name="rd_series_remember">為此影集記住</string>
 </resources>

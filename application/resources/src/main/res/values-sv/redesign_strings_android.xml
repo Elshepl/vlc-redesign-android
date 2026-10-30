@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Den här surfplattan</string>
     <string name="rd_cast_none_found">Ingen enhet hittades. Slå på din tv eller Chromecast, i samma nätverk som den här enheten.</string>
     <string name="rd_cast_no_answer">%1$s svarar inte. Kontrollera att den är på och i samma nätverk som den här enheten.</string>
+    <string name="rd_series_applies">Gäller avsnitt av %1$s</string>
+    <string name="rd_series_play_local">Spela upp ett lokalt avsnitt för att spara dess val av spår och tidsinställning.</string>
+    <string name="rd_series_applied">Serieförvalet tillämpades.</string>
+    <string name="rd_series_unavailable">Ett sparat ljud- eller undertextspår finns inte i det här avsnittet.</string>
+    <string name="rd_series_saved">Sparat för avsnitt av %1$s.</string>
+    <string name="rd_series_removed">Serieförvalet togs bort.</string>
+    <string name="rd_series_remember">Kom ihåg för den här serien</string>
 </resources>

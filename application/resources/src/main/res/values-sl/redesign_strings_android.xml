@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Ta tablica</string>
     <string name="rd_cast_none_found">Ni najdenih naprav. Vklopite televizor ali Chromecast v istem omrežju, kot je ta naprava.</string>
     <string name="rd_cast_no_answer">Naprava %1$s se ne odziva. Preverite, ali je vklopljena in v istem omrežju kot ta naprava.</string>
+    <string name="rd_series_applies">Velja za epizode serije %1$s</string>
+    <string name="rd_series_play_local">Predvajajte krajevno epizodo, da shranite njene izbire sledi in časovne uskladitve.</string>
+    <string name="rd_series_applied">Prednastavitev serije je uveljavljena.</string>
+    <string name="rd_series_unavailable">Shranjena zvočna sled ali sled podnapisov v tej epizodi ni na voljo.</string>
+    <string name="rd_series_saved">Shranjeno za epizode serije %1$s.</string>
+    <string name="rd_series_removed">Prednastavitev serije je odstranjena.</string>
 </resources>

@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Tablet ini</string>
     <string name="rd_cast_none_found">Tiada peranti ditemui. Hidupkan TV atau Chromecast anda, pada rangkaian yang sama dengan peranti ini.</string>
     <string name="rd_cast_no_answer">%1$s tidak menjawab. Pastikan ia dihidupkan, dan berada pada rangkaian yang sama dengan peranti ini.</string>
+    <string name="rd_series_applies">Digunakan pada episod %1$s</string>
+    <string name="rd_series_play_local">Mainkan episod setempat untuk menyimpan pilihan trek dan pemasaannya.</string>
+    <string name="rd_series_applied">Praset siri dilaksanakan.</string>
+    <string name="rd_series_unavailable">Trek audio atau sarikata yang disimpan tidak tersedia dalam episod ini.</string>
+    <string name="rd_series_saved">Disimpan untuk episod %1$s.</string>
+    <string name="rd_series_removed">Praset siri dibuang.</string>
 </resources>

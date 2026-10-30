@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">ئەم تابلێتە</string>
     <string name="rd_cast_none_found">هیچ ئامێرێک نەدۆزرایەوە. تەلەفزیۆن یان Chromecast ـەکەت هەڵبکە، لەسەر هەمان ڕایەڵەی ئەم ئامێرە.</string>
     <string name="rd_cast_no_answer">%1$s وەڵام ناداتەوە. دڵنیابە کە هەڵکراوە و لەسەر هەمان ڕایەڵەی ئەم ئامێرەیە.</string>
+    <string name="rd_series_applies">بۆ ئەڵقەکانی %1$s جێبەجێ دەبێت</string>
+    <string name="rd_series_play_local">ئەڵقەیەکی ناوخۆیی لێبدە بۆ پاشەکەوتکردنی هەڵبژاردەکانی تراک و کاتبەندییەکەی.</string>
+    <string name="rd_series_applied">ڕێکخستنی ئامادەی زنجیرە جێبەجێ کرا.</string>
+    <string name="rd_series_unavailable">تراکێکی دەنگ یان ژێرنووسی پاشەکەوتکراو لەم ئەڵقەیەدا بەردەست نییە.</string>
+    <string name="rd_series_saved">بۆ ئەڵقەکانی %1$s پاشەکەوت کرا.</string>
+    <string name="rd_series_removed">ڕێکخستنی ئامادەی زنجیرە لابرا.</string>
 </resources>

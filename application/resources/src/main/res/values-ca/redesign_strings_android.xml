@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Aquesta tauleta</string>
     <string name="rd_cast_none_found">No s\'ha trobat cap dispositiu. Engegueu el televisor o el Chromecast, a la mateixa xarxa que aquest dispositiu.</string>
     <string name="rd_cast_no_answer">%1$s no respon. Comproveu que estigui engegat i a la mateixa xarxa que aquest dispositiu.</string>
+    <string name="rd_series_applies">S\'aplica als episodis de %1$s</string>
+    <string name="rd_series_play_local">Reproduïu un episodi local per desar-ne les pistes i la temporització escollides.</string>
+    <string name="rd_series_applied">S\'ha aplicat el predefinit de sèrie.</string>
+    <string name="rd_series_unavailable">Una pista d\'àudio o de subtítols desada no està disponible en aquest episodi.</string>
+    <string name="rd_series_saved">S\'ha desat per als episodis de %1$s.</string>
+    <string name="rd_series_removed">S\'ha eliminat el predefinit de sèrie.</string>
 </resources>

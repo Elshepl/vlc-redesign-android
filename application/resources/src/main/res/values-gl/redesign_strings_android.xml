@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Esta tableta</string>
     <string name="rd_cast_none_found">Non se atopou ningún dispositivo. Acenda o televisor ou o Chromecast, na mesma rede que este dispositivo.</string>
     <string name="rd_cast_no_answer">%1$s non responde. Comprobe que estea acendido e na mesma rede que este dispositivo.</string>
+    <string name="rd_series_applies">Aplícase aos episodios de %1$s</string>
+    <string name="rd_series_play_local">Reproduza un episodio local para gardar as súas opcións de pistas e de temporización.</string>
+    <string name="rd_series_applied">Aplicouse a preconfiguración da serie.</string>
+    <string name="rd_series_unavailable">Unha pista de audio ou de subtítulos gardada non está dispoñíbel neste episodio.</string>
+    <string name="rd_series_saved">Gardado para os episodios de %1$s.</string>
+    <string name="rd_series_removed">Quitouse a preconfiguración da serie.</string>
 </resources>

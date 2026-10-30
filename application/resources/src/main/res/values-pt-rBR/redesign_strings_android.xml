@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Este tablet</string>
     <string name="rd_cast_none_found">Nenhum dispositivo encontrado. Ligue sua TV ou Chromecast, na mesma rede deste dispositivo.</string>
     <string name="rd_cast_no_answer">%1$s não responde. Verifique se está ligado e na mesma rede deste dispositivo.</string>
+    <string name="rd_series_applies">Vale para os episódios de %1$s</string>
+    <string name="rd_series_play_local">Reproduza um episódio local para salvar suas escolhas de faixas e tempo.</string>
+    <string name="rd_series_applied">Predefinição de série aplicada.</string>
+    <string name="rd_series_unavailable">Uma faixa de áudio ou legenda salva não está disponível neste episódio.</string>
+    <string name="rd_series_saved">Salvo para os episódios de %1$s.</string>
+    <string name="rd_series_removed">Predefinição de série removida.</string>
+    <string name="rd_series_remember">Lembrar para esta série</string>
 </resources>

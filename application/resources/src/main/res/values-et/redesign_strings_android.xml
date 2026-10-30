@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">See tahvelarvuti</string>
     <string name="rd_cast_none_found">Seadet ei leitud. Lülita oma teler või Chromecast sisse, selle seadmega samas võrgus.</string>
     <string name="rd_cast_no_answer">%1$s ei vasta. Kontrolli, kas see on sisse lülitatud ja selle seadmega samas võrgus.</string>
+    <string name="rd_series_applies">Kehtib sarja %1$s episoodidele</string>
+    <string name="rd_series_play_local">Esita kohalikku episoodi, et salvestada selle raja- ja ajastusvalikud.</string>
+    <string name="rd_series_applied">Sarja eelseadistus rakendatud.</string>
+    <string name="rd_series_unavailable">Salvestatud audio- või subtiitrirada pole selles episoodis saadaval.</string>
+    <string name="rd_series_saved">Salvestatud sarja %1$s episoodide jaoks.</string>
+    <string name="rd_series_removed">Sarja eelseadistus eemaldatud.</string>
 </resources>

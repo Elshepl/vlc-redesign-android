@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Этот планшет</string>
     <string name="rd_cast_none_found">Устройства не найдены. Включите телевизор или Chromecast в той же сети, что и это устройство.</string>
     <string name="rd_cast_no_answer">%1$s не отвечает. Убедитесь, что устройство включено и находится в той же сети, что и это устройство.</string>
+    <string name="rd_series_applies">Применяется к сериям «%1$s»</string>
+    <string name="rd_series_play_local">Воспроизведите локальную серию, чтобы сохранить выбор дорожек и синхронизации.</string>
+    <string name="rd_series_applied">Предустановка сериала применена.</string>
+    <string name="rd_series_unavailable">Сохранённая аудиодорожка или дорожка субтитров недоступна в этой серии.</string>
+    <string name="rd_series_saved">Сохранено для серий «%1$s».</string>
+    <string name="rd_series_removed">Предустановка сериала удалена.</string>
+    <string name="rd_series_remember">Запомнить для этого сериала</string>
 </resources>

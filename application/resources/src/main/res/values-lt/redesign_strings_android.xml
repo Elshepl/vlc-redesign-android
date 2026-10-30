@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Ši planšetė</string>
     <string name="rd_cast_none_found">Įrenginių nerasta. Įjunkite televizorių arba Chromecast tame pačiame tinkle kaip ir šis įrenginys.</string>
     <string name="rd_cast_no_answer">%1$s neatsako. Patikrinkite, ar įrenginys įjungtas ir prijungtas prie to paties tinklo kaip šis įrenginys.</string>
+    <string name="rd_series_applies">Taikoma serialo „%1$s“ serijoms</string>
+    <string name="rd_series_play_local">Paleiskite vietinę seriją, kad įrašytumėte jos takelių ir laiko pasirinkimus.</string>
+    <string name="rd_series_applied">Serialo nustatymas pritaikytas.</string>
+    <string name="rd_series_unavailable">Įrašyto garso arba subtitrų takelio šioje serijoje nėra.</string>
+    <string name="rd_series_saved">Įrašyta serialo „%1$s“ serijoms.</string>
+    <string name="rd_series_removed">Serialo nustatymas pašalintas.</string>
 </resources>

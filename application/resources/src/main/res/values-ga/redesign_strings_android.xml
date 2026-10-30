@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">An táibléad seo</string>
     <string name="rd_cast_none_found">Níor aimsíodh gléas. Cas air do theilifís nó do Chromecast, ar an líonra céanna leis an ngléas seo.</string>
     <string name="rd_cast_no_answer">Ní fhreagraíonn %1$s. Seiceáil go bhfuil sé casta air, agus ar an líonra céanna leis an ngléas seo.</string>
+    <string name="rd_series_applies">Bíonn feidhm aige ar eipeasóidí %1$s</string>
+    <string name="rd_series_play_local">Seinn eipeasóid áitiúil chun a roghanna rianta agus uainithe a shábháil.</string>
+    <string name="rd_series_applied">Cuireadh réamhshocrú na sraithe i bhfeidhm.</string>
+    <string name="rd_series_unavailable">Níl rian fuaime nó fotheideal sábháilte ar fáil san eipeasóid seo.</string>
+    <string name="rd_series_saved">Sábháilte d\'eipeasóidí %1$s.</string>
+    <string name="rd_series_removed">Baineadh réamhshocrú na sraithe.</string>
 </resources>

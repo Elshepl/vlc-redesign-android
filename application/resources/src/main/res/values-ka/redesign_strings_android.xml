@@ -41,4 +41,10 @@
     <string name="rd_cast_this_tablet">ეს პლანშეტი</string>
     <string name="rd_cast_none_found">მოწყობილობა ვერ მოიძებნა. ჩართეთ ტელევიზორი ან Chromecast იმავე ქსელში, რომელშიც ეს მოწყობილობაა.</string>
     <string name="rd_cast_no_answer">%1$s არ პასუხობს. შეამოწმეთ, რომ ჩართულია და იმავე ქსელშია, რომელშიც ეს მოწყობილობა.</string>
+    <string name="rd_series_applies">ვრცელდება %1$s-ის ეპიზოდებზე</string>
+    <string name="rd_series_play_local">დაუკარით ლოკალური ეპიზოდი, რომ მისი ტრეკებისა და დროის არჩევანი შეინახოთ.</string>
+    <string name="rd_series_applied">სერიალის შაბლონი გამოყენებულია.</string>
+    <string name="rd_series_unavailable">შენახული აუდიო ან ტიტრების ტრეკი ამ ეპიზოდში მიუწვდომელია.</string>
+    <string name="rd_series_saved">შენახულია %1$s-ის ეპიზოდებისთვის.</string>
+    <string name="rd_series_removed">სერიალის შაბლონი წაიშალა.</string>
 </resources>

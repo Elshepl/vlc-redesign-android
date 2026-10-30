@@ -427,4 +427,12 @@
     <string name="rd_custom_aspect_ratios">Custom aspect ratios</string>
     <string name="rd_help_custom_aspect_ratios">A comma separated list of aspect ratios (as 21:9, 1.85:1) added to the player\'s aspect ratio list.</string>
     <string name="rd_search_in_english">Show the settings in English</string>
+    <!-- the series preset of the tracks panel (the desktop's texts) -->
+    <string name="rd_series_remember">Remember for this series</string>
+    <string name="rd_series_applies">Applies to episodes of %1$s</string>
+    <string name="rd_series_play_local">Play a local episode to save its track and timing choices.</string>
+    <string name="rd_series_applied">Series preset applied.</string>
+    <string name="rd_series_unavailable">A saved audio or subtitle track is unavailable in this episode.</string>
+    <string name="rd_series_saved">Saved for episodes of %1$s.</string>
+    <string name="rd_series_removed">Series preset removed.</string>
 </resources>

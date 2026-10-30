@@ -40,4 +40,10 @@
     <string name="rd_cast_this_tablet">Ovaj tablet</string>
     <string name="rd_cast_none_found">Nije pronađen nijedan uređaj. Uključite TV ili Chromecast u istoj mreži u kojoj je i ovaj uređaj.</string>
     <string name="rd_cast_no_answer">%1$s ne odgovara. Provjerite da li je uključen i u istoj mreži kao ovaj uređaj.</string>
+    <string name="rd_series_applies">Primjenjuje se na epizode serije %1$s</string>
+    <string name="rd_series_play_local">Pokrenite lokalnu epizodu da biste sačuvali njen izbor tragova i vremena.</string>
+    <string name="rd_series_applied">Predložak serije je primijenjen.</string>
+    <string name="rd_series_unavailable">Sačuvani audio trag ili trag podtitla nije dostupan u ovoj epizodi.</string>
+    <string name="rd_series_saved">Sačuvano za epizode serije %1$s.</string>
+    <string name="rd_series_removed">Predložak serije je uklonjen.</string>
 </resources>

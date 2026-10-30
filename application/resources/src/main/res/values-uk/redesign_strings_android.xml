@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Цей планшет</string>
     <string name="rd_cast_none_found">Пристроїв не знайдено. Увімкніть телевізор або Chromecast у тій самій мережі, що й цей пристрій.</string>
     <string name="rd_cast_no_answer">%1$s не відповідає. Перевірте, чи пристрій увімкнено й чи він у тій самій мережі, що й цей пристрій.</string>
+    <string name="rd_series_applies">Застосовується до епізодів %1$s</string>
+    <string name="rd_series_play_local">Відтворіть локальний епізод, щоб зберегти вибір доріжок і синхронізації.</string>
+    <string name="rd_series_applied">Налаштування серіалу застосовано.</string>
+    <string name="rd_series_unavailable">Збережена звукова доріжка чи доріжка субтитрів недоступна в цьому епізоді.</string>
+    <string name="rd_series_saved">Збережено для епізодів %1$s.</string>
+    <string name="rd_series_removed">Налаштування серіалу вилучено.</string>
+    <string name="rd_series_remember">Запам\'ятати для цього серіалу</string>
 </resources>

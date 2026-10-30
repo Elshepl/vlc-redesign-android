@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Šī planšete</string>
     <string name="rd_cast_none_found">Neviena ierīce nav atrasta. Ieslēdziet televizoru vai Chromecast tajā pašā tīklā, kurā ir šī ierīce.</string>
     <string name="rd_cast_no_answer">%1$s neatbild. Pārbaudiet, vai ierīce ir ieslēgta un atrodas tajā pašā tīklā, kurā ir šī ierīce.</string>
+    <string name="rd_series_applies">Attiecas uz seriāla %1$s sērijām</string>
+    <string name="rd_series_play_local">Atskaņojiet lokālu sēriju, lai saglabātu tās celiņu un laika izvēles.</string>
+    <string name="rd_series_applied">Seriāla priekšiestatījums piemērots.</string>
+    <string name="rd_series_unavailable">Kāds saglabātais audio vai subtitru celiņš šajā sērijā nav pieejams.</string>
+    <string name="rd_series_saved">Saglabāts seriāla %1$s sērijām.</string>
+    <string name="rd_series_removed">Seriāla priekšiestatījums noņemts.</string>
 </resources>

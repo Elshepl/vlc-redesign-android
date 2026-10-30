@@ -39,4 +39,10 @@
     <string name="rd_cast_this_tablet">Tablet ini</string>
     <string name="rd_cast_none_found">Perangkat tidak ditemukan. Nyalakan TV atau Chromecast Anda, di jaringan yang sama dengan perangkat ini.</string>
     <string name="rd_cast_no_answer">%1$s tidak merespons. Pastikan perangkat menyala dan berada di jaringan yang sama dengan perangkat ini.</string>
+    <string name="rd_series_applies">Berlaku untuk episode %1$s</string>
+    <string name="rd_series_play_local">Putar episode lokal untuk menyimpan pilihan trek dan waktunya.</string>
+    <string name="rd_series_applied">Preset serial diterapkan.</string>
+    <string name="rd_series_unavailable">Trek audio atau subtitle yang disimpan tidak tersedia di episode ini.</string>
+    <string name="rd_series_saved">Disimpan untuk episode %1$s.</string>
+    <string name="rd_series_removed">Preset serial dihapus.</string>
 </resources>

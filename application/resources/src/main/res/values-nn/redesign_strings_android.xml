@@ -40,4 +40,10 @@
     <string name="rd_cast_this_tablet">Dette nettbrettet</string>
     <string name="rd_cast_none_found">Fann inga eining. Slå på TV-en eller Chromecasten på same nettverk som denne eininga.</string>
     <string name="rd_cast_no_answer">%1$s svarar ikkje. Kontroller at eininga er slått på og på same nettverk som denne eininga.</string>
+    <string name="rd_series_applies">Gjeld episodar av %1$s</string>
+    <string name="rd_series_play_local">Spel av ein lokal episode for å lagra vala for spor og tidsjustering.</string>
+    <string name="rd_series_applied">Serieinnstillinga er teken i bruk.</string>
+    <string name="rd_series_unavailable">Eit lagra lyd- eller undertekstspor er ikkje tilgjengeleg i denne episoden.</string>
+    <string name="rd_series_saved">Lagra for episodar av %1$s.</string>
+    <string name="rd_series_removed">Serieinnstillinga er fjerna.</string>
 </resources>

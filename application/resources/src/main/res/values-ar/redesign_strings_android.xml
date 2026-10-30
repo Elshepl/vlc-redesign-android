@@ -41,4 +41,11 @@
     <string name="rd_cast_this_tablet">هذا الجهاز اللوحي</string>
     <string name="rd_cast_none_found">لم يُعثر على أي جهاز. شغّل التلفزيون أو جهاز Chromecast على الشبكة نفسها التي يتصل بها هذا الجهاز.</string>
     <string name="rd_cast_no_answer">الجهاز %1$s لا يستجيب. تحقق من أنه قيد التشغيل وعلى الشبكة نفسها التي يتصل بها هذا الجهاز.</string>
+    <string name="rd_series_applies">يُطبَّق على حلقات %1$s</string>
+    <string name="rd_series_play_local">شغّل حلقة محلية لحفظ اختياراتها للمسارات والتوقيت.</string>
+    <string name="rd_series_applied">طُبِّق الإعداد المسبق للمسلسل.</string>
+    <string name="rd_series_unavailable">أحد مسارات الصوت أو الترجمة المحفوظة غير متاح في هذه الحلقة.</string>
+    <string name="rd_series_saved">حُفظ لحلقات %1$s.</string>
+    <string name="rd_series_removed">أُزيل الإعداد المسبق للمسلسل.</string>
+    <string name="rd_series_remember">تذكُّر لهذا المسلسل</string>
 </resources>

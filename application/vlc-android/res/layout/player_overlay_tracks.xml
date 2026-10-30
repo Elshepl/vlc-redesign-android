@@ -92,6 +92,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
+            <include
+                    android:id="@+id/rd_series"
+                    layout="@layout/rd_series_preset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
             <View
                     android:id="@+id/tracks_separator_3"
                     android:layout_width="match_parent"

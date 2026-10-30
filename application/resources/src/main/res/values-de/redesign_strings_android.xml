@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Dieses Tablet</string>
     <string name="rd_cast_none_found">Kein Gerät gefunden. Schalten Sie Ihren Fernseher oder Chromecast ein, im selben Netzwerk wie dieses Gerät.</string>
     <string name="rd_cast_no_answer">%1$s antwortet nicht. Prüfen Sie, ob das Gerät eingeschaltet und im selben Netzwerk wie dieses Gerät ist.</string>
+    <string name="rd_series_applies">Gilt für Episoden von %1$s</string>
+    <string name="rd_series_play_local">Spielen Sie eine lokale Episode ab, um ihre Spur- und Timing-Auswahl zu speichern.</string>
+    <string name="rd_series_applied">Serien-Voreinstellung angewendet.</string>
+    <string name="rd_series_unavailable">Eine gespeicherte Audio- oder Untertitelspur ist in dieser Episode nicht verfügbar.</string>
+    <string name="rd_series_saved">Für Episoden von %1$s gespeichert.</string>
+    <string name="rd_series_removed">Serien-Voreinstellung entfernt.</string>
+    <string name="rd_series_remember">Für diese Serie merken</string>
 </resources>

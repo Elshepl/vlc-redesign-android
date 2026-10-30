@@ -40,4 +40,10 @@
     <string name="rd_cast_this_tablet">Y llechen hon</string>
     <string name="rd_cast_none_found">Ni chanfuwyd dyfais. Trowch eich teledu neu Chromecast ymlaen, ar yr un rhwydwaith â\'r ddyfais hon.</string>
     <string name="rd_cast_no_answer">Nid yw %1$s yn ateb. Gwiriwch ei fod ymlaen, ac ar yr un rhwydwaith â\'r ddyfais hon.</string>
+    <string name="rd_series_applies">Yn berthnasol i benodau %1$s</string>
+    <string name="rd_series_play_local">Chwaraewch bennod leol i gadw ei dewisiadau traciau ac amseru.</string>
+    <string name="rd_series_applied">Rhoddwyd rhagosodiad y gyfres ar waith.</string>
+    <string name="rd_series_unavailable">Nid yw trac sain neu isdeitlau a gadwyd ar gael yn y bennod hon.</string>
+    <string name="rd_series_saved">Wedi\'i gadw ar gyfer penodau %1$s.</string>
+    <string name="rd_series_removed">Tynnwyd rhagosodiad y gyfres.</string>
 </resources>

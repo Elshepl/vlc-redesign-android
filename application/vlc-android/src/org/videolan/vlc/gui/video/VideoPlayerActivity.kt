@@ -1896,6 +1896,30 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         return listOf()
     }
 
+    // VLC Redesign: the series preset of an episode (SeriesPreset), once per media, after its own saved tracks
+    private var seriesPresetUri: Uri? = null
+
+    private fun applySeriesPreset() {
+        val uri = service?.currentMediaWrapper?.uri ?: return
+        if (uri == seriesPresetUri) return
+        seriesPresetUri = uri
+        lifecycleScope.launch {
+            kotlinx.coroutines.delay(1500L)
+            val s = service ?: return@launch
+            if (s.currentMediaWrapper?.uri != uri || isFinishing) return@launch
+            val applied = org.videolan.vlc.util.SeriesPreset.apply(this@VideoPlayerActivity, s) ?: return@launch
+            if (seriesPresetAgain != uri) overlayDelegate.showInfo(getString(applied.message), 3000)
+            seriesPresetAgain = null
+            if (applied.subtitleSize > 0) {
+                // the new size opens the video again in place: the tracks and the delay are set again then
+                setSubtitleScale(applied.subtitleSize, osd = false)
+                seriesPresetUri = null
+                seriesPresetAgain = uri
+            }
+        }
+    }
+    private var seriesPresetAgain: Uri? = null
+
     private fun onPlaying() {
         val mw = service?.currentMediaWrapper ?: return
         isPlaying = true
@@ -1911,6 +1935,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
             wasPaused = false
         }
         setESTracks()
+        applySeriesPreset()
         if (overlayDelegate.isHudRightBindingInitialized() && (overlayDelegate.hudRightBinding.playerOverlayTitle.length() == 0 || PlaybackService.hasRenderer()))
             overlayDelegate.setTitle(mw.title)
         // Get possible subtitles

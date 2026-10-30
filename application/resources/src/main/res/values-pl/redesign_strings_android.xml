@@ -39,4 +39,11 @@
     <string name="rd_cast_this_tablet">Ten tablet</string>
     <string name="rd_cast_none_found">Nie znaleziono urządzeń. Włącz telewizor lub Chromecast w tej samej sieci co to urządzenie.</string>
     <string name="rd_cast_no_answer">Urządzenie %1$s nie odpowiada. Sprawdź, czy jest włączone i w tej samej sieci co to urządzenie.</string>
+    <string name="rd_series_applies">Dotyczy odcinków %1$s</string>
+    <string name="rd_series_play_local">Odtwórz lokalny odcinek, aby zapisać wybór ścieżek i synchronizacji.</string>
+    <string name="rd_series_applied">Zastosowano ustawienia serialu.</string>
+    <string name="rd_series_unavailable">Zapisana ścieżka dźwiękowa lub napisów jest niedostępna w tym odcinku.</string>
+    <string name="rd_series_saved">Zapisano dla odcinków %1$s.</string>
+    <string name="rd_series_removed">Usunięto ustawienia serialu.</string>
+    <string name="rd_series_remember">Zapamiętaj dla tego serialu</string>
 </resources>
