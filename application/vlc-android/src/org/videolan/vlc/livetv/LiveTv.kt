@@ -15,6 +15,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.SystemClock
 import android.util.Log
+import org.videolan.vlc.BuildConfig
 import androidx.core.content.edit
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -494,6 +495,8 @@ object LiveTv {
                 } catch (e: Exception) {
                     error = e.message ?: "?"
                     Log.i(TAG, "a guide of ${TvNet.hostOf(w.url)} could not be downloaded: $error")
+                    // where it broke (debug builds: no address in it)
+                    if (BuildConfig.DEBUG) Log.d(TAG, "guide download failure", e)
                 }
                 synchronized(lock) { states[w.sourceId]?.let { it.busy = false; it.stage = "" } }
             }
