@@ -60,7 +60,8 @@ internal class TvGuideView(context: Context, private val onPlay: (TvChannel) -> 
     private val gridWidth get() = max(d(100f), width - channelWidth - d(8f))
     private val gridLeft get() = if (rtl) 0f else width - gridWidth
     /** the hours across: the setting's on a wide window, half of them on a phone held upright */
-    private val shownHours get() = if (width > 0 && width < d(600f)) maxOf(1f, hours / 2f) else hours.toFloat()
+    /** The hours the grid shows (half of [hours] on a phone). */
+    val shownHours get() = if (width > 0 && width < d(600f)) maxOf(1f, hours / 2f) else hours.toFloat()
     private val pxPerSec get() = gridWidth / (shownHours * 3600f)
 
     /** two days back (the archives), a week ahead */
