@@ -70,7 +70,9 @@ def setup(d, log):
     while time.time() < deadline and not (d.call("pref", key="app_onboarding_done", type="b", value="true") or "").startswith("ok"):
         time.sleep(1)
     for k, t, v in (("app_onboarding_done", "b", "true"), ("show_update", "b", "false"), ("app_theme", "s", "-1"), ("incognito_mode", "b", "false"),
-                    ("rd_accent", "s", "orange")):
+                    ("rd_accent", "s", "orange"),
+                    # a pinned folder: Home's Pinned row on a phone, the sidebar's on a wide tablet
+                    ("rd_pins", "s", json.dumps([{"kind": "folder", "id": "file://" + media.DEVICE_DIR, "title": "vlc-redesign-test"}]))):
         r = d.call("pref", key=k, type=t, value=v)
         if not (r or "").startswith("ok"):
             log("pref %s not written: %s" % (k, r))

@@ -58,6 +58,8 @@ MAP = [
     ("player-hidden", "Players: Video player: hidden UI", "3328-11554_Player-hide-UI.png"),
     ("player-player_overlay_tracks", "Players: tracks panel", "1915-8397_subtitle-multiple.png"),
     ("player-tracks", "Players: tracks panel", "1915-8397_subtitle-multiple.png"),
+    ("player-tracks-sync", "Players: subtitle sync timeline", None),
+    ("player-seek-preview", "Players: seek bar frame preview", None),
     ("player-player_overlay_adv_function", "Players: advanced options sheet", "6062-13354_menu.png"),
     ("player-opt-rd_customize_player", "Players: Customize Player", "6587-19923_Player-customize.png"),
     ("player-opt-equalizer", "Players: Equalizer", "6114-13610_Audio-Equalizer.png"),
@@ -683,8 +685,26 @@ class Tour:
                     tt = dd.find(cls="TabView")
                     if i < len(tt):
                         self.d.tap(tt[i]); self.snap("player-tracks-tab%d" % i, self.d.settle())
+                # the subtitle sync timeline (Subtitles tab, Subtitle timing)
+                dd = self.d.dump()
+                if dd.find("rd_sub_sync_open"):
+                    self.d.tap(dd.find("rd_sub_sync_open")[0])
+                    time.sleep(2.5)
+                    self.snap("player-tracks-sync", self.d.settle())
             if bid == "player_overlay_adv_function":
                 self.player_options(d)
+        # the frame preview of the seek bar, while the finger is still down
+        d = self.ensure_player()
+        bar = d.find("player_overlay_seekbar")
+        if bar:
+            r = bar[0].rect
+            y = (r[1] + r[3]) // 2
+            import threading
+            t = threading.Thread(target=lambda: self.d.sh("input swipe %d %d %d %d 5000" % (r[0] + (r[2] - r[0]) // 5, y, r[0] + (r[2] - r[0]) // 2, y)))
+            t.start()
+            time.sleep(3.5)
+            self.snap("player-seek-preview", self.d.dump())
+            t.join()
         # hidden UI, gestures
         d = self.ensure_player()
         self.d.tap_xy(*self.center()); time.sleep(0.6)
