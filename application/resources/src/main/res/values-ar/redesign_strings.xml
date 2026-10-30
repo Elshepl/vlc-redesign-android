@@ -315,4 +315,29 @@
     <string name="rd_font_default">المبدئي</string>
     <string name="rd_custom_aspect_ratios">نسب أبعاد مخصصة</string>
     <string name="rd_help_custom_aspect_ratios">قائمة نسب أبعاد مفصولة بفواصل تُضاف إلى قائمة نسب الأبعاد في الواجهة.</string>
+    <string name="rd_font_casual">غير رسمي</string>
+    <string name="rd_font_condensed">مضغوط</string>
+    <string name="rd_font_cursive">خط يدوي</string>
+    <string name="rd_font_mono">أحادي المسافة</string>
+    <string name="rd_font_sans">بلا زوائد</string>
+    <string name="rd_font_serif">بزوائد</string>
+    <string name="rd_fx_anaglyph_gm">أخضر نقي (يسار)  أرجواني نقي (يمين)</string>
+    <string name="rd_fx_anaglyph_mc">أرجواني (يسار)  سماوي (يمين)</string>
+    <string name="rd_fx_anaglyph_rb">أحمر نقي (يسار)  أزرق نقي (يمين)</string>
+    <string name="rd_fx_anaglyph_rc">أحمر نقي (يسار)  سماوي نقي (يمين)</string>
+    <string name="rd_fx_anaglyph_rg">أحمر نقي (يسار)  أخضر نقي (يمين)</string>
+    <string name="rd_fx_antitranspose">مناقلة عكسية</string>
+    <string name="rd_fx_blur_sigma">الانحراف المعياري الغاوسي</string>
+    <string name="rd_fx_chroma_spat">شدة الكروما المكانية (0-254)</string>
+    <string name="rd_fx_chroma_temp">شدة الكروما الزمنية (0-254)</string>
+    <string name="rd_fx_color_scheme">نظام الألوان</string>
+    <string name="rd_fx_luma_spat">شدة اللوما المكانية (0-254)</string>
+    <string name="rd_fx_luma_temp">شدة اللوما الزمنية (0-254)</string>
+    <string name="rd_fx_softening">قيمة التنعيم</string>
+    <string name="rd_fx_transpose">مناقلة</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">تعذّر بدء التسجيل</string>
+    <string name="rd_record_saved">حُفظ التسجيل: %1$s</string>
+    <string name="rd_record_stop">إيقاف التسجيل</string>
+    <string name="rd_search_in_english">عرض الإعدادات بالإنجليزية</string>
 </resources>

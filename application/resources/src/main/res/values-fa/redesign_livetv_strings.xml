@@ -222,4 +222,5 @@
         <item quantity="one">بازپخش %1$d روز</item>
         <item quantity="other">بازپخش %1$d روز</item>
     </plurals>
+    <string name="rd_nav_tv">تلویزیون</string>
 </resources>

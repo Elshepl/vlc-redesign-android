@@ -326,4 +326,19 @@
     <string name="rd_custom_aspect_ratios">Eigene Seitenverhältnisse</string>
     <string name="rd_help_custom_aspect_ratios">Eine durch Kommata getrennte Liste von Seitenverhältnissen, die der Liste in der Oberfläche hinzugefügt werden.</string>
     <string name="rd_search_in_english">Einstellungen auf Englisch anzeigen</string>
+    <string name="rd_font_casual">Locker</string>
+    <string name="rd_font_condensed">Schmal</string>
+    <string name="rd_font_cursive">Schreibschrift</string>
+    <string name="rd_font_mono">Festbreite</string>
+    <string name="rd_font_sans">Serifenlos</string>
+    <string name="rd_font_serif">Mit Serifen</string>
+    <string name="rd_fx_anaglyph_gm">reines Grün (links)  reines Magenta (rechts)</string>
+    <string name="rd_fx_anaglyph_mc">Magenta (links)  Cyan (rechts)</string>
+    <string name="rd_fx_anaglyph_rb">reines Rot (links)  reines Blau (rechts)</string>
+    <string name="rd_fx_anaglyph_rc">reines Rot (links)  reines Cyan (rechts)</string>
+    <string name="rd_fx_anaglyph_rg">reines Rot (links)  reines Grün (rechts)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Aufnahme konnte nicht gestartet werden</string>
+    <string name="rd_record_saved">Aufnahme gespeichert: %1$s</string>
+    <string name="rd_record_stop">Aufnahme beenden</string>
 </resources>

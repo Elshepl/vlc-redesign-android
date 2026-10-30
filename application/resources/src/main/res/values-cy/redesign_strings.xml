@@ -319,4 +319,25 @@
     <string name="rd_font_default">Rhagosodedig</string>
     <string name="rd_custom_aspect_ratios">Cymarebau agwedd personol</string>
     <string name="rd_help_custom_aspect_ratios">Rhestr o gymarebau agwedd (wedi\'u gwahanu gyda choma) caiff eu hychwanegu i restr y rhyngwyneb o gymarebau agwedd.</string>
+    <string name="rd_font_casual">Anffurfiol</string>
+    <string name="rd_font_condensed">Cywasgedig</string>
+    <string name="rd_font_cursive">Llawysgrif</string>
+    <string name="rd_font_mono">Unlled</string>
+    <string name="rd_font_sans">Heb seriff</string>
+    <string name="rd_font_serif">Seriff</string>
+    <string name="rd_fx_anaglyph_gm">gwyrdd pur (chwith)  magenta pur (de)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (chwith)  gwyrddlas (de)</string>
+    <string name="rd_fx_anaglyph_rb">coch pur (chwith)  glas pur (de)</string>
+    <string name="rd_fx_anaglyph_rc">coch pur (chwith)  gwyrddlas pur (de)</string>
+    <string name="rd_fx_anaglyph_rg">coch pur (chwith)  gwyrdd pur (de)</string>
+    <string name="rd_fx_blur_sigma">Gwyriad safonol y Gaussian</string>
+    <string name="rd_fx_chroma_spat">Cryfder chroma gofodol (0-254)</string>
+    <string name="rd_fx_chroma_temp">Cryfder chroma amserol (0-254)</string>
+    <string name="rd_fx_luma_spat">Cryfder luma gofodol (0-254)</string>
+    <string name="rd_fx_luma_temp">Cryfder luma amserol (0-254)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Methu dechrau recordio</string>
+    <string name="rd_record_saved">Recordiad wedi\'i gadw: %1$s</string>
+    <string name="rd_record_stop">Stopio recordio</string>
+    <string name="rd_search_in_english">Dangos y gosodiadau yn Saesneg</string>
 </resources>

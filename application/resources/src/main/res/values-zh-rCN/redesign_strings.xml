@@ -325,4 +325,20 @@
     <string name="rd_font_default">默认</string>
     <string name="rd_custom_aspect_ratios">自定义宽高比</string>
     <string name="rd_help_custom_aspect_ratios">逗号分隔的宽高比列表，将被添加到界面的宽高比菜单。</string>
+    <string name="rd_font_casual">休闲</string>
+    <string name="rd_font_condensed">窄体</string>
+    <string name="rd_font_cursive">手写体</string>
+    <string name="rd_font_mono">等宽</string>
+    <string name="rd_font_sans">无衬线</string>
+    <string name="rd_font_serif">衬线</string>
+    <string name="rd_fx_anaglyph_gm">纯绿（左）  纯品红（右）</string>
+    <string name="rd_fx_anaglyph_mc">品红（左）  青色（右）</string>
+    <string name="rd_fx_anaglyph_rb">纯红（左）  纯蓝（右）</string>
+    <string name="rd_fx_anaglyph_rc">纯红（左）  纯青（右）</string>
+    <string name="rd_fx_anaglyph_rg">纯红（左）  纯绿（右）</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">无法开始录制</string>
+    <string name="rd_record_saved">录制已保存：%1$s</string>
+    <string name="rd_record_stop">停止录制</string>
+    <string name="rd_search_in_english">以英文显示设置</string>
 </resources>

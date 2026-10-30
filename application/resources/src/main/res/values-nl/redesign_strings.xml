@@ -325,4 +325,20 @@
     <string name="rd_font_default">Standaard</string>
     <string name="rd_custom_aspect_ratios">Aangepaste beeldverhoudingen</string>
     <string name="rd_help_custom_aspect_ratios">Een lijst met door komma\'s gescheiden waarden van beeldverhoudingen die toegevoegd zullen worden aan de lijst met beeldverhoudingen van de interface.</string>
+    <string name="rd_font_casual">Informeel</string>
+    <string name="rd_font_condensed">Smal</string>
+    <string name="rd_font_cursive">Handschrift</string>
+    <string name="rd_font_mono">Monospace</string>
+    <string name="rd_font_sans">Schreefloos</string>
+    <string name="rd_font_serif">Schreef</string>
+    <string name="rd_fx_anaglyph_gm">puur groen (links)  puur magenta (rechts)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (links)  cyaan (rechts)</string>
+    <string name="rd_fx_anaglyph_rb">puur rood (links)  puur blauw (rechts)</string>
+    <string name="rd_fx_anaglyph_rc">puur rood (links)  puur cyaan (rechts)</string>
+    <string name="rd_fx_anaglyph_rg">puur rood (links)  puur groen (rechts)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Opname kon niet starten</string>
+    <string name="rd_record_saved">Opname opgeslagen: %1$s</string>
+    <string name="rd_record_stop">Opname stoppen</string>
+    <string name="rd_search_in_english">Instellingen in het Engels tonen</string>
 </resources>

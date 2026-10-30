@@ -320,4 +320,25 @@
     <string name="rd_font_default">Standard</string>
     <string name="rd_custom_aspect_ratios">Anpassade bildförhållanden</string>
     <string name="rd_help_custom_aspect_ratios">Kommaseparerad lista över bildförhållanden som kommer att läggas till i gränssnittets lista över bildförhållanden.</string>
+    <string name="rd_font_casual">Ledig</string>
+    <string name="rd_font_condensed">Smal</string>
+    <string name="rd_font_cursive">Kursiv</string>
+    <string name="rd_font_mono">Fast breddsteg</string>
+    <string name="rd_font_sans">Sans serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">ren grön (vänster)  ren magenta (höger)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (vänster)  cyan (höger)</string>
+    <string name="rd_fx_anaglyph_rb">ren röd (vänster)  ren blå (höger)</string>
+    <string name="rd_fx_anaglyph_rc">ren röd (vänster)  ren cyan (höger)</string>
+    <string name="rd_fx_anaglyph_rg">ren röd (vänster)  ren grön (höger)</string>
+    <string name="rd_fx_blur_sigma">Gaussisk standardavvikelse</string>
+    <string name="rd_fx_chroma_spat">Spatial krominansstyrka (0-254)</string>
+    <string name="rd_fx_chroma_temp">Temporal krominansstyrka (0-254)</string>
+    <string name="rd_fx_luma_spat">Spatial luminansstyrka (0-254)</string>
+    <string name="rd_fx_luma_temp">Temporal luminansstyrka (0-254)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Inspelningen kunde inte starta</string>
+    <string name="rd_record_saved">Inspelningen sparad: %1$s</string>
+    <string name="rd_record_stop">Stoppa inspelningen</string>
+    <string name="rd_search_in_english">Visa inställningarna på engelska</string>
 </resources>

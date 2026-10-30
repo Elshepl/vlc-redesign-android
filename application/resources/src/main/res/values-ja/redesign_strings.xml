@@ -325,4 +325,20 @@
     <string name="rd_font_default">デフォルト</string>
     <string name="rd_custom_aspect_ratios">カスタムのアスペクト比</string>
     <string name="rd_help_custom_aspect_ratios">インターフェースのアスペクト比リストに加えられるアスペクト比をカンマで区切って指定します。</string>
+    <string name="rd_font_casual">カジュアル</string>
+    <string name="rd_font_condensed">コンデンス</string>
+    <string name="rd_font_cursive">筆記体</string>
+    <string name="rd_font_mono">等幅</string>
+    <string name="rd_font_sans">サンセリフ</string>
+    <string name="rd_font_serif">セリフ</string>
+    <string name="rd_fx_anaglyph_gm">純緑 (左)  純マゼンタ (右)</string>
+    <string name="rd_fx_anaglyph_mc">マゼンタ (左)  シアン (右)</string>
+    <string name="rd_fx_anaglyph_rb">純赤 (左)  純青 (右)</string>
+    <string name="rd_fx_anaglyph_rc">純赤 (左)  純シアン (右)</string>
+    <string name="rd_fx_anaglyph_rg">純赤 (左)  純緑 (右)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">レコーディングを開始できませんでした</string>
+    <string name="rd_record_saved">レコーディングを保存しました: %1$s</string>
+    <string name="rd_record_stop">レコーディングを停止</string>
+    <string name="rd_search_in_english">設定を英語で表示</string>
 </resources>

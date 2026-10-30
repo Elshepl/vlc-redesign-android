@@ -325,4 +325,20 @@
     <string name="rd_font_default">സഹജമായ</string>
     <string name="rd_custom_aspect_ratios">ഇഷ്ടാനുസൃത ആസ്പെക്ട് റേഷ്യോകൾ</string>
     <string name="rd_help_custom_aspect_ratios">സമ്പര്‍ക്കമുഖത്തിന്‍റെ ആസ്പെക്ട് അനുപാത പട്ടികയില്‍ ചേര്‍ക്കപ്പെടുന്ന അല്‍പവിരാമ ചിഹ്നത്താല്‍ വേര്‍തിരിക്കപ്പെട്ട ആസ്പെക്ട് അനുപാതങ്ങളുടെ പട്ടിക.</string>
+    <string name="rd_font_casual">കാഷ്വൽ</string>
+    <string name="rd_font_condensed">കണ്ടൻസ്ഡ്</string>
+    <string name="rd_font_cursive">കഴ്‌സീവ്</string>
+    <string name="rd_font_mono">മോണോസ്പേസ്</string>
+    <string name="rd_font_sans">സാൻസ് സെരിഫ്</string>
+    <string name="rd_font_serif">സെരിഫ്</string>
+    <string name="rd_fx_anaglyph_gm">ശുദ്ധ പച്ച (ഇടത്)  ശുദ്ധ മജന്ത (വലത്)</string>
+    <string name="rd_fx_anaglyph_mc">മജന്ത (ഇടത്)  സിയാൻ (വലത്)</string>
+    <string name="rd_fx_anaglyph_rb">ശുദ്ധ ചുവപ്പ് (ഇടത്)  ശുദ്ധ നീല (വലത്)</string>
+    <string name="rd_fx_anaglyph_rc">ശുദ്ധ ചുവപ്പ് (ഇടത്)  ശുദ്ധ സിയാൻ (വലത്)</string>
+    <string name="rd_fx_anaglyph_rg">ശുദ്ധ ചുവപ്പ് (ഇടത്)  ശുദ്ധ പച്ച (വലത്)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">റെക്കോർഡിംഗ് ആരംഭിക്കാനായില്ല</string>
+    <string name="rd_record_saved">റെക്കോർഡിംഗ് സംരക്ഷിച്ചു: %1$s</string>
+    <string name="rd_record_stop">റെക്കോർഡിംഗ് നിർത്തുക</string>
+    <string name="rd_search_in_english">സജ്ജീകരണങ്ങള്‍ ഇംഗ്ലീഷിൽ കാണിക്കുക</string>
 </resources>

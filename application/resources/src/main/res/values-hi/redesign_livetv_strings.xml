@@ -219,4 +219,8 @@
         <item quantity="one">कैच-अप %1$d दिन</item>
         <item quantity="other">कैच-अप %1$d दिन</item>
     </plurals>
+    <string name="rd_nav_tv">TV</string>
+    <string name="rd_tv_category">श्रेणी</string>
+    <string name="rd_tv_country">देश</string>
+    <string name="rd_tv_edit">संपादित करें</string>
 </resources>

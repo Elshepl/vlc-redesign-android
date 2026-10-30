@@ -325,4 +325,20 @@
     <string name="rd_font_default">По умолчанию</string>
     <string name="rd_custom_aspect_ratios">Свои соотношения сторон</string>
     <string name="rd_help_custom_aspect_ratios">Список соотношений сторон изображения, разделённых запятыми. Добавляются в соответствующий список интерфейса.</string>
+    <string name="rd_font_casual">Непринуждённый</string>
+    <string name="rd_font_condensed">Узкий</string>
+    <string name="rd_font_cursive">Рукописный</string>
+    <string name="rd_font_mono">Моноширинный</string>
+    <string name="rd_font_sans">Без засечек</string>
+    <string name="rd_font_serif">С засечками</string>
+    <string name="rd_fx_anaglyph_gm">чистый зелёный (слева)  чистый пурпурный (справа)</string>
+    <string name="rd_fx_anaglyph_mc">пурпурный (слева)  голубой (справа)</string>
+    <string name="rd_fx_anaglyph_rb">чистый красный (слева)  чистый синий (справа)</string>
+    <string name="rd_fx_anaglyph_rc">чистый красный (слева)  чистый голубой (справа)</string>
+    <string name="rd_fx_anaglyph_rg">чистый красный (слева)  чистый зелёный (справа)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Не удалось начать запись</string>
+    <string name="rd_record_saved">Запись сохранена: %1$s</string>
+    <string name="rd_record_stop">Остановить запись</string>
+    <string name="rd_search_in_english">Показать настройки на английском</string>
 </resources>

@@ -325,4 +325,20 @@
     <string name="rd_font_default">Alapértelmezett</string>
     <string name="rd_custom_aspect_ratios">Egyéni méretarányok</string>
     <string name="rd_help_custom_aspect_ratios">A felületen a méretarányok listájára felkerülő méretarányok vesszővel elválasztott listája.</string>
+    <string name="rd_font_casual">Laza</string>
+    <string name="rd_font_condensed">Keskeny</string>
+    <string name="rd_font_cursive">Kézírásos</string>
+    <string name="rd_font_mono">Rögzített szélességű</string>
+    <string name="rd_font_sans">Talpatlan</string>
+    <string name="rd_font_serif">Talpas</string>
+    <string name="rd_fx_anaglyph_gm">tiszta zöld (bal)  tiszta bíbor (jobb)</string>
+    <string name="rd_fx_anaglyph_mc">bíbor (bal)  cián (jobb)</string>
+    <string name="rd_fx_anaglyph_rb">tiszta vörös (bal)  tiszta kék (jobb)</string>
+    <string name="rd_fx_anaglyph_rc">tiszta vörös (bal)  tiszta cián (jobb)</string>
+    <string name="rd_fx_anaglyph_rg">tiszta vörös (bal)  tiszta zöld (jobb)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">A felvétel nem indítható el</string>
+    <string name="rd_record_saved">Felvétel mentve: %1$s</string>
+    <string name="rd_record_stop">Felvétel leállítása</string>
+    <string name="rd_search_in_english">Beállítások megjelenítése angolul</string>
 </resources>

@@ -325,4 +325,20 @@
     <string name="rd_font_default">Стандартна</string>
     <string name="rd_custom_aspect_ratios">Уласныя стасункі бакоў</string>
     <string name="rd_help_custom_aspect_ratios">Спіс стасункаў бакоў праз коску. Дадаюцца да адпаведнага спісу інтэрфейсу.</string>
+    <string name="rd_font_casual">Нефармальны</string>
+    <string name="rd_font_condensed">Звужаны</string>
+    <string name="rd_font_cursive">Рукапісны</string>
+    <string name="rd_font_mono">Монашырынны</string>
+    <string name="rd_font_sans">Без засечак</string>
+    <string name="rd_font_serif">З засечкамі</string>
+    <string name="rd_fx_anaglyph_gm">чысты зялёны (злева)  чысты пурпурны (справа)</string>
+    <string name="rd_fx_anaglyph_mc">пурпурны (злева)  блакітны (справа)</string>
+    <string name="rd_fx_anaglyph_rb">чысты чырвоны (злева)  чысты сіні (справа)</string>
+    <string name="rd_fx_anaglyph_rc">чысты чырвоны (злева)  чысты блакітны (справа)</string>
+    <string name="rd_fx_anaglyph_rg">чысты чырвоны (злева)  чысты зялёны (справа)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Не ўдалося пачаць запіс</string>
+    <string name="rd_record_saved">Запіс захаваны: %1$s</string>
+    <string name="rd_record_stop">Спыніць запіс</string>
+    <string name="rd_search_in_english">Паказаць налады па-англійску</string>
 </resources>

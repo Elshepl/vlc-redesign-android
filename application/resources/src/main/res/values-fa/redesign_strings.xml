@@ -313,4 +313,31 @@
     <string name="rd_font_default">پیش‌فرض</string>
     <string name="rd_custom_aspect_ratios">نسبت‌های طول به عرض سفارشی</string>
     <string name="rd_help_custom_aspect_ratios">این مقادیر به فهرست نسبت‌های نسبت طول به عرض در واسط اضافه می‌شوند. مقادیر فهرست را با ویرگول (,) جدا کنید.</string>
+    <string name="rd_font_casual">غیررسمی</string>
+    <string name="rd_font_condensed">فشرده</string>
+    <string name="rd_font_cursive">دست‌نویس</string>
+    <string name="rd_font_mono">هم‌عرض</string>
+    <string name="rd_font_sans">بدون سریف</string>
+    <string name="rd_font_serif">سریف‌دار</string>
+    <string name="rd_fx_anaglyph_gm">سبز خالص (چپ)  سرخابی خالص (راست)</string>
+    <string name="rd_fx_anaglyph_mc">سرخابی (چپ)  فیروزه‌ای (راست)</string>
+    <string name="rd_fx_anaglyph_rb">قرمز خالص (چپ)  آبی خالص (راست)</string>
+    <string name="rd_fx_anaglyph_rc">قرمز خالص (چپ)  فیروزه‌ای خالص (راست)</string>
+    <string name="rd_fx_anaglyph_rg">قرمز خالص (چپ)  سبز خالص (راست)</string>
+    <string name="rd_fx_angle">زاویه بر حسب درجه</string>
+    <string name="rd_fx_antitranspose">ترانهادهٔ معکوس</string>
+    <string name="rd_fx_blur_sigma">انحراف معیار گاوسی</string>
+    <string name="rd_fx_chroma_spat">شدت کرومای مکانی (0-254)</string>
+    <string name="rd_fx_chroma_temp">شدت کرومای زمانی (0-254)</string>
+    <string name="rd_fx_color_scheme">طرح رنگ</string>
+    <string name="rd_fx_luma_spat">شدت لومای مکانی (0-254)</string>
+    <string name="rd_fx_luma_temp">شدت لومای زمانی (0-254)</string>
+    <string name="rd_fx_softening">مقدار نرم‌سازی</string>
+    <string name="rd_fx_transpose">ترانهاده</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">اندازهٔ پنجره</string>
+    <string name="rd_record_failed">ضبط شروع نشد</string>
+    <string name="rd_record_saved">ضبط ذخیره شد: %1$s</string>
+    <string name="rd_record_stop">توقف ضبط</string>
+    <string name="rd_search_in_english">نمایش تنظیمات به انگلیسی</string>
 </resources>

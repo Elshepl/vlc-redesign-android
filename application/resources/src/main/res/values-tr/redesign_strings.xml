@@ -325,4 +325,20 @@
     <string name="rd_font_default">Varsayılan</string>
     <string name="rd_custom_aspect_ratios">Özel en boy oranları</string>
     <string name="rd_help_custom_aspect_ratios">Arayüzdeki listeye eklenecek en boy oranlarını, virgül (,) ile ayırarak yazın.</string>
+    <string name="rd_font_casual">Gündelik</string>
+    <string name="rd_font_condensed">Dar</string>
+    <string name="rd_font_cursive">El yazısı</string>
+    <string name="rd_font_mono">Eş aralıklı</string>
+    <string name="rd_font_sans">Sans serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">saf yeşil (sol)  saf eflatun (sağ)</string>
+    <string name="rd_fx_anaglyph_mc">eflatun (sol)  camgöbeği (sağ)</string>
+    <string name="rd_fx_anaglyph_rb">saf kırmızı (sol)  saf mavi (sağ)</string>
+    <string name="rd_fx_anaglyph_rc">saf kırmızı (sol)  saf camgöbeği (sağ)</string>
+    <string name="rd_fx_anaglyph_rg">saf kırmızı (sol)  saf yeşil (sağ)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Kayıt başlatılamadı</string>
+    <string name="rd_record_saved">Kayıt kaydedildi: %1$s</string>
+    <string name="rd_record_stop">Kaydı durdur</string>
+    <string name="rd_search_in_english">Ayarları İngilizce göster</string>
 </resources>

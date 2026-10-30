@@ -222,4 +222,5 @@
         <item quantity="one">arkiv %1$d d</item>
         <item quantity="other">arkiv %1$d d</item>
     </plurals>
+    <string name="rd_tv_country">Shteti</string>
 </resources>

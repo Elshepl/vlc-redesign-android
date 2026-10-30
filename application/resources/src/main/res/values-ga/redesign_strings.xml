@@ -316,4 +316,27 @@
     <string name="rd_font_default">Réamhshocrú</string>
     <string name="rd_custom_aspect_ratios">Cóimheasa treoíochta saincheaptha</string>
     <string name="rd_help_custom_aspect_ratios">Liosta de chóimheasa treoíochta, scartha le camóga, a chuirfear le liosta cóimheasa treoíochta an chomhéadain.</string>
+    <string name="rd_font_casual">Neamhfhoirmiúil</string>
+    <string name="rd_font_condensed">Comhbhrúite</string>
+    <string name="rd_font_cursive">Cursach</string>
+    <string name="rd_font_mono">Aonspásáilte</string>
+    <string name="rd_font_sans">Sans serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">glas íon (clé)  maigeanta íon (deas)</string>
+    <string name="rd_fx_anaglyph_mc">maigeanta (clé)  cian (deas)</string>
+    <string name="rd_fx_anaglyph_rb">dearg íon (clé)  gorm íon (deas)</string>
+    <string name="rd_fx_anaglyph_rc">dearg íon (clé)  cian íon (deas)</string>
+    <string name="rd_fx_anaglyph_rg">dearg íon (clé)  glas íon (deas)</string>
+    <string name="rd_fx_antitranspose">Frith-thrasuigh</string>
+    <string name="rd_fx_blur_sigma">Diall caighdeánach Gauss</string>
+    <string name="rd_fx_chroma_spat">Neart spásúil croma (0-254)</string>
+    <string name="rd_fx_chroma_temp">Neart ama croma (0-254)</string>
+    <string name="rd_fx_color_scheme">Scéim dathanna</string>
+    <string name="rd_fx_luma_spat">Neart spásúil luma (0-254)</string>
+    <string name="rd_fx_luma_temp">Neart ama luma (0-254)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Níorbh fhéidir an taifeadadh a thosú</string>
+    <string name="rd_record_saved">Taifeadadh sábháilte: %1$s</string>
+    <string name="rd_record_stop">Stop an taifeadadh</string>
+    <string name="rd_search_in_english">Taispeáin na socruithe i mBéarla</string>
 </resources>

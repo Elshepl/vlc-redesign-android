@@ -313,4 +313,31 @@
     <string name="rd_font_default">Standard</string>
     <string name="rd_custom_aspect_ratios">Eigendefinerte sideforhold</string>
     <string name="rd_help_custom_aspect_ratios">Kommadelt liste over sideforhold som blir lagde til i lista over sideforhold i grensesnittet.</string>
+    <string name="rd_font_casual">Uformell</string>
+    <string name="rd_font_condensed">Smal</string>
+    <string name="rd_font_cursive">Handskrift</string>
+    <string name="rd_font_mono">Fast breidd</string>
+    <string name="rd_font_sans">Sans serif</string>
+    <string name="rd_font_serif">Seriff</string>
+    <string name="rd_fx_anaglyph_gm">rein grøn (venstre)  rein magenta (høgre)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (venstre)  cyan (høgre)</string>
+    <string name="rd_fx_anaglyph_rb">rein raud (venstre)  rein blå (høgre)</string>
+    <string name="rd_fx_anaglyph_rc">rein raud (venstre)  rein cyan (høgre)</string>
+    <string name="rd_fx_anaglyph_rg">rein raud (venstre)  rein grøn (høgre)</string>
+    <string name="rd_fx_angle">Vinkel i grader</string>
+    <string name="rd_fx_antitranspose">Antitransponer</string>
+    <string name="rd_fx_blur_sigma">Standardavviket til gaussfunksjonen</string>
+    <string name="rd_fx_chroma_spat">Romleg kromastyrke (0-254)</string>
+    <string name="rd_fx_chroma_temp">Tidsleg kromastyrke (0-254)</string>
+    <string name="rd_fx_color_scheme">Fargeskjema</string>
+    <string name="rd_fx_luma_spat">Romleg lumastyrke (0-254)</string>
+    <string name="rd_fx_luma_temp">Tidsleg lumastyrke (0-254)</string>
+    <string name="rd_fx_softening">Mjukingsverdi</string>
+    <string name="rd_fx_transform_type">Transformasjonstype</string>
+    <string name="rd_fx_transpose">Transponer</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Klarte ikkje å starte opptaket</string>
+    <string name="rd_record_saved">Opptak lagra: %1$s</string>
+    <string name="rd_record_stop">Stopp opptak</string>
+    <string name="rd_search_in_english">Vis innstillingane på engelsk</string>
 </resources>

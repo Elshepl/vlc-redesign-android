@@ -222,4 +222,5 @@
         <item quantity="one">ئەرشیف %1$d ڕۆژ</item>
         <item quantity="other">ئەرشیف %1$d ڕۆژ</item>
     </plurals>
+    <string name="rd_tv_category">پۆل</string>
 </resources>

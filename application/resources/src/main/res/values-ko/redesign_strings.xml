@@ -325,4 +325,20 @@
     <string name="rd_font_default">기본</string>
     <string name="rd_custom_aspect_ratios">사용자 지정 화면 비율</string>
     <string name="rd_help_custom_aspect_ratios">화면 비율 목록은 쉼표(,)로 구분합니다. 인터페이스의 화면 비율 목록에 추가됩니다.</string>
+    <string name="rd_font_casual">캐주얼</string>
+    <string name="rd_font_condensed">좁은 글꼴</string>
+    <string name="rd_font_cursive">필기체</string>
+    <string name="rd_font_mono">고정폭</string>
+    <string name="rd_font_sans">산세리프</string>
+    <string name="rd_font_serif">세리프</string>
+    <string name="rd_fx_anaglyph_gm">순수 녹색 (왼쪽)  순수 자홍색 (오른쪽)</string>
+    <string name="rd_fx_anaglyph_mc">자홍색 (왼쪽)  청록색 (오른쪽)</string>
+    <string name="rd_fx_anaglyph_rb">순수 빨간색 (왼쪽)  순수 파란색 (오른쪽)</string>
+    <string name="rd_fx_anaglyph_rc">순수 빨간색 (왼쪽)  순수 청록색 (오른쪽)</string>
+    <string name="rd_fx_anaglyph_rg">순수 빨간색 (왼쪽)  순수 녹색 (오른쪽)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">녹음/녹화를 시작할 수 없습니다</string>
+    <string name="rd_record_saved">녹음/녹화 저장됨: %1$s</string>
+    <string name="rd_record_stop">녹음/녹화 중지</string>
+    <string name="rd_search_in_english">설정을 영어로 표시</string>
 </resources>

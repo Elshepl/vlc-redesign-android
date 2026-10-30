@@ -325,4 +325,20 @@
     <string name="rd_font_default">Par défaut</string>
     <string name="rd_custom_aspect_ratios">Formats d\'écran personnalisés</string>
     <string name="rd_help_custom_aspect_ratios">Liste de formats d\'écran (séparés par des virgules) qui seront ajoutés à la liste des formats d\'écran de l\'interface.</string>
+    <string name="rd_font_casual">Décontractée</string>
+    <string name="rd_font_condensed">Condensée</string>
+    <string name="rd_font_cursive">Cursive</string>
+    <string name="rd_font_mono">Chasse fixe</string>
+    <string name="rd_font_sans">Sans empattement</string>
+    <string name="rd_font_serif">Avec empattement</string>
+    <string name="rd_fx_anaglyph_gm">vert pur (gauche)  magenta pur (droite)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (gauche)  cyan (droite)</string>
+    <string name="rd_fx_anaglyph_rb">rouge pur (gauche)  bleu pur (droite)</string>
+    <string name="rd_fx_anaglyph_rc">rouge pur (gauche)  cyan pur (droite)</string>
+    <string name="rd_fx_anaglyph_rg">rouge pur (gauche)  vert pur (droite)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Impossible de démarrer l\'enregistrement</string>
+    <string name="rd_record_saved">Enregistrement sauvegardé : %1$s</string>
+    <string name="rd_record_stop">Arrêter l\'enregistrement</string>
+    <string name="rd_search_in_english">Afficher les paramètres en anglais</string>
 </resources>

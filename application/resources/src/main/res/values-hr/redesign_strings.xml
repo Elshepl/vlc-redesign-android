@@ -323,4 +323,22 @@
     <string name="rd_font_default">Zadano</string>
     <string name="rd_custom_aspect_ratios">Prilagođeni bočni omjeri</string>
     <string name="rd_help_custom_aspect_ratios">Zarezima podijeljeni popis bočnih omjera koji će biti dodan sučelnom popisu bočnih omjera. </string>
+    <string name="rd_font_casual">Ležerni</string>
+    <string name="rd_font_condensed">Sažeti</string>
+    <string name="rd_font_cursive">Kurziv</string>
+    <string name="rd_font_mono">Jednake širine</string>
+    <string name="rd_font_sans">Bez serifa</string>
+    <string name="rd_font_serif">Sa serifima</string>
+    <string name="rd_fx_anaglyph_gm">čista zelena (lijevo)  čista magenta (desno)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (lijevo)  cijan (desno)</string>
+    <string name="rd_fx_anaglyph_rb">čista crvena (lijevo)  čista plava (desno)</string>
+    <string name="rd_fx_anaglyph_rc">čista crvena (lijevo)  čisti cijan (desno)</string>
+    <string name="rd_fx_anaglyph_rg">čista crvena (lijevo)  čista zelena (desno)</string>
+    <string name="rd_fx_antitranspose">Antitransponiraj</string>
+    <string name="rd_fx_transpose">Transponiraj</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Snimanje se nije moglo pokrenuti</string>
+    <string name="rd_record_saved">Snimka spremljena: %1$s</string>
+    <string name="rd_record_stop">Zaustavi snimanje</string>
+    <string name="rd_search_in_english">Prikaži postavke na engleskom</string>
 </resources>

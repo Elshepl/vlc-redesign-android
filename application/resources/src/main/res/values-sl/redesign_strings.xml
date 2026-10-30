@@ -325,4 +325,20 @@
     <string name="rd_font_default">Privzeto</string>
     <string name="rd_custom_aspect_ratios">Razmerja stranic po meri</string>
     <string name="rd_help_custom_aspect_ratios">Seznam razmerij prikaza, ki bo dodan na seznam razmerij prikaza vmesnika.</string>
+    <string name="rd_font_casual">Sproščena</string>
+    <string name="rd_font_condensed">Zožena</string>
+    <string name="rd_font_cursive">Pisana</string>
+    <string name="rd_font_mono">Enakomerna širina</string>
+    <string name="rd_font_sans">Brez serifov</string>
+    <string name="rd_font_serif">S serifi</string>
+    <string name="rd_fx_anaglyph_gm">čista zelena (levo)  čista škrlatna (desno)</string>
+    <string name="rd_fx_anaglyph_mc">škrlatna (levo)  cian (desno)</string>
+    <string name="rd_fx_anaglyph_rb">čista rdeča (levo)  čista modra (desno)</string>
+    <string name="rd_fx_anaglyph_rc">čista rdeča (levo)  čista cian (desno)</string>
+    <string name="rd_fx_anaglyph_rg">čista rdeča (levo)  čista zelena (desno)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Snemanja ni bilo mogoče začeti</string>
+    <string name="rd_record_saved">Posnetek shranjen: %1$s</string>
+    <string name="rd_record_stop">Ustavi snemanje</string>
+    <string name="rd_search_in_english">Pokaži nastavitve v angleščini</string>
 </resources>

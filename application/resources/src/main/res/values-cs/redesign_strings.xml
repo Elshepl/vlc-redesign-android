@@ -316,4 +316,29 @@
     <string name="rd_font_default">Výchozí</string>
     <string name="rd_custom_aspect_ratios">Vlastní poměry stran</string>
     <string name="rd_help_custom_aspect_ratios">Čárkou oddělený seznam poměrů stran, který bude přidán do seznamu poměrů stran v rozhraní.</string>
+    <string name="rd_font_casual">Neformální</string>
+    <string name="rd_font_condensed">Zúžené</string>
+    <string name="rd_font_cursive">Psací</string>
+    <string name="rd_font_mono">Neproporcionální</string>
+    <string name="rd_font_sans">Bezpatkové</string>
+    <string name="rd_font_serif">Patkové</string>
+    <string name="rd_fx_anaglyph_gm">čistá zelená (vlevo)  čistá purpurová (vpravo)</string>
+    <string name="rd_fx_anaglyph_mc">purpurová (vlevo)  azurová (vpravo)</string>
+    <string name="rd_fx_anaglyph_rb">čistá červená (vlevo)  čistá modrá (vpravo)</string>
+    <string name="rd_fx_anaglyph_rc">čistá červená (vlevo)  čistá azurová (vpravo)</string>
+    <string name="rd_fx_anaglyph_rg">čistá červená (vlevo)  čistá zelená (vpravo)</string>
+    <string name="rd_fx_antitranspose">Antitranspozice</string>
+    <string name="rd_fx_blur_sigma">Směrodatná odchylka Gaussova rozostření</string>
+    <string name="rd_fx_chroma_spat">Prostorová síla chrominance (0-254)</string>
+    <string name="rd_fx_chroma_temp">Časová síla chrominance (0-254)</string>
+    <string name="rd_fx_luma_spat">Prostorová síla jasu (0-254)</string>
+    <string name="rd_fx_luma_temp">Časová síla jasu (0-254)</string>
+    <string name="rd_fx_softening">Hodnota změkčení</string>
+    <string name="rd_fx_transform_type">Typ transformace</string>
+    <string name="rd_fx_transpose">Transpozice</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Nahrávání nelze spustit</string>
+    <string name="rd_record_saved">Nahrávka uložena: %1$s</string>
+    <string name="rd_record_stop">Zastavit nahrávání</string>
+    <string name="rd_search_in_english">Zobrazit nastavení v angličtině</string>
 </resources>

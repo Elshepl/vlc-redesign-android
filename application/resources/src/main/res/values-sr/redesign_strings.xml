@@ -313,4 +313,31 @@
     <string name="rd_font_default">Подразумевано</string>
     <string name="rd_custom_aspect_ratios">Прилагођене пропорције</string>
     <string name="rd_help_custom_aspect_ratios">Зарезом одвојен списак пропорција које ће бити додате у списак пропорција у интерфејсу.</string>
+    <string name="rd_font_casual">Опуштени</string>
+    <string name="rd_font_condensed">Сужени</string>
+    <string name="rd_font_cursive">Рукописни</string>
+    <string name="rd_font_mono">Фиксне ширине</string>
+    <string name="rd_font_sans">Без серифа</string>
+    <string name="rd_font_serif">Са серифима</string>
+    <string name="rd_fx_anaglyph_gm">чиста зелена (лево)  чиста магента (десно)</string>
+    <string name="rd_fx_anaglyph_mc">магента (лево)  тиркизна (десно)</string>
+    <string name="rd_fx_anaglyph_rb">чиста црвена (лево)  чиста плава (десно)</string>
+    <string name="rd_fx_anaglyph_rc">чиста црвена (лево)  чиста тиркизна (десно)</string>
+    <string name="rd_fx_anaglyph_rg">чиста црвена (лево)  чиста зелена (десно)</string>
+    <string name="rd_fx_angle">Угао у степенима</string>
+    <string name="rd_fx_antitranspose">Антитранспоновање</string>
+    <string name="rd_fx_blur_sigma">Стандардна девијација Гаусовог замућења</string>
+    <string name="rd_fx_chroma_spat">Просторна јачина хроме (0-254)</string>
+    <string name="rd_fx_chroma_temp">Временска јачина хроме (0-254)</string>
+    <string name="rd_fx_color_scheme">Шема боја</string>
+    <string name="rd_fx_luma_spat">Просторна јачина луме (0-254)</string>
+    <string name="rd_fx_luma_temp">Временска јачина луме (0-254)</string>
+    <string name="rd_fx_softening">Вредност омекшавања</string>
+    <string name="rd_fx_transpose">Транспоновање</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">Величина прозора</string>
+    <string name="rd_record_failed">Снимање није могло да почне</string>
+    <string name="rd_record_saved">Снимак је сачуван: %1$s</string>
+    <string name="rd_record_stop">Заустави снимање</string>
+    <string name="rd_search_in_english">Прикажи подешавања на енглеском</string>
 </resources>

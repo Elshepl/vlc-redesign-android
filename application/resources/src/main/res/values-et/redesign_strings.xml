@@ -323,4 +323,22 @@
     <string name="rd_font_default">Vaikimisi</string>
     <string name="rd_custom_aspect_ratios">Kohandatud külgede suhted</string>
     <string name="rd_help_custom_aspect_ratios">Komaga eraldatud nimekiri külgede suhetest, mis lisatakse kasutajaliidese külgede suhete nimekirja.</string>
+    <string name="rd_font_casual">Vaba</string>
+    <string name="rd_font_condensed">Kitsendatud</string>
+    <string name="rd_font_cursive">Käekiri</string>
+    <string name="rd_font_mono">Püsisammuga</string>
+    <string name="rd_font_sans">Seriifideta</string>
+    <string name="rd_font_serif">Seriifidega</string>
+    <string name="rd_fx_anaglyph_gm">puhas roheline (vasak)  puhas magenta (parem)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (vasak)  tsüaan (parem)</string>
+    <string name="rd_fx_anaglyph_rb">puhas punane (vasak)  puhas sinine (parem)</string>
+    <string name="rd_fx_anaglyph_rc">puhas punane (vasak)  puhas tsüaan (parem)</string>
+    <string name="rd_fx_anaglyph_rg">puhas punane (vasak)  puhas roheline (parem)</string>
+    <string name="rd_fx_antitranspose">Antitransponeerimine</string>
+    <string name="rd_fx_transpose">Transponeerimine</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Salvestamist ei saanud alustada</string>
+    <string name="rd_record_saved">Salvestis on salvestatud: %1$s</string>
+    <string name="rd_record_stop">Lõpeta salvestamine</string>
+    <string name="rd_search_in_english">Näita sätteid inglise keeles</string>
 </resources>

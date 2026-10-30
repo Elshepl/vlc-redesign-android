@@ -325,4 +325,20 @@
     <string name="rd_font_default">Standard</string>
     <string name="rd_custom_aspect_ratios">Brugerdefinerede højde-bredde-forhold</string>
     <string name="rd_help_custom_aspect_ratios">Kommasepareret liste over højde-bredde-forhold der tilføjes i den tilsvarende liste i brugerfladen.</string>
+    <string name="rd_font_casual">Uformel</string>
+    <string name="rd_font_condensed">Kondenseret</string>
+    <string name="rd_font_cursive">Håndskrift</string>
+    <string name="rd_font_mono">Fast bredde</string>
+    <string name="rd_font_sans">Uden serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">ren grøn (venstre)  ren magenta (højre)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (venstre)  cyan (højre)</string>
+    <string name="rd_fx_anaglyph_rb">ren rød (venstre)  ren blå (højre)</string>
+    <string name="rd_fx_anaglyph_rc">ren rød (venstre)  ren cyan (højre)</string>
+    <string name="rd_fx_anaglyph_rg">ren rød (venstre)  ren grøn (højre)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Optagelsen kunne ikke starte</string>
+    <string name="rd_record_saved">Optagelse gemt: %1$s</string>
+    <string name="rd_record_stop">Stop optagelse</string>
+    <string name="rd_search_in_english">Vis indstillingerne på engelsk</string>
 </resources>

@@ -306,4 +306,37 @@
     <string name="rd_font_default">ნაგულისხმევი</string>
     <string name="rd_custom_aspect_ratios">გვერდების საკუთარი შეფარდებები</string>
     <string name="rd_help_custom_aspect_ratios">გვერდების შეფარდებების მძიმით გამოყოფილი სია, რომელიც ინტერფეისის გვერდების შეფარდების სიას დაემატება.</string>
+    <string name="rd_font_casual">თავისუფალი</string>
+    <string name="rd_font_condensed">შევიწროებული</string>
+    <string name="rd_font_cursive">კურსივი</string>
+    <string name="rd_font_mono">მონოსიგანიანი</string>
+    <string name="rd_font_sans">სერიფების გარეშე</string>
+    <string name="rd_font_serif">სერიფებით</string>
+    <string name="rd_fx_anaglyph_gm">სუფთა მწვანე (მარცხენა)  სუფთა მაჯენტა (მარჯვენა)</string>
+    <string name="rd_fx_anaglyph_mc">მაჯენტა (მარცხენა)  ციანი (მარჯვენა)</string>
+    <string name="rd_fx_anaglyph_rb">სუფთა წითელი (მარცხენა)  სუფთა ლურჯი (მარჯვენა)</string>
+    <string name="rd_fx_anaglyph_rc">სუფთა წითელი (მარცხენა)  სუფთა ციანი (მარჯვენა)</string>
+    <string name="rd_fx_anaglyph_rg">სუფთა წითელი (მარცხენა)  სუფთა მწვანე (მარჯვენა)</string>
+    <string name="rd_fx_angle">კუთხე გრადუსებში</string>
+    <string name="rd_fx_antitranspose">ანტიტრანსპონირება</string>
+    <string name="rd_fx_blur_sigma">გაუსის სტანდარტული გადახრა</string>
+    <string name="rd_fx_chroma_spat">ქრომის სივრცითი სიძლიერე (0-254)</string>
+    <string name="rd_fx_chroma_temp">ქრომის დროითი სიძლიერე (0-254)</string>
+    <string name="rd_fx_color_scheme">ფერთა სქემა</string>
+    <string name="rd_fx_flip_h">ჰორიზონტალურად ასახვა</string>
+    <string name="rd_fx_flip_v">ვერტიკალურად ასახვა</string>
+    <string name="rd_fx_luma_spat">ლუმას სივრცითი სიძლიერე (0-254)</string>
+    <string name="rd_fx_luma_temp">ლუმას დროითი სიძლიერე (0-254)</string>
+    <string name="rd_fx_rotate_180">180 გრადუსით შემობრუნება</string>
+    <string name="rd_fx_rotate_270">270 გრადუსით შემობრუნება</string>
+    <string name="rd_fx_rotate_90">90 გრადუსით შემობრუნება</string>
+    <string name="rd_fx_softening">დარბილების მნიშვნელობა</string>
+    <string name="rd_fx_transform_type">გარდაქმნის ტიპი</string>
+    <string name="rd_fx_transpose">ტრანსპონირება</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">ფანჯრის ზომა</string>
+    <string name="rd_record_failed">ჩაწერის დაწყება ვერ მოხერხდა</string>
+    <string name="rd_record_saved">ჩანაწერი შენახულია: %1$s</string>
+    <string name="rd_record_stop">ჩაწერის შეწყვეტა</string>
+    <string name="rd_search_in_english">პარამეტრების ჩვენება ინგლისურად</string>
 </resources>

@@ -325,4 +325,20 @@
     <string name="rd_font_default">Noklusējuma</string>
     <string name="rd_custom_aspect_ratios">Pielāgotas malu proporcijas</string>
     <string name="rd_help_custom_aspect_ratios">Komatu atdalīts saraksts ar malu proporcijām, kuras tiks pievienotas saskarnes malu attiecību sarakstā.</string>
+    <string name="rd_font_casual">Neformāls</string>
+    <string name="rd_font_condensed">Šaurs</string>
+    <string name="rd_font_cursive">Rokraksta</string>
+    <string name="rd_font_mono">Vienplatuma</string>
+    <string name="rd_font_sans">Bez serifiem</string>
+    <string name="rd_font_serif">Ar serifiem</string>
+    <string name="rd_fx_anaglyph_gm">tīri zaļš (kreisā)  tīri fuksīns (labā)</string>
+    <string name="rd_fx_anaglyph_mc">fuksīns (kreisā)  ciāns (labā)</string>
+    <string name="rd_fx_anaglyph_rb">tīri sarkans (kreisā)  tīri zils (labā)</string>
+    <string name="rd_fx_anaglyph_rc">tīri sarkans (kreisā)  tīri ciāns (labā)</string>
+    <string name="rd_fx_anaglyph_rg">tīri sarkans (kreisā)  tīri zaļš (labā)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Ierakstīšanu neizdevās sākt</string>
+    <string name="rd_record_saved">Ieraksts saglabāts: %1$s</string>
+    <string name="rd_record_stop">Apturēt ierakstīšanu</string>
+    <string name="rd_search_in_english">Rādīt iestatījumus angliski</string>
 </resources>

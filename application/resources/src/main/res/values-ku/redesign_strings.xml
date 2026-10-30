@@ -310,4 +310,33 @@
     <string name="rd_record">تۆمارکردن</string>
     <string name="rd_record_started">تۆماری دەکات</string>
     <string name="rd_font_default">بنەڕەت</string>
+    <string name="rd_custom_aspect_ratios">ڕێژەی ڕووبەری تایبەت</string>
+    <string name="rd_font_casual">ئاسایی</string>
+    <string name="rd_font_condensed">چڕکراوە</string>
+    <string name="rd_font_cursive">دەستنووس</string>
+    <string name="rd_font_mono">یەکپانی</string>
+    <string name="rd_font_sans">بێ سریف</string>
+    <string name="rd_font_serif">سریف</string>
+    <string name="rd_fx_anaglyph_gm">سەوزی پەتی (چەپ)  مەجێنتای پەتی (ڕاست)</string>
+    <string name="rd_fx_anaglyph_mc">مەجێنتا (چەپ)  فیرۆزەیی (ڕاست)</string>
+    <string name="rd_fx_anaglyph_rb">سووری پەتی (چەپ)  شینی پەتی (ڕاست)</string>
+    <string name="rd_fx_anaglyph_rc">سووری پەتی (چەپ)  فیرۆزەیی پەتی (ڕاست)</string>
+    <string name="rd_fx_anaglyph_rg">سووری پەتی (چەپ)  سەوزی پەتی (ڕاست)</string>
+    <string name="rd_fx_antitranspose">دژە-ترانسپۆز</string>
+    <string name="rd_fx_blur_sigma">لادانی ستانداردی گاوس</string>
+    <string name="rd_fx_chroma_spat">بەهێزیی ڕەنگی شوێنی (0-254)</string>
+    <string name="rd_fx_chroma_temp">بەهێزیی ڕەنگی کاتی (0-254)</string>
+    <string name="rd_fx_color_scheme">ڕەنگبەندی</string>
+    <string name="rd_fx_luma_spat">بەهێزیی ڕووناکی شوێنی (0-254)</string>
+    <string name="rd_fx_luma_temp">بەهێزیی ڕووناکی کاتی (0-254)</string>
+    <string name="rd_fx_softening">بەهای نەرمکردن</string>
+    <string name="rd_fx_transform_type">جۆری گۆڕین</string>
+    <string name="rd_fx_transpose">ترانسپۆز</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">قەبارەی پەنجەرە</string>
+    <string name="rd_help_custom_aspect_ratios">لیستێکی جیاکراوە بە کۆما لە ڕێژەی ڕووبەر (وەک 21:9, 1.85:1) کە زیاد دەکرێن بۆ لیستی ڕێژەی ڕووبەری لێدەر.</string>
+    <string name="rd_record_failed">تۆمارکردن دەستی پێنەکرد</string>
+    <string name="rd_record_saved">تۆمارکراو پاشەکەوت کرا: %1$s</string>
+    <string name="rd_record_stop">وەستاندنی تۆمارکردن</string>
+    <string name="rd_search_in_english">ڕێکخستنەکان بە ئینگلیزی پیشان بدە</string>
 </resources>

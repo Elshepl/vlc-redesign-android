@@ -309,4 +309,35 @@
     <string name="rd_font_default">Zadano</string>
     <string name="rd_custom_aspect_ratios">Prilagođeni omjeri slike</string>
     <string name="rd_help_custom_aspect_ratios">Zarezima odvojena lista omjera koji će biti dodani na listu omjera na okruženju.</string>
+    <string name="rd_font_casual">Neformalni</string>
+    <string name="rd_font_condensed">Uski</string>
+    <string name="rd_font_cursive">Rukopisni</string>
+    <string name="rd_font_mono">Fiksne širine</string>
+    <string name="rd_font_sans">Bez serifa</string>
+    <string name="rd_font_serif">Serifni</string>
+    <string name="rd_fx_anaglyph_gm">čista zelena (lijevo)  čista magenta (desno)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (lijevo)  cijan (desno)</string>
+    <string name="rd_fx_anaglyph_rb">čista crvena (lijevo)  čista plava (desno)</string>
+    <string name="rd_fx_anaglyph_rc">čista crvena (lijevo)  čisti cijan (desno)</string>
+    <string name="rd_fx_anaglyph_rg">čista crvena (lijevo)  čista zelena (desno)</string>
+    <string name="rd_fx_angle">Ugao u stepenima</string>
+    <string name="rd_fx_antitranspose">Antitranspozicija</string>
+    <string name="rd_fx_blur_sigma">Standardna devijacija Gaussa</string>
+    <string name="rd_fx_chroma_spat">Prostorna jačina hrome (0-254)</string>
+    <string name="rd_fx_chroma_temp">Vremenska jačina hrome (0-254)</string>
+    <string name="rd_fx_color_scheme">Shema boja</string>
+    <string name="rd_fx_luma_spat">Prostorna jačina lume (0-254)</string>
+    <string name="rd_fx_luma_temp">Vremenska jačina lume (0-254)</string>
+    <string name="rd_fx_rotate_180">Rotiraj za 180 stepeni</string>
+    <string name="rd_fx_rotate_270">Rotiraj za 270 stepeni</string>
+    <string name="rd_fx_rotate_90">Rotiraj za 90 stepeni</string>
+    <string name="rd_fx_softening">Vrijednost omekšavanja</string>
+    <string name="rd_fx_transform_type">Vrsta transformacije</string>
+    <string name="rd_fx_transpose">Transpozicija</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">Veličina prozora</string>
+    <string name="rd_record_failed">Snimanje nije moglo početi</string>
+    <string name="rd_record_saved">Snimak sačuvan: %1$s</string>
+    <string name="rd_record_stop">Zaustavi snimanje</string>
+    <string name="rd_search_in_english">Prikaži postavke na engleskom</string>
 </resources>

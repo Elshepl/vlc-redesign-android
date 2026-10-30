@@ -310,4 +310,33 @@
     <string name="rd_font_default">Verstek</string>
     <string name="rd_custom_aspect_ratios">Pasgemaakte aspekverhoudings</string>
     <string name="rd_help_custom_aspect_ratios">Kommageskeide lys van aspekverhoudings wat by die koppelvlak se lys van aspekverhoudings gevoeg word.</string>
+    <string name="rd_font_casual">Informeel</string>
+    <string name="rd_font_condensed">Saamgedruk</string>
+    <string name="rd_font_cursive">Lopende skrif</string>
+    <string name="rd_font_mono">Vaste breedte</string>
+    <string name="rd_font_sans">Skreefloos</string>
+    <string name="rd_font_serif">Skreef</string>
+    <string name="rd_fx_anaglyph_gm">suiwer groen (links)  suiwer magenta (regs)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (links)  siaan (regs)</string>
+    <string name="rd_fx_anaglyph_rb">suiwer rooi (links)  suiwer blou (regs)</string>
+    <string name="rd_fx_anaglyph_rc">suiwer rooi (links)  suiwer siaan (regs)</string>
+    <string name="rd_fx_anaglyph_rg">suiwer rooi (links)  suiwer groen (regs)</string>
+    <string name="rd_fx_angle">Hoek in grade</string>
+    <string name="rd_fx_blur_sigma">Gauss se standaardafwyking</string>
+    <string name="rd_fx_chroma_spat">Ruimtelike chroma-sterkte (0-254)</string>
+    <string name="rd_fx_chroma_temp">Temporele chroma-sterkte (0-254)</string>
+    <string name="rd_fx_color_scheme">Kleurskema</string>
+    <string name="rd_fx_luma_spat">Ruimtelike luma-sterkte (0-254)</string>
+    <string name="rd_fx_luma_temp">Temporele luma-sterkte (0-254)</string>
+    <string name="rd_fx_rotate_180">Roteer met 180 grade</string>
+    <string name="rd_fx_rotate_270">Roteer met 270 grade</string>
+    <string name="rd_fx_rotate_90">Roteer met 90 grade</string>
+    <string name="rd_fx_softening">Versagtingswaarde</string>
+    <string name="rd_fx_transform_type">Transformasietipe</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">Venstergrootte</string>
+    <string name="rd_record_failed">Opname kon nie begin nie</string>
+    <string name="rd_record_saved">Opname gestoor: %1$s</string>
+    <string name="rd_record_stop">Stop opname</string>
+    <string name="rd_search_in_english">Wys die instellings in Engels</string>
 </resources>

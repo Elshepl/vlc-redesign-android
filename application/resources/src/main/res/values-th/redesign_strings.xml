@@ -313,4 +313,30 @@
     <string name="rd_font_default">ปริยาย</string>
     <string name="rd_custom_aspect_ratios">อัตราส่วนภาพที่กำหนดเอง</string>
     <string name="rd_help_custom_aspect_ratios">ใช้เตรื่องหมายจุลภาคคั่นแต่ละรายการที่จะเพิ่มเข้าไปในรายการอัตราส่วนภาพ</string>
+    <string name="rd_font_casual">ลำลอง</string>
+    <string name="rd_font_condensed">แบบแคบ</string>
+    <string name="rd_font_cursive">ตัวเขียน</string>
+    <string name="rd_font_mono">ความกว้างคงที่</string>
+    <string name="rd_font_sans">ไม่มีเชิง</string>
+    <string name="rd_font_serif">มีเชิง</string>
+    <string name="rd_fx_anaglyph_gm">เขียวล้วน (ซ้าย)  ม่วงแดงล้วน (ขวา)</string>
+    <string name="rd_fx_anaglyph_mc">ม่วงแดง (ซ้าย)  ฟ้าอมเขียว (ขวา)</string>
+    <string name="rd_fx_anaglyph_rb">แดงล้วน (ซ้าย)  น้ำเงินล้วน (ขวา)</string>
+    <string name="rd_fx_anaglyph_rc">แดงล้วน (ซ้าย)  ฟ้าอมเขียวล้วน (ขวา)</string>
+    <string name="rd_fx_anaglyph_rg">แดงล้วน (ซ้าย)  เขียวล้วน (ขวา)</string>
+    <string name="rd_fx_antitranspose">สลับแกนแบบกลับ</string>
+    <string name="rd_fx_blur_sigma">ส่วนเบี่ยงเบนมาตรฐานแบบเกาส์เซียน</string>
+    <string name="rd_fx_chroma_spat">ความแรงสีเชิงพื้นที่ (0-254)</string>
+    <string name="rd_fx_chroma_temp">ความแรงสีเชิงเวลา (0-254)</string>
+    <string name="rd_fx_color_scheme">ชุดสี</string>
+    <string name="rd_fx_luma_spat">ความแรงความสว่างเชิงพื้นที่ (0-254)</string>
+    <string name="rd_fx_luma_temp">ความแรงความสว่างเชิงเวลา (0-254)</string>
+    <string name="rd_fx_softening">ค่าการทำให้นุ่ม</string>
+    <string name="rd_fx_transform_type">ชนิดการแปลง</string>
+    <string name="rd_fx_transpose">สลับแกน</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">ไม่สามารถเริ่มการบันทึกได้</string>
+    <string name="rd_record_saved">บันทึกแล้ว: %1$s</string>
+    <string name="rd_record_stop">หยุดบันทึก</string>
+    <string name="rd_search_in_english">แสดงค่าตั้งเป็นภาษาอังกฤษ</string>
 </resources>

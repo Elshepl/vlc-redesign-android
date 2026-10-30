@@ -325,4 +325,20 @@
     <string name="rd_font_default">Padrão</string>
     <string name="rd_custom_aspect_ratios">Proporções de tela personalizadas</string>
     <string name="rd_help_custom_aspect_ratios">Lista, separada por vírgulas, de proporções que será adiconada à lista de proporções da interface.</string>
+    <string name="rd_font_casual">Informal</string>
+    <string name="rd_font_condensed">Condensada</string>
+    <string name="rd_font_cursive">Cursiva</string>
+    <string name="rd_font_mono">Monoespaçada</string>
+    <string name="rd_font_sans">Sem serifa</string>
+    <string name="rd_font_serif">Serifa</string>
+    <string name="rd_fx_anaglyph_gm">verde puro (esquerda)  magenta puro (direita)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (esquerda)  ciano (direita)</string>
+    <string name="rd_fx_anaglyph_rb">vermelho puro (esquerda)  azul puro (direita)</string>
+    <string name="rd_fx_anaglyph_rc">vermelho puro (esquerda)  ciano puro (direita)</string>
+    <string name="rd_fx_anaglyph_rg">vermelho puro (esquerda)  verde puro (direita)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Não foi possível iniciar a gravação</string>
+    <string name="rd_record_saved">Gravação salva: %1$s</string>
+    <string name="rd_record_stop">Parar gravação</string>
+    <string name="rd_search_in_english">Mostrar as configurações em inglês</string>
 </resources>

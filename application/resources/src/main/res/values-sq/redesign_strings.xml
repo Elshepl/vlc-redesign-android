@@ -307,4 +307,36 @@
     <string name="rd_font_default">Parazgjedhje</string>
     <string name="rd_custom_aspect_ratios">Raporte të personalizuara të pamjes</string>
     <string name="rd_help_custom_aspect_ratios">Listë raportesh pamjeje, të ndara me presje, që do të shtohen në listën e raporteve të pamjes së ndërfaqes.</string>
+    <string name="rd_font_casual">Joformal</string>
+    <string name="rd_font_condensed">I ngjeshur</string>
+    <string name="rd_font_cursive">Kursiv</string>
+    <string name="rd_font_mono">Me gjerësi fikse</string>
+    <string name="rd_font_sans">Pa serif</string>
+    <string name="rd_font_serif">Me serif</string>
+    <string name="rd_fx_anaglyph_gm">jeshile e pastër (majtas)  magenta e pastër (djathtas)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (majtas)  gurkali (djathtas)</string>
+    <string name="rd_fx_anaglyph_rb">e kuqe e pastër (majtas)  blu e pastër (djathtas)</string>
+    <string name="rd_fx_anaglyph_rc">e kuqe e pastër (majtas)  gurkali e pastër (djathtas)</string>
+    <string name="rd_fx_anaglyph_rg">e kuqe e pastër (majtas)  jeshile e pastër (djathtas)</string>
+    <string name="rd_fx_antitranspose">Antitranspozim</string>
+    <string name="rd_fx_blur_sigma">Devijimi standard i Gaussit</string>
+    <string name="rd_fx_chroma_spat">Fuqia hapësinore e kromës (0-254)</string>
+    <string name="rd_fx_chroma_temp">Fuqia kohore e kromës (0-254)</string>
+    <string name="rd_fx_color_scheme">Skema e ngjyrave</string>
+    <string name="rd_fx_flip_h">Përmbys horizontalisht</string>
+    <string name="rd_fx_flip_v">Përmbys vertikalisht</string>
+    <string name="rd_fx_luma_spat">Fuqia hapësinore e lumës (0-254)</string>
+    <string name="rd_fx_luma_temp">Fuqia kohore e lumës (0-254)</string>
+    <string name="rd_fx_rotate_180">Rrotullo 180 gradë</string>
+    <string name="rd_fx_rotate_270">Rrotullo 270 gradë</string>
+    <string name="rd_fx_rotate_90">Rrotullo 90 gradë</string>
+    <string name="rd_fx_softening">Vlera e zbutjes</string>
+    <string name="rd_fx_transform_type">Lloji i transformimit</string>
+    <string name="rd_fx_transpose">Transpozim</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">Madhësia e dritares</string>
+    <string name="rd_record_failed">Regjistrimi nuk mund të nisej</string>
+    <string name="rd_record_saved">Regjistrimi u ruajt: %1$s</string>
+    <string name="rd_record_stop">Ndalo regjistrimin</string>
+    <string name="rd_search_in_english">Shfaq cilësimet në anglisht</string>
 </resources>

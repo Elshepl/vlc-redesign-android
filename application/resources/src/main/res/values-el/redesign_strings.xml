@@ -325,4 +325,20 @@
     <string name="rd_font_default">Προεπιλογή</string>
     <string name="rd_custom_aspect_ratios">Προσαρμοσμένες αναλογίες διαστάσεων</string>
     <string name="rd_help_custom_aspect_ratios">Χωρισμένη με κόμματα λίστα αναλογιών διαστάσεων που θα προστεθούν στη λίστα αναλογιών διαστάσεων της διεπαφής.</string>
+    <string name="rd_font_casual">Ανεπίσημη</string>
+    <string name="rd_font_condensed">Στενή</string>
+    <string name="rd_font_cursive">Καλλιγραφική</string>
+    <string name="rd_font_mono">Σταθερού πλάτους</string>
+    <string name="rd_font_sans">Χωρίς πατούρες</string>
+    <string name="rd_font_serif">Με πατούρες</string>
+    <string name="rd_fx_anaglyph_gm">καθαρό πράσινο (αριστερά)  καθαρό ματζέντα (δεξιά)</string>
+    <string name="rd_fx_anaglyph_mc">ματζέντα (αριστερά)  κυανό (δεξιά)</string>
+    <string name="rd_fx_anaglyph_rb">καθαρό κόκκινο (αριστερά)  καθαρό μπλε (δεξιά)</string>
+    <string name="rd_fx_anaglyph_rc">καθαρό κόκκινο (αριστερά)  καθαρό κυανό (δεξιά)</string>
+    <string name="rd_fx_anaglyph_rg">καθαρό κόκκινο (αριστερά)  καθαρό πράσινο (δεξιά)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Δεν ήταν δυνατή η έναρξη εγγραφής</string>
+    <string name="rd_record_saved">Η εγγραφή αποθηκεύτηκε: %1$s</string>
+    <string name="rd_record_stop">Διακοπή εγγραφής</string>
+    <string name="rd_search_in_english">Εμφάνιση των ρυθμίσεων στα Αγγλικά</string>
 </resources>

@@ -318,4 +318,27 @@
     <string name="rd_font_default">Implicit</string>
     <string name="rd_custom_aspect_ratios">Rapoarte de aspect personalizate</string>
     <string name="rd_help_custom_aspect_ratios">Listă de rapoarte de aspect, separate prin virgulă care vor fi adăugate în lista de rapoarte de aspect a interfaței.</string>
+    <string name="rd_font_casual">Informal</string>
+    <string name="rd_font_condensed">Condensat</string>
+    <string name="rd_font_cursive">Cursiv</string>
+    <string name="rd_font_mono">Monospațiat</string>
+    <string name="rd_font_sans">Fără serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">verde pur (stânga)  magenta pur (dreapta)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (stânga)  cyan (dreapta)</string>
+    <string name="rd_fx_anaglyph_rb">roșu pur (stânga)  albastru pur (dreapta)</string>
+    <string name="rd_fx_anaglyph_rc">roșu pur (stânga)  cyan pur (dreapta)</string>
+    <string name="rd_fx_anaglyph_rg">roșu pur (stânga)  verde pur (dreapta)</string>
+    <string name="rd_fx_blur_sigma">Deviația standard a gaussianei</string>
+    <string name="rd_fx_chroma_spat">Intensitatea spațială a crominanței (0-254)</string>
+    <string name="rd_fx_chroma_temp">Intensitatea temporală a crominanței (0-254)</string>
+    <string name="rd_fx_color_scheme">Schemă de culori</string>
+    <string name="rd_fx_luma_spat">Intensitatea spațială a luminanței (0-254)</string>
+    <string name="rd_fx_luma_temp">Intensitatea temporală a luminanței (0-254)</string>
+    <string name="rd_fx_softening">Valoare de atenuare</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Înregistrarea nu a putut porni</string>
+    <string name="rd_record_saved">Înregistrare salvată: %1$s</string>
+    <string name="rd_record_stop">Oprește înregistrarea</string>
+    <string name="rd_search_in_english">Afișează setările în engleză</string>
 </resources>

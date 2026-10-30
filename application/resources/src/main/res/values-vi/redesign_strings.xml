@@ -318,4 +318,27 @@
     <string name="rd_font_default">Mặc định</string>
     <string name="rd_custom_aspect_ratios">Tỉ lệ khung hình tùy chỉnh</string>
     <string name="rd_help_custom_aspect_ratios">Dấu phẩy tách biệt danh sách các tỉ lệ, sẽ được thêm vào trong phần danh sách tỉ lệ của giao diện.</string>
+    <string name="rd_font_casual">Thân mật</string>
+    <string name="rd_font_condensed">Thu hẹp</string>
+    <string name="rd_font_cursive">Chữ viết tay</string>
+    <string name="rd_font_mono">Đơn cách</string>
+    <string name="rd_font_sans">Không chân</string>
+    <string name="rd_font_serif">Có chân</string>
+    <string name="rd_fx_anaglyph_gm">xanh lá thuần (trái)  đỏ tía thuần (phải)</string>
+    <string name="rd_fx_anaglyph_mc">đỏ tía (trái)  xanh lơ (phải)</string>
+    <string name="rd_fx_anaglyph_rb">đỏ thuần (trái)  xanh dương thuần (phải)</string>
+    <string name="rd_fx_anaglyph_rc">đỏ thuần (trái)  xanh lơ thuần (phải)</string>
+    <string name="rd_fx_anaglyph_rg">đỏ thuần (trái)  xanh lá thuần (phải)</string>
+    <string name="rd_fx_antitranspose">Chuyển vị ngược</string>
+    <string name="rd_fx_blur_sigma">Độ lệch chuẩn Gauss</string>
+    <string name="rd_fx_chroma_spat">Cường độ sắc độ theo không gian (0-254)</string>
+    <string name="rd_fx_chroma_temp">Cường độ sắc độ theo thời gian (0-254)</string>
+    <string name="rd_fx_luma_spat">Cường độ độ sáng theo không gian (0-254)</string>
+    <string name="rd_fx_luma_temp">Cường độ độ sáng theo thời gian (0-254)</string>
+    <string name="rd_fx_transpose">Chuyển vị</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Không thể bắt đầu ghi</string>
+    <string name="rd_record_saved">Đã lưu bản ghi: %1$s</string>
+    <string name="rd_record_stop">Dừng ghi</string>
+    <string name="rd_search_in_english">Hiện thiết lập bằng tiếng Anh</string>
 </resources>

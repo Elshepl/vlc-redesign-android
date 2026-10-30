@@ -306,4 +306,37 @@
     <string name="rd_font_default">இயல்புநிலை</string>
     <string name="rd_custom_aspect_ratios">தனிப்பயன் தோற்றவிகிதங்கள்</string>
     <string name="rd_help_custom_aspect_ratios">இடைமுகத்தின் தோற்றவிகிதப் பட்டியலில் சேர்க்கப்படும் தோற்றவிகிதங்களின் காற்புள்ளியால் பிரிக்கப்பட்ட பட்டியல்.</string>
+    <string name="rd_font_casual">இயல்பான</string>
+    <string name="rd_font_condensed">சுருக்கமான</string>
+    <string name="rd_font_cursive">கையெழுத்து</string>
+    <string name="rd_font_mono">நிலையான அகலம்</string>
+    <string name="rd_font_sans">சான்ஸ் செரிஃப்</string>
+    <string name="rd_font_serif">செரிஃப்</string>
+    <string name="rd_fx_anaglyph_gm">தூய பச்சை (இடது)  தூய மெஜந்தா (வலது)</string>
+    <string name="rd_fx_anaglyph_mc">மெஜந்தா (இடது)  நீலப்பச்சை (வலது)</string>
+    <string name="rd_fx_anaglyph_rb">தூய சிவப்பு (இடது)  தூய நீலம் (வலது)</string>
+    <string name="rd_fx_anaglyph_rc">தூய சிவப்பு (இடது)  தூய நீலப்பச்சை (வலது)</string>
+    <string name="rd_fx_anaglyph_rg">தூய சிவப்பு (இடது)  தூய பச்சை (வலது)</string>
+    <string name="rd_fx_angle">கோணம் (பாகைகளில்)</string>
+    <string name="rd_fx_antitranspose">எதிர் இடமாற்றம்</string>
+    <string name="rd_fx_blur_sigma">காஸியன் திட்ட விலக்கம்</string>
+    <string name="rd_fx_chroma_spat">இடஞ்சார் நிறச்செறிவு வலிமை (0-254)</string>
+    <string name="rd_fx_chroma_temp">காலஞ்சார் நிறச்செறிவு வலிமை (0-254)</string>
+    <string name="rd_fx_color_scheme">நிறத் திட்டம்</string>
+    <string name="rd_fx_flip_h">கிடைமட்டமாகப் புரட்டு</string>
+    <string name="rd_fx_flip_v">செங்குத்தாகப் புரட்டு</string>
+    <string name="rd_fx_luma_spat">இடஞ்சார் ஒளிர்வு வலிமை (0-254)</string>
+    <string name="rd_fx_luma_temp">காலஞ்சார் ஒளிர்வு வலிமை (0-254)</string>
+    <string name="rd_fx_rotate_180">180 பாகை சுழற்று</string>
+    <string name="rd_fx_rotate_270">270 பாகை சுழற்று</string>
+    <string name="rd_fx_rotate_90">90 பாகை சுழற்று</string>
+    <string name="rd_fx_softening">மென்மையாக்கல் மதிப்பு</string>
+    <string name="rd_fx_transform_type">உருமாற்ற வகை</string>
+    <string name="rd_fx_transpose">இடமாற்றம்</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">சாளர அளவு</string>
+    <string name="rd_record_failed">பதிவைத் தொடங்க முடியவில்லை</string>
+    <string name="rd_record_saved">பதிவு சேமிக்கப்பட்டது: %1$s</string>
+    <string name="rd_record_stop">பதிவை நிறுத்து</string>
+    <string name="rd_search_in_english">அமைப்புகளை ஆங்கிலத்தில் காட்டு</string>
 </resources>

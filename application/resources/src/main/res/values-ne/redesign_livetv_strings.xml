@@ -222,4 +222,5 @@
         <item quantity="one">क्याच-अप %1$d दिन</item>
         <item quantity="other">क्याच-अप %1$d दिन</item>
     </plurals>
+    <string name="rd_tv_category">श्रेणी</string>
 </resources>

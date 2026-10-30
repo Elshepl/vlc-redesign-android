@@ -325,4 +325,20 @@
     <string name="rd_font_default">Predvolený</string>
     <string name="rd_custom_aspect_ratios">Vlastné stranové pomery</string>
     <string name="rd_help_custom_aspect_ratios">Čiarkou oddeľovaný zoznam stran. pomerov, ktoré sa pridajú do zoznamu stranových pomerov v rozhraní.</string>
+    <string name="rd_font_casual">Neformálne</string>
+    <string name="rd_font_condensed">Zúžené</string>
+    <string name="rd_font_cursive">Kurzíva</string>
+    <string name="rd_font_mono">Neproporcionálne</string>
+    <string name="rd_font_sans">Bezpätkové</string>
+    <string name="rd_font_serif">Pätkové</string>
+    <string name="rd_fx_anaglyph_gm">čistá zelená (vľavo)  čistá purpurová (vpravo)</string>
+    <string name="rd_fx_anaglyph_mc">purpurová (vľavo)  azúrová (vpravo)</string>
+    <string name="rd_fx_anaglyph_rb">čistá červená (vľavo)  čistá modrá (vpravo)</string>
+    <string name="rd_fx_anaglyph_rc">čistá červená (vľavo)  čistá azúrová (vpravo)</string>
+    <string name="rd_fx_anaglyph_rg">čistá červená (vľavo)  čistá zelená (vpravo)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Nahrávanie sa nepodarilo spustiť</string>
+    <string name="rd_record_saved">Nahrávka uložená: %1$s</string>
+    <string name="rd_record_stop">Zastaviť nahrávanie</string>
+    <string name="rd_search_in_english">Zobraziť nastavenia v angličtine</string>
 </resources>

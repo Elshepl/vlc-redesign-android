@@ -325,4 +325,20 @@
     <string name="rd_font_default">Lalai</string>
     <string name="rd_custom_aspect_ratios">Nisbah aspek tersuai</string>
     <string name="rd_help_custom_aspect_ratios">Senarai terpisah tanda koma bagi nisbah bidang yang akan ditambah dalam antaramuka senarai nisbah bidang.</string>
+    <string name="rd_font_casual">Santai</string>
+    <string name="rd_font_condensed">Mampat</string>
+    <string name="rd_font_cursive">Kursif</string>
+    <string name="rd_font_mono">Monoruang</string>
+    <string name="rd_font_sans">Sans serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">hijau tulen (kiri)  magenta tulen (kanan)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (kiri)  sian (kanan)</string>
+    <string name="rd_fx_anaglyph_rb">merah tulen (kiri)  biru tulen (kanan)</string>
+    <string name="rd_fx_anaglyph_rc">merah tulen (kiri)  sian tulen (kanan)</string>
+    <string name="rd_fx_anaglyph_rg">merah tulen (kiri)  hijau tulen (kanan)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Rakaman tidak dapat dimulakan</string>
+    <string name="rd_record_saved">Rakaman disimpan: %1$s</string>
+    <string name="rd_record_stop">Henti merakam</string>
+    <string name="rd_search_in_english">Tunjukkan tetapan dalam bahasa Inggeris</string>
 </resources>

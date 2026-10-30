@@ -325,4 +325,20 @@
     <string name="rd_font_default">Per defecte</string>
     <string name="rd_custom_aspect_ratios">Relacions d\'aspecte personalitzades</string>
     <string name="rd_help_custom_aspect_ratios">Llista separada per comes de les relacions d\'aspecte que s\'afegiran a la llista de relacions d\'aspecte de la interfície.</string>
+    <string name="rd_font_casual">Informal</string>
+    <string name="rd_font_condensed">Condensada</string>
+    <string name="rd_font_cursive">Cursiva</string>
+    <string name="rd_font_mono">Monoespaiada</string>
+    <string name="rd_font_sans">Sense serif</string>
+    <string name="rd_font_serif">Amb serif</string>
+    <string name="rd_fx_anaglyph_gm">verd pur (esquerra)  magenta pur (dreta)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (esquerra)  cian (dreta)</string>
+    <string name="rd_fx_anaglyph_rb">vermell pur (esquerra)  blau pur (dreta)</string>
+    <string name="rd_fx_anaglyph_rc">vermell pur (esquerra)  cian pur (dreta)</string>
+    <string name="rd_fx_anaglyph_rg">vermell pur (esquerra)  verd pur (dreta)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">No s\'ha pogut iniciar l\'enregistrament</string>
+    <string name="rd_record_saved">S\'ha desat l\'enregistrament: %1$s</string>
+    <string name="rd_record_stop">Atura l\'enregistrament</string>
+    <string name="rd_search_in_english">Mostra els paràmetres en anglès</string>
 </resources>

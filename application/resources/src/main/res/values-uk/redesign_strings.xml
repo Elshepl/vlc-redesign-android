@@ -325,4 +325,20 @@
     <string name="rd_font_default">Стандартно</string>
     <string name="rd_custom_aspect_ratios">Власні співвідношення сторін</string>
     <string name="rd_help_custom_aspect_ratios">Список, елементи якого розділені комами, співвідношень сторін, який буде додано до відповідного списку інтерфейсу.</string>
+    <string name="rd_font_casual">Невимушений</string>
+    <string name="rd_font_condensed">Вузький</string>
+    <string name="rd_font_cursive">Рукописний</string>
+    <string name="rd_font_mono">Моноширинний</string>
+    <string name="rd_font_sans">Без зарубок</string>
+    <string name="rd_font_serif">Із зарубками</string>
+    <string name="rd_fx_anaglyph_gm">чистий зелений (ліворуч)  чистий пурпуровий (праворуч)</string>
+    <string name="rd_fx_anaglyph_mc">пурпуровий (ліворуч)  бірюзовий (праворуч)</string>
+    <string name="rd_fx_anaglyph_rb">чистий червоний (ліворуч)  чистий синій (праворуч)</string>
+    <string name="rd_fx_anaglyph_rc">чистий червоний (ліворуч)  чистий бірюзовий (праворуч)</string>
+    <string name="rd_fx_anaglyph_rg">чистий червоний (ліворуч)  чистий зелений (праворуч)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Не вдалося почати записування</string>
+    <string name="rd_record_saved">Запис збережено: %1$s</string>
+    <string name="rd_record_stop">Зупинити записування</string>
+    <string name="rd_search_in_english">Показати параметри англійською</string>
 </resources>

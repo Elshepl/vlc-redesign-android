@@ -325,4 +325,20 @@
     <string name="rd_font_default">पूर्वनिर्धारित</string>
     <string name="rd_custom_aspect_ratios">सानुकूल बाजूंचे प्रमाण</string>
     <string name="rd_help_custom_aspect_ratios">स्वल्पविरामाने स्वतंत्र केलेली बाजू अनुपाताची यादी जी आंतरपृष्ठाच्या बाजू अनुपात यादीमध्ये समाविष्ट केली जाईल.</string>
+    <string name="rd_font_casual">अनौपचारिक</string>
+    <string name="rd_font_condensed">संकुचित</string>
+    <string name="rd_font_cursive">कर्सिव्ह</string>
+    <string name="rd_font_mono">मोनोस्पेस</string>
+    <string name="rd_font_sans">सॅन्स सेरिफ</string>
+    <string name="rd_font_serif">सेरिफ</string>
+    <string name="rd_fx_anaglyph_gm">शुद्ध हिरवा (डावा)  शुद्ध किरमिजी (उजवा)</string>
+    <string name="rd_fx_anaglyph_mc">किरमिजी (डावा)  निळसर (उजवा)</string>
+    <string name="rd_fx_anaglyph_rb">शुद्ध लाल (डावा)  शुद्ध निळा (उजवा)</string>
+    <string name="rd_fx_anaglyph_rc">शुद्ध लाल (डावा)  शुद्ध निळसर (उजवा)</string>
+    <string name="rd_fx_anaglyph_rg">शुद्ध लाल (डावा)  शुद्ध हिरवा (उजवा)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">रेकॉर्डिंग सुरू होऊ शकले नाही</string>
+    <string name="rd_record_saved">रेकॉर्डिंग जतन केले: %1$s</string>
+    <string name="rd_record_stop">रेकॉर्डिंग थांबवा</string>
+    <string name="rd_search_in_english">रचना इंग्रजीमध्ये दाखवा</string>
 </resources>

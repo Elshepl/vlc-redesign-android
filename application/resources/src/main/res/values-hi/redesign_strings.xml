@@ -315,4 +315,28 @@
     <string name="rd_font_default">डिफ़ॉल्ट</string>
     <string name="rd_custom_aspect_ratios">कस्टम पक्षानुपात</string>
     <string name="rd_help_custom_aspect_ratios">पक्षानुपातों की अल्पविराम से अलग की गई सूची, जो इंटरफ़ेस की पक्षानुपात सूची में जोड़ी जाएगी।</string>
+    <string name="rd_font_casual">कैज़ुअल</string>
+    <string name="rd_font_condensed">संकुचित</string>
+    <string name="rd_font_cursive">कर्सिव</string>
+    <string name="rd_font_mono">मोनोस्पेस</string>
+    <string name="rd_font_sans">सैन्स सेरिफ़</string>
+    <string name="rd_font_serif">सेरिफ़</string>
+    <string name="rd_fx_anaglyph_gm">शुद्ध हरा (बायाँ)  शुद्ध मैजेंटा (दायाँ)</string>
+    <string name="rd_fx_anaglyph_mc">मैजेंटा (बायाँ)  सियान (दायाँ)</string>
+    <string name="rd_fx_anaglyph_rb">शुद्ध लाल (बायाँ)  शुद्ध नीला (दायाँ)</string>
+    <string name="rd_fx_anaglyph_rc">शुद्ध लाल (बायाँ)  शुद्ध सियान (दायाँ)</string>
+    <string name="rd_fx_anaglyph_rg">शुद्ध लाल (बायाँ)  शुद्ध हरा (दायाँ)</string>
+    <string name="rd_fx_antitranspose">एंटी-ट्रांसपोज़</string>
+    <string name="rd_fx_color_scheme">रंग योजना</string>
+    <string name="rd_fx_flip_h">क्षैतिज रूप से पलटें</string>
+    <string name="rd_fx_flip_v">लंबवत रूप से पलटें</string>
+    <string name="rd_fx_rotate_180">180 डिग्री घुमाएँ</string>
+    <string name="rd_fx_rotate_270">270 डिग्री घुमाएँ</string>
+    <string name="rd_fx_rotate_90">90 डिग्री घुमाएँ</string>
+    <string name="rd_fx_transpose">ट्रांसपोज़</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">रिकॉर्डिंग शुरू नहीं हो सकी</string>
+    <string name="rd_record_saved">रिकॉर्डिंग सहेजी गई: %1$s</string>
+    <string name="rd_record_stop">रिकॉर्डिंग रोकें</string>
+    <string name="rd_search_in_english">सेटिंग्स अंग्रेज़ी में दिखाएँ</string>
 </resources>

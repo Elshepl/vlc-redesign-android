@@ -325,4 +325,20 @@
     <string name="rd_font_default">Predefinito</string>
     <string name="rd_custom_aspect_ratios">Proporzioni personalizzate</string>
     <string name="rd_help_custom_aspect_ratios">Elenco separato da virgole di proporzioni che saranno aggiunte all\'elenco di proporzioni dell\'interfaccia.</string>
+    <string name="rd_font_casual">Informale</string>
+    <string name="rd_font_condensed">Condensato</string>
+    <string name="rd_font_cursive">Corsivo</string>
+    <string name="rd_font_mono">Monospaziato</string>
+    <string name="rd_font_sans">Senza grazie</string>
+    <string name="rd_font_serif">Con grazie</string>
+    <string name="rd_fx_anaglyph_gm">verde puro (sinistra)  magenta puro (destra)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (sinistra)  ciano (destra)</string>
+    <string name="rd_fx_anaglyph_rb">rosso puro (sinistra)  blu puro (destra)</string>
+    <string name="rd_fx_anaglyph_rc">rosso puro (sinistra)  ciano puro (destra)</string>
+    <string name="rd_fx_anaglyph_rg">rosso puro (sinistra)  verde puro (destra)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Impossibile avviare la registrazione</string>
+    <string name="rd_record_saved">Registrazione salvata: %1$s</string>
+    <string name="rd_record_stop">Interrompi registrazione</string>
+    <string name="rd_search_in_english">Mostra le impostazioni in inglese</string>
 </resources>

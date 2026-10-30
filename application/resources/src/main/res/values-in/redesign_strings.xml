@@ -318,4 +318,27 @@
     <string name="rd_font_default">Default</string>
     <string name="rd_custom_aspect_ratios">Rasio aspek kustom</string>
     <string name="rd_help_custom_aspect_ratios">Daftar rasio aspek yang dipisahkan koma, yang akan ditambahkan ke daftar rasio aspek di antarmuka.</string>
+    <string name="rd_font_casual">Santai</string>
+    <string name="rd_font_condensed">Rapat</string>
+    <string name="rd_font_cursive">Kursif</string>
+    <string name="rd_font_mono">Monospace</string>
+    <string name="rd_font_sans">Sans serif</string>
+    <string name="rd_font_serif">Serif</string>
+    <string name="rd_fx_anaglyph_gm">hijau murni (kiri)  magenta murni (kanan)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (kiri)  sian (kanan)</string>
+    <string name="rd_fx_anaglyph_rb">merah murni (kiri)  biru murni (kanan)</string>
+    <string name="rd_fx_anaglyph_rc">merah murni (kiri)  sian murni (kanan)</string>
+    <string name="rd_fx_anaglyph_rg">merah murni (kiri)  hijau murni (kanan)</string>
+    <string name="rd_fx_antitranspose">Anti-transpos</string>
+    <string name="rd_fx_chroma_spat">Kekuatan kroma spasial (0-254)</string>
+    <string name="rd_fx_chroma_temp">Kekuatan kroma temporal (0-254)</string>
+    <string name="rd_fx_luma_spat">Kekuatan luma spasial (0-254)</string>
+    <string name="rd_fx_luma_temp">Kekuatan luma temporal (0-254)</string>
+    <string name="rd_fx_softening">Nilai pelembutan</string>
+    <string name="rd_fx_transpose">Transpos</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Perekaman tidak dapat dimulai</string>
+    <string name="rd_record_saved">Rekaman disimpan: %1$s</string>
+    <string name="rd_record_stop">Hentikan perekaman</string>
+    <string name="rd_search_in_english">Tampilkan pengaturan dalam bahasa Inggris</string>
 </resources>

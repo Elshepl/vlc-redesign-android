@@ -325,4 +325,20 @@
     <string name="rd_font_default">Lehenetsia</string>
     <string name="rd_custom_aspect_ratios">Aspektu-erlazio pertsonalizatuak</string>
     <string name="rd_help_custom_aspect_ratios">Komaz bereizitako aspektu-erlazioen zerrenda bat; interfazearen aspektu-erlazioen zerrendan gehituko da.</string>
+    <string name="rd_font_casual">Informala</string>
+    <string name="rd_font_condensed">Estua</string>
+    <string name="rd_font_cursive">Eskuz idatzia</string>
+    <string name="rd_font_mono">Tarte bakarrekoa</string>
+    <string name="rd_font_sans">Serifik gabea</string>
+    <string name="rd_font_serif">Serifduna</string>
+    <string name="rd_fx_anaglyph_gm">berde purua (ezkerra)  magenta purua (eskuina)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (ezkerra)  ziana (eskuina)</string>
+    <string name="rd_fx_anaglyph_rb">gorri purua (ezkerra)  urdin purua (eskuina)</string>
+    <string name="rd_fx_anaglyph_rc">gorri purua (ezkerra)  zian purua (eskuina)</string>
+    <string name="rd_fx_anaglyph_rg">gorri purua (ezkerra)  berde purua (eskuina)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Ezin izan da grabazioa hasi</string>
+    <string name="rd_record_saved">Grabazioa gorde da: %1$s</string>
+    <string name="rd_record_stop">Gelditu grabazioa</string>
+    <string name="rd_search_in_english">Erakutsi ezarpenak ingelesez</string>
 </resources>

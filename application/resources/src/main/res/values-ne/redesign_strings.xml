@@ -313,4 +313,31 @@
     <string name="rd_font_default">पूर्वनिर्धारित</string>
     <string name="rd_custom_aspect_ratios">अनुकूलित आकार अनुपातहरू</string>
     <string name="rd_help_custom_aspect_ratios">अल्पविरामले छुट्याइएको आकार  अनुपात सूची जुन interface को आकार अनुपात सूचीमा हालिनेछ।</string>
+    <string name="rd_font_casual">अनौपचारिक</string>
+    <string name="rd_font_condensed">साँघुरो</string>
+    <string name="rd_font_cursive">कर्सिभ</string>
+    <string name="rd_font_mono">मोनोस्पेस</string>
+    <string name="rd_font_sans">स्यान्स सेरिफ</string>
+    <string name="rd_font_serif">सेरिफ</string>
+    <string name="rd_fx_anaglyph_gm">शुद्ध हरियो (बायाँ)  शुद्ध म्याजेन्टा (दायाँ)</string>
+    <string name="rd_fx_anaglyph_mc">म्याजेन्टा (बायाँ)  सायन (दायाँ)</string>
+    <string name="rd_fx_anaglyph_rb">शुद्ध रातो (बायाँ)  शुद्ध नीलो (दायाँ)</string>
+    <string name="rd_fx_anaglyph_rc">शुद्ध रातो (बायाँ)  शुद्ध सायन (दायाँ)</string>
+    <string name="rd_fx_anaglyph_rg">शुद्ध रातो (बायाँ)  शुद्ध हरियो (दायाँ)</string>
+    <string name="rd_fx_angle">डिग्रीमा कोण</string>
+    <string name="rd_fx_antitranspose">एन्टि-ट्रान्सपोज</string>
+    <string name="rd_fx_blur_sigma">गाउसियनको मानक विचलन</string>
+    <string name="rd_fx_chroma_spat">स्थानिक क्रोमा शक्ति (0-254)</string>
+    <string name="rd_fx_chroma_temp">कालिक क्रोमा शक्ति (0-254)</string>
+    <string name="rd_fx_color_scheme">रङ योजना</string>
+    <string name="rd_fx_luma_spat">स्थानिक लुमा शक्ति (0-254)</string>
+    <string name="rd_fx_luma_temp">कालिक लुमा शक्ति (0-254)</string>
+    <string name="rd_fx_softening">नरम पार्ने मान</string>
+    <string name="rd_fx_transpose">ट्रान्सपोज</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_fx_window_size">विन्डोको आकार</string>
+    <string name="rd_record_failed">रेकर्डिङ सुरु हुन सकेन</string>
+    <string name="rd_record_saved">रेकर्डिङ सुरक्षित गरियो: %1$s</string>
+    <string name="rd_record_stop">रेकर्डिङ रोक्नुहोस्</string>
+    <string name="rd_search_in_english">सेटिङ्हरू अङ्ग्रेजीमा देखाउनुहोस्</string>
 </resources>

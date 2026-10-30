@@ -221,4 +221,6 @@
         <item quantity="one">ჩანაწერში ყურება %1$d დღე</item>
         <item quantity="other">ჩანაწერში ყურება %1$d დღე</item>
     </plurals>
+    <string name="rd_nav_tv">ტელევიზია</string>
+    <string name="rd_tv_category">კატეგორია</string>
 </resources>

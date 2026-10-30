@@ -318,4 +318,27 @@
     <string name="rd_font_default">Numatytasis</string>
     <string name="rd_custom_aspect_ratios">Pasirinktiniai kraštinių santykiai</string>
     <string name="rd_help_custom_aspect_ratios">Kableliais atskirtų vaizdo (pločio ir aukščio) santykių sąrašas, kuris bus įdedamas į sąsajos santykių sąrašą.</string>
+    <string name="rd_font_casual">Neformalus</string>
+    <string name="rd_font_condensed">Siauras</string>
+    <string name="rd_font_cursive">Rašytinis</string>
+    <string name="rd_font_mono">Lygiaplotis</string>
+    <string name="rd_font_sans">Be užraitų</string>
+    <string name="rd_font_serif">Su užraitais</string>
+    <string name="rd_fx_anaglyph_gm">gryna žalia (kairė)  gryna purpurinė (dešinė)</string>
+    <string name="rd_fx_anaglyph_mc">purpurinė (kairė)  žydra (dešinė)</string>
+    <string name="rd_fx_anaglyph_rb">gryna raudona (kairė)  gryna mėlyna (dešinė)</string>
+    <string name="rd_fx_anaglyph_rc">gryna raudona (kairė)  gryna žydra (dešinė)</string>
+    <string name="rd_fx_anaglyph_rg">gryna raudona (kairė)  gryna žalia (dešinė)</string>
+    <string name="rd_fx_antitranspose">Antitransponavimas</string>
+    <string name="rd_fx_chroma_spat">Erdvinis chromos stiprumas (0-254)</string>
+    <string name="rd_fx_chroma_temp">Laikinis chromos stiprumas (0-254)</string>
+    <string name="rd_fx_luma_spat">Erdvinis skaisčio stiprumas (0-254)</string>
+    <string name="rd_fx_luma_temp">Laikinis skaisčio stiprumas (0-254)</string>
+    <string name="rd_fx_softening">Švelninimo reikšmė</string>
+    <string name="rd_fx_transpose">Transponavimas</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Nepavyko pradėti įrašymo</string>
+    <string name="rd_record_saved">Įrašas išsaugotas: %1$s</string>
+    <string name="rd_record_stop">Stabdyti įrašymą</string>
+    <string name="rd_search_in_english">Rodyti nuostatas anglų kalba</string>
 </resources>

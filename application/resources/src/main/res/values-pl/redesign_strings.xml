@@ -325,4 +325,20 @@
     <string name="rd_font_default">Domyślnie</string>
     <string name="rd_custom_aspect_ratios">Własne proporcje obrazu</string>
     <string name="rd_help_custom_aspect_ratios">Lista stosunków rozmiaru dzielonych przecinkiem, które będą dodane do listy stosunków rozmiaru w interfejsie.</string>
+    <string name="rd_font_casual">Swobodna</string>
+    <string name="rd_font_condensed">Zwężona</string>
+    <string name="rd_font_cursive">Odręczna</string>
+    <string name="rd_font_mono">O stałej szerokości</string>
+    <string name="rd_font_sans">Bezszeryfowa</string>
+    <string name="rd_font_serif">Szeryfowa</string>
+    <string name="rd_fx_anaglyph_gm">czysty zielony (lewe)  czysta magenta (prawe)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (lewe)  cyjan (prawe)</string>
+    <string name="rd_fx_anaglyph_rb">czysty czerwony (lewe)  czysty niebieski (prawe)</string>
+    <string name="rd_fx_anaglyph_rc">czysty czerwony (lewe)  czysty cyjan (prawe)</string>
+    <string name="rd_fx_anaglyph_rg">czysty czerwony (lewe)  czysty zielony (prawe)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Nie udało się rozpocząć nagrywania</string>
+    <string name="rd_record_saved">Zapisano nagranie: %1$s</string>
+    <string name="rd_record_stop">Zatrzymaj nagrywanie</string>
+    <string name="rd_search_in_english">Pokaż ustawienia po angielsku</string>
 </resources>

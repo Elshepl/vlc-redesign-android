@@ -323,4 +323,22 @@
     <string name="rd_font_default">Oletusarvo</string>
     <string name="rd_custom_aspect_ratios">Mukautetut kuvasuhteet</string>
     <string name="rd_help_custom_aspect_ratios">Tähän voi lisätä pilkulla erotettuna kuvasuhteita, jotka lisätään käyttöliittymän kuvasuhteiden listaan.</string>
+    <string name="rd_font_casual">Rento</string>
+    <string name="rd_font_condensed">Kapea</string>
+    <string name="rd_font_cursive">Kaunokirjoitus</string>
+    <string name="rd_font_mono">Tasalevyinen</string>
+    <string name="rd_font_sans">Pääteviivaton</string>
+    <string name="rd_font_serif">Päätteellinen</string>
+    <string name="rd_fx_anaglyph_gm">puhdas vihreä (vasen)  puhdas magenta (oikea)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (vasen)  syaani (oikea)</string>
+    <string name="rd_fx_anaglyph_rb">puhdas punainen (vasen)  puhdas sininen (oikea)</string>
+    <string name="rd_fx_anaglyph_rc">puhdas punainen (vasen)  puhdas syaani (oikea)</string>
+    <string name="rd_fx_anaglyph_rg">puhdas punainen (vasen)  puhdas vihreä (oikea)</string>
+    <string name="rd_fx_antitranspose">Antitransponoi</string>
+    <string name="rd_fx_transpose">Transponoi</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Tallennusta ei voitu aloittaa</string>
+    <string name="rd_record_saved">Tallenne tallennettu: %1$s</string>
+    <string name="rd_record_stop">Lopeta tallennus</string>
+    <string name="rd_search_in_english">Näytä asetukset englanniksi</string>
 </resources>

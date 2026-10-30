@@ -325,4 +325,20 @@
     <string name="rd_font_default">Predeterminado</string>
     <string name="rd_custom_aspect_ratios">Proporcións de aspecto personalizadas</string>
     <string name="rd_help_custom_aspect_ratios">Lista de proporcións de aspecto separada por comas que se engadira á lista de proporcións de aspecto da interface.</string>
+    <string name="rd_font_casual">Informal</string>
+    <string name="rd_font_condensed">Condensada</string>
+    <string name="rd_font_cursive">Cursiva</string>
+    <string name="rd_font_mono">Monoespazo</string>
+    <string name="rd_font_sans">Sen serifa</string>
+    <string name="rd_font_serif">Con serifa</string>
+    <string name="rd_fx_anaglyph_gm">verde puro (esquerda)  maxenta puro (dereita)</string>
+    <string name="rd_fx_anaglyph_mc">maxenta (esquerda)  cian (dereita)</string>
+    <string name="rd_fx_anaglyph_rb">vermello puro (esquerda)  azul puro (dereita)</string>
+    <string name="rd_fx_anaglyph_rc">vermello puro (esquerda)  cian puro (dereita)</string>
+    <string name="rd_fx_anaglyph_rg">vermello puro (esquerda)  verde puro (dereita)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Non se puido iniciar a gravación</string>
+    <string name="rd_record_saved">Gravación gardada: %1$s</string>
+    <string name="rd_record_stop">Deter a gravación</string>
+    <string name="rd_search_in_english">Amosar a configuración en inglés</string>
 </resources>

@@ -314,4 +314,29 @@
     <string name="rd_font_default">ਡਿਫਾਲਟ</string>
     <string name="rd_custom_aspect_ratios">ਕਸਟਮ ਅਕਾਰ ਅਨੁਪਾਤ</string>
     <string name="rd_help_custom_aspect_ratios">ਅਕਾਰ ਅਨੁਪਾਤਾਂ ਦੀ ਕੌਮੇ ਨਾਲ ਵੱਖ ਕੀਤੀ ਲਿਸਟ, ਜੋ ਇੰਟਰਫੇਸ ਦੀ ਅਕਾਰ ਅਨੁਪਾਤ ਲਿਸਟ ਵਿੱਚ ਜੋੜੇ ਜਾਣਗੇ।</string>
+    <string name="rd_font_casual">ਆਮ</string>
+    <string name="rd_font_condensed">ਸੰਘਣਾ</string>
+    <string name="rd_font_cursive">ਕਰਸਿਵ</string>
+    <string name="rd_font_mono">ਮੋਨੋਸਪੇਸ</string>
+    <string name="rd_font_sans">ਸੈਨਸ ਸੈਰਿਫ</string>
+    <string name="rd_font_serif">ਸੈਰਿਫ</string>
+    <string name="rd_fx_anaglyph_gm">ਸ਼ੁੱਧ ਹਰਾ (ਖੱਬਾ)  ਸ਼ੁੱਧ ਮਜੈਂਟਾ (ਸੱਜਾ)</string>
+    <string name="rd_fx_anaglyph_mc">ਮਜੈਂਟਾ (ਖੱਬਾ)  ਸਿਆਨ (ਸੱਜਾ)</string>
+    <string name="rd_fx_anaglyph_rb">ਸ਼ੁੱਧ ਲਾਲ (ਖੱਬਾ)  ਸ਼ੁੱਧ ਨੀਲਾ (ਸੱਜਾ)</string>
+    <string name="rd_fx_anaglyph_rc">ਸ਼ੁੱਧ ਲਾਲ (ਖੱਬਾ)  ਸ਼ੁੱਧ ਸਿਆਨ (ਸੱਜਾ)</string>
+    <string name="rd_fx_anaglyph_rg">ਸ਼ੁੱਧ ਲਾਲ (ਖੱਬਾ)  ਸ਼ੁੱਧ ਹਰਾ (ਸੱਜਾ)</string>
+    <string name="rd_fx_antitranspose">ਐਂਟੀ-ਟ੍ਰਾਂਸਪੋਜ਼</string>
+    <string name="rd_fx_blur_sigma">ਗਾਊਸੀਅਨ ਦਾ ਮਿਆਰੀ ਵਿਚਲਨ</string>
+    <string name="rd_fx_chroma_spat">ਸਥਾਨਕ ਕ੍ਰੋਮਾ ਤੀਬਰਤਾ (0-254)</string>
+    <string name="rd_fx_chroma_temp">ਸਮੇਂ-ਅਧਾਰਤ ਕ੍ਰੋਮਾ ਤੀਬਰਤਾ (0-254)</string>
+    <string name="rd_fx_color_scheme">ਰੰਗ ਸਕੀਮ</string>
+    <string name="rd_fx_luma_spat">ਸਥਾਨਕ ਲੂਮਾ ਤੀਬਰਤਾ (0-254)</string>
+    <string name="rd_fx_luma_temp">ਸਮੇਂ-ਅਧਾਰਤ ਲੂਮਾ ਤੀਬਰਤਾ (0-254)</string>
+    <string name="rd_fx_softening">ਨਰਮ ਕਰਨ ਦਾ ਮੁੱਲ</string>
+    <string name="rd_fx_transpose">ਟ੍ਰਾਂਸਪੋਜ਼</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">ਰਿਕਾਰਡਿੰਗ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋ ਸਕੀ</string>
+    <string name="rd_record_saved">ਰਿਕਾਰਡਿੰਗ ਸੰਭਾਲੀ ਗਈ: %1$s</string>
+    <string name="rd_record_stop">ਰਿਕਾਰਡਿੰਗ ਰੋਕੋ</string>
+    <string name="rd_search_in_english">ਸੈਟਿੰਗਾਂ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਦਿਖਾਓ</string>
 </resources>

@@ -317,4 +317,26 @@
     <string name="rd_font_default">Sjálfgefið</string>
     <string name="rd_custom_aspect_ratios">Sérsniðin stærðarhlutföll</string>
     <string name="rd_help_custom_aspect_ratios">Kommuaðskilinn listi yfir stærðarhlutföll sem bætt verður við lista viðmótsins yfir stærðarhlutföll.</string>
+    <string name="rd_font_casual">Óformlegt</string>
+    <string name="rd_font_condensed">Þjappað</string>
+    <string name="rd_font_cursive">Skrifletur</string>
+    <string name="rd_font_mono">Jafnbreitt</string>
+    <string name="rd_font_sans">Steinskrift</string>
+    <string name="rd_font_serif">Fótaletur</string>
+    <string name="rd_fx_anaglyph_gm">hreinn grænn (vinstri)  hreinn blárauður (hægri)</string>
+    <string name="rd_fx_anaglyph_mc">blárauður (vinstri)  blágrænn (hægri)</string>
+    <string name="rd_fx_anaglyph_rb">hreinn rauður (vinstri)  hreinn blár (hægri)</string>
+    <string name="rd_fx_anaglyph_rc">hreinn rauður (vinstri)  hreinn blágrænn (hægri)</string>
+    <string name="rd_fx_anaglyph_rg">hreinn rauður (vinstri)  hreinn grænn (hægri)</string>
+    <string name="rd_fx_antitranspose">Gagnumhverfa</string>
+    <string name="rd_fx_blur_sigma">Staðalfrávik Gauss-dreifingar</string>
+    <string name="rd_fx_chroma_spat">Rýmisstyrkur litgilda (0-254)</string>
+    <string name="rd_fx_chroma_temp">Tímabundinn styrkur litgilda (0-254)</string>
+    <string name="rd_fx_softening">Mýkingargildi</string>
+    <string name="rd_fx_transpose">Umhverfa</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">Ekki tókst að hefja upptöku</string>
+    <string name="rd_record_saved">Upptaka vistuð: %1$s</string>
+    <string name="rd_record_stop">Stöðva upptöku</string>
+    <string name="rd_search_in_english">Sýna stillingarnar á ensku</string>
 </resources>

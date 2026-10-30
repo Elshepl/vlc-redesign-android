@@ -318,4 +318,27 @@
     <string name="rd_font_default">預設</string>
     <string name="rd_custom_aspect_ratios">自訂長寬比例</string>
     <string name="rd_help_custom_aspect_ratios">寬高比的逗號分隔列表會被加到介面上的寬高比列表。</string>
+    <string name="rd_font_casual">休閒</string>
+    <string name="rd_font_condensed">窄體</string>
+    <string name="rd_font_cursive">手寫體</string>
+    <string name="rd_font_mono">等寬</string>
+    <string name="rd_font_sans">無襯線</string>
+    <string name="rd_font_serif">襯線</string>
+    <string name="rd_fx_anaglyph_gm">純綠（左）  純洋紅（右）</string>
+    <string name="rd_fx_anaglyph_mc">洋紅（左）  青（右）</string>
+    <string name="rd_fx_anaglyph_rb">純紅（左）  純藍（右）</string>
+    <string name="rd_fx_anaglyph_rc">純紅（左）  純青（右）</string>
+    <string name="rd_fx_anaglyph_rg">純紅（左）  純綠（右）</string>
+    <string name="rd_fx_antitranspose">反轉置</string>
+    <string name="rd_fx_chroma_spat">空間色度強度 (0-254)</string>
+    <string name="rd_fx_chroma_temp">時間色度強度 (0-254)</string>
+    <string name="rd_fx_color_scheme">色彩配置</string>
+    <string name="rd_fx_luma_spat">空間亮度強度 (0-254)</string>
+    <string name="rd_fx_luma_temp">時間亮度強度 (0-254)</string>
+    <string name="rd_fx_transpose">轉置</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_record_failed">無法開始錄製</string>
+    <string name="rd_record_saved">錄製內容已儲存：%1$s</string>
+    <string name="rd_record_stop">停止錄製</string>
+    <string name="rd_search_in_english">以英文顯示設定</string>
 </resources>

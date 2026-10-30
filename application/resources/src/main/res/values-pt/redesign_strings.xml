@@ -323,4 +323,22 @@
     <string name="rd_record">Gravar</string>
     <string name="rd_record_started">Gravação</string>
     <string name="rd_font_default">Predefinição</string>
+    <string name="rd_custom_aspect_ratios">Proporções personalizadas</string>
+    <string name="rd_font_casual">Informal</string>
+    <string name="rd_font_condensed">Condensada</string>
+    <string name="rd_font_cursive">Cursiva</string>
+    <string name="rd_font_mono">Monoespaçada</string>
+    <string name="rd_font_sans">Sem serifa</string>
+    <string name="rd_font_serif">Serifa</string>
+    <string name="rd_fx_anaglyph_gm">verde puro (esquerda)  magenta puro (direita)</string>
+    <string name="rd_fx_anaglyph_mc">magenta (esquerda)  ciano (direita)</string>
+    <string name="rd_fx_anaglyph_rb">vermelho puro (esquerda)  azul puro (direita)</string>
+    <string name="rd_fx_anaglyph_rc">vermelho puro (esquerda)  ciano puro (direita)</string>
+    <string name="rd_fx_anaglyph_rg">vermelho puro (esquerda)  verde puro (direita)</string>
+    <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_help_custom_aspect_ratios">Uma lista separada por vírgulas de proporções (como 21:9, 1.85:1) adicionadas à lista de proporções do leitor.</string>
+    <string name="rd_record_failed">Não foi possível iniciar a gravação</string>
+    <string name="rd_record_saved">Gravação guardada: %1$s</string>
+    <string name="rd_record_stop">Parar gravação</string>
+    <string name="rd_search_in_english">Mostrar as definições em inglês</string>
 </resources>
