@@ -46,4 +46,12 @@
     <string name="rd_series_saved">Збережено для епізодів %1$s.</string>
     <string name="rd_series_removed">Налаштування серіалу вилучено.</string>
     <string name="rd_series_remember">Запам\'ятати для цього серіалу</string>
+    <string name="rd_sync_timeline">Шкала синхронізації</string>
+    <string name="rd_sync_hint">Перетягніть рядки субтитрів під голос, до якого вони належать.</string>
+    <string name="rd_sync_view_description">Звук і рядки субтитрів навколо поточного часу; перетягніть, щоб зсунути субтитри</string>
+    <string name="rd_sync_earlier">Субтитри на 50 мс раніше</string>
+    <string name="rd_sync_later">Субтитри на 50 мс пізніше</string>
+    <string name="rd_sync_no_track">Субтитри не показуються.</string>
+    <string name="rd_sync_no_cues">Рядки цієї доріжки субтитрів неможливо показати; затримка все одно застосовується.</string>
+    <string name="rd_sync_no_sound">Звук цього відео неможливо показати.</string>
 </resources>

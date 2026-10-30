@@ -46,4 +46,12 @@
     <string name="rd_series_saved">Zapisano dla odcinków %1$s.</string>
     <string name="rd_series_removed">Usunięto ustawienia serialu.</string>
     <string name="rd_series_remember">Zapamiętaj dla tego serialu</string>
+    <string name="rd_sync_timeline">Oś synchronizacji</string>
+    <string name="rd_sync_hint">Przeciągnij wiersze napisów pod głos, do którego należą.</string>
+    <string name="rd_sync_view_description">Dźwięk i wiersze napisów wokół czasu odtwarzania; przeciągnij, aby przesunąć napisy</string>
+    <string name="rd_sync_earlier">Napisy 50 ms wcześniej</string>
+    <string name="rd_sync_later">Napisy 50 ms później</string>
+    <string name="rd_sync_no_track">Nie są wyświetlane żadne napisy.</string>
+    <string name="rd_sync_no_cues">Nie można pokazać wierszy tej ścieżki napisów; opóźnienie nadal obowiązuje.</string>
+    <string name="rd_sync_no_sound">Nie można pokazać dźwięku tego filmu.</string>
 </resources>

@@ -46,4 +46,12 @@
     <string name="rd_series_saved">已为 %1$s 的各集保存。</string>
     <string name="rd_series_removed">已移除剧集预设。</string>
     <string name="rd_series_remember">为此剧集记住</string>
+    <string name="rd_sync_timeline">同步时间轴</string>
+    <string name="rd_sync_hint">将字幕行拖到它们所属的语音下方。</string>
+    <string name="rd_sync_view_description">播放时间附近的声音和字幕行；拖动以移动字幕</string>
+    <string name="rd_sync_earlier">字幕提前 50 毫秒</string>
+    <string name="rd_sync_later">字幕延后 50 毫秒</string>
+    <string name="rd_sync_no_track">未显示字幕。</string>
+    <string name="rd_sync_no_cues">无法显示此字幕轨道的行；延迟仍然有效。</string>
+    <string name="rd_sync_no_sound">无法显示此视频的声音。</string>
 </resources>

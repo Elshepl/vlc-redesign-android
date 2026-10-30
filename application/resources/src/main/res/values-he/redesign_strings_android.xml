@@ -62,4 +62,12 @@
     <string name="rd_series_saved">נשמר לפרקים של %1$s.</string>
     <string name="rd_series_removed">הגדרות הסדרה הוסרו.</string>
     <string name="rd_series_remember">לזכור לסדרה הזו</string>
+    <string name="rd_sync_timeline">ציר סנכרון</string>
+    <string name="rd_sync_hint">גררו את שורות הכתוביות אל מתחת לקול שאליו הן שייכות.</string>
+    <string name="rd_sync_view_description">הצליל ושורות הכתוביות סביב זמן הניגון; גררו כדי להזיז את הכתוביות</string>
+    <string name="rd_sync_earlier">כתוביות 50 אלפיות שנייה מוקדם יותר</string>
+    <string name="rd_sync_later">כתוביות 50 אלפיות שנייה מאוחר יותר</string>
+    <string name="rd_sync_no_track">לא מוצגות כתוביות.</string>
+    <string name="rd_sync_no_cues">אי אפשר להציג את השורות של רצועת הכתוביות הזו; ההשהיה עדיין חלה.</string>
+    <string name="rd_sync_no_sound">אי אפשר להציג את הצליל של הסרטון הזה.</string>
 </resources>

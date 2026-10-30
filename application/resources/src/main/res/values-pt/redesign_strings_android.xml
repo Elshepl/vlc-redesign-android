@@ -46,4 +46,12 @@
     <string name="rd_series_saved">Guardado para os episódios de %1$s.</string>
     <string name="rd_series_removed">Pré-ajuste da série removido.</string>
     <string name="rd_series_remember">Lembrar para esta série</string>
+    <string name="rd_sync_timeline">Linha de sincronização</string>
+    <string name="rd_sync_hint">Arraste as linhas das legendas para baixo da voz a que pertencem.</string>
+    <string name="rd_sync_view_description">O som e as linhas das legendas à volta do tempo de reprodução; arraste para mover as legendas</string>
+    <string name="rd_sync_earlier">Legendas 50 ms mais cedo</string>
+    <string name="rd_sync_later">Legendas 50 ms mais tarde</string>
+    <string name="rd_sync_no_track">Não são mostradas legendas.</string>
+    <string name="rd_sync_no_cues">As linhas desta faixa de legendas não podem ser mostradas; o atraso continua a aplicar-se.</string>
+    <string name="rd_sync_no_sound">O som deste vídeo não pode ser mostrado.</string>
 </resources>

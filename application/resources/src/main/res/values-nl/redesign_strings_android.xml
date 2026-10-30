@@ -46,4 +46,12 @@
     <string name="rd_series_saved">Opgeslagen voor afleveringen van %1$s.</string>
     <string name="rd_series_removed">Seriepreset verwijderd.</string>
     <string name="rd_series_remember">Onthouden voor deze serie</string>
+    <string name="rd_sync_timeline">Synchronisatietijdlijn</string>
+    <string name="rd_sync_hint">Sleep de ondertitelregels onder de stem waar ze bij horen.</string>
+    <string name="rd_sync_view_description">Het geluid en de ondertitelregels rond de afspeeltijd; sleep om de ondertitels te verplaatsen</string>
+    <string name="rd_sync_earlier">Ondertitels 50 ms eerder</string>
+    <string name="rd_sync_later">Ondertitels 50 ms later</string>
+    <string name="rd_sync_no_track">Er worden geen ondertitels getoond.</string>
+    <string name="rd_sync_no_cues">De regels van dit ondertitelspoor kunnen niet worden getoond; de vertraging geldt nog steeds.</string>
+    <string name="rd_sync_no_sound">Het geluid van deze video kan niet worden getoond.</string>
 </resources>

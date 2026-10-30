@@ -48,4 +48,12 @@
     <string name="rd_series_saved">حُفظ لحلقات %1$s.</string>
     <string name="rd_series_removed">أُزيل الإعداد المسبق للمسلسل.</string>
     <string name="rd_series_remember">تذكُّر لهذا المسلسل</string>
+    <string name="rd_sync_timeline">خط المزامنة الزمني</string>
+    <string name="rd_sync_hint">اسحب أسطر الترجمة إلى أسفل الصوت الذي تنتمي إليه.</string>
+    <string name="rd_sync_view_description">الصوت وأسطر الترجمة حول وقت التشغيل؛ اسحب لتحريك الترجمة</string>
+    <string name="rd_sync_earlier">الترجمة أبكر بـ 50 ملّي ثانية</string>
+    <string name="rd_sync_later">الترجمة أبطأ بـ 50 ملّي ثانية</string>
+    <string name="rd_sync_no_track">لا تُعرض أي ترجمة.</string>
+    <string name="rd_sync_no_cues">لا يمكن عرض أسطر مسار الترجمة هذا؛ التأخير ما زال يُطبَّق.</string>
+    <string name="rd_sync_no_sound">لا يمكن عرض صوت هذا الفيديو.</string>
 </resources>

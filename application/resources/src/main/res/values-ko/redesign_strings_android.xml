@@ -46,4 +46,12 @@
     <string name="rd_series_saved">%1$s의 에피소드용으로 저장했습니다.</string>
     <string name="rd_series_removed">시리즈 프리셋을 제거했습니다.</string>
     <string name="rd_series_remember">이 시리즈에 기억</string>
+    <string name="rd_sync_timeline">동기화 타임라인</string>
+    <string name="rd_sync_hint">자막 줄을 해당하는 음성 아래로 끌어 놓으세요.</string>
+    <string name="rd_sync_view_description">재생 시간 주변의 소리와 자막 줄; 끌어서 자막을 이동합니다</string>
+    <string name="rd_sync_earlier">자막 50ms 빠르게</string>
+    <string name="rd_sync_later">자막 50ms 느리게</string>
+    <string name="rd_sync_no_track">표시되는 자막이 없습니다.</string>
+    <string name="rd_sync_no_cues">이 자막 트랙의 줄을 표시할 수 없습니다. 지연은 계속 적용됩니다.</string>
+    <string name="rd_sync_no_sound">이 동영상의 소리를 표시할 수 없습니다.</string>
 </resources>

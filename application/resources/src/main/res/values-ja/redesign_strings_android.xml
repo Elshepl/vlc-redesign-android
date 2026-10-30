@@ -46,4 +46,12 @@
     <string name="rd_series_saved">%1$sのエピソード用に保存しました。</string>
     <string name="rd_series_removed">シリーズのプリセットを削除しました。</string>
     <string name="rd_series_remember">このシリーズで記憶</string>
+    <string name="rd_sync_timeline">同期タイムライン</string>
+    <string name="rd_sync_hint">字幕の行を、それに対応する声の下にドラッグしてください。</string>
+    <string name="rd_sync_view_description">再生位置の前後の音声と字幕の行。ドラッグして字幕を移動します</string>
+    <string name="rd_sync_earlier">字幕を 50 ms 早く</string>
+    <string name="rd_sync_later">字幕を 50 ms 遅く</string>
+    <string name="rd_sync_no_track">字幕は表示されていません。</string>
+    <string name="rd_sync_no_cues">この字幕トラックの行は表示できません。遅延は引き続き適用されます。</string>
+    <string name="rd_sync_no_sound">この動画の音声は表示できません。</string>
 </resources>

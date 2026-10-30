@@ -317,6 +317,12 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             textMark = if (textMark >= 0) -1L else rdService?.getTime() ?: -1L
             applyMarks()
         }
+        // the sync timeline takes the panel's place (the video stays visible above it)
+        timing.rdSubSyncOpen.setOnClickListener {
+            val fm = parentFragmentManager
+            dismiss()
+            if (fm.findFragmentByTag("subtitle_sync") == null) SubtitleSyncDialog().show(fm, "subtitle_sync")
+        }
         setupSize()
     }
 

@@ -102,6 +102,17 @@
 
     </LinearLayout>
 
+    <!-- the sync timeline: the sound and the subtitle lines, dragged in place (SubtitleSyncDialog) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rd_sub_sync_open"
+        style="@style/Widget.Redesign.Button.Outlined.Player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/rd_sync_timeline"
+        app:icon="@drawable/ic_delay"
+        app:iconGravity="textStart" />
+
     <!-- #10: the subtitle size (percent of the size of the settings, 25 to 500, the desktop's Ctrl + wheel):
          the playing subtitles take it as the slider is let go; Reset back to 100 % -->
     <View

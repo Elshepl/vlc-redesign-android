@@ -116,6 +116,95 @@ object Waveform {
         }
     }
 
+    /**
+     * The loudness (RMS, 0..1) of every [binMs] of a local file's sound from [fromMs] to [toMs], for the subtitle
+     * sync timeline; null when it cannot be read. Only that stretch is decoded (from the key frame before it).
+     * Blocking; [progress] gets what is read so far, every 5 s of sound.
+     */
+    fun levels(context: Context, uri: Uri, fromMs: Long, toMs: Long, binMs: Int, progress: ((FloatArray) -> Unit)? = null): FloatArray? {
+        if (uri.scheme != "file" && uri.scheme != "content") return null
+        val extractor = MediaExtractor()
+        var codec: MediaCodec? = null
+        try {
+            if (uri.scheme == "file") extractor.setDataSource(uri.path!!) else extractor.setDataSource(context, uri, null)
+            val track = (0 until extractor.trackCount).firstOrNull { extractor.getTrackFormat(it).getString(MediaFormat.KEY_MIME)?.startsWith("audio/") == true }
+                    ?: return null
+            val format = extractor.getTrackFormat(track)
+            extractor.selectTrack(track)
+            extractor.seekTo(maxOf(0L, fromMs) * 1000, MediaExtractor.SEEK_TO_PREVIOUS_SYNC)
+            codec = MediaCodec.createDecoderByType(format.getString(MediaFormat.KEY_MIME)!!)
+            codec.configure(format, null, null, 0)
+            codec.start()
+            val count = ((toMs - fromMs) / binMs).toInt().coerceAtLeast(1)
+            val sums = DoubleArray(count)
+            val samples = IntArray(count)
+            val info = MediaCodec.BufferInfo()
+            var inputDone = false
+            var channels = format.getIntegerOrDefault(MediaFormat.KEY_CHANNEL_COUNT, 2)
+            var rate = format.getIntegerOrDefault(MediaFormat.KEY_SAMPLE_RATE, 44100)
+            var reported = fromMs
+            fun snapshot() = FloatArray(count) { if (samples[it] > 0) kotlin.math.sqrt(sums[it] / samples[it]).toFloat() else 0f }
+            while (true) {
+                if (!inputDone) {
+                    val i = codec.dequeueInputBuffer(10_000)
+                    if (i >= 0) {
+                        val n = extractor.readSampleData(codec.getInputBuffer(i)!!, 0)
+                        if (n < 0 || extractor.sampleTime > toMs * 1000) {
+                            codec.queueInputBuffer(i, 0, 0, 0, MediaCodec.BUFFER_FLAG_END_OF_STREAM)
+                            inputDone = true
+                        } else {
+                            codec.queueInputBuffer(i, 0, n, extractor.sampleTime, 0)
+                            extractor.advance()
+                        }
+                    }
+                }
+                val o = codec.dequeueOutputBuffer(info, 10_000)
+                if (o == MediaCodec.INFO_OUTPUT_FORMAT_CHANGED) {
+                    codec.outputFormat.let { channels = it.getIntegerOrDefault(MediaFormat.KEY_CHANNEL_COUNT, channels); rate = it.getIntegerOrDefault(MediaFormat.KEY_SAMPLE_RATE, rate) }
+                } else if (o >= 0) {
+                    val out = codec.getOutputBuffer(o)!!.order(ByteOrder.nativeOrder())
+                    out.position(info.offset)
+                    out.limit(info.offset + info.size)
+                    val shorts = out.asShortBuffer()
+                    var s = 0
+                    var frame = 0L
+                    // the mean square of every bin (16-bit PCM, the decoders' output), from the buffer's own time;
+                    // about 4000 frames a second are enough for a loudness
+                    val stride = max(1, rate / 4000)
+                    while (s + channels <= shorts.remaining()) {
+                        val t = info.presentationTimeUs / 1000 + frame * 1000 / rate
+                        val bin = ((t - fromMs) / binMs).toInt()
+                        if (bin in 0 until count) {
+                            var peak = 0
+                            for (c in 0 until channels) peak = max(peak, abs(shorts.get(s + c).toInt()))
+                            val v = peak / 32768.0
+                            sums[bin] += v * v
+                            samples[bin]++
+                        }
+                        s += channels * stride
+                        frame += stride
+                    }
+                    codec.releaseOutputBuffer(o, false)
+                    if (info.flags and MediaCodec.BUFFER_FLAG_END_OF_STREAM != 0) break
+                    if (progress != null && info.presentationTimeUs / 1000 - reported > 5000) {
+                        reported = info.presentationTimeUs / 1000
+                        progress(snapshot())
+                    }
+                }
+                if (Thread.currentThread().isInterrupted) return null
+            }
+            if (org.videolan.vlc.BuildConfig.DEBUG) Log.d(TAG, "levels $fromMs..$toMs: ${samples.count { it > 0 }}/$count bins")
+            return snapshot()
+        } catch (e: Exception) {
+            Log.w(TAG, "no levels for $uri: $e")
+            return null
+        } finally {
+            try { codec?.stop() } catch (_: Exception) {}
+            codec?.release()
+            extractor.release()
+        }
+    }
+
     private fun MediaFormat.getIntegerOrDefault(key: String, def: Int) = if (containsKey(key)) getInteger(key) else def
 }
 

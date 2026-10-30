@@ -46,4 +46,12 @@
     <string name="rd_series_saved">Für Episoden von %1$s gespeichert.</string>
     <string name="rd_series_removed">Serien-Voreinstellung entfernt.</string>
     <string name="rd_series_remember">Für diese Serie merken</string>
+    <string name="rd_sync_timeline">Synchron-Zeitleiste</string>
+    <string name="rd_sync_hint">Ziehen Sie die Untertitelzeilen unter die Stimme, zu der sie gehören.</string>
+    <string name="rd_sync_view_description">Der Ton und die Untertitelzeilen um die Wiedergabezeit; ziehen, um die Untertitel zu verschieben</string>
+    <string name="rd_sync_earlier">Untertitel 50 ms früher</string>
+    <string name="rd_sync_later">Untertitel 50 ms später</string>
+    <string name="rd_sync_no_track">Es werden keine Untertitel angezeigt.</string>
+    <string name="rd_sync_no_cues">Die Zeilen dieser Untertitelspur können nicht angezeigt werden; die Verzögerung gilt trotzdem.</string>
+    <string name="rd_sync_no_sound">Der Ton dieses Videos kann nicht angezeigt werden.</string>
 </resources>
