@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Запіс захаваны: %1$s</string>
     <string name="rd_record_stop">Спыніць запіс</string>
     <string name="rd_search_in_english">Паказаць налады па-англійску</string>
+    <string name="rd_update_available">Даступна версія %1$s</string>
+    <string name="rd_update_you_have">У вас версія %1$s.</string>
+    <string name="rd_update_whats_new">Што новага</string>
+    <string name="rd_update_check_daily">Правяраць абнаўленні раз на дзень</string>
 </resources>

@@ -361,4 +361,8 @@
     <string name="rd_record_saved">បានរក្សាទុកការថត៖ %1$s</string>
     <string name="rd_record_stop">បញ្ឈប់ការថត</string>
     <string name="rd_search_in_english">បង្ហាញការកំណត់ជាភាសាអង់គ្លេស</string>
+    <string name="rd_update_available">កំណែ %1$s មានហើយ</string>
+    <string name="rd_update_you_have">អ្នកមាន %1$s។</string>
+    <string name="rd_update_whats_new">អ្វីដែលថ្មី</string>
+    <string name="rd_update_check_daily">ពិនិត្យរកបច្ចុប្បន្នភាពម្ដងក្នុងមួយថ្ងៃ</string>
 </resources>

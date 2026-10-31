@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
-import org.videolan.tools.KEY_SHOW_UPDATE
 import org.videolan.tools.PLAYBACK_HISTORY
 import org.videolan.tools.Settings
 import org.videolan.tools.putSingle
@@ -45,9 +44,9 @@ class OnboardingPrivacyFragment : OnboardingFragment() {
         row(rows, getString(R.string.rd_tv_addon), getString(R.string.rd_tv_addon_help), settings.getBoolean(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, true)) {
             settings.putSingle(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, it)
         }
-        // the update check only exists in test builds (AutoUpdate)
-        if (org.videolan.vlc.util.AutoUpdate.ENABLED && BuildConfig.DEBUG) row(rows, getString(R.string.rd_check_updates), getString(R.string.rd_ob_updates_help), settings.getBoolean(KEY_SHOW_UPDATE, true)) {
-            settings.putSingle(KEY_SHOW_UPDATE, it)
+        // VLC Redesign's releases on GitHub, once a day (RdUpdateCheck)
+        row(rows, getString(R.string.rd_check_updates), getString(R.string.rd_update_check_daily), settings.getBoolean(org.videolan.vlc.util.RdUpdateCheck.KEY_CHECK, true)) {
+            settings.putSingle(org.videolan.vlc.util.RdUpdateCheck.KEY_CHECK, it)
         }
         val accent = String.format("#%06X", 0xFFFFFF and requireContext().rdAttr(R.attr.colorPrimary))
         view.findViewById<TextView>(R.id.design_credit).text =

@@ -341,4 +341,8 @@
     <string name="rd_record_saved">रेकॉर्डिंग जतन केले: %1$s</string>
     <string name="rd_record_stop">रेकॉर्डिंग थांबवा</string>
     <string name="rd_search_in_english">रचना इंग्रजीमध्ये दाखवा</string>
+    <string name="rd_update_available">आवृत्ती %1$s उपलब्ध आहे</string>
+    <string name="rd_update_you_have">तुमच्याकडे %1$s आहे.</string>
+    <string name="rd_update_whats_new">नवीन काय आहे</string>
+    <string name="rd_update_check_daily">दिवसातून एकदा अपडेट तपासा</string>
 </resources>

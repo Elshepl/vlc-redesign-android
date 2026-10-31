@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Opname opgeslagen: %1$s</string>
     <string name="rd_record_stop">Opname stoppen</string>
     <string name="rd_search_in_english">Instellingen in het Engels tonen</string>
+    <string name="rd_update_available">Versie %1$s is beschikbaar</string>
+    <string name="rd_update_you_have">U hebt %1$s.</string>
+    <string name="rd_update_whats_new">Wat is er nieuw</string>
+    <string name="rd_update_check_daily">Dagelijks controleren op updates</string>
 </resources>

@@ -341,4 +341,8 @@
     <string name="rd_record_saved">レコーディングを保存しました: %1$s</string>
     <string name="rd_record_stop">レコーディングを停止</string>
     <string name="rd_search_in_english">設定を英語で表示</string>
+    <string name="rd_update_available">バージョン %1$s が利用可能です</string>
+    <string name="rd_update_you_have">現在のバージョンは %1$s です。</string>
+    <string name="rd_update_whats_new">新機能</string>
+    <string name="rd_update_check_daily">1日1回アップデートを確認</string>
 </resources>

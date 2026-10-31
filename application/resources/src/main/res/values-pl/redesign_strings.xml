@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Zapisano nagranie: %1$s</string>
     <string name="rd_record_stop">Zatrzymaj nagrywanie</string>
     <string name="rd_search_in_english">Pokaż ustawienia po angielsku</string>
+    <string name="rd_update_available">Dostępna jest wersja %1$s</string>
+    <string name="rd_update_you_have">Masz wersję %1$s.</string>
+    <string name="rd_update_whats_new">Co nowego</string>
+    <string name="rd_update_check_daily">Sprawdzaj aktualizacje raz dziennie</string>
 </resources>

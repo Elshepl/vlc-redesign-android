@@ -341,4 +341,8 @@
     <string name="rd_record_failed">Aufnahme konnte nicht gestartet werden</string>
     <string name="rd_record_saved">Aufnahme gespeichert: %1$s</string>
     <string name="rd_record_stop">Aufnahme beenden</string>
+    <string name="rd_update_available">Version %1$s ist verfügbar</string>
+    <string name="rd_update_you_have">Sie haben %1$s.</string>
+    <string name="rd_update_whats_new">Neuigkeiten</string>
+    <string name="rd_update_check_daily">Einmal täglich nach Aktualisierungen suchen</string>
 </resources>

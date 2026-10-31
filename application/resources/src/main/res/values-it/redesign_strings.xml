@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Registrazione salvata: %1$s</string>
     <string name="rd_record_stop">Interrompi registrazione</string>
     <string name="rd_search_in_english">Mostra le impostazioni in inglese</string>
+    <string name="rd_update_available">È disponibile la versione %1$s</string>
+    <string name="rd_update_you_have">Hai la versione %1$s.</string>
+    <string name="rd_update_whats_new">Novità</string>
+    <string name="rd_update_check_daily">Controlla aggiornamenti una volta al giorno</string>
 </resources>

@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Įrašas išsaugotas: %1$s</string>
     <string name="rd_record_stop">Stabdyti įrašymą</string>
     <string name="rd_search_in_english">Rodyti nuostatas anglų kalba</string>
+    <string name="rd_update_available">Galima versija %1$s</string>
+    <string name="rd_update_you_have">Turite %1$s.</string>
+    <string name="rd_update_whats_new">Kas naujo</string>
+    <string name="rd_update_check_daily">Ieškoti atnaujinimų kartą per dieną</string>
 </resources>

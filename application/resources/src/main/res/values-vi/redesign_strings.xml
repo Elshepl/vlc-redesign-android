@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Đã lưu bản ghi: %1$s</string>
     <string name="rd_record_stop">Dừng ghi</string>
     <string name="rd_search_in_english">Hiện thiết lập bằng tiếng Anh</string>
+    <string name="rd_update_available">Đã có phiên bản %1$s</string>
+    <string name="rd_update_you_have">Bạn đang có %1$s.</string>
+    <string name="rd_update_whats_new">Có gì mới</string>
+    <string name="rd_update_check_daily">Kiểm tra bản cập nhật mỗi ngày một lần</string>
 </resources>

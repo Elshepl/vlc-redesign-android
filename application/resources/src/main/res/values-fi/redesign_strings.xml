@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Tallenne tallennettu: %1$s</string>
     <string name="rd_record_stop">Lopeta tallennus</string>
     <string name="rd_search_in_english">Näytä asetukset englanniksi</string>
+    <string name="rd_update_available">Versio %1$s on saatavilla</string>
+    <string name="rd_update_you_have">Sinulla on %1$s.</string>
+    <string name="rd_update_whats_new">Uutta</string>
+    <string name="rd_update_check_daily">Tarkista päivitykset kerran päivässä</string>
 </resources>

@@ -451,4 +451,8 @@
     <string name="rd_unpin_from_home">Unpin from Home</string>
     <string name="rd_pinned">Pinned</string>
     <string name="rd_pinned_missing">This pinned folder or playlist is no longer there.</string>
+    <string name="rd_update_available">Version %1$s is available</string>
+    <string name="rd_update_you_have">You have %1$s.</string>
+    <string name="rd_update_whats_new">What\'s new</string>
+    <string name="rd_update_check_daily">Check for updates once a day</string>
 </resources>

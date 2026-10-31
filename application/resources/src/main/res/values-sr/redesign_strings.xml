@@ -340,4 +340,8 @@
     <string name="rd_record_saved">Снимак је сачуван: %1$s</string>
     <string name="rd_record_stop">Заустави снимање</string>
     <string name="rd_search_in_english">Прикажи подешавања на енглеском</string>
+    <string name="rd_update_available">Доступна је верзија %1$s</string>
+    <string name="rd_update_you_have">Имате %1$s.</string>
+    <string name="rd_update_whats_new">Шта је ново</string>
+    <string name="rd_update_check_daily">Проверавај ажурирања једном дневно</string>
 </resources>

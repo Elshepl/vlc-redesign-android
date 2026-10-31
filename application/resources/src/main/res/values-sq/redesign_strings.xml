@@ -339,4 +339,8 @@
     <string name="rd_record_saved">Regjistrimi u ruajt: %1$s</string>
     <string name="rd_record_stop">Ndalo regjistrimin</string>
     <string name="rd_search_in_english">Shfaq cilësimet në anglisht</string>
+    <string name="rd_update_available">Versioni %1$s është i disponueshëm</string>
+    <string name="rd_update_you_have">Keni %1$s.</string>
+    <string name="rd_update_whats_new">Çfarë ka të re</string>
+    <string name="rd_update_check_daily">Kontrollo për përditësime një herë në ditë</string>
 </resources>

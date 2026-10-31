@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Înregistrare salvată: %1$s</string>
     <string name="rd_record_stop">Oprește înregistrarea</string>
     <string name="rd_search_in_english">Afișează setările în engleză</string>
+    <string name="rd_update_available">Versiunea %1$s este disponibilă</string>
+    <string name="rd_update_you_have">Aveți %1$s.</string>
+    <string name="rd_update_whats_new">Noutăți</string>
+    <string name="rd_update_check_daily">Caută actualizări o dată pe zi</string>
 </resources>

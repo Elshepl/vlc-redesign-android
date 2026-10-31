@@ -340,4 +340,8 @@
     <string name="rd_record_saved">حُفظ التسجيل: %1$s</string>
     <string name="rd_record_stop">إيقاف التسجيل</string>
     <string name="rd_search_in_english">عرض الإعدادات بالإنجليزية</string>
+    <string name="rd_update_available">الإصدار %1$s متاح</string>
+    <string name="rd_update_you_have">لديك %1$s.</string>
+    <string name="rd_update_whats_new">ما الجديد</string>
+    <string name="rd_update_check_daily">التحقق من وجود تحديثات مرة يوميًا</string>
 </resources>

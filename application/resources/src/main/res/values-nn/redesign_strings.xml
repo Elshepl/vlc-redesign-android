@@ -340,4 +340,8 @@
     <string name="rd_record_saved">Opptak lagra: %1$s</string>
     <string name="rd_record_stop">Stopp opptak</string>
     <string name="rd_search_in_english">Vis innstillingane på engelsk</string>
+    <string name="rd_update_available">Versjon %1$s er tilgjengeleg</string>
+    <string name="rd_update_you_have">Du har %1$s.</string>
+    <string name="rd_update_whats_new">Nyheiter</string>
+    <string name="rd_update_check_daily">Sjå etter oppdateringar éin gong om dagen</string>
 </resources>

@@ -325,4 +325,8 @@
     <string name="rd_help_custom_aspect_ratios">רשימה מופרדת בפסיקים של יחסי תצוגה שיתווספו לרשימת יחסי התצוגה של הממשק.</string>
     <string name="rd_search_in_english">הצגת ההגדרות באנגלית</string>
     <string name="rd_fx_unit_percent" formatted="false">%</string>
+    <string name="rd_update_available">גרסה %1$s זמינה</string>
+    <string name="rd_update_you_have">הגרסה שלך: %1$s.</string>
+    <string name="rd_update_whats_new">מה חדש</string>
+    <string name="rd_update_check_daily">בדוק אם יש עדכונים פעם ביום</string>
 </resources>

@@ -339,4 +339,8 @@
     <string name="rd_record_saved">บันทึกแล้ว: %1$s</string>
     <string name="rd_record_stop">หยุดบันทึก</string>
     <string name="rd_search_in_english">แสดงค่าตั้งเป็นภาษาอังกฤษ</string>
+    <string name="rd_update_available">มีรุ่น %1$s ให้ใช้แล้ว</string>
+    <string name="rd_update_you_have">คุณมีรุ่น %1$s</string>
+    <string name="rd_update_whats_new">มีอะไรใหม่</string>
+    <string name="rd_update_check_daily">ตรวจหาการปรับปรุงวันละครั้ง</string>
 </resources>

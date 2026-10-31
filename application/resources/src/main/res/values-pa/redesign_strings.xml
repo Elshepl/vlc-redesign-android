@@ -339,4 +339,8 @@
     <string name="rd_record_saved">ਰਿਕਾਰਡਿੰਗ ਸੰਭਾਲੀ ਗਈ: %1$s</string>
     <string name="rd_record_stop">ਰਿਕਾਰਡਿੰਗ ਰੋਕੋ</string>
     <string name="rd_search_in_english">ਸੈਟਿੰਗਾਂ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਦਿਖਾਓ</string>
+    <string name="rd_update_available">ਵਰਜਨ %1$s ਉਪਲੱਬਧ ਹੈ</string>
+    <string name="rd_update_you_have">ਤੁਹਾਡੇ ਕੋਲ %1$s ਹੈ।</string>
+    <string name="rd_update_whats_new">ਨਵਾਂ ਕੀ ਹੈ</string>
+    <string name="rd_update_check_daily">ਦਿਨ ਵਿੱਚ ਇੱਕ ਵਾਰ ਅੱਪਡੇਟ ਲਈ ਜਾਂਚ ਕਰੋ</string>
 </resources>

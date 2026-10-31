@@ -341,4 +341,8 @@
     <string name="rd_record_saved">റെക്കോർഡിംഗ് സംരക്ഷിച്ചു: %1$s</string>
     <string name="rd_record_stop">റെക്കോർഡിംഗ് നിർത്തുക</string>
     <string name="rd_search_in_english">സജ്ജീകരണങ്ങള്‍ ഇംഗ്ലീഷിൽ കാണിക്കുക</string>
+    <string name="rd_update_available">പതിപ്പ് %1$s ലഭ്യമാണ്</string>
+    <string name="rd_update_you_have">നിങ്ങളുടെ പക്കൽ %1$s ആണ്.</string>
+    <string name="rd_update_whats_new">പുതിയതെന്ത്</string>
+    <string name="rd_update_check_daily">ദിവസത്തിൽ ഒരിക്കൽ അപ്ഡേറ്റുകൾക്കായി പരിശോധിക്കുക</string>
 </resources>

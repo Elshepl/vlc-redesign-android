@@ -340,4 +340,8 @@
     <string name="rd_record_saved">Recordiad wedi\'i gadw: %1$s</string>
     <string name="rd_record_stop">Stopio recordio</string>
     <string name="rd_search_in_english">Dangos y gosodiadau yn Saesneg</string>
+    <string name="rd_update_available">Mae fersiwn %1$s ar gael</string>
+    <string name="rd_update_you_have">Mae gennych %1$s.</string>
+    <string name="rd_update_whats_new">Beth sy\'n newydd</string>
+    <string name="rd_update_check_daily">Chwilio am ddiweddariadau unwaith y dydd</string>
 </resources>

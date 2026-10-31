@@ -36,7 +36,8 @@ import org.videolan.vlc.gui.dialogs.RdWhatsNewDialog
 object WhatsNewManager {
     private val CURRENT = "redesign-" + BuildConfig.RD_VERSION_NAME
 
-    fun launchIfNeeded(context: AppCompatActivity) {
+    /** @return whether the card is shown */
+    fun launchIfNeeded(context: AppCompatActivity): Boolean {
         val preferences = Settings.getInstance(context)
         val needed = preferences.getBoolean(KEY_SHOW_WHATS_NEW, true) && preferences.getString(KEY_LAST_WHATS_NEW, "") != CURRENT
         if (needed) {
@@ -45,6 +46,7 @@ object WhatsNewManager {
             val whatsNewDialog = RdWhatsNewDialog()
             whatsNewDialog.show(context.supportFragmentManager, "fragment_whats_new")
         }
+        return needed
     }
 
     fun markAsShown(preferences: SharedPreferences) {

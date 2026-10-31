@@ -340,4 +340,8 @@
     <string name="rd_record_saved">ضبط ذخیره شد: %1$s</string>
     <string name="rd_record_stop">توقف ضبط</string>
     <string name="rd_search_in_english">نمایش تنظیمات به انگلیسی</string>
+    <string name="rd_update_available">نسخهٔ %1$s در دسترس است</string>
+    <string name="rd_update_you_have">نسخهٔ فعلی شما %1$s است.</string>
+    <string name="rd_update_whats_new">تازه‌ها</string>
+    <string name="rd_update_check_daily">بررسی به‌روزرسانی روزی یک بار</string>
 </resources>

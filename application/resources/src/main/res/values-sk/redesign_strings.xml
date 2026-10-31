@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Nahrávka uložená: %1$s</string>
     <string name="rd_record_stop">Zastaviť nahrávanie</string>
     <string name="rd_search_in_english">Zobraziť nastavenia v angličtine</string>
+    <string name="rd_update_available">K dispozícii je verzia %1$s</string>
+    <string name="rd_update_you_have">Máte verziu %1$s.</string>
+    <string name="rd_update_whats_new">Čo je nové</string>
+    <string name="rd_update_check_daily">Kontrolovať aktualizácie raz denne</string>
 </resources>

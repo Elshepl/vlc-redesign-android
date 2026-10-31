@@ -23,6 +23,8 @@ package org.videolan.vlc.gui
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
+import android.net.Uri
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.KeyEvent
@@ -85,6 +87,7 @@ import org.videolan.vlc.interfaces.IRefreshable
 import org.videolan.vlc.media.MediaUtils
 import org.videolan.vlc.reloadLibrary
 import org.videolan.vlc.util.AutoUpdate
+import org.videolan.vlc.util.RdUpdateCheck
 import org.videolan.vlc.util.Permissions
 import org.videolan.vlc.util.Util
 import org.videolan.vlc.util.WhatsNewManager
@@ -124,10 +127,31 @@ class MainActivity : ContentActivity(),
         scanNeeded = savedInstanceState == null && settings.getBoolean(KEY_MEDIALIBRARY_AUTO_RESCAN, true)
         mediaLibrary = Medialibrary.getInstance()
 
+        var otherCard = true
         if (!NotificationPermissionManager.launchIfNeeded(this)) {
             if (!WidgetMigration.launchIfNeeded(this)) {
-               if (!Settings.firstRun)  WhatsNewManager.launchIfNeeded(this) else WhatsNewManager.markAsShown(settings)
+               otherCard = if (!Settings.firstRun) WhatsNewManager.launchIfNeeded(this) else { WhatsNewManager.markAsShown(settings); true }
             }
+        }
+
+        // VLC Redesign's own releases on GitHub (RdUpdateCheck): offered, never installed by itself;
+        // not over another card of this start (What's new, a permission), the next start asks
+        if (!otherCard && savedInstanceState == null) lifecycleScope.launch {
+            val release = RdUpdateCheck.check(this@MainActivity) ?: return@launch
+            if (isFinishing) return@launch
+            MaterialAlertDialogBuilder(this@MainActivity)
+                .setTitle(getString(R.string.rd_update_available, release.version))
+                .setMessage(getString(R.string.rd_update_you_have, BuildConfig.RD_VERSION_NAME))
+                .setPositiveButton(R.string.download) { _, _ ->
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(release.apkUrl)))
+                }
+                .setNeutralButton(R.string.rd_update_whats_new) { _, _ ->
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(release.pageUrl)))
+                }
+                .setNegativeButton(R.string.skip) { _, _ ->
+                    settings.putSingle(RdUpdateCheck.KEY_SKIPPED, release.version)
+                }
+                .show()
         }
 
         lifecycleScope.launch {

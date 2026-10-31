@@ -339,4 +339,8 @@
     <string name="rd_record_saved">ჩანაწერი შენახულია: %1$s</string>
     <string name="rd_record_stop">ჩაწერის შეწყვეტა</string>
     <string name="rd_search_in_english">პარამეტრების ჩვენება ინგლისურად</string>
+    <string name="rd_update_available">ხელმისაწვდომია ვერსია %1$s</string>
+    <string name="rd_update_you_have">თქვენ გაქვთ %1$s.</string>
+    <string name="rd_update_whats_new">რა არის ახალი</string>
+    <string name="rd_update_check_daily">განახლებების შემოწმება დღეში ერთხელ</string>
 </resources>

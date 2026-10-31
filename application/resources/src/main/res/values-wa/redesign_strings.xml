@@ -373,4 +373,8 @@
     <string name="rd_search_in_english">Mostrer les apontiaedjes en inglès</string>
     <string name="rd_sec_notifications">Notifiaedjes</string>
     <string name="rd_subtitle_size">Grandeu des sortites</string>
+    <string name="rd_update_available">Li modêye %1$s est disponibe</string>
+    <string name="rd_update_you_have">Vos avoz %1$s.</string>
+    <string name="rd_update_whats_new">Çou k\' est novea</string>
+    <string name="rd_update_check_daily">Cweri des metaedjes a djoû ene fwès pa djoû</string>
 </resources>

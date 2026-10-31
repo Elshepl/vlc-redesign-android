@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Ieraksts saglabāts: %1$s</string>
     <string name="rd_record_stop">Apturēt ierakstīšanu</string>
     <string name="rd_search_in_english">Rādīt iestatījumus angliski</string>
+    <string name="rd_update_available">Pieejama versija %1$s</string>
+    <string name="rd_update_you_have">Jums ir %1$s.</string>
+    <string name="rd_update_whats_new">Jaunumi</string>
+    <string name="rd_update_check_daily">Pārbaudīt atjauninājumus reizi dienā</string>
 </resources>

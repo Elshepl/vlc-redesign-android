@@ -341,4 +341,8 @@
     <string name="rd_record_saved">錄製內容已儲存：%1$s</string>
     <string name="rd_record_stop">停止錄製</string>
     <string name="rd_search_in_english">以英文顯示設定</string>
+    <string name="rd_update_available">已有新版本 %1$s</string>
+    <string name="rd_update_you_have">您目前使用的是 %1$s。</string>
+    <string name="rd_update_whats_new">新功能</string>
+    <string name="rd_update_check_daily">每天檢查一次更新</string>
 </resources>

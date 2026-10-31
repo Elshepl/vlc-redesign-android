@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Rakaman disimpan: %1$s</string>
     <string name="rd_record_stop">Henti merakam</string>
     <string name="rd_search_in_english">Tunjukkan tetapan dalam bahasa Inggeris</string>
+    <string name="rd_update_available">Versi %1$s tersedia</string>
+    <string name="rd_update_you_have">Anda mempunyai %1$s.</string>
+    <string name="rd_update_whats_new">Apa yang baharu</string>
+    <string name="rd_update_check_daily">Semak kemas kini sekali sehari</string>
 </resources>

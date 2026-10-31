@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Salvestis on salvestatud: %1$s</string>
     <string name="rd_record_stop">Lõpeta salvestamine</string>
     <string name="rd_search_in_english">Näita sätteid inglise keeles</string>
+    <string name="rd_update_available">Saadaval on versioon %1$s</string>
+    <string name="rd_update_you_have">Sul on %1$s.</string>
+    <string name="rd_update_whats_new">Mis on uut</string>
+    <string name="rd_update_check_daily">Otsi värskendusi kord päevas</string>
 </resources>

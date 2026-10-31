@@ -339,4 +339,8 @@
     <string name="rd_record_saved">Upptaka vistuð: %1$s</string>
     <string name="rd_record_stop">Stöðva upptöku</string>
     <string name="rd_search_in_english">Sýna stillingarnar á ensku</string>
+    <string name="rd_update_available">Útgáfa %1$s er tiltæk</string>
+    <string name="rd_update_you_have">Þú ert með %1$s.</string>
+    <string name="rd_update_whats_new">Hvað er nýtt</string>
+    <string name="rd_update_check_daily">Leita að uppfærslum einu sinni á dag</string>
 </resources>

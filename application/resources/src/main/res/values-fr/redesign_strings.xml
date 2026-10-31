@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Enregistrement sauvegardé : %1$s</string>
     <string name="rd_record_stop">Arrêter l\'enregistrement</string>
     <string name="rd_search_in_english">Afficher les paramètres en anglais</string>
+    <string name="rd_update_available">La version %1$s est disponible</string>
+    <string name="rd_update_you_have">Vous avez la version %1$s.</string>
+    <string name="rd_update_whats_new">Nouveautés</string>
+    <string name="rd_update_check_daily">Rechercher des mises à jour une fois par jour</string>
 </resources>

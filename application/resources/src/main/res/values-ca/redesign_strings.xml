@@ -341,4 +341,8 @@
     <string name="rd_record_saved">S\'ha desat l\'enregistrament: %1$s</string>
     <string name="rd_record_stop">Atura l\'enregistrament</string>
     <string name="rd_search_in_english">Mostra els paràmetres en anglès</string>
+    <string name="rd_update_available">La versió %1$s està disponible</string>
+    <string name="rd_update_you_have">Teniu la versió %1$s.</string>
+    <string name="rd_update_whats_new">Novetats</string>
+    <string name="rd_update_check_daily">Cerca actualitzacions un cop al dia</string>
 </resources>

@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Grabación guardada: %1$s</string>
     <string name="rd_record_stop">Detener grabación</string>
     <string name="rd_search_in_english">Mostrar la configuración en inglés</string>
+    <string name="rd_update_available">La versión %1$s está disponible</string>
+    <string name="rd_update_you_have">Tiene %1$s.</string>
+    <string name="rd_update_whats_new">Novedades</string>
+    <string name="rd_update_check_daily">Buscar actualizaciones una vez al día</string>
 </resources>

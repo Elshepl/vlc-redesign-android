@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Optagelse gemt: %1$s</string>
     <string name="rd_record_stop">Stop optagelse</string>
     <string name="rd_search_in_english">Vis indstillingerne på engelsk</string>
+    <string name="rd_update_available">Version %1$s er tilgængelig</string>
+    <string name="rd_update_you_have">Du har %1$s.</string>
+    <string name="rd_update_whats_new">Nyheder</string>
+    <string name="rd_update_check_daily">Søg efter opdateringer én gang om dagen</string>
 </resources>

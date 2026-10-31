@@ -340,4 +340,8 @@
     <string name="rd_record_saved">रेकर्डिङ सुरक्षित गरियो: %1$s</string>
     <string name="rd_record_stop">रेकर्डिङ रोक्नुहोस्</string>
     <string name="rd_search_in_english">सेटिङ्हरू अङ्ग्रेजीमा देखाउनुहोस्</string>
+    <string name="rd_update_available">संस्करण %1$s उपलब्ध छ</string>
+    <string name="rd_update_you_have">तपाईंसँग %1$s छ।</string>
+    <string name="rd_update_whats_new">के नयाँ छ</string>
+    <string name="rd_update_check_daily">दिनको एक पटक अद्यावधिकहरू जाँच गर्नुहोस्</string>
 </resources>

@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Felvétel mentve: %1$s</string>
     <string name="rd_record_stop">Felvétel leállítása</string>
     <string name="rd_search_in_english">Beállítások megjelenítése angolul</string>
+    <string name="rd_update_available">Új verzió érhető el: %1$s</string>
+    <string name="rd_update_you_have">Az Ön verziója: %1$s.</string>
+    <string name="rd_update_whats_new">Újdonságok</string>
+    <string name="rd_update_check_daily">Frissítések keresése naponta egyszer</string>
 </resources>

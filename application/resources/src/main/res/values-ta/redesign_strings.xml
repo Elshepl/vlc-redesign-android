@@ -339,4 +339,8 @@
     <string name="rd_record_saved">பதிவு சேமிக்கப்பட்டது: %1$s</string>
     <string name="rd_record_stop">பதிவை நிறுத்து</string>
     <string name="rd_search_in_english">அமைப்புகளை ஆங்கிலத்தில் காட்டு</string>
+    <string name="rd_update_available">பதிப்பு %1$s கிடைக்கிறது</string>
+    <string name="rd_update_you_have">உங்களிடம் %1$s உள்ளது.</string>
+    <string name="rd_update_whats_new">புதியவை என்ன</string>
+    <string name="rd_update_check_daily">தினமும் ஒருமுறை புதுப்பிப்புகளைச் சரிபார்</string>
 </resources>

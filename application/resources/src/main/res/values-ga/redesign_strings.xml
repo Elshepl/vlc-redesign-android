@@ -339,4 +339,8 @@
     <string name="rd_record_saved">Taifeadadh sábháilte: %1$s</string>
     <string name="rd_record_stop">Stop an taifeadadh</string>
     <string name="rd_search_in_english">Taispeáin na socruithe i mBéarla</string>
+    <string name="rd_update_available">Tá leagan %1$s ar fáil</string>
+    <string name="rd_update_you_have">Tá %1$s agat.</string>
+    <string name="rd_update_whats_new">Cad atá nua</string>
+    <string name="rd_update_check_daily">Seiceáil le haghaidh nuashonruithe uair sa lá</string>
 </resources>

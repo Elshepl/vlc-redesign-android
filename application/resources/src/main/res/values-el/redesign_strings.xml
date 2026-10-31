@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Η εγγραφή αποθηκεύτηκε: %1$s</string>
     <string name="rd_record_stop">Διακοπή εγγραφής</string>
     <string name="rd_search_in_english">Εμφάνιση των ρυθμίσεων στα Αγγλικά</string>
+    <string name="rd_update_available">Η έκδοση %1$s είναι διαθέσιμη</string>
+    <string name="rd_update_you_have">Έχετε την έκδοση %1$s.</string>
+    <string name="rd_update_whats_new">Τι νέο υπάρχει</string>
+    <string name="rd_update_check_daily">Έλεγχος για ενημερώσεις μία φορά την ημέρα</string>
 </resources>

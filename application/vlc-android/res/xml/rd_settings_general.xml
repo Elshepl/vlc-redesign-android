@@ -23,6 +23,12 @@
             android:entryValues="@array/rd_accent_values" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/rd_sec_startup">
+        <!-- VLC Redesign's releases on GitHub (util/RdUpdateCheck) -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rd_check_updates"
+            android:summary="@string/rd_update_check_daily"
+            android:title="@string/rd_check_updates" />
         <CheckBoxPreference
             android:key="show_whats_new"
             android:title="@string/rd_show_whats_new"

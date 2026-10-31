@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Kayıt kaydedildi: %1$s</string>
     <string name="rd_record_stop">Kaydı durdur</string>
     <string name="rd_search_in_english">Ayarları İngilizce göster</string>
+    <string name="rd_update_available">%1$s sürümü yayımlandı</string>
+    <string name="rd_update_you_have">Kullandığınız sürüm: %1$s.</string>
+    <string name="rd_update_whats_new">Yenilikler</string>
+    <string name="rd_update_check_daily">Güncellemeleri günde bir kez denetle</string>
 </resources>

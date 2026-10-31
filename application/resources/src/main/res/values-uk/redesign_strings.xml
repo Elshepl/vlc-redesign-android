@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Запис збережено: %1$s</string>
     <string name="rd_record_stop">Зупинити записування</string>
     <string name="rd_search_in_english">Показати параметри англійською</string>
+    <string name="rd_update_available">Доступна версія %1$s</string>
+    <string name="rd_update_you_have">У вас версія %1$s.</string>
+    <string name="rd_update_whats_new">Що нового</string>
+    <string name="rd_update_check_daily">Перевіряти оновлення раз на день</string>
 </resources>

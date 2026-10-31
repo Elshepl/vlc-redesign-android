@@ -339,4 +339,8 @@
     <string name="rd_record_saved">Opname gestoor: %1$s</string>
     <string name="rd_record_stop">Stop opname</string>
     <string name="rd_search_in_english">Wys die instellings in Engels</string>
+    <string name="rd_update_available">Weergawe %1$s is beskikbaar</string>
+    <string name="rd_update_you_have">U het %1$s.</string>
+    <string name="rd_update_whats_new">Wat is nuut</string>
+    <string name="rd_update_check_daily">Kyk een keer per dag vir bywerkings</string>
 </resources>

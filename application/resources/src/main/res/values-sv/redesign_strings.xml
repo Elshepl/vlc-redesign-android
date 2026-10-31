@@ -341,4 +341,8 @@
     <string name="rd_record_saved">Inspelningen sparad: %1$s</string>
     <string name="rd_record_stop">Stoppa inspelningen</string>
     <string name="rd_search_in_english">Visa inställningarna på engelska</string>
+    <string name="rd_update_available">Version %1$s finns tillgänglig</string>
+    <string name="rd_update_you_have">Du har %1$s.</string>
+    <string name="rd_update_whats_new">Nyheter</string>
+    <string name="rd_update_check_daily">Sök efter uppdateringar en gång om dagen</string>
 </resources>
