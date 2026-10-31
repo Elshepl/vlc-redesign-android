@@ -38,7 +38,7 @@
                 android:paddingEnd="16dp"
                 android:importantForAccessibility="no"
                 android:textAppearance="@style/ToolbarTitleText"
-                android:text="@string/app_name" />
+                android:text="@string/app_name_short" />
 
 
     </com.google.android.material.appbar.MaterialToolbar>

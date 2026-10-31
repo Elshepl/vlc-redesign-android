@@ -939,7 +939,7 @@
                 <data android:pathPattern=".*\\..*\\..*\\.xspf" />
                 <data android:pathPattern=".*\\..*\\..*\\.XSPF" />
             </intent-filter>
-            <intent-filter android:label="Play with VLC">
+            <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.SEND"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>

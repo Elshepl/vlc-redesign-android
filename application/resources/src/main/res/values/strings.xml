@@ -5,7 +5,9 @@
     <!-- Main VLC Interface -->
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="app_name" translatable="false">VLC</string>
+    <string name="app_name" translatable="false">VLC Media Player Redesign</string>
+    <!-- VLC Redesign: the short name drawn as the logo text beside the cone (top bar) -->
+    <string name="app_name_short" translatable="false">VLC</string>
     <string name="other">Other</string>
     <string name="sortby">Sort by…</string>
     <string name="sortby_name">Name</string>
@@ -323,7 +325,7 @@
     <string name="hold_to_stop">Hold to stop</string>
 
     <!-- About -->
-    <string name="app_name_full" translatable="false">VLC Redesign</string>
+    <string name="app_name_full" translatable="false">@string/app_name</string>
     <string name="revision">Revision</string>
     <string name="about">About</string>
     <string name="about_vlc_text">VLC for Android™ is a port of VLC media player, the popular open source media player. The Android™ version can read all files and network streams.</string>
@@ -725,7 +727,7 @@
     <string name="whats_next">What\'s next?</string>
     <string name="widget_old_description_end">We detected that you already have widgets on your launcher. Unfortunately, they are not compatible with our new improved ones.\nDepending on your launcher, you may have to remove the old ones to replace them.</string>
     <string name="click_here">Click here to learn more.</string>
-    <string name="widget_default_text" translatable="false">VLC media player</string>
+    <string name="widget_default_text" translatable="false">@string/app_name</string>
     <string name="allow_storage_access_title">Allow VLC to access video and audio files</string>
     <string name="allow_storage_access_description">VLC needs you to grant this permission to access the media files on this device.</string>
     <string name="partial_content">VLC cannot access all of your files</string>
