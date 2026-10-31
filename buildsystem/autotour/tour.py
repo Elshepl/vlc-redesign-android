@@ -745,6 +745,13 @@ class Tour:
         tabs = d.find(cls="TabView")
         if len(tabs) > 2:
             self.d.tap(tabs[2]); d = self.d.settle()
+        # (a large font scrolls the tab strip: the third tab seen is then another one; each in turn)
+        for i in range(len(tabs)):
+            if any(v.txt == "Morning Light" for v in d.views):
+                break
+            tt = d.find(cls="TabView")
+            if i < len(tt):
+                self.d.tap(tt[i]); d = self.d.settle()
         songs = [v for v in d.views if v.txt == "Morning Light"]
         if not songs:
             raise Lost("no song row")
