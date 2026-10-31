@@ -46,4 +46,19 @@
     <string name="rd_series_unavailable">Nid yw trac sain neu isdeitlau a gadwyd ar gael yn y bennod hon.</string>
     <string name="rd_series_saved">Wedi\'i gadw ar gyfer penodau %1$s.</string>
     <string name="rd_series_removed">Tynnwyd rhagosodiad y gyfres.</string>
+    <string name="rd_sync_timeline">Llinell amser cydamseru</string>
+    <string name="rd_sync_hint">Llusgwch linellau\'r isdeitlau o dan y llais y maen nhw\'n perthyn iddo.</string>
+    <string name="rd_sync_view_description">Y sain a llinellau\'r isdeitlau o gwmpas yr amser chwarae; llusgwch i symud yr isdeitlau</string>
+    <string name="rd_sync_earlier">Isdeitlau 50 ms yn gynharach</string>
+    <string name="rd_sync_later">Isdeitlau 50 ms yn hwyrach</string>
+    <string name="rd_sync_no_track">Does dim isdeitlau\'n cael eu dangos.</string>
+    <string name="rd_sync_no_cues">Does dim modd dangos llinellau\'r trac isdeitlau hwn; mae\'r oediad yn dal yn berthnasol.</string>
+    <string name="rd_sync_no_sound">Does dim modd dangos sain y fideo hwn.</string>
+    <string name="rd_series_remember">Cofio ar gyfer y gyfres hon</string>
+    <string name="rd_pin_to_sidebar">Pinio i\'r Bar Ochr</string>
+    <string name="rd_unpin_from_sidebar">Dadbinio o\'r Bar Ochr</string>
+    <string name="rd_pin_to_home">Pinio i\'r Hafan</string>
+    <string name="rd_unpin_from_home">Dadbinio o\'r Hafan</string>
+    <string name="rd_pinned">Wedi\'u pinio</string>
+    <string name="rd_pinned_missing">Nid yw\'r ffolder neu\'r rhestr chwarae hon a biniwyd yno bellach.</string>
 </resources>

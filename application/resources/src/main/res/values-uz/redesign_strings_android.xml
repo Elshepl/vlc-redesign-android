@@ -39,4 +39,25 @@
     <string name="rd_cast_this_tablet">Bu planshet</string>
     <string name="rd_cast_none_found">Hech qanday qurilma topilmadi. Televizor yoki Chromecast\'ni ushbu qurilma bilan bir xil tarmoqda yoqing.</string>
     <string name="rd_cast_no_answer">%1$s javob bermayapti. U yoniq va ushbu qurilma bilan bir xil tarmoqda ekanini tekshiring.</string>
+    <string name="rd_sync_timeline">Sinxronlash vaqt chizigʻi</string>
+    <string name="rd_sync_hint">Subtitr qatorlarini ular tegishli boʻlgan ovoz ostiga torting.</string>
+    <string name="rd_sync_view_description">Ijro vaqti atrofidagi ovoz va subtitr qatorlari; subtitrlarni surish uchun torting</string>
+    <string name="rd_sync_earlier">Subtitrlar 50 ms oldinroq</string>
+    <string name="rd_sync_later">Subtitrlar 50 ms kechroq</string>
+    <string name="rd_sync_no_track">Hech qanday subtitr koʻrsatilmayapti.</string>
+    <string name="rd_sync_no_cues">Bu subtitr trekining qatorlarini koʻrsatib boʻlmaydi; kechikish baribir qoʻllaniladi.</string>
+    <string name="rd_sync_no_sound">Bu videoning ovozini koʻrsatib boʻlmaydi.</string>
+    <string name="rd_series_remember">Bu serial uchun eslab qolish</string>
+    <string name="rd_series_applies">%1$s epizodlariga qoʻllaniladi</string>
+    <string name="rd_series_play_local">Trek va vaqt tanlovlarini saqlash uchun mahalliy epizodni ijro eting.</string>
+    <string name="rd_series_applied">Serial sozlamasi qoʻllandi.</string>
+    <string name="rd_series_unavailable">Saqlangan audio yoki subtitr treki bu epizodda mavjud emas.</string>
+    <string name="rd_series_saved">%1$s epizodlari uchun saqlandi.</string>
+    <string name="rd_series_removed">Serial sozlamasi olib tashlandi.</string>
+    <string name="rd_pin_to_sidebar">Yon panelga qadash</string>
+    <string name="rd_unpin_from_sidebar">Yon paneldan ajratish</string>
+    <string name="rd_pin_to_home">Bosh sahifaga qadash</string>
+    <string name="rd_unpin_from_home">Bosh sahifadan ajratish</string>
+    <string name="rd_pinned">Qadalganlar</string>
+    <string name="rd_pinned_missing">Bu qadalgan jild yoki pleylist endi mavjud emas.</string>
 </resources>

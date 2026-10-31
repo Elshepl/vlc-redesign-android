@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">Níl rian fuaime nó fotheideal sábháilte ar fáil san eipeasóid seo.</string>
     <string name="rd_series_saved">Sábháilte d\'eipeasóidí %1$s.</string>
     <string name="rd_series_removed">Baineadh réamhshocrú na sraithe.</string>
+    <string name="rd_sync_timeline">Amlíne sioncronaithe</string>
+    <string name="rd_sync_hint">Tarraing línte na bhfotheideal faoin nguth lena mbaineann siad.</string>
+    <string name="rd_sync_view_description">An fhuaim agus línte na bhfotheideal timpeall an ama seinnte; tarraing chun na fotheidil a bhogadh</string>
+    <string name="rd_sync_earlier">Fotheidil 50 ms níos luaithe</string>
+    <string name="rd_sync_later">Fotheidil 50 ms níos déanaí</string>
+    <string name="rd_sync_no_track">Níl aon fhotheidil á dtaispeáint.</string>
+    <string name="rd_sync_no_cues">Ní féidir línte an riain fotheideal seo a thaispeáint; tá feidhm fós ag an moill.</string>
+    <string name="rd_sync_no_sound">Ní féidir fuaim an fhíseáin seo a thaispeáint.</string>
+    <string name="rd_series_remember">Cuimhnigh don tsraith seo</string>
+    <string name="rd_pin_to_sidebar">Greamaigh den Bharra Taoibh</string>
+    <string name="rd_unpin_from_sidebar">Díghreamaigh ón mBarra Taoibh</string>
+    <string name="rd_pin_to_home">Greamaigh den Bhaile</string>
+    <string name="rd_unpin_from_home">Díghreamaigh ón mBaile</string>
+    <string name="rd_pinned">Greamaithe</string>
+    <string name="rd_pinned_missing">Níl an fillteán nó an seinnliosta greamaithe seo ann a thuilleadh.</string>
 </resources>

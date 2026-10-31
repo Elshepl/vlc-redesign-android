@@ -46,4 +46,18 @@
     <string name="rd_series_saved">Lagret for episoder av %1$s.</string>
     <string name="rd_series_removed">Serieinnstillingen er fjernet.</string>
     <string name="rd_series_remember">Husk for denne serien</string>
+    <string name="rd_sync_timeline">Synkroniseringstidslinje</string>
+    <string name="rd_sync_hint">Dra undertekstlinjene inn under stemmen de hører til.</string>
+    <string name="rd_sync_view_description">Lyden og undertekstlinjene rundt avspillingstidspunktet; dra for å flytte undertekstene</string>
+    <string name="rd_sync_earlier">Undertekster 50 ms tidligere</string>
+    <string name="rd_sync_later">Undertekster 50 ms senere</string>
+    <string name="rd_sync_no_track">Ingen undertekster vises.</string>
+    <string name="rd_sync_no_cues">Linjene i dette undertekstsporet kan ikke vises; forsinkelsen gjelder fortsatt.</string>
+    <string name="rd_sync_no_sound">Lyden i denne videoen kan ikke vises.</string>
+    <string name="rd_pin_to_sidebar">Fest til sidepanelet</string>
+    <string name="rd_unpin_from_sidebar">Løsne fra sidepanelet</string>
+    <string name="rd_pin_to_home">Fest til Hjem</string>
+    <string name="rd_unpin_from_home">Løsne fra Hjem</string>
+    <string name="rd_pinned">Festet</string>
+    <string name="rd_pinned_missing">Denne festede mappen eller spillelisten finnes ikke lenger.</string>
 </resources>

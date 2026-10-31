@@ -11,4 +11,25 @@
     <string name="rd_ob_whole_device">စက်တစ်ခုလုံး</string>
     <string name="rd_about_whats_new">%1$s တွင် အသစ်များ</string>
     <string name="rd_subtitle_size">စာတန်းထိုး အရွယ်အစား</string>
+    <string name="rd_sync_timeline">ချိန်ညှိ အချိန်မျဉ်း</string>
+    <string name="rd_sync_hint">စာတန်းထိုးစာကြောင်းများကို ၎င်းတို့နှင့်ဆိုင်သော အသံအောက်သို့ ဆွဲပါ။</string>
+    <string name="rd_sync_view_description">ဖွင့်နေသောအချိန် ဝန်းကျင်ရှိ အသံနှင့် စာတန်းထိုးစာကြောင်းများ; စာတန်းထိုးများကို ရွှေ့ရန် ဆွဲပါ</string>
+    <string name="rd_sync_earlier">စာတန်းထိုး 50 ms စောရန်</string>
+    <string name="rd_sync_later">စာတန်းထိုး 50 ms နောက်ကျရန်</string>
+    <string name="rd_sync_no_track">စာတန်းထိုး မပြထားပါ။</string>
+    <string name="rd_sync_no_cues">ဤစာတန်းထိုးလမ်းကြောင်း၏ စာကြောင်းများကို မပြနိုင်ပါ; နှောင့်နှေးချိန်ကို ဆက်လက်အသုံးပြုသည်။</string>
+    <string name="rd_sync_no_sound">ဤဗီဒီယို၏ အသံကို မပြနိုင်ပါ။</string>
+    <string name="rd_series_remember">ဤဇာတ်လမ်းတွဲအတွက် မှတ်ထားရန်</string>
+    <string name="rd_series_applies">%1$s ၏ အပိုင်းများအတွက် သက်ရောက်သည်</string>
+    <string name="rd_series_play_local">၎င်း၏ လမ်းကြောင်းနှင့် အချိန်ရွေးချယ်မှုများကို သိမ်းရန် စက်တွင်းအပိုင်းတစ်ခုကို ဖွင့်ပါ။</string>
+    <string name="rd_series_applied">ဇာတ်လမ်းတွဲ ကြိုတင်သတ်မှတ်ချက် အသုံးပြုပြီးပါပြီ။</string>
+    <string name="rd_series_unavailable">သိမ်းထားသော အသံ သို့မဟုတ် စာတန်းထိုးလမ်းကြောင်းတစ်ခု ဤအပိုင်းတွင် မရှိပါ။</string>
+    <string name="rd_series_saved">%1$s ၏ အပိုင်းများအတွက် သိမ်းပြီးပါပြီ။</string>
+    <string name="rd_series_removed">ဇာတ်လမ်းတွဲ ကြိုတင်သတ်မှတ်ချက် ဖယ်ရှားပြီးပါပြီ။</string>
+    <string name="rd_pin_to_sidebar">ဘေးဘားတွင် ပင်ထိုးရန်</string>
+    <string name="rd_unpin_from_sidebar">ဘေးဘားမှ ပင်ဖြုတ်ရန်</string>
+    <string name="rd_pin_to_home">ပင်မတွင် ပင်ထိုးရန်</string>
+    <string name="rd_unpin_from_home">ပင်မမှ ပင်ဖြုတ်ရန်</string>
+    <string name="rd_pinned">ပင်ထိုးထားသည်</string>
+    <string name="rd_pinned_missing">ပင်ထိုးထားသော ဤဖိုင်တွဲ သို့မဟုတ် ဖွင့်စာရင်း မရှိတော့ပါ။</string>
 </resources>

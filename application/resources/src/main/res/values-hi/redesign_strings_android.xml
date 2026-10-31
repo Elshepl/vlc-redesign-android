@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">सहेजा गया एक ऑडियो या उपशीर्षक ट्रैक इस एपिसोड में उपलब्ध नहीं है।</string>
     <string name="rd_series_saved">%1$s के एपिसोड के लिए सहेजा गया।</string>
     <string name="rd_series_removed">सीरीज़ प्रीसेट हटाया गया।</string>
+    <string name="rd_sync_timeline">सिंक टाइमलाइन</string>
+    <string name="rd_sync_hint">उपशीर्षक पंक्तियों को उस आवाज़ के नीचे खींचें जिसकी वे हैं।</string>
+    <string name="rd_sync_view_description">चल रहे समय के आसपास की ध्वनि और उपशीर्षक पंक्तियाँ; उपशीर्षक खिसकाने के लिए खींचें</string>
+    <string name="rd_sync_earlier">उपशीर्षक 50 ms पहले</string>
+    <string name="rd_sync_later">उपशीर्षक 50 ms बाद में</string>
+    <string name="rd_sync_no_track">कोई उपशीर्षक नहीं दिखाया जा रहा है।</string>
+    <string name="rd_sync_no_cues">इस उपशीर्षक ट्रैक की पंक्तियाँ नहीं दिखाई जा सकतीं; विलंब फिर भी लागू होता है।</string>
+    <string name="rd_sync_no_sound">इस वीडियो की ध्वनि नहीं दिखाई जा सकती।</string>
+    <string name="rd_series_remember">इस सीरीज़ के लिए याद रखें</string>
+    <string name="rd_pin_to_sidebar">साइडबार में पिन करें</string>
+    <string name="rd_unpin_from_sidebar">साइडबार से अनपिन करें</string>
+    <string name="rd_pin_to_home">होम में पिन करें</string>
+    <string name="rd_unpin_from_home">होम से अनपिन करें</string>
+    <string name="rd_pinned">पिन किए गए</string>
+    <string name="rd_pinned_missing">पिन किया गया यह फ़ोल्डर या प्लेलिस्ट अब मौजूद नहीं है।</string>
 </resources>

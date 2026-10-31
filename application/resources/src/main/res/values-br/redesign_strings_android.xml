@@ -10,4 +10,25 @@
     <string name="rd_ob_whole_device">An trevnad a-bezh</string>
     <string name="rd_about_whats_new">Petra zo nevez e %1$s</string>
     <string name="rd_subtitle_size">Ment an istitloù</string>
+    <string name="rd_sync_timeline">Amzerlinenn ar c\'hempredañ</string>
+    <string name="rd_sync_hint">Riklit linennoù an istitloù dindan ar vouezh a zo dezho.</string>
+    <string name="rd_sync_view_description">Ar son ha linennoù an istitloù tro-dro d\'an amzer lenn; riklit evit dilec\'hiañ an istitloù</string>
+    <string name="rd_sync_earlier">Istitloù 50 ms abretoc\'h</string>
+    <string name="rd_sync_later">Istitloù 50 ms diwezhatoc\'h</string>
+    <string name="rd_sync_no_track">N\'eus istitl ebet diskouezet.</string>
+    <string name="rd_sync_no_cues">N\'haller ket diskouez linennoù ar roudenn istitloù-mañ; lakaet e vez an dale memes tra.</string>
+    <string name="rd_sync_no_sound">N\'haller ket diskouez son ar video-mañ.</string>
+    <string name="rd_series_remember">Derc\'hel soñj evit ar steudad-mañ</string>
+    <string name="rd_series_applies">Arloet ouzh rannoù %1$s</string>
+    <string name="rd_series_play_local">Lennit ur rann lec\'hel evit enrollañ he dibaboù roudenn hag amzeriañ.</string>
+    <string name="rd_series_applied">Rakarventenn ar steudad arloet.</string>
+    <string name="rd_series_unavailable">Ur roudenn aodio pe istitloù enrollet n\'eo ket hegerz er rann-mañ.</string>
+    <string name="rd_series_saved">Enrollet evit rannoù %1$s.</string>
+    <string name="rd_series_removed">Rakarventenn ar steudad dilamet.</string>
+    <string name="rd_pin_to_sidebar">Spilhennañ d\'ar varrenn-gostez</string>
+    <string name="rd_unpin_from_sidebar">Dispilhennañ diouzh ar varrenn-gostez</string>
+    <string name="rd_pin_to_home">Spilhennañ d\'an Degemer</string>
+    <string name="rd_unpin_from_home">Dispilhennañ diouzh an Degemer</string>
+    <string name="rd_pinned">Spilhennet</string>
+    <string name="rd_pinned_missing">N\'emañ ket ken an teuliad pe ar roll-lenn spilhennet-mañ.</string>
 </resources>

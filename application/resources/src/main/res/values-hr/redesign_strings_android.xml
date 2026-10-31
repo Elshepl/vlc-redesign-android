@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Spremljeni zapis zvuka ili podnaslova nije dostupan u ovoj epizodi.</string>
     <string name="rd_series_saved">Spremljeno za epizode serije %1$s.</string>
     <string name="rd_series_removed">Predložak serije je uklonjen.</string>
+    <string name="rd_sync_timeline">Vremenska crta sinkronizacije</string>
+    <string name="rd_sync_hint">Povucite retke podnaslova ispod glasa kojem pripadaju.</string>
+    <string name="rd_sync_view_description">Zvuk i retci podnaslova oko trenutnog vremena reprodukcije; povucite za pomicanje podnaslova</string>
+    <string name="rd_sync_earlier">Podnaslovi 50 ms ranije</string>
+    <string name="rd_sync_later">Podnaslovi 50 ms kasnije</string>
+    <string name="rd_sync_no_track">Ne prikazuju se podnaslovi.</string>
+    <string name="rd_sync_no_cues">Retci ovog zapisa podnaslova ne mogu se prikazati; odgoda se i dalje primjenjuje.</string>
+    <string name="rd_sync_no_sound">Zvuk ovog videozapisa ne može se prikazati.</string>
+    <string name="rd_series_remember">Zapamti za ovu seriju</string>
+    <string name="rd_pin_to_sidebar">Prikvači na bočnu traku</string>
+    <string name="rd_unpin_from_sidebar">Otkvači s bočne trake</string>
+    <string name="rd_pin_to_home">Prikvači na početnu</string>
+    <string name="rd_unpin_from_home">Otkvači s početne</string>
+    <string name="rd_pinned">Prikvačeno</string>
+    <string name="rd_pinned_missing">Ova prikvačena mapa ili popis za izvođenje više ne postoji.</string>
 </resources>

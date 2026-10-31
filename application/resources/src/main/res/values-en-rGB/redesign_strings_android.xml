@@ -15,4 +15,25 @@
     <string name="rd_accent_named">Accent colour %1$s</string>
     <string name="rd_ob_theme_title">Select your preferred theme and colour.</string>
     <string name="rd_subtitle_size">Subtitle size</string>
+    <string name="rd_sync_timeline">Sync timeline</string>
+    <string name="rd_sync_hint">Drag the subtitle lines under the voice they belong to.</string>
+    <string name="rd_sync_view_description">The sound and the subtitle lines around the playing time; drag to move the subtitles</string>
+    <string name="rd_sync_earlier">Subtitles 50 ms earlier</string>
+    <string name="rd_sync_later">Subtitles 50 ms later</string>
+    <string name="rd_sync_no_track">No subtitles are shown.</string>
+    <string name="rd_sync_no_cues">The lines of this subtitle track cannot be shown; the delay still applies.</string>
+    <string name="rd_sync_no_sound">The sound of this video cannot be shown.</string>
+    <string name="rd_series_remember">Remember for this series</string>
+    <string name="rd_series_applies">Applies to episodes of %1$s</string>
+    <string name="rd_series_play_local">Play a local episode to save its track and timing choices.</string>
+    <string name="rd_series_applied">Series preset applied.</string>
+    <string name="rd_series_unavailable">A saved audio or subtitle track is unavailable in this episode.</string>
+    <string name="rd_series_saved">Saved for episodes of %1$s.</string>
+    <string name="rd_series_removed">Series preset removed.</string>
+    <string name="rd_pin_to_sidebar">Pin to Sidebar</string>
+    <string name="rd_unpin_from_sidebar">Unpin from Sidebar</string>
+    <string name="rd_pin_to_home">Pin to Home</string>
+    <string name="rd_unpin_from_home">Unpin from Home</string>
+    <string name="rd_pinned">Pinned</string>
+    <string name="rd_pinned_missing">This pinned folder or playlist is no longer there.</string>
 </resources>

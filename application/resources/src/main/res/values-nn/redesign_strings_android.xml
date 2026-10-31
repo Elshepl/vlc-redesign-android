@@ -46,4 +46,19 @@
     <string name="rd_series_unavailable">Eit lagra lyd- eller undertekstspor er ikkje tilgjengeleg i denne episoden.</string>
     <string name="rd_series_saved">Lagra for episodar av %1$s.</string>
     <string name="rd_series_removed">Serieinnstillinga er fjerna.</string>
+    <string name="rd_sync_timeline">Tidslinje for synkronisering</string>
+    <string name="rd_sync_hint">Dra undertekstlinjene under stemma dei høyrer til.</string>
+    <string name="rd_sync_view_description">Lyden og undertekstlinjene rundt avspelingstida; dra for å flytte undertekstane</string>
+    <string name="rd_sync_earlier">Undertekstar 50 ms tidlegare</string>
+    <string name="rd_sync_later">Undertekstar 50 ms seinare</string>
+    <string name="rd_sync_no_track">Ingen undertekstar blir viste.</string>
+    <string name="rd_sync_no_cues">Linjene i dette undertekstsporet kan ikkje visast; forseinkinga gjeld framleis.</string>
+    <string name="rd_sync_no_sound">Lyden i denne videoen kan ikkje visast.</string>
+    <string name="rd_series_remember">Hugs for denne serien</string>
+    <string name="rd_pin_to_sidebar">Fest til sidepanelet</string>
+    <string name="rd_unpin_from_sidebar">Lausne frå sidepanelet</string>
+    <string name="rd_pin_to_home">Fest til Heim</string>
+    <string name="rd_unpin_from_home">Lausne frå Heim</string>
+    <string name="rd_pinned">Festa</string>
+    <string name="rd_pinned_missing">Denne festa mappa eller spelelista finst ikkje lenger.</string>
 </resources>

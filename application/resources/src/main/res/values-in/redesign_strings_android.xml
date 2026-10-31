@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Trek audio atau subtitle yang disimpan tidak tersedia di episode ini.</string>
     <string name="rd_series_saved">Disimpan untuk episode %1$s.</string>
     <string name="rd_series_removed">Preset serial dihapus.</string>
+    <string name="rd_sync_timeline">Linimasa sinkronisasi</string>
+    <string name="rd_sync_hint">Seret baris subtitle ke bawah suara yang sesuai.</string>
+    <string name="rd_sync_view_description">Suara dan baris subtitle di sekitar waktu putar; seret untuk memindahkan subtitle</string>
+    <string name="rd_sync_earlier">Subtitle 50 ms lebih awal</string>
+    <string name="rd_sync_later">Subtitle 50 ms lebih lambat</string>
+    <string name="rd_sync_no_track">Tidak ada subtitle yang ditampilkan.</string>
+    <string name="rd_sync_no_cues">Baris trek subtitle ini tidak dapat ditampilkan; penundaan tetap berlaku.</string>
+    <string name="rd_sync_no_sound">Suara video ini tidak dapat ditampilkan.</string>
+    <string name="rd_series_remember">Ingat untuk serial ini</string>
+    <string name="rd_pin_to_sidebar">Sematkan ke Bilah Sisi</string>
+    <string name="rd_unpin_from_sidebar">Lepas dari Bilah Sisi</string>
+    <string name="rd_pin_to_home">Sematkan ke Beranda</string>
+    <string name="rd_unpin_from_home">Lepas dari Beranda</string>
+    <string name="rd_pinned">Disematkan</string>
+    <string name="rd_pinned_missing">Folder atau daftar putar yang disematkan ini sudah tidak ada.</string>
 </resources>

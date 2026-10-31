@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Shranjena zvočna sled ali sled podnapisov v tej epizodi ni na voljo.</string>
     <string name="rd_series_saved">Shranjeno za epizode serije %1$s.</string>
     <string name="rd_series_removed">Prednastavitev serije je odstranjena.</string>
+    <string name="rd_sync_timeline">Časovnica usklajevanja</string>
+    <string name="rd_sync_hint">Povlecite vrstice podnapisov pod glas, h kateremu spadajo.</string>
+    <string name="rd_sync_view_description">Zvok in vrstice podnapisov okoli časa predvajanja; povlecite, da premaknete podnapise</string>
+    <string name="rd_sync_earlier">Podnapisi 50 ms prej</string>
+    <string name="rd_sync_later">Podnapisi 50 ms pozneje</string>
+    <string name="rd_sync_no_track">Ni prikazanih podnapisov.</string>
+    <string name="rd_sync_no_cues">Vrstic te sledi podnapisov ni mogoče prikazati; zamik še vedno velja.</string>
+    <string name="rd_sync_no_sound">Zvoka tega videa ni mogoče prikazati.</string>
+    <string name="rd_series_remember">Zapomni si za to serijo</string>
+    <string name="rd_pin_to_sidebar">Pripni v stransko vrstico</string>
+    <string name="rd_unpin_from_sidebar">Odpni iz stranske vrstice</string>
+    <string name="rd_pin_to_home">Pripni na Domov</string>
+    <string name="rd_unpin_from_home">Odpni z Domov</string>
+    <string name="rd_pinned">Pripeto</string>
+    <string name="rd_pinned_missing">Ta pripeta mapa ali seznam predvajanja ne obstaja več.</string>
 </resources>

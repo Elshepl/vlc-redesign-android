@@ -8,4 +8,25 @@
     <string name="rd_ob_whole_device">Alt tólið</string>
     <string name="rd_about_whats_new">Hvat er nýtt í %1$s</string>
     <string name="rd_subtitle_size">Stødd á undirtekstum</string>
+    <string name="rd_sync_timeline">Samstillingartíðarlinja</string>
+    <string name="rd_sync_hint">Drag undirtekstalinjurnar undir røddina, tær hoyra til.</string>
+    <string name="rd_sync_view_description">Ljóðið og undirtekstalinjurnar kring spælitíðina; drag fyri at flyta undirtekstirnar</string>
+    <string name="rd_sync_earlier">Undirtekstir 50 ms fyrr</string>
+    <string name="rd_sync_later">Undirtekstir 50 ms seinni</string>
+    <string name="rd_sync_no_track">Eingir undirtekstir verða vístir.</string>
+    <string name="rd_sync_no_cues">Linjurnar í hesum undirtekstasporinum kunnu ikki vísast; seinkingin er framvegis galdandi.</string>
+    <string name="rd_sync_no_sound">Ljóðið í hesum videoinum kann ikki vísast.</string>
+    <string name="rd_series_remember">Minst til hesa røðina</string>
+    <string name="rd_series_applies">Galdandi fyri partar av %1$s</string>
+    <string name="rd_series_play_local">Spæl ein lokalan part fyri at goyma hansara spor- og tíðarval.</string>
+    <string name="rd_series_applied">Røðarforstilling nýtt.</string>
+    <string name="rd_series_unavailable">Eitt goymt ljóð- ella undirtekstaspor er ikki tøkt í hesum partinum.</string>
+    <string name="rd_series_saved">Goymt fyri partar av %1$s.</string>
+    <string name="rd_series_removed">Røðarforstilling strikað.</string>
+    <string name="rd_pin_to_sidebar">Fest á síðubjálkan</string>
+    <string name="rd_unpin_from_sidebar">Loys frá síðubjálkanum</string>
+    <string name="rd_pin_to_home">Fest á heimasíðuna</string>
+    <string name="rd_unpin_from_home">Loys frá heimasíðuni</string>
+    <string name="rd_pinned">Fest</string>
+    <string name="rd_pinned_missing">Henda festa mappan ella spælilistin er ikki longur til.</string>
 </resources>

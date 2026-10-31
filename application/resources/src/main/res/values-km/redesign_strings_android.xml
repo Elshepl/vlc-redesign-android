@@ -20,4 +20,19 @@
     <string name="rd_series_unavailable">បទអូឌីយ៉ូ ឬចំណងជើងរងដែលបានរក្សាទុកមួយមិនមាននៅក្នុងភាគនេះទេ។</string>
     <string name="rd_series_saved">បានរក្សាទុកសម្រាប់ភាគនៃ %1$s។</string>
     <string name="rd_series_removed">បានយកការកំណត់ស្រេចរឿងភាគចេញ។</string>
+    <string name="rd_sync_timeline">បន្ទាត់ពេលវេលាធ្វើសមកាលកម្ម</string>
+    <string name="rd_sync_hint">អូសបន្ទាត់ចំណងជើងរងទៅក្រោមសំឡេងដែលវាជាកម្មសិទ្ធិ។</string>
+    <string name="rd_sync_view_description">សំឡេង និងបន្ទាត់ចំណងជើងរងជុំវិញពេលកំពុងចាក់; អូសដើម្បីផ្លាស់ទីចំណងជើងរង</string>
+    <string name="rd_sync_earlier">ចំណងជើងរងមុន 50 ms</string>
+    <string name="rd_sync_later">ចំណងជើងរងក្រោយ 50 ms</string>
+    <string name="rd_sync_no_track">មិនមានចំណងជើងរងបង្ហាញទេ។</string>
+    <string name="rd_sync_no_cues">បន្ទាត់នៃបទចំណងជើងរងនេះមិនអាចបង្ហាញបានទេ; ការពន្យារពេលនៅតែអនុវត្ត។</string>
+    <string name="rd_sync_no_sound">សំឡេងនៃវីដេអូនេះមិនអាចបង្ហាញបានទេ។</string>
+    <string name="rd_series_remember">ចងចាំសម្រាប់រឿងភាគនេះ</string>
+    <string name="rd_pin_to_sidebar">ខ្ទាស់ទៅរបារចំហៀង</string>
+    <string name="rd_unpin_from_sidebar">ដោះខ្ទាស់ពីរបារចំហៀង</string>
+    <string name="rd_pin_to_home">ខ្ទាស់ទៅទំព័រដើម</string>
+    <string name="rd_unpin_from_home">ដោះខ្ទាស់ពីទំព័រដើម</string>
+    <string name="rd_pinned">បានខ្ទាស់</string>
+    <string name="rd_pinned_missing">ថត ឬបញ្ជីចាក់ដែលបានខ្ទាស់នេះលែងមានទៀតហើយ។</string>
 </resources>

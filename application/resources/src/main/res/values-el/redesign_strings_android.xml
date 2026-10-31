@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Ένα αποθηκευμένο κομμάτι ήχου ή υποτίτλων δεν είναι διαθέσιμο σε αυτό το επεισόδιο.</string>
     <string name="rd_series_saved">Αποθηκεύτηκε για τα επεισόδια του %1$s.</string>
     <string name="rd_series_removed">Η προρρύθμιση σειράς καταργήθηκε.</string>
+    <string name="rd_sync_timeline">Χρονολόγιο συγχρονισμού</string>
+    <string name="rd_sync_hint">Σύρετε τις γραμμές υποτίτλων κάτω από τη φωνή στην οποία ανήκουν.</string>
+    <string name="rd_sync_view_description">Ο ήχος και οι γραμμές υποτίτλων γύρω από τον χρόνο αναπαραγωγής· σύρετε για να μετακινήσετε τους υποτίτλους</string>
+    <string name="rd_sync_earlier">Υπότιτλοι 50 ms νωρίτερα</string>
+    <string name="rd_sync_later">Υπότιτλοι 50 ms αργότερα</string>
+    <string name="rd_sync_no_track">Δεν εμφανίζονται υπότιτλοι.</string>
+    <string name="rd_sync_no_cues">Οι γραμμές αυτού του κομματιού υποτίτλων δεν μπορούν να εμφανιστούν· η καθυστέρηση εξακολουθεί να ισχύει.</string>
+    <string name="rd_sync_no_sound">Ο ήχος αυτού του βίντεο δεν μπορεί να εμφανιστεί.</string>
+    <string name="rd_series_remember">Απομνημόνευση για αυτή τη σειρά</string>
+    <string name="rd_pin_to_sidebar">Καρφίτσωμα στην πλευρική γραμμή</string>
+    <string name="rd_unpin_from_sidebar">Ξεκαρφίτσωμα από την πλευρική γραμμή</string>
+    <string name="rd_pin_to_home">Καρφίτσωμα στην Αρχική</string>
+    <string name="rd_unpin_from_home">Ξεκαρφίτσωμα από την Αρχική</string>
+    <string name="rd_pinned">Καρφιτσωμένα</string>
+    <string name="rd_pinned_missing">Αυτός ο καρφιτσωμένος φάκελος ή λίστα αναπαραγωγής δεν υπάρχει πλέον.</string>
 </resources>

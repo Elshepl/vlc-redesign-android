@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">’n Gestoorde oudio- of onderskrifsnit is nie in hierdie episode beskikbaar nie.</string>
     <string name="rd_series_saved">Gestoor vir episodes van %1$s.</string>
     <string name="rd_series_removed">Reeksvoorafstelling verwyder.</string>
+    <string name="rd_sync_timeline">Sinchronisasie-tydlyn</string>
+    <string name="rd_sync_hint">Sleep die onderskrifreëls onder die stem waaraan hulle behoort.</string>
+    <string name="rd_sync_view_description">Die klank en die onderskrifreëls rondom die speeltyd; sleep om die onderskrifte te skuif</string>
+    <string name="rd_sync_earlier">Onderskrifte 50 ms vroeër</string>
+    <string name="rd_sync_later">Onderskrifte 50 ms later</string>
+    <string name="rd_sync_no_track">Geen onderskrifte word gewys nie.</string>
+    <string name="rd_sync_no_cues">Die reëls van hierdie onderskrifsnit kan nie gewys word nie; die vertraging geld steeds.</string>
+    <string name="rd_sync_no_sound">Die klank van hierdie video kan nie gewys word nie.</string>
+    <string name="rd_series_remember">Onthou vir hierdie reeks</string>
+    <string name="rd_pin_to_sidebar">Speld aan kantbalk vas</string>
+    <string name="rd_unpin_from_sidebar">Ontspeld van kantbalk</string>
+    <string name="rd_pin_to_home">Speld aan tuisblad vas</string>
+    <string name="rd_unpin_from_home">Ontspeld van tuisblad</string>
+    <string name="rd_pinned">Vasgespeld</string>
+    <string name="rd_pinned_missing">Hierdie vasgespelde vouer of afspeellys is nie meer daar nie.</string>
 </resources>

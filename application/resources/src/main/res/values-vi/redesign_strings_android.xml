@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Một track âm thanh hoặc phụ đề đã lưu không có trong tập này.</string>
     <string name="rd_series_saved">Đã lưu cho các tập của %1$s.</string>
     <string name="rd_series_removed">Đã xóa cấu hình phim bộ.</string>
+    <string name="rd_sync_timeline">Dòng thời gian đồng bộ</string>
+    <string name="rd_sync_hint">Kéo các dòng phụ đề xuống dưới giọng nói tương ứng.</string>
+    <string name="rd_sync_view_description">Âm thanh và các dòng phụ đề quanh thời điểm đang phát; kéo để dời phụ đề</string>
+    <string name="rd_sync_earlier">Phụ đề sớm hơn 50 ms</string>
+    <string name="rd_sync_later">Phụ đề muộn hơn 50 ms</string>
+    <string name="rd_sync_no_track">Không có phụ đề nào đang hiển thị.</string>
+    <string name="rd_sync_no_cues">Không thể hiển thị các dòng của track phụ đề này; độ trễ vẫn được áp dụng.</string>
+    <string name="rd_sync_no_sound">Không thể hiển thị âm thanh của video này.</string>
+    <string name="rd_series_remember">Ghi nhớ cho phim bộ này</string>
+    <string name="rd_pin_to_sidebar">Ghim vào thanh bên</string>
+    <string name="rd_unpin_from_sidebar">Bỏ ghim khỏi thanh bên</string>
+    <string name="rd_pin_to_home">Ghim vào Trang chủ</string>
+    <string name="rd_unpin_from_home">Bỏ ghim khỏi Trang chủ</string>
+    <string name="rd_pinned">Đã ghim</string>
+    <string name="rd_pinned_missing">Thư mục hoặc danh sách đã ghim này không còn nữa.</string>
 </resources>

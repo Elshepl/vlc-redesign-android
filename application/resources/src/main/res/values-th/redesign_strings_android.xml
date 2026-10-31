@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">ร่องเสียงหรือร่องบทบรรยายที่บันทึกไว้ไม่มีในตอนนี้</string>
     <string name="rd_series_saved">บันทึกไว้สำหรับตอนต่างๆ ของ %1$s แล้ว</string>
     <string name="rd_series_removed">เอาค่าสำเร็จรูปของซีรีส์ออกแล้ว</string>
+    <string name="rd_sync_timeline">ไทม์ไลน์การปรับจังหวะ</string>
+    <string name="rd_sync_hint">ลากบรรทัดบทบรรยายไปไว้ใต้เสียงพูดที่บรรทัดนั้นเป็นของ</string>
+    <string name="rd_sync_view_description">เสียงและบรรทัดบทบรรยายรอบเวลาที่กำลังเล่น ลากเพื่อเลื่อนบทบรรยาย</string>
+    <string name="rd_sync_earlier">บทบรรยายเร็วขึ้น 50 ms</string>
+    <string name="rd_sync_later">บทบรรยายช้าลง 50 ms</string>
+    <string name="rd_sync_no_track">ไม่มีบทบรรยายที่แสดงอยู่</string>
+    <string name="rd_sync_no_cues">ไม่สามารถแสดงบรรทัดของร่องบทบรรยายนี้ได้ แต่ยังคงใช้การหน่วงเวลาอยู่</string>
+    <string name="rd_sync_no_sound">ไม่สามารถแสดงเสียงของวิดีโอนี้ได้</string>
+    <string name="rd_series_remember">จดจำสำหรับซีรีส์นี้</string>
+    <string name="rd_pin_to_sidebar">ปักหมุดที่แถบด้านข้าง</string>
+    <string name="rd_unpin_from_sidebar">เลิกปักหมุดจากแถบด้านข้าง</string>
+    <string name="rd_pin_to_home">ปักหมุดที่หน้าแรก</string>
+    <string name="rd_unpin_from_home">เลิกปักหมุดจากหน้าแรก</string>
+    <string name="rd_pinned">ปักหมุดไว้</string>
+    <string name="rd_pinned_missing">โฟลเดอร์หรือผังเล่นที่ปักหมุดไว้นี้ไม่มีอยู่แล้ว</string>
 </resources>

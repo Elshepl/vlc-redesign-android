@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">შენახული აუდიო ან ტიტრების ტრეკი ამ ეპიზოდში მიუწვდომელია.</string>
     <string name="rd_series_saved">შენახულია %1$s-ის ეპიზოდებისთვის.</string>
     <string name="rd_series_removed">სერიალის შაბლონი წაიშალა.</string>
+    <string name="rd_sync_timeline">სინქრონიზაციის დროის ხაზი</string>
+    <string name="rd_sync_hint">გადაათრიეთ ტიტრების ხაზები იმ ხმის ქვეშ, რომელსაც ეკუთვნის.</string>
+    <string name="rd_sync_view_description">ხმა და ტიტრების ხაზები დაკვრის დროის გარშემო; გადაათრიეთ ტიტრების გადასაადგილებლად</string>
+    <string name="rd_sync_earlier">ტიტრები 50 ms-ით ადრე</string>
+    <string name="rd_sync_later">ტიტრები 50 ms-ით გვიან</string>
+    <string name="rd_sync_no_track">ტიტრები არ ჩანს.</string>
+    <string name="rd_sync_no_cues">ამ ტიტრების ტრეკის ხაზების ჩვენება შეუძლებელია; დაყოვნება მაინც მოქმედებს.</string>
+    <string name="rd_sync_no_sound">ამ ვიდეოს ხმის ჩვენება შეუძლებელია.</string>
+    <string name="rd_series_remember">დამახსოვრება ამ სერიალისთვის</string>
+    <string name="rd_pin_to_sidebar">გვერდით ზოლზე მიმაგრება</string>
+    <string name="rd_unpin_from_sidebar">გვერდითი ზოლიდან მოხსნა</string>
+    <string name="rd_pin_to_home">მთავარზე მიმაგრება</string>
+    <string name="rd_unpin_from_home">მთავარიდან მოხსნა</string>
+    <string name="rd_pinned">მიმაგრებული</string>
+    <string name="rd_pinned_missing">ეს მიმაგრებული საქაღალდე ან დაკვრის სია აღარ არსებობს.</string>
 </resources>

@@ -46,4 +46,19 @@
     <string name="rd_series_unavailable">बचत गरिएको अडियो वा उपशीर्षक ट्रयाक यो एपिसोडमा उपलब्ध छैन।</string>
     <string name="rd_series_saved">%1$s का एपिसोडहरूका लागि बचत गरियो।</string>
     <string name="rd_series_removed">शृङ्खला प्रिसेट हटाइयो।</string>
+    <string name="rd_sync_timeline">सिङ्क टाइमलाइन</string>
+    <string name="rd_sync_hint">उपशीर्षकका पङ्क्तिहरूलाई तिनीहरू सम्बन्धित आवाजमुनि तान्नुहोस्।</string>
+    <string name="rd_sync_view_description">बजिरहेको समय वरपरको ध्वनि र उपशीर्षकका पङ्क्तिहरू; उपशीर्षक सार्न तान्नुहोस्</string>
+    <string name="rd_sync_earlier">उपशीर्षक 50 ms अघि</string>
+    <string name="rd_sync_later">उपशीर्षक 50 ms पछि</string>
+    <string name="rd_sync_no_track">कुनै उपशीर्षक देखाइएको छैन।</string>
+    <string name="rd_sync_no_cues">यो उपशीर्षक ट्रयाकका पङ्क्तिहरू देखाउन सकिँदैन; विलम्ब अझै लागू हुन्छ।</string>
+    <string name="rd_sync_no_sound">यो भिडियोको ध्वनि देखाउन सकिँदैन।</string>
+    <string name="rd_series_remember">यो शृङ्खलाका लागि सम्झनुहोस्</string>
+    <string name="rd_pin_to_sidebar">साइडबारमा पिन गर्नुहोस्</string>
+    <string name="rd_unpin_from_sidebar">साइडबारबाट अनपिन गर्नुहोस्</string>
+    <string name="rd_pin_to_home">गृहपृष्ठमा पिन गर्नुहोस्</string>
+    <string name="rd_unpin_from_home">गृहपृष्ठबाट अनपिन गर्नुहोस्</string>
+    <string name="rd_pinned">पिन गरिएका</string>
+    <string name="rd_pinned_missing">यो पिन गरिएको फोल्डर वा बजाउने सूची अब छैन।</string>
 </resources>

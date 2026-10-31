@@ -46,4 +46,19 @@
     <string name="rd_series_unavailable">Сачувана аудио трака или трака титла није доступна у овој епизоди.</string>
     <string name="rd_series_saved">Сачувано за епизоде серије %1$s.</string>
     <string name="rd_series_removed">Шаблон серије је уклоњен.</string>
+    <string name="rd_sync_timeline">Временска линија синхронизације</string>
+    <string name="rd_sync_hint">Превуците редове титла испод гласа коме припадају.</string>
+    <string name="rd_sync_view_description">Звук и редови титла око времена репродукције; превуците да померите титлове</string>
+    <string name="rd_sync_earlier">Титлови 50 ms раније</string>
+    <string name="rd_sync_later">Титлови 50 ms касније</string>
+    <string name="rd_sync_no_track">Не приказују се титлови.</string>
+    <string name="rd_sync_no_cues">Редови ове траке титла не могу да се прикажу; кашњење се и даље примењује.</string>
+    <string name="rd_sync_no_sound">Звук овог видеа не може да се прикаже.</string>
+    <string name="rd_series_remember">Запамти за ову серију</string>
+    <string name="rd_pin_to_sidebar">Закачи на бочну траку</string>
+    <string name="rd_unpin_from_sidebar">Откачи са бочне траке</string>
+    <string name="rd_pin_to_home">Закачи на Почетну</string>
+    <string name="rd_unpin_from_home">Откачи са Почетне</string>
+    <string name="rd_pinned">Закачено</string>
+    <string name="rd_pinned_missing">Ова закачена фасцикла или списак нумера више не постоји.</string>
 </resources>

@@ -11,4 +11,25 @@
     <string name="rd_ob_whole_device">ອຸປະກອນທັງໝົດ</string>
     <string name="rd_about_whats_new">ມີຫຍັງໃໝ່ໃນ %1$s</string>
     <string name="rd_subtitle_size">ຂະໜາດຄຳບັນຍາຍ</string>
+    <string name="rd_sync_timeline">ເສັ້ນເວລາການຊິງ</string>
+    <string name="rd_sync_hint">ລາກແຖວຄຳບັນຍາຍໄປໄວ້ໃຕ້ສຽງເວົ້າທີ່ມັນເປັນຂອງ.</string>
+    <string name="rd_sync_view_description">ສຽງ ແລະ ແຖວຄຳບັນຍາຍອ້ອມເວລາທີ່ກຳລັງຫຼິ້ນ; ລາກເພື່ອຍ້າຍຄຳບັນຍາຍ</string>
+    <string name="rd_sync_earlier">ຄຳບັນຍາຍໄວຂຶ້ນ 50 ms</string>
+    <string name="rd_sync_later">ຄຳບັນຍາຍຊ້າລົງ 50 ms</string>
+    <string name="rd_sync_no_track">ບໍ່ມີຄຳບັນຍາຍສະແດງຢູ່.</string>
+    <string name="rd_sync_no_cues">ບໍ່ສາມາດສະແດງແຖວຂອງແທຣັກຄຳບັນຍາຍນີ້ໄດ້; ການໜ່ວງເວລາຍັງໃຊ້ຢູ່.</string>
+    <string name="rd_sync_no_sound">ບໍ່ສາມາດສະແດງສຽງຂອງວິດີໂອນີ້ໄດ້.</string>
+    <string name="rd_series_remember">ຈື່ໄວ້ສຳລັບຊີຣີນີ້</string>
+    <string name="rd_series_applies">ໃຊ້ກັບຕອນຕ່າງໆຂອງ %1$s</string>
+    <string name="rd_series_play_local">ຫຼິ້ນຕອນທີ່ຢູ່ໃນເຄື່ອງເພື່ອບັນທຶກການເລືອກແທຣັກ ແລະ ເວລາຂອງມັນ.</string>
+    <string name="rd_series_applied">ນຳໃຊ້ການຕັ້ງຄ່າຊີຣີແລ້ວ.</string>
+    <string name="rd_series_unavailable">ແທຣັກສຽງ ຫຼື ຄຳບັນຍາຍທີ່ບັນທຶກໄວ້ບໍ່ມີໃນຕອນນີ້.</string>
+    <string name="rd_series_saved">ບັນທຶກໄວ້ສຳລັບຕອນຕ່າງໆຂອງ %1$s ແລ້ວ.</string>
+    <string name="rd_series_removed">ລຶບການຕັ້ງຄ່າຊີຣີແລ້ວ.</string>
+    <string name="rd_pin_to_sidebar">ປັກໝຸດໃສ່ແຖບຂ້າງ</string>
+    <string name="rd_unpin_from_sidebar">ຖອນປັກໝຸດຈາກແຖບຂ້າງ</string>
+    <string name="rd_pin_to_home">ປັກໝຸດໃສ່ໜ້າຫຼັກ</string>
+    <string name="rd_unpin_from_home">ຖອນປັກໝຸດຈາກໜ້າຫຼັກ</string>
+    <string name="rd_pinned">ປັກໝຸດແລ້ວ</string>
+    <string name="rd_pinned_missing">ໂຟລເດີ ຫຼື ລາຍການຫຼິ້ນທີ່ປັກໝຸດນີ້ບໍ່ມີແລ້ວ.</string>
 </resources>

@@ -8,4 +8,19 @@
     <string name="rd_series_unavailable">On boket odio ou di sortites schapé n\' est nén disponibe dins ciste episode ci.</string>
     <string name="rd_series_saved">Schapé po les episodes di %1$s.</string>
     <string name="rd_series_removed">Prézapontiaedje di séreye oisté.</string>
+    <string name="rd_sync_timeline">Roye di sincronijhaedje</string>
+    <string name="rd_sync_hint">Saetchîz les royes des sortites dzo l\' vwès k\' elles sont.</string>
+    <string name="rd_sync_view_description">Li son et les royes des sortites åtoû do tins djouwé; saetchîz po bodjî les sortites</string>
+    <string name="rd_sync_earlier">Sortites 50 ms pus timpe</string>
+    <string name="rd_sync_later">Sortites 50 ms pus tård</string>
+    <string name="rd_sync_no_track">Nole sortite n\' est mostrêye.</string>
+    <string name="rd_sync_no_cues">Les royes di ci boket di sortites ci n\' polèt nén esse mostrêyes; li ritårdmint djowe todi.</string>
+    <string name="rd_sync_no_sound">Li son di cisse videyo ci n\' pout nén esse mostré.</string>
+    <string name="rd_series_remember">Si rsouvni po cisse séreye ci</string>
+    <string name="rd_pin_to_sidebar">Atetchî al bår di costé</string>
+    <string name="rd_unpin_from_sidebar">Disatetchî del bår di costé</string>
+    <string name="rd_pin_to_home">Atetchî å Cominçmint</string>
+    <string name="rd_unpin_from_home">Disatetchî do Cominçmint</string>
+    <string name="rd_pinned">Atetchîs</string>
+    <string name="rd_pinned_missing">Ci ridant ou cisse djivêye a djouwer atetchî n\' est pus la.</string>
 </resources>

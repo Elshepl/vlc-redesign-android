@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Egy mentett hang- vagy feliratsáv nem érhető el ebben az epizódban.</string>
     <string name="rd_series_saved">Mentve ennek a sorozatnak az epizódjaihoz: %1$s.</string>
     <string name="rd_series_removed">Sorozat-előbeállítás eltávolítva.</string>
+    <string name="rd_sync_timeline">Szinkronizálási idővonal</string>
+    <string name="rd_sync_hint">Húzza a feliratsorokat a hozzájuk tartozó hang alá.</string>
+    <string name="rd_sync_view_description">A hang és a feliratsorok a lejátszási idő körül; húzza a feliratok mozgatásához</string>
+    <string name="rd_sync_earlier">Feliratok 50 ms-mal korábban</string>
+    <string name="rd_sync_later">Feliratok 50 ms-mal később</string>
+    <string name="rd_sync_no_track">Nem jelenik meg felirat.</string>
+    <string name="rd_sync_no_cues">Ennek a feliratsávnak a sorai nem jeleníthetők meg; a késleltetés továbbra is érvényes.</string>
+    <string name="rd_sync_no_sound">Ennek a videónak a hangja nem jeleníthető meg.</string>
+    <string name="rd_series_remember">Megjegyzés ehhez a sorozathoz</string>
+    <string name="rd_pin_to_sidebar">Rögzítés az oldalsávon</string>
+    <string name="rd_unpin_from_sidebar">Rögzítés feloldása az oldalsávon</string>
+    <string name="rd_pin_to_home">Rögzítés a kezdőlapon</string>
+    <string name="rd_unpin_from_home">Rögzítés feloldása a kezdőlapon</string>
+    <string name="rd_pinned">Rögzítve</string>
+    <string name="rd_pinned_missing">Ez a rögzített mappa vagy lejátszólista már nem létezik.</string>
 </resources>

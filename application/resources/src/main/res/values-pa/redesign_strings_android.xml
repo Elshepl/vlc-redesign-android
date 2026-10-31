@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">ਇਸ ਐਪੀਸੋਡ ਵਿੱਚ ਇੱਕ ਸੰਭਾਲਿਆ ਆਡੀਓ ਜਾਂ ਸਬ-ਟਾਈਟਲ ਟਰੈਕ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।</string>
     <string name="rd_series_saved">%1$s ਦੇ ਐਪੀਸੋਡਾਂ ਲਈ ਸੰਭਾਲਿਆ ਗਿਆ।</string>
     <string name="rd_series_removed">ਲੜੀਵਾਰ ਪ੍ਰੀ-ਸੈੱਟ ਹਟਾਇਆ ਗਿਆ।</string>
+    <string name="rd_sync_timeline">ਸਿੰਕ ਟਾਈਮਲਾਈਨ</string>
+    <string name="rd_sync_hint">ਸਬ-ਟਾਈਟਲ ਦੀਆਂ ਲਾਈਨਾਂ ਨੂੰ ਉਸ ਆਵਾਜ਼ ਹੇਠਾਂ ਖਿੱਚੋ ਜਿਸ ਦੀਆਂ ਉਹ ਹਨ।</string>
+    <string name="rd_sync_view_description">ਚੱਲ ਰਹੇ ਸਮੇਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਦੀ ਆਵਾਜ਼ ਅਤੇ ਸਬ-ਟਾਈਟਲ ਲਾਈਨਾਂ; ਸਬ-ਟਾਈਟਲ ਹਿਲਾਉਣ ਲਈ ਖਿੱਚੋ</string>
+    <string name="rd_sync_earlier">ਸਬ-ਟਾਈਟਲ 50 ms ਪਹਿਲਾਂ</string>
+    <string name="rd_sync_later">ਸਬ-ਟਾਈਟਲ 50 ms ਬਾਅਦ</string>
+    <string name="rd_sync_no_track">ਕੋਈ ਸਬ-ਟਾਈਟਲ ਨਹੀਂ ਦਿਖਾਏ ਜਾ ਰਹੇ।</string>
+    <string name="rd_sync_no_cues">ਇਸ ਸਬ-ਟਾਈਟਲ ਟਰੈਕ ਦੀਆਂ ਲਾਈਨਾਂ ਦਿਖਾਈਆਂ ਨਹੀਂ ਜਾ ਸਕਦੀਆਂ; ਦੇਰੀ ਫਿਰ ਵੀ ਲਾਗੂ ਹੁੰਦੀ ਹੈ।</string>
+    <string name="rd_sync_no_sound">ਇਸ ਵੀਡੀਓ ਦੀ ਆਵਾਜ਼ ਦਿਖਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ।</string>
+    <string name="rd_series_remember">ਇਸ ਲੜੀਵਾਰ ਲਈ ਯਾਦ ਰੱਖੋ</string>
+    <string name="rd_pin_to_sidebar">ਸਾਈਡਬਾਰ ਵਿੱਚ ਪਿੰਨ ਕਰੋ</string>
+    <string name="rd_unpin_from_sidebar">ਸਾਈਡਬਾਰ ਤੋਂ ਅਨਪਿੰਨ ਕਰੋ</string>
+    <string name="rd_pin_to_home">ਹੋਮ ਵਿੱਚ ਪਿੰਨ ਕਰੋ</string>
+    <string name="rd_unpin_from_home">ਹੋਮ ਤੋਂ ਅਨਪਿੰਨ ਕਰੋ</string>
+    <string name="rd_pinned">ਪਿੰਨ ਕੀਤੇ</string>
+    <string name="rd_pinned_missing">ਇਹ ਪਿੰਨ ਕੀਤਾ ਫੋਲਡਰ ਜਾਂ ਪਲੇਅਲਿਸਟ ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
 </resources>

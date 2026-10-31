@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">یک قطعهٔ صوتی یا زیرنویس ذخیره‌شده در این قسمت موجود نیست.</string>
     <string name="rd_series_saved">برای قسمت‌های %1$s ذخیره شد.</string>
     <string name="rd_series_removed">پیش‌تنظیم سریال حذف شد.</string>
+    <string name="rd_sync_timeline">خط زمانی همگام‌سازی</string>
+    <string name="rd_sync_hint">خط‌های زیرنویس را زیر صدایی که به آن تعلق دارند بکشید.</string>
+    <string name="rd_sync_view_description">صدا و خط‌های زیرنویس پیرامون زمان پخش؛ برای جابه‌جایی زیرنویس‌ها بکشید</string>
+    <string name="rd_sync_earlier">زیرنویس‌ها ۵۰ میلی‌ثانیه زودتر</string>
+    <string name="rd_sync_later">زیرنویس‌ها ۵۰ میلی‌ثانیه دیرتر</string>
+    <string name="rd_sync_no_track">هیچ زیرنویسی نمایش داده نمی‌شود.</string>
+    <string name="rd_sync_no_cues">خط‌های این قطعهٔ زیرنویس قابل نمایش نیستند؛ تأخیر همچنان اعمال می‌شود.</string>
+    <string name="rd_sync_no_sound">صدای این ویدیو قابل نمایش نیست.</string>
+    <string name="rd_series_remember">به خاطر سپردن برای این سریال</string>
+    <string name="rd_pin_to_sidebar">سنجاق کردن به نوار کناری</string>
+    <string name="rd_unpin_from_sidebar">برداشتن سنجاق از نوار کناری</string>
+    <string name="rd_pin_to_home">سنجاق کردن به خانه</string>
+    <string name="rd_unpin_from_home">برداشتن سنجاق از خانه</string>
+    <string name="rd_pinned">سنجاق‌شده</string>
+    <string name="rd_pinned_missing">این پوشه یا فهرست پخش سنجاق‌شده دیگر وجود ندارد.</string>
 </resources>

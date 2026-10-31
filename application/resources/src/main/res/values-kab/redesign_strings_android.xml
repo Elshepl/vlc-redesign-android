@@ -7,4 +7,25 @@
     <string name="rd_move_later">Senkez ɣer yeffus</string>
     <string name="rd_about_whats_new">D acu i d amaynut deg %1$s</string>
     <string name="rd_subtitle_size">Tiddi n iduzwilen</string>
+    <string name="rd_sync_timeline">Izirig n wakud n umtawi</string>
+    <string name="rd_sync_hint">Zuɣer izirigen n yiduzwilen ddaw taɣect iwumi ttekkin.</string>
+    <string name="rd_sync_view_description">Imesli d yizirigen n yiduzwilen ɣer wakud n tɣuri; zuɣer akken ad tesnkezeḍ iduzwilen</string>
+    <string name="rd_sync_earlier">Iduzwilen 50 ms uqbel</string>
+    <string name="rd_sync_later">Iduzwilen 50 ms deffir</string>
+    <string name="rd_sync_no_track">Ulac iduzwilen i d-yettwaskanen.</string>
+    <string name="rd_sync_no_cues">Izirigen n ubrid-a n yiduzwilen ur zmiren ara ad d-ttwaskanen; aɛeṭṭel yettwasnas ɣas akken.</string>
+    <string name="rd_sync_no_sound">Imesli n tvidyut-a ur yezmir ara ad d-yettwasken.</string>
+    <string name="rd_series_remember">Cfu i tesnselt-a</string>
+    <string name="rd_series_applies">Yettwasnas ɣer yiḥricen n %1$s</string>
+    <string name="rd_series_play_local">Ɣer aḥric adigan akken ad teskelseḍ afran-is n ubrid d wakud.</string>
+    <string name="rd_series_applied">Aɣewwar n tesnselt yettwasnas.</string>
+    <string name="rd_series_unavailable">Abrid n umesli neɣ n yiduzwilen yettwaskelsen ulac-it deg uḥric-a.</string>
+    <string name="rd_series_saved">Yettwasekles i yiḥricen n %1$s.</string>
+    <string name="rd_series_removed">Aɣewwar n tesnselt yettwakkes.</string>
+    <string name="rd_pin_to_sidebar">Senteḍ ɣer ufeggag n tama</string>
+    <string name="rd_unpin_from_sidebar">Kkes asenteḍ seg ufeggag n tama</string>
+    <string name="rd_pin_to_home">Senteḍ ɣer Ugejdan</string>
+    <string name="rd_unpin_from_home">Kkes asenteḍ seg Ugejdan</string>
+    <string name="rd_pinned">Yettwasenteḍ</string>
+    <string name="rd_pinned_missing">Akaram-a neɣ tabdart-a n tɣuri yettwasentḍen ulac-it dagi.</string>
 </resources>

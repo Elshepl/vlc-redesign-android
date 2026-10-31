@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Salvestatud audio- või subtiitrirada pole selles episoodis saadaval.</string>
     <string name="rd_series_saved">Salvestatud sarja %1$s episoodide jaoks.</string>
     <string name="rd_series_removed">Sarja eelseadistus eemaldatud.</string>
+    <string name="rd_sync_timeline">Sünkroonimise ajatelg</string>
+    <string name="rd_sync_hint">Lohista subtiitriread selle hääle alla, kuhu need kuuluvad.</string>
+    <string name="rd_sync_view_description">Heli ja subtiitriread esitusaja ümber; lohista subtiitrite nihutamiseks</string>
+    <string name="rd_sync_earlier">Subtiitrid 50 ms varem</string>
+    <string name="rd_sync_later">Subtiitrid 50 ms hiljem</string>
+    <string name="rd_sync_no_track">Subtiitreid ei näidata.</string>
+    <string name="rd_sync_no_cues">Selle subtiitriraja ridu ei saa näidata; viivitus kehtib endiselt.</string>
+    <string name="rd_sync_no_sound">Selle video heli ei saa näidata.</string>
+    <string name="rd_series_remember">Jäta selle sarja jaoks meelde</string>
+    <string name="rd_pin_to_sidebar">Kinnita külgribale</string>
+    <string name="rd_unpin_from_sidebar">Eemalda külgribalt</string>
+    <string name="rd_pin_to_home">Kinnita avavaatesse</string>
+    <string name="rd_unpin_from_home">Eemalda avavaatest</string>
+    <string name="rd_pinned">Kinnitatud</string>
+    <string name="rd_pinned_missing">Seda kinnitatud kausta või esitusloendit enam pole.</string>
 </resources>

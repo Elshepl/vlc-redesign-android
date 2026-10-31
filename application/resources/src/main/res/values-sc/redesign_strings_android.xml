@@ -10,4 +10,25 @@
     <string name="rd_orange">Arantzu</string>
     <string name="rd_pink">Arrosa</string>
     <string name="rd_subtitle_size">Mannària de sos sutatìtulos</string>
+    <string name="rd_sync_timeline">Lìnia de tempus de sincronizatzione</string>
+    <string name="rd_sync_hint">Traga sas lìnias de sos sutatìtulos suta de sa boghe a sa cale pertènnent.</string>
+    <string name="rd_sync_view_description">Su sonu e sas lìnias de sos sutatìtulos a inghìriu de su tempus de riprodutzione; traga pro mòere sos sutatìtulos</string>
+    <string name="rd_sync_earlier">Sutatìtulos 50 ms prima</string>
+    <string name="rd_sync_later">Sutatìtulos 50 ms a pustis</string>
+    <string name="rd_sync_no_track">Perunu sutatìtulu ammustradu.</string>
+    <string name="rd_sync_no_cues">Sas lìnias de custa rasta de sutatìtulos non si podent ammustrare; su ritardu s\'àplicat su matessi.</string>
+    <string name="rd_sync_no_sound">Su sonu de custu vìdeu non si podet ammustrare.</string>
+    <string name="rd_series_remember">Ammenta pro custa serie</string>
+    <string name="rd_series_applies">S\'àplicat a sos episòdios de %1$s</string>
+    <string name="rd_series_play_local">Riprodue un\'episòdiu locale pro sarvare sas seletziones suas de rasta e de tempus.</string>
+    <string name="rd_series_applied">Predefinidu de sa serie aplicadu.</string>
+    <string name="rd_series_unavailable">Una rasta de àudio o de sutatìtulos sarvada no est disponìbile in custu episòdiu.</string>
+    <string name="rd_series_saved">Sarvadu pro sos episòdios de %1$s.</string>
+    <string name="rd_series_removed">Predefinidu de sa serie bogadu.</string>
+    <string name="rd_pin_to_sidebar">Apica in sa barra laterale</string>
+    <string name="rd_unpin_from_sidebar">Distaca dae sa barra laterale</string>
+    <string name="rd_pin_to_home">Apica in sa Pàgina printzipale</string>
+    <string name="rd_unpin_from_home">Distaca dae sa Pàgina printzipale</string>
+    <string name="rd_pinned">Apicados</string>
+    <string name="rd_pinned_missing">Custa cartella o iscalita apicada no b\'est prus.</string>
 </resources>

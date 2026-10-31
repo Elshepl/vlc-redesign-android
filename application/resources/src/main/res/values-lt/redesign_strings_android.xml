@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Įrašyto garso arba subtitrų takelio šioje serijoje nėra.</string>
     <string name="rd_series_saved">Įrašyta serialo „%1$s“ serijoms.</string>
     <string name="rd_series_removed">Serialo nustatymas pašalintas.</string>
+    <string name="rd_sync_timeline">Sinchronizavimo laiko juosta</string>
+    <string name="rd_sync_hint">Nuvilkite subtitrų eilutes po balsu, kuriam jos priklauso.</string>
+    <string name="rd_sync_view_description">Garsas ir subtitrų eilutės aplink grojimo laiką; vilkite, kad perkeltumėte subtitrus</string>
+    <string name="rd_sync_earlier">Subtitrai 50 ms anksčiau</string>
+    <string name="rd_sync_later">Subtitrai 50 ms vėliau</string>
+    <string name="rd_sync_no_track">Subtitrai nerodomi.</string>
+    <string name="rd_sync_no_cues">Šio subtitrų takelio eilučių parodyti negalima; vėlinimas vis tiek taikomas.</string>
+    <string name="rd_sync_no_sound">Šio vaizdo įrašo garso parodyti negalima.</string>
+    <string name="rd_series_remember">Įsiminti šiam serialui</string>
+    <string name="rd_pin_to_sidebar">Prisegti prie šoninės juostos</string>
+    <string name="rd_unpin_from_sidebar">Atsegti nuo šoninės juostos</string>
+    <string name="rd_pin_to_home">Prisegti prie pradžios</string>
+    <string name="rd_unpin_from_home">Atsegti nuo pradžios</string>
+    <string name="rd_pinned">Prisegta</string>
+    <string name="rd_pinned_missing">Šio prisegto aplanko ar grojaraščio nebėra.</string>
 </resources>

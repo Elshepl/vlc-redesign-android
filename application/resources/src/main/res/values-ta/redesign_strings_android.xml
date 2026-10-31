@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">சேமித்த ஒலி அல்லது வசனச் சுவடு இந்தப் பாகத்தில் கிடைக்கவில்லை.</string>
     <string name="rd_series_saved">%1$s-இன் பாகங்களுக்குச் சேமிக்கப்பட்டது.</string>
     <string name="rd_series_removed">தொடர் முன்னமைவு அகற்றப்பட்டது.</string>
+    <string name="rd_sync_timeline">ஒத்திசைவு காலவரிசை</string>
+    <string name="rd_sync_hint">வசன வரிகளை அவை சேர்ந்த குரலின் கீழ் இழுக்கவும்.</string>
+    <string name="rd_sync_view_description">இயங்கும் நேரத்தைச் சுற்றியுள்ள ஒலியும் வசன வரிகளும்; வசனங்களை நகர்த்த இழுக்கவும்</string>
+    <string name="rd_sync_earlier">வசனங்கள் 50 ms முன்னதாக</string>
+    <string name="rd_sync_later">வசனங்கள் 50 ms பின்னதாக</string>
+    <string name="rd_sync_no_track">வசனங்கள் எதுவும் காட்டப்படவில்லை.</string>
+    <string name="rd_sync_no_cues">இந்த வசனச் சுவடின் வரிகளைக் காட்ட முடியாது; தாமதம் இன்னும் பொருந்தும்.</string>
+    <string name="rd_sync_no_sound">இந்த வீடியோவின் ஒலியைக் காட்ட முடியாது.</string>
+    <string name="rd_series_remember">இந்தத் தொடருக்கு நினைவில் கொள்</string>
+    <string name="rd_pin_to_sidebar">பக்கப்பட்டியில் பொருத்து</string>
+    <string name="rd_unpin_from_sidebar">பக்கப்பட்டியிலிருந்து நீக்கு</string>
+    <string name="rd_pin_to_home">முகப்பில் பொருத்து</string>
+    <string name="rd_unpin_from_home">முகப்பிலிருந்து நீக்கு</string>
+    <string name="rd_pinned">பொருத்தியவை</string>
+    <string name="rd_pinned_missing">பொருத்திய இந்தக் கோப்புறை அல்லது தொகுப்பு பட்டியல் இனி இல்லை.</string>
 </resources>

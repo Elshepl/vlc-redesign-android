@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">Një pistë audio ose titrash e ruajtur nuk është e disponueshme në këtë episod.</string>
     <string name="rd_series_saved">U ruajt për episodet e %1$s.</string>
     <string name="rd_series_removed">Paracaktimi i serialit u hoq.</string>
+    <string name="rd_sync_timeline">Vija kohore e sinkronizimit</string>
+    <string name="rd_sync_hint">Tërhiqni rreshtat e titrave nën zërin të cilit i përkasin.</string>
+    <string name="rd_sync_view_description">Zëri dhe rreshtat e titrave rreth kohës së luajtjes; tërhiqni për të zhvendosur titrat</string>
+    <string name="rd_sync_earlier">Titrat 50 ms më herët</string>
+    <string name="rd_sync_later">Titrat 50 ms më vonë</string>
+    <string name="rd_sync_no_track">Nuk shfaqen titra.</string>
+    <string name="rd_sync_no_cues">Rreshtat e kësaj piste titrash nuk mund të shfaqen; vonesa vazhdon të zbatohet.</string>
+    <string name="rd_sync_no_sound">Zëri i kësaj videoje nuk mund të shfaqet.</string>
+    <string name="rd_series_remember">Mbaje mend për këtë serial</string>
+    <string name="rd_pin_to_sidebar">Fikso te shiriti anësor</string>
+    <string name="rd_unpin_from_sidebar">Hiqe nga shiriti anësor</string>
+    <string name="rd_pin_to_home">Fikso te Kreu</string>
+    <string name="rd_unpin_from_home">Hiqe nga Kreu</string>
+    <string name="rd_pinned">Të fiksuara</string>
+    <string name="rd_pinned_missing">Kjo dosje ose listë luajtjeje e fiksuar nuk ekziston më.</string>
 </resources>

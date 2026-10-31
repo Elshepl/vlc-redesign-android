@@ -46,4 +46,18 @@
     <string name="rd_series_saved">Tallennettu sarjan %1$s jaksoille.</string>
     <string name="rd_series_removed">Sarjan esiasetus poistettu.</string>
     <string name="rd_series_remember">Muista tälle sarjalle</string>
+    <string name="rd_sync_timeline">Synkronoinnin aikajana</string>
+    <string name="rd_sync_hint">Vedä tekstitysrivit sen äänen alle, johon ne kuuluvat.</string>
+    <string name="rd_sync_view_description">Ääni ja tekstitysrivit toistokohdan ympärillä; vedä siirtääksesi tekstityksiä</string>
+    <string name="rd_sync_earlier">Tekstitykset 50 ms aiemmin</string>
+    <string name="rd_sync_later">Tekstitykset 50 ms myöhemmin</string>
+    <string name="rd_sync_no_track">Tekstityksiä ei näytetä.</string>
+    <string name="rd_sync_no_cues">Tämän tekstitysraidan rivejä ei voi näyttää; viive on silti voimassa.</string>
+    <string name="rd_sync_no_sound">Tämän videon ääntä ei voi näyttää.</string>
+    <string name="rd_pin_to_sidebar">Kiinnitä sivupalkkiin</string>
+    <string name="rd_unpin_from_sidebar">Irrota sivupalkista</string>
+    <string name="rd_pin_to_home">Kiinnitä kotinäkymään</string>
+    <string name="rd_unpin_from_home">Irrota kotinäkymästä</string>
+    <string name="rd_pinned">Kiinnitetyt</string>
+    <string name="rd_pinned_missing">Tätä kiinnitettyä kansiota tai soittolistaa ei ole enää olemassa.</string>
 </resources>

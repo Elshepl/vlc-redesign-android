@@ -47,4 +47,19 @@
     <string name="rd_series_unavailable">تراکێکی دەنگ یان ژێرنووسی پاشەکەوتکراو لەم ئەڵقەیەدا بەردەست نییە.</string>
     <string name="rd_series_saved">بۆ ئەڵقەکانی %1$s پاشەکەوت کرا.</string>
     <string name="rd_series_removed">ڕێکخستنی ئامادەی زنجیرە لابرا.</string>
+    <string name="rd_sync_timeline">هێڵی کاتی هاوکاتکردن</string>
+    <string name="rd_sync_hint">دێڕەکانی ژێرنووس ڕابکێشە بۆ ژێر ئەو دەنگەی کە پێی دەگەن.</string>
+    <string name="rd_sync_view_description">دەنگ و دێڕەکانی ژێرنووس لە دەوری کاتی لێدان؛ ڕابکێشە بۆ جووڵاندنی ژێرنووسەکان</string>
+    <string name="rd_sync_earlier">ژێرنووسەکان 50 ms زووتر</string>
+    <string name="rd_sync_later">ژێرنووسەکان 50 ms درەنگتر</string>
+    <string name="rd_sync_no_track">هیچ ژێرنووسێک پیشان نادرێت.</string>
+    <string name="rd_sync_no_cues">دێڕەکانی ئەم تراکی ژێرنووسە پیشان نادرێن؛ دواخستنەکە هێشتا جێبەجێ دەبێت.</string>
+    <string name="rd_sync_no_sound">دەنگی ئەم ڤیدیۆیە پیشان نادرێت.</string>
+    <string name="rd_series_remember">بیرخستنەوە بۆ ئەم زنجیرەیە</string>
+    <string name="rd_pin_to_sidebar">جێگیرکردن لە شریتی لاتەنیشت</string>
+    <string name="rd_unpin_from_sidebar">لابردنی جێگیرکردن لە شریتی لاتەنیشت</string>
+    <string name="rd_pin_to_home">جێگیرکردن لە سەرەکی</string>
+    <string name="rd_unpin_from_home">لابردنی جێگیرکردن لە سەرەکی</string>
+    <string name="rd_pinned">جێگیرکراو</string>
+    <string name="rd_pinned_missing">ئەم بوخچە یان لیستی لێدانە جێگیرکراوە چیتر بوونی نییە.</string>
 </resources>

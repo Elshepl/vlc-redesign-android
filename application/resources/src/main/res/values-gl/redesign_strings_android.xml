@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Unha pista de audio ou de subtítulos gardada non está dispoñíbel neste episodio.</string>
     <string name="rd_series_saved">Gardado para os episodios de %1$s.</string>
     <string name="rd_series_removed">Quitouse a preconfiguración da serie.</string>
+    <string name="rd_sync_timeline">Liña de tempo de sincronización</string>
+    <string name="rd_sync_hint">Arrastre as liñas de subtítulos baixo a voz á que pertencen.</string>
+    <string name="rd_sync_view_description">O son e as liñas de subtítulos arredor do tempo de reprodución; arrastre para mover os subtítulos</string>
+    <string name="rd_sync_earlier">Subtítulos 50 ms antes</string>
+    <string name="rd_sync_later">Subtítulos 50 ms despois</string>
+    <string name="rd_sync_no_track">Non se amosan subtítulos.</string>
+    <string name="rd_sync_no_cues">Non se poden amosar as liñas desta pista de subtítulos; o atraso segue aplicándose.</string>
+    <string name="rd_sync_no_sound">Non se pode amosar o son deste vídeo.</string>
+    <string name="rd_series_remember">Lembrar para esta serie</string>
+    <string name="rd_pin_to_sidebar">Fixar na barra lateral</string>
+    <string name="rd_unpin_from_sidebar">Quitar da barra lateral</string>
+    <string name="rd_pin_to_home">Fixar no inicio</string>
+    <string name="rd_unpin_from_home">Quitar do inicio</string>
+    <string name="rd_pinned">Fixados</string>
+    <string name="rd_pinned_missing">Este cartafol ou lista de reprodución fixado xa non está.</string>
 </resources>

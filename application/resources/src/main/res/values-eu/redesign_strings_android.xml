@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">Gordetako audio- edo azpititulu-pista bat ez dago erabilgarri atal honetan.</string>
     <string name="rd_series_saved">Gordeta %1$s telesailaren ataletarako.</string>
     <string name="rd_series_removed">Telesail-aurrezarpena kendu da.</string>
+    <string name="rd_sync_timeline">Sinkronizazio-denbora-lerroa</string>
+    <string name="rd_sync_hint">Arrastatu azpititulu-lerroak dagozkien ahotsaren azpira.</string>
+    <string name="rd_sync_view_description">Soinua eta azpititulu-lerroak erreprodukzio-unearen inguruan; arrastatu azpitituluak mugitzeko</string>
+    <string name="rd_sync_earlier">Azpitituluak 50 ms lehenago</string>
+    <string name="rd_sync_later">Azpitituluak 50 ms beranduago</string>
+    <string name="rd_sync_no_track">Ez da azpititulurik erakusten.</string>
+    <string name="rd_sync_no_cues">Azpititulu-pista honen lerroak ezin dira erakutsi; atzerapenak aplikatzen jarraitzen du.</string>
+    <string name="rd_sync_no_sound">Bideo honen soinua ezin da erakutsi.</string>
+    <string name="rd_series_remember">Gogoratu telesail honetarako</string>
+    <string name="rd_pin_to_sidebar">Finkatu alboko barran</string>
+    <string name="rd_unpin_from_sidebar">Kendu alboko barratik</string>
+    <string name="rd_pin_to_home">Finkatu hasieran</string>
+    <string name="rd_unpin_from_home">Kendu hasieratik</string>
+    <string name="rd_pinned">Finkatuak</string>
+    <string name="rd_pinned_missing">Finkatutako karpeta edo erreprodukzio-zerrenda hau ez dago jada.</string>
 </resources>

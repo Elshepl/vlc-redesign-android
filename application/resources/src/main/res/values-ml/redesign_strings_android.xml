@@ -45,4 +45,19 @@
     <string name="rd_series_unavailable">സംരക്ഷിച്ച ഒരു ഓഡിയോ അല്ലെങ്കിൽ ഉപശീർഷക ട്രാക്ക് ഈ എപ്പിസോഡിൽ ലഭ്യമല്ല.</string>
     <string name="rd_series_saved">%1$s-ന്റെ എപ്പിസോഡുകൾക്കായി സംരക്ഷിച്ചു.</string>
     <string name="rd_series_removed">സീരീസ് പ്രീസെറ്റ് നീക്കം ചെയ്തു.</string>
+    <string name="rd_sync_timeline">സമന്വയ ടൈംലൈൻ</string>
+    <string name="rd_sync_hint">ഉപശീർഷക വരികൾ അവ ഉൾപ്പെടുന്ന ശബ്ദത്തിന് താഴേക്ക് വലിച്ചിടുക.</string>
+    <string name="rd_sync_view_description">പ്ലേ ചെയ്യുന്ന സമയത്തിന് ചുറ്റുമുള്ള ശബ്ദവും ഉപശീർഷക വരികളും; ഉപശീർഷകങ്ങൾ നീക്കാൻ വലിക്കുക</string>
+    <string name="rd_sync_earlier">ഉപശീർഷകങ്ങൾ 50 ms മുമ്പ്</string>
+    <string name="rd_sync_later">ഉപശീർഷകങ്ങൾ 50 ms ശേഷം</string>
+    <string name="rd_sync_no_track">ഉപശീർഷകങ്ങളൊന്നും കാണിക്കുന്നില്ല.</string>
+    <string name="rd_sync_no_cues">ഈ ഉപശീർഷക ട്രാക്കിന്റെ വരികൾ കാണിക്കാനാവില്ല; ഡിലേ തുടർന്നും ബാധകമാണ്.</string>
+    <string name="rd_sync_no_sound">ഈ വീഡിയോയുടെ ശബ്ദം കാണിക്കാനാവില്ല.</string>
+    <string name="rd_series_remember">ഈ സീരീസിനായി ഓർമ്മിക്കുക</string>
+    <string name="rd_pin_to_sidebar">സൈഡ്ബാറിൽ പിൻ ചെയ്യുക</string>
+    <string name="rd_unpin_from_sidebar">സൈഡ്ബാറിൽ നിന്ന് അൺപിൻ ചെയ്യുക</string>
+    <string name="rd_pin_to_home">ഹോമിൽ പിൻ ചെയ്യുക</string>
+    <string name="rd_unpin_from_home">ഹോമിൽ നിന്ന് അൺപിൻ ചെയ്യുക</string>
+    <string name="rd_pinned">പിൻ ചെയ്തവ</string>
+    <string name="rd_pinned_missing">പിൻ ചെയ്ത ഈ ഫോൾഡറോ പ്ലേലിസ്റ്റോ ഇപ്പോൾ നിലവിലില്ല.</string>
 </resources>

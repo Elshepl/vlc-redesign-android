@@ -10,4 +10,25 @@
     <string name="rd_ob_whole_device">L\'apparechju sanu</string>
     <string name="rd_about_whats_new">Novità in %1$s</string>
     <string name="rd_subtitle_size">Dimensione di i sottutituli</string>
+    <string name="rd_sync_timeline">Linea di tempu di sincrunizazione</string>
+    <string name="rd_sync_hint">Trascinate e linee di i sottutituli sottu à a voce chì li currisponde.</string>
+    <string name="rd_sync_view_description">U sonu è e linee di i sottutituli intornu à u tempu di lettura; trascinate per dispiazzà i sottutituli</string>
+    <string name="rd_sync_earlier">Sottutituli 50 ms più prestu</string>
+    <string name="rd_sync_later">Sottutituli 50 ms più tardi</string>
+    <string name="rd_sync_no_track">Nisunu sottutitulu affissatu.</string>
+    <string name="rd_sync_no_cues">E linee di sta traccia di sottutitulu ùn ponu micca esse affissate; u ritardu s\'applica sempre.</string>
+    <string name="rd_sync_no_sound">U sonu di sta video ùn pò micca esse affissatu.</string>
+    <string name="rd_series_remember">Ramintassi per sta serie</string>
+    <string name="rd_series_applies">S\'applica à l\'episodii di %1$s</string>
+    <string name="rd_series_play_local">Leghjite un episodiu lucale per arregistrà e so scelte di traccia è di sincrunizazione.</string>
+    <string name="rd_series_applied">Preselezzione di a serie appiecata.</string>
+    <string name="rd_series_unavailable">Una traccia audio o di sottutitulu arregistrata ùn hè micca dispunibule in stu episodiu.</string>
+    <string name="rd_series_saved">Arregistratu per l\'episodii di %1$s.</string>
+    <string name="rd_series_removed">Preselezzione di a serie squassata.</string>
+    <string name="rd_pin_to_sidebar">Appiccicà à a barra laterale</string>
+    <string name="rd_unpin_from_sidebar">Spiccicà da a barra laterale</string>
+    <string name="rd_pin_to_home">Appiccicà à l\'Accolta</string>
+    <string name="rd_unpin_from_home">Spiccicà da l\'Accolta</string>
+    <string name="rd_pinned">Appiccicati</string>
+    <string name="rd_pinned_missing">Stu cartulare o sta lista di lettura appiccicati ùn ci sò più.</string>
 </resources>
