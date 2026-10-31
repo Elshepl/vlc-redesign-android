@@ -104,7 +104,7 @@ def pref_sure(d, key, type, value, wait=60):
 
 def configure(d, cell):
     d.set_system(night=cell["theme"] == "dark", font=cell["font"], rotation=cell["rotation"])
-    for k, t, v in (("set_locale", "s", LOCALES[cell["lang"]]), ("rd_accent", "s", cell["accent"]), ("app_theme", "s", "-1")):
+    for k, t, v in (("set_locale", "s", LOCALES.get(cell["lang"], cell["lang"])), ("rd_accent", "s", cell["accent"]), ("app_theme", "s", "-1")):
         r = pref_sure(d, k, t, v)
         if not (r or "").startswith("ok"):
             print("  configure(): pref %s not written: %s" % (k, r), flush=True)
@@ -117,6 +117,7 @@ def main():
     ap.add_argument("--cells", default="", help="comma list of cell names (default: all)")
     ap.add_argument("--only", default="", help="comma list of step prefixes")
     ap.add_argument("--quick", action="store_true")
+    ap.add_argument("--langs", default="", help="extra languages, outside the matrix: a dark cell per device and language")
     ap.add_argument("--keep", action="store_true", help="leave the emulator running at the end")
     ap.add_argument("--resume", action="store_true", help="skip the cells the run folder already has")
     ap.add_argument("--report-only", action="store_true")
@@ -139,6 +140,10 @@ def main():
         t_all = time.time()
         for dev in a.devices.split(","):
             cells = [c for c in cells_for(dev, a.quick) if not want or c["name"] in want]
+            for lang in filter(None, a.langs.split(",")):
+                o, rot = DEVICES[dev][1][0]
+                cells.append({"name": "%s-%s-dark-%s-f1.0" % (dev, o, lang), "device": dev, "orient": o, "rotation": rot,
+                              "theme": "dark", "lang": lang, "font": 1.0, "accent": "orange"})
             if a.resume:
                 cells = [c for c in cells if not os.path.exists(os.path.join(a.run, "cells", c["name"], "steps.json"))]
             if not cells:
