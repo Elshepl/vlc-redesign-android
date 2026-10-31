@@ -91,6 +91,7 @@ import videolan.org.commontools.TV_CHANNEL_SCHEME
 private const val SEND_CRASH_RESULT = 0
 private const val PROPAGATE_RESULT = 1
 private const val TAG = "VLC/StartActivity"
+private val NETWORK_SCHEMES = setOf("http", "https", "rtsp", "rtsps", "rtmp", "rtmps", "rtp", "udp", "mms", "mmsh", "srt", "ftp", "ftps", "sftp", "smb", "nfs")
 class StartActivity : FragmentActivity() {
 
     private val idFromShortcut: Int
@@ -357,7 +358,9 @@ class StartActivity : FragmentActivity() {
         // If data shared with content scheme then it should be from a provider and might
         // be read without permissions.
         // If not should check for permission, and ask them if we don't have them
+        // A stream from the network reads nothing of the device's storage: no question about it
         if ((intent.data != null && intent.data!!.scheme == "content" && FileUtils.getUri(intent.data) != null)
+            || intent.data?.scheme?.lowercase() in NETWORK_SCHEMES
             || (Permissions.canReadStorage(applicationContext) || getStoragePermission())) when {
             intent.type?.startsWith("video") == true -> try {
                 startActivityForResult(intent.setClass(this@StartActivity, VideoPlayerActivity::class.java).apply { putExtra(VideoPlayerActivity.FROM_EXTERNAL, true) }, PROPAGATE_RESULT, Util.getFullScreenBundle())
