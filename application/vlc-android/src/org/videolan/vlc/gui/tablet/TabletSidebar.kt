@@ -47,6 +47,7 @@ import org.videolan.vlc.gui.MainActivity
 import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.gui.dialogs.RdContextMenu
 import org.videolan.vlc.gui.dialogs.Simple
+import org.videolan.vlc.gui.livetv.TvNavigation
 import org.videolan.vlc.util.ContextOption
 import org.videolan.vlc.util.Pins
 import androidx.lifecycle.lifecycleScope
@@ -66,6 +67,7 @@ import kotlinx.coroutines.launch
 object TabletSidebar {
 
     private const val TAG_ROW = "rd_tablet_sidebar_row"
+    private const val TAG_PIN = "rd_tablet_sidebar_pin"
 
     fun MainActivity.applyTabletSidebar() {
         val rail = findViewById<NavigationRailView>(R.id.navigation_rail) ?: return
@@ -78,7 +80,7 @@ object TabletSidebar {
         rail.visibility = View.GONE
         val existing = coordinator.findViewById<LinearLayout>(R.id.rd_tablet_sidebar)
         if (existing != null) {
-            syncRows(this, existing, rail)
+            layoutRows(this, existing, rail)
             refresh(existing, rail)
             return
         }
@@ -115,15 +117,6 @@ object TabletSidebar {
         }
         // the toolbar's height: the first row starts level with the page's title
         sidebar.addView(View(ctx), LinearLayout.LayoutParams(1, 4.dp))
-        val menu = rail.menu
-        for (i in 0 until menu.size()) sidebar.addView(row(activity, rail, menu.getItem(i)))
-        // the folders and playlists pinned (the desktop's "Pin to Sidebar"), under the pages
-        val pins = LinearLayout(ctx).apply {
-            id = R.id.rd_tablet_sidebar_pins
-            orientation = LinearLayout.VERTICAL
-        }
-        sidebar.addView(pins, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
-        activity.lifecycleScope.launch { Pins.pins(activity).collect { list -> if (list != null) fillPins(activity, pins, list) } }
         sidebar.addView(View(ctx), LinearLayout.LayoutParams(1, 0, 1f))
         // the large play button of the rail's header, kept for "play all" of the current page
         rail.headerView?.let { header ->
@@ -131,6 +124,11 @@ object TabletSidebar {
             (header.parent as? ViewGroup)?.removeView(header)
             sidebar.addView(FrameLayout(ctx).apply { addView(header, FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.START or Gravity.BOTTOM)) },
                     LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+        }
+        layoutRows(activity, sidebar, rail)
+        // the folders and playlists pinned or unpinned (the desktop's "Pin to Sidebar")
+        activity.lifecycleScope.launch {
+            Pins.pins(activity).collect { list -> if (list != null) { layoutRows(activity, sidebar, rail); refresh(sidebar, rail) } }
         }
         return sidebar
     }
@@ -184,24 +182,57 @@ object TabletSidebar {
         return row.also { it.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp } }
     }
 
-    /** "Pinned", then a row per pin (a tap opens it; a long press offers Unpin from Sidebar) */
-    private fun fillPins(activity: MainActivity, box: LinearLayout, pins: List<Pins.Pin>) {
+    /**
+     * The rows in Edit Sidebar's order: the pages of the rail and the pins shown, mixed as the user placed them
+     * (the desktop's sidebar), More after the last page. The pins after it get the "Pinned" title, as before.
+     */
+    private fun layoutRows(activity: MainActivity, sidebar: LinearLayout, rail: NavigationRailView) {
+        val menu = rail.menu
+        val items = (0 until menu.size()).map { menu.getItem(it) }
+        val pins = TvNavigation.shownPins(activity).associateBy { Pins.key(it) }
+        val entries = mutableListOf<Any>()
+        for (k in TvNavigation.order(activity)) {
+            val page = TvNavigation.pages.firstOrNull { it.key == k }
+            if (page != null) items.firstOrNull { it.itemId == page.id }?.let { entries.add(it) }
+            else pins[k]?.let { entries.add(it) }
+        }
+        // the rail's items the order does not hold (More) after its last page
+        val lastPage = entries.indexOfLast { it is MenuItem }
+        entries.addAll(lastPage + 1, items.filter { item -> entries.none { it === item } })
+        val signature = entries.map { if (it is MenuItem) it.itemId.toString() else (it as Pins.Pin).let { p -> Pins.key(p) + "\n" + p.title } }
+        if (sidebar.getTag(R.id.rd_tablet_sidebar_pins) == signature) return
+        sidebar.setTag(R.id.rd_tablet_sidebar_pins, signature)
+        for (i in sidebar.childCount - 1 downTo 0) {
+            val tag = sidebar.getChildAt(i).tag
+            if (tag == TAG_ROW || tag == TAG_PIN) sidebar.removeViewAt(i)
+        }
+        val tail = entries.indexOfLast { it is MenuItem } + 1
+        var at = 1
+        for ((i, e) in entries.withIndex()) {
+            if (i == tail && e is Pins.Pin) sidebar.addView(pinnedTitle(activity), at++)
+            sidebar.addView(if (e is MenuItem) row(activity, rail, e) else pinRow(activity, e as Pins.Pin), at++)
+        }
+    }
+
+    private fun pinnedTitle(ctx: MainActivity) = TextView(ctx).apply {
+        tag = TAG_PIN
+        setText(R.string.rd_pinned)
+        typeface = ResourcesCompat.getFont(ctx, R.font.inter)
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
+        setTextColor(UiTools.getColorFromAttribute(ctx, R.attr.rd_icon))
+        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+        setPaddingRelative(12.dp, 16.dp, 8.dp, 6.dp)
+    }
+
+    /** A pin's row: a tap opens it; a long press offers Unpin from Sidebar */
+    private fun pinRow(activity: MainActivity, pin: Pins.Pin): View {
         val ctx = activity
-        box.removeAllViews()
-        if (pins.isEmpty()) return
         val muted = UiTools.getColorFromAttribute(ctx, R.attr.rd_icon)
-        box.addView(TextView(ctx).apply {
-            setText(R.string.rd_pinned)
-            typeface = ResourcesCompat.getFont(ctx, R.font.inter)
-            setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
-            setTextColor(muted)
-            textAlignment = View.TEXT_ALIGNMENT_VIEW_START
-            setPaddingRelative(12.dp, 16.dp, 8.dp, 6.dp)
-        })
         val hover = UiTools.getColorFromAttribute(ctx, R.attr.rd_hover)
-        for (pin in pins) {
+        run {
             val mask = GradientDrawable().apply { cornerRadius = 6.dp.toFloat(); setColor(0xFFFFFFFF.toInt()) }
             val row = LinearLayout(ctx).apply {
+                tag = TAG_PIN
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
                 minimumHeight = 40.dp
@@ -229,28 +260,19 @@ object TabletSidebar {
                 ellipsize = TextUtils.TruncateAt.END
                 textAlignment = View.TEXT_ALIGNMENT_VIEW_START
             }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
-            box.addView(row, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp })
+            row.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp }
+            return row
         }
     }
 
     /**
-     * The rail's menu is rebuilt when the pages change (the Live TV add-on switched, Edit Sidebar, the TV page
-     * added after the first start): the sidebar's rows follow it, the play button at the bottom stays.
+     * VLC Redesign: called when the pages of the bars change (the Live TV add-on switched, Edit Sidebar, the TV
+     * page added after the first start): the sidebar's rows follow, the play button at the bottom stays.
      */
-    private fun syncRows(activity: MainActivity, sidebar: LinearLayout, rail: NavigationRailView) {
-        val menu = rail.menu
-        val wanted = (0 until menu.size()).map { menu.getItem(it).itemId }
-        val rows = (0 until sidebar.childCount).map { sidebar.getChildAt(it) }.filter { it.tag == TAG_ROW }
-        if (rows.map { it.getTag(R.id.rd_tablet_sidebar_label) } == wanted) return
-        rows.forEach { sidebar.removeView(it) }
-        for (i in 0 until menu.size()) sidebar.addView(row(activity, rail, menu.getItem(i)), 1 + i)
-    }
-
-    /** VLC Redesign: called when the pages of the bars change. */
     fun MainActivity.refreshTabletSidebar() {
         val rail = findViewById<NavigationRailView>(R.id.navigation_rail) ?: return
         val sidebar = findViewById<CoordinatorLayout>(R.id.coordinator)?.findViewById<LinearLayout>(R.id.rd_tablet_sidebar) ?: return
-        syncRows(this, sidebar, rail)
+        layoutRows(this, sidebar, rail)
         refresh(sidebar, rail)
     }
 

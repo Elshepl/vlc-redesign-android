@@ -2,9 +2,10 @@
  * VLC Redesign: folders and playlists pinned to the sidebar (the desktop's "Pin to Sidebar", SidebarItems.qml).
  *
  * A folder of the browser (local or network), a folder of the Videos page or a playlist can be pinned from its
- * menu. The pins show under the pages of the tablet sidebar, and on a phone (or a window without the sidebar) as
- * the first row of Home; a tap opens the folder or the playlist. Kept in the app's preferences (rd_pins, JSON),
- * in the order they were pinned; [pins] tells the views when they change.
+ * menu. The pins are rows of the sidebar's order (Edit Sidebar moves and hides them as the pages, [TvNavigation]):
+ * they show among the pages of the tablet sidebar, and on a phone (or a window without the sidebar) as the first
+ * row of Home; a tap opens the folder or the playlist. Kept in the app's preferences (rd_pins, JSON), in the order
+ * they were pinned; [pins] tells the views when they change, [layout] when Edit Sidebar moved or hid them.
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General
  * Public License as published by the Free Software Foundation; either version 2 of the License, or (at your
@@ -50,6 +51,12 @@ object Pins {
 
     private val state = MutableStateFlow<List<Pin>?>(null)
 
+    /** Bumped when Edit Sidebar moves or hides pins (the pins themselves are unchanged) */
+    val layout = MutableStateFlow(0)
+
+    /** The pin's key in the sidebar's order and hidden lists (comma-free: the id is URI-encoded) */
+    fun key(pin: Pin) = "pin:" + pin.kind + ":" + Uri.encode(pin.id)
+
     fun pins(context: Context): StateFlow<List<Pin>?> {
         if (state.value == null) state.value = load(context)
         return state
@@ -82,7 +89,10 @@ object Pins {
     fun isPinned(context: Context, pin: Pin) = list(context).any { it.kind == pin.kind && it.id == pin.id }
 
     fun pin(context: Context, pin: Pin) {
-        if (!isPinned(context, pin)) store(context, list(context) + pin)
+        if (isPinned(context, pin)) return
+        // pinned again: shown, at the end, whatever the old pin's place was
+        org.videolan.vlc.gui.livetv.TvNavigation.forget(context, key(pin))
+        store(context, list(context) + pin)
     }
 
     fun unpin(context: Context, pin: Pin) = store(context, list(context).filterNot { it.kind == pin.kind && it.id == pin.id })

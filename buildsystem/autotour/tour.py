@@ -539,6 +539,15 @@ class Tour:
                 if hits:
                     self.d.tap(dd.clickable_ancestor(hits[0]))
                     self.snap("more-network-folder", self.d.settle())
+        # Edit Sidebar lists the pinned folder among the pages (moved and hidden as they are)
+        d = self.main("nav_more")
+        if self.find(d, string="rd_tv_edit_sidebar"):
+            d = self.tap(d, string="rd_tv_edit_sidebar")
+            self.snap("more-edit-sidebar", d)
+            if not any(v.txt == "vlc-redesign-test" for v in d.views):
+                self.fail("more-edit-sidebar-pin", "the pinned folder is not a row of Edit Sidebar")
+            self.d.back()
+            self.d.settle()
 
     # ---- settings
     def open_settings(self):

@@ -30,6 +30,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.MLServiceLocator
@@ -52,6 +53,7 @@ import org.videolan.vlc.media.MediaUtils
 import org.videolan.vlc.util.ContextOption
 import org.videolan.vlc.util.ContextOption.*
 import org.videolan.vlc.util.FlagSet
+import org.videolan.vlc.gui.livetv.TvNavigation
 import org.videolan.vlc.util.Pins
 import org.videolan.vlc.util.share
 import org.videolan.vlc.util.showParentFolder
@@ -180,12 +182,14 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
         sections = listOf(pinned, continueWatching, listenAgain, folders, favorites, newVideos, newMusic)
         // a folder or a playlist pinned or unpinned anywhere
         lifecycleScope.launch { Pins.pins(view.context).collect { if (it != null) refresh() } }
+        // moved or hidden in Edit Sidebar
+        lifecycleScope.launch { Pins.layout.drop(1).collect { refresh() } }
     }
 
-    /** The pins, on Home only when the window has no sidebar to show them */
+    /** The pins, on Home only when the window has no sidebar to show them; in Edit Sidebar's order, the hidden left out */
     private fun pinnedCards(context: android.content.Context): List<Card> {
         if (context.resources.getBoolean(R.bool.rd_tablet_sidebar)) return emptyList()
-        return Pins.list(context).map { pin ->
+        return TvNavigation.shownPins(context).map { pin ->
             val uri = if (pin.kind == Pins.FOLDER) Uri.parse(pin.id) else Uri.parse("${pin.kind}:${pin.id}")
             val media = MLServiceLocator.getAbstractMediaWrapper(uri).apply { title = pin.title; type = MediaWrapper.TYPE_DIR }
             Card(media, folder = pin.kind != Pins.PLAYLIST, pin = pin)

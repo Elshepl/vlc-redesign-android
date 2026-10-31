@@ -33,6 +33,7 @@ import org.videolan.vlc.gui.MoreFragment
 import org.videolan.vlc.gui.helpers.RdStyle
 import org.videolan.vlc.livetv.KEY_IPTV_ENABLED
 import org.videolan.vlc.livetv.LiveTv
+import org.videolan.vlc.util.Pins
 
 object TvNavigation {
 
@@ -55,10 +56,16 @@ object TvNavigation {
     private fun keys(prefs: SharedPreferences, key: String, default: String = "") =
         (prefs.getString(key, default) ?: default).split(',').filter { it.isNotEmpty() }
 
-    /** Every key in the user's order; a page the saved order does not know after the page it follows by default. */
+    fun isPin(key: String) = key.startsWith("pin:")
+
+    /**
+     * Every key in the user's order, the pages' and the pins' (the desktop's sidebar order holds both): a page the
+     * saved order does not know after the page it follows by default, a pin it does not know at the end.
+     */
     fun order(context: Context): List<String> {
         val prefs = Settings.getInstance(context)
-        val saved = keys(prefs, ORDER).filter { k -> pages.any { it.key == k } }.distinct()
+        val pins = Pins.list(context).map { Pins.key(it) }
+        val saved = keys(prefs, ORDER).filter { k -> pages.any { it.key == k } || pins.contains(k) }.distinct()
         val out = saved.toMutableList()
         for ((i, p) in pages.withIndex()) {
             if (out.contains(p.key)) continue
@@ -69,12 +76,28 @@ object TvNavigation {
             }
             out.add(at, p.key)
         }
+        for (k in pins) if (!out.contains(k)) out.add(k)
         return out
     }
 
     fun hidden(context: Context) = keys(Settings.getInstance(context), HIDDEN, DEFAULT_HIDDEN)
 
-    /** the page can be in the bar (TV: its add-on is on) */
+    /** The pins shown (not hidden in Edit Sidebar), in the sidebar's order */
+    fun shownPins(context: Context): List<Pins.Pin> {
+        val hidden = hidden(context)
+        val pins = Pins.list(context).associateBy { Pins.key(it) }
+        return order(context).filter { isPin(it) && !hidden.contains(it) }.mapNotNull { pins[it] }
+    }
+
+    /** A pin made again leaves the old one's place and hidden state behind */
+    fun forget(context: Context, key: String) {
+        val prefs = Settings.getInstance(context)
+        val order = keys(prefs, ORDER)
+        val hidden = keys(prefs, HIDDEN, DEFAULT_HIDDEN)
+        if (order.contains(key) || hidden.contains(key)) save(context, order - key, hidden - key)
+    }
+
+    /** the page can be in the bar (TV: its add-on is on); a pin always can */
     private fun available(context: Context, key: String) = key != "tv" || Settings.getInstance(context).getBoolean(KEY_IPTV_ENABLED, true)
 
     /** the pages shown, in their order (Home when none would be) */
@@ -176,11 +199,13 @@ object TvNavigation {
     }
 
     /**
-     * Edit Sidebar (SidebarEditDialog.qml): the pages in their order, moved up and down, each shown or hidden; at
-     * least one stays. Reset to Default puts the design's order back. Kept with Save.
+     * Edit Sidebar (SidebarEditDialog.qml): the pages and the pinned folders and playlists in their order, moved up
+     * and down, each shown or hidden; at least one page stays. Reset to Default puts the design's order back, the
+     * pins after the pages. Kept with Save. Unpinning stays in a pin's own menu.
      */
     fun editSidebar(activity: MainActivity) {
         val ctx = activity
+        val pins = Pins.list(ctx).associateBy { Pins.key(it) }
         var order = order(ctx).filter { available(ctx, it) }.toMutableList()
         val hidden = hidden(ctx).toMutableSet()
         val list = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL; setPadding(ctx.tvPx(20f), ctx.tvPx(4f), ctx.tvPx(20f), 0) }
@@ -190,13 +215,16 @@ object TvNavigation {
             list.addView(ctx.tvText(ctx.getString(R.string.rd_tv_sidebar_pages_help), 12f, ctx.tvColor(R.color.rd_fg_a3), lines = 0),
                 LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(4f); bottomMargin = ctx.tvPx(8f) })
             order.forEachIndexed { i, key ->
-                val p = pages.first { it.key == key }
+                // a page, or a pinned folder or playlist (its own icon and name, as the desktop's dialog)
+                val p = pages.firstOrNull { it.key == key }
+                val pin = if (p == null) pins[key] ?: return@forEachIndexed else null
                 val shown = !hidden.contains(key)
-                val title = ctx.getString(p.title)
+                val title = if (p != null) ctx.getString(p.title) else pin!!.title
                 val row = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL; minimumHeight = ctx.tvPx(48f) }
                 row.contentDescription = title + if (shown) "" else ", " + ctx.getString(R.string.rd_tv_hidden)
-                row.addView(android.widget.ImageView(ctx).apply { setImageResource(p.icon); alpha = if (shown) 1f else 0.4f }, LinearLayout.LayoutParams(ctx.tvPx(24f), ctx.tvPx(24f)))
-                row.addView(ctx.tvText(title, 14f, ctx.tvColor(if (shown) R.color.rd_fg_1 else R.color.rd_fg_a3)),
+                val icon = if (p != null) p.icon else Pins.icon(pin!!)
+                row.addView(android.widget.ImageView(ctx).apply { setImageResource(icon); alpha = if (shown) 1f else 0.4f }, LinearLayout.LayoutParams(ctx.tvPx(24f), ctx.tvPx(24f)))
+                row.addView(ctx.tvText(title, 14f, ctx.tvColor(if (shown) R.color.rd_fg_1 else R.color.rd_fg_a3)).apply { maxLines = 1; ellipsize = android.text.TextUtils.TruncateAt.END },
                     LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = ctx.tvPx(14f) })
                 row.addView(ctx.tvIconButton(R.drawable.rd_ic_chevron_down, ctx.getString(R.string.rd_tv_move_up)) {
                     if (i > 0) { order.add(i - 1, order.removeAt(i)); build() }
@@ -209,8 +237,8 @@ object TvNavigation {
                     contentDescription = ctx.getString(R.string.rd_tv_show_page, title)
                     RdStyle.toggle(this)
                     setOnCheckedChangeListener { _, on ->
-                        // the last one shown stays
-                        if (!on && order.count { !hidden.contains(it) } <= 1) { isChecked = true; return@setOnCheckedChangeListener }
+                        // the last page shown stays (a pin is not a page)
+                        if (!on && p != null && order.count { !isPin(it) && !hidden.contains(it) } <= 1) { isChecked = true; return@setOnCheckedChangeListener }
                         if (on) hidden.remove(key) else hidden.add(key)
                         list.post { build() }
                     }
@@ -237,11 +265,13 @@ object TvNavigation {
                     merged.add(at.coerceIn(0, merged.size), k)
                 }
                 save(ctx, merged, hidden.toList())
+                Pins.layout.value++
                 activity.refreshPages()
             }
             .show()
         dialog.getButton(android.content.DialogInterface.BUTTON_NEUTRAL)?.setOnClickListener {
-            order = pages.map { it.key }.filter { available(ctx, it) }.toMutableList()
+            // the design's pages, then the pins in the order they were pinned, all shown
+            order = (pages.map { it.key }.filter { available(ctx, it) } + pins.keys).toMutableList()
             hidden.clear(); hidden.add(DEFAULT_HIDDEN)
             build()
         }
