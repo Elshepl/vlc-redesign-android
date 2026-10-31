@@ -1,6 +1,26 @@
+# VLC Media Player Redesign for Android <sub><sup>(unofficial)</sup></sub>
+
+**VLC for Android with the interface designed by [Juxtopposed](https://www.youtube.com/@juxtopposed).**
+The Android app of [VLC Media Player Redesign](https://github.com/KuchiSofts/vlc-redesign): the real VLC engine
+and codecs, under the design's Home, library, player bar, Customize Player, casting, Live TV and tablet layout.
+
+- **Download:** the APK is published on the [desktop project's Releases](https://github.com/KuchiSofts/vlc-redesign/releases)
+  (not on Google Play). Its package is `org.kuchisofts.vlcredesign`, so it installs beside VLC.
+- **Design:** [Juxtopposed](https://www.youtube.com/@juxtopposed) (CC BY 4.0); first implementation by MrDouglax.
+- **Built on** [VLC for Android](https://code.videolan.org/videolan/vlc-android) by the VideoLAN team and
+  contributors. This is not an official VideoLAN product; VLC is a trademark of VideoLAN.
+- **Compiled by** KuchiSofts. Issues and ideas: [the desktop project's issues](https://github.com/KuchiSofts/vlc-redesign/issues).
+- **Building a release:** [buildsystem/redesign/RELEASE.md](buildsystem/redesign/RELEASE.md).
+
+License: GPL-2.0-or-later, as VLC for Android ([COPYING](COPYING)).
+
+---
+
+The original README of VLC for Android follows.
+
 # VLC for Android
 
-This is the official **Android** port of [VLC](https://videolan.org/vlc/).
+This is VideoLAN's official **Android** port of [VLC](https://videolan.org/vlc/).
 
 VLC on Android plays all the same files as the classical version of VLC, and features a media database
 for Audio and Video files and stream.

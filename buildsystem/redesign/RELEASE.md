@@ -3,7 +3,7 @@
 ## Version
 
 - `redesignVersionName` (root `build.gradle`) is the app's version: About, What's new and the APK name
-  (`VLC-Android-0.4.0-<abi>.apk`). It follows the desktop's VLC Redesign version.
+  (`VLC-Android-<version>-<abi>.apk`). It follows the desktop's VLC Redesign version.
 - `versionCode` keeps upstream's scheme for the libvlc base (3.7.2 = `30702xx`) and puts the redesign release
   counter `redesignBuild` in the tens digit (0.4.0 = `3070240`); each APK adds `10000000` and its ABI digit
   (arm64-v8a = `13070246`). Raise `redesignBuild` for every release on the same upstream base (at most 9);
@@ -28,8 +28,8 @@ RD_KEYSTORE_FILE=... RD_KEYSTORE_PASSWORD=... RD_KEY_ALIAS=... \
 
 Without the variables `signedRelease` falls back to upstream's `keyStoreFile` / `storealias` / `storepwd`
 Gradle properties; with neither, use `assembleRelease` (unsigned) and sign with `apksigner` afterwards.
-The application id stays `org.videolan.vlc` (upstream's): a release signed with another key cannot update the
-Play Store VLC and is installed beside a debug build (`org.videolan.vlc.debug`) only.
+The application id is `org.kuchisofts.vlcredesign` (`.debug` for debug builds): the app installs beside VLC. The
+release key is kept outside the repository; every release must be signed with the same key, or users cannot update.
 
 Check the result: `apksigner verify --print-certs <apk>` (v1 + v2 schemes) and `aapt dump badging <apk>`
 (versionCode, versionName, the four ABIs or the split APKs).
