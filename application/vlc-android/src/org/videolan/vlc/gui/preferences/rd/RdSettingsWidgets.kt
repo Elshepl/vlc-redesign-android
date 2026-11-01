@@ -24,11 +24,14 @@ import android.widget.ArrayAdapter
 import android.widget.Checkable
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Switch
 import android.widget.TextView
 import androidx.appcompat.widget.ListPopupWindow
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.AccessibilityDelegateCompat
 import androidx.core.view.ViewCompat
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import androidx.preference.EditTextPreference
 import androidx.preference.ListPreference
 import androidx.preference.Preference
@@ -61,10 +64,34 @@ class RdToggleView @JvmOverloads constructor(context: Context, attrs: AttributeS
     private val labelWidth = maxOf(context.rdDp(33f), Math.ceil(maxOf(text.measureText(onWord), text.measureText(offWord)).toDouble()).toFloat() + context.rdDp(8f))
     private val rect = RectF()
 
+    // The row (the preference's item, which TalkBack reads and clicks) said nothing of the state: it is a
+    // switch with the state of this one, ON or OFF
+    private var row: View? = null
+
     init {
         isClickable = false
         isFocusable = false
         importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_NO
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        row = generateSequence(parent as? View) { it.parent as? View }.firstOrNull { it.isClickable }
+        row?.let { r ->
+            ViewCompat.setAccessibilityDelegate(r, object : AccessibilityDelegateCompat() {
+                override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+                    super.onInitializeAccessibilityNodeInfo(host, info)
+                    info.className = Switch::class.java.name
+                    info.isCheckable = true
+                    info.isChecked = on
+                }
+            })
+        }
+        describe()
+    }
+
+    private fun describe() {
+        row?.let { ViewCompat.setStateDescription(it, if (on) onWord else offWord) }
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -99,7 +126,7 @@ class RdToggleView @JvmOverloads constructor(context: Context, attrs: AttributeS
     }
 
     override fun setChecked(checked: Boolean) {
-        if (on != checked) { on = checked; invalidate() }
+        if (on != checked) { on = checked; invalidate(); describe() }
     }
 
     override fun isChecked() = on
