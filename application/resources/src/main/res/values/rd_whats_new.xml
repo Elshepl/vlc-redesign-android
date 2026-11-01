@@ -3,8 +3,8 @@
      translate"). -->
 <resources>
     <string-array name="rd_whats_new_items">
-        <item>The video player\'s control bar is the desktop\'s: one bar to the screen edges, the play pill between Previous and Next, the seek well with the times on its sides; one row on a wide screen, two rows on a narrow one.</item>
-        <item>Subtitles that are not Unicode show right: Hebrew, Arabic, Russian, Greek, Turkish, Japanese, Chinese, Korean and Thai files are recognised by their letters and the language in their name.</item>
-        <item>About credits the interface\'s designer, Juxtopposed, with the links of the design, as on the desktop.</item>
+        <item>The app tells you when a new version is out: Download, What\'s new or Skip.</item>
+        <item>A link to a video on the network, opened from another app, plays at once.</item>
+        <item>TalkBack reads the switches of Settings: a switch, on or off.</item>
     </string-array>
 </resources>

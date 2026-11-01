@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">
-        <item>Video atskaņotāja vadības josla ir tāda pati kā datora versijā: viena josla līdz ekrāna malām, atskaņošanas poga starp Iepriekšējais un Nākamais, pārtīšanas josla ar laikiem tās malās; viena rinda platā ekrānā, divas šaurā.</item>
-        <item>Subtitri, kas nav Unicode, tiek rādīti pareizi: ivrita, arābu, krievu, grieķu, turku, japāņu, ķīniešu, korejiešu un taju datnes tiek atpazītas pēc to burtiem un valodas to nosaukumā.</item>
-        <item>Sadaļā Par kā saskarnes dizaina autors norādīts Juxtopposed, ar saitēm uz dizainu, kā datora versijā.</item>
+        <item>Lietotne paziņo, kad iznāk jauna versija: Lejupielādēt, Kas jauns vai Izlaist.</item>
+        <item>Saite uz video tīklā, atvērta no citas lietotnes, tiek atskaņota uzreiz.</item>
+        <item>TalkBack nolasa Iestatījumu slēdžus: slēdzis, ieslēgts vai izslēgts.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitru izmērs</string>
     <string name="rd_cast_this_phone">Šis tālrunis</string>

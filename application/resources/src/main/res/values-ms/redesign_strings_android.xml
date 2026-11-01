@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Disimpan pada peranti ini sahaja, untuk menyambung dari tempat anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari binaan ujian VLC for Android yang lebih baharu sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Bar kawalan pemain video kini sama seperti di desktop: satu bar hingga ke tepi skrin, butang main di antara Sebelumnya dan Seterusnya, bar carian dengan masa di kedua-dua sisinya; satu baris pada skrin lebar, dua baris pada skrin sempit.</item>
-        <item>Sari kata yang bukan Unicode dipaparkan dengan betul: fail Ibrani, Arab, Rusia, Greek, Turki, Jepun, Cina, Korea dan Thai dikenali daripada hurufnya dan bahasa dalam namanya.</item>
-        <item>Perihal memberi kredit reka bentuk antara muka kepada Juxtopposed, bersama pautan reka bentuknya, seperti di desktop.</item>
+        <item>Aplikasi memberitahu anda apabila versi baharu keluar: Muat turun, Apa yang baharu atau Langkau.</item>
+        <item>Pautan ke video di rangkaian, dibuka daripada aplikasi lain, terus dimainkan.</item>
+        <item>TalkBack membaca suis Tetapan: suis, hidup atau mati.</item>
     </string-array>
     <string name="rd_subtitle_size">Saiz sari kata</string>
     <string name="rd_cast_this_phone">Telefon ini</string>

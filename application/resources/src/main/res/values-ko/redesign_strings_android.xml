@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">이 기기에만 저장되며, 멈춘 곳부터 이어서 보는 데 쓰입니다.</string>
     <string name="rd_ob_updates_help">하루에 한 번 VLC for Android의 새 테스트 빌드를 확인합니다.</string>
     <string-array name="rd_whats_new_items">
-        <item>동영상 플레이어의 컨트롤 바가 데스크톱과 같아졌습니다. 화면 끝까지 이어지는 하나의 바, 이전과 다음 사이의 재생 버튼, 양옆에 시간이 표시되는 탐색 막대. 넓은 화면에서는 한 줄, 좁은 화면에서는 두 줄로 표시됩니다.</item>
-        <item>Unicode가 아닌 자막도 올바르게 표시됩니다. 히브리어, 아랍어, 러시아어, 그리스어, 터키어, 일본어, 중국어, 한국어, 태국어 파일을 글자와 파일 이름에 있는 언어로 알아봅니다.</item>
-        <item>정보 화면에 데스크톱처럼 인터페이스 디자이너 Juxtopposed의 크레딧과 디자인 링크가 표시됩니다.</item>
+        <item>새 버전이 나오면 앱이 알려 줍니다: 다운로드, 새로운 기능 또는 건너뛰기.</item>
+        <item>다른 앱에서 연 네트워크 동영상 링크가 바로 재생됩니다.</item>
+        <item>TalkBack이 설정의 스위치를 읽어 줍니다: 스위치, 켜짐 또는 꺼짐.</item>
     </string-array>
     <string name="rd_subtitle_size">자막 크기</string>
     <string name="rd_cast_this_phone">이 휴대전화</string>

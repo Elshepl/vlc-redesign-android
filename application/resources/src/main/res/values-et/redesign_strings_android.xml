@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
     <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
     <string-array name="rd_whats_new_items">
-        <item>Videopleieri juhtriba on sama mis arvutiversioonis: üks riba ekraani servadeni, esitusnupp nuppude Eelmine ja Järgmine vahel, kerimisriba, mille kõrval on ajad; üks rida laial ekraanil, kaks kitsal.</item>
-        <item>Subtiitrid, mis pole Unicode’is, kuvatakse õigesti: heebrea, araabia, vene, kreeka, türgi, jaapani, hiina, korea ja tai failid tuvastatakse nende tähtede ja nimes oleva keele järgi.</item>
-        <item>Teave tunnustab Juxtopposedit kasutajaliidese kujunduse eest ja annab lingid kujundusele, nagu arvutiversioonis.</item>
+        <item>Rakendus annab teada, kui uus versioon ilmub: Laadi alla, Mis on uut või Jäta vahele.</item>
+        <item>Link võrgus olevale videole, mis avatakse teisest rakendusest, mängib kohe.</item>
+        <item>TalkBack loeb seadete lüliteid: lüliti, sees või väljas.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtiitrite suurus</string>
     <string name="rd_cast_this_phone">See telefon</string>

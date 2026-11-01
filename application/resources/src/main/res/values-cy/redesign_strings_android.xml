@@ -31,9 +31,9 @@
     <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
     <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
     <string-array name="rd_whats_new_items">
-        <item>Bar rheoli\'r chwaraewr fideo yw un y fersiwn bwrdd gwaith: un bar hyd at ymylon y sgrin, y botwm chwarae rhwng Blaenorol a Nesaf, y bar chwilio gyda\'r amseroedd ar ei ochrau; un rhes ar sgrin lydan, dwy ar sgrin gul.</item>
-        <item>Mae isdeitlau nad ydynt yn Unicode yn dangos yn gywir: mae ffeiliau Hebraeg, Arabeg, Rwsieg, Groeg, Tyrceg, Japaneg, Tsieinëeg, Coreeg a Thai yn cael eu hadnabod wrth eu llythrennau a\'r iaith yn eu henw.</item>
-        <item>Mae Ynghylch yn cydnabod Juxtopposed am ddylunio\'r rhyngwyneb, gyda dolenni at y dyluniad, fel ar y bwrdd gwaith.</item>
+        <item>Mae\'r ap yn dweud wrthych pan fydd fersiwn newydd ar gael: Llwytho i lawr, Beth sy\'n newydd neu Hepgor.</item>
+        <item>Mae dolen i fideo ar y rhwydwaith, wedi\'i hagor o ap arall, yn chwarae ar unwaith.</item>
+        <item>Mae TalkBack yn darllen switshis y Gosodiadau: switsh, ymlaen neu i ffwrdd.</item>
     </string-array>
     <string name="rd_subtitle_size">Maint isdeitlau</string>
     <string name="rd_cast_this_phone">Y ffôn hwn</string>

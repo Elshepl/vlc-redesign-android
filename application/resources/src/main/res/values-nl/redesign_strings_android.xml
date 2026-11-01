@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Alleen op dit apparaat bewaard, om verder te gaan waar je gebleven was.</string>
     <string name="rd_ob_updates_help">Zoekt eenmaal per dag naar een nieuwere testversie van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>De bedieningsbalk van de videospeler is die van de desktopversie: één balk tot de randen van het scherm, de afspeelknop tussen Vorige en Volgende, de zoekbalk met de tijden aan weerszijden; één rij op een breed scherm, twee op een smal scherm.</item>
-        <item>Ondertitels die geen Unicode zijn, worden goed weergegeven: Hebreeuwse, Arabische, Russische, Griekse, Turkse, Japanse, Chinese, Koreaanse en Thaise bestanden worden herkend aan hun letters en aan de taal in hun naam.</item>
-        <item>Over vermeldt Juxtopposed als ontwerper van de interface, met de links naar het ontwerp, net als op de desktop.</item>
+        <item>De app laat weten wanneer er een nieuwe versie is: Downloaden, Wat is er nieuw of Overslaan.</item>
+        <item>Een link naar een video op het netwerk, geopend vanuit een andere app, speelt meteen af.</item>
+        <item>TalkBack leest de schakelaars van Instellingen voor: een schakelaar, aan of uit.</item>
     </string-array>
     <string name="rd_subtitle_size">Ondertitelgrootte</string>
     <string name="rd_cast_this_phone">Deze telefoon</string>

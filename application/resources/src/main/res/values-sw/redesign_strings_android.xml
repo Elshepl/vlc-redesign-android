@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Upau wa vidhibiti wa kicheza video ni ule wa kompyuta: upau mmoja hadi kingo za skrini, kitufe cha kucheza kati ya Iliyotangulia na Inayofuata, upau wa kutafuta wenye muda pande zake; safu moja kwenye skrini pana, safu mbili kwenye skrini nyembamba.</item>
-        <item>Manukuu yasiyo ya Unicode yanaonyeshwa sawasawa: faili za Kiebrania, Kiarabu, Kirusi, Kigiriki, Kituruki, Kijapani, Kichina, Kikorea na Kithai zinatambuliwa kwa herufi zake na lugha iliyo katika jina lake.</item>
-        <item>Kuhusu inatoa sifa ya muundo wa kiolesura kwa Juxtopposed, pamoja na viungo vya muundo, kama kwenye kompyuta.</item>
+        <item>Programu inakujulisha toleo jipya linapotoka: Pakua, Kipya ni nini au Ruka.</item>
+        <item>Kiungo cha video kwenye mtandao, kilichofunguliwa kutoka programu nyingine, kinachezwa mara moja.</item>
+        <item>TalkBack husoma swichi za Mipangilio: swichi, imewashwa au imezimwa.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

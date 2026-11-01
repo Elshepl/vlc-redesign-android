@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Uchovává se jen v tomto zařízení, abyste mohli pokračovat tam, kde jste skončili.</string>
     <string name="rd_ob_updates_help">Jednou denně hledá novější testovací sestavení VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Ovládací panel přehrávače videa je stejný jako v počítačové verzi: jeden panel až k okrajům obrazovky, tlačítko přehrávání mezi Předchozí a Další, lišta posunu s časy po stranách; jeden řádek na široké obrazovce, dva na úzké.</item>
-        <item>Titulky, které nejsou v Unicode, se zobrazují správně: soubory v hebrejštině, arabštině, ruštině, řečtině, turečtině, japonštině, čínštině, korejštině a thajštině se rozpoznají podle písmen a podle jazyka v názvu.</item>
-        <item>Sekce O aplikaci uvádí autora návrhu rozhraní, Juxtopposed, s odkazy na návrh, stejně jako v počítačové verzi.</item>
+        <item>Aplikace vám řekne, když vyjde nová verze: Stáhnout, Co je nového nebo Přeskočit.</item>
+        <item>Odkaz na video v síti, otevřený z jiné aplikace, se hned přehraje.</item>
+        <item>TalkBack čte přepínače Nastavení: přepínač, zapnuto nebo vypnuto.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost titulků</string>
     <string name="rd_cast_this_phone">Tento telefon</string>

@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Faqat shu qurilmada saqlanadi, to‘xtagan joyingizdan davom ettirish uchun.</string>
     <string name="rd_ob_updates_help">Kuniga bir marta VLC for Android ning yangiroq sinov versiyasini qidiradi.</string>
     <string-array name="rd_whats_new_items">
-        <item>Video pleyerning boshqaruv paneli kompyuter versiyasidagidek: ekran chetlarigacha bitta panel, Oldingi va Keyingi orasida ijro tugmasi, ikki yonida vaqt ko‘rsatilgan o‘tkazish chizig‘i; keng ekranda bir qator, tor ekranda ikki qator.</item>
-        <item>Unicode bo‘lmagan subtitrlar to‘g‘ri ko‘rsatiladi: ibroniy, arab, rus, yunon, turk, yapon, xitoy, koreys va tay tilidagi fayllar harflari va nomidagi til orqali aniqlanadi.</item>
-        <item>“Haqida” bo‘limi kompyuter versiyasidagidek interfeys dizayni uchun Juxtopposed ni dizayn havolalari bilan birga ko‘rsatadi.</item>
+        <item>Yangi versiya chiqqanda ilova sizga aytadi: Yuklab olish, Yangiliklar yoki Oʻtkazib yuborish.</item>
+        <item>Boshqa ilovadan ochilgan tarmoqdagi videoga havola darhol ijro etiladi.</item>
+        <item>TalkBack Sozlamalardagi kalitlarni oʻqiydi: kalit, yoqilgan yoki oʻchirilgan.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitr oʻlchami</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

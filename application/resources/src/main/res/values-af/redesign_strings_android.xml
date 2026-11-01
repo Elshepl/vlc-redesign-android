@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Net op hierdie toestel gehou, om voort te gaan waar jy opgehou het.</string>
     <string name="rd_ob_updates_help">Soek een keer per dag na ’n nuwer toetsweergawe van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Die videospeler se kontrolebalk is dié van die rekenaarweergawe: een balk tot by die skermrande, die speelknoppie tussen Vorige en Volgende, die soekbalk met die tye aan weerskante; een ry op ’n breë skerm, twee op ’n smal skerm.</item>
-        <item>Onderskrifte wat nie Unicode is nie, word reg gewys: Hebreeuse, Arabiese, Russiese, Griekse, Turkse, Japannese, Chinese, Koreaanse en Thaise lêers word herken aan hul letters en die taal in hul naam.</item>
-        <item>Oor erken Juxtopposed as die ontwerper van die koppelvlak, met die skakels na die ontwerp, soos op die rekenaar.</item>
+        <item>Die app sê vir jou wanneer \'n nuwe weergawe uit is: Laai af, Wat\'s nuut of Slaan oor.</item>
+        <item>\'n Skakel na \'n video op die netwerk, uit \'n ander app oopgemaak, speel dadelik.</item>
+        <item>TalkBack lees die skakelaars van Instellings: \'n skakelaar, aan of af.</item>
     </string-array>
     <string name="rd_subtitle_size">Onderskrifgrootte</string>
     <string name="rd_cast_this_phone">Hierdie foon</string>

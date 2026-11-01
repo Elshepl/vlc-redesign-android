@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
-        <item>A videolejátszó vezérlősávja az asztali változaté: egy sáv a képernyő széléig, a lejátszás gomb az Előző és a Következő között, a tekerősáv mellett két oldalt az idők; széles képernyőn egy sor, keskenyen kettő.</item>
-        <item>A nem Unicode feliratok helyesen jelennek meg: a héber, arab, orosz, görög, török, japán, kínai, koreai és thai fájlokat a betűik és a nevükben szereplő nyelv alapján ismeri fel.</item>
-        <item>A Névjegy feltünteti a kezelőfelület tervezőjét, Juxtopposedot, a terv hivatkozásaival, ahogy az asztali változatban.</item>
+        <item>Az alkalmazás szól, ha új verzió jelenik meg: Letöltés, Újdonságok vagy Kihagyás.</item>
+        <item>Egy hálózati videó hivatkozása, egy másik alkalmazásból megnyitva, azonnal lejátszódik.</item>
+        <item>A TalkBack felolvassa a Beállítások kapcsolóit: kapcsoló, be vagy ki.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>

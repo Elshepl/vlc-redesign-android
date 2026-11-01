@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>La barra de controls del reproductor de vídeo és la de l\'escriptori: una barra fins a les vores de la pantalla, el botó de reproducció entre Anterior i Següent, la barra de cerca amb els temps als costats; una fila en una pantalla ampla, dues en una d\'estreta.</item>
-        <item>Els subtítols que no són Unicode es mostren bé: els fitxers en hebreu, àrab, rus, grec, turc, japonès, xinès, coreà i tai es reconeixen per les lletres i per l\'idioma del nom.</item>
-        <item>Quant a atribueix el disseny de la interfície a Juxtopposed, amb els enllaços del disseny, com a l\'escriptori.</item>
+        <item>L\'aplicació t\'avisa quan surt una versió nova: Baixa, Novetats o Omet.</item>
+        <item>Un enllaç a un vídeo de la xarxa, obert des d\'una altra aplicació, es reprodueix de seguida.</item>
+        <item>TalkBack llegeix els interruptors de la Configuració: un interruptor, activat o desactivat.</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Geymt eingöngu á þessu tæki, til að halda áfram þar sem frá var horfið.</string>
     <string name="rd_ob_updates_help">Leitar einu sinni á dag að nýrri prófunarútgáfu af VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Stjórnstika myndspilarans er sú sama og í tölvuútgáfunni: ein stika út að jöðrum skjásins, spilunarhnappurinn á milli Fyrra og Næsta, leitarstikan með tímana sitt hvorum megin; ein röð á breiðum skjá, tvær á mjóum.</item>
-        <item>Skjátextar sem ekki eru í Unicode birtast rétt: skrár á hebresku, arabísku, rússnesku, grísku, tyrknesku, japönsku, kínversku, kóresku og taílensku þekkjast á stöfunum og tungumálinu í heiti þeirra.</item>
-        <item>Um getur Juxtopposed sem hönnuðar viðmótsins, með tenglum á hönnunina, eins og í tölvuútgáfunni.</item>
+        <item>Forritið lætur þig vita þegar ný útgáfa kemur út: Sækja, Hvað er nýtt eða Sleppa.</item>
+        <item>Tengill á myndskeið á netinu, opnaður úr öðru forriti, spilast strax.</item>
+        <item>TalkBack les rofa Stillinga: rofi, kveikt eða slökkt.</item>
     </string-array>
     <string name="rd_subtitle_size">Stærð skjátexta</string>
     <string name="rd_cast_this_phone">Þessi sími</string>

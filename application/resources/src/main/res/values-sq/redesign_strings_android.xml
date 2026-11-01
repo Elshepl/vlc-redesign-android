@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
     <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Shiriti i kontrolleve të luajtësit të videos është ai i desktopit: një shirit deri në skajet e ekranit, butoni i luajtjes mes Mëparshmes dhe Pasardhëses, shiriti i kërkimit me kohët në anët e tij; një rresht në ekran të gjerë, dy në ekran të ngushtë.</item>
-        <item>Titrat që nuk janë Unicode shfaqen saktë: skedarët në hebraisht, arabisht, rusisht, greqisht, turqisht, japonisht, kinezisht, koreanisht dhe tajlandisht njihen nga shkronjat e tyre dhe gjuha në emrin e tyre.</item>
-        <item>Faqja Rreth i jep merita për dizajnin e ndërfaqes Juxtopposed, me lidhjet e dizajnit, si në desktop.</item>
+        <item>Aplikacioni ju njofton kur del një version i ri: Shkarko, Çfarë ka të re ose Kapërce.</item>
+        <item>Një lidhje për një video në rrjet, e hapur nga një aplikacion tjetër, luhet menjëherë.</item>
+        <item>TalkBack lexon çelësat e Cilësimeve: një çelës, aktiv ose joaktiv.</item>
     </string-array>
     <string name="rd_subtitle_size">Madhësia e titrave</string>
     <string name="rd_cast_this_phone">Ky telefon</string>

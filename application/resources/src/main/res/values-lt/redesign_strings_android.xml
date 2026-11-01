@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">
-        <item>Vaizdo grotuvo valdymo juosta tokia pati kaip kompiuterio versijoje: viena juosta iki ekrano kraštų, grojimo mygtukas tarp Ankstesnis ir Kitas, slinkimo juosta su laikais šonuose; viena eilutė plačiame ekrane, dvi – siaurame.</item>
-        <item>Ne Unicode subtitrai rodomi teisingai: hebrajų, arabų, rusų, graikų, turkų, japonų, kinų, korėjiečių ir tajų failai atpažįstami pagal jų raides ir pavadinime nurodytą kalbą.</item>
-        <item>Skiltyje Apie Juxtopposed nurodomas kaip sąsajos dizaino autorius, su nuorodomis į dizainą, kaip kompiuterio versijoje.</item>
+        <item>Programa praneša, kai išeina nauja versija: Atsisiųsti, Kas naujo arba Praleisti.</item>
+        <item>Nuoroda į vaizdo įrašą tinkle, atverta iš kitos programos, paleidžiama iš karto.</item>
+        <item>TalkBack perskaito Nustatymų jungiklius: jungiklis, įjungta arba išjungta.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
     <string name="rd_cast_this_phone">Šis telefonas</string>

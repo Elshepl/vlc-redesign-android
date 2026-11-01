@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>La barra de controles del reproductor de videu ye la del escritoriu: una barra hasta los berbesos de la pantalla, el botón de reproducción ente Anterior y Siguiente, la barra de busca colos tiempos a los llaos; una filera nuna pantalla ancha, dos nuna estrecha.</item>
-        <item>Los sotítulos que nun tán n\'Unicode amuésense bien: los ficheros n\'hebréu, árabe, rusu, griegu, turcu, xaponés, chinu, coreanu y tailandés reconócense poles sos lletres y pola llingua del so nome.</item>
-        <item>Tocante a atribúi\'l diseñu de la interfaz a Juxtopposed, colos enllaces del diseñu, como nel escritoriu.</item>
+        <item>L\'aplicación avísate cuando sal una versión nueva: Descargar, Novedaes o Saltar.</item>
+        <item>Un enllaz a un videu na rede, abiertu dende otra aplicación, reprodúzse al momentu.</item>
+        <item>TalkBack llee los interruptores de Axustes: un interruptor, activáu o desactiváu.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

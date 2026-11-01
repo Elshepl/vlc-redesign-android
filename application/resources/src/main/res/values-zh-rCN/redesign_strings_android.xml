@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">仅保存在本设备上，用于从上次停下的地方继续。</string>
     <string name="rd_ob_updates_help">每天检查一次是否有更新的 VLC for Android 测试版。</string>
     <string-array name="rd_whats_new_items">
-        <item>视频播放器的控制栏与桌面版相同：一条延伸到屏幕边缘的控制栏，播放按钮位于“上一个”和“下一个”之间，进度条两侧显示时间；宽屏上显示为一行，窄屏上显示为两行。</item>
-        <item>非 Unicode 字幕也能正确显示：希伯来语、阿拉伯语、俄语、希腊语、土耳其语、日语、中文、韩语和泰语文件会根据其中的文字和文件名中的语言自动识别。</item>
-        <item>“关于”页面与桌面版一样，注明界面由 Juxtopposed 设计，并附上设计链接。</item>
+        <item>有新版本时应用会告诉你：下载、新功能或跳过。</item>
+        <item>从其他应用打开的网络视频链接会立即播放。</item>
+        <item>TalkBack 会朗读设置中的开关：开关，开启或关闭。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">此手机</string>

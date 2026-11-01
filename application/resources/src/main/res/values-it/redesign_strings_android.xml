@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Conservata solo su questo dispositivo, per riprendere da dove avevi lasciato.</string>
     <string name="rd_ob_updates_help">Cerca una versione di prova più recente di VLC for Android una volta al giorno.</string>
     <string-array name="rd_whats_new_items">
-        <item>La barra dei controlli del lettore video è quella della versione desktop: una barra fino ai bordi dello schermo, il pulsante di riproduzione tra Precedente e Successivo, la barra di avanzamento con i tempi ai lati; una riga su uno schermo largo, due su uno stretto.</item>
-        <item>I sottotitoli non in Unicode vengono mostrati correttamente: i file in ebraico, arabo, russo, greco, turco, giapponese, cinese, coreano e thailandese sono riconosciuti dalle loro lettere e dalla lingua nel nome.</item>
-        <item>Informazioni attribuisce il design dell\'interfaccia a Juxtopposed, con i link del design, come nella versione desktop.</item>
+        <item>L\'app ti avvisa quando esce una nuova versione: Scarica, Novità o Salta.</item>
+        <item>Un link a un video in rete, aperto da un\'altra app, si riproduce subito.</item>
+        <item>TalkBack legge gli interruttori delle Impostazioni: un interruttore, attivo o disattivo.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
     <string name="rd_cast_this_phone">Questo telefono</string>

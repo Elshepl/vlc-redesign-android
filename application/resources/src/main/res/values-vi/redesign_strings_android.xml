@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Thanh điều khiển của trình phát video giống bản máy tính: một thanh trải đến mép màn hình, nút phát nằm giữa Trước và Tiếp, thanh tua có thời gian ở hai bên; một hàng trên màn hình rộng, hai hàng trên màn hình hẹp.</item>
-        <item>Phụ đề không phải Unicode hiển thị đúng: các tập tin tiếng Do Thái, Ả Rập, Nga, Hy Lạp, Thổ Nhĩ Kỳ, Nhật, Trung, Hàn và Thái được nhận biết qua chữ viết và ngôn ngữ trong tên tập tin.</item>
-        <item>Trang Giới thiệu ghi công thiết kế giao diện cho Juxtopposed, kèm các liên kết của bản thiết kế, giống như trên máy tính.</item>
+        <item>Ứng dụng báo cho bạn khi có phiên bản mới: Tải xuống, Có gì mới hoặc Bỏ qua.</item>
+        <item>Liên kết tới video trên mạng, mở từ ứng dụng khác, phát ngay lập tức.</item>
+        <item>TalkBack đọc các công tắc trong Cài đặt: công tắc, bật hoặc tắt.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

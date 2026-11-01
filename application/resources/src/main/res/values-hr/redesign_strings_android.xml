@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Čuva se samo na ovom uređaju, da biste nastavili gdje ste stali.</string>
     <string name="rd_ob_updates_help">Jednom dnevno traži noviju probnu verziju VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Upravljačka traka videoplayera ista je kao u verziji za računalo: jedna traka do rubova zaslona, gumb za reprodukciju između Prethodno i Sljedeće, traka za premotavanje s vremenima sa strane; jedan red na širokom zaslonu, dva na uskom.</item>
-        <item>Podnaslovi koji nisu u Unicodeu prikazuju se ispravno: datoteke na hebrejskom, arapskom, ruskom, grčkom, turskom, japanskom, kineskom, korejskom i tajlandskom prepoznaju se po slovima i po jeziku u nazivu.</item>
-        <item>Odjeljak O programu navodi autora dizajna sučelja, Juxtopposed, s poveznicama na dizajn, kao u verziji za računalo.</item>
+        <item>Aplikacija vam javlja kad izađe nova verzija: Preuzmi, Što je novo ili Preskoči.</item>
+        <item>Poveznica na video na mreži, otvorena iz druge aplikacije, odmah se reproducira.</item>
+        <item>TalkBack čita prekidače u Postavkama: prekidač, uključen ili isključen.</item>
     </string-array>
     <string name="rd_subtitle_size">Veličina titlova</string>
     <string name="rd_cast_this_phone">Ovaj telefon</string>

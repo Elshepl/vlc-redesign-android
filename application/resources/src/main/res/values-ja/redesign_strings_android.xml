@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
     <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
     <string-array name="rd_whats_new_items">
-        <item>動画プレーヤーのコントロールバーはデスクトップ版と同じになりました。画面端まで届く 1 本のバー、「前へ」と「次へ」の間にある再生ボタン、両側に時間を表示するシークバー。広い画面では 1 行、狭い画面では 2 行で表示されます。</item>
-        <item>Unicode 以外の字幕も正しく表示されます。ヘブライ語、アラビア語、ロシア語、ギリシャ語、トルコ語、日本語、中国語、韓国語、タイ語のファイルは、文字とファイル名の言語から判別されます。</item>
-        <item>「情報」画面にインターフェースのデザイナー Juxtopposed のクレジットとデザインへのリンクを、デスクトップ版と同じように表示します。</item>
+        <item>新しいバージョンが出ると、アプリがお知らせします：ダウンロード、新機能、スキップ。</item>
+        <item>別のアプリから開いたネットワーク上の動画へのリンクが、すぐに再生されます。</item>
+        <item>TalkBack が設定のスイッチを読み上げます：スイッチ、オンまたはオフ。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕のサイズ</string>
     <string name="rd_cast_this_phone">このスマートフォン</string>

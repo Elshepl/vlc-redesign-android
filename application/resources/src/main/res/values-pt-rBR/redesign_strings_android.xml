@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>A barra de controles do player de vídeo é a da versão para computador: uma barra até as bordas da tela, o botão de reprodução entre Anterior e Próximo, a barra de busca com os tempos nas laterais; uma linha em uma tela larga, duas em uma estreita.</item>
-        <item>Legendas que não estão em Unicode aparecem corretamente: arquivos em hebraico, árabe, russo, grego, turco, japonês, chinês, coreano e tailandês são reconhecidos pelas letras e pelo idioma no nome.</item>
-        <item>Sobre credita o design da interface a Juxtopposed, com os links do design, como na versão para computador.</item>
+        <item>O app avisa quando sai uma nova versão: Baixar, Novidades ou Pular.</item>
+        <item>Um link para um vídeo na rede, aberto de outro app, toca na hora.</item>
+        <item>O TalkBack lê os interruptores das Configurações: um interruptor, ativado ou desativado.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

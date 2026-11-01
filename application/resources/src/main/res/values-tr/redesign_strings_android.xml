@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>Video oynatıcının denetim çubuğu artık masaüstündekiyle aynı: ekranın kenarlarına kadar tek bir çubuk, Önceki ile Sonraki arasında oynat düğmesi, iki yanında süreler bulunan arama çubuğu; geniş ekranda tek satır, dar ekranda iki satır.</item>
-        <item>Unicode olmayan altyazılar doğru görünür: İbranice, Arapça, Rusça, Yunanca, Türkçe, Japonca, Çince, Korece ve Tayca dosyalar harflerinden ve adlarındaki dilden tanınır.</item>
-        <item>Hakkında bölümü, masaüstündeki gibi tasarım bağlantılarıyla birlikte arayüz tasarımının Juxtopposed\'a ait olduğunu belirtir.</item>
+        <item>Uygulama yeni bir sürüm çıktığında size haber verir: İndir, Yenilikler veya Atla.</item>
+        <item>Başka bir uygulamadan açılan ağdaki bir videonun bağlantısı hemen oynatılır.</item>
+        <item>TalkBack, Ayarlar\'daki anahtarları okur: anahtar, açık veya kapalı.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

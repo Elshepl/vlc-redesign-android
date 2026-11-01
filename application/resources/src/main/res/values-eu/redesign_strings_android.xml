@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
     <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
     <string-array name="rd_whats_new_items">
-        <item>Bideo-erreproduzitzailearen kontrol-barra mahaigainekoa da: barra bat pantailaren ertzeraino, erreproduzitzeko botoia Aurrekoa eta Hurrengoaren artean, bilaketa-barra denborak alboetan dituela; lerro bat pantaila zabalean, bi pantaila estuan.</item>
-        <item>Unicode ez diren azpitituluak ondo erakusten dira: hebreera, arabiera, errusiera, greziera, turkiera, japoniera, txinera, koreera eta thailandierako fitxategiak beren letren eta izeneko hizkuntzaren bidez ezagutzen dira.</item>
-        <item>Honi buruz atalak interfazearen diseinua Juxtopposed-i aitortzen dio, diseinuaren estekekin, mahaigainean bezala.</item>
+        <item>Aplikazioak bertsio berri bat ateratzen denean esaten dizu: Deskargatu, Zer dago berri edo Saltatu.</item>
+        <item>Sareko bideo baterako esteka bat, beste aplikazio batetik irekita, berehala erreproduzitzen da.</item>
+        <item>TalkBack-ek Ezarpenetako etengailuak irakurtzen ditu: etengailua, aktibatuta edo desaktibatuta.</item>
     </string-array>
     <string name="rd_subtitle_size">Azpitituluen tamaina</string>
     <string name="rd_cast_this_phone">Telefono hau</string>

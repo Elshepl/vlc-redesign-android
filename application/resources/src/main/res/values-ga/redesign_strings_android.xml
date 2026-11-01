@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
     <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
     <string-array name="rd_whats_new_items">
-        <item>Is é barra rialaithe an tseinnteora físe barra an leagain deisce: barra amháin go himill an scáileáin, an cnaipe seinnte idir Roimhe Seo agus Ar Aghaidh, an barra cuardaigh agus na hamanna ar a thaobhanna; ró amháin ar scáileán leathan, dhá ró ar scáileán cúng.</item>
-        <item>Taispeántar fotheidil nach bhfuil in Unicode i gceart: aithnítear comhaid Eabhraise, Araibise, Rúisise, Gréigise, Tuircise, Seapáinise, Sínise, Cóiréise agus Téalainnise óna litreacha agus ón teanga ina n-ainm.</item>
-        <item>Tugann Maidir Le creidiúint do Juxtopposed as dearadh na comhéadaine, le naisc chuig an dearadh, mar a dhéantar ar an deasc.</item>
+        <item>Insíonn an aip duit nuair a bhíonn leagan nua ar fáil: Íoslódáil, Cad atá nua nó Scipeáil.</item>
+        <item>Seinntear láithreach nasc chuig físeán ar an líonra, a osclaítear ó aip eile.</item>
+        <item>Léann TalkBack lasca na Socruithe: lasc, air nó as.</item>
     </string-array>
     <string name="rd_subtitle_size">Méid na bhfotheideal</string>
     <string name="rd_cast_this_phone">An fón seo</string>

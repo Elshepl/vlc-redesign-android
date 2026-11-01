@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Bara de control a playerului video este cea de pe desktop: o singură bară până la marginile ecranului, butonul de redare între Anterior și Următor, bara de derulare cu timpii pe laturi; un rând pe un ecran lat, două pe unul îngust.</item>
-        <item>Subtitrările care nu sunt Unicode se afișează corect: fișierele în ebraică, arabă, rusă, greacă, turcă, japoneză, chineză, coreeană și thailandeză sunt recunoscute după litere și după limba din nume.</item>
-        <item>Despre atribuie designul interfeței lui Juxtopposed, cu linkurile designului, ca pe desktop.</item>
+        <item>Aplicația vă anunță când apare o versiune nouă: Descarcă, Ce e nou sau Omite.</item>
+        <item>Un link către un videoclip din rețea, deschis din altă aplicație, pornește imediat.</item>
+        <item>TalkBack citește comutatoarele din Setări: un comutator, activat sau dezactivat.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
     <string name="rd_cast_this_phone">Acest telefon</string>

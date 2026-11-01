@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Lagres bare på denne enheten, så du kan fortsette der du slapp.</string>
     <string name="rd_ob_updates_help">Ser etter en nyere testversjon av VLC for Android én gang om dagen.</string>
     <string-array name="rd_whats_new_items">
-        <item>Videospillerens kontrollinje er den samme som på datamaskinen: én linje helt ut til skjermkantene, avspillingsknappen mellom Forrige og Neste, søkefeltet med tidene på hver side; én rad på en bred skjerm, to på en smal.</item>
-        <item>Undertekster som ikke er Unicode, vises riktig: hebraiske, arabiske, russiske, greske, tyrkiske, japanske, kinesiske, koreanske og thailandske filer gjenkjennes på bokstavene og språket i navnet.</item>
-        <item>Om krediterer Juxtopposed for utformingen av grensesnittet, med lenkene til designet, som på datamaskinen.</item>
+        <item>Appen sier fra når en ny versjon kommer: Last ned, Nyheter eller Hopp over.</item>
+        <item>En lenke til en video på nettverket, åpnet fra en annen app, spilles av med en gang.</item>
+        <item>TalkBack leser bryterne i Innstillinger: en bryter, på eller av.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefonen</string>

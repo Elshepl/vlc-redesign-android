@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
     <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
     <string-array name="rd_whats_new_items">
-        <item>Videosoittimen ohjauspalkki on sama kuin työpöytäversiossa: yksi palkki näytön reunoihin asti, toistopainike Edellisen ja Seuraavan välissä, siirtymäpalkki ajat sivuillaan; yksi rivi leveällä näytöllä, kaksi kapealla.</item>
-        <item>Muut kuin Unicode-tekstitykset näkyvät oikein: heprean-, arabian-, venäjän-, kreikan-, turkin-, japanin-, kiinan-, korean- ja thainkieliset tiedostot tunnistetaan kirjaimistaan ja nimessä olevasta kielestä.</item>
-        <item>Tietoja-näkymä mainitsee käyttöliittymän suunnittelijana Juxtopposedin ja antaa linkit suunnitelmaan, kuten työpöytäversiossa.</item>
+        <item>Sovellus kertoo, kun uusi versio ilmestyy: Lataa, Uutta tai Ohita.</item>
+        <item>Linkki verkossa olevaan videoon, joka avataan toisesta sovelluksesta, toistuu heti.</item>
+        <item>TalkBack lukee Asetusten kytkimet: kytkin, päällä tai pois.</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
     <string name="rd_cast_this_phone">Tämä puhelin</string>
