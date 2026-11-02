@@ -116,10 +116,13 @@
     <color name="orange_800_transparent_20">#33ff610a</color>
     <color name="orange_500_transparent_20">#33FF8800</color>
 
-    <color name="tv_bg">#34434e</color>
-    <color name="tv_card_content">#34434e</color>
-    <color name="tv_card_content_dark">#1a2c38</color>
-    <color name="tv_card_content_darker">#011422</color>
+    <!-- VLC Redesign: the TV layout in the design's dark palette (rd_dark_bg_b1, a2, folder card, b2) -->
+    <color name="tv_bg">#0E0E0E</color>
+    <color name="tv_card_content">#1F1F1F</color>
+    <color name="tv_card_content_dark">#1E1E1E</color>
+    <color name="tv_card_content_darker">#090909</color>
+    <!-- the focused row of a TV list: the accent (rd_accent_orange_main) at 25 % -->
+    <color name="rd_tv_focus">#40D37918</color>
 
     <!--test with onboarding colors-->
     <!--<color name="tv_bg">#1c313a</color>-->

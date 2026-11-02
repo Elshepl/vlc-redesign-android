@@ -163,10 +163,10 @@ class CardPresenter(private val context: FragmentActivity, private val isPoster:
     }
 
     override fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
-        val cardView = ImageCardView(context)
+        // VLC Redesign: the design's focus, an accent frame (RdTvCard)
+        val cardView = RdTvCard(context)
         cardView.isFocusable = true
         cardView.isFocusableInTouchMode = true
-        cardView.setBackgroundColor(ContextCompat.getColor(context, R.color.lb_details_overview_bg_color))
         if (isPoster) cardView.setMainImageDimensions(CARD_WIDTH_POSTER, CARD_HEIGHT_POSTER)
         else cardView.setMainImageDimensions(CARD_WIDTH, CARD_HEIGHT)
         return ViewHolder(cardView)

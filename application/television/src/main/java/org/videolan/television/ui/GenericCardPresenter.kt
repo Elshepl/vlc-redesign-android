@@ -19,7 +19,8 @@ class GenericCardPresenter @JvmOverloads constructor(context: Context, cardTheme
     override fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
         Log.d(TAG, "onCreateViewHolder")
 
-        val cardView = ImageCardView(context)
+        // VLC Redesign: the design's focus, an accent frame (RdTvCard)
+        val cardView = RdTvCard(context)
 
         cardView.isFocusable = true
         cardView.isFocusableInTouchMode = true
@@ -39,7 +40,6 @@ class GenericCardPresenter @JvmOverloads constructor(context: Context, cardTheme
             cardView.titleText = item.title
             cardView.contentText = item.content
 
-            cardView.setBackgroundColor(bgColor)
             cardView.findViewById<View>(R.id.info_field).setBackgroundColor(bgColor)
         }
     }

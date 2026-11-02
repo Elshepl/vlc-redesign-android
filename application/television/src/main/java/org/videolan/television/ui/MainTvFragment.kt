@@ -148,10 +148,14 @@ class MainTvFragment : BrowseSupportFragment(), OnItemViewSelectedListener, OnIt
         if (AndroidDevices.hasPlayServices) {
             setOnSearchClickedListener(this)
             // set search icon color
-            searchAffordanceColor = ContextCompat.getColor(requireContext(), R.color.orange600)
+            searchAffordanceColor = ContextCompat.getColor(requireContext(), R.color.rd_accent_orange_main)
         }
-        brandColor = ContextCompat.getColor(requireContext(), R.color.orange900)
-        backgroundManager = BackgroundManager.getInstance(requireActivity()).apply { attach(requireActivity().window) }
+        // VLC Redesign: the sidebar and the page in the design's dark palette, the accent for the search
+        brandColor = ContextCompat.getColor(requireContext(), R.color.rd_dark_bg_b2)
+        backgroundManager = BackgroundManager.getInstance(requireActivity()).apply {
+            attach(requireActivity().window)
+            color = ContextCompat.getColor(requireContext(), R.color.tv_bg)
+        }
         model = getMainTvModel()
         PlaybackService.serviceFlow.onEach { onServiceChanged(it) }
             .onCompletion {
