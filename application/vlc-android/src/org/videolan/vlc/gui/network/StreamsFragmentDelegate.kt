@@ -32,6 +32,7 @@ import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.launch
+import org.videolan.libvlc.util.Extensions
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.resources.*
 import org.videolan.tools.copy
@@ -108,6 +109,10 @@ class StreamsFragmentDelegate : IStreamsFragmentDelegate, CtxActionReceiver {
 
     override fun playMedia(mw: MediaWrapper) {
         mw.type = MediaWrapper.TYPE_STREAM
+        // VLC Redesign: a video file (its extension) starts with its video: opened without (":no-video", a stream
+        // until its video is seen), libvlc chose no subtitle and the subtitles stayed off once the player was shown
+        val ext = mw.uri.lastPathSegment?.substringAfterLast('.', "")?.lowercase()
+        if (!ext.isNullOrEmpty() && Extensions.VIDEO.contains(".$ext")) mw.addFlags(MediaWrapper.MEDIA_VIDEO)
         if (mw.uri.scheme?.startsWith("rtsp") == true) VideoPlayerActivity.start(fragment.requireContext(), mw.uri)
         else MediaUtils.openMedia(fragment.activity, mw)
         fragment.activity?.invalidateOptionsMenu()

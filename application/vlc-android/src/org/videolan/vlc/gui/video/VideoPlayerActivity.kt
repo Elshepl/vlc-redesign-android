@@ -1802,7 +1802,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                                         }
                                     }
                                 }
-                                val audioTrack = when (val savedTrack = media.getMetaString(MediaWrapper.META_AUDIOTRACK) ?: "0") {
+                                val audioTrack = when (val savedTrack = media.getMetaString(MediaWrapper.META_AUDIOTRACK)?.takeIf { it.isRestorableTrack() } ?: "0") {
                                     "0" -> preferredTrack
                                     else -> savedTrack
                                 }
@@ -1828,7 +1828,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                                         }
                                     }
                                 }
-                                val spuTrack = when (val savedTrack = media.getMetaString(MediaWrapper.META_SUBTITLE_TRACK) ?: "0") {
+                                val spuTrack = when (val savedTrack = media.getMetaString(MediaWrapper.META_SUBTITLE_TRACK)?.takeIf { it.isRestorableTrack() } ?: "0") {
                                     "0" -> preferredTrack
                                     else -> savedTrack
                                 }
@@ -2343,12 +2343,17 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         window.decorView.systemUiVisibility = visibility
     }
 
+    /** a track kept for the media: "-1" (none) or a track's id; "-2" and "0" are nothing kept */
+    private fun String.isRestorableTrack() = isNotEmpty() && this != "-2" && this != "0"
+
     private fun setESTracks() {
-        if (lastAudioTrack >= "-1") {
+        // VLC Redesign: the ids are strings: ">= \"-1\"" was true for "-2" (nothing to restore) and "0" (nothing
+        // saved), and set that track: the subtitles were off for a file opened from Streams or Recent
+        if (lastAudioTrack.isRestorableTrack()) {
             service?.setAudioTrack(lastAudioTrack)
             lastAudioTrack = "-2"
         }
-        if (lastSpuTrack >=" -1") {
+        if (lastSpuTrack.isRestorableTrack()) {
             service?.setSpuTrack(lastSpuTrack)
             lastSpuTrack = "-2"
         }

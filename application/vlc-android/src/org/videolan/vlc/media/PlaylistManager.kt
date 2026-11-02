@@ -828,7 +828,8 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
     fun setSpuTrack(index: String) {
         if (!player.setSpuTrack(index)) return
         val media = getCurrentMedia() ?: return
-        if (media.id != 0L) launch(Dispatchers.IO) { media.setStringMeta(MediaWrapper.META_SUBTITLE_TRACK, index) }
+        // VLC Redesign: "-2" is "nothing to restore", not a choice: kept, it turned the subtitles off every time
+        if (media.id != 0L && index != "-2") launch(Dispatchers.IO) { media.setStringMeta(MediaWrapper.META_SUBTITLE_TRACK, index) }
     }
 
     fun setAudioDelay(delay: Long) {
@@ -860,7 +861,9 @@ class PlaylistManager(val service: PlaybackService) : MediaWrapperList.EventList
                 val abStop = media.getMetaLong(MediaWrapper.META_AB_REPEAT_STOP)
                 abRepeat.postValue(ABRepeat(abStart, if (abStop == 0L) -1L else abStop))
             }
-            player.setSpuTrack(media.getMetaLong(MediaWrapper.META_SUBTITLE_TRACK).toString())
+            // VLC Redesign: the track is kept as a string (setSpuTrack); read as a number, nothing saved gave "0", a
+            // track that does not exist, and turned the subtitles off (a stream or a file opened from Streams)
+            media.getMetaString(MediaWrapper.META_SUBTITLE_TRACK)?.takeIf { it.isNotEmpty() && it != "0" && it != "-2" }?.let { player.setSpuTrack(it) }
             player.setSpuDelay(media.getMetaLong(MediaWrapper.META_SUBTITLE_DELAY))
         }
         restoreSpeed(media)
