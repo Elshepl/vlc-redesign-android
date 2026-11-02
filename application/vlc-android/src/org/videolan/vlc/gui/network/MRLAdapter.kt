@@ -129,6 +129,8 @@ internal class MRLAdapter(private val eventActor: SendChannel<MrlAction>, privat
             itemView.setOnLongClickListener { eventActor.trySend(ShowContext(layoutPosition)).isSuccess }
             binding.mrlCtx.setOnClickListener { eventActor.trySend(ShowContext(layoutPosition)) }
             binding.selector.setOnClickListener { onClick(it) }
+            // the selector covers the row: without its own long press, a long press played the stream
+            binding.selector.setOnLongClickListener { eventActor.trySend(ShowContext(layoutPosition)).isSuccess }
         }
 
         override fun onClick(v: View) {
