@@ -191,8 +191,9 @@ object VLCOptions {
                 options.add("--sub-text-scale=$subtitleScale")
             }
             if (freetypeBold) options.add("--freetype-bold")
-            // VLC Redesign: the subtitle font of Settings (a family of Android's font list; empty: libvlc's default)
-            pref.getString("rd_sub_font", "")?.takeIf { it.isNotBlank() }?.let { options.add("--freetype-font=$it") }
+            // VLC Redesign: the subtitle font of Settings (a family of Android's font list; empty: libvlc's default),
+            // by the name fontconfig knows it (RdSubtitleFont)
+            pref.getString("rd_sub_font", "")?.takeIf { it.isNotBlank() }?.let { options.add("--freetype-font=" + RdSubtitleFont.family(it)) }
             options.add("--freetype-color=$freetypeColor")
             options.add("--freetype-opacity=$freetypeColorOpacity")
             if (freetypeBackgroundEnabled) {
