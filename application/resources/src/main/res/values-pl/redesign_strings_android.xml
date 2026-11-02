@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Przechowywana tylko na tym urządzeniu, aby kontynuować od miejsca, w którym przerwano.</string>
     <string name="rd_ob_updates_help">Raz dziennie sprawdza, czy jest nowsza testowa wersja VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aplikacja informuje, gdy wyjdzie nowa wersja: Pobierz, Co nowego lub Pomiń.</item>
-        <item>Link do wideo w sieci, otwarty z innej aplikacji, odtwarza się od razu.</item>
-        <item>TalkBack odczytuje przełączniki Ustawień: przełącznik, włączony lub wyłączony.</item>
+        <item>Napisy pokazują się w wideo otwartym z Otwórz strumień sieciowy lub Ostatnie.</item>
+        <item>Czcionka napisów w Ustawieniach już działa: szeryfowa, o stałej szerokości, swobodna lub pisana.</item>
+        <item>Na Android TV ciemny wygląd projektu, jego czcionka i pomarańczowa ramka wokół zaznaczonej karty.</item>
     </string-array>
     <string name="rd_subtitle_size">Rozmiar napisów</string>
     <string name="rd_cast_this_phone">Ten telefon</string>

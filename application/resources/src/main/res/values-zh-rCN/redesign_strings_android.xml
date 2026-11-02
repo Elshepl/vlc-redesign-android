@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">仅保存在本设备上，用于从上次停下的地方继续。</string>
     <string name="rd_ob_updates_help">每天检查一次是否有更新的 VLC for Android 测试版。</string>
     <string-array name="rd_whats_new_items">
-        <item>有新版本时应用会告诉你：下载、新功能或跳过。</item>
-        <item>从其他应用打开的网络视频链接会立即播放。</item>
-        <item>TalkBack 会朗读设置中的开关：开关，开启或关闭。</item>
+        <item>从打开网络串流或最近列表中打开的视频会显示字幕。</item>
+        <item>设置中的字幕字体现在可用了：衬线、等宽、休闲或手写体。</item>
+        <item>在 Android TV 上，设计的深色外观、它的字体，以及焦点卡片周围的橙色边框。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">此手机</string>

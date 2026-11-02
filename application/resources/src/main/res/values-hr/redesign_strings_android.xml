@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Čuva se samo na ovom uređaju, da biste nastavili gdje ste stali.</string>
     <string name="rd_ob_updates_help">Jednom dnevno traži noviju probnu verziju VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aplikacija vam javlja kad izađe nova verzija: Preuzmi, Što je novo ili Preskoči.</item>
-        <item>Poveznica na video na mreži, otvorena iz druge aplikacije, odmah se reproducira.</item>
-        <item>TalkBack čita prekidače u Postavkama: prekidač, uključen ili isključen.</item>
+        <item>Titlovi se prikazuju za video otvoren iz Otvori mrežni tok ili Nedavno.</item>
+        <item>Font titlova u Postavkama sada radi: serifni, jednake širine, ležerni ili kurziv.</item>
+        <item>Na Android TV-u tamni izgled dizajna, njegov font i narančasti okvir oko kartice u fokusu.</item>
     </string-array>
     <string name="rd_subtitle_size">Veličina titlova</string>
     <string name="rd_cast_this_phone">Ovaj telefon</string>

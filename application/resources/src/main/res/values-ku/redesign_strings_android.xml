@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
     <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
     <string-array name="rd_whats_new_items">
-        <item>Sepan ji te re dibêje dema guhertoyek nû derdikeve: Daxe, Çi nû ye an Derbas bike.</item>
-        <item>Girêdanek bo vîdyoyek li ser torê, ji sepanek din vekirî, yekser tê lîstin.</item>
-        <item>TalkBack guhêrbarên Mîhengan dixwîne: guhêrbar, vekirî an girtî.</item>
+        <item>Jêrnivîs ji bo vîdyoyek ku ji Herikîna torê veke an Dawîn hatiye vekirin xuya dibin.</item>
+        <item>Curenivîsa jêrnivîsan a Mîhengan êdî dixebite: serif, monospace, asayî an destnivîs.</item>
+        <item>Li ser Android TV, xuyabûna tarî ya sêwiranê, curenivîsa wê û çarçoveyek porteqalî li dora karta di fokusê de.</item>
     </string-array>
     <string name="rd_subtitle_size">قەبارەی ژێرنووس</string>
     <string name="rd_cast_this_phone">ئەم مۆبایلە</string>

@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">נשמר במכשיר הזה בלבד, כדי להמשיך מהמקום שבו הפסקת.</string>
     <string name="rd_ob_updates_help">מחפש גרסת בדיקה חדשה יותר של VLC for Android פעם ביום.</string>
     <string-array name="rd_whats_new_items">
-        <item>האפליקציה מודיעה כשיוצאת גרסה חדשה: הורדה, מה חדש או דילוג.</item>
-        <item>קישור לסרטון ברשת, שנפתח מאפליקציה אחרת, מתנגן מיד.</item>
-        <item>TalkBack מקריא את המתגים של ההגדרות: מתג, מופעל או כבוי.</item>
+        <item>הכתוביות מוצגות בסרטון שנפתח מ״פתח תזרים רשת״ או מ״אחרונים״.</item>
+        <item>גופן הכתוביות בהגדרות עובד עכשיו: סריף, ברוחב קבוע, חופשי או כתב יד.</item>
+        <item>ב־Android TV: המראה הכהה של העיצוב, הגופן שלו ומסגרת כתומה סביב הכרטיס שבפוקוס.</item>
     </string-array>
     <string name="rd_fx_luma_spat">עוצמת בהירות מרחבית (0-254)</string>
     <string name="rd_fx_luma_temp">עוצמת בהירות זמנית (0-254)</string>

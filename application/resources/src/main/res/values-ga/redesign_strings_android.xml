@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
     <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
     <string-array name="rd_whats_new_items">
-        <item>Insíonn an aip duit nuair a bhíonn leagan nua ar fáil: Íoslódáil, Cad atá nua nó Scipeáil.</item>
-        <item>Seinntear láithreach nasc chuig físeán ar an líonra, a osclaítear ó aip eile.</item>
-        <item>Léann TalkBack lasca na Socruithe: lasc, air nó as.</item>
+        <item>Taispeántar fotheidil d\'fhíseán a osclaítear ó Oscail Sruth Líonra nó Le déanaí.</item>
+        <item>Oibríonn cló fotheideal na Socruithe anois: serif, aonspásáilte, neamhfhoirmiúil nó peannaireachta.</item>
+        <item>Ar Android TV, cuma dhorcha an dearaidh, a chló agus fráma oráiste timpeall an chárta atá i bhfócas.</item>
     </string-array>
     <string name="rd_subtitle_size">Méid na bhfotheideal</string>
     <string name="rd_cast_this_phone">An fón seo</string>

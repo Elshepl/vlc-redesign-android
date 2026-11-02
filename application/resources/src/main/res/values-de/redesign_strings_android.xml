@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Nur auf diesem Gerät gespeichert, um dort weiterzumachen, wo Sie aufgehört haben.</string>
     <string name="rd_ob_updates_help">Sucht einmal täglich nach einer neueren Testversion von VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Die App sagt dir, wenn eine neue Version erscheint: Herunterladen, Neuigkeiten oder Überspringen.</item>
-        <item>Ein Link zu einem Video im Netzwerk, aus einer anderen App geöffnet, wird sofort abgespielt.</item>
-        <item>TalkBack liest die Schalter der Einstellungen vor: ein Schalter, an oder aus.</item>
+        <item>Untertitel werden bei einem Video angezeigt, das über Netzwerkstream öffnen oder Zuletzt geöffnet wurde.</item>
+        <item>Die Untertitelschrift der Einstellungen funktioniert jetzt: Serif, Monospace, Locker oder Schreibschrift.</item>
+        <item>Auf Android TV das dunkle Aussehen des Designs, seine Schrift und ein oranger Rahmen um die fokussierte Karte.</item>
     </string-array>
     <string name="rd_subtitle_size">Untertitelgröße</string>
     <string name="rd_cast_this_phone">Dieses Telefon</string>

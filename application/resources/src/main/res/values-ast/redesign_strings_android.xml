@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>L\'aplicación avísate cuando sal una versión nueva: Descargar, Novedaes o Saltar.</item>
-        <item>Un enllaz a un videu na rede, abiertu dende otra aplicación, reprodúzse al momentu.</item>
-        <item>TalkBack llee los interruptores de Axustes: un interruptor, activáu o desactiváu.</item>
+        <item>Los sotítulos amuésense nun videu abiertu dende Abrir fluxu de rede o Recientes.</item>
+        <item>La fonte de sotítulos d\'Axustes yá funciona: serif, monoespaciada, informal o cursiva.</item>
+        <item>N\'Android TV, l\'aspeutu escuru del diseñu, la so fonte y un marcu naranxa alredor de la tarxeta enfocada.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

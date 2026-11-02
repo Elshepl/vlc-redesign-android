@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
     <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
     <string-array name="rd_whats_new_items">
-        <item>Rakendus annab teada, kui uus versioon ilmub: Laadi alla, Mis on uut või Jäta vahele.</item>
-        <item>Link võrgus olevale videole, mis avatakse teisest rakendusest, mängib kohe.</item>
-        <item>TalkBack loeb seadete lüliteid: lüliti, sees või väljas.</item>
+        <item>Subtiitrid kuvatakse videol, mis avatakse kohast Ava võrguvoog või Hiljutised.</item>
+        <item>Seadete subtiitrite font töötab nüüd: seriifidega, püsilaiusega, vabas stiilis või kursiiv.</item>
+        <item>Android TV-s kujunduse tume välimus, selle font ja oranž raam fookuses oleva kaardi ümber.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtiitrite suurus</string>
     <string name="rd_cast_this_phone">See telefon</string>

@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Programu inakujulisha toleo jipya linapotoka: Pakua, Kipya ni nini au Ruka.</item>
-        <item>Kiungo cha video kwenye mtandao, kilichofunguliwa kutoka programu nyingine, kinachezwa mara moja.</item>
-        <item>TalkBack husoma swichi za Mipangilio: swichi, imewashwa au imezimwa.</item>
+        <item>Manukuu yanaonekana kwa video iliyofunguliwa kutoka Fungua Mtiririko wa Mtandao au Za Hivi Karibuni.</item>
+        <item>Fonti ya manukuu katika Mipangilio sasa inafanya kazi: serif, monospace, ya kawaida au ya mwandiko.</item>
+        <item>Kwenye Android TV, mwonekano mweusi wa muundo, fonti yake na fremu ya rangi ya chungwa kuzunguka kadi iliyochaguliwa.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

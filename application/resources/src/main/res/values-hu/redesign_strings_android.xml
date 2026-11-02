@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
-        <item>Az alkalmazás szól, ha új verzió jelenik meg: Letöltés, Újdonságok vagy Kihagyás.</item>
-        <item>Egy hálózati videó hivatkozása, egy másik alkalmazásból megnyitva, azonnal lejátszódik.</item>
-        <item>A TalkBack felolvassa a Beállítások kapcsolóit: kapcsoló, be vagy ki.</item>
+        <item>A feliratok megjelennek a Hálózati adatfolyam megnyitása vagy a Legutóbbiak felől megnyitott videónál.</item>
+        <item>A Beállítások feliratbetűtípusa már működik: talpas, rögzített szélességű, laza vagy kézírásos.</item>
+        <item>Android TV-n a dizájn sötét megjelenése, betűtípusa és egy narancssárga keret a kijelölt kártya körül.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>

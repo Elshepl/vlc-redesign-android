@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>Uygulama yeni bir sürüm çıktığında size haber verir: İndir, Yenilikler veya Atla.</item>
-        <item>Başka bir uygulamadan açılan ağdaki bir videonun bağlantısı hemen oynatılır.</item>
-        <item>TalkBack, Ayarlar\'daki anahtarları okur: anahtar, açık veya kapalı.</item>
+        <item>Ağ Akışı Aç veya Son Kullanılanlar\'dan açılan bir videoda altyazılar görünür.</item>
+        <item>Ayarlar\'daki altyazı yazı tipi artık çalışıyor: serif, eş aralıklı, gündelik veya el yazısı.</item>
+        <item>Android TV\'de tasarımın koyu görünümü, yazı tipi ve odaktaki kartın çevresinde turuncu bir çerçeve.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

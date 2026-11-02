@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Ứng dụng báo cho bạn khi có phiên bản mới: Tải xuống, Có gì mới hoặc Bỏ qua.</item>
-        <item>Liên kết tới video trên mạng, mở từ ứng dụng khác, phát ngay lập tức.</item>
-        <item>TalkBack đọc các công tắc trong Cài đặt: công tắc, bật hoặc tắt.</item>
+        <item>Phụ đề hiển thị cho video mở từ Mở luồng mạng hoặc Gần đây.</item>
+        <item>Phông chữ phụ đề trong Cài đặt giờ đã hoạt động: có chân, đơn cách, thân mật hoặc viết tay.</item>
+        <item>Trên Android TV: giao diện tối của thiết kế, phông chữ của nó và khung màu cam quanh thẻ đang được chọn.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

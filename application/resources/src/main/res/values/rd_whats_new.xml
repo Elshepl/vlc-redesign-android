@@ -3,8 +3,8 @@
      translate"). -->
 <resources>
     <string-array name="rd_whats_new_items">
-        <item>The app tells you when a new version is out: Download, What\'s new or Skip.</item>
-        <item>A link to a video on the network, opened from another app, plays at once.</item>
-        <item>TalkBack reads the switches of Settings: a switch, on or off.</item>
+        <item>Subtitles show for a video opened from Open Network Stream or Recent.</item>
+        <item>The subtitle font of Settings now works: serif, monospace, casual or cursive.</item>
+        <item>On Android TV, the design\'s dark look, its font and an orange frame around the card in focus.</item>
     </string-array>
 </resources>

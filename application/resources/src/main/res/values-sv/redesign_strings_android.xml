@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Sparas bara på den här enheten, så att du kan fortsätta där du slutade.</string>
     <string name="rd_ob_updates_help">Letar en gång om dagen efter en nyare testversion av VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Appen säger till när en ny version kommer: Hämta, Nyheter eller Hoppa över.</item>
-        <item>En länk till en video på nätverket, öppnad från en annan app, spelas upp direkt.</item>
-        <item>TalkBack läser upp reglagen i Inställningar: ett reglage, på eller av.</item>
+        <item>Undertexter visas för en video som öppnats från Öppna nätverksström eller Senaste.</item>
+        <item>Undertextteckensnittet i Inställningar fungerar nu: serif, monospace, avslappnat eller kursivt.</item>
+        <item>På Android TV: designens mörka utseende, dess teckensnitt och en orange ram runt kortet i fokus.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertextstorlek</string>
     <string name="rd_cast_this_phone">Den här telefonen</string>

@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aplicația vă anunță când apare o versiune nouă: Descarcă, Ce e nou sau Omite.</item>
-        <item>Un link către un videoclip din rețea, deschis din altă aplicație, pornește imediat.</item>
-        <item>TalkBack citește comutatoarele din Setări: un comutator, activat sau dezactivat.</item>
+        <item>Subtitrările apar la un videoclip deschis din Deschide flux de rețea sau Recente.</item>
+        <item>Fontul subtitrărilor din Setări funcționează acum: serif, monospațiat, informal sau cursiv.</item>
+        <item>Pe Android TV, aspectul întunecat al designului, fontul său și un chenar portocaliu în jurul cardului selectat.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
     <string name="rd_cast_this_phone">Acest telefon</string>

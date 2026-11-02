@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Conservata solo su questo dispositivo, per riprendere da dove avevi lasciato.</string>
     <string name="rd_ob_updates_help">Cerca una versione di prova più recente di VLC for Android una volta al giorno.</string>
     <string-array name="rd_whats_new_items">
-        <item>L\'app ti avvisa quando esce una nuova versione: Scarica, Novità o Salta.</item>
-        <item>Un link a un video in rete, aperto da un\'altra app, si riproduce subito.</item>
-        <item>TalkBack legge gli interruttori delle Impostazioni: un interruttore, attivo o disattivo.</item>
+        <item>I sottotitoli compaiono in un video aperto da Apri flusso di rete o Recenti.</item>
+        <item>Il carattere dei sottotitoli delle Impostazioni ora funziona: serif, monospazio, informale o corsivo.</item>
+        <item>Su Android TV, l\'aspetto scuro del design, il suo carattere e una cornice arancione attorno alla scheda selezionata.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
     <string name="rd_cast_this_phone">Questo telefono</string>

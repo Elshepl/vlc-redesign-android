@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">
-        <item>Lietotne paziņo, kad iznāk jauna versija: Lejupielādēt, Kas jauns vai Izlaist.</item>
-        <item>Saite uz video tīklā, atvērta no citas lietotnes, tiek atskaņota uzreiz.</item>
-        <item>TalkBack nolasa Iestatījumu slēdžus: slēdzis, ieslēgts vai izslēgts.</item>
+        <item>Subtitri tiek rādīti video, kas atvērts no Atvērt tīkla straumi vai Nesenie.</item>
+        <item>Iestatījumu subtitru fonts tagad darbojas: ar serifiem, vienplatuma, brīvs vai rokraksts.</item>
+        <item>Android TV — dizaina tumšais izskats, tā fonts un oranžs rāmis ap fokusā esošo kartīti.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitru izmērs</string>
     <string name="rd_cast_this_phone">Šis tālrunis</string>

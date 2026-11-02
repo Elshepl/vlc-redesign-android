@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">
-        <item>Programa praneša, kai išeina nauja versija: Atsisiųsti, Kas naujo arba Praleisti.</item>
-        <item>Nuoroda į vaizdo įrašą tinkle, atverta iš kitos programos, paleidžiama iš karto.</item>
-        <item>TalkBack perskaito Nustatymų jungiklius: jungiklis, įjungta arba išjungta.</item>
+        <item>Subtitrai rodomi vaizdo įraše, atvertame iš Atverti tinklo srautą arba Naujausi.</item>
+        <item>Nustatymų subtitrų šriftas dabar veikia: su užraitais, lygiaplotis, laisvas arba rašytinis.</item>
+        <item>Android TV – tamsi dizaino išvaizda, jo šriftas ir oranžinis rėmelis aplink pažymėtą kortelę.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
     <string name="rd_cast_this_phone">Šis telefonas</string>

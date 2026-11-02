@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Guardado apenas neste dispositivo, para continuar onde parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais recente do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>A aplicação avisa quando sai uma nova versão: Transferir, Novidades ou Ignorar.</item>
-        <item>Uma ligação para um vídeo na rede, aberta a partir de outra aplicação, é reproduzida de imediato.</item>
-        <item>O TalkBack lê os interruptores das Definições: um interruptor, ligado ou desligado.</item>
+        <item>As legendas aparecem num vídeo aberto a partir de Abrir fluxo de rede ou Recentes.</item>
+        <item>O tipo de letra das legendas das Definições já funciona: serifa, monoespaçado, informal ou cursivo.</item>
+        <item>No Android TV, o aspeto escuro do design, o seu tipo de letra e uma moldura laranja à volta do cartão em foco.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este telemóvel</string>

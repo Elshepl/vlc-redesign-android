@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">يُحفظ على هذا الجهاز فقط، للمتابعة من حيث توقفت.</string>
     <string name="rd_ob_updates_help">يبحث مرة في اليوم عن إصدار تجريبي أحدث من VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>يخبرك التطبيق عند صدور إصدار جديد: تنزيل، ما الجديد، أو تخطٍّ.</item>
-        <item>رابط إلى فيديو على الشبكة، يُفتح من تطبيق آخر، يُشغَّل فورًا.</item>
-        <item>يقرأ TalkBack مفاتيح الإعدادات: مفتاح، مشغَّل أو متوقف.</item>
+        <item>تظهر الترجمات لفيديو يُفتح من فتح بث شبكي أو الأخيرة.</item>
+        <item>خط الترجمة في الإعدادات يعمل الآن: مذيّل، أحادي المسافة، غير رسمي أو مخطوطي.</item>
+        <item>على Android TV: المظهر الداكن للتصميم، وخطه، وإطار برتقالي حول البطاقة المحدَّدة.</item>
     </string-array>
     <string name="rd_subtitle_size">حجم الترجمة</string>
     <string name="rd_cast_this_phone">هذا الهاتف</string>

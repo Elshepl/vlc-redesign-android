@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
     <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aplikazioak bertsio berri bat ateratzen denean esaten dizu: Deskargatu, Zer dago berri edo Saltatu.</item>
-        <item>Sareko bideo baterako esteka bat, beste aplikazio batetik irekita, berehala erreproduzitzen da.</item>
-        <item>TalkBack-ek Ezarpenetako etengailuak irakurtzen ditu: etengailua, aktibatuta edo desaktibatuta.</item>
+        <item>Azpitituluak ikusten dira Ireki sareko jarioa edo Azkenak aukeratik irekitako bideo batean.</item>
+        <item>Ezarpenetako azpitituluen letra-tipoak orain funtzionatzen du: serif, tarte bakarrekoa, informala edo eskuzkoa.</item>
+        <item>Android TV-n, diseinuaren itxura iluna, bere letra-tipoa eta marko laranja bat fokuan dagoen txartelaren inguruan.</item>
     </string-array>
     <string name="rd_subtitle_size">Azpitituluen tamaina</string>
     <string name="rd_cast_this_phone">Telefono hau</string>

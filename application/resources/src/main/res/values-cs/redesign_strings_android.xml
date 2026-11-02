@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Uchovává se jen v tomto zařízení, abyste mohli pokračovat tam, kde jste skončili.</string>
     <string name="rd_ob_updates_help">Jednou denně hledá novější testovací sestavení VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aplikace vám řekne, když vyjde nová verze: Stáhnout, Co je nového nebo Přeskočit.</item>
-        <item>Odkaz na video v síti, otevřený z jiné aplikace, se hned přehraje.</item>
-        <item>TalkBack čte přepínače Nastavení: přepínač, zapnuto nebo vypnuto.</item>
+        <item>Titulky se zobrazí u videa otevřeného z Otevřít síťový proud nebo Nedávné.</item>
+        <item>Písmo titulků v Nastavení teď funguje: patkové, s pevnou šířkou, neformální nebo psací.</item>
+        <item>Na Android TV tmavý vzhled návrhu, jeho písmo a oranžový rámeček kolem karty ve fokusu.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost titulků</string>
     <string name="rd_cast_this_phone">Tento telefon</string>

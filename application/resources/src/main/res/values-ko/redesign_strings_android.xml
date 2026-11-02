@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">이 기기에만 저장되며, 멈춘 곳부터 이어서 보는 데 쓰입니다.</string>
     <string name="rd_ob_updates_help">하루에 한 번 VLC for Android의 새 테스트 빌드를 확인합니다.</string>
     <string-array name="rd_whats_new_items">
-        <item>새 버전이 나오면 앱이 알려 줍니다: 다운로드, 새로운 기능 또는 건너뛰기.</item>
-        <item>다른 앱에서 연 네트워크 동영상 링크가 바로 재생됩니다.</item>
-        <item>TalkBack이 설정의 스위치를 읽어 줍니다: 스위치, 켜짐 또는 꺼짐.</item>
+        <item>네트워크 스트림 열기 또는 최근 항목에서 연 동영상에 자막이 표시됩니다.</item>
+        <item>설정의 자막 글꼴이 이제 작동합니다: 세리프, 고정폭, 캐주얼 또는 필기체.</item>
+        <item>Android TV에서 디자인의 어두운 모습, 글꼴, 그리고 포커스된 카드를 두르는 주황색 테두리.</item>
     </string-array>
     <string name="rd_subtitle_size">자막 크기</string>
     <string name="rd_cast_this_phone">이 휴대전화</string>

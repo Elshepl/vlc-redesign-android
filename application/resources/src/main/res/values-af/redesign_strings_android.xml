@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Net op hierdie toestel gehou, om voort te gaan waar jy opgehou het.</string>
     <string name="rd_ob_updates_help">Soek een keer per dag na ’n nuwer toetsweergawe van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Die app sê vir jou wanneer \'n nuwe weergawe uit is: Laai af, Wat\'s nuut of Slaan oor.</item>
-        <item>\'n Skakel na \'n video op die netwerk, uit \'n ander app oopgemaak, speel dadelik.</item>
-        <item>TalkBack lees die skakelaars van Instellings: \'n skakelaar, aan of af.</item>
+        <item>Onderskrifte wys vir \'n video wat uit Maak netwerkstroom oop of Onlangs oopgemaak is.</item>
+        <item>Die onderskriflettertipe van Instellings werk nou: serif, monospasie, informeel of kursief.</item>
+        <item>Op Android TV: die ontwerp se donker voorkoms, sy lettertipe en \'n oranje raam om die kaart in fokus.</item>
     </string-array>
     <string name="rd_subtitle_size">Onderskrifgrootte</string>
     <string name="rd_cast_this_phone">Hierdie foon</string>

@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
     <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aplikacioni ju njofton kur del një version i ri: Shkarko, Çfarë ka të re ose Kapërce.</item>
-        <item>Një lidhje për një video në rrjet, e hapur nga një aplikacion tjetër, luhet menjëherë.</item>
-        <item>TalkBack lexon çelësat e Cilësimeve: një çelës, aktiv ose joaktiv.</item>
+        <item>Titrat shfaqen për një video të hapur nga Hap rrjedhë rrjeti ose Së fundi.</item>
+        <item>Shkronjat e titrave te Cilësimet tani funksionojnë: serif, me gjerësi fikse, të lira ose dore.</item>
+        <item>Në Android TV, pamja e errët e dizajnit, shkronjat e tij dhe një kornizë portokalli rreth kartës në fokus.</item>
     </string-array>
     <string name="rd_subtitle_size">Madhësia e titrave</string>
     <string name="rd_cast_this_phone">Ky telefon</string>
