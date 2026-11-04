@@ -4,7 +4,8 @@
  * the background of the page on screen: right under its rows, cards and lists, so they, every menu and every
  * dialog stay on top of it; never in the players. The page's words stay easy to read over it: the room darkens
  * toward its top and the texts get a soft dark edge while it shows. It moves a few pixels every minute, so nothing
- * stays burnt in one place. Any key takes it away, and the key works as usual.
+ * stays burnt in one place. Any key takes it away, and the key works as usual. While it is on, the system's
+ * screen saver does not start over the app's pages (the cat is the screen saver).
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General
  * Public License as published by the Free Software Foundation; either version 2 of the License, or (at your
@@ -20,6 +21,7 @@ import android.os.SystemClock
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import android.view.WindowManager
 import android.widget.FrameLayout
 import android.widget.TextView
 import org.videolan.tools.Settings
@@ -51,12 +53,17 @@ class RdTvIdleScreen(private val activity: Activity) {
     fun onResume() {
         resumed = true
         last = SystemClock.uptimeMillis()
+        // the cat is the screen saver here (as on the TV app): the system's own stays away while the page is shown,
+        // and comes back as usual with the idle screen off or the app away
+        if (minutes() > 0) activity.window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        else activity.window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         schedule()
     }
 
     fun onPause() {
         resumed = false
         handler.removeCallbacks(check)
+        activity.window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         hide()
     }
 
