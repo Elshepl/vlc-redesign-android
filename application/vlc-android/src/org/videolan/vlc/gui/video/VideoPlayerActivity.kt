@@ -2720,6 +2720,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     private fun showIdleScene(on: Boolean) {
         idleScene?.visibility = if (on) View.VISIBLE else View.GONE
+        // the loading cone would sit on the cat's face: it waits for the cat to go
+        if (on) { loadingImageView?.clearAnimation(); loadingImageView.setInvisible() }
+        else if (isLoading) { isLoading = false; startLoading() }
     }
 
     /**
@@ -2728,6 +2731,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     private fun startLoading() {
         if (isLoading) return
         isLoading = true
+        if (idleScene?.visibility == View.VISIBLE) return
         val anim = AnimationSet(true)
         val rotate = RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
         rotate.duration = 800
