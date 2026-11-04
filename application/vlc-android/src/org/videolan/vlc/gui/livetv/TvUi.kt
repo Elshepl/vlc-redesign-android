@@ -320,5 +320,6 @@ internal object TvTexts {
         }
     }
 
-    fun span(context: Context, start: Long, stop: Long) = time(context, start) + " – " + time(context, stop)
+    // "20:30 – 21:30" read from the left in every language (in Hebrew the two times would swap places otherwise)
+    fun span(context: Context, start: Long, stop: Long) = "‪" + time(context, start) + " – " + time(context, stop) + "‬"
 }
