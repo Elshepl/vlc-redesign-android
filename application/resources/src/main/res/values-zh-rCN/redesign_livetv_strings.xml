@@ -218,4 +218,7 @@
     <string name="rd_idle_after_3">3 分钟后</string>
     <string name="rd_idle_after_5">5 分钟后</string>
     <string name="rd_idle_after_10">10 分钟后</string>
+    <string name="rd_tv_live_mark">直播</string>
+    <string name="rd_tv_next_mark">下一个</string>
+    <string name="rd_tv_programmes">节目</string>
 </resources>

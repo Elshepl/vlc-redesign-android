@@ -268,4 +268,7 @@
     <string name="rd_idle_after_3">بعد 3 دقائق</string>
     <string name="rd_idle_after_5">بعد 5 دقائق</string>
     <string name="rd_idle_after_10">بعد 10 دقائق</string>
+    <string name="rd_tv_live_mark">مباشر</string>
+    <string name="rd_tv_next_mark">التالي</string>
+    <string name="rd_tv_programmes">البرامج</string>
 </resources>

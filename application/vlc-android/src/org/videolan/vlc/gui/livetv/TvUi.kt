@@ -205,12 +205,16 @@ internal class TvLogoView(context: Context, private val sizeDp: Float, private v
     }
 }
 
-/** The progress of what is on: a time axis, from the left in every language (as the seek bar). */
-internal class TvProgress(context: Context, private val track: Int, private val fill: Int) : View(context) {
+/** The progress of what is on: a time axis, from the left in every language (as the seek bar); [maxWidth] at most. */
+internal class TvProgress(context: Context, private val track: Int, private val fill: Int, private val maxWidth: Int = 0) : View(context) {
     var fraction = 0f
         set(v) { val c = v.coerceIn(0f, 1f); if (c != field) { field = c; invalidate() } }
     private val paint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG)
     init { layoutDirection = LAYOUT_DIRECTION_LTR }
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        if (maxWidth > 0 && measuredWidth > maxWidth) setMeasuredDimension(maxWidth, measuredHeight)
+    }
     override fun onDraw(canvas: android.graphics.Canvas) {
         val r = height / 2f
         paint.color = track

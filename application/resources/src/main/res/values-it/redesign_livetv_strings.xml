@@ -238,4 +238,7 @@
     <string name="rd_idle_after_3">Dopo 3 minuti</string>
     <string name="rd_idle_after_5">Dopo 5 minuti</string>
     <string name="rd_idle_after_10">Dopo 10 minuti</string>
+    <string name="rd_tv_live_mark">Diretta</string>
+    <string name="rd_tv_next_mark">Successivo</string>
+    <string name="rd_tv_programmes">Programmi</string>
 </resources>

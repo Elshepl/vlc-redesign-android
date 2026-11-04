@@ -248,4 +248,7 @@
     <string name="rd_idle_after_3">Po 3 minutách</string>
     <string name="rd_idle_after_5">Po 5 minutách</string>
     <string name="rd_idle_after_10">Po 10 minutách</string>
+    <string name="rd_tv_live_mark">Živé</string>
+    <string name="rd_tv_next_mark">Následující</string>
+    <string name="rd_tv_programmes">Pořady</string>
 </resources>

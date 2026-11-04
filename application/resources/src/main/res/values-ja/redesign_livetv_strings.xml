@@ -218,4 +218,7 @@
     <string name="rd_idle_after_3">3 分後</string>
     <string name="rd_idle_after_5">5 分後</string>
     <string name="rd_idle_after_10">10 分後</string>
+    <string name="rd_tv_live_mark">ライブ</string>
+    <string name="rd_tv_next_mark">次へ</string>
+    <string name="rd_tv_programmes">番組</string>
 </resources>

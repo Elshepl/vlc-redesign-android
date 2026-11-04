@@ -228,4 +228,6 @@
     <string name="rd_idle_after_3">Efter 3 minuter</string>
     <string name="rd_idle_after_5">Efter 5 minuter</string>
     <string name="rd_idle_after_10">Efter 10 minuter</string>
+    <string name="rd_tv_next_mark">Nästa</string>
+    <string name="rd_tv_programmes">Program</string>
 </resources>

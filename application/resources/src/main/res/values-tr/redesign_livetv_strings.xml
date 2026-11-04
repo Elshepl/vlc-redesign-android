@@ -228,4 +228,7 @@
     <string name="rd_idle_after_3">3 dakika sonra</string>
     <string name="rd_idle_after_5">5 dakika sonra</string>
     <string name="rd_idle_after_10">10 dakika sonra</string>
+    <string name="rd_tv_live_mark">Canlı</string>
+    <string name="rd_tv_next_mark">Sonraki</string>
+    <string name="rd_tv_programmes">Programlar</string>
 </resources>

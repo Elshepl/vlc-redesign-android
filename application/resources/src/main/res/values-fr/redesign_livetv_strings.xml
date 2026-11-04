@@ -238,4 +238,6 @@
     <string name="rd_idle_after_3">Après 3 minutes</string>
     <string name="rd_idle_after_5">Après 5 minutes</string>
     <string name="rd_idle_after_10">Après 10 minutes</string>
+    <string name="rd_tv_live_mark">Direct</string>
+    <string name="rd_tv_next_mark">Suivant</string>
 </resources>

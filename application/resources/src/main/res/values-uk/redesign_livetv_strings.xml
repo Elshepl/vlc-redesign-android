@@ -248,4 +248,7 @@
     <string name="rd_idle_after_3">Через 3 хвилини</string>
     <string name="rd_idle_after_5">Через 5 хвилин</string>
     <string name="rd_idle_after_10">Через 10 хвилин</string>
+    <string name="rd_tv_live_mark">Ефір</string>
+    <string name="rd_tv_next_mark">Наступний</string>
+    <string name="rd_tv_programmes">Передачі</string>
 </resources>

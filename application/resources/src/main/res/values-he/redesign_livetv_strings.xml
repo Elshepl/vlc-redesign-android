@@ -238,4 +238,7 @@
     <string name="rd_idle_after_3">אחרי 3 דקות</string>
     <string name="rd_idle_after_5">אחרי 5 דקות</string>
     <string name="rd_idle_after_10">אחרי 10 דקות</string>
+    <string name="rd_tv_live_mark">שידור חי</string>
+    <string name="rd_tv_next_mark">הבא</string>
+    <string name="rd_tv_programmes">תוכניות</string>
 </resources>
