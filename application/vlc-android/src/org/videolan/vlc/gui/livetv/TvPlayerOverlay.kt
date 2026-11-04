@@ -124,14 +124,15 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
     private val bHead = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.TOP }
     private val bLogo = TvLogoView(ctx, 64f, dark = true)
     private val bNumber = ctx.tvText("", 20f, Dark.FG1).apply { typeface = semibold }
-    private val bName = ctx.tvText("", 16f, Dark.FG1).apply { typeface = semibold }
+    private val bName = ctx.tvText("", 16f, Dark.FG1, lines = 2).apply { typeface = semibold }
     private val bFav = ImageView(ctx).apply { setImageResource(R.drawable.rd_tv_favorite_on) }
     private val bGroup = ctx.tvText("", 13f, Dark.A2)
     private val bWhere = pill(12f).apply { setPadding(ctx.tvPx(8f), 0, ctx.tvPx(8f), 0) }
     private val bTitle = ctx.tvText("", 20f, Dark.WHITE).apply { typeface = semibold }
     private val bProgressRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
     private val bTime = ctx.tvText("", 15f, Dark.FG1).apply { typeface = semibold }
-    private val bProgress = TvProgress(ctx, Dark.LINE, ctx.tvAccent, ctx.tvPx(360f))
+    // as on the TV, it fills from the right in a right-to-left language (the seek bar stays left to right)
+    private val bProgress = TvProgress(ctx, Dark.LINE, ctx.tvAccent, ctx.tvPx(360f), mirror = true)
     private val bLeft = ctx.tvText("", 14f, Dark.A0)
     private val bEpisode = ctx.tvText("", 14f, Dark.A0)
     private val bDesc = ctx.tvText("", 14f, Dark.A2, lines = 2).apply { setLineSpacing(maxOf(0f, ctx.tvDp(20f) - paint.getFontMetricsInt(null)), 1f) }
@@ -291,7 +292,7 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
         titleRow.addView(bTitle, LinearLayout.LayoutParams(0, wrap, 1f))
         info.addView(titleRow, LinearLayout.LayoutParams(match, wrap))
         bProgressRow.addView(bTime, LinearLayout.LayoutParams(wrap, wrap).apply { marginEnd = ctx.tvPx(14f) })
-        // the bar keeps its time axis left to right: the gaps around it belong to its neighbours (they mirror)
+        // the gaps around the bar belong to its neighbours
         bProgressRow.addView(bProgress, LinearLayout.LayoutParams(0, ctx.tvPx(5f), 1f))
         bProgressRow.addView(bLeft, LinearLayout.LayoutParams(wrap, wrap).apply { marginStart = ctx.tvPx(14f) })
         info.addView(bProgressRow, LinearLayout.LayoutParams(match, ctx.tvPx(20f)).apply { topMargin = ctx.tvPx(7f) })
@@ -352,10 +353,15 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
             lp.bottomMargin = bottom
             banner.layoutParams = lp
         }
-        // a phone held upright: the channel's column narrower, its logo smaller; the screen's cut-outs at the sides
+        // a phone held upright: the channel's column narrower, its logo smaller; a long name widens it (up to a
+        // third of the screen), then takes two lines
         val narrow = w < ctx.tvPx(600f)
-        val headW = ctx.tvPx(if (narrow) 150f else 260f)
         val logo = ctx.tvPx(if (narrow) 44f else 64f)
+        val number = if (bNumber.text.isEmpty()) 0 else bNumber.paint.measureText(bNumber.text.toString()).toInt() + ctx.tvPx(8f)
+        val star = if (bFav.visibility == View.VISIBLE) ctx.tvPx(22f) else 0
+        val around = bHead.paddingLeft + bHead.paddingRight + logo + ctx.tvPx(12f) + number + star
+        val name = bName.paint.measureText(bName.text.toString()).toInt() + ctx.tvPx(2f)
+        val headW = if (narrow) ctx.tvPx(150f) else (around + name).coerceIn(ctx.tvPx(260f), maxOf(ctx.tvPx(260f), w / 3))
         val cut = androidx.core.view.ViewCompat.getRootWindowInsets(root)?.getInsets(androidx.core.view.WindowInsetsCompat.Type.displayCutout())
         val pad = ctx.tvPx(if (narrow) 4f else 24f)
         val left = pad + (cut?.left ?: 0)
@@ -364,9 +370,7 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
         (bHead.layoutParams as LinearLayout.LayoutParams).let { if (it.width != headW) { it.width = headW; bHead.layoutParams = it } }
         (bLogo.layoutParams as LinearLayout.LayoutParams).let { if (it.width != logo) { it.width = logo; it.height = logo; bLogo.layoutParams = it } }
         // the name as long as the column lets it, the star right after it
-        val number = if (bNumber.text.isEmpty()) 0 else bNumber.paint.measureText(bNumber.text.toString()).toInt() + ctx.tvPx(8f)
-        val star = if (bFav.visibility == View.VISIBLE) ctx.tvPx(22f) else 0
-        bName.maxWidth = maxOf(ctx.tvPx(40f), headW - bHead.paddingLeft - bHead.paddingRight - logo - ctx.tvPx(12f) - number - star)
+        bName.maxWidth = maxOf(ctx.tvPx(40f), headW - around)
     }
 
     private fun navigationInset(): Int {
