@@ -213,4 +213,9 @@
     <plurals name="rd_tv_catchup_days_short">
         <item quantity="other">見逃し視聴 %1$d 日</item>
     </plurals>
+    <string name="rd_idle_screen">スクリーンセーバー</string>
+    <string name="rd_idle_after_1">1 分後</string>
+    <string name="rd_idle_after_3">3 分後</string>
+    <string name="rd_idle_after_5">5 分後</string>
+    <string name="rd_idle_after_10">10 分後</string>
 </resources>

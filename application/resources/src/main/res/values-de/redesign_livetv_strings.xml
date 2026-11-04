@@ -223,4 +223,9 @@
         <item quantity="one">Replay %1$d T</item>
         <item quantity="other">Replay %1$d T</item>
     </plurals>
+    <string name="rd_idle_screen">Ruhebildschirm</string>
+    <string name="rd_idle_after_1">Nach 1 Minute</string>
+    <string name="rd_idle_after_3">Nach 3 Minuten</string>
+    <string name="rd_idle_after_5">Nach 5 Minuten</string>
+    <string name="rd_idle_after_10">Nach 10 Minuten</string>
 </resources>

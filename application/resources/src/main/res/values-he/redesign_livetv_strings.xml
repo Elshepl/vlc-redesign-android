@@ -233,4 +233,9 @@
         <item quantity="two">ארכיון %1$d ימ׳</item>
         <item quantity="other">ארכיון %1$d ימ׳</item>
     </plurals>
+    <string name="rd_idle_screen">מסך המתנה</string>
+    <string name="rd_idle_after_1">אחרי דקה</string>
+    <string name="rd_idle_after_3">אחרי 3 דקות</string>
+    <string name="rd_idle_after_5">אחרי 5 דקות</string>
+    <string name="rd_idle_after_10">אחרי 10 דקות</string>
 </resources>

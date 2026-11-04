@@ -223,4 +223,9 @@
         <item quantity="one">geriye dönük %1$d g</item>
         <item quantity="other">geriye dönük %1$d g</item>
     </plurals>
+    <string name="rd_idle_screen">Ekran koruyucu</string>
+    <string name="rd_idle_after_1">1 dakika sonra</string>
+    <string name="rd_idle_after_3">3 dakika sonra</string>
+    <string name="rd_idle_after_5">5 dakika sonra</string>
+    <string name="rd_idle_after_10">10 dakika sonra</string>
 </resources>

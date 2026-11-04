@@ -31,12 +31,14 @@ import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.MotionEvent
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.snackbar.Snackbar
 import org.videolan.libvlc.Dialog
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.resources.AppContextProvider
 import org.videolan.resources.util.startMedialibrary
+import org.videolan.television.ui.RdTvIdleScreen
 import org.videolan.television.ui.SearchActivity
 import org.videolan.television.ui.dialogs.ConfirmationTvActivity
 import org.videolan.tools.KeyHelper
@@ -62,6 +64,9 @@ abstract class BaseTvActivity : FragmentActivity(), IDialogManager {
     @Volatile
     private var currentlyVisible = false
     private val dialogsDelegate = DialogDelegate()
+    /** VLC Redesign: the cat as the page's background after a while without a key (not in the players) */
+    protected open val idleScreenAllowed = true
+    private val idleScreen by lazy { RdTvIdleScreen(this) }
 
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(newBase?.getContextWithLocale(AppContextProvider.locale))
@@ -87,6 +92,32 @@ abstract class BaseTvActivity : FragmentActivity(), IDialogManager {
         // super.onStart must be called after receiver registration
         super.onStart()
         currentlyVisible = true
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (idleScreenAllowed) idleScreen.onResume()
+    }
+
+    override fun onPause() {
+        if (idleScreenAllowed) idleScreen.onPause()
+        super.onPause()
+    }
+
+    // every key and touch: the idle time again, the cat away; the key itself goes on as usual
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        if (idleScreenAllowed) idleScreen.onInput()
+        return super.dispatchKeyEvent(event)
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        if (idleScreenAllowed && ev.actionMasked == MotionEvent.ACTION_DOWN) idleScreen.onInput()
+        return super.dispatchTouchEvent(ev)
+    }
+
+    override fun dispatchGenericMotionEvent(ev: MotionEvent): Boolean {
+        if (idleScreenAllowed) idleScreen.onInput()
+        return super.dispatchGenericMotionEvent(ev)
     }
 
     override fun onStop() {

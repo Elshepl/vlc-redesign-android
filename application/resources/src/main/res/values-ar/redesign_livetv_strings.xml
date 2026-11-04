@@ -263,4 +263,9 @@
         <item quantity="many">إعادة المشاهدة %1$d ي</item>
         <item quantity="other">إعادة المشاهدة %1$d ي</item>
     </plurals>
+    <string name="rd_idle_screen">شاشة الخمول</string>
+    <string name="rd_idle_after_1">بعد دقيقة واحدة</string>
+    <string name="rd_idle_after_3">بعد 3 دقائق</string>
+    <string name="rd_idle_after_5">بعد 5 دقائق</string>
+    <string name="rd_idle_after_10">بعد 10 دقائق</string>
 </resources>

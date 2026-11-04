@@ -276,6 +276,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         private set
     private var isPlaying = false
     private var loadingImageView: ImageView? = null
+    // VLC Redesign: the designer's cat while a video has no picture yet
+    private var idleScene: View? = null
+    private var vouts = 0
     var enableCloneMode: Boolean = false
     lateinit var orientationMode: PlayerOrientationMode
 
@@ -608,6 +611,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
         /* Loading view */
         loadingImageView = findViewById(R.id.player_overlay_loading)
+        idleScene = findViewById(R.id.player_idle_scene)
         overlayDelegate.dimStatusBar(true)
         handler.sendEmptyMessageDelayed(LOADING_ANIMATION, LOADING_ANIMATION_DELAY.toLong())
 
@@ -1764,14 +1768,18 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 MediaPlayer.Event.Paused -> overlayDelegate.updateOverlayPausePlay()
                 MediaPlayer.Event.Opening -> {
                     forcedTime = -1
+                    // nothing to show until the first picture: the cat (not for a song, nor on a TV it is cast to)
+                    showIdleScene(service.currentMediaWrapper?.type != MediaWrapper.TYPE_AUDIO && !displayManager.isOnRenderer)
                     if (!subtitlesExtraPath.isNullOrEmpty()) {
                         service.addSubtitleTrack(subtitlesExtraPath!!, true)
                         subtitlesExtraPath = null
                     }
                 }
                 MediaPlayer.Event.Vout -> {
+                    vouts = event.voutCount
                     updateNavStatus()
                     if (event.voutCount > 0) {
+                        showIdleScene(false)
                         service.mediaplayer.updateVideoSurfaces()
                         // VideoHelper reset the aspect ratio: a custom one is laid over it again
                         customAspect.onVideoOutput()
@@ -1936,6 +1944,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     private fun onPlaying() {
         val mw = service?.currentMediaWrapper ?: return
         isPlaying = true
+        // the picture kept from the previous video, or no video in it after all (a radio, a song: the audio
+        // player comes): no cat
+        if (vouts > 0 || service?.videoTracksCount == 0) showIdleScene(false)
         overlayDelegate.hasPlaylist = service?.hasPlaylist() == true
         setPlaybackParameters()
         stopLoading()
@@ -1993,6 +2004,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     fun switchToAudioMode(showUI: Boolean) {
         if (service == null) return
+        showIdleScene(false)
         switchingView = true
         PlaylistManager.playingAsAudio = showUI
         // Show the MainActivity if it is not in background.
@@ -2704,6 +2716,10 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         requestedOrientation = value
         if (BuildConfig.DEBUG) Log.d(this::class.java.simpleName, "setOrientation requestedOrientation: $requestedOrientation")
         overlayDelegate.updateOrientationIcon()
+    }
+
+    private fun showIdleScene(on: Boolean) {
+        idleScene?.visibility = if (on) View.VISIBLE else View.GONE
     }
 
     /**

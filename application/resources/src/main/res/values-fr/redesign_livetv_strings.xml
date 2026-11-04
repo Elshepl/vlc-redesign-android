@@ -233,4 +233,9 @@
         <item quantity="many">rattrapage %1$d j</item>
         <item quantity="other">rattrapage %1$d j</item>
     </plurals>
+    <string name="rd_idle_screen">Écran de veille</string>
+    <string name="rd_idle_after_1">Après 1 minute</string>
+    <string name="rd_idle_after_3">Après 3 minutes</string>
+    <string name="rd_idle_after_5">Après 5 minutes</string>
+    <string name="rd_idle_after_10">Après 10 minutes</string>
 </resources>

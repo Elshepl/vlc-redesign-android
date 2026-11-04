@@ -223,4 +223,9 @@
         <item quantity="one">terugkijken %1$d d</item>
         <item quantity="other">terugkijken %1$d d</item>
     </plurals>
+    <string name="rd_idle_screen">Inactief scherm</string>
+    <string name="rd_idle_after_1">Na 1 minuut</string>
+    <string name="rd_idle_after_3">Na 3 minuten</string>
+    <string name="rd_idle_after_5">Na 5 minuten</string>
+    <string name="rd_idle_after_10">Na 10 minuten</string>
 </resources>

@@ -20,6 +20,13 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="false" />
 
+    <!-- VLC Redesign: the designer's cat while a video has no picture yet (the desktop's IdleScene.qml) -->
+    <org.videolan.vlc.gui.view.IdleSceneView
+            android:id="@+id/player_idle_scene"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
 
     <androidx.appcompat.widget.ViewStubCompat
             android:id="@+id/player_seek_stub"

@@ -243,4 +243,10 @@
     <string name="rd_tv_nothing_here">Nothing here</string>
     <string name="rd_tv_season_episode">S%1$s E%2$s</string>
     <string name="rd_tv_reminder_due">%1$s starts now on %2$s</string>
+    <!-- the TV app's: Settings > Interface > Idle screen (the cat), the marks and keys of the information bar -->
+    <string name="rd_idle_screen">Idle screen</string>
+    <string name="rd_idle_after_1">After 1 minute</string>
+    <string name="rd_idle_after_3">After 3 minutes</string>
+    <string name="rd_idle_after_5">After 5 minutes</string>
+    <string name="rd_idle_after_10">After 10 minutes</string>
 </resources>
