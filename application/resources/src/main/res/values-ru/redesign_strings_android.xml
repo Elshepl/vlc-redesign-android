@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Открепить от главной</string>
     <string name="rd_pinned">Закреплённые</string>
     <string name="rd_pinned_missing">Этой закреплённой папки или плейлиста больше нет.</string>
+    <string name="rd_volume_indicator">Индикатор громкости</string>
+    <string name="rd_volume_right_side">Справа</string>
+    <string name="rd_volume_left_side">Слева</string>
+    <string name="rd_volume_top_right">Правый верхний угол</string>
+    <string name="rd_volume_top_left">Левый верхний угол</string>
 </resources>

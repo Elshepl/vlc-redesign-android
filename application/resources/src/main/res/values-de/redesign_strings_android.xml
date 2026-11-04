@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Von Start lösen</string>
     <string name="rd_pinned">Angeheftet</string>
     <string name="rd_pinned_missing">Dieser angeheftete Ordner oder diese Wiedergabeliste ist nicht mehr vorhanden.</string>
+    <string name="rd_volume_indicator">Lautstärkeanzeige</string>
+    <string name="rd_volume_right_side">Rechte Seite</string>
+    <string name="rd_volume_left_side">Linke Seite</string>
+    <string name="rd_volume_top_right">Obere rechte Ecke</string>
+    <string name="rd_volume_top_left">Obere linke Ecke</string>
 </resources>

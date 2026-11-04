@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">홈에서 고정 해제</string>
     <string name="rd_pinned">고정됨</string>
     <string name="rd_pinned_missing">고정한 폴더나 재생 목록이 더 이상 없습니다.</string>
+    <string name="rd_volume_indicator">볼륨 표시기</string>
+    <string name="rd_volume_right_side">오른쪽</string>
+    <string name="rd_volume_left_side">왼쪽</string>
+    <string name="rd_volume_top_right">오른쪽 위 모서리</string>
+    <string name="rd_volume_top_left">왼쪽 위 모서리</string>
 </resources>

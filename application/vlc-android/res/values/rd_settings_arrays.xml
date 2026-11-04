@@ -116,4 +116,20 @@
         <item>5</item>
         <item>10</item>
     </string-array>
+    <!-- Volume indicator (rd_volume_indicator): Automatic (by the direction of the language), the right or the left
+         side, the top right or the top left corner (the desktop's choices) -->
+    <string-array name="rd_volume_indicator_entries" translatable="false">
+        <item>@string/rd_automatic</item>
+        <item>@string/rd_volume_right_side</item>
+        <item>@string/rd_volume_left_side</item>
+        <item>@string/rd_volume_top_right</item>
+        <item>@string/rd_volume_top_left</item>
+    </string-array>
+    <string-array name="rd_volume_indicator_values" translatable="false">
+        <item>auto</item>
+        <item>right</item>
+        <item>left</item>
+        <item>top_right</item>
+        <item>top_left</item>
+    </string-array>
 </resources>

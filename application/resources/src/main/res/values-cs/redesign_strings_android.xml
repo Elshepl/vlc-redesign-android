@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Odepnout z Domů</string>
     <string name="rd_pinned">Připnuté</string>
     <string name="rd_pinned_missing">Tato připnutá složka nebo seznam skladeb už neexistuje.</string>
+    <string name="rd_volume_indicator">Ukazatel hlasitosti</string>
+    <string name="rd_volume_right_side">Pravá strana</string>
+    <string name="rd_volume_left_side">Levá strana</string>
+    <string name="rd_volume_top_right">Pravý horní roh</string>
+    <string name="rd_volume_top_left">Levý horní roh</string>
 </resources>

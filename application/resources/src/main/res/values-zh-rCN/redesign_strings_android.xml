@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">从主页取消固定</string>
     <string name="rd_pinned">已固定</string>
     <string name="rd_pinned_missing">此固定的文件夹或播放列表已不存在。</string>
+    <string name="rd_volume_indicator">音量指示器</string>
+    <string name="rd_volume_right_side">右侧</string>
+    <string name="rd_volume_left_side">左侧</string>
+    <string name="rd_volume_top_right">右上角</string>
+    <string name="rd_volume_top_left">左上角</string>
 </resources>

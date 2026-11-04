@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Losmaken van Start</string>
     <string name="rd_pinned">Vastgemaakt</string>
     <string name="rd_pinned_missing">Deze vastgemaakte map of afspeellijst bestaat niet meer.</string>
+    <string name="rd_volume_indicator">Volume-indicator</string>
+    <string name="rd_volume_right_side">Rechterkant</string>
+    <string name="rd_volume_left_side">Linkerkant</string>
+    <string name="rd_volume_top_right">Rechterbovenhoek</string>
+    <string name="rd_volume_top_left">Linkerbovenhoek</string>
 </resources>

@@ -10,6 +10,14 @@
             android:key="enable_volume_gesture"
             android:summary="@string/enable_volume_gesture_summary"
             android:title="@string/enable_volume_gesture_title" />
+        <!-- the place of the volume meter of the keys, the swipe and the wheel (the desktop's Volume indicator) -->
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue="auto"
+            android:entries="@array/rd_volume_indicator_entries"
+            android:entryValues="@array/rd_volume_indicator_values"
+            android:key="rd_volume_indicator"
+            android:summary="%s"
+            android:title="@string/rd_volume_indicator" />
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="enable_brightness_gesture"
