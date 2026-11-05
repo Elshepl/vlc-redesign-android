@@ -45,7 +45,7 @@ import org.videolan.vlc.R
 import org.videolan.vlc.gui.helpers.MedialibraryUtils
 import org.videolan.vlc.gui.helpers.ThreeStatesCheckbox
 import org.videolan.vlc.repository.DirectoryRepository
-import org.videolan.vlc.util.getDescriptionSpan
+import org.videolan.vlc.util.setBrowserDescription
 import org.videolan.vlc.util.isSchemeFile
 
 class StorageBrowserAdapter(browserContainer: BrowserContainer<MediaLibraryItem>) : BaseBrowserAdapter(browserContainer) {
@@ -96,7 +96,7 @@ class StorageBrowserAdapter(browserContainer: BrowserContainer<MediaLibraryItem>
         if (payloads.isNotEmpty() && payloads[0] is CharSequence) {
             if (!MedialibraryUtils.isBanned((getItem(position) as Storage).uri, bannedFolders)) {
                 (holder as MediaViewHolder).bindingContainer.text.visibility = View.VISIBLE
-                holder.bindingContainer.text.text = (payloads[0] as CharSequence).getDescriptionSpan(holder.bindingContainer.text.context)
+                holder.bindingContainer.text.setBrowserDescription(payloads[0] as CharSequence)
             }
         } else super.onBindViewHolder(holder, position, payloads)
     }
