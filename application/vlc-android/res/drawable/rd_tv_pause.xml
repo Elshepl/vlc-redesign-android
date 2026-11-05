@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the TV players' pause pill (ic_pause_player) in the fixed accent, 1.25 times for the distance -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="68dp" android:height="35dp" android:viewportWidth="54" android:viewportHeight="28">
+    <path android:pathData="M6,0h42a6,6 0 0,1 6,6v16a6,6 0 0,1 -6,6h-42a6,6 0 0,1 -6,-6v-16a6,6 0 0,1 6,-6z" android:fillColor="@color/rd_accent_orange_main" />
+    <group android:translateX="16" android:translateY="3" android:scaleX="0.9167" android:scaleY="0.9167">
+        <path android:pathData="M8.5,6.75h1a0.75,0.75 0 0,1 0.75,0.75v9a0.75,0.75 0 0,1 -0.75,0.75h-1a0.75,0.75 0 0,1 -0.75,-0.75v-9a0.75,0.75 0 0,1 0.75,-0.75zM14.5,6.75h1a0.75,0.75 0 0,1 0.75,0.75v9a0.75,0.75 0 0,1 -0.75,0.75h-1a0.75,0.75 0 0,1 -0.75,-0.75v-9a0.75,0.75 0 0,1 0.75,-0.75z" android:fillColor="@color/rd_dark_fg_b1" android:strokeColor="@color/rd_dark_fg_b1" android:strokeWidth="1.5" android:strokeLineJoin="round" />
+    </group>
+</vector>

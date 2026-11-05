@@ -26,6 +26,8 @@ import android.app.SearchManager
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.leanback.app.SearchSupportFragment
 import androidx.leanback.widget.ArrayObjectAdapter
 import androidx.leanback.widget.HeaderItem
@@ -61,6 +63,14 @@ class SearchFragment : SearchSupportFragment(), SearchSupportFragment.SearchResu
         val intent = requireActivity().intent
         if (Intent.ACTION_SEARCH == intent.action || "com.google.android.gms.actions.SEARCH_ACTION" == intent.action)
             intent.getStringExtra(SearchManager.QUERY)?.let { onQueryTextSubmit(it) }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // VLC Redesign: the search field as the design's (A1, radius 6, the bright divider) rather than Leanback's
+        // white plate
+        view.findViewById<View>(androidx.leanback.R.id.lb_search_bar_items)?.background =
+            ContextCompat.getDrawable(requireContext(), R.drawable.rd_tv_search_field)
     }
 
     override fun getResultsAdapter() = rowsAdapter

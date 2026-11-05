@@ -1223,7 +1223,8 @@ fun BaseActivity.applyTheme() {
         return
     }
     if (Settings.showTvUi) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        // VLC Redesign: the TV layout is in the design's dark palette, the pages it shares with the phone as well
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setTheme(R.style.Theme_VLC_Black)
         return
     }

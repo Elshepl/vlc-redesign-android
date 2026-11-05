@@ -27,5 +27,7 @@
     android:shape="rectangle">
 
     <solid android:color="@color/tv_card_content"/>
+    <!-- VLC Redesign: the focused card of a TV grid as the home's (RdTvCard), an accent frame around it -->
+    <stroke android:width="3dp" android:color="@color/rd_accent_orange_main" />
     <corners android:radius="3dp" />
 </shape>

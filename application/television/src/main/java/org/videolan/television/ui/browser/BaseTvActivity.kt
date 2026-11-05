@@ -26,12 +26,14 @@ package org.videolan.television.ui.browser
 import android.annotation.TargetApi
 import android.content.ComponentName
 import android.content.Context
+import android.content.res.Configuration
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.MotionEvent
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.snackbar.Snackbar
 import org.videolan.libvlc.Dialog
@@ -70,6 +72,14 @@ abstract class BaseTvActivity : FragmentActivity(), IDialogManager {
 
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(newBase?.getContextWithLocale(AppContextProvider.locale))
+        // VLC Redesign: the TV layout is in the design's dark palette whatever the phone's theme, the parts it shares
+        // with the phone (the players' menus and sheets, the dialogs) as well
+        newBase?.let {
+            val uiMode = it.resources.configuration.uiMode
+            applyOverrideConfiguration(Configuration().apply {
+                this.uiMode = (uiMode and Configuration.UI_MODE_NIGHT_MASK.inv()) or Configuration.UI_MODE_NIGHT_YES
+            })
+        }
     }
 
     override fun getApplicationContext(): Context {
@@ -79,6 +89,9 @@ abstract class BaseTvActivity : FragmentActivity(), IDialogManager {
     override fun onCreate(savedInstanceState: Bundle?) {
         //Init Medialibrary if KO
         if (savedInstanceState != null) startMedialibrary(firstRun = false, upgrade = false, parse = true)
+        // VLC Redesign: the sheets and dialogs AppCompat themes over these pages follow the dark palette too
+        if (AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_YES)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
         mediaLibrary = Medialibrary.getInstance()
         settings = Settings.getInstance(this)

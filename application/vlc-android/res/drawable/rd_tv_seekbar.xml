@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the TV layout's seek well, as the player's (rd_seekbar_player) in fixed colours: a 28 high well
+     (BG/B2), the played part in Accent Bright inset by 2 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="@color/rd_dark_bg_b2" />
+            <size android:height="28dp" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress" android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="3dp" />
+                <solid android:color="#0AFFFFFF" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress" android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="3dp" />
+                <solid android:color="@color/rd_accent_orange_bright" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

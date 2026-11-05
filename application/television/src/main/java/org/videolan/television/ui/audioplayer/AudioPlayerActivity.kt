@@ -39,7 +39,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.launchIn
@@ -100,8 +99,6 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
     private var currentCoverArt: String? = null
     private lateinit var model: PlaylistModel
     private var settings: SharedPreferences? = null
-    private lateinit var pauseToPlay: AnimatedVectorDrawableCompat
-    private lateinit var playToPause: AnimatedVectorDrawableCompat
     private var optionsDelegate: PlayerOptionsDelegate? = null
     lateinit var bookmarkModel: BookmarkModel
     private lateinit var bookmarkListDelegate: BookmarkListDelegate
@@ -138,8 +135,6 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             intent.getLongExtra(MEDIA_PLAYLIST, -1L).let { MediaUtils.openPlaylist(this, it, position) }
         else
             intent.parcelableList<MediaWrapper>(MEDIA_LIST)?.let { MediaUtils.openList(this, it, position) }
-        playToPause = AnimatedVectorDrawableCompat.create(this, R.drawable.anim_play_pause_video)!!
-        pauseToPlay = AnimatedVectorDrawableCompat.create(this, R.drawable.anim_pause_play_video)!!
         binding.playbackSpeedQuickAction.setOnClickListener {
             val newFragment = PlaybackSpeedDialog.newInstance()
             newFragment.show(supportFragmentManager, "playback_speed")
@@ -232,11 +227,8 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
     fun update(state: PlayerState?) {
         if (state == null) return
 
-        val drawable = if (state.playing) playToPause else pauseToPlay
-        binding.buttonPlay.setImageDrawable(drawable)
-        if (state.playing != wasPlaying) {
-            binding.buttonPlay.post { drawable.start() }
-        }
+        // VLC Redesign: the design's accent play pill (play / pause) rather than VLC's animated circle
+        binding.buttonPlay.setImageResource(if (state.playing) R.drawable.rd_tv_pause else R.drawable.rd_tv_play)
 
         wasPlaying = state.playing
         binding.buttonPlay.contentDescription = getString(if (state.playing) org.videolan.vlc.R.string.pause else org.videolan.vlc.R.string.play)

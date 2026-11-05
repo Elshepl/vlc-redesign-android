@@ -338,7 +338,9 @@ class MediaItemDetailsFragment : DetailsSupportFragment(), CoroutineScope by Mai
         val actionEdit = Action(ID_FAVORITE_EDIT.toLong(), getString(R.string.favorites_edit))
         val actionDelete = Action(ID_FAVORITE_DELETE.toLong(), getString(R.string.favorites_remove))
 
-        rowPresenter.backgroundColor = ContextCompat.getColor(activity, R.color.orange500)
+        // VLC Redesign: the details panel in the design's A2 and its actions on A4 rather than the orange band
+        rowPresenter.backgroundColor = ContextCompat.getColor(activity, R.color.rd_dark_bg_a2)
+        rowPresenter.actionsBackgroundColor = ContextCompat.getColor(activity, R.color.rd_dark_bg_a4)
         rowPresenter.onActionClickedListener = OnActionClickedListener { action ->
             when (action.id.toInt()) {
                 ID_LISTEN -> {

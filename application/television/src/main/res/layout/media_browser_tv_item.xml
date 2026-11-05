@@ -96,6 +96,9 @@
             android:onClick="@{holder::onClick}"
             android:onLongClick="@{holder::onLongClick}"
             android:paddingBottom="@dimen/kl_small"
+            android:paddingStart="3dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="3dp"
             android:stateListAnimator="@animator/tv_recyclerview_item_pop"
             vlc:elevation="1dp">
 

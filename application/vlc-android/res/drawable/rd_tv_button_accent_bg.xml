@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the accent button of the TV layout (OnboardingButton.qml primary, .d-ob-btn.p): the accent, radius 6;
+     the D-pad focus a 2 dp frame of FG/1 on its shape -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/rd_accent_orange_main" />
+            <stroke android:width="2dp" android:color="@color/rd_dark_fg_1" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape><solid android:color="@color/rd_accent_orange_dim" /><corners android:radius="6dp" /></shape>
+    </item>
+    <item>
+        <shape><solid android:color="@color/rd_accent_orange_main" /><corners android:radius="6dp" /></shape>
+    </item>
+</selector>

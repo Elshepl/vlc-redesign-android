@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/tv_overscan_horizontal"
             android:layout_marginRight="@dimen/tv_overscan_horizontal"
-            android:background="@color/grey800"
+            android:background="@color/rd_dark_bg_a2"
             android:focusable="true">
 
         <TextView

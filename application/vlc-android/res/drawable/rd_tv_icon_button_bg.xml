@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: an icon button of the TV layout's players and lists (the control bar's buttons): nothing at rest,
+     the desktop's keyboard focus on the D-pad (a 1 dp line of white on the control's rounded square, the hover fill) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/rd_player_button_pressed" />
+            <stroke android:width="1dp" android:color="@android:color/white" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape><solid android:color="@color/rd_player_button_pressed" /><corners android:radius="6dp" /></shape>
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>

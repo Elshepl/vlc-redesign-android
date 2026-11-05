@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Leanback's own colours (the TV layout's search, details, guided steps, settings, cards) in the design's
+     dark palette and accent rather than Leanback's blue greys, navy dots and blue / green highlights -->
+<resources>
+    <color name="lb_default_brand_color">@color/rd_dark_bg_b2</color>
+    <color name="lb_default_brand_color_dark">@color/rd_dark_bg_b2</color>
+    <color name="lb_default_search_color">@color/rd_accent_orange_main</color>
+    <color name="lb_default_search_icon_color">@color/rd_dark_fg_b1</color>
+    <color name="lb_details_overview_bg_color">@color/rd_dark_bg_a2</color>
+    <color name="lb_details_description_color">@color/rd_dark_fg_1</color>
+    <color name="lb_details_description_body_color">@color/rd_dark_fg_a1</color>
+    <color name="lb_action_text_color">@color/rd_dark_fg_1</color>
+    <color name="lb_basic_card_bg_color">@color/rd_dark_bg_a2</color>
+    <color name="lb_basic_card_info_bg_color">@color/rd_dark_folder_card</color>
+    <color name="lb_basic_card_title_text_color">@color/rd_dark_fg_1</color>
+    <color name="lb_basic_card_content_text_color">@color/rd_dark_fg_a2</color>
+    <color name="lb_media_background_color">@color/rd_dark_bg_b1</color>
+    <color name="lb_error_background_color_opaque">@color/rd_dark_bg_b1</color>
+    <color name="lb_error_message">@color/rd_dark_fg_a1</color>
+    <color name="lb_page_indicator_dot">@color/rd_dark_fg_a4</color>
+    <color name="lb_guidedactions_background">@color/rd_dark_bg_a5</color>
+    <color name="lb_guidedactions_background_dark">@color/rd_dark_bg_b2</color>
+    <color name="lb_playback_progress_color_no_theme">@color/rd_accent_orange_main</color>
+    <color name="lb_playback_icon_highlight_no_theme">@color/rd_accent_orange_main</color>
+    <color name="lb_preference_item_category_text_color">@color/rd_accent_orange_main</color>
+    <color name="lb_preference_decor_list_background">@color/rd_dark_bg_a5</color>
+    <!-- the search: the text in FG/1 on the A1 plate, the hint in FG/A3, the speech orb in the accent -->
+    <color name="lb_search_bar_text">@color/rd_dark_fg_1</color>
+    <color name="lb_search_bar_text_speech_mode">@color/rd_dark_fg_1</color>
+    <color name="lb_search_bar_hint">@color/rd_dark_fg_a3</color>
+    <color name="lb_search_bar_hint_speech_mode">@color/rd_dark_fg_a3</color>
+    <color name="lb_search_plate_hint_text_color">@color/rd_dark_fg_a2</color>
+    <color name="lb_speech_orb_not_recording">@color/rd_accent_orange_main</color>
+    <color name="lb_speech_orb_not_recording_pulsed">@color/rd_accent_orange_dim</color>
+    <color name="lb_speech_orb_not_recording_icon">@color/rd_dark_fg_b1</color>
+    <color name="lb_speech_orb_recording">@color/rd_accent_red_main</color>
+</resources>
