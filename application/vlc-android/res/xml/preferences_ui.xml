@@ -40,7 +40,7 @@
     <ListPreference
             android:defaultValue=""
             android:key="set_locale"
-            android:title="@string/set_locale"/>
+            android:title="@string/rd_interface_language"/>
 
 
     <ListPreference
