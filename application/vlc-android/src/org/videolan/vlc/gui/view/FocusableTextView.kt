@@ -24,7 +24,6 @@
 
 package org.videolan.vlc.gui.view
 
-import org.videolan.vlc.gui.helpers.rdAccent
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.ColorFilter
@@ -45,15 +44,18 @@ import org.videolan.vlc.R
  *
  */
 open class FocusableTextView : androidx.appcompat.widget.AppCompatTextView {
+    // VLC Redesign: the focus of the design's time boxes (Figma "Current Time" / "Duration", the TV app's
+    // .pl-time.focus): the B2 box (radius 4) behind the text, the text in FG/1
     val paint: Paint by lazy {
         Paint().apply {
             isAntiAlias = true
-            color = context.rdAccent(0.53f)
+            color = ContextCompat.getColor(context, R.color.rd_dark_bg_b2)
             style = Paint.Style.FILL
             textSize = this@FocusableTextView.textSize
             typeface = this@FocusableTextView.typeface
         }
     }
+    private var restColors: android.content.res.ColorStateList? = null
 
     constructor(context: Context) : super(context) {
         initialize()
@@ -73,6 +75,10 @@ open class FocusableTextView : androidx.appcompat.widget.AppCompatTextView {
 
     override fun onFocusChanged(focused: Boolean, direction: Int, previouslyFocusedRect: Rect?) {
         // do not call super to avoid displaying the ripple
+        if (focused) {
+            if (restColors == null) restColors = textColors
+            setTextColor(ContextCompat.getColor(context, R.color.rd_dark_fg_1))
+        } else restColors?.let { setTextColor(it); restColors = null }
     }
 
     /**
@@ -100,12 +106,14 @@ open class FocusableTextView : androidx.appcompat.widget.AppCompatTextView {
         override fun draw(canvas: Canvas) {
             // draw only when the view is pressed / focused
             if (state.firstOrNull { it == android.R.attr.state_pressed || it == android.R.attr.state_focused } != null) {
-                val textBounds = Rect()
-                paint.getTextBounds(text.toString(), 0, text.length, textBounds)
-                if (gravity and Gravity.RIGHT != 1)
-                    canvas.drawRoundRect(width.toFloat() - (textBounds.width().toFloat() + paddingLeft + paddingRight), 0F, width.toFloat(), bounds.height().toFloat(), 4.dp.toFloat(), 4.dp.toFloat(), paint)
-                else
-                    canvas.drawRoundRect(textBounds.left.toFloat(), 0F, textBounds.right.toFloat() + paddingLeft + paddingRight, bounds.height().toFloat(), 4.dp.toFloat(), 4.dp.toFloat(), paint)
+                // the box around the text where the gravity puts it (the text centred in its 76 dp by default)
+                val textWidth = paint.measureText(text.toString()) + 16.dp
+                val left = when (gravity and Gravity.HORIZONTAL_GRAVITY_MASK) {
+                    Gravity.RIGHT, Gravity.END -> width - textWidth
+                    Gravity.LEFT, Gravity.START -> 0F
+                    else -> (width - textWidth) / 2
+                }.coerceAtLeast(0F)
+                canvas.drawRoundRect(left, 0F, (left + textWidth).coerceAtMost(width.toFloat()), bounds.height().toFloat(), 4.dp.toFloat(), 4.dp.toFloat(), paint)
             }
         }
     }
