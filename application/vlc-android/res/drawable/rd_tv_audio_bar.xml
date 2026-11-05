@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the TV music player's control bar (the TV app's .pl.music .pl-bar): A4 at 95 %, a line of A1 on top -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><color android:color="#F2191919" /></item>
+    <item android:gravity="top" android:height="1dp"><color android:color="@color/rd_dark_bg_a1" /></item>
+</layer-list>

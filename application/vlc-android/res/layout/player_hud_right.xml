@@ -17,13 +17,16 @@
             android:visibility="invisible"
             tools:visibility="visible">
 
+        <!-- VLC Redesign: the TV layout's clock as the TV app's (.pl-t-clock): Inter 15, FG/A2, on the title's line -->
         <TextClock
             android:id="@+id/clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/rd_dark_fg_a2"
+            android:textSize="15sp"
             android:shadowColor="@color/blacktransparent"
             android:shadowDx="0"
             android:shadowDy="2"

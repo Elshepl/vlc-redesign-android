@@ -23,13 +23,13 @@
             android:name="org.videolan.television.ui.DetailsActivity"
             android:exported="true"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.Leanback.Details"
+            android:theme="@style/Theme.VLC.TV.Details"
             tools:ignore="LockedOrientationActivity" />
         <activity
                 android:name="org.videolan.television.ui.MediaScrapingTvshowDetailsActivity"
             android:exported="true"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.Leanback.Details"
+            android:theme="@style/Theme.VLC.TV.Details"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name="org.videolan.television.ui.browser.VerticalGridActivity"

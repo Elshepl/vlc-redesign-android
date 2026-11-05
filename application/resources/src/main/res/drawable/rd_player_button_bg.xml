@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- VLC Redesign: the pressed state of a control bar button, a neutral rounded square (the desktop's control hover,
      redesign.controlHoverBackground over the bar, radius 6), never a Material accent circle. The keyboard / D-pad
-     focus is the same neutral square (the ripple's focus layer), drawn over the open / ON state (#10): the dim
+     focus is the same neutral square (the ripple's focus layer) in a 1 dp line of white, drawn over the open / ON state (#10): the dim
      accent square of a button whose panel is open or a toggle that is ON (isActivated, see RdActiveState), faded
      in and out in 120 ms. -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/rd_player_button_pressed">
     <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
         <selector android:enterFadeDuration="120" android:exitFadeDuration="120">
+            <!-- the keyboard / D-pad focus as the desktop's (and the TV app's): a 1 dp line of white on the square,
+                 over the ON state's dim accent when both -->
+            <item android:state_focused="true" android:state_activated="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@color/rd_player_active_bg" />
+                    <stroke android:width="1dp" android:color="@android:color/white" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="6dp" />
+                    <solid android:color="@android:color/transparent" />
+                    <stroke android:width="1dp" android:color="@android:color/white" />
+                </shape>
+            </item>
             <item android:state_activated="true">
                 <shape android:shape="rectangle">
                     <corners android:radius="6dp" />

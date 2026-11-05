@@ -25,6 +25,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.PorterDuffColorFilter
+import android.graphics.PorterDuff
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Build
@@ -299,6 +301,14 @@ object TvUtil {
 }
 
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+/**
+ * VLC Redesign: a page's blurred cover dimmed to the design's dark page (B1 at 80 %, as the music player's), the texts
+ * and the focus over it readable whatever the picture
+ */
+private fun Activity.rdDimmedBackground(bitmap: Bitmap) = BitmapDrawable(resources, bitmap).apply {
+    colorFilter = PorterDuffColorFilter(ContextCompat.getColor(this@rdDimmedBackground, R.color.rd_tv_player_tint), PorterDuff.Mode.SRC_ATOP)
+}
+
 fun CoroutineScope.updateBackground(activity: Activity, bm: BackgroundManager?, item: Any?) {
     clearBackground(activity, bm)
     if (bm === null || item === null)  return
@@ -313,7 +323,7 @@ fun CoroutineScope.updateBackground(activity: Activity, bm: BackgroundManager?, 
                 UiTools.blurBitmap(cover, 10f)
             }
             if (!isActive) return@launch
-            blurred?.let { bm.drawable = BitmapDrawable(activity.resources, it) }
+            blurred?.let { bm.drawable = activity.rdDimmedBackground(it) }
         } else if (item.itemType == MediaLibraryItem.TYPE_PLAYLIST) {
             val blurred = withContext(Dispatchers.IO) {
                 var cover: Bitmap? = ThumbnailsProvider.getPlaylistOrGenreImage("playlist:${item.id}_512", item.tracks.toList(), 512)
@@ -322,7 +332,7 @@ fun CoroutineScope.updateBackground(activity: Activity, bm: BackgroundManager?, 
                 UiTools.blurBitmap(cover, 10f)
             }
             if (!isActive) return@launch
-            blurred?.let { bm.drawable = BitmapDrawable(activity.resources, it) }
+            blurred?.let { bm.drawable = activity.rdDimmedBackground(it) }
         } else if (item is MediaWrapper && item.type == MediaWrapper.TYPE_ALL) {
            val blurred = withContext(Dispatchers.IO) {
                 var cover: Bitmap? = AudioUtil.fetchCoverBitmap(item.uri.toString(), 512)
@@ -331,7 +341,7 @@ fun CoroutineScope.updateBackground(activity: Activity, bm: BackgroundManager?, 
                 UiTools.blurBitmap(cover, 10f)
             }
             if (!isActive) return@launch
-            blurred?.let { bm.drawable = BitmapDrawable(activity.resources, it) }
+            blurred?.let { bm.drawable = activity.rdDimmedBackground(it) }
         }
     } else if (item is MediaMetadataWithImages) launch {
         val blurred = withContext(Dispatchers.IO) {
@@ -340,7 +350,7 @@ fun CoroutineScope.updateBackground(activity: Activity, bm: BackgroundManager?, 
             UiTools.blurBitmap(cover, 10f)
         }
         if (!isActive) return@launch
-        blurred?.let { bm.drawable = BitmapDrawable(activity.resources, it) }
+        blurred?.let { bm.drawable = activity.rdDimmedBackground(it) }
 
     }
 }

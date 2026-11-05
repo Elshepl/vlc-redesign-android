@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the focused row of a TV list (Leanback's guided actions): the accent at 25 %, radius 6 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape><solid android:color="@color/rd_tv_focus" /><corners android:radius="6dp" /></shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape><solid android:color="@color/rd_tv_focus" /><corners android:radius="6dp" /></shape>
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>

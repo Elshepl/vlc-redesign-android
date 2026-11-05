@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a neutral button of the TV layout (OnboardingButton.qml, the TV app's .d-ob-btn): #1B1B1B, radius 6;
+     the D-pad focus a 2 dp frame of FG/1 on its shape (box-shadow: inset 0 0 0 2px #EAEAEA) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/rd_dark_bg_a3" />
+            <stroke android:width="2dp" android:color="@color/rd_dark_fg_1" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape><solid android:color="#FF303030" /><corners android:radius="6dp" /></shape>
+    </item>
+    <item>
+        <shape><solid android:color="@color/rd_dark_bg_a3" /><corners android:radius="6dp" /></shape>
+    </item>
+</selector>

@@ -24,6 +24,8 @@ import android.annotation.TargetApi
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Build
+import android.graphics.Outline
+import android.view.ViewOutlineProvider
 import android.os.Bundle
 import android.support.v4.media.session.PlaybackStateCompat
 import android.text.format.DateFormat
@@ -36,10 +38,11 @@ import android.widget.SeekBar
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.core.view.isVisible
+import org.videolan.tools.dp
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.launchIn
@@ -100,8 +103,6 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
     private var currentCoverArt: String? = null
     private lateinit var model: PlaylistModel
     private var settings: SharedPreferences? = null
-    private lateinit var pauseToPlay: AnimatedVectorDrawableCompat
-    private lateinit var playToPause: AnimatedVectorDrawableCompat
     private var optionsDelegate: PlayerOptionsDelegate? = null
     lateinit var bookmarkModel: BookmarkModel
     private lateinit var bookmarkListDelegate: BookmarkListDelegate
@@ -118,6 +119,11 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
         binding.playlist.layoutManager = LinearLayoutManager(this)
         adapter = PlaylistAdapter(this, model)
         binding.playlist.adapter = adapter
+        // VLC Redesign: the design's cover, radius 10
+        binding.albumCover.outlineProvider = object : ViewOutlineProvider() {
+            override fun getOutline(view: View, outline: Outline) = outline.setRoundRect(0, 0, view.width, view.height, 10.dp.toFloat())
+        }
+        binding.albumCover.clipToOutline = true
         binding.lifecycleOwner = this
         binding.progress = model.progress
         model.dataset.observe(this) { mediaWrappers ->
@@ -138,8 +144,6 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             intent.getLongExtra(MEDIA_PLAYLIST, -1L).let { MediaUtils.openPlaylist(this, it, position) }
         else
             intent.parcelableList<MediaWrapper>(MEDIA_LIST)?.let { MediaUtils.openList(this, it, position) }
-        playToPause = AnimatedVectorDrawableCompat.create(this, R.drawable.anim_play_pause_video)!!
-        pauseToPlay = AnimatedVectorDrawableCompat.create(this, R.drawable.anim_pause_play_video)!!
         binding.playbackSpeedQuickAction.setOnClickListener {
             val newFragment = PlaybackSpeedDialog.newInstance()
             newFragment.show(supportFragmentManager, "playback_speed")
@@ -161,6 +165,10 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
         bookmarkModel = BookmarkModel.get(this)
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
+                if (binding.playlist.isVisible) {
+                    showQueue(false)
+                    return
+                }
                 if (optionsDelegate?.isShowing() == true) {
                     optionsDelegate?.hide()
                     return
@@ -232,11 +240,8 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
     fun update(state: PlayerState?) {
         if (state == null) return
 
-        val drawable = if (state.playing) playToPause else pauseToPlay
-        binding.buttonPlay.setImageDrawable(drawable)
-        if (state.playing != wasPlaying) {
-            binding.buttonPlay.post { drawable.start() }
-        }
+        // VLC Redesign: the design's accent play pill (play / pause) rather than VLC's animated circle
+        binding.buttonPlay.setImageResource(if (state.playing) R.drawable.rd_tv_pause else R.drawable.rd_tv_play)
 
         wasPlaying = state.playing
         binding.buttonPlay.contentDescription = getString(if (state.playing) org.videolan.vlc.R.string.pause else org.videolan.vlc.R.string.play)
@@ -365,7 +370,24 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             R.id.button_repeat -> switchRepeatMode()
             R.id.button_shuffle -> setShuffleMode(!shuffling)
             R.id.button_more -> showAdvancedOptions(v)
+            R.id.button_queue -> showQueue(!binding.playlist.isVisible)
         }
+    }
+
+    /**
+     * VLC Redesign: the queue opens on demand over the page's end (the design's music player has the cover alone), the
+     * D-pad on its current item; closed with Back, Left or the queue button again
+     */
+    private fun showQueue(show: Boolean) {
+        binding.playlist.isVisible = show
+        binding.buttonQueue.isActivated = show
+        if (show) binding.playlist.post {
+            val position = adapter.selectedItem.coerceAtLeast(0)
+            (binding.playlist.layoutManager as LinearLayoutManager).scrollToPosition(position)
+            binding.playlist.post {
+                (binding.playlist.findViewHolderForAdapterPosition(position)?.itemView ?: binding.playlist).requestFocus()
+            }
+        } else binding.buttonQueue.requestFocus()
     }
 
     private fun showAdvancedOptions(@Suppress("UNUSED_PARAMETER") v: View?) {

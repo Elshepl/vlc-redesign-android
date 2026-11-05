@@ -53,7 +53,7 @@ import org.videolan.vlc.gui.helpers.*
 import org.videolan.vlc.gui.view.FastScroller
 import org.videolan.vlc.gui.view.MiniVisualizer
 import org.videolan.vlc.util.LifecycleAwareScheduler
-import org.videolan.vlc.util.getDescriptionSpan
+import org.videolan.vlc.util.setBrowserDescription
 import org.videolan.vlc.viewmodels.PlaylistModel
 
 const val UPDATE_PROGRESS = "update_progress"
@@ -177,7 +177,7 @@ open class BaseBrowserAdapter(val browserContainer: BrowserContainer<MediaLibrar
             if (media.type != MediaWrapper.TYPE_AUDIO || media.isPodcast) holder.bindingContainer.setIsPlayed(holder.bindingContainer.container.context, media.playCount > 0)
         }  else if (payloads[0] is CharSequence) {
             (holder as MediaViewHolder).bindingContainer.text.visibility = View.VISIBLE
-            holder.bindingContainer.text.text = (payloads[0] as CharSequence).getDescriptionSpan(holder.bindingContainer.text.context)
+            holder.bindingContainer.text.setBrowserDescription(payloads[0] as CharSequence)
             val item = getItem(position) as MediaWrapper
             holder.bindingContainer.container.contentDescription = TalkbackUtil.getDir(holder.binding.root.context, item, item.hasStateFlags(MediaLibraryItem.FLAG_FAVORITE))
         } else if (payloads[0] is Int) {

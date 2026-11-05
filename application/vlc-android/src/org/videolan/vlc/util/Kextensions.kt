@@ -20,6 +20,8 @@ import android.widget.TextView
 import androidx.annotation.WorkerThread
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.core.text.PrecomputedTextCompat
@@ -257,16 +259,40 @@ const val fileReplacementMarker = "*§*"
 
 @BindingAdapter("app:browserDescription", requireAll = false)
 fun browserDescription(view: TextView, description: String?) {
-    (view as AppCompatTextView).text = description?.getDescriptionSpan(view.context)
+    view.setBrowserDescription(description)
 }
 
-fun CharSequence.getDescriptionSpan(context: Context):SpannableString {
+/**
+ * VLC Redesign: a folder's contents ("3 folders, 2 media files") with the design's folder icon and the file icon in
+ * the text's colour and size, and in words for TalkBack (the markers were read out as "§*§")
+ */
+fun TextView.setBrowserDescription(description: CharSequence?) {
+    text = description?.getDescriptionSpan(context, textSize, currentTextColor)
+    contentDescription = description?.readableDescription(context)
+}
+
+fun CharSequence.readableDescription(context: Context): String {
+    if (!contains(folderReplacementMarker) && !contains(fileReplacementMarker)) return toString()
+    val folders = getFolderNumber()
+    val files = getFilesNumber()
+    return listOfNotNull(
+            if (folders > 0) context.resources.getQuantityString(R.plurals.subfolders_quantity, folders, folders) else null,
+            if (files > 0) context.resources.getQuantityString(R.plurals.mediafiles_quantity, files, files) else null
+    ).joinToString(", ")
+}
+
+fun CharSequence.getDescriptionSpan(context: Context, textSize: Float = 0F, color: Int? = null): SpannableString {
     val string = SpannableString(this)
-    if (this.contains(folderReplacementMarker)) {
-        string.setSpan(ImageSpan(context, R.drawable.ic_emoji_folder, DynamicDrawableSpan.ALIGN_BASELINE), this.indexOf(folderReplacementMarker), this.indexOf(folderReplacementMarker)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    fun icon(res: Int) = ContextCompat.getDrawable(context, res)?.mutate()?.apply {
+        val size = if (textSize > 0F) (textSize * 1.15F).toInt() else (14 * context.resources.displayMetrics.density).toInt()
+        setBounds(0, 0, size, size)
+        color?.let { DrawableCompat.setTint(this, it) }
     }
-    if (this.contains(fileReplacementMarker)) {
-        string.setSpan(ImageSpan(context, R.drawable.ic_emoji_file, DynamicDrawableSpan.ALIGN_BASELINE), this.indexOf(fileReplacementMarker), this.indexOf(fileReplacementMarker)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    if (this.contains(folderReplacementMarker)) icon(R.drawable.rd_ic_folder)?.let {
+        string.setSpan(ImageSpan(it, DynamicDrawableSpan.ALIGN_BOTTOM), this.indexOf(folderReplacementMarker), this.indexOf(folderReplacementMarker)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    }
+    if (this.contains(fileReplacementMarker)) icon(R.drawable.ic_emoji_file)?.let {
+        string.setSpan(ImageSpan(it, DynamicDrawableSpan.ALIGN_BOTTOM), this.indexOf(fileReplacementMarker), this.indexOf(fileReplacementMarker)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
     }
     return string
 }

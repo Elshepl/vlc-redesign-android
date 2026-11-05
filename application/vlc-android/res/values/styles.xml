@@ -281,6 +281,10 @@
     </style>
     <style name="Theme.VLC.Material.TV" parent="Theme.VLC.Black" >
         <item name="android:background">@color/tv_card_content_darker</item>
+        <!-- VLC Redesign: the TV layout's colour picker in Inter and the accent -->
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
     </style>
 
     <style name="Theme.VLC.Black.7" parent="Theme.VLC.Apearance.Black">
@@ -481,6 +485,16 @@
 
     <!-- VLC Redesign: the TV layout in the design's colours (the accent, the dark palette) and its font (Inter) -->
     <style name="Theme.VLC.TV" parent="Theme.Leanback">
+        <!-- every text of the TV layout in Inter (Leanback's own styles name Roboto, set below), the B1 page -->
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:windowBackground">@color/tv_bg</item>
+        <item name="android:alertDialogTheme">@style/Theme.VLC.TV.Dialog</item>
+        <item name="guidedStepTheme">@style/Theme.VLC.TV.GuidedStep</item>
+        <item name="defaultSearchColor">@color/rd_accent_orange_main</item>
+        <item name="defaultSearchBrightColor">@color/rd_accent_orange_main</item>
+        <item name="defaultSearchIconColor">@color/rd_dark_fg_b1</item>
+        <item name="defaultBrandColor">@color/rd_dark_bg_b2</item>
+        <item name="defaultBrandColorDark">@color/rd_dark_bg_b2</item>
         <item name="colorPrimary">@color/rd_accent_orange_main</item>
         <item name="colorPrimaryDark">@color/transparent</item>
         <item name="colorAccent">@color/rd_accent_orange_main</item>
@@ -488,8 +502,8 @@
         <item name="rowHeaderStyle">@style/RdTvRowHeader</item>
         <item name="browseTitleTextStyle">@style/RdTvTitleText</item>
         <item name="imageCardViewContentStyle">@style/RdTvCardContent</item>
-        <item name="font_default">@color/white</item>
-        <item name="font_audio_light">@color/grey600</item>
+        <item name="font_default">@color/rd_dark_fg_1</item>
+        <item name="font_audio_light">@color/rd_dark_fg_a3</item>
         <item name="imageCardViewInfoAreaStyle">@style/VLCardViewInfoStyle</item>
         <item name="imageCardViewTitleStyle">@style/VLCardViewTitleStyle</item>
         <item name="imageCardViewStyle">@style/VLCardView</item>
@@ -498,29 +512,31 @@
         <item name="audio_browser_separator">@color/rd_accent_orange_main</item>
         <item name="player_icon_color">@color/white</item>
         <item name="ariane_text_color">@color/simple_list_title_tv</item>
-        <item name="list_title">@color/grey50</item>
+        <item name="list_title">@color/rd_dark_fg_1</item>
         <item name="ariane_text_size">18sp</item>
-        <item name="font_light">@color/grey50transparent_ea</item>
-        <item name="empty_button">@style/Widget.Leanback.DetailsActionButtonStyle</item>
-        <item name="list_subtitle">@color/lb_basic_card_content_text_color</item>
+        <item name="font_light">@color/rd_dark_fg_a1</item>
+        <item name="empty_button">@style/RdTvButton</item>
+        <item name="list_subtitle">@color/rd_dark_fg_a2</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme.Player</item>
         <item name="disabled_overlay_color">@color/black_transparent_50</item>
         <item name="advanced_options_bg">@drawable/advanced_options_background_dark</item>
         <item name="ic_tips_double_tap">@drawable/tips_double_tap</item>
         <item name="ic_tips_tap">@drawable/tips_tap</item>
         <item name="ic_passthrough">@drawable/ic_passthrough</item>
-        <item name="colorControlNormal">@color/grey700</item>
+        <item name="colorControlNormal">@color/rd_dark_fg_a3</item>
         <item name="bookmark_background">@color/black_transparent_80</item>
         <item name="background_default">@color/tv_bg</item>
         <item name="actionBarItemBackground">@drawable/ic_circle_audio_player</item>
         <item name="primary_focus">@color/rd_tv_focus</item>
-        <item name="empty_title">@color/grey300</item>
+        <item name="empty_title">@color/rd_dark_fg_a1</item>
         <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
         <item name="selectableItemBackgroundBorderless">?android:attr/selectableItemBackgroundBorderless</item>
     </style>
     
     
     <style name="Theme.VLC.TV.Onboarding" parent="Theme.Leanback.Onboarding">
+        <item name="android:windowBackground">@color/rd_dark_bg_b1</item>
+        <item name="android:fontFamily">@font/inter</item>
         <item name="onboardingPageIndicatorStyle">@style/VLC.OnboardingPageIndicatorStyle</item>
     </style>
 
@@ -530,8 +546,11 @@
     </style>
 
     <style name="Theme.VLC.TV.Audio">
-        <item name="colorPrimary">@color/orange800</item>
-        <item name="colorAccent">@color/orange800</item>
+        <item name="colorPrimary">@color/rd_accent_orange_main</item>
+        <item name="colorAccent">@color/rd_accent_orange_main</item>
+        <!-- the control bar's icons (FG/2), the cover's blur behind the player dimmed to the design's dark page -->
+        <item name="player_icon_color">@color/rd_dark_fg_2</item>
+        <item name="audio_player_background_tint">@color/rd_tv_player_tint</item>
     </style>
 
     <style name="VLCardView" parent="Widget.Leanback.ImageCardViewStyle">
@@ -540,8 +559,10 @@
 
     </style>
 
+    <!-- the fonts on the styles as well: the theme's Inter would replace a text appearance's -->
     <style name="RdTvHeader" parent="Widget.Leanback.Header">
         <item name="android:textAppearance">@style/RdTvHeaderText</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 
     <style name="RdTvHeaderText" parent="TextAppearance.Leanback.Header">
@@ -550,6 +571,7 @@
 
     <style name="RdTvRowHeader" parent="Widget.Leanback.Row.Header">
         <item name="android:textAppearance">@style/RdTvRowHeaderText</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
     </style>
 
     <style name="RdTvRowHeaderText" parent="TextAppearance.Leanback.Row.Header">
@@ -619,6 +641,11 @@
     </style>
 
     <style name="Theme.VLC.Leanback.Preferences" parent="Theme.Leanback">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:windowBackground">@color/tv_bg</item>
+        <item name="android:alertDialogTheme">@style/Theme.VLC.TV.Dialog</item>
+        <item name="android:selectableItemBackground">@drawable/rd_tv_focus_selector</item>
+        <item name="defaultBrandColor">@color/rd_dark_bg_b2</item>
         <item name="colorAccent">@color/rd_accent_orange_main</item>
         <item name="android:colorAccent">@color/rd_accent_orange_main</item>
         <item name="colorControlNormal">@color/grey300</item>

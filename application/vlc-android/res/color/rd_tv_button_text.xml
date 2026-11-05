@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the text of a neutral TV button, FG/A2, FG/1 while the D-pad is on it -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:color="@color/rd_dark_fg_1" />
+    <item android:color="@color/rd_dark_fg_a2" />
+</selector>

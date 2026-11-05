@@ -23,7 +23,7 @@
             android:minHeight="?android:attr/listPreferredItemHeight"
             android:focusable="true"
             android:clickable="true"
-            android:background="@drawable/rectangle_circle_right_white_selector">
+            android:background="@drawable/rd_tv_focus_selector">
 
         <ImageView
                 android:id="@+id/coverImage"
@@ -51,7 +51,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="2dp"
                 android:text="@{MediaUtils.INSTANCE.getMediaTitle(media)}"
-                android:textColor="@color/white"
+                android:textColor="@color/rd_dark_fg_1"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/artist"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +69,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="2dp"
                 android:text="@{MediaUtils.INSTANCE.getMediaSubtitle(media)}"
-                android:textColor="@color/white_transparent_60"
+                android:textColor="@color/rd_dark_fg_a1"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

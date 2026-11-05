@@ -123,6 +123,10 @@
     <color name="tv_card_content_darker">#090909</color>
     <!-- the focused row of a TV list: the accent (rd_accent_orange_main) at 25 % -->
     <color name="rd_tv_focus">#40D37918</color>
+    <!-- the queue and the panels over a TV player's picture: B2 at 85 % -->
+    <color name="rd_tv_panel">#D9090909</color>
+    <!-- the blurred cover behind the TV audio player: B1 at 80 % over it -->
+    <color name="rd_tv_player_tint">#CC0E0E0E</color>
 
     <!--test with onboarding colors-->
     <!--<color name="tv_bg">#1c313a</color>-->

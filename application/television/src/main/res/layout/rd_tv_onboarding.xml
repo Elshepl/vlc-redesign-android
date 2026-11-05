@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the TV layout's onboarding as the desktop's (OnboardingDialog.qml, Figma 1899:3055) and the TV app's:
+     the dark B1 page, the step in the middle (the cone, the title in Inter Light, the text in FG/A2), Back and Next
+     (the accent; Start VLC on the last step) at the bottom end, the step's dots at the bottom start -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rd_dark_bg_b1">
+
+    <LinearLayout
+        android:id="@+id/rd_ob_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/rd_ob_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="560dp">
+
+        <ImageView
+            android:id="@+id/rd_ob_logo"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_icon" />
+
+        <TextView
+            android:id="@+id/rd_ob_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:accessibilityHeading="true"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:textColor="@color/rd_dark_fg_1"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/rd_ob_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="@color/rd_dark_fg_a1"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rd_ob_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/rd_ob_next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rd_ob_next" />
+
+    <TextView
+        android:id="@+id/rd_ob_back"
+        style="@style/RdTvButton"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rd_back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rd_ob_next"
+        app:layout_constraintEnd_toStartOf="@id/rd_ob_next" />
+
+    <TextView
+        android:id="@+id/rd_ob_next"
+        style="@style/RdTvButton.Accent"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/rd_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

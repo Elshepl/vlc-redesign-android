@@ -50,6 +50,8 @@ import android.app.SearchManager
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import androidx.core.content.ContextCompat
+import android.view.View
 import androidx.leanback.app.SearchSupportFragment
 import androidx.leanback.widget.ArrayObjectAdapter
 import androidx.leanback.widget.HeaderItem
@@ -97,6 +99,13 @@ class MediaScrapingTvFragment : SearchSupportFragment(), SearchSupportFragment.S
             }
 
         }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // VLC Redesign: the search field as the design's, as the TV search's (SearchFragment)
+        view.findViewById<View>(androidx.leanback.R.id.lb_search_bar_items)?.background =
+            ContextCompat.getDrawable(requireContext(), R.drawable.rd_tv_search_field)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

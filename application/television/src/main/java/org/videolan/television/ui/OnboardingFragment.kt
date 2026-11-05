@@ -25,66 +25,112 @@
 package org.videolan.television.ui
 
 import android.content.Intent
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
-import androidx.leanback.app.OnboardingSupportFragment
+import androidx.fragment.app.Fragment
 import org.videolan.resources.TV_MAIN_ACTIVITY
 import org.videolan.resources.util.canReadStorage
 import org.videolan.television.R
 import org.videolan.tools.KEY_TV_ONBOARDING_DONE
 import org.videolan.tools.Settings
+import org.videolan.tools.dp
 import org.videolan.tools.putSingle
 import org.videolan.vlc.util.Permissions
 
-class OnboardingFragment : OnboardingSupportFragment() {
-    override fun getPageCount() = 3
+/**
+ * VLC Redesign: the TV layout's onboarding in the design (OnboardingDialog.qml, the TV app's onboarding): three steps
+ * (welcome, the media access, all set) with Back and Next, every one reached with the D-pad, Back steps back.
+ */
+class OnboardingFragment : Fragment() {
+    private var step = 0
+    private lateinit var title: TextView
+    private lateinit var text: TextView
+    private lateinit var back: TextView
+    private lateinit var next: TextView
+    private lateinit var dots: LinearLayout
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        startButtonText = getString(R.string.start_vlc)
-        arrowColor = ContextCompat.getColor(requireActivity(), R.color.white)
+    private val backCallback = object : OnBackPressedCallback(false) {
+        override fun handleOnBackPressed() = show(step - 1)
     }
 
-    override fun getPageTitle(pageIndex: Int) = when (pageIndex) {
-        0 -> getString(R.string.welcome_title)
-        1 -> getString(R.string.onboarding_scan_title)
-        else -> getString(R.string.onboarding_all_set)
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
+        inflater.inflate(R.layout.rd_tv_onboarding, container, false)
 
-    override fun getPageDescription(pageIndex: Int) = when (pageIndex) {
-        0 -> getString(R.string.welcome_subtitle)
-        1 -> getString(R.string.permission_media)
-        else -> if (canReadStorage(requireActivity()))getString(R.string.onboarding_permission_given) else "${getString(R.string.permission_expanation_no_allow)}\n${getString(R.string.permission_expanation_allow)}"
-    }
-
-
-    override fun onCreateBackgroundView(inflater: LayoutInflater?, container: ViewGroup?) =
-        View(activity).apply { setBackgroundColor(ContextCompat.getColor(requireActivity(), R.color.onboarding_grey)) }
-
-    override fun onCreateContentView(inflater: LayoutInflater?, container: ViewGroup?): View? {
-        val view = ImageView(requireActivity())
-        view.setImageResource(R.drawable.ic_launcher_foreground)
-        return view
-    }
-
-    override fun onPageChanged(newPage: Int, previousPage: Int) {
-        if (newPage == 1) {
-            if (!Permissions.canReadStorage(requireActivity())) Permissions.checkReadStoragePermission(requireActivity())
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        title = view.findViewById(R.id.rd_ob_title)
+        text = view.findViewById(R.id.rd_ob_text)
+        back = view.findViewById(R.id.rd_ob_back)
+        next = view.findViewById(R.id.rd_ob_next)
+        dots = view.findViewById(R.id.rd_ob_dots)
+        repeat(PAGES) {
+            dots.addView(View(requireContext()), LinearLayout.LayoutParams(8.dp, 8.dp).apply { marginEnd = 8.dp })
         }
-        super.onPageChanged(newPage, previousPage)
+        back.setOnClickListener { show(step - 1) }
+        next.setOnClickListener { if (step < PAGES - 1) show(step + 1) else finish() }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, backCallback)
+        show(savedInstanceState?.getInt(STEP) ?: 0)
+        next.requestFocus()
     }
 
-    override fun onFinishFragment() {
-        super.onFinishFragment()
-        Settings.getInstance(requireActivity()).putSingle(KEY_TV_ONBOARDING_DONE, true)
-        requireActivity().finish()
-        val intent = Intent(Intent.ACTION_VIEW).setClassName(requireActivity(), TV_MAIN_ACTIVITY)
-        startActivity(intent)
+    override fun onResume() {
+        super.onResume()
+        // the media access may have been answered in the system's dialog
+        if (::text.isInitialized && step == PAGES - 1) show(step)
     }
 
-    override fun onCreateForegroundView(inflater: LayoutInflater?, container: ViewGroup?) = null
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(STEP, step)
+    }
+
+    private fun show(page: Int) {
+        val previous = step
+        step = page.coerceIn(0, PAGES - 1)
+        val activity = requireActivity()
+        when (step) {
+            0 -> {
+                title.text = getString(R.string.rd_ob_welcome)
+                text.text = getString(R.string.rd_ob_welcome_text)
+            }
+            1 -> {
+                title.text = getString(R.string.onboarding_scan_title)
+                text.text = getString(if (canReadStorage(activity)) R.string.onboarding_permission_given else R.string.permission_media)
+                if (previous == 0 && !Permissions.canReadStorage(activity)) Permissions.checkReadStoragePermission(activity)
+            }
+            else -> {
+                title.text = getString(R.string.onboarding_all_set)
+                text.text = if (canReadStorage(activity)) getString(R.string.onboarding_permission_given)
+                else "${getString(R.string.permission_expanation_no_allow)}\n${getString(R.string.permission_expanation_allow)}"
+            }
+        }
+        val focusWasBack = back.hasFocus()
+        back.visibility = if (step > 0) View.VISIBLE else View.GONE
+        next.text = getString(if (step == PAGES - 1) R.string.start_vlc else R.string.rd_next)
+        if (step == 0 || !focusWasBack) next.requestFocus()
+        backCallback.isEnabled = step > 0
+        for (i in 0 until dots.childCount) dots.getChildAt(i).background = GradientDrawable().apply {
+            shape = GradientDrawable.OVAL
+            setColor(ContextCompat.getColor(activity, if (i == step) R.color.rd_accent_orange_main else R.color.rd_dark_fg_a4))
+        }
+    }
+
+    private fun finish() {
+        val activity = requireActivity()
+        Settings.getInstance(activity).putSingle(KEY_TV_ONBOARDING_DONE, true)
+        activity.finish()
+        startActivity(Intent(Intent.ACTION_VIEW).setClassName(activity, TV_MAIN_ACTIVITY))
+    }
+
+    private companion object {
+        const val PAGES = 3
+        const val STEP = "rd_ob_step"
+    }
 }
