@@ -26,5 +26,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
         android:shape="rectangle">
 
-    <solid android:color="@color/white_transparent_50" />
+    <!-- VLC Redesign: the focused row of a dark list in the accent's 25 % (rd_tv_focus), as the TV Settings' rows, rather
+         than a half-white band the light text vanished on -->
+    <solid android:color="@color/rd_tv_focus" />
 </shape>
