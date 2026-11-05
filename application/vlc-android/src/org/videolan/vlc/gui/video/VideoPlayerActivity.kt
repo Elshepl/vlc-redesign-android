@@ -547,13 +547,22 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     override fun createConfigurationContext(overrideConfiguration: Configuration) = super.createConfigurationContext(overrideConfiguration).getContextWithLocale(AppContextProvider.locale)
 
+    // VLC Redesign: the player is always dark, set before the base context is made: AppCompat then builds a
+    // configuration context of its own. Set in onCreate() it went through Resources.updateConfiguration() (the
+    // activity handles uiMode itself), which changed the resources it shares with the library: back from a video
+    // in a light theme, the library's new cards were drawn with the night colours (white titles on light grey)
+    override fun attachBaseContext(newBase: Context) {
+        delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+        super.attachBaseContext(newBase)
+    }
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         // VLC Redesign: the accent chosen in Settings (the player is not a BaseActivity)
         applyAccent(alwaysDark = true)
         // VLC Redesign: the player is always dark (as the desktop's): its panels and sheets read the night colours
-        // too, also when the app or the system is light (they were light cards and toggles over the video)
-        delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+        // too, also when the app or the system is light (they were light cards and toggles over the video); the
+        // night mode itself is set in attachBaseContext()
         super.onCreate(savedInstanceState)
         // with a light system, the night mode above rebuilds the theme in super.onCreate() and drops the accent
         // (the player was orange with the blue accent in light mode only): applied again before the views
