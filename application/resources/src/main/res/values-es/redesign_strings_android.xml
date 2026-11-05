@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Quitar de Inicio</string>
     <string name="rd_pinned">Fijados</string>
     <string name="rd_pinned_missing">Esta carpeta o lista de reproducción fijada ya no existe.</string>
+    <string name="rd_volume_indicator">Indicador de volumen</string>
+    <string name="rd_volume_right_side">Lado derecho</string>
+    <string name="rd_volume_left_side">Lado izquierdo</string>
+    <string name="rd_volume_top_right">Esquina superior derecha</string>
+    <string name="rd_volume_top_left">Esquina superior izquierda</string>
 </resources>

@@ -276,6 +276,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         private set
     private var isPlaying = false
     private var loadingImageView: ImageView? = null
+    // VLC Redesign: the designer's cat while a video has no picture yet
+    private var idleScene: View? = null
+    private var vouts = 0
     var enableCloneMode: Boolean = false
     lateinit var orientationMode: PlayerOrientationMode
 
@@ -544,13 +547,22 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     override fun createConfigurationContext(overrideConfiguration: Configuration) = super.createConfigurationContext(overrideConfiguration).getContextWithLocale(AppContextProvider.locale)
 
+    // VLC Redesign: the player is always dark, set before the base context is made: AppCompat then builds a
+    // configuration context of its own. Set in onCreate() it went through Resources.updateConfiguration() (the
+    // activity handles uiMode itself), which changed the resources it shares with the library: back from a video
+    // in a light theme, the library's new cards were drawn with the night colours (white titles on light grey)
+    override fun attachBaseContext(newBase: Context) {
+        delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+        super.attachBaseContext(newBase)
+    }
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         // VLC Redesign: the accent chosen in Settings (the player is not a BaseActivity)
         applyAccent(alwaysDark = true)
         // VLC Redesign: the player is always dark (as the desktop's): its panels and sheets read the night colours
-        // too, also when the app or the system is light (they were light cards and toggles over the video)
-        delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+        // too, also when the app or the system is light (they were light cards and toggles over the video); the
+        // night mode itself is set in attachBaseContext()
         super.onCreate(savedInstanceState)
         // with a light system, the night mode above rebuilds the theme in super.onCreate() and drops the accent
         // (the player was orange with the blue accent in light mode only): applied again before the views
@@ -608,6 +620,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
         /* Loading view */
         loadingImageView = findViewById(R.id.player_overlay_loading)
+        idleScene = findViewById(R.id.player_idle_scene)
         overlayDelegate.dimStatusBar(true)
         handler.sendEmptyMessageDelayed(LOADING_ANIMATION, LOADING_ANIMATION_DELAY.toLong())
 
@@ -1764,14 +1777,18 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                 MediaPlayer.Event.Paused -> overlayDelegate.updateOverlayPausePlay()
                 MediaPlayer.Event.Opening -> {
                     forcedTime = -1
+                    // nothing to show until the first picture: the cat (not for a song, nor on a TV it is cast to)
+                    showIdleScene(service.currentMediaWrapper?.type != MediaWrapper.TYPE_AUDIO && !displayManager.isOnRenderer)
                     if (!subtitlesExtraPath.isNullOrEmpty()) {
                         service.addSubtitleTrack(subtitlesExtraPath!!, true)
                         subtitlesExtraPath = null
                     }
                 }
                 MediaPlayer.Event.Vout -> {
+                    vouts = event.voutCount
                     updateNavStatus()
                     if (event.voutCount > 0) {
+                        showIdleScene(false)
                         service.mediaplayer.updateVideoSurfaces()
                         // VideoHelper reset the aspect ratio: a custom one is laid over it again
                         customAspect.onVideoOutput()
@@ -1936,6 +1953,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     private fun onPlaying() {
         val mw = service?.currentMediaWrapper ?: return
         isPlaying = true
+        // the picture kept from the previous video, or no video in it after all (a radio, a song: the audio
+        // player comes): no cat
+        if (vouts > 0 || service?.videoTracksCount == 0) showIdleScene(false)
         overlayDelegate.hasPlaylist = service?.hasPlaylist() == true
         setPlaybackParameters()
         stopLoading()
@@ -1993,6 +2013,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     fun switchToAudioMode(showUI: Boolean) {
         if (service == null) return
+        showIdleScene(false)
         switchingView = true
         PlaylistManager.playingAsAudio = showUI
         // Show the MainActivity if it is not in background.
@@ -2706,12 +2727,20 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         overlayDelegate.updateOrientationIcon()
     }
 
+    private fun showIdleScene(on: Boolean) {
+        idleScene?.visibility = if (on) View.VISIBLE else View.GONE
+        // the loading cone would sit on the cat's face: it waits for the cat to go
+        if (on) { loadingImageView?.clearAnimation(); loadingImageView.setInvisible() }
+        else if (isLoading) { isLoading = false; startLoading() }
+    }
+
     /**
      * Start the video loading animation.
      */
     private fun startLoading() {
         if (isLoading) return
         isLoading = true
+        if (idleScene?.visibility == View.VISIBLE) return
         val anim = AnimationSet(true)
         val rotate = RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
         rotate.duration = 800

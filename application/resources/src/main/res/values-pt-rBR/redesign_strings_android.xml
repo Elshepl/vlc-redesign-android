@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Desafixar do Início</string>
     <string name="rd_pinned">Fixados</string>
     <string name="rd_pinned_missing">Esta pasta ou playlist fixada não existe mais.</string>
+    <string name="rd_volume_indicator">Indicador de volume</string>
+    <string name="rd_volume_right_side">Lado direito</string>
+    <string name="rd_volume_left_side">Lado esquerdo</string>
+    <string name="rd_volume_top_right">Canto superior direito</string>
+    <string name="rd_volume_top_left">Canto superior esquerdo</string>
 </resources>

@@ -3,7 +3,8 @@
  * every switch (its number, its name, what is on with its progress and the time left, what is next), the
  * guide of the channel browsed in it (Left, Right, its arrows, a swipe across it), the channel number typed,
  * the channels up and down (a swipe across the video, D-pad Up / Down and the remote's channel keys), the
- * previous one. A slim card centred over the video, above its controls; the dark theme always.
+ * previous one. The TV app's information bar: the whole width at the bottom, right on the player's controls when
+ * they show, three columns (the channel; the programme; the time, the marks and the keys); the dark theme always.
  *
  * It is laid over the video player by an activity lifecycle callback and gets the keys and the touches before
  * the player (a wrapper of its window's callback): the player itself is left as it is.
@@ -17,6 +18,9 @@ package org.videolan.vlc.gui.livetv
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Application
+import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -31,8 +35,10 @@ import android.view.ViewConfiguration
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -89,6 +95,15 @@ private object Dark {
     const val A3 = 0xFF6B6B6B.toInt()
     const val TRACK = 0xFF373737.toInt()
     const val CARD = 0xEB191919.toInt()
+    // the information bar (the TV app's livetv.css)
+    const val WHITE = 0xFFFFFFFF.toInt()
+    const val A0 = 0xFFA6A6A6.toInt()
+    const val BAR = 0xFF1B1B1B.toInt()
+    const val LINE = 0xFF333333.toInt()
+    const val DIVIDER = 0xFF262626.toInt()
+    const val KEY_EDGE = 0xFF404040.toInt()
+    const val ON_ACCENT = 0xFF0E0E0E.toInt()
+    const val SHADE = 0x8C000000.toInt()
 }
 
 @SuppressLint("ViewConstructor")
@@ -103,23 +118,50 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
     private var original: Window.Callback? = null
     private var jobs = ArrayList<Job>()
 
-    // the banner's views
-    private val bNumber = ctx.tvText("", 18f, Dark.A1).apply { gravity = Gravity.CENTER; textAlignment = View.TEXT_ALIGNMENT_CENTER; minWidth = ctx.tvPx(36f) }
-    private val bLogo = TvLogoView(ctx, 44f, dark = true)
-    private val bName = ctx.tvText("", 15f, Dark.FG2, medium = true)
+    // the banner's views, the TV app's information bar: the channel, the programme, the side
+    private val semibold = ResourcesCompat.getFont(ctx, R.font.inter_semibold) ?: Typeface.DEFAULT_BOLD
+    private val bBody = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; background = ColorDrawable(Dark.BAR) }
+    private val bHead = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.TOP }
+    private val bLogo = TvLogoView(ctx, 64f, dark = true)
+    private val bNumber = ctx.tvText("", 20f, Dark.FG1).apply { typeface = semibold }
+    private val bName = ctx.tvText("", 16f, Dark.FG1, lines = 2).apply { typeface = semibold }
+    private val bFav = ImageView(ctx).apply { setImageResource(R.drawable.rd_tv_favorite_on) }
+    private val bGroup = ctx.tvText("", 13f, Dark.A2)
+    private val bWhere = pill(12f).apply { setPadding(ctx.tvPx(8f), 0, ctx.tvPx(8f), 0) }
+    private val bTitle = ctx.tvText("", 20f, Dark.WHITE).apply { typeface = semibold }
+    private val bProgressRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
+    private val bTime = ctx.tvText("", 15f, Dark.FG1).apply { typeface = semibold }
+    // as on the TV, it fills from the right in a right-to-left language (the seek bar stays left to right)
+    private val bProgress = TvProgress(ctx, Dark.LINE, ctx.tvAccent, ctx.tvPx(360f), mirror = true)
+    private val bLeft = ctx.tvText("", 14f, Dark.A0)
+    private val bEpisode = ctx.tvText("", 14f, Dark.A0)
+    private val bDesc = ctx.tvText("", 14f, Dark.A2, lines = 2).apply { setLineSpacing(maxOf(0f, ctx.tvDp(20f) - paint.getFontMetricsInt(null)), 1f) }
+    private val bNextRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
+    private val bNextKey = pill(11f).apply {
+        setTextColor(Dark.FG2)
+        background = rounded(0, ctx.tvDp(4f), ctx.tvPx(1f), Dark.KEY_EDGE)
+        setPadding(ctx.tvPx(7f), 0, ctx.tvPx(7f), 0)
+        text = ctx.getString(R.string.rd_tv_next_mark)
+    }
+    private val bNextText = ctx.tvText("", 14f, Dark.A0)
+    private val bEnd = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL; gravity = Gravity.END }
+    private val bClock = ctx.tvText("", 26f, Dark.FG1).apply { typeface = semibold; fontFeatureSettings = "tnum" }
     private val bMarks = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
     private val bPrev = ctx.tvIconButton(R.drawable.rd_ic_arrow_left, ctx.getString(R.string.rd_tv_programme_before), Dark.A2) { browse(-1) }
     private val bNext = ctx.tvIconButton(R.drawable.rd_ic_arrow_right, ctx.getString(R.string.rd_tv_programme_after), Dark.A2) { browse(1) }
     private val bAction = ctx.tvButton("", accent = true) { action() }
-    private val bWhere = ctx.tvText("", 13f, ctx.tvAccent)
-    private val bTime = ctx.tvText("", 13f, Dark.A2)
-    private val bTitle = ctx.tvText("", 16f, Dark.FG2)
-    private val bProgressRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
-    private val bProgress = TvProgress(ctx, Dark.TRACK, ctx.tvAccent)
-    private val bLeft = ctx.tvText("", 13f, Dark.A3)
-    private val bNextText = ctx.tvText("", 13f, Dark.A3)
-    private val bEpisode = ctx.tvText("", 13f, Dark.A2)
-    private val bDesc = ctx.tvText("", 13f, Dark.A2, lines = 3)
+    private val bKeyBrowse = ctx.tvText("", 12f, Dark.A3)
+    private val bKeyZap = ctx.tvText("▲ ▼  " + ctx.getString(R.string.rd_tv_channels), 12f, Dark.A3)
+    // the remote's keys on a TV; the arrows to touch on a phone or a tablet
+    private val keys = Settings.device.isTv
+
+    /** a mark of the bar (Live, Earlier, Next): small capitals in a rounded well */
+    private fun pill(sp: Float) = ctx.tvText("", sp, Dark.FG1).apply {
+        typeface = semibold
+        isAllCaps = true
+        letterSpacing = 0.04f
+        gravity = Gravity.CENTER
+    }
 
     /** Browsing the guide of the channel in the banner: 0 is what is on, -1 the programme before, +1 the next... */
     private var browse = 0
@@ -211,37 +253,71 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
     /* ---- the banner ---- */
 
     private fun buildBanner() {
+        // like a cable box's bar: the whole width, flush with the bottom or right on the player's bar (no gap), a
+        // thin line at its top and a soft shade above it over the picture; the columns mirror in right to left
         banner = LinearLayout(ctx).apply {
             orientation = LinearLayout.VERTICAL
-            background = rounded(Dark.CARD, ctx.tvDp(10f))
-            setPadding(ctx.tvPx(16f), ctx.tvPx(12f), ctx.tvPx(14f), ctx.tvPx(14f))
             visibility = View.GONE
-            isClickable = true
             alpha = 0f
         }
-        // the band of the channel and the buttons
-        val band = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL; minimumHeight = ctx.tvPx(48f) }
-        band.addView(bNumber, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT))
-        band.addView(bLogo, LinearLayout.LayoutParams(ctx.tvPx(44f), ctx.tvPx(44f)).apply { marginStart = ctx.tvPx(8f) })
-        band.addView(bName, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f).apply { marginStart = ctx.tvPx(12f) })
-        band.addView(bMarks, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginStart = ctx.tvPx(6f) })
-        for (b in arrayOf(bPrev, bNext)) band.addView(b, LinearLayout.LayoutParams(ctx.tvPx(36f), ctx.tvPx(36f)).apply { marginStart = ctx.tvPx(4f) })
+        val wrap = ViewGroup.LayoutParams.WRAP_CONTENT
+        val match = ViewGroup.LayoutParams.MATCH_PARENT
+        banner.addView(View(ctx).apply {
+            background = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(0, Dark.SHADE))
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        }, LinearLayout.LayoutParams(match, ctx.tvPx(90f)))
+        banner.addView(View(ctx).apply { setBackgroundColor(Dark.LINE) }, LinearLayout.LayoutParams(match, maxOf(1, ctx.tvPx(1f))))
+        bBody.isClickable = true
+        bBody.minimumHeight = ctx.tvPx(106f)
+        banner.addView(bBody, LinearLayout.LayoutParams(match, wrap))
+        // the channel: its logo big, its number and name (a star for a favorite), its group
+        bHead.setPadding(ctx.tvPx(18f), ctx.tvPx(13f), ctx.tvPx(14f), ctx.tvPx(13f))
+        bHead.addView(bLogo, LinearLayout.LayoutParams(ctx.tvPx(64f), ctx.tvPx(64f)))
+        val who = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL; setPadding(0, ctx.tvPx(6f), 0, 0) }
+        val nameLine = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
+        nameLine.addView(bNumber, LinearLayout.LayoutParams(wrap, wrap).apply { marginEnd = ctx.tvPx(8f) })
+        // the name as long as it is, the star right after it (place() keeps it to the column)
+        nameLine.addView(bName, LinearLayout.LayoutParams(wrap, wrap))
+        nameLine.addView(bFav, LinearLayout.LayoutParams(ctx.tvPx(16f), ctx.tvPx(16f)).apply { marginStart = ctx.tvPx(6f) })
+        who.addView(nameLine, LinearLayout.LayoutParams(match, wrap))
+        who.addView(bGroup, LinearLayout.LayoutParams(match, wrap).apply { topMargin = ctx.tvPx(4f) })
+        bHead.addView(who, LinearLayout.LayoutParams(0, wrap, 1f).apply { marginStart = ctx.tvPx(12f) })
+        bBody.addView(bHead, LinearLayout.LayoutParams(ctx.tvPx(260f), match))
+        bBody.addView(View(ctx).apply { setBackgroundColor(Dark.DIVIDER) }, LinearLayout.LayoutParams(maxOf(1, ctx.tvPx(1f)), match))
+        // the programme: its state, title, hours, how far it is, its story, what comes next
+        val info = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL; setPadding(ctx.tvPx(20f), ctx.tvPx(13f), ctx.tvPx(20f), ctx.tvPx(13f)) }
+        val titleRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL; minimumHeight = ctx.tvPx(26f) }
+        bWhere.background = rounded(Dark.TRACK, ctx.tvDp(5f))
+        titleRow.addView(bWhere, LinearLayout.LayoutParams(wrap, ctx.tvPx(22f)).apply { marginEnd = ctx.tvPx(12f) })
+        titleRow.addView(bTitle, LinearLayout.LayoutParams(0, wrap, 1f))
+        info.addView(titleRow, LinearLayout.LayoutParams(match, wrap))
+        bProgressRow.addView(bTime, LinearLayout.LayoutParams(wrap, wrap).apply { marginEnd = ctx.tvPx(14f) })
+        // the gaps around the bar belong to its neighbours
+        bProgressRow.addView(bProgress, LinearLayout.LayoutParams(0, ctx.tvPx(5f), 1f))
+        bProgressRow.addView(bLeft, LinearLayout.LayoutParams(wrap, wrap).apply { marginStart = ctx.tvPx(14f) })
+        info.addView(bProgressRow, LinearLayout.LayoutParams(match, ctx.tvPx(20f)).apply { topMargin = ctx.tvPx(7f) })
+        info.addView(bEpisode, LinearLayout.LayoutParams(match, wrap).apply { topMargin = ctx.tvPx(10f) })
+        info.addView(bDesc, LinearLayout.LayoutParams(match, wrap).apply { topMargin = ctx.tvPx(6f) })
+        bNextRow.addView(bNextKey, LinearLayout.LayoutParams(wrap, ctx.tvPx(20f)).apply { marginEnd = ctx.tvPx(10f) })
+        bNextRow.addView(bNextText, LinearLayout.LayoutParams(0, wrap, 1f))
+        info.addView(bNextRow, LinearLayout.LayoutParams(match, ctx.tvPx(20f)).apply { topMargin = ctx.tvPx(10f) })
+        bBody.addView(info, LinearLayout.LayoutParams(0, wrap, 1f))
+        // the side: the time now, the archive, what OK does here, the remote's keys (or the arrows to touch)
+        bEnd.setPadding(0, ctx.tvPx(12f), ctx.tvPx(18f), ctx.tvPx(12f))
+        bEnd.minimumWidth = ctx.tvPx(150f)
+        bEnd.addView(bClock, LinearLayout.LayoutParams(wrap, wrap))
+        bEnd.addView(View(ctx), LinearLayout.LayoutParams(0, 0, 1f))
         bAction.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13f)
-        bAction.minHeight = ctx.tvPx(30f)
-        band.addView(bAction, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ctx.tvPx(34f)).apply { marginStart = ctx.tvPx(6f) })
-        banner.addView(band)
-        // what is on (browsed to), and next; with Settings > TV, its description
-        val titleRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
-        titleRow.addView(bWhere, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = ctx.tvPx(10f) })
-        titleRow.addView(bTime, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = ctx.tvPx(10f) })
-        titleRow.addView(bTitle, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
-        banner.addView(titleRow, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(10f) })
-        bProgressRow.addView(bProgress, LinearLayout.LayoutParams(ctx.tvPx(120f), ctx.tvPx(3f)).apply { marginEnd = ctx.tvPx(10f) })
-        bProgressRow.addView(bLeft, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { marginEnd = ctx.tvPx(10f) })
-        bProgressRow.addView(bNextText, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
-        banner.addView(bProgressRow, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(8f) })
-        banner.addView(bEpisode, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(8f) })
-        banner.addView(bDesc, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { topMargin = ctx.tvPx(4f) })
+        bAction.minHeight = ctx.tvPx(28f)
+        for (b in arrayOf(bPrev, bNext)) bMarks.addView(b, LinearLayout.LayoutParams(ctx.tvPx(36f), ctx.tvPx(36f)).apply { marginStart = ctx.tvPx(4f) })
+        bMarks.addView(bAction, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ctx.tvPx(32f)).apply { marginStart = ctx.tvPx(8f) })
+        bEnd.addView(bMarks, LinearLayout.LayoutParams(wrap, wrap).apply { topMargin = ctx.tvPx(8f); bottomMargin = ctx.tvPx(8f) })
+        bEnd.addView(View(ctx), LinearLayout.LayoutParams(0, 0, 1f))
+        for (k in arrayOf(bKeyBrowse, bKeyZap)) {
+            k.visibility = if (keys) View.VISIBLE else View.GONE
+            bEnd.addView(k, LinearLayout.LayoutParams(wrap, wrap))
+        }
+        bBody.addView(bEnd, LinearLayout.LayoutParams(wrap, match))
         // a swipe across the banner: the programmes before and after (the time from left to right)
         val swipe = GestureDetector(ctx, object : GestureDetector.SimpleOnGestureListener() {
             override fun onDown(e: MotionEvent) = true
@@ -252,16 +328,13 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
             }
             override fun onSingleTapUp(e: MotionEvent): Boolean { schedule(); return true }
         })
-        banner.setOnTouchListener { _, ev -> swipe.onTouchEvent(ev); true }
-        root.addView(banner, FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL))
+        bBody.setOnTouchListener { _, ev -> swipe.onTouchEvent(ev); true }
+        root.addView(banner, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM))
     }
 
-    /** about two thirds of the video, from a phone to a 4K screen; above the player's bar when it shows */
+    /** the whole width, flush with the bottom of the screen, or right on the player's bar when it shows */
     private fun place() {
-        val dm = ctx.resources.displayMetrics
-        val w = root.width.takeIf { it > 0 } ?: dm.widthPixels
-        val px = { v: Float -> ctx.tvDp(v) }
-        val width = maxOf(minOf(px(560f), w - px(32f)), minOf(w * 0.66f, px(1100f), w - px(32f))).toInt()
+        val w = root.width.takeIf { it > 0 } ?: ctx.resources.displayMetrics.widthPixels
         // the top of the player's bar (its rows at the bottom of its overlay) when it shows
         val loc = IntArray(2)
         root.getLocationOnScreen(loc)
@@ -275,12 +348,29 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
             top = minOf(top, loc[1])
         }
         val lp = banner.layoutParams as FrameLayout.LayoutParams
-        val bottom = if (top < rootBottom) rootBottom - top + px(16f).toInt() else px(24f).toInt() + navigationInset()
-        if (lp.width != width || lp.bottomMargin != bottom) {
-            lp.width = width
+        val bottom = if (top < rootBottom) rootBottom - top else navigationInset()
+        if (lp.bottomMargin != bottom) {
             lp.bottomMargin = bottom
             banner.layoutParams = lp
         }
+        // a phone held upright: the channel's column narrower, its logo smaller; a long name widens it (up to a
+        // third of the screen), then takes two lines
+        val narrow = w < ctx.tvPx(600f)
+        val logo = ctx.tvPx(if (narrow) 44f else 64f)
+        val number = if (bNumber.text.isEmpty()) 0 else bNumber.paint.measureText(bNumber.text.toString()).toInt() + ctx.tvPx(8f)
+        val star = if (bFav.visibility == View.VISIBLE) ctx.tvPx(22f) else 0
+        val around = bHead.paddingLeft + bHead.paddingRight + logo + ctx.tvPx(12f) + number + star
+        val name = bName.paint.measureText(bName.text.toString()).toInt() + ctx.tvPx(2f)
+        val headW = if (narrow) ctx.tvPx(150f) else (around + name).coerceIn(ctx.tvPx(260f), maxOf(ctx.tvPx(260f), w / 3))
+        val cut = androidx.core.view.ViewCompat.getRootWindowInsets(root)?.getInsets(androidx.core.view.WindowInsetsCompat.Type.displayCutout())
+        val pad = ctx.tvPx(if (narrow) 4f else 24f)
+        val left = pad + (cut?.left ?: 0)
+        val right = pad + (cut?.right ?: 0)
+        if (bBody.paddingLeft != left || bBody.paddingRight != right) bBody.setPadding(left, 0, right, ctx.tvPx(6f))
+        (bHead.layoutParams as LinearLayout.LayoutParams).let { if (it.width != headW) { it.width = headW; bHead.layoutParams = it } }
+        (bLogo.layoutParams as LinearLayout.LayoutParams).let { if (it.width != logo) { it.width = logo; it.height = logo; bLogo.layoutParams = it } }
+        // the name as long as the column lets it, the star right after it
+        bName.maxWidth = maxOf(ctx.tvPx(40f), headW - around)
     }
 
     private fun navigationInset(): Int {
@@ -340,74 +430,103 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
         return browseList.getOrNull(browseIndexNow + browse)
     }
 
+    private fun level() = settings.getString(KEY_IPTV_BANNER, "0")?.toIntOrNull() ?: 0
+
+    private var badge: View? = null
+
     private fun bind() {
         val c = channel() ?: return
-        val level = settings.getString(KEY_IPTV_BANNER, "0")?.toIntOrNull() ?: 0
-        bNumber.text = if (c.number > 0) c.number.toString() else ""
-        bLogo.set(c.logo, c.name)
-        bName.text = c.name
-        bMarks.removeAllViews()
+        val full = level() <= 1
         val catchup = TvPlayback.catchup
-        if (catchup != null) bMarks.addView(ctx.tvBadge(ctx.getString(R.string.rd_tv_archive), R.drawable.rd_ic_recent, accent = true))
-        else if (c.catchupDays > 0) bMarks.addView(ctx.tvBadge(ctx.resources.getQuantityString(R.plurals.rd_tv_days_short, c.catchupDays, c.catchupDays), R.drawable.rd_ic_recent, dark = true).apply {
-            contentDescription = ctx.resources.getQuantityString(R.plurals.rd_tv_catchup_tip, c.catchupDays, c.catchupDays)
-        })
-        val showInfo = level <= 1
-        val e = if (catchup != null && browse == 0) null else shownEntry(c)
-        bPrev.visibility = if (showInfo && c.hasGuide) View.VISIBLE else View.GONE
-        bNext.visibility = bPrev.visibility
-        bWhere.visibility = if (browse != 0) View.VISIBLE else View.GONE
-        bWhere.text = if (browse > 0) "+$browse" else browse.toString()
-        for (v in arrayOf<View>(bTime, bTitle, bProgressRow, bEpisode, bDesc)) v.visibility = if (showInfo) View.VISIBLE else View.GONE
-        if (showInfo) {
-            bTitle.text = when {
-                catchup != null && browse == 0 -> catchup.title.ifEmpty { ctx.getString(R.string.rd_tv_programme) }
-                e != null -> e.title
-                c.hasGuide -> ctx.getString(R.string.rd_tv_loading_guide)
-                else -> ctx.getString(R.string.rd_tv_no_guide_channel)
-            }
-            val descOn = settings.getBoolean(KEY_IPTV_DESCRIPTIONS, true)
-            val episode = if (e != null) listOf(e.episode, e.subtitle, e.category).filter { it.isNotEmpty() }.joinToString(" · ") else ""
-            bEpisode.text = episode
-            bEpisode.visibility = if (descOn && episode.isNotEmpty()) View.VISIBLE else View.GONE
-            val desc = if (descOn && e != null && e.descLength > 0) LiveTv.description(c, e) else ""
-            bDesc.text = desc
-            bDesc.visibility = if (desc.isNotEmpty()) View.VISIBLE else View.GONE
+        val archive = catchup != null && browse == 0
+        // the channel
+        bLogo.set(c.logo, c.name)
+        bNumber.text = if (c.number > 0) c.number.toString() else ""
+        bNumber.visibility = if (c.number > 0) View.VISIBLE else View.GONE
+        bName.text = c.name
+        bFav.visibility = if (LiveTv.isFavorite(c.key)) View.VISIBLE else View.GONE
+        bGroup.text = c.group
+        bGroup.visibility = if (c.group.isNotEmpty()) View.VISIBLE else View.GONE
+        // the programme: the archive played, one before or after (browsed to), or what is on
+        val e = if (archive) null else shownEntry(c)
+        val live = !archive && browse == 0 && e != null && full
+        bWhere.text = when {
+            archive -> ctx.getString(R.string.rd_tv_archive)
+            browse != 0 -> ctx.getString(if (browse > 0) R.string.rd_tv_later else R.string.rd_tv_earlier) + if (abs(browse) > 1) " " + abs(browse) else ""
+            live -> ctx.getString(R.string.rd_tv_live_mark)
+            else -> ""
         }
+        bWhere.visibility = if (bWhere.text.isEmpty()) View.GONE else View.VISIBLE
+        bWhere.background = rounded(if (live) ctx.tvAccent else Dark.TRACK, ctx.tvDp(5f))
+        bWhere.setTextColor(if (live) Dark.ON_ACCENT else Dark.FG1)
+        bTitle.text = when {
+            archive -> catchup!!.title.ifEmpty { ctx.getString(R.string.rd_tv_programme) }
+            !full -> c.name
+            e != null -> e.title
+            c.hasGuide -> ctx.getString(R.string.rd_tv_loading_guide)
+            else -> ctx.getString(R.string.rd_tv_no_guide_channel)
+        }
+        // with Settings > TV: its episode and kind, two lines of its story
+        val descOn = settings.getBoolean(KEY_IPTV_DESCRIPTIONS, true) && full && e != null
+        val episode = if (descOn) listOf(e!!.subtitle, e.episode, e.category).filter { it.isNotEmpty() }.joinToString("  ·  ") else ""
+        bEpisode.text = episode
+        bEpisode.visibility = if (episode.isNotEmpty()) View.VISIBLE else View.GONE
+        val desc = if (descOn && e!!.descLength > 0) LiveTv.description(c, e).replace(Regex("\\s+"), " ") else ""
+        bDesc.text = desc
+        bDesc.visibility = if (desc.isNotEmpty()) View.VISIBLE else View.GONE
+        // the side: the archive of the channel, the arrows or the remote's keys of the guide
+        badge?.let { bMarks.removeView(it) }
+        badge = null
+        if (!archive && c.catchupDays > 0) badge = ctx.tvBadge(ctx.resources.getQuantityString(R.plurals.rd_tv_days_short, c.catchupDays, c.catchupDays), R.drawable.rd_ic_recent, dark = true).apply {
+            contentDescription = ctx.resources.getQuantityString(R.plurals.rd_tv_catchup_tip, c.catchupDays, c.catchupDays)
+            bMarks.addView(this, 0)
+        }
+        val guide = full && c.hasGuide && catchup == null
+        bPrev.visibility = if (guide && !keys) View.VISIBLE else View.GONE
+        bNext.visibility = bPrev.visibility
+        bKeyBrowse.text = "◀ ▶  " + ctx.getString(R.string.rd_tv_programmes)
+        bKeyBrowse.visibility = if (guide && keys) View.VISIBLE else View.GONE
         bindTimes()
         bindAction(c, e)
+        place()
     }
 
     private fun bindTimes() {
         val c = channel() ?: return
-        val level = settings.getString(KEY_IPTV_BANNER, "0")?.toIntOrNull() ?: 0
-        if (level > 1) return
         val n = System.currentTimeMillis() / 1000
+        bClock.text = TvTexts.time(ctx, n)
+        val level = level()
         val catchup = TvPlayback.catchup
-        val e = if (catchup != null && browse == 0) null else shownEntry(c)
-        val start = catchup?.takeIf { browse == 0 }?.start ?: e?.start ?: 0
-        val stop = catchup?.takeIf { browse == 0 }?.stop ?: e?.stop ?: 0
+        val archive = catchup != null && browse == 0
+        val e = if (archive) null else shownEntry(c)
+        val start = if (archive) catchup!!.start else e?.start ?: 0
+        val stop = if (archive) catchup!!.stop else e?.stop ?: 0
+        // its hours, how far it is (what is on), the time left or until it starts
+        bProgressRow.visibility = if (level <= 1 && start > 0) View.VISIBLE else View.GONE
         bTime.text = if (start > 0) TvTexts.span(ctx, start, stop) else ""
-        bTime.visibility = if (start > 0) View.VISIBLE else View.GONE
         val onNow = start in 1..n && n < stop
-        bProgress.visibility = if (onNow && browse == 0 && catchup == null && settings.getBoolean(KEY_IPTV_PROGRESS, true)) View.VISIBLE else View.GONE
+        bProgress.visibility = if (onNow && browse == 0 && !archive && settings.getBoolean(KEY_IPTV_PROGRESS, true)) View.VISIBLE else View.GONE
         if (onNow) bProgress.fraction = (n - start).toFloat() / maxOf(1L, stop - start)
+        (bLeft.layoutParams as LinearLayout.LayoutParams).let { lp ->
+            val gap = if (bProgress.visibility == View.VISIBLE) ctx.tvPx(14f) else 0
+            if (lp.marginStart != gap) { lp.marginStart = gap; bLeft.layoutParams = lp }
+        }
         bLeft.text = when {
             start <= 0 -> ""
-            catchup != null && browse == 0 -> ""
-            browse == 0 -> ctx.getString(R.string.rd_tv_left, TvTexts.duration(ctx, stop - n))
+            archive -> ctx.getString(R.string.rd_tv_from_archive, TvTexts.day(ctx, catchup!!.start))
             start > n -> ctx.getString(R.string.rd_tv_in, TvTexts.duration(ctx, start - n))
             stop <= n -> ctx.getString(R.string.rd_tv_ended_ago, TvTexts.duration(ctx, n - stop))
+            browse == 0 -> ctx.getString(R.string.rd_tv_left, TvTexts.duration(ctx, stop - n))
             else -> ctx.getString(R.string.rd_tv_on_now)
         }
-        bLeft.visibility = if (bLeft.text.isEmpty()) View.GONE else View.VISIBLE
-        val next = if (browse == 0 && catchup == null) c.next(n) else null
-        bNextText.text = when {
-            catchup != null && browse == 0 -> ctx.getString(R.string.rd_tv_from_archive, TvTexts.day(ctx, catchup.start))
-            next != null && level == 0 && settings.getBoolean(KEY_IPTV_NEXT, true) -> ctx.getString(R.string.rd_tv_next, next.title, TvTexts.time(ctx, next.start))
-            else -> ""
+        // what comes after the programme shown
+        val next = when {
+            archive || level != 0 || !settings.getBoolean(KEY_IPTV_NEXT, true) -> null
+            browse == 0 -> c.next(n)
+            else -> browseList.getOrNull(browseIndexNow + browse + 1)
         }
-        bProgressRow.visibility = if (bProgress.visibility == View.VISIBLE || bLeft.text.isNotEmpty() || bNextText.text.isNotEmpty()) View.VISIBLE else View.GONE
+        bNextText.text = if (next != null) TvTexts.time(ctx, next.start) + "  " + next.title else ""
+        bNextRow.visibility = if (next != null && next.title.isNotEmpty()) View.VISIBLE else View.GONE
     }
 
     /** the action of the programme shown: from its start (the archive), Watch a past one, Remind Me of one to come */
@@ -544,8 +663,9 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
     private fun inBanner(ev: MotionEvent): Boolean {
         if (!bannerShown || banner.visibility != View.VISIBLE) return false
         val loc = IntArray(2)
-        banner.getLocationOnScreen(loc)
-        return ev.rawX >= loc[0] && ev.rawX <= loc[0] + banner.width && ev.rawY >= loc[1] && ev.rawY <= loc[1] + banner.height
+        // the bar itself: a touch on the shade above it is the video's
+        bBody.getLocationOnScreen(loc)
+        return ev.rawX >= loc[0] && ev.rawX <= loc[0] + bBody.width && ev.rawY >= loc[1] && ev.rawY <= loc[1] + bBody.height
     }
 
     private fun onTouch(ev: MotionEvent, pass: (MotionEvent) -> Boolean): Boolean {

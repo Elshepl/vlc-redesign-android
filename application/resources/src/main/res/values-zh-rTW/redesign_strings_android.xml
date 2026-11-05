@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">從首頁取消釘選</string>
     <string name="rd_pinned">已釘選</string>
     <string name="rd_pinned_missing">此釘選的資料夾或播放清單已不存在。</string>
+    <string name="rd_volume_indicator">音量指示器</string>
+    <string name="rd_volume_right_side">右側</string>
+    <string name="rd_volume_left_side">左側</string>
+    <string name="rd_volume_top_right">右上角</string>
+    <string name="rd_volume_top_left">左上角</string>
 </resources>

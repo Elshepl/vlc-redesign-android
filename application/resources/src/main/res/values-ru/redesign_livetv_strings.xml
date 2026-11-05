@@ -243,4 +243,12 @@
         <item quantity="many">архив %1$d дн.</item>
         <item quantity="other">архив %1$d дн.</item>
     </plurals>
+    <string name="rd_idle_screen">Экран ожидания</string>
+    <string name="rd_idle_after_1">Через 1 минуту</string>
+    <string name="rd_idle_after_3">Через 3 минуты</string>
+    <string name="rd_idle_after_5">Через 5 минут</string>
+    <string name="rd_idle_after_10">Через 10 минут</string>
+    <string name="rd_tv_live_mark">Эфир</string>
+    <string name="rd_tv_next_mark">Следующий</string>
+    <string name="rd_tv_programmes">Передачи</string>
 </resources>

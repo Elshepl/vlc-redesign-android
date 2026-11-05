@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Lossa från Hem</string>
     <string name="rd_pinned">Fästa</string>
     <string name="rd_pinned_missing">Den fästa mappen eller spellistan finns inte längre.</string>
+    <string name="rd_volume_indicator">Volymindikator</string>
+    <string name="rd_volume_right_side">Höger sida</string>
+    <string name="rd_volume_left_side">Vänster sida</string>
+    <string name="rd_volume_top_right">Övre högra hörnet</string>
+    <string name="rd_volume_top_left">Övre vänstra hörnet</string>
 </resources>

@@ -213,4 +213,12 @@
     <plurals name="rd_tv_catchup_days_short">
         <item quantity="other">回看 %1$d 天</item>
     </plurals>
+    <string name="rd_idle_screen">屏幕保护</string>
+    <string name="rd_idle_after_1">1 分钟后</string>
+    <string name="rd_idle_after_3">3 分钟后</string>
+    <string name="rd_idle_after_5">5 分钟后</string>
+    <string name="rd_idle_after_10">10 分钟后</string>
+    <string name="rd_tv_live_mark">直播</string>
+    <string name="rd_tv_next_mark">下一个</string>
+    <string name="rd_tv_programmes">节目</string>
 </resources>

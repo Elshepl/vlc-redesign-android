@@ -6,6 +6,9 @@ import org.videolan.television.ui.browser.BaseTvActivity
 
 class ConfirmationTvActivity : BaseTvActivity() {
 
+    // VLC Redesign: a dialog, no idle screen in it
+    override val idleScreenAllowed = false
+
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

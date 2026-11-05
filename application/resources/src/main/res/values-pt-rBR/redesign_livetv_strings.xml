@@ -233,4 +233,12 @@
         <item quantity="many">arquivo de %1$d d</item>
         <item quantity="other">arquivo de %1$d d</item>
     </plurals>
+    <string name="rd_idle_screen">Tela ociosa</string>
+    <string name="rd_idle_after_1">Após 1 minuto</string>
+    <string name="rd_idle_after_3">Após 3 minutos</string>
+    <string name="rd_idle_after_5">Após 5 minutos</string>
+    <string name="rd_idle_after_10">Após 10 minutos</string>
+    <string name="rd_tv_live_mark">Ao vivo</string>
+    <string name="rd_tv_next_mark">Próximo</string>
+    <string name="rd_tv_programmes">Programas</string>
 </resources>

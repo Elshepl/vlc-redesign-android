@@ -243,4 +243,12 @@
         <item quantity="many">archiwum %1$d dn.</item>
         <item quantity="other">archiwum %1$d dn.</item>
     </plurals>
+    <string name="rd_idle_screen">Ekran bezczynności</string>
+    <string name="rd_idle_after_1">Po 1 minucie</string>
+    <string name="rd_idle_after_3">Po 3 minutach</string>
+    <string name="rd_idle_after_5">Po 5 minutach</string>
+    <string name="rd_idle_after_10">Po 10 minutach</string>
+    <string name="rd_tv_live_mark">Na żywo</string>
+    <string name="rd_tv_next_mark">Następny</string>
+    <string name="rd_tv_programmes">Audycje</string>
 </resources>

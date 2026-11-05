@@ -39,6 +39,7 @@ import android.view.accessibility.AccessibilityEvent
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.RelativeLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.StringRes
@@ -104,6 +105,7 @@ import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.gui.helpers.UiTools.showVideoTrack
 import org.videolan.vlc.gui.helpers.hf.checkPIN
 import org.videolan.vlc.gui.view.PlayerProgress
+import org.videolan.vlc.gui.view.RdVolumeMeter
 import org.videolan.vlc.isVLC4
 import org.videolan.vlc.manageAbRepeatStep
 import org.videolan.vlc.media.MediaUtils
@@ -124,9 +126,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     private lateinit var playerOverlayBrightness: ConstraintLayout
     private lateinit var brightnessValueText: TextView
     private lateinit var playerBrightnessProgress: PlayerProgress
-    private lateinit var playerOverlayVolume: ConstraintLayout
-    private lateinit var volumeValueText: TextView
-    private lateinit var playerVolumeProgress: PlayerProgress
+    private lateinit var playerOverlayVolume: View
     var info: TextView? = null
     var subinfo: TextView? = null
     var overlayInfo: View? = null
@@ -390,18 +390,56 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         player.handler.sendEmptyMessage(VideoPlayerActivity.FADE_OUT_BRIGHTNESS_INFO)
         player.findViewById<ViewStubCompat>(R.id.player_volume_stub)?.setVisible()
         playerOverlayVolume = player.findViewById(R.id.player_overlay_volume)
-        volumeValueText = player.findViewById(R.id.volume_value_text)
-        playerVolumeProgress = player.findViewById(R.id.playerVolumeProgress)
-        volumeValueText.text = "$volume%"
-        playerVolumeProgress.isDouble = player.isAudioBoostEnabled
-        playerVolumeProgress.setValue(volume)
+        // VLC Redesign: the design's volume meter, where Settings > Controls > Volume indicator puts it
+        val meter = player.findViewById<RdVolumeMeter>(R.id.player_volume_meter)
+        val position = placeVolumeIndicator(playerOverlayVolume)
+        meter.upright = position == VOLUME_RIGHT || position == VOLUME_LEFT
+        meter.set(volume, if (player.isAudioBoostEnabled) 200 else 100)
         playerOverlayVolume.setVisible()
         player.handler.removeMessages(VideoPlayerActivity.FADE_OUT_VOLUME_INFO)
-        player.handler.sendEmptyMessageDelayed(VideoPlayerActivity.FADE_OUT_VOLUME_INFO, 1000L)
+        player.handler.sendEmptyMessageDelayed(VideoPlayerActivity.FADE_OUT_VOLUME_INFO, 1500L)
         dimStatusBar(true)
         player.service?.let { service ->
             resetSleepTimer(service)
         }
+    }
+
+    /**
+     * VLC Redesign: the volume meter where Settings > Controls > Volume indicator puts it (as the desktop's): on the
+     * right side of the video, the left side, the top right or the top left corner; Automatic is the right side,
+     * the left one in a right-to-left language. Returns the side or the corner.
+     */
+    private fun placeVolumeIndicator(v: View): String {
+        var position = Settings.getInstance(player).getString(KEY_VOLUME_INDICATOR, VOLUME_AUTO) ?: VOLUME_AUTO
+        if (position !in arrayOf(VOLUME_RIGHT, VOLUME_LEFT, VOLUME_TOP_RIGHT, VOLUME_TOP_LEFT))
+            position = if (v.layoutDirection == View.LAYOUT_DIRECTION_RTL) VOLUME_LEFT else VOLUME_RIGHT
+        val right = position == VOLUME_RIGHT || position == VOLUME_TOP_RIGHT
+        val top = position == VOLUME_TOP_RIGHT || position == VOLUME_TOP_LEFT
+        val side = player.resources.getDimensionPixelSize(R.dimen.tv_overscan_horizontal) + 8.dp
+        val above = 24.dp + if (top) player.resources.getDimensionPixelSize(R.dimen.tv_overscan_vertical) else 0
+        when (val lp = v.layoutParams) {
+            is FrameLayout.LayoutParams -> {
+                lp.gravity = (if (top) Gravity.TOP else Gravity.CENTER_VERTICAL) or (if (right) Gravity.RIGHT else Gravity.LEFT)
+                lp.leftMargin = if (right) 0 else side
+                lp.rightMargin = if (right) side else 0
+                lp.topMargin = if (top) above else 0
+                lp.bottomMargin = 0
+                lp.marginStart = lp.leftMargin.takeIf { v.layoutDirection != View.LAYOUT_DIRECTION_RTL } ?: lp.rightMargin
+                lp.marginEnd = lp.rightMargin.takeIf { v.layoutDirection != View.LAYOUT_DIRECTION_RTL } ?: lp.leftMargin
+                v.layoutParams = lp
+            }
+            is RelativeLayout.LayoutParams -> {
+                for (rule in intArrayOf(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.ALIGN_PARENT_START,
+                        RelativeLayout.ALIGN_PARENT_END, RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.CENTER_VERTICAL)) lp.removeRule(rule)
+                lp.addRule(if (right) RelativeLayout.ALIGN_PARENT_RIGHT else RelativeLayout.ALIGN_PARENT_LEFT)
+                lp.addRule(if (top) RelativeLayout.ALIGN_PARENT_TOP else RelativeLayout.CENTER_VERTICAL)
+                lp.setMargins(if (right) 0 else side, if (top) above else 0, if (right) side else 0, 0)
+                lp.marginStart = 0
+                lp.marginEnd = 0
+                v.layoutParams = lp
+            }
+        }
+        return position
     }
 
     /**
@@ -1353,3 +1391,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         bookmarkListDelegate = null
     }
 }
+/** VLC Redesign: Settings > Controls > Volume indicator, the place of the player's volume meter (the desktop's choices) */
+const val KEY_VOLUME_INDICATOR = "rd_volume_indicator"
+const val VOLUME_AUTO = "auto"
+const val VOLUME_RIGHT = "right"
+const val VOLUME_LEFT = "left"
+const val VOLUME_TOP_RIGHT = "top_right"
+const val VOLUME_TOP_LEFT = "top_left"

@@ -40,6 +40,16 @@
                 android:summary="@string/preferred_resolution_summary"
                 android:title="@string/preferred_resolution"/>
 
+    <!-- VLC Redesign: the place of the player's volume meter (the desktop's Volume indicator) -->
+    <ListPreference
+            app:singleLineTitle="false"
+            android:defaultValue="auto"
+            android:entries="@array/rd_volume_indicator_entries"
+            android:entryValues="@array/rd_volume_indicator_values"
+            android:key="rd_volume_indicator"
+            android:summary="%s"
+            android:title="@string/rd_volume_indicator"/>
+
 
     <PreferenceCategory
             android:title="@string/interface_secondary_display_category_title"

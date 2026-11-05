@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Détacher de l’accueil</string>
     <string name="rd_pinned">Épinglés</string>
     <string name="rd_pinned_missing">Ce dossier ou cette playlist épinglé n’existe plus.</string>
+    <string name="rd_volume_indicator">Indicateur de volume</string>
+    <string name="rd_volume_right_side">Côté droit</string>
+    <string name="rd_volume_left_side">Côté gauche</string>
+    <string name="rd_volume_top_right">Coin supérieur droit</string>
+    <string name="rd_volume_top_left">Coin supérieur gauche</string>
 </resources>

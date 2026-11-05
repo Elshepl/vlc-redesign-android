@@ -233,4 +233,12 @@
         <item quantity="many">diferido %1$d d</item>
         <item quantity="other">diferido %1$d d</item>
     </plurals>
+    <string name="rd_idle_screen">Pantalla de reposo</string>
+    <string name="rd_idle_after_1">Después de 1 minuto</string>
+    <string name="rd_idle_after_3">Después de 3 minutos</string>
+    <string name="rd_idle_after_5">Después de 5 minutos</string>
+    <string name="rd_idle_after_10">Después de 10 minutos</string>
+    <string name="rd_tv_live_mark">En directo</string>
+    <string name="rd_tv_next_mark">Siguiente</string>
+    <string name="rd_tv_programmes">Programas</string>
 </resources>

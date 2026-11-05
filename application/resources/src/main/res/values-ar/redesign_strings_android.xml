@@ -62,4 +62,9 @@
     <string name="rd_unpin_from_home">إلغاء التثبيت من الرئيسية</string>
     <string name="rd_pinned">المثبّتة</string>
     <string name="rd_pinned_missing">لم يعد هذا المجلد أو قائمة التشغيل المثبّتة موجودًا.</string>
+    <string name="rd_volume_indicator">مؤشر مستوى الصوت</string>
+    <string name="rd_volume_right_side">الجانب الأيمن</string>
+    <string name="rd_volume_left_side">الجانب الأيسر</string>
+    <string name="rd_volume_top_right">الزاوية العلوية اليمنى</string>
+    <string name="rd_volume_top_left">الزاوية العلوية اليسرى</string>
 </resources>

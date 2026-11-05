@@ -205,18 +205,28 @@ internal class TvLogoView(context: Context, private val sizeDp: Float, private v
     }
 }
 
-/** The progress of what is on: a time axis, from the left in every language (as the seek bar). */
-internal class TvProgress(context: Context, private val track: Int, private val fill: Int) : View(context) {
+/**
+ * The progress of what is on: a time axis, from the left in every language (as the seek bar and the guide); with
+ * [mirror], from the right in a right-to-left language (the TV app's information bar). [maxWidth] at most.
+ */
+internal class TvProgress(context: Context, private val track: Int, private val fill: Int, private val maxWidth: Int = 0,
+                          private val mirror: Boolean = false) : View(context) {
     var fraction = 0f
         set(v) { val c = v.coerceIn(0f, 1f); if (c != field) { field = c; invalidate() } }
     private val paint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG)
-    init { layoutDirection = LAYOUT_DIRECTION_LTR }
+    init { if (!mirror) layoutDirection = LAYOUT_DIRECTION_LTR }
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        if (maxWidth > 0 && measuredWidth > maxWidth) setMeasuredDimension(maxWidth, measuredHeight)
+    }
     override fun onDraw(canvas: android.graphics.Canvas) {
         val r = height / 2f
+        val w = width.toFloat()
         paint.color = track
-        canvas.drawRoundRect(0f, 0f, width.toFloat(), height.toFloat(), r, r, paint)
+        canvas.drawRoundRect(0f, 0f, w, height.toFloat(), r, r, paint)
         paint.color = fill
-        canvas.drawRoundRect(0f, 0f, width * fraction, height.toFloat(), r, r, paint)
+        if (mirror && layoutDirection == LAYOUT_DIRECTION_RTL) canvas.drawRoundRect(w - w * fraction, 0f, w, height.toFloat(), r, r, paint)
+        else canvas.drawRoundRect(0f, 0f, w * fraction, height.toFloat(), r, r, paint)
     }
 }
 
@@ -316,5 +326,6 @@ internal object TvTexts {
         }
     }
 
-    fun span(context: Context, start: Long, stop: Long) = time(context, start) + " – " + time(context, stop)
+    // "20:30 – 21:30" read from the left in every language (in Hebrew the two times would swap places otherwise)
+    fun span(context: Context, start: Long, stop: Long) = "‪" + time(context, start) + " – " + time(context, stop) + "‬"
 }

@@ -108,8 +108,9 @@ object TvSettings {
             KEY_IPTV_ENABLED -> {
                 LiveTv.init(activity)
                 if (LiveTv.enabled) LiveTv.start() else LiveTv.stop()
-                // its page in the sidebar follows
-                activity.recreate()
+                // its page in the sidebar follows; the page shown stays where it is scrolled (drawing the whole
+                // screen again took it back to its top, the switch out of sight)
+                (activity as? org.videolan.vlc.gui.preferences.PreferencesActivity)?.refreshSidebar() ?: activity.recreate()
             }
             KEY_IPTV_GUIDE_DAYS, KEY_IPTV_LANGUAGES -> LiveTv.reloadGuides()
         }

@@ -101,4 +101,35 @@
         <item>5</item>
         <item>6</item>
     </string-array>
+    <!-- Idle screen (rd_idle_screen, the TV layout): Off, after 1, 3, 5 or 10 minutes (the TV app's) -->
+    <string-array name="rd_idle_screen_entries" translatable="false">
+        <item>@string/rd_off</item>
+        <item>@string/rd_idle_after_1</item>
+        <item>@string/rd_idle_after_3</item>
+        <item>@string/rd_idle_after_5</item>
+        <item>@string/rd_idle_after_10</item>
+    </string-array>
+    <string-array name="rd_idle_screen_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+    <!-- Volume indicator (rd_volume_indicator): Automatic (by the direction of the language), the right or the left
+         side, the top right or the top left corner (the desktop's choices) -->
+    <string-array name="rd_volume_indicator_entries" translatable="false">
+        <item>@string/rd_automatic</item>
+        <item>@string/rd_volume_right_side</item>
+        <item>@string/rd_volume_left_side</item>
+        <item>@string/rd_volume_top_right</item>
+        <item>@string/rd_volume_top_left</item>
+    </string-array>
+    <string-array name="rd_volume_indicator_values" translatable="false">
+        <item>auto</item>
+        <item>right</item>
+        <item>left</item>
+        <item>top_right</item>
+        <item>top_left</item>
+    </string-array>
 </resources>

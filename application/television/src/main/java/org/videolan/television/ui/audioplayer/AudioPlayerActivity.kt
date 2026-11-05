@@ -91,6 +91,8 @@ import kotlin.math.absoluteValue
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Callback, PlayerOptionsDelegateCallback  {
 
+    // VLC Redesign: no idle screen in the player (the cat is only ever the background of a page)
+    override val idleScreenAllowed = false
     private lateinit var binding: TvAudioPlayerBinding
     private lateinit var adapter: PlaylistAdapter
     private var lastMove: Long = 0

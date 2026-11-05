@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">ホームからピン留めを外す</string>
     <string name="rd_pinned">ピン留め</string>
     <string name="rd_pinned_missing">このピン留めされたフォルダーまたはプレイリストはもうありません。</string>
+    <string name="rd_volume_indicator">音量インジケーター</string>
+    <string name="rd_volume_right_side">右側</string>
+    <string name="rd_volume_left_side">左側</string>
+    <string name="rd_volume_top_right">右上隅</string>
+    <string name="rd_volume_top_left">左上隅</string>
 </resources>

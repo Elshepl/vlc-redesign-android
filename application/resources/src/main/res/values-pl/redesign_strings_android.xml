@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Odepnij od ekranu głównego</string>
     <string name="rd_pinned">Przypięte</string>
     <string name="rd_pinned_missing">Ten przypięty folder lub lista odtwarzania już nie istnieje.</string>
+    <string name="rd_volume_indicator">Wskaźnik głośności</string>
+    <string name="rd_volume_right_side">Prawa strona</string>
+    <string name="rd_volume_left_side">Lewa strona</string>
+    <string name="rd_volume_top_right">Prawy górny róg</string>
+    <string name="rd_volume_top_left">Lewy górny róg</string>
 </resources>

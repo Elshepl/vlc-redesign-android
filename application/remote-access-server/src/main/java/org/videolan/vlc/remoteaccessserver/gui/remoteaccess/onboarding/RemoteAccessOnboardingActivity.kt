@@ -25,7 +25,7 @@
 package org.videolan.vlc.remoteaccessserver.gui.remoteaccess.onboarding
 
 import android.os.Bundle
-import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -39,8 +39,10 @@ import org.videolan.vlc.remoteaccessserver.viewmodels.RemoteAccessOnboardingView
 
 
 class RemoteAccessOnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
-    private lateinit var nextButton: Button
-    private lateinit var skipButton: Button
+    // VLC Redesign: the onboarding's buttons are the design's text buttons (activity_onboarding.xml), not Buttons:
+    // a Button here made the screen crash at its start (Settings > Remote access)
+    private lateinit var nextButton: TextView
+    private lateinit var skipButton: TextView
     private val viewModel: RemoteAccessOnboardingViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()

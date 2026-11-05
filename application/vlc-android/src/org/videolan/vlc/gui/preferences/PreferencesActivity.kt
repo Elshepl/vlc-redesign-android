@@ -171,6 +171,16 @@ class PreferencesActivity : BaseActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_placeholder, fragment).addToBackStack("sub").commit()
     }
 
+    /**
+     * The pages of the sidebar again (the Live TV add-on turned on or off: its page comes or goes), the page shown
+     * left as it is, where it is scrolled. One pane: the list is drawn again when it comes back.
+     */
+    fun refreshSidebar() {
+        if (!twoPane || isFinishing) return
+        supportFragmentManager.beginTransaction().replace(R.id.rd_settings_sidebar, RdSettingsSidebar.newInstance(true)).commitNow()
+        currentPage?.let { sidebar?.select(it.key) }
+    }
+
     /** Called by a page when it shows: the sidebar marks it, the bar shows its title */
     fun onPageShown(page: RdPage) {
         currentPage = page

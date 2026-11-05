@@ -28,6 +28,15 @@
             android:summary="@string/tv_ui_summary"
             android:title="@string/tv_ui_title"/>
 
+    <!-- VLC Redesign: the cat as the background of the TV layout's pages after a while without a key (idle.js) -->
+    <ListPreference
+            android:defaultValue="3"
+            android:key="rd_idle_screen"
+            android:title="@string/rd_idle_screen"
+            android:summary="%s"
+            android:entries="@array/rd_idle_screen_entries"
+            android:entryValues="@array/rd_idle_screen_values"/>
+
     <ListPreference
             android:defaultValue=""
             android:key="set_locale"

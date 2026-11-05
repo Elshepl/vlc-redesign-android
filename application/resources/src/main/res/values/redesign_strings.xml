@@ -455,4 +455,10 @@
     <string name="rd_update_you_have">You have %1$s.</string>
     <string name="rd_update_whats_new">What\'s new</string>
     <string name="rd_update_check_daily">Check for updates once a day</string>
+    <!-- the place of the player's volume meter (the desktop's Volume indicator) -->
+    <string name="rd_volume_indicator">Volume indicator</string>
+    <string name="rd_volume_right_side">Right side</string>
+    <string name="rd_volume_left_side">Left side</string>
+    <string name="rd_volume_top_right">Top right corner</string>
+    <string name="rd_volume_top_left">Top left corner</string>
 </resources>

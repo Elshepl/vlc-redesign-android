@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Відкріпити від головної</string>
     <string name="rd_pinned">Закріплені</string>
     <string name="rd_pinned_missing">Цієї закріпленої теки або списку відтворення більше немає.</string>
+    <string name="rd_volume_indicator">Індикатор гучності</string>
+    <string name="rd_volume_right_side">Праворуч</string>
+    <string name="rd_volume_left_side">Ліворуч</string>
+    <string name="rd_volume_top_right">Правий верхній кут</string>
+    <string name="rd_volume_top_left">Лівий верхній кут</string>
 </resources>

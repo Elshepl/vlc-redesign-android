@@ -60,4 +60,9 @@
     <string name="rd_unpin_from_home">Rimuovi dalla Home</string>
     <string name="rd_pinned">Fissati</string>
     <string name="rd_pinned_missing">Questa cartella o playlist fissata non esiste più.</string>
+    <string name="rd_volume_indicator">Indicatore del volume</string>
+    <string name="rd_volume_right_side">Lato destro</string>
+    <string name="rd_volume_left_side">Lato sinistro</string>
+    <string name="rd_volume_top_right">Angolo in alto a destra</string>
+    <string name="rd_volume_top_left">Angolo in alto a sinistra</string>
 </resources>

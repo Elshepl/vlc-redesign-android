@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import android.view.Gravity
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -34,12 +35,9 @@ import org.videolan.vlc.util.isTalkbackIsEnabled
 
 abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        if (Settings.showTvUi) {
-            requireActivity().setTheme(R.style.Theme_VLC_Black_BottomSheet)
-        }
-        super.onCreate(savedInstanceState)
-    }
+    // VLC Redesign: the TV layout's sheets take their theme for themselves (onCreateDialog). Laid on the activity, it
+    // stayed there after the sheet: the next page of the TV layout's settings (a Leanback list) could no longer be
+    // built and the app crashed (Settings > Interface > Sleep timer, then any page)
 
     private var videoRemoteJob: Job? = null
     var onDismissListener: DialogInterface.OnDismissListener? = null
@@ -157,7 +155,8 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val bottomSheetDialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
+        val bottomSheetDialog = if (Settings.showTvUi) BottomSheetDialog(ContextThemeWrapper(requireContext(), R.style.Theme_VLC_Black_BottomSheet), theme)
+        else super.onCreateDialog(savedInstanceState) as BottomSheetDialog
         if (AndroidDevices.isChromeBook) bottomSheetDialog.setOnShowListener {
             bottomSheetDialog.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
                 ?.let { bottomSheet ->

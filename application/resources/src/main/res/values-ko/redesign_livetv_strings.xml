@@ -213,4 +213,12 @@
     <plurals name="rd_tv_catchup_days_short">
         <item quantity="other">다시보기 %1$d일</item>
     </plurals>
+    <string name="rd_idle_screen">화면 보호기</string>
+    <string name="rd_idle_after_1">1분 후</string>
+    <string name="rd_idle_after_3">3분 후</string>
+    <string name="rd_idle_after_5">5분 후</string>
+    <string name="rd_idle_after_10">10분 후</string>
+    <string name="rd_tv_live_mark">라이브</string>
+    <string name="rd_tv_next_mark">다음</string>
+    <string name="rd_tv_programmes">프로그램</string>
 </resources>
