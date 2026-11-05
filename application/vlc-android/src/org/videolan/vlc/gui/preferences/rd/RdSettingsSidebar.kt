@@ -48,6 +48,9 @@ class RdSettingsSidebar : Fragment() {
         for (page in RdPage.entries) {
             // Live TV: its page while its add-on is on
             if (page == RdPage.TV && !org.videolan.vlc.livetv.LiveTv.let { it.init(ctx); it.enabled }) continue
+            // Extensions: its page while it has something to set (its only row, the optional features, has no
+            // feature in this version: the page was an empty heading)
+            if (page == RdPage.EXTENSIONS && org.videolan.vlc.util.FeatureFlag.entries.isEmpty()) continue
             if (page.group != group) {
                 group = page.group
                 list.addView(heading(getString(group)))
