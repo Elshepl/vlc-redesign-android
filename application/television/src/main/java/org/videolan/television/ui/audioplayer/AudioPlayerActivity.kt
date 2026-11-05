@@ -24,6 +24,8 @@ import android.annotation.TargetApi
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Build
+import android.graphics.Outline
+import android.view.ViewOutlineProvider
 import android.os.Bundle
 import android.support.v4.media.session.PlaybackStateCompat
 import android.text.format.DateFormat
@@ -36,6 +38,8 @@ import android.widget.SeekBar
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.core.view.isVisible
+import org.videolan.tools.dp
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -115,6 +119,11 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
         binding.playlist.layoutManager = LinearLayoutManager(this)
         adapter = PlaylistAdapter(this, model)
         binding.playlist.adapter = adapter
+        // VLC Redesign: the design's cover, radius 10
+        binding.albumCover.outlineProvider = object : ViewOutlineProvider() {
+            override fun getOutline(view: View, outline: Outline) = outline.setRoundRect(0, 0, view.width, view.height, 10.dp.toFloat())
+        }
+        binding.albumCover.clipToOutline = true
         binding.lifecycleOwner = this
         binding.progress = model.progress
         model.dataset.observe(this) { mediaWrappers ->
@@ -156,6 +165,10 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
         bookmarkModel = BookmarkModel.get(this)
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
+                if (binding.playlist.isVisible) {
+                    showQueue(false)
+                    return
+                }
                 if (optionsDelegate?.isShowing() == true) {
                     optionsDelegate?.hide()
                     return
@@ -357,7 +370,24 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             R.id.button_repeat -> switchRepeatMode()
             R.id.button_shuffle -> setShuffleMode(!shuffling)
             R.id.button_more -> showAdvancedOptions(v)
+            R.id.button_queue -> showQueue(!binding.playlist.isVisible)
         }
+    }
+
+    /**
+     * VLC Redesign: the queue opens on demand over the page's end (the design's music player has the cover alone), the
+     * D-pad on its current item; closed with Back, Left or the queue button again
+     */
+    private fun showQueue(show: Boolean) {
+        binding.playlist.isVisible = show
+        binding.buttonQueue.isActivated = show
+        if (show) binding.playlist.post {
+            val position = adapter.selectedItem.coerceAtLeast(0)
+            (binding.playlist.layoutManager as LinearLayoutManager).scrollToPosition(position)
+            binding.playlist.post {
+                (binding.playlist.findViewHolderForAdapterPosition(position)?.itemView ?: binding.playlist).requestFocus()
+            }
+        } else binding.buttonQueue.requestFocus()
     }
 
     private fun showAdvancedOptions(@Suppress("UNUSED_PARAMETER") v: View?) {

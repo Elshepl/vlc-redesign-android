@@ -25,6 +25,17 @@
         <item name="android:textColor">@color/rd_dark_fg_b1</item>
     </style>
 
+    <!-- an icon button of the TV music player's bar: 44 square, the 24 glyph, the desktop's focus line -->
+    <style name="RdTvAudioButton" parent="">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/rd_tv_icon_button_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
     <!-- the system's alert dialogs over the TV layout: the design's dialog panel (A4, radius 14, the window border),
          Inter, the buttons in the accent with the accent's focus -->
     <style name="Theme.VLC.TV.Dialog" parent="android:Theme.Material.Dialog.Alert">

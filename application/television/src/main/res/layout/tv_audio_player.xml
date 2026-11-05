@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- VLC Redesign: the TV audio player in the design (Figma 4767:23726 "Player - Music", the TV app's player): the title
-     in Inter Medium FG/2, the seek well of the control bar, the accent play pill, the buttons with the desktop's
-     keyboard focus, the queue on a B2 panel -->
+<!-- VLC Redesign: the TV audio player as the design's music player (Figma 4767:23726 "Player - Music", the TV app's
+     .pl.music): the large centred cover (radius 10) over its dimmed blur, the title and the artist under it, the control
+     bar at the bottom as the video player's (previous, the accent play pill, next, the time, the seek well, the length,
+     shuffle, repeat, the queue, more). The queue opens on demand on a dark panel at the end (Back or Left closes it).
+     With the D-pad: Right from Next reaches the seek well (Left / Right seek), Up from it goes back to Play, Down to
+     the buttons at the end. -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
@@ -15,7 +18,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/rd_dark_bg_b1">
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/background"
@@ -28,104 +32,74 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/playlist"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginBottom="17dp"
-                android:background="@color/rd_tv_panel"
-                android:clipToPadding="false"
-                android:nextFocusLeft="@+id/button_play"
-                android:nextFocusRight="@+id/playlist"
-                android:nextFocusUp="@+id/playlist"
-                android:nextFocusDown="@+id/playlist"
-                android:paddingTop="@dimen/tv_overscan_vertical"
-                app:layout_constraintBottom_toBottomOf="@id/media_progress"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline8"
-                app:layout_constraintTop_toTopOf="parent" />
-
+        <!-- the cover: as large as the page leaves it above the title, square, centred -->
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/album_cover"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="16dp"
-                android:scaleType="fitCenter"
+                android:layout_marginTop="@dimen/tv_overscan_vertical"
+                android:layout_marginBottom="20dp"
+                android:background="@color/rd_dark_bg_b1"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_song_big"
                 app:layout_constraintBottom_toTopOf="@+id/media_title"
                 app:layout_constraintDimensionRatio="1"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="@+id/media_progress"
-                app:layout_constraintTop_toBottomOf="@+id/barrier"
-                app:layout_constraintVertical_chainStyle="spread" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
                 android:id="@+id/media_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="120dp"
+                android:ellipsize="end"
                 android:fontFamily="@font/inter_medium"
                 android:gravity="center_horizontal"
+                android:singleLine="true"
                 android:textColor="@color/rd_dark_fg_2"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/media_artist"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintRight_toLeftOf="@+id/playlist"
-                app:layout_constraintStart_toStartOf="@+id/media_progress"
-                app:layout_constraintTop_toBottomOf="@+id/album_cover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 tools:text="Title" />
 
         <TextView
                 android:id="@+id/media_artist"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="20dp"
+                android:ellipsize="end"
                 android:fontFamily="@font/inter"
                 android:gravity="center_horizontal"
+                android:singleLine="true"
                 android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/media_time"
-                app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintRight_toLeftOf="@+id/playlist"
-                app:layout_constraintStart_toStartOf="@+id/media_progress"
-                app:layout_constraintTop_toBottomOf="@+id/media_title"
-                tools:text="Artist" />
-
-        <androidx.appcompat.widget.ViewStubCompat
-                android:id="@+id/bookmarks_stub"
-                android:layout_width="500dp"
-                android:layout_height="0dp"
-                android:layout="@layout/bookmarks"
-                android:layout_marginTop="@dimen/tv_overscan_vertical"
-                android:layout_marginBottom="17dp"
-                app:layout_constraintBottom_toBottomOf="@id/media_progress"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/rd_audio_bar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"  />
-
-        <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65" />
+                tools:text="Artist" />
 
         <LinearLayout
                 android:id="@+id/playback_speed_quick_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tv_overscan_horizontal"
                 android:layout_marginTop="@dimen/tv_overscan_vertical"
                 android:background="@drawable/rd_tv_button_bg"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center_vertical"
                 android:longClickable="true"
-                android:nextFocusDown="@+id/media_progress"
-                android:padding="4dp"
+                android:nextFocusDown="@+id/button_play"
+                android:padding="6dp"
                 android:visibility="gone"
-                app:layout_constraintStart_toStartOf="@+id/media_time"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="visible">
 
@@ -141,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:textColor="@color/rd_dark_fg_2"
                     tools:text="2.0x" />
         </LinearLayout>
 
@@ -154,14 +129,13 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center_vertical"
-                android:nextFocusUp="@+id/playback_speed_quick_action"
                 android:longClickable="true"
-                android:nextFocusDown="@+id/media_progress"
-                android:padding="4dp"
+                android:nextFocusDown="@+id/button_play"
+                android:padding="6dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/playback_speed_quick_action"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_goneMarginStart="0dp"
+                app:layout_goneMarginStart="@dimen/tv_overscan_horizontal"
                 tools:visibility="visible">
 
             <ImageView
@@ -175,6 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:textColor="@color/rd_dark_fg_2"
                     tools:text="9:30AM" />
 
         </LinearLayout>
@@ -186,191 +161,205 @@
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="sleep_quick_action,playback_speed_quick_action" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/bookmark_marker_container"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/media_progress"
-                app:layout_constraintEnd_toEndOf="@+id/media_progress"
-                app:layout_constraintStart_toStartOf="@+id/media_progress" />
-
-        <TextView
-                android:id="@+id/media_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@{progress.timeText}"
-                android:importantForAccessibility="no"
-                android:layout_marginBottom="6dp"
-                android:textColor="@color/rd_dark_fg_a2"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toTopOf="@+id/media_progress"
-                app:layout_constraintStart_toStartOf="@+id/media_progress"
-                tools:text="0:30" />
-
-        <org.videolan.vlc.gui.view.AccessibleSeekBar
-                android:id="@+id/media_progress"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/tv_overscan_horizontal_progressbar"
-                android:layout_marginEnd="@dimen/tv_overscan_horizontal_progressbar"
-                android:focusable="true"
-                android:layoutDirection="ltr"
-                android:max="@{(int)progress.length}"
-                android:maxHeight="28dp"
-                android:minHeight="28dp"
-                android:background="@drawable/rd_tv_focus_frame"
-                android:thumbOffset="-2dp"
+        <!-- the queue, on demand: a B2 panel at the end, from the top to the bar -->
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/playlist"
+                android:layout_width="400dp"
+                android:layout_height="0dp"
+                android:background="@color/rd_tv_panel"
+                android:clipToPadding="false"
+                android:nextFocusLeft="@+id/button_queue"
+                android:nextFocusRight="@+id/playlist"
                 android:nextFocusUp="@+id/playlist"
-                android:nextFocusDown="@+id/button_play"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:paddingStart="2dp"
-                android:paddingEnd="2dp"
-                android:progress="@{(int)progress.time}"
-                android:progressDrawable="@drawable/rd_tv_seekbar"
-                android:secondaryProgress="0"
-                android:splitTrack="false"
-                android:thumb="@drawable/rd_tv_seekbar_thumb"
-                app:layout_constraintBottom_toTopOf="@+id/button_play"
+                android:nextFocusDown="@+id/playlist"
+                android:paddingTop="@dimen/tv_overscan_vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        <androidx.appcompat.widget.ViewStubCompat
+                android:id="@+id/bookmarks_stub"
+                android:layout_width="500dp"
+                android:layout_height="0dp"
+                android:layout="@layout/bookmarks"
+                android:layout_marginTop="@dimen/tv_overscan_vertical"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@id/rd_audio_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- the control bar (.pl.music .pl-bar): A4 at 95 %, the line of A1 on top -->
+        <View
+                android:id="@+id/rd_audio_bar"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="@drawable/rd_tv_audio_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-                android:id="@+id/media_length"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:importantForAccessibility="no"
-                android:layout_marginBottom="6dp"
-                android:textColor="@color/rd_dark_fg_a2"
-                android:textSize="15sp"
-                android:text="@{progress.lengthText}"
-                app:layout_constraintBottom_toTopOf="@+id/media_progress"
-                app:layout_constraintEnd_toEndOf="@+id/media_progress"
-                tools:text="3:52" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/button_shuffle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rd_tv_icon_button_bg"
-                android:clickable="true"
-                android:focusable="true"
-                android:nextFocusRight="@+id/button_previous"
-                android:onClick="onClick"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/button_previous"
-                app:layout_constraintEnd_toStartOf="@+id/button_previous"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="@+id/media_progress"
-                app:layout_constraintTop_toTopOf="@+id/button_previous"
-                app:srcCompat="@drawable/ic_shuffle_audio"
-                tools:src="@drawable/ic_shuffle_audio" />
-
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_previous"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rd_tv_icon_button_bg"
-                android:clickable="true"
+                style="@style/RdTvAudioButton"
+                android:layout_marginStart="@dimen/tv_overscan_horizontal"
                 android:contentDescription="@string/previous"
-                android:focusable="true"
-                android:nextFocusDown="@+id/playlist"
                 android:onClick="onClick"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/button_play"
-                app:layout_constraintEnd_toStartOf="@+id/button_play"
-                app:layout_constraintStart_toEndOf="@+id/button_shuffle"
-                app:layout_constraintTop_toTopOf="@+id/button_play"
-                app:srcCompat="@drawable/ic_player_previous"
-                tools:src="@drawable/ic_previous" />
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/ic_player_previous" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="@dimen/tv_overscan_vertical"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/rd_tv_icon_button_bg"
                 android:clickable="true"
                 android:focusable="true"
-                android:nextFocusDown="@+id/playlist"
                 android:onClick="onClick"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button_next"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintStart_toEndOf="@+id/button_previous"
-                app:srcCompat="@drawable/rd_tv_play"
-                tools:src="@drawable/rd_tv_play">
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/rd_tv_play">
 
             <requestFocus />
         </androidx.appcompat.widget.AppCompatImageView>
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_next"
+                style="@style/RdTvAudioButton"
+                android:layout_marginStart="4dp"
+                android:contentDescription="@string/next"
+                android:nextFocusRight="@+id/media_progress"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintStart_toEndOf="@+id/button_play"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/ic_player_next" />
+
+        <TextView
+                android:id="@+id/media_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rd_tv_icon_button_bg"
-                android:clickable="true"
-                android:focusable="true"
-                android:nextFocusDown="@+id/playlist"
-                android:contentDescription="@string/next"
-                android:onClick="onClick"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/button_play"
-                app:layout_constraintEnd_toStartOf="@+id/button_repeat"
-                app:layout_constraintStart_toEndOf="@+id/button_play"
-                app:layout_constraintTop_toTopOf="@+id/button_play"
-                app:srcCompat="@drawable/ic_player_next"
-                tools:src="@drawable/ic_next" />
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:minWidth="76dp"
+                android:text="@{progress.timeText}"
+                android:textColor="@color/rd_dark_fg_a2"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintStart_toEndOf="@+id/button_next"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                tools:text="0:30" />
 
-        <!-- Playlist -->
+        <org.videolan.vlc.gui.view.AccessibleSeekBar
+                android:id="@+id/media_progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rd_tv_focus_frame"
+                android:focusable="true"
+                android:layoutDirection="ltr"
+                android:max="@{(int)progress.length}"
+                android:maxHeight="28dp"
+                android:minHeight="28dp"
+                android:nextFocusUp="@+id/button_play"
+                android:nextFocusDown="@+id/button_shuffle"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="2dp"
+                android:paddingBottom="2dp"
+                android:progress="@{(int)progress.time}"
+                android:progressDrawable="@drawable/rd_tv_seekbar"
+                android:secondaryProgress="0"
+                android:splitTrack="false"
+                android:thumb="@drawable/rd_tv_seekbar_thumb"
+                android:thumbOffset="-2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toStartOf="@+id/media_length"
+                app:layout_constraintStart_toEndOf="@+id/media_time"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar" />
+
+        <!-- the bookmarks' marks over the seek well -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookmark_marker_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/media_progress"
+                app:layout_constraintEnd_toEndOf="@+id/media_progress"
+                app:layout_constraintStart_toStartOf="@+id/media_progress" />
+
+        <TextView
+                android:id="@+id/media_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:minWidth="76dp"
+                android:text="@{progress.lengthText}"
+                android:textColor="@color/rd_dark_fg_a2"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toStartOf="@+id/button_shuffle"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                tools:text="3:52" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_shuffle"
+                style="@style/RdTvAudioButton"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/shuffle_title"
+                android:nextFocusLeft="@+id/media_progress"
+                android:nextFocusUp="@+id/media_progress"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toStartOf="@+id/button_repeat"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/ic_shuffle_audio" />
+
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_repeat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/rd_tv_icon_button_bg"
-                android:clickable="true"
-                android:focusable="true"
-                android:nextFocusDown="@+id/playlist"
+                style="@style/RdTvAudioButton"
+                android:layout_marginEnd="4dp"
+                android:nextFocusUp="@+id/media_progress"
                 android:onClick="onClick"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/button_next"
-                app:layout_constraintEnd_toEndOf="@+id/media_progress"
-                app:layout_constraintStart_toEndOf="@+id/button_next"
-                app:layout_constraintTop_toTopOf="@+id/button_next"
-                app:srcCompat="@drawable/ic_repeat_audio"
-                tools:src="@drawable/ic_repeat_audio" />
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toStartOf="@+id/button_queue"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/ic_repeat_audio" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_queue"
+                style="@style/RdTvAudioButton"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/show_playlist"
+                android:nextFocusUp="@+id/media_progress"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toStartOf="@+id/button_more"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/ic_player_playqueue" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rd_tv_icon_button_bg"
-                android:clickable="true"
-                android:focusable="true"
-                android:nextFocusDown="@+id/playlist"
-                android:onClick="onClick"
-                android:padding="8dp"
+                style="@style/RdTvAudioButton"
+                android:layout_marginEnd="@dimen/tv_overscan_horizontal"
                 android:contentDescription="@string/more_actions"
-                app:layout_constraintBottom_toBottomOf="@+id/button_play"
-                app:layout_constraintEnd_toEndOf="@+id/media_progress"
-                app:layout_constraintTop_toTopOf="@+id/button_play"
-                app:srcCompat="@drawable/rd_tv_more"
-                tools:src="@drawable/rd_tv_more" />
+                android:nextFocusUp="@+id/media_progress"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/rd_tv_more" />
 
         <androidx.appcompat.widget.ViewStubCompat
                 android:id="@+id/player_options_stub"
