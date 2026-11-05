@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>As legendas aparecem em um vídeo aberto por Abrir transmissão de rede ou Recentes.</item>
-        <item>A fonte das legendas das Configurações agora funciona: serifa, monoespaçada, casual ou cursiva.</item>
-        <item>No Android TV, o visual escuro do design, sua fonte e uma moldura laranja em volta do cartão em foco.</item>
+        <item>Android TV: todas as páginas no design e com o controle remoto: as boas-vindas, Configurações, os players de vídeo e música, os detalhes e a busca.</item>
+        <item>A gata da designer mora na tela de descanso, e a faixa do canal do Live TV é uma barra de informações como a de um decodificador de TV a cabo.</item>
+        <item>O volume aparece em um medidor ao lado da tela (Configurações > Indicador de volume).</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

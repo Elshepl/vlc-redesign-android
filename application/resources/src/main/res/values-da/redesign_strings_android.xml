@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Gemmes kun på denne enhed, så du kan fortsætte, hvor du slap.</string>
     <string name="rd_ob_updates_help">Søger én gang om dagen efter en nyere testudgave af VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Undertekster vises for en video åbnet fra Åbn netværksstream eller Seneste.</item>
-        <item>Undertekstskrifttypen i Indstillinger virker nu: serif, monospace, uformel eller kursiv.</item>
-        <item>På Android TV: designets mørke udseende, dets skrifttype og en orange ramme om kortet i fokus.</item>
+        <item>Android TV: alle sider i det nye design og med fjernbetjeningen: velkomst, Indstillinger, video- og musikafspilleren, detaljer og søgning.</item>
+        <item>Designerens kat bor på pauseskærmen, og kanalbanneret i Live TV er en infobjælke som på en tv-boks.</item>
+        <item>Lydstyrken vises på en måler i siden af skærmen (Indstillinger > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefon</string>

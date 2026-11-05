@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Els subtítols es mostren en un vídeo obert des d\'Obre un flux de xarxa o Recents.</item>
-        <item>La lletra dels subtítols de la Configuració ja funciona: serif, monoespai, informal o cursiva.</item>
-        <item>A Android TV, l\'aspecte fosc del disseny, la seva lletra i un marc taronja al voltant de la targeta enfocada.</item>
+        <item>Android TV: totes les pàgines amb el disseny i amb el comandament: la benvinguda, Configuració, els reproductors de vídeo i música, els detalls i la cerca.</item>
+        <item>La gata de la dissenyadora viu a la pantalla d\'espera, i el bàner del canal de Live TV és una barra d\'informació com la d\'un descodificador.</item>
+        <item>El volum es mostra en un indicador al costat de la pantalla (Configuració > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

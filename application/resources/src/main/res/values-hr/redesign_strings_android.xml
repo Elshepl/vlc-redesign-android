@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Čuva se samo na ovom uređaju, da biste nastavili gdje ste stali.</string>
     <string name="rd_ob_updates_help">Jednom dnevno traži noviju probnu verziju VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Titlovi se prikazuju za video otvoren iz Otvori mrežni tok ili Nedavno.</item>
-        <item>Font titlova u Postavkama sada radi: serifni, jednake širine, ležerni ili kurziv.</item>
-        <item>Na Android TV-u tamni izgled dizajna, njegov font i narančasti okvir oko kartice u fokusu.</item>
+        <item>Android TV: svaka stranica u novom dizajnu i s daljinskim: dobrodošlica, Postavke, video i glazbeni player, pojedinosti i pretraživanje.</item>
+        <item>Mačka dizajnerice živi na zaslonu mirovanja, a traka kanala u Live TV je informacijska traka kao kod kabelskog prijamnika.</item>
+        <item>Glasnoća se prikazuje na mjeraču uz rub zaslona (Postavke > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Veličina titlova</string>
     <string name="rd_cast_this_phone">Ovaj telefon</string>

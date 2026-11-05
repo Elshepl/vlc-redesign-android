@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
     <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
     <string-array name="rd_whats_new_items">
-        <item>Tekstitykset näkyvät videossa, joka avataan kohdasta Avaa verkkovirta tai Viimeisimmät.</item>
-        <item>Asetusten tekstitysfontti toimii nyt: serif, tasalevyinen, rento tai kaunokirjoitus.</item>
-        <item>Android TV:ssä suunnittelun tumma ulkoasu, sen fontti ja oranssi kehys kohdistetun kortin ympärillä.</item>
+        <item>Android TV: jokainen sivu uudessa ulkoasussa ja kaukosäätimellä: tervetuloa, Asetukset, video- ja musiikkisoitin, tiedot ja haku.</item>
+        <item>Suunnittelijan kissa asuu lepotilan näytöllä, ja Live TV:n kanavapalkki on infopalkki kuin digiboksissa.</item>
+        <item>Äänenvoimakkuus näkyy mittarissa ruudun reunassa (Asetukset > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
     <string name="rd_cast_this_phone">Tämä puhelin</string>

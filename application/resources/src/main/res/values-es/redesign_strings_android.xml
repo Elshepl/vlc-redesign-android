@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Se guarda solo en este dispositivo, para continuar donde lo dejaste.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más reciente de VLC for Android una vez al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Los subtítulos se muestran en un vídeo abierto desde Abrir flujo de red o Recientes.</item>
-        <item>La fuente de subtítulos de Ajustes ya funciona: serif, monoespaciada, informal o cursiva.</item>
-        <item>En Android TV, el aspecto oscuro del diseño, su fuente y un marco naranja alrededor de la tarjeta enfocada.</item>
+        <item>Android TV: todas las páginas con el diseño y con el mando: la bienvenida, Preferencias, los reproductores de vídeo y música, los detalles y la búsqueda.</item>
+        <item>La gata de la diseñadora vive en la pantalla de espera, y el rótulo del canal de Live TV es una barra de información como la de un decodificador.</item>
+        <item>El volumen se muestra en un indicador al lado de la pantalla (Preferencias > Indicador de volumen).</item>
     </string-array>
     <string name="rd_subtitle_size">Tamaño de los subtítulos</string>
     <string name="rd_cast_this_phone">Este teléfono</string>

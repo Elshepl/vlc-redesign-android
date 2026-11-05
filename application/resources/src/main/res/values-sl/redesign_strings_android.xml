@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Shranjeno samo v tej napravi, da lahko nadaljujete tam, kjer ste končali.</string>
     <string name="rd_ob_updates_help">Enkrat na dan poišče novejšo preizkusno izdajo VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Podnapisi se prikažejo pri videu, odprtem iz Odpri omrežni tok ali Nedavno.</item>
-        <item>Pisava podnapisov v Nastavitvah zdaj deluje: serifna, enakomerne širine, sproščena ali pisana.</item>
-        <item>Na Android TV temen videz dizajna, njegova pisava in oranžen okvir okoli izbrane kartice.</item>
+        <item>Android TV: vsaka stran v novem dizajnu in z daljinskim upravljalnikom: dobrodošlica, Nastavitve, video in glasbeni predvajalnik, podrobnosti in iskanje.</item>
+        <item>Mačka oblikovalke živi na zaslonu mirovanja, pasica kanala v Live TV pa je informacijska vrstica kot pri kabelskem sprejemniku.</item>
+        <item>Glasnost je prikazana na merilniku ob robu zaslona (Nastavitve > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost podnapisov</string>
     <string name="rd_cast_this_phone">Ta telefon</string>

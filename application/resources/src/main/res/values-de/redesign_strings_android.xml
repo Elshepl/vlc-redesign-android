@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Nur auf diesem Gerät gespeichert, um dort weiterzumachen, wo Sie aufgehört haben.</string>
     <string name="rd_ob_updates_help">Sucht einmal täglich nach einer neueren Testversion von VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Untertitel werden bei einem Video angezeigt, das über Netzwerkstream öffnen oder Zuletzt geöffnet wurde.</item>
-        <item>Die Untertitelschrift der Einstellungen funktioniert jetzt: Serif, Monospace, Locker oder Schreibschrift.</item>
-        <item>Auf Android TV das dunkle Aussehen des Designs, seine Schrift und ein oranger Rahmen um die fokussierte Karte.</item>
+        <item>Android TV: jede Seite im Design und mit der Fernbedienung: Willkommen, Einstellungen, Video- und Musikplayer, Details und Suche.</item>
+        <item>Die Katze der Designerin wohnt auf dem Ruhebildschirm, und das Kanalbanner von Live TV ist eine Infoleiste wie bei einer Kabelbox.</item>
+        <item>Die Lautstärke erscheint als Anzeige am Bildschirmrand (Einstellungen > Lautstärkeanzeige).</item>
     </string-array>
     <string name="rd_subtitle_size">Untertitelgröße</string>
     <string name="rd_cast_this_phone">Dieses Telefon</string>

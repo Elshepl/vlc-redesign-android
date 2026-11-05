@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Uchováva sa iba v tomto zariadení, aby ste mohli pokračovať tam, kde ste skončili.</string>
     <string name="rd_ob_updates_help">Raz denne hľadá novšiu testovaciu zostavu VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Titulky sa zobrazia pri videu otvorenom z Otvoriť sieťový tok alebo Nedávne.</item>
-        <item>Písmo titulkov v Nastaveniach teraz funguje: pätkové, s pevnou šírkou, neformálne alebo písané.</item>
-        <item>Na Android TV tmavý vzhľad dizajnu, jeho písmo a oranžový rámček okolo vybranej karty.</item>
+        <item>Android TV: každá stránka v novom dizajne a s ovládačom: privítanie, Nastavenia, video a hudobný prehrávač, podrobnosti a hľadanie.</item>
+        <item>Mačka dizajnérky žije na šetriči obrazovky a pás kanála v Live TV je informačná lišta ako pri káblovom prijímači.</item>
+        <item>Hlasitosť sa zobrazuje na ukazovateli pri okraji obrazovky (Nastavenia > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Veľkosť titulkov</string>
     <string name="rd_cast_this_phone">Tento telefón</string>

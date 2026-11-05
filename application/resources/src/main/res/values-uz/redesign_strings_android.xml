@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Faqat shu qurilmada saqlanadi, to‘xtagan joyingizdan davom ettirish uchun.</string>
     <string name="rd_ob_updates_help">Kuniga bir marta VLC for Android ning yangiroq sinov versiyasini qidiradi.</string>
     <string-array name="rd_whats_new_items">
-        <item>Tarmoq oqimini ochish yoki Soʻnggilar orqali ochilgan videoda subtitrlar koʻrinadi.</item>
-        <item>Sozlamalardagi subtitr shrifti endi ishlaydi: serif, monospace, oddiy yoki yozma.</item>
-        <item>Android TVda dizaynning qorongʻi koʻrinishi, uning shrifti va fokusdagi karta atrofida toʻq sariq ramka.</item>
+        <item>Android TV: har bir sahifa yangi dizaynda va pult bilan: xush kelibsiz, Settings, video va musiqa pleyerlari, tafsilotlar va qidiruv.</item>
+        <item>Dizaynerning mushugi kutish ekranida yashaydi, Live TV kanal banneri esa kabel qutisidagidek axborot paneli.</item>
+        <item>Ovoz ekranning chetidagi o‘lchagichda ko‘rinadi (Settings > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitr oʻlchami</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

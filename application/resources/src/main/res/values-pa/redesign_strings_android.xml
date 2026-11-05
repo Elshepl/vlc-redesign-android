@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">ਸਿਰਫ਼ ਇਸੇ ਡਿਵਾਈਸ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕੋ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ।</string>
     <string name="rd_ob_updates_help">ਦਿਨ ਵਿੱਚ ਇੱਕ ਵਾਰ VLC for Android ਦਾ ਨਵਾਂ ਟੈਸਟ ਬਿਲਡ ਲੱਭਦਾ ਹੈ।</string>
     <string-array name="rd_whats_new_items">
-        <item>ਨੈੱਟਵਰਕ ਸਟ੍ਰੀਮ ਖੋਲ੍ਹੋ ਜਾਂ ਹਾਲੀਆ ਤੋਂ ਖੋਲ੍ਹੀ ਵੀਡੀਓ ਵਿੱਚ ਉਪਸਿਰਲੇਖ ਦਿਖਦੇ ਹਨ।</item>
-        <item>ਸੈਟਿੰਗਾਂ ਦਾ ਉਪਸਿਰਲੇਖ ਫੌਂਟ ਹੁਣ ਕੰਮ ਕਰਦਾ ਹੈ: ਸੈਰਿਫ, ਮੋਨੋਸਪੇਸ, ਕੈਜ਼ੂਅਲ ਜਾਂ ਕਰਸਿਵ।</item>
-        <item>Android TV \'ਤੇ ਡਿਜ਼ਾਈਨ ਦੀ ਗੂੜ੍ਹੀ ਦਿੱਖ, ਉਸਦਾ ਫੌਂਟ ਅਤੇ ਫੋਕਸ ਵਾਲੇ ਕਾਰਡ ਦੁਆਲੇ ਸੰਤਰੀ ਫ੍ਰੇਮ।</item>
+        <item>Android TV: ਹਰ ਪੰਨਾ ਨਵੇਂ ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਅਤੇ ਰਿਮੋਟ ਨਾਲ ਚੱਲਣ ਵਾਲਾ: ਸਵਾਗਤ, Settings, ਵੀਡੀਓ ਅਤੇ ਸੰਗੀਤ ਪਲੇਅਰ, ਵੇਰਵੇ ਅਤੇ ਖੋਜ।</item>
+        <item>ਡਿਜ਼ਾਈਨਰ ਦੀ ਬਿੱਲੀ ਹੁਣ ਵਿਹਲੀ ਸਕ੍ਰੀਨ ਉੱਤੇ ਰਹਿੰਦੀ ਹੈ, ਅਤੇ Live TV ਦਾ ਚੈਨਲ ਬੈਨਰ ਕੇਬਲ ਬਾਕਸ ਵਰਗੀ ਜਾਣਕਾਰੀ ਪੱਟੀ ਹੈ।</item>
+        <item>ਆਵਾਜ਼ ਸਕ੍ਰੀਨ ਦੇ ਪਾਸੇ ਇੱਕ ਮੀਟਰ ਵਿੱਚ ਦਿਖਦੀ ਹੈ (Settings > Volume indicator)।</item>
     </string-array>
     <string name="rd_subtitle_size">ਉਪਸਿਰਲੇਖ ਦਾ ਆਕਾਰ</string>
     <string name="rd_cast_this_phone">ਇਹ ਫ਼ੋਨ</string>

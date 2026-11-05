@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">只儲存在這部裝置上，用來從上次停止的地方繼續。</string>
     <string name="rd_ob_updates_help">每天檢查一次是否有較新的 VLC for Android 測試版。</string>
     <string-array name="rd_whats_new_items">
-        <item>從開啟網路串流或最近項目中開啟的影片會顯示字幕。</item>
-        <item>設定中的字幕字型現在可以使用了：襯線、等寬、休閒或手寫體。</item>
-        <item>在 Android TV 上，設計的深色外觀、它的字型，以及焦點卡片周圍的橘色外框。</item>
+        <item>Android TV：每個頁面都採用新設計，並可用遙控器操作：歡迎頁、設定、影片和音樂播放器、詳細資料和搜尋。</item>
+        <item>設計師的貓住在待機畫面上，Live TV 的頻道橫幅變成像有線電視機上盒那樣的資訊列。</item>
+        <item>音量以畫面側邊的音量條顯示（設定 > 音量指示器）。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">這支手機</string>

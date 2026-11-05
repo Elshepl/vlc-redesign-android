@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Alleen op dit apparaat bewaard, om verder te gaan waar je gebleven was.</string>
     <string name="rd_ob_updates_help">Zoekt eenmaal per dag naar een nieuwere testversie van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Ondertitels verschijnen bij een video die geopend is via Netwerkstream openen of Recent.</item>
-        <item>Het ondertitellettertype van Instellingen werkt nu: schreef, monospace, informeel of handschrift.</item>
-        <item>Op Android TV: de donkere look van het ontwerp, het lettertype en een oranje rand om de kaart met focus.</item>
+        <item>Android TV: elke pagina in het ontwerp en met de afstandsbediening: het welkom, Instellingen, de video- en muziekspeler, details en zoeken.</item>
+        <item>De kat van de ontwerper woont op het rustscherm, en de kanaalbanner van Live TV is een infobalk zoals bij een kabelbox.</item>
+        <item>Het volume verschijnt in een meter aan de zijkant van het scherm (Instellingen > Volume-indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Ondertitelgrootte</string>
     <string name="rd_cast_this_phone">Deze telefoon</string>

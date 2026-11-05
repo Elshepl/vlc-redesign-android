@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Manukuu yanaonekana kwa video iliyofunguliwa kutoka Fungua Mtiririko wa Mtandao au Za Hivi Karibuni.</item>
-        <item>Fonti ya manukuu katika Mipangilio sasa inafanya kazi: serif, monospace, ya kawaida au ya mwandiko.</item>
-        <item>Kwenye Android TV, mwonekano mweusi wa muundo, fonti yake na fremu ya rangi ya chungwa kuzunguka kadi iliyochaguliwa.</item>
+        <item>Android TV: kila ukurasa kwa muundo mpya na kwa rimoti: makaribisho, Mipangilio, vicheza video na muziki, maelezo na utafutaji.</item>
+        <item>Paka wa mbunifu anaishi kwenye skrini ya kupumzika, na bango la chaneli la Live TV sasa ni upau wa taarifa kama wa kisanduku cha kebo.</item>
+        <item>Sauti inaonyeshwa kwenye kipimo pembeni mwa skrini (Mipangilio > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

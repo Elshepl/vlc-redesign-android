@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtitrările apar la un videoclip deschis din Deschide flux de rețea sau Recente.</item>
-        <item>Fontul subtitrărilor din Setări funcționează acum: serif, monospațiat, informal sau cursiv.</item>
-        <item>Pe Android TV, aspectul întunecat al designului, fontul său și un chenar portocaliu în jurul cardului selectat.</item>
+        <item>Android TV: fiecare pagină în noul design și cu telecomanda: bun venit, Setari, playerele video și muzică, detalii și căutare.</item>
+        <item>Pisica designerei locuiește pe ecranul de repaus, iar bannerul canalului din Live TV este o bară de informații ca la un receptor de cablu.</item>
+        <item>Volumul apare într-un indicator pe marginea ecranului (Setari > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
     <string name="rd_cast_this_phone">Acest telefon</string>

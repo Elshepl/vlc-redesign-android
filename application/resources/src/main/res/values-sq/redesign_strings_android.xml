@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
     <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Titrat shfaqen për një video të hapur nga Hap rrjedhë rrjeti ose Së fundi.</item>
-        <item>Shkronjat e titrave te Cilësimet tani funksionojnë: serif, me gjerësi fikse, të lira ose dore.</item>
-        <item>Në Android TV, pamja e errët e dizajnit, shkronjat e tij dhe një kornizë portokalli rreth kartës në fokus.</item>
+        <item>Android TV: çdo faqe në dizajnin e ri dhe me telekomandë: mirëseardhja, Cilësimet, luajtësit e videove dhe muzikës, hollësitë dhe kërkimi.</item>
+        <item>Macja e projektueses jeton në ekranin e pritjes, dhe banderola e kanalit në Live TV është një shirit informacioni si ai i një dekoderi kabllor.</item>
+        <item>Volumi shfaqet në një matës anash ekranit (Cilësimet > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Madhësia e titrave</string>
     <string name="rd_cast_this_phone">Ky telefon</string>

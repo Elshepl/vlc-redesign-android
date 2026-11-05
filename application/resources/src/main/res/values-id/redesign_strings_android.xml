@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Hanya disimpan di perangkat ini, untuk melanjutkan dari tempat terakhir Anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari build uji VLC for Android yang lebih baru sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtitel tampil untuk video yang dibuka dari Buka Aliran Jaringan atau Terbaru.</item>
-        <item>Fon subtitel di Setelan kini berfungsi: serif, monospace, kasual, atau kursif.</item>
-        <item>Di Android TV, tampilan gelap desain, fonnya, dan bingkai oranye di sekitar kartu yang difokuskan.</item>
+        <item>Android TV: setiap halaman dengan desain baru dan bisa dipakai dengan remote: sambutan, Pengaturan, pemutar video dan musik, detail, dan pencarian.</item>
+        <item>Kucing sang desainer tinggal di layar diam, dan banner saluran Live TV menjadi bilah info seperti dekoder kabel.</item>
+        <item>Volume tampil di meteran di sisi layar (Pengaturan > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Ukuran subtitel</string>
     <string name="rd_cast_this_phone">Ponsel ini</string>

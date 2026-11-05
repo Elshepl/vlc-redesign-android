@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Phụ đề hiển thị cho video mở từ Mở luồng mạng hoặc Gần đây.</item>
-        <item>Phông chữ phụ đề trong Cài đặt giờ đã hoạt động: có chân, đơn cách, thân mật hoặc viết tay.</item>
-        <item>Trên Android TV: giao diện tối của thiết kế, phông chữ của nó và khung màu cam quanh thẻ đang được chọn.</item>
+        <item>Android TV: mọi trang theo thiết kế mới và dùng được bằng điều khiển: chào mừng, Cài đặt, trình phát video và nhạc, chi tiết và tìm kiếm.</item>
+        <item>Chú mèo của nhà thiết kế sống trên màn hình chờ, và băng kênh của Live TV là thanh thông tin như đầu thu truyền hình cáp.</item>
+        <item>Âm lượng hiện trên một thước đo ở cạnh màn hình (Cài đặt > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Geymt eingöngu á þessu tæki, til að halda áfram þar sem frá var horfið.</string>
     <string name="rd_ob_updates_help">Leitar einu sinni á dag að nýrri prófunarútgáfu af VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Skjátextar birtast fyrir myndskeið sem opnað er úr Opna netstraum eða Nýlegt.</item>
-        <item>Skjátextaletur Stillinga virkar núna: serif, jafnbreitt, frjálslegt eða skrifletur.</item>
-        <item>Á Android TV: dökkt útlit hönnunarinnar, letur hennar og appelsínugulur rammi um valda kortið.</item>
+        <item>Android TV: hver síða í nýju hönnuninni og með fjarstýringunni: velkomin, Stillingar, mynd- og tónlistarspilararnir, upplýsingar og leit.</item>
+        <item>Köttur hönnuðarins býr á biðskjánum og rásarborði Live TV er upplýsingastika eins og í myndlykli.</item>
+        <item>Hljóðstyrkurinn birtist á mæli við hlið skjásins (Stillingar > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Stærð skjátexta</string>
     <string name="rd_cast_this_phone">Þessi sími</string>

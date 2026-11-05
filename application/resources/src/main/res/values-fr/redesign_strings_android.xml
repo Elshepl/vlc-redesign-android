@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Conservé sur cet appareil uniquement, pour reprendre là où vous vous êtes arrêté.</string>
     <string name="rd_ob_updates_help">Recherche une version de test plus récente de VLC for Android une fois par jour.</string>
     <string-array name="rd_whats_new_items">
-        <item>Les sous-titres s\'affichent pour une vidéo ouverte depuis Ouvrir un flux réseau ou Récents.</item>
-        <item>La police des sous-titres des Paramètres fonctionne désormais : serif, monospace, décontractée ou cursive.</item>
-        <item>Sur Android TV, l\'aspect sombre du design, sa police et un cadre orange autour de la carte sélectionnée.</item>
+        <item>Android TV : toutes les pages dans le design et à la télécommande : l\'accueil, les Préférences, les lecteurs vidéo et musique, les détails et la recherche.</item>
+        <item>La chatte de la designer vit sur l\'écran de veille, et le bandeau de chaîne de Live TV est une barre d\'infos comme celle d\'un décodeur.</item>
+        <item>Le volume s\'affiche dans une jauge sur le bord de l\'écran (Préférences > Indicateur de volume).</item>
     </string-array>
     <string name="rd_subtitle_size">Taille des sous-titres</string>
     <string name="rd_cast_this_phone">Ce téléphone</string>

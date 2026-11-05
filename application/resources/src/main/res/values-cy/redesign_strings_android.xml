@@ -31,9 +31,9 @@
     <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
     <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
     <string-array name="rd_whats_new_items">
-        <item>Mae isdeitlau\'n dangos ar gyfer fideo wedi\'i agor o Agor Ffrwd Rhwydwaith neu Diweddar.</item>
-        <item>Mae ffont isdeitlau\'r Gosodiadau yn gweithio nawr: serif, unlled, anffurfiol neu lawysgrif.</item>
-        <item>Ar Android TV, golwg dywyll y dyluniad, ei ffont a ffrâm oren o amgylch y cerdyn dan ffocws.</item>
+        <item>Android TV: pob tudalen yn y dyluniad, gyda’r teclyn rheoli: y croeso, Gosodiadau, y chwaraewyr fideo a cherddoriaeth, manylion a chwilio.</item>
+        <item>Mae cath y dylunydd yn byw ar y sgrin segur, ac mae baner sianel Live TV yn far gwybodaeth fel un blwch cebl.</item>
+        <item>Mae’r sain i’w gweld ar fesurydd wrth ochr y sgrin (Gosodiadau > Volume indicator).</item>
     </string-array>
     <string name="rd_subtitle_size">Maint isdeitlau</string>
     <string name="rd_cast_this_phone">Y ffôn hwn</string>
