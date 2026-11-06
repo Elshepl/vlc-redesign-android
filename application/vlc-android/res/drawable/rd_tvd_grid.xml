@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's icon "grid" (the desktop's SVG, as the Samsung TV app draws it); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M3,3.75 h6 a1.25,1.25 0 0 1 1.25,1.25 v4 a1.25,1.25 0 0 1 -1.25,1.25 h-6 a1.25,1.25 0 0 1 -1.25,-1.25 v-4 a1.25,1.25 0 0 1 1.25,-1.25 z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M3,13.75 h6 a1.25,1.25 0 0 1 1.25,1.25 v4 a1.25,1.25 0 0 1 -1.25,1.25 h-6 a1.25,1.25 0 0 1 -1.25,-1.25 v-4 a1.25,1.25 0 0 1 1.25,-1.25 z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M15,3.75 h6 a1.25,1.25 0 0 1 1.25,1.25 v4 a1.25,1.25 0 0 1 -1.25,1.25 h-6 a1.25,1.25 0 0 1 -1.25,-1.25 v-4 a1.25,1.25 0 0 1 1.25,-1.25 z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M15,13.75 h6 a1.25,1.25 0 0 1 1.25,1.25 v4 a1.25,1.25 0 0 1 -1.25,1.25 h-6 a1.25,1.25 0 0 1 -1.25,-1.25 v-4 a1.25,1.25 0 0 1 1.25,-1.25 z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineJoin="round" />
+</vector>

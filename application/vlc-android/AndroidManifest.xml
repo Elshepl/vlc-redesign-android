@@ -1022,6 +1022,10 @@
         <activity
             android:name=".gui.preferences.PreferencesActivity"
             android:theme="@style/Theme.VLC"/>
+        <!-- VLC Redesign: Settings as the design's dialog over the library in the TV layout -->
+        <activity
+            android:name=".gui.preferences.TvPreferencesActivity"
+            android:theme="@style/Theme.VLC.TvDialog"/>
         <activity
             android:name=".gui.preferences.search.PreferenceSearchActivity"
             android:theme="@style/Theme.VLC"/>

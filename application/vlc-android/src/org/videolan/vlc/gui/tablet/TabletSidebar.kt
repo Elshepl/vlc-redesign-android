@@ -90,14 +90,15 @@ object TabletSidebar {
         val sidebar = build(this, rail)
         // VLC Redesign: on the desktop's own page (the TV layout, RdTvDesignScale) the sidebar is the desktop's panel
         // (Figma 6261:15078): A3, radius 10, 8 from the window's edges, its rows of 46
+        // (the Samsung TV app's .sh-side: 8 from the window's start, under the title bar, 201 wide, #191919 radius 6)
         val desktop = isDesktopPage(this)
         coordinator.addView(sidebar, coordinator.indexOfChild(rail) + 1,
-                CoordinatorLayout.LayoutParams(resources.getDimensionPixelSize(R.dimen.navigation_margin) - if (desktop) 8.dp else 0, ViewGroup.LayoutParams.MATCH_PARENT).apply {
+                CoordinatorLayout.LayoutParams(if (desktop) 201.dp else resources.getDimensionPixelSize(R.dimen.navigation_margin), ViewGroup.LayoutParams.MATCH_PARENT).apply {
                     gravity = Gravity.START
-                    if (desktop) setMargins(8.dp, 8.dp, 0, 8.dp)
+                    if (desktop) setMargins(8.dp, (RdTvWindow.TITLE_BAR_HEIGHT + 8).dp, 0, 8.dp)
                 })
         if (desktop) sidebar.background = GradientDrawable().apply {
-            cornerRadius = 10.dp.toFloat(); setColor(androidx.core.content.ContextCompat.getColor(this@applyTabletSidebar, R.color.rd_dark_bg_a3))
+            cornerRadius = 6.dp.toFloat(); setColor(RdTvWindow.SIDEBAR)
         }
         refresh(sidebar, rail)
         supportFragmentManager.registerFragmentLifecycleCallbacks(object : FragmentManager.FragmentLifecycleCallbacks() {
@@ -119,6 +120,17 @@ object TabletSidebar {
             if (android.os.Build.VERSION.SDK_INT >= 26) isKeyboardNavigationCluster = true
         }
         val top = 8.dp
+        if (isDesktopPage(ctx)) {
+            // the design's list: 4 from the panel's top, the rows 6 from its sides; no play button at the bottom
+            sidebar.setPadding(6.dp, 5.dp, 6.dp, 0)
+            sidebar.addView(View(ctx), LinearLayout.LayoutParams(1, 0))
+            layoutRows(activity, sidebar, rail)
+            rail.removeHeaderView()
+            activity.lifecycleScope.launch {
+                Pins.pins(activity).collect { list -> if (list != null) { layoutRows(activity, sidebar, rail); refresh(sidebar, rail) } }
+            }
+            return sidebar
+        }
         ViewCompat.setOnApplyWindowInsetsListener(sidebar) { v, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
             v.updatePadding(top = top + bars.top, bottom = 8.dp + bars.bottom)
@@ -170,6 +182,7 @@ object TabletSidebar {
             background = GradientDrawable().apply { cornerRadius = 3.dp.toFloat(); setColor(UiTools.getColorFromAttribute(ctx, androidx.appcompat.R.attr.colorPrimary)) }
             visibility = View.INVISIBLE
         }
+        val desktop = isDesktopPage(ctx)
         row.addView(indicator, LinearLayout.LayoutParams(3.dp, 20.dp).apply { marginEnd = 1.dp })
         val icon = ImageView(ctx).apply {
             id = R.id.rd_tablet_sidebar_icon
@@ -177,20 +190,27 @@ object TabletSidebar {
             scaleType = ImageView.ScaleType.FIT_CENTER
             importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
         }
-        val iconSize = if (isDesktopPage(ctx)) 20.dp else 24.dp
-        row.addView(icon, LinearLayout.LayoutParams(iconSize, iconSize).apply { marginStart = 4.dp; marginEnd = 12.dp })
+        if (desktop) {
+            // the design's row (.sh-nav): 46 high, the icon 24 at 13 (12 + the focus border), the label 11 after it
+            indicator.visibility = View.GONE
+            indicator.tag = "gone"
+            row.minimumHeight = 46.dp
+            row.setPaddingRelative(0, 0, 8.dp, 0)
+        }
+        row.addView(icon, LinearLayout.LayoutParams(24.dp, 24.dp).apply { marginStart = if (desktop) 13.dp else 4.dp; marginEnd = if (desktop) 11.dp else 12.dp })
         val label = TextView(ctx).apply {
             id = R.id.rd_tablet_sidebar_label
             text = item.title
             typeface = ResourcesCompat.getFont(ctx, R.font.inter)
-            setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
+            if (desktop) includeFontPadding = false
+            setTextSize(if (desktop) TypedValue.COMPLEX_UNIT_DIP else TypedValue.COMPLEX_UNIT_SP, 14f)
             maxLines = 1
             ellipsize = TextUtils.TruncateAt.END
             textAlignment = View.TEXT_ALIGNMENT_VIEW_START
         }
         row.addView(label, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
         row.setTag(R.id.rd_tablet_sidebar_label, item.itemId)
-        return row.also { it.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = 2.dp } }
+        return row.also { it.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, if (desktop) 46.dp else ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = if (desktop) 0 else 2.dp } }
     }
 
     /**
@@ -210,19 +230,89 @@ object TabletSidebar {
         // the rail's items the order does not hold (More) after its last page
         val lastPage = entries.indexOfLast { it is MenuItem }
         entries.addAll(lastPage + 1, items.filter { item -> entries.none { it === item } })
-        val signature = entries.map { if (it is MenuItem) it.itemId.toString() else (it as Pins.Pin).let { p -> Pins.key(p) + "\n" + p.title } }
+        if (isDesktopPage(activity)) {
+            // the design's sidebar: More is the title bar's menu; Recent and Add item after the pages
+            entries.removeAll { it is MenuItem && it.itemId == R.id.nav_more }
+            val last = entries.indexOfLast { it is MenuItem }
+            entries.addAll(last + 1, listOf(EXTRA_RECENT, EXTRA_ADD))
+        }
+        val signature = entries.map { if (it is MenuItem) it.itemId.toString() else if (it is String) it else (it as Pins.Pin).let { p -> Pins.key(p) + "\n" + p.title } }
         if (sidebar.getTag(R.id.rd_tablet_sidebar_pins) == signature) return
         sidebar.setTag(R.id.rd_tablet_sidebar_pins, signature)
         for (i in sidebar.childCount - 1 downTo 0) {
             val tag = sidebar.getChildAt(i).tag
             if (tag == TAG_ROW || tag == TAG_PIN) sidebar.removeViewAt(i)
         }
-        val tail = entries.indexOfLast { it is MenuItem } + 1
+        val tail = entries.indexOfLast { it is MenuItem || it is String } + 1
         var at = 1
         for ((i, e) in entries.withIndex()) {
             if (i == tail && e is Pins.Pin) sidebar.addView(pinnedTitle(activity), at++)
-            sidebar.addView(if (e is MenuItem) row(activity, rail, e) else pinRow(activity, e as Pins.Pin), at++)
+            sidebar.addView(when (e) {
+                is MenuItem -> row(activity, rail, e)
+                is String -> extraRow(activity, e)
+                else -> pinRow(activity, e as Pins.Pin)
+            }, at++)
         }
+    }
+
+    private const val EXTRA_RECENT = "recent"
+    private const val EXTRA_ADD = "add"
+
+    /** The design's icons of the sidebar (the desktop's SVGs), the current page's filled one */
+    private fun designIcon(id: Int, active: Boolean) = when (id) {
+        R.id.nav_home -> if (active) R.drawable.rd_tvd_home_active else R.drawable.rd_tvd_home
+        R.id.nav_video -> if (active) R.drawable.rd_tvd_videos_active else R.drawable.rd_tvd_videos
+        R.id.nav_audio -> if (active) R.drawable.rd_tvd_songs_active else R.drawable.rd_tvd_songs
+        R.id.nav_directories -> if (active) R.drawable.rd_tvd_streaming_active else R.drawable.rd_tvd_streaming
+        R.id.nav_playlists -> if (active) R.drawable.rd_tvd_playlist_active else R.drawable.rd_tvd_playlist
+        R.id.nav_tv -> if (active) R.drawable.rd_tvd_tv_active else R.drawable.rd_tvd_tv
+        else -> 0
+    }
+
+    private fun tintIcon(icon: ImageView, id: Int, active: Boolean) {
+        val res = designIcon(id, active)
+        if (res == 0) return
+        if (icon.getTag(R.id.rd_tablet_sidebar_icon) != res) { icon.setTag(R.id.rd_tablet_sidebar_icon, res); icon.setImageResource(res) }
+        icon.setColorFilter(if (active) UiTools.getColorFromAttribute(icon.context, androidx.appcompat.R.attr.colorPrimary) else RdTvWindow.ICON)
+    }
+
+    /** Recent (the history) and Add item (Open Network Stream) of the design's sidebar */
+    private fun extraRow(activity: MainActivity, key: String): View {
+        val ctx = activity
+        val row = LinearLayout(ctx).apply {
+            tag = TAG_PIN
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPaddingRelative(0, 0, 8.dp, 0)
+            val mask = GradientDrawable().apply { cornerRadius = 6.dp.toFloat(); setColor(0xFFFFFFFF.toInt()) }
+            background = RippleDrawable(ColorStateList.valueOf(UiTools.getColorFromAttribute(ctx, R.attr.rd_hover)), null, mask)
+            isClickable = true
+            isFocusable = true
+            setOnClickListener {
+                val i = android.content.Intent(activity, org.videolan.vlc.gui.SecondaryActivity::class.java)
+                i.putExtra("fragment", if (key == EXTRA_RECENT) org.videolan.vlc.gui.SecondaryActivity.HISTORY else org.videolan.vlc.gui.SecondaryActivity.STREAMS)
+                activity.startActivityForResult(i, org.videolan.vlc.gui.SecondaryActivity.ACTIVITY_RESULT_SECONDARY)
+            }
+        }
+        val title = ctx.getString(if (key == EXTRA_RECENT) R.string.rd_recent else R.string.rd_add_item)
+        row.contentDescription = title
+        row.addView(ImageView(ctx).apply {
+            setImageResource(if (key == EXTRA_RECENT) R.drawable.rd_tvd_recent else R.drawable.rd_tvd_add)
+            setColorFilter(RdTvWindow.ICON)
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        }, LinearLayout.LayoutParams(24.dp, 24.dp).apply { marginStart = 13.dp; marginEnd = 11.dp })
+        row.addView(TextView(ctx).apply {
+            text = title
+            typeface = ResourcesCompat.getFont(ctx, R.font.inter)
+            includeFontPadding = false
+            setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14f)
+            setTextColor(UiTools.getColorFromAttribute(ctx, R.attr.rd_icon))
+            maxLines = 1
+            ellipsize = TextUtils.TruncateAt.END
+            textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+        }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+        row.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 46.dp)
+        return row
     }
 
     private fun pinnedTitle(ctx: MainActivity) = TextView(ctx).apply {
@@ -305,7 +395,8 @@ object TabletSidebar {
             val checked = row.getTag(R.id.rd_tablet_sidebar_label) == current
             row.isSelected = checked
             row.findViewById<TextView>(R.id.rd_tablet_sidebar_label).setTextColor(if (checked) main else muted)
-            row.findViewById<View>(R.id.rd_tablet_sidebar_indicator).visibility = if (checked && light) View.VISIBLE else View.INVISIBLE
+            row.findViewById<View>(R.id.rd_tablet_sidebar_indicator).let { if (it.tag != "gone") it.visibility = if (checked && light) View.VISIBLE else View.INVISIBLE }
+            if (isDesktopPage(ctx)) { tintIcon(row.findViewById(R.id.rd_tablet_sidebar_icon), row.getTag(R.id.rd_tablet_sidebar_label) as Int, checked); continue }
             row.findViewById<ImageView>(R.id.rd_tablet_sidebar_icon).drawable?.let { d ->
                 d.state = if (checked) intArrayOf(android.R.attr.state_checked, android.R.attr.state_enabled) else intArrayOf(android.R.attr.state_enabled)
                 d.jumpToCurrentState()

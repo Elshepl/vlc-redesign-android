@@ -45,6 +45,7 @@ object PlayerBarLayout {
             Control("popup", R.string.ctx_pip_title, R.drawable.rd_ic_pip, action = "popup"),
             Control("equalizer", R.string.equalizer, R.drawable.rd_ic_equalizer, action = "equalizer"),
             Control("queue", R.string.rd_bar_queue, R.drawable.rd_ic_queue, action = "queue"),
+            Control("volume", R.string.volume, R.drawable.rd_ic_volume, action = "volume"),
             Control("record", R.string.rd_record, R.drawable.rd_ic_duo_record, action = "record"),
     )
 
@@ -80,6 +81,9 @@ object PlayerBarLayout {
             Profile("Simplest Style", Zones.decode("|play|"), Zones.decode("play||"), true),
             Profile("Classic Style", Zones.decode("lock,tracks|previous,play,next|queue,settings"), Zones.decode("previous,play,next||speed,tracks,rotate,aspect,queue,settings"), true),
     )
+
+    /** The desktop's default bar (defaults.cpp, Figma 247:445), the TV layout's Default */
+    val TV_DEFAULT = Zones.decode("previous,play,next||volume,equalizer,tracks,settings,queue")
 
     @StringRes
     fun builtInLabel(name: String) = when (name) {
@@ -126,9 +130,12 @@ object PlayerBarLayout {
      * The zones the bar shows: the profile's layout for the window, with the jump buttons beside the play button
      * when the player's own "seek buttons" setting asks for them and the layout has none.
      */
-    fun effective(prefs: SharedPreferences, wide: Boolean, seekButtons: Boolean): Zones {
+    fun effective(prefs: SharedPreferences, wide: Boolean, seekButtons: Boolean, tv: Boolean = false): Zones {
         val p = current(prefs)
         var z = if (wide) p.landscape else p.portrait
+        // the TV layout at the design's size: the Default profile is the desktop's own bar (Figma 247:445):
+        // Previous Play Next, the timeline, then the volume, the equalizer, the tracks, the settings and the queue
+        if (tv && p.builtIn && p.name == "Default" && stored(prefs).none { it.name == p.name }) z = TV_DEFAULT
         if (seekButtons && "backward" !in z.all && "forward" !in z.all) {
             fun around(list: List<String>) = list.flatMap { if (it == "play") listOf("backward", "play", "forward") else listOf(it) }
             z = Zones(around(z.left), around(z.center), around(z.right))

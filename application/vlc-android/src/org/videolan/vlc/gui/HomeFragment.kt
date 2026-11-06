@@ -40,6 +40,8 @@ import org.videolan.tools.PLAYBACK_HISTORY
 import org.videolan.tools.Settings
 import org.videolan.tools.retrieveParent
 import org.videolan.vlc.R
+import org.videolan.tools.dp
+import org.videolan.vlc.gui.tablet.RdTvWindow
 import org.videolan.vlc.databinding.RdHomeCardBinding
 import org.videolan.vlc.gui.browser.KEY_MEDIA
 import org.videolan.vlc.gui.dialogs.CtxActionReceiver
@@ -84,6 +86,19 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
             } else header.setOnClickListener { onMore() }
             list.layoutManager = LinearLayoutManager(root.context, LinearLayoutManager.HORIZONTAL, false)
             list.adapter = adapter
+            if (RdTvWindow.isOn(root.context)) {
+                // the design's section (.sh-sec): the title 20 in FG/2 at 28 with its chevron 24, the cards 21 under
+                // it, 76 between a row and the next title
+                (header.layoutParams as ViewGroup.MarginLayoutParams).apply { height = 24.dp; topMargin = 0; marginStart = 24.dp }
+                header.setPaddingRelative(4.dp, 0, 4.dp, 0)
+                root.findViewById<TextView>(R.id.rd_section_title).apply {
+                    setTextSize(android.util.TypedValue.COMPLEX_UNIT_DIP, 20f); setTextColor(RdTvWindow.FG_2); includeFontPadding = false
+                }
+                root.findViewById<View>(R.id.rd_section_chevron).layoutParams = (root.findViewById<View>(R.id.rd_section_chevron).layoutParams as ViewGroup.MarginLayoutParams).apply { width = 24.dp; height = 24.dp; marginStart = 6.dp }
+                (list.layoutParams as ViewGroup.MarginLayoutParams).topMargin = 21.dp
+                list.setPaddingRelative(28.dp, 0, 0, 0)
+                (root.layoutParams as ViewGroup.MarginLayoutParams).bottomMargin = 76.dp
+            }
         }
 
         private var signature = ""
@@ -117,8 +132,22 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
             val res = b.root.resources
             val video = !card.folder && media.type == MediaWrapper.TYPE_VIDEO
             // a 16:9 picture for a video, a square one for a song or a folder
-            val width = res.getDimensionPixelSize(if (video) R.dimen.rd_home_video_width else R.dimen.rd_home_square_width)
-            val height = if (video) width * 9 / 16 else width
+            val tv = RdTvWindow.isOn(b.root.context)
+            val width = if (tv) (if (video) 316.dp else 200.dp) else res.getDimensionPixelSize(if (video) R.dimen.rd_home_video_width else R.dimen.rd_home_square_width)
+            val height = if (tv && video) 178.dp else if (video) width * 9 / 16 else width
+            if (tv) {
+                // the design's card (.sh-card): no frame around it, 20 to the next; the picture radius 8; the name
+                // 16 in FG/2, 20 under the picture; the artist 16 in FG/A1, 10 under the name
+                (b.root.layoutParams as ViewGroup.MarginLayoutParams).apply { marginStart = 0; marginEnd = 20.dp }
+                b.root.setPadding(0, 0, 0, 0)
+                b.rdCoverCard.radius = 8.dp.toFloat()
+                for ((t, top) in listOf(b.rdTitle to 20, b.rdSubtitle to 10)) {
+                    t.setTextSize(android.util.TypedValue.COMPLEX_UNIT_DIP, 16f)
+                    t.includeFontPadding = false
+                    t.setLineSpacing(0f, 1f)
+                    (t.layoutParams as ViewGroup.MarginLayoutParams).topMargin = top.dp
+                }
+            }
             b.rdCoverCard.layoutParams = b.rdCoverCard.layoutParams.apply { this.width = width; this.height = height }
             b.rdTitle.layoutParams = b.rdTitle.layoutParams.apply { this.width = width }
             b.rdSubtitle.layoutParams = b.rdSubtitle.layoutParams.apply { this.width = width }
@@ -140,6 +169,10 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
                     else getAudioIconDrawable(b.root.context, MediaWrapper.TYPE_AUDIO, true)
             if (!card.folder) b.scaleType = ImageView.ScaleType.CENTER_INSIDE
             b.executePendingBindings()
+            if (tv) {
+                b.rdTitle.setTextColor(if (b.seen == true) 0xFF6B6B6B.toInt() else RdTvWindow.FG_2)
+                b.rdSubtitle.setTextColor(0xFF6B6B6B.toInt())
+            }
             if (!card.folder && card.pin == null) loadImage(b.rdCover, media, width, card = true)
             b.root.contentDescription = media.title
             b.root.setOnClickListener { onCardClick(section, holder.bindingAdapterPosition) }
@@ -172,6 +205,8 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         emptyView = view.findViewById(R.id.rd_home_empty)
+        // the design's Home: the first title 35 under the header's line (.sh-home)
+        if (RdTvWindow.isOn(view.context)) view.findViewById<View>(R.id.rd_home_scroll).let { it.setPadding(it.paddingLeft, 35.dp, it.paddingRight, 40.dp) }
         continueWatching = Section(view.findViewById(R.id.rd_home_continue), R.string.rd_continue_watching, Kind.VIDEO) { openSecondary(SecondaryActivity.HISTORY) }
         listenAgain = Section(view.findViewById(R.id.rd_home_listen), R.string.rd_listen_again, Kind.AUDIO) { openSecondary(SecondaryActivity.HISTORY) }
         folders = Section(view.findViewById(R.id.rd_home_folders), R.string.rd_frequent_folders, Kind.FOLDER) { selectTab(R.id.nav_directories) }

@@ -116,6 +116,7 @@ import org.videolan.vlc.util.isSchemeFile
 import org.videolan.vlc.util.isSchemeNetwork
 import org.videolan.vlc.util.isTalkbackIsEnabled
 import org.videolan.vlc.viewmodels.PlaylistModel
+import org.videolan.vlc.gui.tablet.RdTvWindow
 import java.text.DateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -387,6 +388,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
      * @param volume the volume value
      */
     fun showVolumeBar(volume: Int) {
+        tvVolume?.let { it.percent = volume; it.muted = player.isMute }
         player.handler.sendEmptyMessage(VideoPlayerActivity.FADE_OUT_BRIGHTNESS_INFO)
         player.findViewById<ViewStubCompat>(R.id.player_volume_stub)?.setVisible()
         playerOverlayVolume = player.findViewById(R.id.player_overlay_volume)
@@ -452,7 +454,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
 
         var visibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         var navbar = 0
-        if (dim || player.isLocked) {
+        // VLC Redesign: the TV layout keeps the system's bars away (a TV has none; the design's top bar is the player's)
+        if (dim || player.isLocked || RdTvWindow.isOn(player)) {
             player.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
             navbar = navbar or (View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LOW_PROFILE or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
             if (VlcMigrationHelper.isKitKatOrLater) visibility = visibility or View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -563,6 +566,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                     if (service.isPlaying != wasPlaying) drawable.start()
                 }
                 hudBinding.playerOverlayPlay.contentDescription = player.getString(if (service.isPlaying) R.string.pause else R.string.play)
+                if (RdTvWindow.isOn(player)) styleTvPlay(service.isPlaying)
 
                 wasPlaying = service.isPlaying
             }
@@ -605,6 +609,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             vscRight?.let {
                 it.setVisible()
                 hudRightBinding = DataBindingUtil.bind(player.findViewById(R.id.hud_right_overlay)) ?: return
+                // VLC Redesign: the TV layout's top bar is the design's (cone, menu, library, folder, title, clock)
+                if (RdTvWindow.isOn(player)) RdTvPlayerTopBar.apply(player, hudRightBinding.hudRightOverlay, hudRightBinding.playerOverlayTitle) {
+                    player.service?.currentMediaWrapper?.uri?.path?.let { java.io.File(it).parentFile?.name }
+                }
                 if (!player.isBenchmark && player.enableCloneMode && !player.settings.contains(KEY_ENABLE_CLONE_MODE)) {
                     UiTools.snackerConfirm(player, player.getString(R.string.video_save_clone_mode)) { player.settings.putSingle(KEY_ENABLE_CLONE_MODE, true) }
                 }
@@ -884,7 +892,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             @Suppress("DEPRECATION") player.windowManager.defaultDisplay.getMetrics(dm)
             applyBarLayout(dm.widthPixels / dm.density >= 600)
 
-            if (player.isTv) {
+            // (the TV layout at the design's size draws the design's bar as it is: no overscan margins)
+            if (player.isTv && !RdTvWindow.isOn(player)) {
                 applyMargin(hudBinding.playerOverlayTracks, overscanHorizontal, false)
                 applyMargin(hudBinding.playerOverlayAdvFunction, overscanHorizontal, true)
                 hudBinding.playerOverlaySeekbar.setPadding(overscanHorizontal, 8.dp, overscanHorizontal, 8.dp)
@@ -894,7 +903,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 applyMargin(hudBinding.playerOverlayLength, overscanHorizontal, true)
             }
         }
-        if (::hudRightBinding.isInitialized) {
+        if (::hudRightBinding.isInitialized && !RdTvWindow.isOn(player)) {
             applyVerticalMargin(hudRightBinding.playerOverlayTitle, overscanVertical)
         }
     }
@@ -920,7 +929,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     private fun applyBarLayout(oneRow: Boolean) {
         val root = hudBinding.progressOverlay
         val prefs = Settings.getInstance(player)
-        val zones = PlayerBarLayout.effective(prefs, oneRow, prefs.getBoolean(ENABLE_SEEK_BUTTONS, false))
+        val zones = PlayerBarLayout.effective(prefs, oneRow, prefs.getBoolean(ENABLE_SEEK_BUTTONS, false), tv = oneRow && RdTvWindow.isOn(player))
         // the XML's constraints, before anything is moved
         val base = barBase ?: ConstraintSet().also { it.clone(root); barBase = it }
         zones.all.mapNotNull { PlayerBarLayout.control(it) }.filter { it.view == 0 }.forEach { c ->
@@ -931,6 +940,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         buildBar(set, zones, oneRow)
         for (i in 0 until root.childCount) root.getChildAt(i).id.let { if (it != View.NO_ID) set.setVisibilityMode(it, ConstraintSet.VISIBILITY_MODE_IGNORE) }
         set.applyTo(root)
+        if (oneRow && RdTvWindow.isOn(player)) styleTvBar(zones)
         hudBinding.rdBarDivider.visibility = if (oneRow) View.GONE else View.VISIBLE
         hudBinding.playerSpaceLeft.visibility = View.GONE
         hudBinding.playerSpaceRight.visibility = View.GONE
@@ -938,11 +948,58 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         enforceBarMembership()
     }
 
+    /**
+     * The TV layout at the design's size: the controls as the Samsung TV app's bar (player.css): the icons 24 in their
+     * 28 boxes, the play pill's glyph 15 from its start, the times in Inter 15 (the current one 6.5 in, the length
+     * in the middle of its box), the seek well 28 high without the touch padding.
+     */
+    private fun styleTvBar(zones: PlayerBarLayout.Zones) {
+        zones.all.forEach { key ->
+            val v = hudBinding.progressOverlay.findViewById<View>(barViewId(key)) ?: return@forEach
+            when (key) {
+                "play" -> styleTvPlay(player.service?.isPlaying == true)
+                "volume" -> v.setPadding(0, 0, 0, 0)
+                else -> v.setPadding(2.dp, 2.dp, 2.dp, 2.dp)
+            }
+        }
+        hudBinding.playerOverlaySeekbar.setPadding(0, 0, 0, 0)
+        for ((t, start) in listOf(hudBinding.playerOverlayTime to true, hudBinding.playerOverlayLength to false)) {
+            t.setTextSize(android.util.TypedValue.COMPLEX_UNIT_DIP, 15f)
+            t.minWidth = 0
+            t.minimumWidth = 0
+            t.includeFontPadding = false
+            t.gravity = if (start) android.view.Gravity.START or android.view.Gravity.CENTER_VERTICAL else android.view.Gravity.CENTER
+            t.setPadding(if (start) 7.dp else 0, 0, 0, 0)
+        }
+    }
+
+    /**
+     * The design's play pill (Figma 848:1712, player.css .pl-play): 54 x 28, radius 4, the accent while paused, #6B6B6B
+     * while playing; the focus lights it (#E08A2C / #7D7D7D); the glyph 24 in #161616.
+     */
+    private fun styleTvPlay(playing: Boolean) {
+        val v = hudBinding.playerOverlayPlay
+        val accent = org.videolan.vlc.gui.helpers.UiTools.getColorFromAttribute(player, androidx.appcompat.R.attr.colorPrimary)
+        fun pill(c: Int) = android.graphics.drawable.GradientDrawable().apply { cornerRadius = 4.dp.toFloat(); setColor(c) }
+        v.background = android.graphics.drawable.StateListDrawable().apply {
+            addState(intArrayOf(android.R.attr.state_focused), pill(if (playing) 0xFF7D7D7D.toInt() else androidx.core.graphics.ColorUtils.blendARGB(accent, 0xFFFFFFFF.toInt(), 0.1f)))
+            addState(intArrayOf(), pill(if (playing) 0xFF6B6B6B.toInt() else accent))
+        }
+        v.setImageResource(if (playing) R.drawable.rd_tvd_pause else R.drawable.rd_tvd_play)
+        v.imageTintList = android.content.res.ColorStateList.valueOf(0xFF161616.toInt())
+        v.scaleType = ImageView.ScaleType.FIT_CENTER
+        v.setPadding(15.dp, 2.dp, 15.dp, 2.dp)
+        // the TV's focus line stays off the pill: its own lit colour shows the focus, as the design's
+        v.setTag(R.id.rd_tv_focus_skip, true)
+    }
+
     private fun barViewId(key: String): Int = PlayerBarLayout.control(key)?.view?.takeIf { it != 0 } ?: barExtras[key]?.id ?: View.NO_ID
 
     private fun buildBar(set: ConstraintSet, zones: PlayerBarLayout.Zones, oneRow: Boolean) = with(set) {
         val res = player.resources
-        val edge = res.getDimensionPixelSize(R.dimen.rd_player_bar_edge) + if (oneRow) 4.dp else 0
+        val tv = oneRow && RdTvWindow.isOn(player)
+        // the TV layout at the design's size (player.css .pl-row): 20 from the sides
+        val edge = if (tv) 20.dp else res.getDimensionPixelSize(R.dimen.rd_player_bar_edge) + if (oneRow) 4.dp else 0
         // the desktop's one-row bar (ControlBar.qml): the 76 dp time boxes touch the buttons beside them and the
         // seek well (spacing 0), so the well takes all the room between the times
         val timeGap = 0
@@ -960,14 +1017,33 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         val left = zones.left.map { barViewId(it) }.filter { it != View.NO_ID }
         val center = zones.center.map { barViewId(it) }.filter { it != View.NO_ID }
         val right = zones.right.map { barViewId(it) }.filter { it != View.NO_ID }
+        if (tv) {
+            // the design's controls (.pl-btn 28 x 28, the play pill 54 x 28, the volume 120): 10 apart on the left,
+            // 14 on the right (21 after the volume, 22 before the queue)
+            (left + center + right).forEach { id ->
+                constrainWidth(id, when (id) { R.id.player_overlay_play -> 54.dp; barExtras["volume"]?.id -> 120.dp; else -> 28.dp })
+                constrainHeight(id, 28.dp)
+                // in the middle of the row of 54, whatever margins the phone's layout gave them
+                setMargin(id, ConstraintSet.TOP, 0)
+                setMargin(id, ConstraintSet.BOTTOM, 0)
+                setVerticalBias(id, 0.5f)
+            }
+        }
+        fun gapAfter(id: Int, next: Int, inLeft: Boolean) = when {
+            !tv -> 0
+            inLeft -> 10.dp
+            id == barExtras["volume"]?.id -> 21.dp
+            next == barExtras["queue"]?.id -> 22.dp
+            else -> 14.dp
+        }
         left.forEachIndexed { i, id ->
             if (i == 0) connect(id, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, edge)
-            else connect(id, ConstraintSet.LEFT, left[i - 1], ConstraintSet.RIGHT)
+            else connect(id, ConstraintSet.LEFT, left[i - 1], ConstraintSet.RIGHT, gapAfter(left[i - 1], id, true))
         }
         val tail = if (oneRow) center + right else right
         tail.indices.reversed().forEach { i ->
             if (i == tail.lastIndex) connect(tail[i], ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, edge)
-            else connect(tail[i], ConstraintSet.RIGHT, tail[i + 1], ConstraintSet.LEFT)
+            else connect(tail[i], ConstraintSet.RIGHT, tail[i + 1], ConstraintSet.LEFT, gapAfter(tail[i], tail[i + 1], false))
         }
         if (!oneRow) {
             // the center zone in the middle of the room the side zones leave (the middle of the bar when they are
@@ -989,19 +1065,43 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             connect(id, ConstraintSet.TOP, R.id.rd_guide_row, ConstraintSet.TOP)
             connect(id, ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM)
         }
+        // the TV layout (.pl-center margin 20, .pl-time 76, .pl-seek margin 8 and 28 high)
+        val zoneGap = if (tv) 20.dp else timeGap
         if (left.isEmpty()) connect(R.id.player_overlay_time, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, edge + 8.dp)
-        else connect(R.id.player_overlay_time, ConstraintSet.LEFT, left.last(), ConstraintSet.RIGHT, timeGap)
+        else connect(R.id.player_overlay_time, ConstraintSet.LEFT, left.last(), ConstraintSet.RIGHT, zoneGap)
         if (tail.isEmpty()) connect(R.id.player_overlay_length, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, edge + 8.dp)
-        else connect(R.id.player_overlay_length, ConstraintSet.RIGHT, tail.first(), ConstraintSet.LEFT, timeGap)
-        connect(R.id.player_overlay_seekbar, ConstraintSet.LEFT, R.id.player_overlay_time, ConstraintSet.RIGHT, gap)
-        connect(R.id.player_overlay_seekbar, ConstraintSet.RIGHT, R.id.player_overlay_length, ConstraintSet.LEFT, gap)
+        else connect(R.id.player_overlay_length, ConstraintSet.RIGHT, tail.first(), ConstraintSet.LEFT, zoneGap)
+        connect(R.id.player_overlay_seekbar, ConstraintSet.LEFT, R.id.player_overlay_time, ConstraintSet.RIGHT, if (tv) 8.dp else gap)
+        connect(R.id.player_overlay_seekbar, ConstraintSet.RIGHT, R.id.player_overlay_length, ConstraintSet.LEFT, if (tv) 8.dp else gap)
+        if (tv) {
+            constrainWidth(R.id.player_overlay_time, 76.dp)
+            constrainWidth(R.id.player_overlay_length, 76.dp)
+            constrainHeight(R.id.player_overlay_seekbar, 28.dp)
+        }
     }
 
     /** A control of the player's menu put in the bar: the bar's button, the menu's action. */
+    /** The volume of the TV layout's bar (the design's speaker and wedge) */
+    private var tvVolume: RdTvVolumeDrawable? = null
+
     private fun createBarExtra(root: ViewGroup, c: PlayerBarLayout.Control) = ImageView(player, null, 0, R.style.RD_Player_BarButton).apply {
         id = View.generateViewId()
         layoutParams = ConstraintLayout.LayoutParams(48.dp, 48.dp)
         setImageResource(c.icon)
+        if (c.key == "volume") {
+            // the design's volume: OK mutes, up and down change it (as on the Samsung TV app)
+            val d = RdTvVolumeDrawable(player).also { tvVolume = it }
+            setImageDrawable(d)
+            scaleType = ImageView.ScaleType.FIT_START
+            setOnKeyListener { _, keyCode, event ->
+                if (event.action != android.view.KeyEvent.ACTION_DOWN) return@setOnKeyListener false
+                when (keyCode) {
+                    android.view.KeyEvent.KEYCODE_DPAD_UP -> { player.volumeStep(true); true }
+                    android.view.KeyEvent.KEYCODE_DPAD_DOWN -> { player.volumeStep(false); true }
+                    else -> false
+                }
+            }
+        }
         val color = android.util.TypedValue().also { player.theme.resolveAttribute(R.attr.player_icon_color, it, true) }.data
         imageTintList = android.content.res.ColorStateList.valueOf(color)
         contentDescription = player.getString(c.label)
@@ -1026,6 +1126,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 view.visibility == View.GONE -> view.visibility = if (shown) View.VISIBLE else View.INVISIBLE
             }
         }
+        refreshTvVolume()
         hudBinding.playerOverlayRewindText.visibility = hudBinding.playerOverlayRewind.visibility
         hudBinding.playerOverlayForwardText.visibility = hudBinding.playerOverlayForward.visibility
         hudBinding.playerOverlayRewindText.text = "${Settings.videoJumpDelay}"
@@ -1033,9 +1134,20 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         val enabled = player.service?.hasPlaylist() == true && !player.isLocked
         arrayOf(hudBinding.playlistPrevious, hudBinding.playlistNext).forEach {
             it.isEnabled = enabled
-            it.alpha = if (enabled) 1F else 0.4F
+            // (the TV layout keeps them in the bar's grey, as the design's .dim)
+            it.alpha = if (enabled || RdTvWindow.isOn(player)) 1F else 0.4F
         }
         refreshActiveButtons()
+    }
+
+    /** The TV bar's volume as the device and the player have it (the device's full volume = the design's 100 %) */
+    fun refreshTvVolume() {
+        val d = tvVolume ?: return
+        val max = player.audioMax.takeIf { it > 0 } ?: return
+        val device = player.audiomanager.getStreamVolume(android.media.AudioManager.STREAM_MUSIC) * 100 / max
+        val boost = player.service?.volume?.takeIf { it > 100 } ?: 0
+        d.percent = if (boost > 0) boost else device
+        d.muted = player.isMute
     }
 
     /** When the bar was last hidden (a sheet opened from the bar shows it again, VideoPlayerActivity.setSurfaceOpen) */

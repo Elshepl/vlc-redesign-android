@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's icon "recent" (the desktop's SVG, as the Samsung TV app draws it); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M13.143 5C16.93 5 20 8.134 20 12C20 15.866 16.93 19 13.143 19C9.356 19 6.286 15.866 6.286 12V10.444M3.571 13.159L6.286 10.444L9 13.159"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M13 8V11.143C13 11.616 13.384 12 13.857 12H15.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

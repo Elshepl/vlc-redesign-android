@@ -49,6 +49,8 @@ object RdTvFocusRing {
         if (view.getTag(R.id.rd_tv_focus_saved) != null) return
         // a text field shows its own caret and frame
         if (view is android.widget.EditText) return
+        // a control that shows its focus itself (the player's play pill)
+        if (view.getTag(R.id.rd_tv_focus_skip) == true) return
         view.setTag(R.id.rd_tv_focus_saved, view.foreground ?: NONE)
         view.foreground = ring(view)
     }

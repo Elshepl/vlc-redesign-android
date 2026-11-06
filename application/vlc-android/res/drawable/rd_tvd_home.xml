@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's icon "home" (the desktop's SVG, as the Samsung TV app draws it); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M10.752 4.733C11.508 4.23 12.492 4.23 13.248 4.733L19.248 8.733C19.874 9.151 20.25 9.853 20.25 10.605V18C20.25 19.243 19.243 20.25 18 20.25H6C4.757 20.25 3.75 19.243 3.75 18V10.605C3.75 9.853 4.126 9.151 4.752 8.733L10.752 4.733Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5" />
+    <path
+        android:pathData="M11,12 h2 a1,1 0 0 1 1,1 v4 a1,1 0 0 1 -1,1 h-2 a1,1 0 0 1 -1,-1 v-4 a1,1 0 0 1 1,-1 z"
+        android:fillColor="#FFFFFFFF" />
+</vector>

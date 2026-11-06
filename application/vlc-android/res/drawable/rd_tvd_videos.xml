@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's icon "videos" (the desktop's SVG, as the Samsung TV app draws it); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M10 16V10L15 13L10 16Z"
+        android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M21 18V8.803C21 7.462 19.9129 6.375 18.5719 6.375H13.9615C12.7456 6.375 11.6199 5.734 11 4.688C10.3801 3.641 9.2544 3 8.0385 3H5.4961C4.1175 3 3 4.118 3 5.496V18C3 19.657 4.3431 21 6 21H18C19.6569 21 21 19.657 21 18Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

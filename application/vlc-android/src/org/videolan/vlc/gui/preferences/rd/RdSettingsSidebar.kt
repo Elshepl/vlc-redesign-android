@@ -36,6 +36,8 @@ class RdSettingsSidebar : Fragment() {
     private val rows = mutableMapOf<String, View>()
     private var current: String? = null
     private val wide get() = arguments?.getBoolean(ARG_WIDE) ?: false
+    /** the TV layout at the design's size: the settings dialog's sidebar (the Samsung TV app's .d-side-*) */
+    private val tv get() = org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext())
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val ctx = requireContext()
@@ -43,6 +45,8 @@ class RdSettingsSidebar : Fragment() {
         val list = LinearLayout(ctx).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(d(8f), d(8f), d(8f), d(16f))
+            // the TV layout at the design's size: the list 6 inside the dialog's sidebar (.st-side-l)
+            if (tv) setPadding(d(6f), d(6f), d(6f), d(6f))
         }
         var group = 0
         for (page in RdPage.entries) {
@@ -57,14 +61,14 @@ class RdSettingsSidebar : Fragment() {
             }
             list.addView(row(page.key, getString(page.label), page.icon) { open(page) })
         }
-        list.addView(View(ctx), LinearLayout.LayoutParams(1, d(12f)))
+        list.addView(View(ctx), LinearLayout.LayoutParams(1, d(if (tv) 4f else 12f)))
         list.addView(row(ABOUT, getString(R.string.rd_set_about), R.drawable.rd_ic_set_about) {
             startActivity(Intent(ctx, SecondaryActivity::class.java).putExtra("fragment", SecondaryActivity.ABOUT))
         })
         val scroll = ScrollView(ctx).apply {
             isFillViewport = true
             addView(list)
-            if (wide) background = ContextCompat.getDrawable(ctx, R.drawable.rd_settings_sidebar_bg)
+            if (wide && !tv) background = ContextCompat.getDrawable(ctx, R.drawable.rd_settings_sidebar_bg)
         }
         current?.let { select(it) }
         return scroll
@@ -77,6 +81,13 @@ class RdSettingsSidebar : Fragment() {
         typeface = ResourcesCompat.getFont(context, R.font.inter)
         setTextColor(ContextCompat.getColor(context, R.color.rd_fg_a3))
         setPadding(d(10f), d(14f), d(10f), d(6f))
+        if (tv) {
+            // .d-side-h: 33 high, the text 8 from its top and 10 from the start, 8 above the first row
+            setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14f)
+            includeFontPadding = false
+            setPadding(d(10f), d(8f), d(10f), 0)
+            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, d(33f)).apply { bottomMargin = d(8f) }
+        }
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
         isFocusable = false
         androidx.core.view.ViewCompat.setAccessibilityHeading(this, true)
@@ -102,10 +113,17 @@ class RdSettingsSidebar : Fragment() {
             ImageViewCompat.setImageTintList(this, ContextCompat.getColorStateList(ctx, R.color.rd_fg_a2))
             tag = icon
         }
-        row.addView(image, LinearLayout.LayoutParams(d(24f), d(24f)).apply { marginStart = d(4f); marginEnd = d(12f) })
+        if (tv) {
+            // .d-side-i: 40 high, 8 apart, the icon at 8, the label at 44
+            row.setPadding(0, 0, d(6f), 0)
+            row.minimumHeight = d(40f)
+            row.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, d(40f)).apply { bottomMargin = d(8f) }
+        }
+        row.addView(image, LinearLayout.LayoutParams(d(24f), d(24f)).apply { marginStart = d(if (tv) 8f else 4f); marginEnd = d(12f) })
         val text = TextView(ctx).apply {
             this.text = label
-            setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
+            setTextSize(if (tv) TypedValue.COMPLEX_UNIT_DIP else TypedValue.COMPLEX_UNIT_SP, 14f)
+            if (tv) includeFontPadding = false
             typeface = ResourcesCompat.getFont(ctx, R.font.inter)
             setTextColor(ContextCompat.getColor(ctx, R.color.rd_fg_a2))
             maxLines = 1

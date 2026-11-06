@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, the TV layout at the design's size: a section's title in the settings dialog (.d-sec-t: Inter Medium
+     16, #C6C6C6, 39 high with 10 above it) and the 20 between sections (.st-inner > * + *). -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="30dp"
+    android:paddingBottom="10dp"
+    android:fontFamily="@font/inter_medium"
+    android:includeFontPadding="false"
+    android:textSize="16dp"
+    android:textColor="#C6C6C6"
+    android:textAlignment="viewStart"
+    android:accessibilityHeading="true" />

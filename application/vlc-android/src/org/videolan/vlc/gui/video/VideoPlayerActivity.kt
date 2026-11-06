@@ -317,7 +317,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         private set
     internal var isAudioBoostEnabled: Boolean = false
         private set
-    private var isMute = false
+    internal var isMute = false
+        private set
     private var volSave: Int = 0
     internal var volume: Float = 0.toFloat()
     internal var originalVol: Float = 0.toFloat()
@@ -1698,6 +1699,12 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     /** VLC Redesign: a control of the player's menu that Customize Player put in the bar. */
     fun onBarAction(action: String) {
+        // the design's volume of the TV layout's bar: OK mutes and unmutes
+        if (action == "volume") {
+            updateMute()
+            overlayDelegate.refreshTvVolume()
+            return
+        }
         if (action == "queue") {
             overlayDelegate.togglePlaylist()
             return
@@ -1710,6 +1717,12 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         ensureOptionsDelegate()
         optionsDelegate?.show()
         overlayDelegate.hideOverlay(fromUser = false, forceTalkback = true)
+    }
+
+    /** A step of the volume from the TV layout's bar (up and down on its volume) */
+    internal fun volumeStep(up: Boolean) {
+        if (up) volumeUp() else volumeDown()
+        overlayDelegate.refreshTvVolume()
     }
 
     private fun volumeUp() {

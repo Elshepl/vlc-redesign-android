@@ -123,6 +123,8 @@ class MainActivity : ContentActivity(),
 
         /* Set up the action bar */
         prepareActionBar()
+        // VLC Redesign: the TV layout's library as the design's window (title bar, header)
+        with(org.videolan.vlc.gui.tablet.RdTvWindow) { applyTvWindow() }
         /* Reload the latest preferences */
         scanNeeded = savedInstanceState == null && settings.getBoolean(KEY_MEDIALIBRARY_AUTO_RESCAN, true)
         mediaLibrary = Medialibrary.getInstance()

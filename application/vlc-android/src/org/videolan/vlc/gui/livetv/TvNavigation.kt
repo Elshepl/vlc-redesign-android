@@ -48,6 +48,8 @@ object TvNavigation {
         Page("network", R.id.nav_directories, R.string.rd_nav_network, R.drawable.rd_nav_sel_browse),
         Page("playlists", R.id.nav_playlists, R.string.rd_tv_playlists, R.drawable.rd_nav_sel_playlists),
     )
+    /** the design's sidebar (Figma 6261:15078), the Live TV add-on after its pages */
+    private val DESIGN_ORDER = listOf("home", "video", "music", "network", "playlists", "tv")
     private const val ORDER = "rd_sidebar_order"
     private const val HIDDEN = "rd_sidebar_hidden"
     /** Playlists is reached from More by default (as before the order could be edited) */
@@ -67,6 +69,7 @@ object TvNavigation {
         val pins = Pins.list(context).map { Pins.key(it) }
         val saved = keys(prefs, ORDER).filter { k -> pages.any { it.key == k } || pins.contains(k) }.distinct()
         val out = saved.toMutableList()
+        val pages = if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(context)) DESIGN_ORDER.mapNotNull { k -> pages.firstOrNull { it.key == k } } else pages
         for ((i, p) in pages.withIndex()) {
             if (out.contains(p.key)) continue
             var at = 0
@@ -80,7 +83,10 @@ object TvNavigation {
         return out
     }
 
-    fun hidden(context: Context) = keys(Settings.getInstance(context), HIDDEN, DEFAULT_HIDDEN)
+    /** The TV layout at the design's size shows the design's sidebar: Playlists is one of its pages */
+    private fun defaultHidden(context: Context) = if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(context)) "" else DEFAULT_HIDDEN
+
+    fun hidden(context: Context) = keys(Settings.getInstance(context), HIDDEN, defaultHidden(context))
 
     /** The pins shown (not hidden in Edit Sidebar), in the sidebar's order */
     fun shownPins(context: Context): List<Pins.Pin> {
@@ -93,7 +99,7 @@ object TvNavigation {
     fun forget(context: Context, key: String) {
         val prefs = Settings.getInstance(context)
         val order = keys(prefs, ORDER)
-        val hidden = keys(prefs, HIDDEN, DEFAULT_HIDDEN)
+        val hidden = keys(prefs, HIDDEN, defaultHidden(context))
         if (order.contains(key) || hidden.contains(key)) save(context, order - key, hidden - key)
     }
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, the TV layout at the design's size (a 1920 dp page): a row of the settings dialog as the Samsung TV
+     app draws it (settings.js rowNode, .d-row): the label (Inter 14, FG/A2) at the content's start, the control at its
+     end, the row 10 higher than its control (a dropdown of 36: 46). The help is not shown, as in the design. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="42dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:baselineAligned="false">
+
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="gone"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/inter"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="14dp"
+        android:textColor="@color/rd_fg_a2"
+        android:textAlignment="viewStart" />
+
+    <!-- the help: kept for the preference, not drawn (the design has none) -->
+    <TextView
+        android:id="@android:id/summary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@android:id/widget_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal" />
+</LinearLayout>

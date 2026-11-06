@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's icon "search" (the desktop's SVG, as the Samsung TV app draws it); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M14.845 14.845C15.995 13.695 16.706 12.107 16.706 10.353C16.706 6.844 13.862 4 10.353 4C6.844 4 4 6.844 4 10.353C4 13.862 6.844 16.706 10.353 16.706C12.107 16.706 13.695 15.995 14.845 14.845ZM14.845 14.845L19 19"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+</vector>

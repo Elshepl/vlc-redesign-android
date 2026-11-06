@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, the TV layout at the design's size: the dropdown (SettingsDropdown, .d-dd): 320 x 36, the #090909
+     well, the #191919 face inset 2 (radius 4), the value at 16 (Inter 14, FG/A2), the chevron 24 at 16 from the end. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rd_well"
+    android:layout_width="320dp"
+    android:layout_height="36dp"
+    android:background="@drawable/rd_tv_well_bg"
+    android:duplicateParentState="true">
+
+    <TextView
+        android:id="@+id/rd_well_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/inter"
+        android:includeFontPadding="false"
+        android:textSize="14dp"
+        android:textColor="@color/rd_fg_a2"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAlignment="viewStart" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/rd_ic_chevron_down"
+        android:importantForAccessibility="no" />
+</FrameLayout>

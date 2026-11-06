@@ -267,6 +267,15 @@ class RdSegmentedPreference @JvmOverloads constructor(context: Context, attrs: A
                 contentDescription = label
                 setOnClickListener { if (!chosen && callChangeListener(v)) value = v }
             }
+            if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(ctx)) {
+                // the TV layout at the design's size (.d-seg-o): the options share the 320 well, 2 apart, radius 4
+                seg.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14f)
+                seg.includeFontPadding = false
+                seg.minWidth = 0
+                (seg.background as GradientDrawable).cornerRadius = ctx.rdDp(4f)
+                box.addView(seg, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1f).apply { if (i > 0) marginStart = ctx.rdDp(2f).toInt() })
+                return@forEachIndexed
+            }
             box.addView(seg, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT).apply {
                 if (i > 0) marginStart = ctx.rdDp(3f).toInt()
             })
@@ -307,6 +316,15 @@ class RdAccentPreference @JvmOverloads constructor(context: Context, attrs: Attr
                 contentDescription = ctx.getString(R.string.rd_accent_named, entries[i])
                 isSelected = chosen
                 setOnClickListener { if (!chosen && callChangeListener(v)) value = v }
+            }
+            if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(ctx) && box is LinearLayout) {
+                // the TV layout at the design's size (.d-sw): the nine share the 320 well, 4 apart, 32 high; the
+                // colour 6 in from each side, 20 high, at 70 % but the chosen one's
+                cell.setPadding(ctx.rdDp(6f).toInt(), ctx.rdDp(6f).toInt(), ctx.rdDp(6f).toInt(), ctx.rdDp(6f).toInt())
+                cell.scaleType = ImageView.ScaleType.FIT_XY
+                cell.imageAlpha = if (chosen) 255 else 178
+                box.addView(cell, LinearLayout.LayoutParams(0, ctx.rdDp(32f).toInt(), 1f).apply { if (i > 0) marginStart = ctx.rdDp(4f).toInt() })
+                return@forEachIndexed
             }
             val size = ctx.rdDp(32f).toInt()
             box.addView(cell, ViewGroup.MarginLayoutParams(size, size).apply { marginEnd = ctx.rdDp(4f).toInt() })

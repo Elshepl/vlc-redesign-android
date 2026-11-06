@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, the TV layout at the design's size: the segmented choice (.d-seg): 320 x 36, padding 2, the #090909
+     well radius 6; its options share the width (RdSegmentedPreference). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rd_segments"
+    android:layout_width="320dp"
+    android:layout_height="36dp"
+    android:background="@drawable/rd_tv_seg_bg"
+    android:orientation="horizontal"
+    android:padding="2dp" />

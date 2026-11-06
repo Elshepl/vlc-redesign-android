@@ -54,7 +54,7 @@ import org.videolan.vlc.gui.preferences.search.PreferenceSearchActivity
 import org.videolan.vlc.widget.utils.refreshAllWidgets
 
 const val EXTRA_PREF_END_POINT = "extra_pref_end_point"
-class PreferencesActivity : BaseActivity() {
+open class PreferencesActivity : BaseActivity() {
 
     private val searchRequestCode = 167
     private var mAppBarLayout: AppBarLayout? = null
@@ -75,6 +75,13 @@ class PreferencesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // the panes are rebuilt from the page kept, not restored: a rotation can change their number
         super.onCreate(null)
+        // VLC Redesign: the TV layout shows Settings as the design's dialog over the library (TvPreferencesActivity)
+        if (this !is TvPreferencesActivity && org.videolan.vlc.gui.tablet.RdTvWindow.isOn(this)) {
+            startActivity(Intent(intent).setClass(this, TvPreferencesActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT))
+            finish()
+            overridePendingTransition(0, 0)
+            return
+        }
         if (Settings.getInstance(this).getBoolean(KEY_RESTRICT_SETTINGS, false) && savedInstanceState == null) {
             val intent = PinCodeActivity.getIntent(this, PinCodeReason.CHECK)
             pinCodeResult.launch(intent)

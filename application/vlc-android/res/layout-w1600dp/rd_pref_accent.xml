@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, the TV layout at the design's size: Accent color as a row of the settings dialog (SettingsAppearance,
+     .d-acw): the label at the start, the swatches' well (320 x 36, padding 2) at the end; the row 46. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/inter"
+        android:includeFontPadding="false"
+        android:textSize="14dp"
+        android:textColor="@color/rd_fg_a2"
+        android:textAlignment="viewStart" />
+
+    <TextView
+        android:id="@android:id/summary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/rd_swatches"
+        android:layout_width="320dp"
+        android:layout_height="36dp"
+        android:background="@drawable/rd_tv_seg_bg"
+        android:padding="2dp"
+        android:orientation="horizontal" />
+</LinearLayout>

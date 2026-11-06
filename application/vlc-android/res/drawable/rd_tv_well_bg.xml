@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign, the TV layout: the dropdown of the settings dialog (.d-dd / .d-dd-in): the #090909 well radius 6,
+     the #191919 face inset 2 radius 4; focused: the face lit (the TV's focus line is drawn around the row) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><shape><solid android:color="#090909" /><corners android:radius="6dp" /></shape></item>
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape><solid android:color="#191919" /><corners android:radius="4dp" /></shape>
+    </item>
+</layer-list>
