@@ -122,6 +122,7 @@ object RdTvWindow {
             gravity = Gravity.START
             setMargins(8.dp, (TITLE_BAR_HEIGHT + 8).dp, 0, 8.dp)
         })
+        if (this is MainActivity) backHome()
         // the header follows the page's menu and title as each page sets them
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener { sync(this) }
     }
@@ -140,8 +141,8 @@ object RdTvWindow {
         val menu = iconButton(ctx, R.drawable.rd_tvd_more, ICON, ctx.getString(R.string.more)).apply {
             setPadding(2.dp, 2.dp, 2.dp, 2.dp)
             id = R.id.rd_tv_title_menu
-            // the app's menu (the desktop's ⋯ of the title bar): the More page holds its entries
-            setOnClickListener { activity.findViewById<View?>(R.id.nav_more)?.performClick() ?: openMore(activity) }
+            // the app's menu (the desktop's ⋯ of the title bar, the Samsung TV app's: shell.js mainMenu)
+            setOnClickListener { v -> appMenu(activity, v) }
         }
         bar.addView(menu, FrameLayout.LayoutParams(28.dp, 28.dp).apply { leftMargin = 51.dp; topMargin = 6.dp })
         bar.addView(text(ctx, 14f, ICON).apply {
@@ -161,6 +162,49 @@ object RdTvWindow {
 
     private fun openMore(activity: ContentActivity) {
         open(activity, R.id.nav_more)
+    }
+
+    /**
+     * The title bar's menu (the desktop's main menu as the TV has it): Open Network Stream, Recent, Playlists, Edit
+     * Sidebar, Settings, About, and More (the page with the rest).
+     */
+    private fun appMenu(activity: ContentActivity, anchor: View) {
+        val popup = PopupMenu(activity, anchor, Gravity.START)
+        val m = popup.menu
+        fun secondary(fragment: String) = activity.startActivity(android.content.Intent(activity, org.videolan.vlc.gui.SecondaryActivity::class.java).putExtra("fragment", fragment))
+        val actions = mutableListOf<() -> Unit>()
+        fun add(title: Int, action: () -> Unit) { m.add(0, actions.size, actions.size, title); actions.add(action) }
+        add(R.string.rd_open_network_stream) { RdTvNetworkDialog.show(activity) }
+        add(R.string.rd_recent) { secondary(org.videolan.vlc.gui.SecondaryActivity.HISTORY) }
+        add(R.string.rd_tv_playlists) { open(activity, R.id.nav_playlists) }
+        if (activity is MainActivity) add(R.string.rd_tv_edit_sidebar) { org.videolan.vlc.gui.livetv.TvNavigation.editSidebar(activity) }
+        add(R.string.rd_settings) {
+            activity.startActivityForResult(android.content.Intent(activity, org.videolan.vlc.gui.preferences.PreferencesActivity::class.java), org.videolan.resources.ACTIVITY_RESULT_PREFERENCES)
+        }
+        add(R.string.rd_set_about) { secondary(org.videolan.vlc.gui.SecondaryActivity.ABOUT) }
+        add(R.string.more) { openMore(activity) }
+        popup.setOnMenuItemClickListener { actions.getOrNull(it.itemId)?.invoke(); true }
+        popup.show()
+    }
+
+    /**
+     * Back in the library on a page other than Home goes Home first (the TV's way; the desktop has no Back), then
+     * leaves as before.
+     */
+    private fun MainActivity.backHome() {
+        onBackPressedDispatcher.addCallback(this, object : androidx.activity.OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val rail = findViewById<com.google.android.material.navigationrail.NavigationRailView>(R.id.navigation_rail)
+                val checked = rail?.menu?.let { m -> (0 until m.size()).map { m.getItem(it) }.firstOrNull { it.isChecked }?.itemId }
+                if (supportFragmentManager.backStackEntryCount == 0 && !isAudioPlayerExpanded && checked != null && checked != R.id.nav_home) {
+                    open(this@backHome, R.id.nav_home)
+                    return
+                }
+                isEnabled = false
+                onBackPressedDispatcher.onBackPressed()
+                isEnabled = true
+            }
+        })
     }
 
     /** The page of the library's sidebar last shown (a screen over it shows it as current, and as its first crumb) */
@@ -220,16 +264,15 @@ object RdTvWindow {
             r.addView(text(ctx, 14f, if (current) 0xFFC6C6C6.toInt() else ICON).apply { text = label }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
             side.addView(r, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 46.dp))
         }
+        val own = ownPage(activity)
         for (p in org.videolan.vlc.gui.livetv.TvNavigation.shown(ctx)) {
-            val current = p.id == lastPage
+            val current = own == null && p.id == lastPage
             row(TabletSidebar.designIcon(p.id, current).takeIf { it != 0 } ?: p.icon, ctx.getString(p.title), current) { open(activity, p.id) }
         }
-        row(R.drawable.rd_tvd_recent, ctx.getString(R.string.rd_recent), false) {
+        row(if (own == R.string.rd_recent) R.drawable.rd_tvd_recent_active else R.drawable.rd_tvd_recent, ctx.getString(R.string.rd_recent), own == R.string.rd_recent) {
             activity.startActivity(android.content.Intent(activity, org.videolan.vlc.gui.SecondaryActivity::class.java).putExtra("fragment", org.videolan.vlc.gui.SecondaryActivity.HISTORY))
         }
-        row(R.drawable.rd_tvd_add, ctx.getString(R.string.rd_add_item), false) {
-            activity.startActivity(android.content.Intent(activity, org.videolan.vlc.gui.SecondaryActivity::class.java).putExtra("fragment", org.videolan.vlc.gui.SecondaryActivity.STREAMS))
-        }
+        row(R.drawable.rd_tvd_add, ctx.getString(R.string.rd_add_item), own == R.string.rd_open_network_stream) { RdTvNetworkDialog.show(activity) }
         return side
     }
 
@@ -335,6 +378,13 @@ object RdTvWindow {
 
     private fun visible(item: MenuItem?) = item != null && item.isVisible && item.isEnabled
 
+    /** A screen that is a row of the sidebar itself (Recent, Add item): its name, the title of its own row */
+    private fun ownPage(activity: ContentActivity): Int? = when (activity.intent?.getStringExtra("fragment")) {
+        org.videolan.vlc.gui.SecondaryActivity.HISTORY -> R.string.rd_recent
+        org.videolan.vlc.gui.SecondaryActivity.STREAMS -> R.string.rd_open_network_stream
+        else -> null
+    }
+
     /** "Videos › The Wand": the earlier crumbs in FG/A2, the separator in #404040 (.sh-sep), the current one bold */
     private fun crumbsOf(first: String?, current: String): CharSequence {
         val b = android.text.SpannableStringBuilder()
@@ -404,7 +454,7 @@ object RdTvWindow {
                 lastPage = rail?.menu?.let { m -> (0 until m.size()).map { m.getItem(it) }.firstOrNull { it.isChecked }?.itemId } ?: lastPage
                 lastPageTitle = railTitle ?: lastPageTitle
                 crumbsOf(null, title)
-            } else crumbsOf(lastPageTitle, title)
+            } else ownPage(activity)?.let { crumbsOf(null, activity.getString(it)) } ?: crumbsOf(lastPageTitle, title)
             if (crumb.text.toString() != crumbs.toString()) crumb.text = crumbs
         }
         fun show(id: Int, on: Boolean) = header.findViewById<View>(id).let { if (it.isVisible != on) it.isVisible = on }

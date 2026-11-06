@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VLC Redesign, the TV layout at the design's size (a 1920 dp page): the lists take the page's width, as the
+         design's (the history, the folders, a playlist's songs) -->
+    <dimen name="default_content_width">-1px</dimen>
+</resources>

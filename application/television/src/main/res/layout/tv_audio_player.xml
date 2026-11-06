@@ -12,6 +12,8 @@
 
     <data>
 
+        <import type="org.videolan.vlc.gui.video.PlayerBarTime" />
+
         <variable
                 name="progress"
                 type="androidx.lifecycle.LiveData&lt;org.videolan.vlc.viewmodels.PlaybackProgress>" />
@@ -49,6 +51,67 @@
                 android:layout_marginStart="6.5dp"
                 android:importantForAccessibility="no"
                 android:src="@drawable/ic_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_top_more"
+                style="@style/RdTvBarButton"
+                android:layout_marginStart="25.5dp"
+                android:contentDescription="@string/more_actions"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top"
+                app:srcCompat="@drawable/rd_tvd_more"
+                app:tint="@color/rd_dark_fg_a2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_top_queue"
+                style="@style/RdTvBarButton"
+                android:layout_marginStart="44.5dp"
+                android:contentDescription="@string/show_playlist"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top"
+                app:srcCompat="@drawable/rd_tvd_sidebar"
+                app:tint="@color/rd_dark_fg_a2" />
+
+        <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="58.5dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/rd_tvd_divider"
+                android:tint="#373737"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
+
+        <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="71.5dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/rd_tvd_folder"
+                android:tint="@color/rd_dark_fg_a2"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
+
+        <TextView
+                android:id="@+id/top_folder"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="86.5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/rd_dark_fg_a2"
+                android:textSize="7sp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
@@ -260,7 +323,8 @@
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintStart_toEndOf="@+id/button_previous"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
-                app:srcCompat="@drawable/rd_ic_backward" />
+                app:srcCompat="@drawable/rd_tvd_backward_15_sec"
+                android:tint="@color/rd_dark_fg_a2" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_play"
@@ -289,7 +353,8 @@
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintStart_toEndOf="@+id/button_play"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
-                app:srcCompat="@drawable/rd_ic_forward" />
+                app:srcCompat="@drawable/rd_tvd_forward_15_sec"
+                android:tint="@color/rd_dark_fg_a2" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_next"
@@ -313,7 +378,7 @@
                 android:gravity="center"
                 android:importantForAccessibility="no"
                 android:includeFontPadding="false"
-                android:text="@{progress.timeText}"
+                android:text="@{PlayerBarTime.format(progress.time)}"
                 android:textColor="@color/rd_dark_fg_a2"
                 android:textSize="7.5sp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
@@ -366,16 +431,46 @@
                 android:gravity="center"
                 android:importantForAccessibility="no"
                 android:includeFontPadding="false"
-                android:text="@{progress.lengthText}"
+                android:text="@{PlayerBarTime.format(progress.length)}"
                 android:textColor="@color/rd_dark_fg_a2"
                 android:textSize="7.5sp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
-                app:layout_constraintEnd_toStartOf="@+id/button_shuffle"
+                app:layout_constraintEnd_toStartOf="@+id/button_volume"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 tools:text="3:52" />
 
+        <!-- the design's volume (the speaker and the wedge, 120 px), OK mutes, up / down change it -->
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_volume"
+                android:layout_width="60dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="10.5dp"
+                android:background="@drawable/rd_tv_bar_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/volume"
+                android:nextFocusUp="@+id/media_progress"
+                android:onClick="onClick"
+                android:scaleType="fitStart"
+                app:layout_constraintEnd_toStartOf="@+id/button_eq"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_eq"
+                style="@style/RdTvBarButton"
+                android:contentDescription="@string/equalizer"
+                android:layout_marginEnd="11dp"
+                android:nextFocusUp="@+id/media_progress"
+                android:onClick="onClick"
+                app:layout_constraintEnd_toStartOf="@+id/button_queue"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/rd_ic_equalizer" />
+
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_shuffle"
+                android:visibility="gone"
                 style="@style/RdTvBarButton"
                 android:contentDescription="@string/shuffle_title"
                 android:layout_marginEnd="7dp"
@@ -389,6 +484,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_repeat"
+                android:visibility="gone"
                 style="@style/RdTvBarButton"
                 android:layout_marginEnd="7dp"
                 android:nextFocusUp="@+id/media_progress"
@@ -402,9 +498,9 @@
                 android:id="@+id/button_queue"
                 style="@style/RdTvBarButton"
                 android:contentDescription="@string/show_playlist"
-                android:layout_marginEnd="7dp"
                 android:nextFocusUp="@+id/media_progress"
-                app:layout_constraintEnd_toStartOf="@+id/button_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
@@ -412,6 +508,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_more"
+                android:visibility="gone"
                 style="@style/RdTvBarButton"
                 android:contentDescription="@string/more_actions"
                 android:layout_marginEnd="10dp"

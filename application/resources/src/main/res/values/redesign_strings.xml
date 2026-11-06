@@ -23,6 +23,14 @@
         <item quantity="other">%d items</item>
     </plurals>
     <string name="rd_open_network_stream">Open Network Stream</string>
+    <!-- the TV layout's Open Network Stream dialog (the desktop's, Figma 6216:13614) -->
+    <string name="rd_net_url">Network URL</string>
+    <string name="rd_net_url_help">You can enter multiple links to load.</string>
+    <string name="rd_net_url_hint">e.g., https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Playlist Name</string>
+    <string name="rd_net_optional">(optional)</string>
+    <string name="rd_net_playlist_help">The playlist will be saved and displayed with this title.</string>
+    <string name="rd_net_playlist_hint">e.g., Favorite TV Channels</string>
     <string name="rd_subtitle_timing">Subtitle timing</string>
     <string name="rd_mark_voice_heard">Mark voice heard</string>
     <string name="rd_mark_text_seen">Mark text seen</string>

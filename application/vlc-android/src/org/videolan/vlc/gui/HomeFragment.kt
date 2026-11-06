@@ -170,6 +170,10 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
             if (!card.folder) b.scaleType = ImageView.ScaleType.CENTER_INSIDE
             b.executePendingBindings()
             if (tv) {
+                // the design's folder glyph (shell.css .sh-card-thumb.ph: 48 in #8F8F8F)
+                b.rdFolderGlyph.setImageResource(R.drawable.rd_tvd_folder)
+                b.rdFolderGlyph.setColorFilter(RdTvWindow.ICON)
+                b.rdFolderGlyph.layoutParams = b.rdFolderGlyph.layoutParams.also { it.width = 48.dp; it.height = 48.dp }
                 b.rdTitle.setTextColor(if (b.seen == true) 0xFF6B6B6B.toInt() else RdTvWindow.FG_2)
                 b.rdSubtitle.setTextColor(0xFF6B6B6B.toInt())
             }
@@ -206,7 +210,7 @@ class HomeFragment : BaseFragment(), CtxActionReceiver, Medialibrary.HistoryCb, 
         super.onViewCreated(view, savedInstanceState)
         emptyView = view.findViewById(R.id.rd_home_empty)
         // the design's Home: the first title 35 under the header's line (.sh-home)
-        if (RdTvWindow.isOn(view.context)) view.findViewById<View>(R.id.rd_home_scroll).let { it.setPadding(it.paddingLeft, 35.dp, it.paddingRight, 40.dp) }
+        if (RdTvWindow.isOn(view.context)) view.findViewById<View>(R.id.rd_home_scroll).let { it.setPadding(it.paddingLeft, 36.dp, it.paddingRight, 40.dp) }
         continueWatching = Section(view.findViewById(R.id.rd_home_continue), R.string.rd_continue_watching, Kind.VIDEO) { openSecondary(SecondaryActivity.HISTORY) }
         listenAgain = Section(view.findViewById(R.id.rd_home_listen), R.string.rd_listen_again, Kind.AUDIO) { openSecondary(SecondaryActivity.HISTORY) }
         folders = Section(view.findViewById(R.id.rd_home_folders), R.string.rd_frequent_folders, Kind.FOLDER) { selectTab(R.id.nav_directories) }

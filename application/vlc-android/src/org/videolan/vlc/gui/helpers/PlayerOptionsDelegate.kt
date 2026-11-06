@@ -126,6 +126,11 @@ class PlayerOptionsDelegate(val activity: FragmentActivity, val service: Playbac
             if (service.canShuffle()) options.add(PlayerOption(ID_SHUFFLE, R.drawable.ic_player_shuffle, res.getString(R.string.shuffle_title)))
             options.add(PlayerOption(ID_VIDEO_STATS, R.drawable.ic_video_stats, res.getString(R.string.video_information)))
         } else {
+            // VLC Redesign: the TV layout's music player has the design's bar (no shuffle nor repeat): they are here
+            if (Settings.showTvUi) {
+                options.add(PlayerOption(ID_REPEAT, R.drawable.ic_repeat, res.getString(R.string.repeat_title)))
+                if (service.canShuffle()) options.add(PlayerOption(ID_SHUFFLE, R.drawable.ic_player_shuffle, res.getString(R.string.shuffle_title)))
+            }
             if (service.videoTracksCount > 0) options.add(PlayerOption(ID_PLAY_AS_VIDEO, R.drawable.ic_playasaudio_off, res.getString(R.string.play_as_video)))
         }
         val chaptersCount = service.getChapters(-1)?.size ?: 0

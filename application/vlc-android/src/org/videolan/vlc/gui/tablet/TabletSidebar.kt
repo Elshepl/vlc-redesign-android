@@ -289,6 +289,7 @@ object TabletSidebar {
             isClickable = true
             isFocusable = true
             setOnClickListener {
+                if (key == EXTRA_ADD && RdTvWindow.isOn(activity)) { RdTvNetworkDialog.show(activity); return@setOnClickListener }
                 val i = android.content.Intent(activity, org.videolan.vlc.gui.SecondaryActivity::class.java)
                 i.putExtra("fragment", if (key == EXTRA_RECENT) org.videolan.vlc.gui.SecondaryActivity.HISTORY else org.videolan.vlc.gui.SecondaryActivity.STREAMS)
                 activity.startActivityForResult(i, org.videolan.vlc.gui.SecondaryActivity.ACTIVITY_RESULT_SECONDARY)

@@ -55,6 +55,7 @@
                 tools:src="@tools:sample/backgrounds/scenic" />
 
             <ImageView
+                android:id="@+id/rd_folder_glyph"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"

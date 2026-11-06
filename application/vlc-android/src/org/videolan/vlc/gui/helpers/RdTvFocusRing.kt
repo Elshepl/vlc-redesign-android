@@ -51,6 +51,8 @@ object RdTvFocusRing {
         if (view is android.widget.EditText) return
         // a control that shows its focus itself (the player's play pill)
         if (view.getTag(R.id.rd_tv_focus_skip) == true) return
+        // a list that has the focus itself (between its rows): its rows show the focus, not the whole list
+        if (view is androidx.recyclerview.widget.RecyclerView) return
         view.setTag(R.id.rd_tv_focus_saved, view.foreground ?: NONE)
         view.foreground = ring(view)
     }

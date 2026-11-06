@@ -134,6 +134,7 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             updateRepeatMode()
         }
         model.speed.observe(this) { showChips() }
+        refreshVolume()
         PlaybackService.playerSleepTime.observe(this) {
             showChips()
         }
@@ -256,6 +257,19 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             binding.mediaTitle.text = if (state.artist.isNullOrBlank()) state.title else "${state.title} - ${state.artist}"
             binding.mediaArtist.text = state.artist
             binding.topTitle.text = state.title
+            // the design's waveform in the seek well (its knob 4 px), from the song's title
+            if (binding.mediaProgress.getTag(R.id.media_progress) != state.title) {
+                binding.mediaProgress.setTag(R.id.media_progress, state.title)
+                val px = resources.displayMetrics.density / 2f
+                binding.mediaProgress.progressDrawable = RdWaveDrawable(px, state.title ?: "")
+                binding.mediaProgress.thumb = android.graphics.drawable.GradientDrawable().apply {
+                    setColor(org.videolan.vlc.gui.helpers.UiTools.getColorFromAttribute(this@AudioPlayerActivity, androidx.appcompat.R.attr.colorPrimary))
+                    cornerRadius = px
+                    setSize((4 * px).toInt(), (24 * px).toInt())
+                }
+            }
+            // the folder of the top bar (the design's), the song's folder
+            binding.topFolder.text = model.service?.currentMediaWrapper?.uri?.path?.let { java.io.File(it).parentFile?.name }.orEmpty()
             binding.buttonShuffle.setImageResource(if (shuffling)
                 R.drawable.ic_shuffle_on
             else
@@ -281,6 +295,8 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+        // the bar's volume follows the remote's volume keys
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP || keyCode == KeyEvent.KEYCODE_VOLUME_DOWN || keyCode == KeyEvent.KEYCODE_VOLUME_MUTE) binding.root.postDelayed({ refreshVolume() }, 100)
         if (playerKeyListenerDelegate.onKeyDown(keyCode, event)) return true
         return super.onKeyDown(keyCode, event)
     }
@@ -371,11 +387,22 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             R.id.button_previous -> previous()
             R.id.button_repeat -> switchRepeatMode()
             R.id.button_shuffle -> setShuffleMode(!shuffling)
-            R.id.button_more -> showAdvancedOptions(v)
+            R.id.button_more, R.id.button_top_more -> showAdvancedOptions(v)
+            R.id.button_top_queue -> showQueue(!binding.playlist.isVisible)
+            R.id.button_eq -> {
+                showAdvancedOptions(v)
+                optionsDelegate?.performAction("equalizer")
+            }
+            R.id.button_volume -> {
+                // OK mutes and unmutes (the design's volume)
+                val am = getSystemService(android.content.Context.AUDIO_SERVICE) as android.media.AudioManager
+                am.adjustStreamVolume(android.media.AudioManager.STREAM_MUSIC, android.media.AudioManager.ADJUST_TOGGLE_MUTE, 0)
+                refreshVolume()
+            }
             R.id.button_queue -> showQueue(!binding.playlist.isVisible)
             // the design's jumps back and forward (Figma 4767:23726), VLC's 10 s
-            R.id.button_rewind -> seek(-10000)
-            R.id.button_forward -> seek(10000)
+            R.id.button_rewind -> seek(-15000)
+            R.id.button_forward -> seek(15000)
         }
     }
 
@@ -393,6 +420,27 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
                 (binding.playlist.findViewHolderForAdapterPosition(position)?.itemView ?: binding.playlist).requestFocus()
             }
         } else binding.buttonQueue.requestFocus()
+    }
+
+    /** The design's volume of the bar (org.videolan.vlc.gui.video.RdTvVolumeDrawable): the device's volume, muted or not */
+    private var volumeDrawable: org.videolan.vlc.gui.video.RdTvVolumeDrawable? = null
+
+    private fun refreshVolume() {
+        val am = getSystemService(android.content.Context.AUDIO_SERVICE) as android.media.AudioManager
+        val d = volumeDrawable ?: org.videolan.vlc.gui.video.RdTvVolumeDrawable(this).also {
+            volumeDrawable = it
+            binding.buttonVolume.setImageDrawable(it)
+            binding.buttonVolume.setOnKeyListener { _, keyCode, event ->
+                if (event.action != KeyEvent.ACTION_DOWN) return@setOnKeyListener false
+                val dir = when (keyCode) { KeyEvent.KEYCODE_DPAD_UP -> android.media.AudioManager.ADJUST_RAISE; KeyEvent.KEYCODE_DPAD_DOWN -> android.media.AudioManager.ADJUST_LOWER; else -> return@setOnKeyListener false }
+                am.adjustStreamVolume(android.media.AudioManager.STREAM_MUSIC, dir, 0)
+                refreshVolume()
+                true
+            }
+        }
+        val max = am.getStreamMaxVolume(android.media.AudioManager.STREAM_MUSIC).coerceAtLeast(1)
+        d.percent = am.getStreamVolume(android.media.AudioManager.STREAM_MUSIC) * 100 / max
+        d.muted = am.isStreamMute(android.media.AudioManager.STREAM_MUSIC)
     }
 
     private fun showAdvancedOptions(@Suppress("UNUSED_PARAMETER") v: View?) {
