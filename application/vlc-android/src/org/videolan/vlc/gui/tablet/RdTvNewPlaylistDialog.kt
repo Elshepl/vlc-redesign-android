@@ -57,6 +57,7 @@ object RdTvNewPlaylistDialog {
     private const val WELL = 0xFF090909.toInt()
 
     fun show(activity: AudioPlayerContainerActivity, onSaved: (() -> Unit)? = null) {
+        if (activity.isFinishing || activity.isDestroyed) return
         val ctx = activity
         val inter = ResourcesCompat.getFont(ctx, R.font.inter)
         val dialog = Dialog(ctx)

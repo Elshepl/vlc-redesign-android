@@ -47,6 +47,7 @@ import org.videolan.vlc.gui.dialogs.getPlaylistByName
 object RdTvNetworkDialog {
 
     fun show(activity: AudioPlayerContainerActivity) {
+        if (activity.isFinishing || activity.isDestroyed) return
         val ctx = activity
         val inter = ResourcesCompat.getFont(ctx, R.font.inter)
         val dialog = Dialog(ctx)

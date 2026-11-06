@@ -123,7 +123,8 @@ object RdTvMenu {
      * menu's 375).
      */
     fun show(activity: FragmentActivity, anchor: View?, entries: List<Entry>, width: Int = 265, below: Boolean? = null): PopupWindow? {
-        if (entries.isEmpty()) return null
+        // (a window that is going away can't show a popup: BadTokenException)
+        if (entries.isEmpty() || activity.isFinishing || activity.isDestroyed || !activity.window.decorView.isAttachedToWindow) return null
         val ctx = activity
         val inter = ResourcesCompat.getFont(ctx, R.font.inter)
         val popup = PopupWindow(ctx)
