@@ -25,6 +25,41 @@
         <item name="android:textColor">@color/rd_dark_fg_b1</item>
     </style>
 
+    <!-- the onboarding's buttons on the TV at the design's size: 100 x 32 px, Inter SemiBold 16 px, FG/A2 (FG/B1 on the
+         accent) -->
+    <style name="RdTvObButton" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/rd_tv_ob_button_bg</item>
+        <item name="android:textColor">@color/rd_dark_fg_a2</item>
+    </style>
+
+    <style name="RdTvObButton.Accent">
+        <item name="android:background">@drawable/rd_tv_ob_button_accent_bg</item>
+        <item name="android:textColor">@color/rd_dark_fg_b1</item>
+    </style>
+
+    <!-- a button of the TV players' bar at the design's size (the TV app's .pl-btn): 28 px square, the 24 px glyph -->
+    <style name="RdTvBarButton" parent="">
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/rd_tv_bar_button_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
     <!-- an icon button of the TV music player's bar: 44 square, the 24 glyph, the desktop's focus line -->
     <style name="RdTvAudioButton" parent="">
         <item name="android:layout_width">44dp</item>

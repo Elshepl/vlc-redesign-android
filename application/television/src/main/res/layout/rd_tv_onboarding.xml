@@ -1,80 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- VLC Redesign: the TV layout's onboarding as the desktop's (OnboardingDialog.qml, Figma 1899:3055) and the TV app's:
-     the dark B1 page, the step in the middle (the cone, the title in Inter Light, the text in FG/A2), Back and Next
-     (the accent; Start VLC on the last step) at the bottom end, the step's dots at the bottom start -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- VLC Redesign: the TV layout's onboarding as the design's dialog (OnboardingDialog.qml, Figma 1899:3055) at the
+     design's own sizes, as the TV app draws it on its 1920 x 1080 page (1 design px = 0.5 dp on a 1080p TV, xhdpi):
+     the 1090 x 759 card in the middle of the dark page, the cone at 475,116 (141), the title at 286 (Inter Light 32),
+     the text at 248,362 (595 wide, Inter Light 16 on 28), Next (100 x 32, the accent) 62 from the end at 671, Back
+     8 before it. The steps are the TV's own (welcome, the media access, all set). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/rd_dark_bg_b1">
+    android:background="@color/rd_dark_bg_b2">
 
-    <LinearLayout
-        android:id="@+id/rd_ob_step"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/rd_ob_next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_max="560dp">
+    <RelativeLayout
+        android:layout_width="545dp"
+        android:layout_height="379.5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rd_tv_ob_card">
 
         <ImageView
             android:id="@+id/rd_ob_logo"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
+            android:layout_width="70.5dp"
+            android:layout_height="70.5dp"
+            android:layout_marginStart="237.5dp"
+            android:layout_marginTop="58dp"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_icon" />
 
         <TextView
             android:id="@+id/rd_ob_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="143dp"
             android:accessibilityHeading="true"
             android:fontFamily="@font/inter_light"
             android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineHeight="19.5dp"
             android:textColor="@color/rd_dark_fg_1"
-            android:textSize="26sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/rd_ob_text"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="183dp"
             android:fontFamily="@font/inter_light"
-            android:gravity="center"
-            android:lineSpacingMultiplier="1.3"
+            android:includeFontPadding="false"
+            android:lineHeight="14dp"
+            android:textAlignment="viewStart"
             android:textColor="@color/rd_dark_fg_a1"
-            android:textSize="15sp" />
-    </LinearLayout>
+            android:textSize="8sp" />
 
-    <LinearLayout
-        android:id="@+id/rd_ob_dots"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@id/rd_ob_next"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/rd_ob_next" />
+        <TextView
+            android:id="@+id/rd_ob_next"
+            style="@style/RdTvObButton.Accent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="335.5dp"
+            android:layout_marginEnd="31dp"
+            android:text="@string/rd_next" />
 
-    <TextView
-        android:id="@+id/rd_ob_back"
-        style="@style/RdTvButton"
-        android:layout_marginEnd="8dp"
-        android:text="@string/rd_back"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/rd_ob_next"
-        app:layout_constraintEnd_toStartOf="@id/rd_ob_next" />
-
-    <TextView
-        android:id="@+id/rd_ob_next"
-        style="@style/RdTvButton.Accent"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/rd_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/rd_ob_back"
+            style="@style/RdTvObButton"
+            android:layout_alignTop="@id/rd_ob_next"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@id/rd_ob_next"
+            android:text="@string/rd_back"
+            android:visibility="gone" />
+    </RelativeLayout>
+</FrameLayout>

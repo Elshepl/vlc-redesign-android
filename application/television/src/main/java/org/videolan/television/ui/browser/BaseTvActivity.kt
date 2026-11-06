@@ -41,6 +41,7 @@ import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.resources.AppContextProvider
 import org.videolan.resources.util.startMedialibrary
 import org.videolan.television.ui.RdTvIdleScreen
+import org.videolan.television.ui.rdTvFullScreen
 import org.videolan.television.ui.SearchActivity
 import org.videolan.television.ui.dialogs.ConfirmationTvActivity
 import org.videolan.tools.KeyHelper
@@ -109,6 +110,7 @@ abstract class BaseTvActivity : FragmentActivity(), IDialogManager {
 
     override fun onResume() {
         super.onResume()
+        rdTvFullScreen()
         if (idleScreenAllowed) idleScreen.onResume()
     }
 

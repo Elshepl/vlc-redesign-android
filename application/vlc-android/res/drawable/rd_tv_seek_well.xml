@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the TV players' seek well at the design's size (the TV app's .pl-seek: 28 px high, #090909, radius 4;
+     the played part in Accent Bright inset by 2) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle"><corners android:radius="2dp" /><solid android:color="@color/rd_dark_bg_b2" /><size android:height="14dp" /></shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress" android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <clip><shape android:shape="rectangle"><corners android:radius="1dp" /><solid android:color="#0AFFFFFF" /></shape></clip>
+    </item>
+    <item android:id="@android:id/progress" android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <clip><shape android:shape="rectangle"><corners android:radius="1dp" /><solid android:color="@color/rd_accent_orange_bright" /></shape></clip>
+    </item>
+</layer-list>

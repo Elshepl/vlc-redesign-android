@@ -25,27 +25,23 @@
 package org.videolan.television.ui
 
 import android.content.Intent
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import org.videolan.resources.TV_MAIN_ACTIVITY
 import org.videolan.resources.util.canReadStorage
 import org.videolan.television.R
 import org.videolan.tools.KEY_TV_ONBOARDING_DONE
 import org.videolan.tools.Settings
-import org.videolan.tools.dp
 import org.videolan.tools.putSingle
 import org.videolan.vlc.util.Permissions
 
 /**
- * VLC Redesign: the TV layout's onboarding in the design (OnboardingDialog.qml, the TV app's onboarding): three steps
+ * VLC Redesign: the TV layout's onboarding as the design's dialog (OnboardingDialog.qml, the TV app's onboarding): three steps
  * (welcome, the media access, all set) with Back and Next, every one reached with the D-pad, Back steps back.
  */
 class OnboardingFragment : Fragment() {
@@ -54,7 +50,6 @@ class OnboardingFragment : Fragment() {
     private lateinit var text: TextView
     private lateinit var back: TextView
     private lateinit var next: TextView
-    private lateinit var dots: LinearLayout
 
     private val backCallback = object : OnBackPressedCallback(false) {
         override fun handleOnBackPressed() = show(step - 1)
@@ -69,10 +64,6 @@ class OnboardingFragment : Fragment() {
         text = view.findViewById(R.id.rd_ob_text)
         back = view.findViewById(R.id.rd_ob_back)
         next = view.findViewById(R.id.rd_ob_next)
-        dots = view.findViewById(R.id.rd_ob_dots)
-        repeat(PAGES) {
-            dots.addView(View(requireContext()), LinearLayout.LayoutParams(8.dp, 8.dp).apply { marginEnd = 8.dp })
-        }
         back.setOnClickListener { show(step - 1) }
         next.setOnClickListener { if (step < PAGES - 1) show(step + 1) else finish() }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, backCallback)
@@ -116,10 +107,6 @@ class OnboardingFragment : Fragment() {
         next.text = getString(if (step == PAGES - 1) R.string.start_vlc else R.string.rd_next)
         if (step == 0 || !focusWasBack) next.requestFocus()
         backCallback.isEnabled = step > 0
-        for (i in 0 until dots.childCount) dots.getChildAt(i).background = GradientDrawable().apply {
-            shape = GradientDrawable.OVAL
-            setColor(ContextCompat.getColor(activity, if (i == step) R.color.rd_accent_orange_main else R.color.rd_dark_fg_a4))
-        }
     }
 
     private fun finish() {

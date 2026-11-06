@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the play glyph of the TV players' play pill (ic_play_player without its pill: the pill is the button's
+     background, so the D-pad focus can light it, the TV app's .pl-play.focus), 54 x 28 px -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="27dp" android:height="14dp" android:viewportWidth="54" android:viewportHeight="28">
+    <group android:translateX="17" android:translateY="3" android:scaleX="0.9167" android:scaleY="0.9167">
+        <path android:pathData="M8 16.9554V7.04464C8 6.21249 8.95708 5.7444 9.61394 6.25529L15.9851 11.2106C16.4999 11.611 16.4999 12.389 15.9851 12.7894L9.61394 17.7447C8.95708 18.2556 8 17.7875 8 16.9554Z" android:fillColor="@color/rd_dark_fg_b1" android:strokeColor="@color/rd_dark_fg_b1" android:strokeWidth="1.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    </group>
+</vector>

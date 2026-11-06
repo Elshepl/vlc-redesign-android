@@ -33,4 +33,9 @@ class OnboardingActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.onboarding)
     }
+
+    override fun onResume() {
+        super.onResume()
+        rdTvFullScreen()
+    }
 }

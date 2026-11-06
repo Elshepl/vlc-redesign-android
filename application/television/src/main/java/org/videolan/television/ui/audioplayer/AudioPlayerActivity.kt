@@ -241,7 +241,7 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
         if (state == null) return
 
         // VLC Redesign: the design's accent play pill (play / pause) rather than VLC's animated circle
-        binding.buttonPlay.setImageResource(if (state.playing) R.drawable.rd_tv_pause else R.drawable.rd_tv_play)
+        binding.buttonPlay.setImageResource(if (state.playing) R.drawable.rd_tv_pause_glyph else R.drawable.rd_tv_play_glyph)
 
         wasPlaying = state.playing
         binding.buttonPlay.contentDescription = getString(if (state.playing) org.videolan.vlc.R.string.pause else org.videolan.vlc.R.string.play)
@@ -252,8 +252,10 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
                 finish()
                 return@launch
             }
-            binding.mediaTitle.text = state.title
+            // the design's line under the cover: "title - artist" (Figma 4767:23726, the TV app's .pl-music-title)
+            binding.mediaTitle.text = if (state.artist.isNullOrBlank()) state.title else "${state.title} - ${state.artist}"
             binding.mediaArtist.text = state.artist
+            binding.topTitle.text = state.title
             binding.buttonShuffle.setImageResource(if (shuffling)
                 R.drawable.ic_shuffle_on
             else
@@ -371,6 +373,9 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
             R.id.button_shuffle -> setShuffleMode(!shuffling)
             R.id.button_more -> showAdvancedOptions(v)
             R.id.button_queue -> showQueue(!binding.playlist.isVisible)
+            // the design's jumps back and forward (Figma 4767:23726), VLC's 10 s
+            R.id.button_rewind -> seek(-10000)
+            R.id.button_forward -> seek(10000)
         }
     }
 

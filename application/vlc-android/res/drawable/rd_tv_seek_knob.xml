@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the music's seek knob (the TV app's .pl.music .pl-seek-knob: 4 x 24 px, radius 1, the accent; FG/1
+     while the D-pad is on the well) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"><shape><corners android:radius="0.5dp" /><solid android:color="@color/rd_dark_fg_1" /><size android:width="2dp" android:height="12dp" /></shape></item>
+    <item><shape><corners android:radius="0.5dp" /><solid android:color="@color/rd_accent_orange_main" /><size android:width="2dp" android:height="12dp" /></shape></item>
+</selector>

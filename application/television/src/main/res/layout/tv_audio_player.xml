@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- VLC Redesign: the TV audio player as the design's music player (Figma 4767:23726 "Player - Music", the TV app's
-     .pl.music): the large centred cover (radius 10) over its dimmed blur, the title and the artist under it, the control
+     .pl.music) at the design's sizes (1 design px = 0.5 dp on a 1080p TV): the top bar, the large centred cover over its
+     dimmed blur, the title and the artist under it, the control
      bar at the bottom as the video player's (previous, the accent play pill, next, the time, the seek well, the length,
      shuffle, repeat, the queue, more). The queue opens on demand on a dark panel at the end (Back or Left closes it).
      With the D-pad: Right from Next reaches the seek well (Left / Right seek), Up from it goes back to Play, Down to
@@ -32,58 +33,95 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-        <!-- the cover: as large as the page leaves it above the title, square, centred -->
-        <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/album_cover"
+        <!-- the top bar (Figma: 40 px, the cone, the title centred in FG/A2 14 px, the clock for the window buttons) -->
+        <View
+                android:id="@+id/rd_audio_top"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/tv_overscan_vertical"
-                android:layout_marginBottom="20dp"
-                android:background="@color/rd_dark_bg_b1"
-                android:importantForAccessibility="no"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_song_big"
-                app:layout_constraintBottom_toTopOf="@+id/media_title"
-                app:layout_constraintDimensionRatio="1"
+                android:layout_height="20dp"
+                android:background="@color/rd_dark_bg_a3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="6.5dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
+
+        <TextView
+                android:id="@+id/top_title"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/rd_dark_fg_a2"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
+
+        <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/inter"
+                android:includeFontPadding="false"
+                android:textColor="@color/rd_dark_fg_a2"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_top" />
+
+        <!-- the cover: 738 px square at 591,73 (radius 20) -->
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/album_cover"
+                android:layout_width="369dp"
+                android:layout_height="369dp"
+                android:layout_marginTop="36.5dp"
+                android:background="@color/rd_dark_bg_b1"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_song_big"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- "title - artist" under the cover (Figma: 24 px, FG/A1, centred on 937) -->
         <TextView
                 android:id="@+id/media_title"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="14.5dp"
                 android:layout_marginStart="120dp"
+                android:layout_marginTop="461dp"
                 android:layout_marginEnd="120dp"
                 android:ellipsize="end"
-                android:fontFamily="@font/inter_medium"
-                android:gravity="center_horizontal"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:includeFontPadding="false"
                 android:singleLine="true"
-                android:textColor="@color/rd_dark_fg_2"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/media_artist"
+                android:textColor="@color/rd_dark_fg_a1"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Title" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title - Artist" />
 
         <TextView
                 android:id="@+id/media_artist"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="120dp"
-                android:layout_marginBottom="20dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/inter"
-                android:gravity="center_horizontal"
-                android:singleLine="true"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toTopOf="@+id/rd_audio_bar"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Artist" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
                 android:id="@+id/playback_speed_quick_action"
@@ -172,7 +210,7 @@
                 android:nextFocusRight="@+id/playlist"
                 android:nextFocusUp="@+id/playlist"
                 android:nextFocusDown="@+id/playlist"
-                android:paddingTop="@dimen/tv_overscan_vertical"
+                android:layout_marginTop="20dp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/rd_audio_bar"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -191,11 +229,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- the control bar (.pl.music .pl-bar): A4 at 95 %, the line of A1 on top -->
+        <!-- the control bar (.pl.music .pl-bar): 54 px, A4 at 95 %, the line of A1 on top; zones 20 px from the sides,
+             the buttons 28 px square 10 px apart (14 at the end), the play pill 54 x 28 -->
         <View
                 android:id="@+id/rd_audio_bar"
                 android:layout_width="0dp"
-                android:layout_height="64dp"
+                android:layout_height="27dp"
                 android:background="@drawable/rd_tv_audio_bar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -203,56 +242,80 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_previous"
-                style="@style/RdTvAudioButton"
-                android:layout_marginStart="@dimen/tv_overscan_horizontal"
+                style="@style/RdTvBarButton"
                 android:contentDescription="@string/previous"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 app:srcCompat="@drawable/ic_player_previous" />
 
         <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/button_play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:background="@drawable/rd_tv_icon_button_bg"
-                android:clickable="true"
-                android:focusable="true"
+                android:id="@+id/button_rewind"
+                style="@style/RdTvBarButton"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/air_action_rewind"
                 android:onClick="onClick"
-                android:padding="5dp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintStart_toEndOf="@+id/button_previous"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
-                app:srcCompat="@drawable/rd_tv_play">
+                app:srcCompat="@drawable/rd_ic_backward" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_play"
+                android:layout_width="27dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rd_tv_play_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintStart_toEndOf="@+id/button_rewind"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/rd_tv_play_glyph">
 
             <requestFocus />
         </androidx.appcompat.widget.AppCompatImageView>
 
         <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/button_next"
-                style="@style/RdTvAudioButton"
-                android:layout_marginStart="4dp"
-                android:contentDescription="@string/next"
-                android:nextFocusRight="@+id/media_progress"
+                android:id="@+id/button_forward"
+                style="@style/RdTvBarButton"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/air_action_forward"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintStart_toEndOf="@+id/button_play"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
+                app:srcCompat="@drawable/rd_ic_forward" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_next"
+                style="@style/RdTvBarButton"
+                android:contentDescription="@string/next"
+                android:layout_marginStart="5dp"
+                android:nextFocusRight="@+id/media_progress"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
+                app:layout_constraintStart_toEndOf="@+id/button_forward"
+                app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 app:srcCompat="@drawable/ic_player_next" />
 
+        <!-- the timeline: the times in boxes of 76 px (15 px, FG/A2), the well of 28 px between, 8 px from them -->
         <TextView
                 android:id="@+id/media_time"
-                android:layout_width="wrap_content"
+                android:layout_width="38dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/inter"
                 android:gravity="center"
                 android:importantForAccessibility="no"
-                android:minWidth="76dp"
+                android:includeFontPadding="false"
                 android:text="@{progress.timeText}"
                 android:textColor="@color/rd_dark_fg_a2"
-                android:textSize="15sp"
+                android:textSize="7.5sp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintStart_toEndOf="@+id/button_next"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
@@ -261,27 +324,24 @@
         <org.videolan.vlc.gui.view.AccessibleSeekBar
                 android:id="@+id/media_progress"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/rd_tv_focus_frame"
+                android:layout_height="14dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rd_tv_seek_focus"
                 android:focusable="true"
                 android:layoutDirection="ltr"
                 android:max="@{(int)progress.length}"
-                android:maxHeight="28dp"
-                android:minHeight="28dp"
+                android:maxHeight="14dp"
+                android:minHeight="14dp"
                 android:nextFocusUp="@+id/button_play"
                 android:nextFocusDown="@+id/button_shuffle"
-                android:paddingStart="2dp"
-                android:paddingTop="2dp"
-                android:paddingEnd="2dp"
-                android:paddingBottom="2dp"
+                android:padding="0dp"
                 android:progress="@{(int)progress.time}"
-                android:progressDrawable="@drawable/rd_tv_seekbar"
+                android:progressDrawable="@drawable/rd_tv_seek_well"
                 android:secondaryProgress="0"
                 android:splitTrack="false"
-                android:thumb="@drawable/rd_tv_seekbar_thumb"
-                android:thumbOffset="-2dp"
+                android:thumb="@drawable/rd_tv_seek_knob"
+                android:thumbOffset="-1dp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintEnd_toStartOf="@+id/media_length"
                 app:layout_constraintStart_toEndOf="@+id/media_time"
@@ -292,22 +352,23 @@
                 android:id="@+id/bookmark_marker_container"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="2dp"
                 app:layout_constraintBottom_toTopOf="@+id/media_progress"
                 app:layout_constraintEnd_toEndOf="@+id/media_progress"
                 app:layout_constraintStart_toStartOf="@+id/media_progress" />
 
         <TextView
                 android:id="@+id/media_length"
-                android:layout_width="wrap_content"
+                android:layout_width="38dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/inter"
                 android:gravity="center"
                 android:importantForAccessibility="no"
-                android:minWidth="76dp"
+                android:includeFontPadding="false"
                 android:text="@{progress.lengthText}"
                 android:textColor="@color/rd_dark_fg_a2"
-                android:textSize="15sp"
+                android:textSize="7.5sp"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
                 app:layout_constraintEnd_toStartOf="@+id/button_shuffle"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
@@ -315,49 +376,49 @@
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_shuffle"
-                style="@style/RdTvAudioButton"
-                android:layout_marginEnd="4dp"
+                style="@style/RdTvBarButton"
                 android:contentDescription="@string/shuffle_title"
+                android:layout_marginEnd="7dp"
                 android:nextFocusLeft="@+id/media_progress"
                 android:nextFocusUp="@+id/media_progress"
+                app:layout_constraintEnd_toStartOf="@+id/button_repeat"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
-                app:layout_constraintEnd_toStartOf="@+id/button_repeat"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 app:srcCompat="@drawable/ic_shuffle_audio" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_repeat"
-                style="@style/RdTvAudioButton"
-                android:layout_marginEnd="4dp"
+                style="@style/RdTvBarButton"
+                android:layout_marginEnd="7dp"
                 android:nextFocusUp="@+id/media_progress"
+                app:layout_constraintEnd_toStartOf="@+id/button_queue"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
-                app:layout_constraintEnd_toStartOf="@+id/button_queue"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 app:srcCompat="@drawable/ic_repeat_audio" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_queue"
-                style="@style/RdTvAudioButton"
-                android:layout_marginEnd="4dp"
+                style="@style/RdTvBarButton"
                 android:contentDescription="@string/show_playlist"
+                android:layout_marginEnd="7dp"
                 android:nextFocusUp="@+id/media_progress"
+                app:layout_constraintEnd_toStartOf="@+id/button_more"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
-                app:layout_constraintEnd_toStartOf="@+id/button_more"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 app:srcCompat="@drawable/ic_player_playqueue" />
 
         <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/button_more"
-                style="@style/RdTvAudioButton"
-                android:layout_marginEnd="@dimen/tv_overscan_horizontal"
+                style="@style/RdTvBarButton"
                 android:contentDescription="@string/more_actions"
+                android:layout_marginEnd="10dp"
                 android:nextFocusUp="@+id/media_progress"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/rd_audio_bar"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/rd_audio_bar"
                 app:srcCompat="@drawable/rd_tv_more" />
 

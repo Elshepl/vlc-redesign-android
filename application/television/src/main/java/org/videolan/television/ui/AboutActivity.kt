@@ -23,6 +23,11 @@ class AboutActivity : AppCompatActivity() {
         applyOverscanMargin(this)
     }
 
+    override fun onResume() {
+        super.onResume()
+        rdTvFullScreen()
+    }
+
     private fun leaveLinks(v: View, keyCode: Int, event: KeyEvent): Boolean {
         val direction = when (keyCode) {
             KeyEvent.KEYCODE_DPAD_DOWN -> View.FOCUS_DOWN

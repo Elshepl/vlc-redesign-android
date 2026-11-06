@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the TV players' play pill (Figma 848:1712: 54 x 28 px, the accent, radius 4), lighter while the D-pad
+     is on it (the TV app's .pl-play.focus, #E08A2C) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"><shape><solid android:color="#FFE08A2C" /><corners android:radius="2dp" /></shape></item>
+    <item android:state_pressed="true"><shape><solid android:color="@color/rd_accent_orange_dim" /><corners android:radius="2dp" /></shape></item>
+    <item><shape><solid android:color="@color/rd_accent_orange_main" /><corners android:radius="2dp" /></shape></item>
+</selector>

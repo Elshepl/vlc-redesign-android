@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the onboarding's card on the TV (the design's dialog: B1, radius 10, the 1 px window border) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/rd_dark_bg_b1" />
+    <corners android:radius="5dp" />
+    <stroke android:width="0.5dp" android:color="@color/rd_dark_window_border_token" />
+</shape>
