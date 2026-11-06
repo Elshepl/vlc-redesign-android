@@ -345,4 +345,18 @@
     <string name="rd_update_you_have">U hebt %1$s.</string>
     <string name="rd_update_whats_new">Wat is er nieuw</string>
     <string name="rd_update_check_daily">Dagelijks controleren op updates</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">Item toevoegen</string>
+    <string name="rd_mini_player">Minispeler</string>
+    <string name="rd_net_url">Netwerk-URL</string>
+    <string name="rd_net_url_help">Je kunt meerdere links invoeren om te laden.</string>
+    <string name="rd_net_url_hint">bijv. https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Naam afspeellijst</string>
+    <string name="rd_net_optional">(optioneel)</string>
+    <string name="rd_net_playlist_help">De afspeellijst wordt met deze titel opgeslagen en getoond.</string>
+    <string name="rd_net_playlist_hint">bijv. Favoriete tv-zenders</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
 </resources>

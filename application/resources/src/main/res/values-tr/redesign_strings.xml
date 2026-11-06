@@ -345,4 +345,18 @@
     <string name="rd_update_you_have">Kullandığınız sürüm: %1$s.</string>
     <string name="rd_update_whats_new">Yenilikler</string>
     <string name="rd_update_check_daily">Güncellemeleri günde bir kez denetle</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">Öğe ekle</string>
+    <string name="rd_mini_player">Mini oynatıcı</string>
+    <string name="rd_net_url">Ağ URL\'si</string>
+    <string name="rd_net_url_help">Yüklemek için birden çok bağlantı girebilirsiniz.</string>
+    <string name="rd_net_url_hint">ör. https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Oynatma listesi adı</string>
+    <string name="rd_net_optional">(isteğe bağlı)</string>
+    <string name="rd_net_playlist_help">Oynatma listesi bu başlıkla kaydedilip gösterilecek.</string>
+    <string name="rd_net_playlist_hint">ör. Favori TV kanalları</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d öğe</item>
+        <item quantity="other">%d öğe</item>
+    </plurals>
 </resources>

@@ -123,6 +123,8 @@ object RdTvWindow {
             setMargins(8.dp, (TITLE_BAR_HEIGHT + 8).dp, 0, 8.dp)
         })
         if (this is MainActivity) backHome()
+        // the first focus on the current page's row, once the sidebar is laid out
+        coordinator.postDelayed({ if (currentFocus == null || currentFocus?.id == R.id.rd_tv_title_menu) focusSidebar(this) }, 600)
         // the header follows the page's menu and title as each page sets them
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener { sync(this) }
     }
@@ -239,6 +241,7 @@ object RdTvWindow {
     private fun sidebar(activity: ContentActivity): View {
         val ctx = activity
         val side = LinearLayout(ctx).apply {
+            id = R.id.rd_tablet_sidebar
             orientation = LinearLayout.VERTICAL
             setPadding(6.dp, 5.dp, 6.dp, 0)
             background = GradientDrawable().apply { cornerRadius = 6.dp.toFloat(); setColor(SIDEBAR) }
@@ -262,6 +265,7 @@ object RdTvWindow {
                 importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
             }, LinearLayout.LayoutParams(24.dp, 24.dp).apply { marginStart = 13.dp; marginEnd = 11.dp })
             r.addView(text(ctx, 14f, if (current) 0xFFC6C6C6.toInt() else ICON).apply { text = label }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+            if (current) r.setTag(R.id.rd_tv_header_view, true)
             side.addView(r, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 46.dp))
         }
         val own = ownPage(activity)
@@ -396,6 +400,74 @@ object RdTvWindow {
         b.setSpan(android.text.style.ForegroundColorSpan(DISABLED), sep, b.length, android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         b.append(current, android.text.style.StyleSpan(Typeface.BOLD), android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         return b
+    }
+
+    /**
+     * The remote in the design's window (the Samsung TV app's focus rules): Up from the top of the page goes to the
+     * header's control above it (not to the sidebar), Down from the header goes into the page. True when handled.
+     */
+    fun dispatchKey(activity: ContentActivity, event: android.view.KeyEvent): Boolean {
+        if (event.action != android.view.KeyEvent.ACTION_DOWN || !isOn(activity)) return false
+        val focused = activity.currentFocus ?: return false
+        val page = activity.findViewById<ViewGroup>(R.id.fragment_placeholder) ?: return false
+        val header = activity.findViewById<ViewGroup>(R.id.rd_tv_header) ?: return false
+        fun inside(v: View?, parent: View): Boolean {
+            var p: View? = v
+            while (p != null) { if (p === parent) return true; p = p.parent as? View }
+            return false
+        }
+        val root = activity.window.decorView as ViewGroup
+        val side = activity.findViewById<View>(R.id.rd_tablet_sidebar)
+        when (event.keyCode) {
+            android.view.KeyEvent.KEYCODE_DPAD_LEFT -> {
+                // from the page's start back to the current page's row of the sidebar
+                if (!inside(focused, page)) return false
+                val next = android.view.FocusFinder.getInstance().findNextFocus(root, focused, View.FOCUS_LEFT)
+                if (next != null && inside(next, page) && !inside(focused, next)) return false
+                focusSidebar(activity)
+                return activity.currentFocus !== focused
+            }
+            android.view.KeyEvent.KEYCODE_DPAD_RIGHT -> {
+                // from the sidebar into the page (not along the header)
+                if (side == null || !inside(focused, side)) return false
+                val first = page.getFocusables(View.FOCUS_RIGHT).firstOrNull { it.isShown } ?: return false
+                first.requestFocus()
+                return true
+            }
+            android.view.KeyEvent.KEYCODE_DPAD_UP -> {
+                if (!inside(focused, page)) return false
+                val next = android.view.FocusFinder.getInstance().findNextFocus(root, focused, View.FOCUS_UP)
+                // (a scrolling container of the focused view itself is not "above" it)
+                if (next != null && inside(next, page) && !inside(focused, next)) return false
+                // the header's control nearest above
+                val at = IntArray(2).also { focused.getLocationOnScreen(it) }
+                val x = at[0] + focused.width / 2
+                val candidates = header.getFocusables(View.FOCUS_UP).filter { it.isShown }.sortedBy { v ->
+                    val p = IntArray(2).also { v.getLocationOnScreen(it) }
+                    kotlin.math.abs(p[0] + v.width / 2 - x)
+                }
+                val ok = candidates.any { it.requestFocus(View.FOCUS_UP) }
+                if (!ok) return false
+                return true
+            }
+            android.view.KeyEvent.KEYCODE_DPAD_DOWN -> {
+                if (!inside(focused, header)) return false
+                val next = android.view.FocusFinder.getInstance().findNextFocus(root, focused, View.FOCUS_DOWN)
+                if (next != null && inside(next, page)) return false
+                val first = page.getFocusables(View.FOCUS_DOWN).firstOrNull { it.isShown } ?: return false
+                first.requestFocus()
+                return true
+            }
+        }
+        return false
+    }
+
+    /** The first focus of the library: the current row of the sidebar (not the title bar's menu) */
+    fun focusSidebar(activity: ContentActivity) {
+        val side = activity.findViewById<LinearLayout>(R.id.rd_tablet_sidebar) ?: return
+        val row = (0 until side.childCount).map { side.getChildAt(it) }.firstOrNull { (it.isSelected || it.getTag(R.id.rd_tv_header_view) == true) && it.isFocusable }
+                ?: (0 until side.childCount).map { side.getChildAt(it) }.firstOrNull { it.isFocusable } ?: return
+        row.requestFocus()
     }
 
     /** The page's main list: the first vertical list in it (a grid or the rows of a library page) */

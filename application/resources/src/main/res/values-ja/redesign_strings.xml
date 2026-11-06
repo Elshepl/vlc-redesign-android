@@ -345,4 +345,18 @@
     <string name="rd_update_you_have">現在のバージョンは %1$s です。</string>
     <string name="rd_update_whats_new">新機能</string>
     <string name="rd_update_check_daily">1日1回アップデートを確認</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">項目を追加</string>
+    <string name="rd_mini_player">ミニプレーヤー</string>
+    <string name="rd_net_url">ネットワーク URL</string>
+    <string name="rd_net_url_help">複数のリンクを入力して読み込めます。</string>
+    <string name="rd_net_url_hint">例: https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">プレイリスト名</string>
+    <string name="rd_net_optional">(任意)</string>
+    <string name="rd_net_playlist_help">プレイリストはこの名前で保存・表示されます。</string>
+    <string name="rd_net_playlist_hint">例: お気に入りのテレビチャンネル</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d 項目</item>
+        <item quantity="other">%d 項目</item>
+    </plurals>
 </resources>

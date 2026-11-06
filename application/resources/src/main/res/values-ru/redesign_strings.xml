@@ -345,4 +345,19 @@
     <string name="rd_update_you_have">У вас версия %1$s.</string>
     <string name="rd_update_whats_new">Что нового</string>
     <string name="rd_update_check_daily">Проверять обновления раз в день</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">Добавить элемент</string>
+    <string name="rd_mini_player">Мини-плеер</string>
+    <string name="rd_net_url">Сетевой URL</string>
+    <string name="rd_net_url_help">Можно ввести несколько ссылок для загрузки.</string>
+    <string name="rd_net_url_hint">напр., https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Название плейлиста</string>
+    <string name="rd_net_optional">(необязательно)</string>
+    <string name="rd_net_playlist_help">Плейлист будет сохранён и показан с этим названием.</string>
+    <string name="rd_net_playlist_hint">напр., Любимые телеканалы</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d элемент</item>
+        <item quantity="few">%d элемента</item>
+        <item quantity="other">%d элементов</item>
+    </plurals>
 </resources>

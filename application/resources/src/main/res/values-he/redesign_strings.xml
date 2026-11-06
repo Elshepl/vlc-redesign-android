@@ -329,4 +329,18 @@
     <string name="rd_update_you_have">הגרסה שלך: %1$s.</string>
     <string name="rd_update_whats_new">מה חדש</string>
     <string name="rd_update_check_daily">בדוק אם יש עדכונים פעם ביום</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">הוסף פריט</string>
+    <string name="rd_mini_player">נגן מוקטן</string>
+    <string name="rd_net_url">כתובת רשת</string>
+    <string name="rd_net_url_help">אפשר להזין כמה קישורים לטעינה.</string>
+    <string name="rd_net_url_hint">לדוגמה, https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">שם רשימת השמעה</string>
+    <string name="rd_net_optional">(לא חובה)</string>
+    <string name="rd_net_playlist_help">רשימת ההשמעה תישמר ותוצג בשם הזה.</string>
+    <string name="rd_net_playlist_hint">לדוגמה, ערוצי טלוויזיה מועדפים</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">פריט %d</item>
+        <item quantity="other">%d פריטים</item>
+    </plurals>
 </resources>

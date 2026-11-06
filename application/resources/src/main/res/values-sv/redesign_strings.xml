@@ -345,4 +345,18 @@
     <string name="rd_update_you_have">Du har %1$s.</string>
     <string name="rd_update_whats_new">Nyheter</string>
     <string name="rd_update_check_daily">Sök efter uppdateringar en gång om dagen</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">Lägg till objekt</string>
+    <string name="rd_mini_player">Minispelare</string>
+    <string name="rd_net_url">Nätverks-URL</string>
+    <string name="rd_net_url_help">Du kan ange flera länkar att läsa in.</string>
+    <string name="rd_net_url_hint">t.ex. https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Spellistans namn</string>
+    <string name="rd_net_optional">(valfritt)</string>
+    <string name="rd_net_playlist_help">Spellistan sparas och visas med den här titeln.</string>
+    <string name="rd_net_playlist_hint">t.ex. Favoritkanaler på tv</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d objekt</item>
+        <item quantity="other">%d objekt</item>
+    </plurals>
 </resources>

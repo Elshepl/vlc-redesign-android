@@ -345,4 +345,19 @@
     <string name="rd_update_you_have">Máte verzi %1$s.</string>
     <string name="rd_update_whats_new">Co je nového</string>
     <string name="rd_update_check_daily">Kontrolovat aktualizace jednou denně</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">Přidat položku</string>
+    <string name="rd_mini_player">Minipřehrávač</string>
+    <string name="rd_net_url">Síťová adresa URL</string>
+    <string name="rd_net_url_help">Můžete zadat více odkazů k načtení.</string>
+    <string name="rd_net_url_hint">např. https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Název playlistu</string>
+    <string name="rd_net_optional">(volitelné)</string>
+    <string name="rd_net_playlist_help">Playlist bude uložen a zobrazen pod tímto názvem.</string>
+    <string name="rd_net_playlist_hint">např. Oblíbené TV kanály</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d položka</item>
+        <item quantity="few">%d položky</item>
+        <item quantity="other">%d položek</item>
+    </plurals>
 </resources>

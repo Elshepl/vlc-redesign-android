@@ -344,4 +344,18 @@
     <string name="rd_update_you_have">لديك %1$s.</string>
     <string name="rd_update_whats_new">ما الجديد</string>
     <string name="rd_update_check_daily">التحقق من وجود تحديثات مرة يوميًا</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">إضافة عنصر</string>
+    <string name="rd_mini_player">المشغّل المصغّر</string>
+    <string name="rd_net_url">عنوان URL للشبكة</string>
+    <string name="rd_net_url_help">يمكنك إدخال عدة روابط لتحميلها.</string>
+    <string name="rd_net_url_hint">مثال: https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">اسم قائمة التشغيل</string>
+    <string name="rd_net_optional">(اختياري)</string>
+    <string name="rd_net_playlist_help">سيتم حفظ قائمة التشغيل وعرضها بهذا العنوان.</string>
+    <string name="rd_net_playlist_hint">مثال: القنوات التلفزيونية المفضلة</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">عنصر واحد</item>
+        <item quantity="other">%d عنصر</item>
+    </plurals>
 </resources>

@@ -610,6 +610,11 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 it.setVisible()
                 hudRightBinding = DataBindingUtil.bind(player.findViewById(R.id.hud_right_overlay)) ?: return
                 // VLC Redesign: the TV layout's top bar is the design's (cone, menu, library, folder, title, clock)
+                // (the bars' backgrounds at the design's heights: the top bar 40, the control bar 54)
+                if (RdTvWindow.isOn(player)) {
+                    hudRightBackground?.let { it.layoutParams = it.layoutParams.apply { height = 40.dp } }
+                    hudBackground?.let { it.layoutParams = it.layoutParams.apply { height = 54.dp } }
+                }
                 if (RdTvWindow.isOn(player)) RdTvPlayerTopBar.apply(player, hudRightBinding.hudRightOverlay, hudRightBinding.playerOverlayTitle) {
                     player.service?.currentMediaWrapper?.uri?.path?.let { java.io.File(it).parentFile?.name }
                 }

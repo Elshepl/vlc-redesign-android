@@ -77,6 +77,12 @@ open class ContentActivity : AudioPlayerContainerActivity(), SearchView.OnQueryT
         if (::searchItem.isInitialized) searchItem.collapseActionView()
     }
 
+    override fun dispatchKeyEvent(event: android.view.KeyEvent): Boolean {
+        // VLC Redesign: the remote's rules of the TV layout's window (RdTvWindow)
+        if (org.videolan.vlc.gui.tablet.RdTvWindow.dispatchKey(this, event)) return true
+        return super.dispatchKeyEvent(event)
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val current = currentFragment
         super.onCreateOptionsMenu(menu)

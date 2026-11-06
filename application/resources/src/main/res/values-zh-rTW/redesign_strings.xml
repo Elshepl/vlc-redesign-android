@@ -345,4 +345,18 @@
     <string name="rd_update_you_have">您目前使用的是 %1$s。</string>
     <string name="rd_update_whats_new">新功能</string>
     <string name="rd_update_check_daily">每天檢查一次更新</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">新增項目</string>
+    <string name="rd_mini_player">迷你播放器</string>
+    <string name="rd_net_url">網路 URL</string>
+    <string name="rd_net_url_help">可以輸入多個要載入的連結。</string>
+    <string name="rd_net_url_hint">例如 https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">播放清單名稱</string>
+    <string name="rd_net_optional">（選用）</string>
+    <string name="rd_net_playlist_help">播放清單將以此名稱儲存並顯示。</string>
+    <string name="rd_net_playlist_hint">例如 最愛的電視頻道</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d 個項目</item>
+        <item quantity="other">%d 個項目</item>
+    </plurals>
 </resources>

@@ -345,4 +345,18 @@
     <string name="rd_update_you_have">Tiene %1$s.</string>
     <string name="rd_update_whats_new">Novedades</string>
     <string name="rd_update_check_daily">Buscar actualizaciones una vez al día</string>
+    <!-- the TV layout at the design's size -->
+    <string name="rd_add_item">Añadir elemento</string>
+    <string name="rd_mini_player">Minirreproductor</string>
+    <string name="rd_net_url">URL de red</string>
+    <string name="rd_net_url_help">Puedes introducir varios enlaces para cargar.</string>
+    <string name="rd_net_url_hint">p. ej., https://www.example.com/stream.avi</string>
+    <string name="rd_net_playlist_name">Nombre de la lista</string>
+    <string name="rd_net_optional">(opcional)</string>
+    <string name="rd_net_playlist_help">La lista se guardará y se mostrará con este título.</string>
+    <string name="rd_net_playlist_hint">p. ej., Canales de TV favoritos</string>
+    <plurals name="rd_items_count">
+        <item quantity="one">%d elemento</item>
+        <item quantity="other">%d elementos</item>
+    </plurals>
 </resources>

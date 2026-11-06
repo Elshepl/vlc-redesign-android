@@ -248,9 +248,11 @@ class RdSegmentedPreference @JvmOverloads constructor(context: Context, attrs: A
         box.removeAllViews()
         val ctx = context
         val accent = ctx.rdAttr(R.attr.colorPrimary)
+        // the TV layout is always in the dark theme (applyTheme): its Theme row shows Dark
+        val shown = if (key == "app_theme" && org.videolan.tools.Settings.showTvUi) "2" else value
         entries.forEachIndexed { i, label ->
             val v = entryValues[i].toString()
-            val chosen = v == value
+            val chosen = v == shown
             val seg = TextView(ctx).apply {
                 text = label
                 gravity = Gravity.CENTER
