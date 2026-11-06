@@ -32,7 +32,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import org.videolan.resources.TV_MAIN_ACTIVITY
+import org.videolan.resources.MOBILE_MAIN_ACTIVITY
 import org.videolan.resources.util.canReadStorage
 import org.videolan.television.R
 import org.videolan.tools.KEY_TV_ONBOARDING_DONE
@@ -113,7 +113,8 @@ class OnboardingFragment : Fragment() {
         val activity = requireActivity()
         Settings.getInstance(activity).putSingle(KEY_TV_ONBOARDING_DONE, true)
         activity.finish()
-        startActivity(Intent(Intent.ACTION_VIEW).setClassName(activity, TV_MAIN_ACTIVITY))
+        // VLC Redesign: the TV layout is the design's own pages (the tablet layout)
+        startActivity(Intent(Intent.ACTION_VIEW).setClassName(activity, MOBILE_MAIN_ACTIVITY))
     }
 
     private companion object {

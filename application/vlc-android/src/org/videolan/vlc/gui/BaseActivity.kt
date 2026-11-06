@@ -39,6 +39,9 @@ import org.videolan.tools.setGone
 import org.videolan.vlc.R
 import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.gui.helpers.applyTheme
+import org.videolan.vlc.gui.helpers.RdTvFocusRing
+import org.videolan.vlc.gui.helpers.rdTvDesignScale
+import org.videolan.vlc.gui.helpers.rdTvFullScreenIfTv
 import org.videolan.vlc.gui.helpers.hf.PinCodeDelegate
 import org.videolan.vlc.gui.helpers.hf.checkPIN
 import org.videolan.vlc.media.MediaUtils
@@ -145,6 +148,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        rdTvFullScreenIfTv()
         Permissions.emptyCache()
     }
 
@@ -209,6 +213,19 @@ abstract class BaseActivity : AppCompatActivity() {
             ?: BaseContextWrappingDelegate(super.getDelegate()).apply { baseContextWrappingDelegate = this }
 
     override fun createConfigurationContext(overrideConfiguration: Configuration) = super.createConfigurationContext(overrideConfiguration).getContextWithLocale(AppContextProvider.locale)
+
+    // VLC Redesign: in the TV layout, the pages at the design's size on the TV (RdTvDesignScale)
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(newBase.rdTvDesignScale())
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) {
+            rdTvFullScreenIfTv()
+            RdTvFocusRing.attach(this)
+        }
+    }
 
     override fun getApplicationContext(): Context {
         return super.getApplicationContext().getContextWithLocale(AppContextProvider.locale)

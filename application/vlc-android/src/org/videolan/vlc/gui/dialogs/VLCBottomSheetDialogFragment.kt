@@ -48,6 +48,8 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
     }
 
     override fun onStart() {
+        // VLC Redesign: the TV layout's focus line in the sheets as well
+        org.videolan.vlc.gui.helpers.RdTvFocusRing.attach(dialog?.window)
         if (allowRemote()) {
             shouldInterceptRemote.postValue(true)
             videoRemoteJob = lifecycleScope.launch {

@@ -1102,6 +1102,8 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
     }
 
     fun updateScreenshotButton() {
+        // VLC Redesign: Lock from the options before the bar was ever shown (the TV's Up opens the options first)
+        if (!::hudRightBinding.isInitialized) return
         hudRightBinding.playerScreenshot.visibility =  if (!player.isLocked && Settings.getInstance(player).getString(SCREENSHOT_MODE, "0") in arrayOf("1", "3")) View.VISIBLE else View.GONE
         hudRightBinding.playerScreenshot.setOnClickListener(player)
     }

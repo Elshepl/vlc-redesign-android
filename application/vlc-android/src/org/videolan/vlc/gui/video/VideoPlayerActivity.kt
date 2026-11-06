@@ -172,6 +172,7 @@ import org.videolan.tools.VIDEO_RESUME_URI
 import org.videolan.tools.VIDEO_TRANSITION_SHOW
 import org.videolan.tools.dp
 import org.videolan.tools.getContextWithLocale
+import org.videolan.vlc.gui.helpers.rdTvDesignScale
 import org.videolan.tools.isStarted
 import org.videolan.tools.isVisible
 import org.videolan.tools.putSingle
@@ -553,7 +554,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     // in a light theme, the library's new cards were drawn with the night colours (white titles on light grey)
     override fun attachBaseContext(newBase: Context) {
         delegate.localNightMode = androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
-        super.attachBaseContext(newBase)
+        // VLC Redesign: in the TV layout, the player's bar at the design's size on the TV (RdTvDesignScale)
+        super.attachBaseContext(newBase.rdTvDesignScale())
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -1517,7 +1519,11 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
                     volumeUp()
                     return true
                 } else if (!isShowing && !overlayDelegate.playlistContainer.isVisible()) {
-                    if (fov == 0f)
+                    // VLC Redesign: in the TV layout Up shows the control bar (as the TV app's player); the options
+                    // are its settings button
+                    if (isTv && fov == 0f)
+                        overlayDelegate.showOverlay(true)
+                    else if (fov == 0f)
                         showAdvancedOptions()
                     else
                         service?.updateViewpoint(0f, -5f, 0f, 0f, false)
@@ -2019,7 +2025,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         // Show the MainActivity if it is not in background.
         if (showUI && intent.getBooleanExtra(FROM_EXTERNAL, false)) {
             val i = Intent().apply {
-                setClassName(applicationContext, if (isTv) TV_AUDIOPLAYER_ACTIVITY else MOBILE_MAIN_ACTIVITY)
+                setClassName(applicationContext, MOBILE_MAIN_ACTIVITY)
             }
             startActivity(i)
         }

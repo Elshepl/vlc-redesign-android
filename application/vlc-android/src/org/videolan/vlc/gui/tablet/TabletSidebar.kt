@@ -69,6 +69,9 @@ object TabletSidebar {
     private const val TAG_ROW = "rd_tablet_sidebar_row"
     private const val TAG_PIN = "rd_tablet_sidebar_pin"
 
+    /** The desktop's own page: a window of 1600 dp and more (the TV layout at the design's size, RdTvDesignScale). */
+    private fun isDesktopPage(ctx: android.content.Context) = ctx.resources.configuration.screenWidthDp >= 1600
+
     fun MainActivity.applyTabletSidebar() {
         val rail = findViewById<NavigationRailView>(R.id.navigation_rail) ?: return
         if (!resources.getBoolean(R.bool.rd_tablet_sidebar)) {
@@ -85,10 +88,17 @@ object TabletSidebar {
             return
         }
         val sidebar = build(this, rail)
+        // VLC Redesign: on the desktop's own page (the TV layout, RdTvDesignScale) the sidebar is the desktop's panel
+        // (Figma 6261:15078): A3, radius 10, 8 from the window's edges, its rows of 46
+        val desktop = isDesktopPage(this)
         coordinator.addView(sidebar, coordinator.indexOfChild(rail) + 1,
-                CoordinatorLayout.LayoutParams(resources.getDimensionPixelSize(R.dimen.navigation_margin), ViewGroup.LayoutParams.MATCH_PARENT).apply {
+                CoordinatorLayout.LayoutParams(resources.getDimensionPixelSize(R.dimen.navigation_margin) - if (desktop) 8.dp else 0, ViewGroup.LayoutParams.MATCH_PARENT).apply {
                     gravity = Gravity.START
+                    if (desktop) setMargins(8.dp, 8.dp, 0, 8.dp)
                 })
+        if (desktop) sidebar.background = GradientDrawable().apply {
+            cornerRadius = 10.dp.toFloat(); setColor(androidx.core.content.ContextCompat.getColor(this@applyTabletSidebar, R.color.rd_dark_bg_a3))
+        }
         refresh(sidebar, rail)
         supportFragmentManager.registerFragmentLifecycleCallbacks(object : FragmentManager.FragmentLifecycleCallbacks() {
             override fun onFragmentResumed(fm: FragmentManager, f: Fragment) {
@@ -142,7 +152,7 @@ object TabletSidebar {
             tag = TAG_ROW
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
-            minimumHeight = 40.dp
+            minimumHeight = if (isDesktopPage(ctx)) 44.dp else 40.dp
             setPaddingRelative(4.dp, 4.dp, 8.dp, 4.dp)
             background = RippleDrawable(ColorStateList.valueOf(hover), null, mask)
             isClickable = true
@@ -167,7 +177,8 @@ object TabletSidebar {
             scaleType = ImageView.ScaleType.FIT_CENTER
             importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
         }
-        row.addView(icon, LinearLayout.LayoutParams(24.dp, 24.dp).apply { marginStart = 4.dp; marginEnd = 12.dp })
+        val iconSize = if (isDesktopPage(ctx)) 20.dp else 24.dp
+        row.addView(icon, LinearLayout.LayoutParams(iconSize, iconSize).apply { marginStart = 4.dp; marginEnd = 12.dp })
         val label = TextView(ctx).apply {
             id = R.id.rd_tablet_sidebar_label
             text = item.title

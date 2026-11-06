@@ -241,7 +241,8 @@ class StartActivity : FragmentActivity() {
         settings.putSingle(PREF_SHOW_VIDEO_SETTINGS_DISCLAIMER, savedVersionNumber < 3060330 && !firstRun)
         // Route search query
         if (Intent.ACTION_SEARCH == action || ACTION_SEARCH_GMS == action) {
-            intent.setClassName(applicationContext, if (tv) TV_SEARCH_ACTIVITY else MOBILE_SEARCH_ACTIVITY)
+            // VLC Redesign: the TV layout is the design's own pages (the tablet layout), its search as well
+            intent.setClassName(applicationContext, MOBILE_SEARCH_ACTIVITY)
             startActivity(intent)
             finish()
             return
@@ -334,7 +335,7 @@ class StartActivity : FragmentActivity() {
                 }
             }.start()
             val mainIntent = Intent(Intent.ACTION_VIEW)
-                    .setClassName(applicationContext, if (tv) TV_MAIN_ACTIVITY else MOBILE_MAIN_ACTIVITY)
+                    .setClassName(applicationContext, MOBILE_MAIN_ACTIVITY)
                     .putExtra(EXTRA_FIRST_RUN, firstRun)
                     .putExtra(EXTRA_UPGRADE, upgrade)
             if (tv && intent.hasExtra(EXTRA_PATH)) mainIntent.putExtra(EXTRA_PATH, intent.getStringExtra(EXTRA_PATH))

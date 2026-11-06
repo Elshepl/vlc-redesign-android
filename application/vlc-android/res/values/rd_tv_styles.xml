@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- VLC Redesign: the styles of the TV layout's own pages (the onboarding, the buttons, the dialogs, the details) -->
 <resources>
+    <!-- the TV layout's focus line (RdTvFocusRing): its listener on a window, a view's own foreground under it -->
+    <item name="rd_tv_focus_listener" type="id" />
+    <item name="rd_tv_focus_saved" type="id" />
+
     <!-- a neutral button: 40 high, Inter SemiBold 15, FG/A2 on #1B1B1B, the focus frame (rd_tv_button_bg) -->
     <style name="RdTvButton" parent="">
         <item name="android:layout_width">wrap_content</item>

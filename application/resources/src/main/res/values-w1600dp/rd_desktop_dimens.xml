@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a window at least 1600 dp wide, the desktop's own page (the TV layout, drawn at the design's size on
+     the TV, RdTvDesignScale): Home's cards at the desktop's sizes (Figma 6261:15078: the video cards 316 x 178, the
+     music squares 200) -->
+<resources>
+    <dimen name="rd_home_video_width">316dp</dimen>
+    <dimen name="rd_home_square_width">200dp</dimen>
+</resources>

@@ -1222,14 +1222,8 @@ fun BaseActivity.applyTheme() {
         if (!Settings.showTvUi) applyAccent(alwaysDark = it == R.style.Theme_VLC_Onboarding)
         return
     }
-    if (Settings.showTvUi) {
-        // VLC Redesign: the TV layout is in the design's dark palette, the pages it shares with the phone as well
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        setTheme(R.style.Theme_VLC_Black)
-        return
-    }
-
-    val string = settings.getString(KEY_APP_THEME, "-1")
+    // VLC Redesign: the TV layout is the design's own pages (the tablet layout) in its dark palette and the accent
+    val string = if (Settings.showTvUi) "2" else settings.getString(KEY_APP_THEME, "-1")
     when (string) {
         "1" -> {
             window.setBackgroundDrawable(ContextCompat.getColor(this, R.color.rd_light_bg_b1).toDrawable())
