@@ -192,6 +192,12 @@ class SavePlaylistDialog : VLCBottomSheetDialogFragment(), View.OnClickListener,
                 true
             } else false
         }
+        // VLC Redesign: in the TV layout the name field no longer opens the keyboard by itself when the dialog opens, the
+        // D-pad passing through it to Create and the list (the keyboard kept the D-pad); OK on it opens the keyboard
+        if (Settings.showTvUi) binding.dialogPlaylistName.editText?.let { field ->
+            field.showSoftInputOnFocus = false
+            field.setOnClickListener { UiTools.setKeyboardVisibility(field, true) }
+        }
         binding.list.layoutManager = LinearLayoutManager(view.context)
         binding.list.adapter = adapter
         adapter.submitList(listOf<MediaLibraryItem>(*medialibrary.getPlaylists(Playlist.Type.All, false).apply { forEach { it.description = resources.getQuantityString(R.plurals.media_quantity, it.tracksCount, it.tracksCount) } }))
