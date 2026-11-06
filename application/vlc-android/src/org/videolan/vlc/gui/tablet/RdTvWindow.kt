@@ -131,8 +131,12 @@ object RdTvWindow {
         if (this is MainActivity) backHome()
         // the first focus on the current page's row, once the sidebar is laid out
         // (again a little later: the library's first page may take its focus after the window is laid out)
+        // (a playlist's / an album's page: its first track, as a page opened from the library)
         for (delay in longArrayOf(600, 1500, 3000)) coordinator.postDelayed({
-            if (currentFocus == null || currentFocus?.id == R.id.rd_tv_title_menu) focusSidebar(this)
+            if (currentFocus == null || currentFocus?.id == R.id.rd_tv_title_menu) {
+                val first = if (this is HeaderMediaListActivity) pageView(this)?.let { mainList(it) }?.getChildAt(0) else null
+                if (first?.requestFocus() != true) focusSidebar(this)
+            }
         }, delay)
         // the header follows the page's menu and title as each page sets them
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener { sync(this) }
@@ -709,10 +713,12 @@ object RdTvWindow {
             show(R.id.rd_tv_header_count, text != null)
         }
         val options = visible(menu?.findItem(R.id.ml_menu_display_options))
-        show(R.id.rd_tv_header_sort, visible(menu?.findItem(R.id.ml_menu_sortby)) || options || viewPage(activity.supportFragmentManager) != null)
+        // (a playlist's / an album's page: the design's has no sort nor view, as the Samsung TV app's playlist page)
+        val own = activity is HeaderMediaListActivity
+        show(R.id.rd_tv_header_sort, !own && (visible(menu?.findItem(R.id.ml_menu_sortby)) || options || viewPage(activity.supportFragmentManager) != null))
         val grid = visible(menu?.findItem(R.id.ml_menu_display_grid))
         val list = visible(menu?.findItem(R.id.ml_menu_display_list))
-        show(R.id.rd_tv_header_view, grid || list || visible(menu?.findItem(R.id.ml_menu_display_options)))
+        show(R.id.rd_tv_header_view, !own && (grid || list || visible(menu?.findItem(R.id.ml_menu_display_options))))
         header.findViewById<ImageView>(R.id.rd_tv_header_view).let { v ->
             // the view the page is in (the desktop shows the grid's icon in the grid view, the list's in the rows)
             val icon = when (inGrid(activity)) {

@@ -285,7 +285,21 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
 
     /** The TV layout's row (layout-w1600dp/audio_browser_item): its second line, menu and move buttons stay hidden */
     private fun rdTvRow(binding: ViewDataBinding) {
-        if (binding !is AudioBrowserItemBinding || !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(binding.root.context)) return
+        if (!org.videolan.vlc.gui.tablet.RdTvWindow.isOn(binding.root.context)) return
+        if (binding is org.videolan.vlc.databinding.AudioAlbumTrackItemBinding) {
+            // an album's track: the design's row too (32 high, the name 14 in #8F8F8F after its number)
+            binding.subtitle.visibility = View.GONE
+            binding.itemMore.visibility = View.GONE
+            binding.root.minimumHeight = 32.dp
+            binding.root.background = null
+            binding.title.setTextSize(android.util.TypedValue.COMPLEX_UNIT_DIP, 14f)
+            binding.title.setTextColor(0xFF8F8F8F.toInt())
+            binding.title.typeface = androidx.core.content.res.ResourcesCompat.getFont(binding.root.context, R.font.inter)
+            (binding.title.layoutParams as ViewGroup.MarginLayoutParams).apply { topMargin = 0; bottomMargin = 0 }
+            binding.trackNumber.setTextColor(0xFF6B6B6B.toInt())
+            return
+        }
+        if (binding !is AudioBrowserItemBinding) return
         binding.subtitle.visibility = View.GONE
         binding.itemMore.visibility = View.GONE
         binding.itemMove.visibility = View.GONE
