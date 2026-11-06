@@ -67,7 +67,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/item_selector"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_play_big" />
+                app:srcCompat="@drawable/rd_ic_play"
+                app:tint="@color/rd_dark_fg_2" />
 
         <TextView
                 android:id="@+id/title"
@@ -131,7 +132,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/item_move_down"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_moveup"
+                app:srcCompat="@drawable/rd_ic_arrow_left"
+                app:tint="@color/rd_dark_fg_2"
+                android:rotation="90"
                 tools:alpha="1" />
 
         <androidx.appcompat.widget.AppCompatImageButton
@@ -148,7 +151,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/item_insert_next"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_movedown"
+                app:srcCompat="@drawable/rd_ic_arrow_left"
+                app:tint="@color/rd_dark_fg_2"
+                android:rotation="-90"
                 tools:alpha="1" />
 
         <androidx.appcompat.widget.AppCompatImageButton
@@ -164,7 +169,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_removefromplaylist"
+                app:srcCompat="@drawable/rd_ic_close"
+                app:tint="@color/rd_dark_fg_2"
                 tools:alpha="1" />
 
         <androidx.appcompat.widget.AppCompatImageButton
@@ -181,7 +187,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/item_append"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_playnext"
+                app:srcCompat="@drawable/rd_ic_next"
+                app:tint="@color/rd_dark_fg_2"
                 tools:alpha="1" />
 
         <androidx.appcompat.widget.AppCompatImageButton
@@ -198,7 +205,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/item_add_playlist"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_append"
+                app:srcCompat="@drawable/rd_ic_queue"
+                app:tint="@color/rd_dark_fg_2"
                 tools:alpha="1" />
 
         <androidx.appcompat.widget.AppCompatImageButton
@@ -215,7 +223,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/item_remove"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_tv_list_addtoplaylist"
+                app:srcCompat="@drawable/rd_ic_playlists"
+                app:tint="@color/rd_dark_fg_2"
                 tools:alpha="1" />
 
         <View

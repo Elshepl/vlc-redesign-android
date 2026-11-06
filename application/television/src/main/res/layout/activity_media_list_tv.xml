@@ -122,7 +122,8 @@
                         android:contentDescription="@string/play"
                         android:padding="8dp"
                         android:text="@string/play"
-                        app:srcCompat="@drawable/ic_tv_list_play" />
+                        app:srcCompat="@drawable/rd_ic_play"
+                        app:tint="@color/rd_dark_fg_2" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/delete"
@@ -133,7 +134,7 @@
                         android:contentDescription="@string/delete"
                         android:padding="8dp"
                         android:text="@string/delete"
-                        app:srcCompat="@drawable/ic_tv_list_delete" />
+                        app:srcCompat="@drawable/rd_tv_ic_remove" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/insert_next"
@@ -144,7 +145,8 @@
                         android:contentDescription="@string/insert_next"
                         android:padding="8dp"
                         android:text="@string/insert_next"
-                        app:srcCompat="@drawable/ic_tv_list_playnext" />
+                        app:srcCompat="@drawable/rd_ic_next"
+                        app:tint="@color/rd_dark_fg_2" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/append"
@@ -155,7 +157,8 @@
                         android:contentDescription="@string/append"
                         android:padding="8dp"
                         android:text="@string/append"
-                        app:srcCompat="@drawable/ic_tv_list_append" />
+                        app:srcCompat="@drawable/rd_ic_queue"
+                        app:tint="@color/rd_dark_fg_2" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/add_playlist"
@@ -165,7 +168,8 @@
                         android:contentDescription="@string/add_to_playlist"
                         android:padding="8dp"
                         android:text="@string/add_to_playlist"
-                        app:srcCompat="@drawable/ic_tv_list_addtoplaylist" />
+                        app:srcCompat="@drawable/rd_ic_playlists"
+                        app:tint="@color/rd_dark_fg_2" />
 
             </LinearLayout>
         </HorizontalScrollView>
