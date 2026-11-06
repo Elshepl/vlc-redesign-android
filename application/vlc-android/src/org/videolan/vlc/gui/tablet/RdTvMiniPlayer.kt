@@ -121,7 +121,8 @@ object RdTvMiniPlayer {
             setMargins(0, 0, 6.dp, 6.dp)
         })
         val views = Views(card, picture, fill, well, title, folder, artist)
-        // the playback followed twice a second while the library shows (no listener to keep in step)
+        // the playback followed twice a second while the library is on screen (no listener to keep in step);
+        // nothing runs while it is behind another screen (the players) or the app is in the background
         val handler = Handler(Looper.getMainLooper())
         val tick = object : Runnable {
             override fun run() {
@@ -130,7 +131,14 @@ object RdTvMiniPlayer {
                 handler.postDelayed(this, 500L)
             }
         }
-        handler.post(tick)
+        activity.lifecycle.addObserver(object : androidx.lifecycle.DefaultLifecycleObserver {
+            override fun onStart(owner: androidx.lifecycle.LifecycleOwner) {
+                handler.removeCallbacks(tick)
+                handler.post(tick)
+            }
+            override fun onStop(owner: androidx.lifecycle.LifecycleOwner) = handler.removeCallbacks(tick)
+            override fun onDestroy(owner: androidx.lifecycle.LifecycleOwner) = handler.removeCallbacks(tick)
+        })
     }
 
     private fun open(activity: AudioPlayerContainerActivity) {

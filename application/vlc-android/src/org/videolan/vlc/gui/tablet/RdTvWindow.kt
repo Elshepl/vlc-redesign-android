@@ -139,7 +139,17 @@ object RdTvWindow {
             }
         }, delay)
         // the header follows the page's menu and title as each page sets them
-        window.decorView.viewTreeObserver.addOnGlobalLayoutListener { sync(this) }
+        // (once a frame at most: a scrolling list lays out many times)
+        var syncPending = false
+        window.decorView.viewTreeObserver.addOnGlobalLayoutListener {
+            if (!syncPending) {
+                syncPending = true
+                window.decorView.postOnAnimation {
+                    syncPending = false
+                    if (!isDestroyed) sync(this)
+                }
+            }
+        }
     }
 
     /** The title bar (Figma "topbar"): #1B1B1B, 40; the cone 13,8; the menu 51,6; the title in the middle; the clock. */
