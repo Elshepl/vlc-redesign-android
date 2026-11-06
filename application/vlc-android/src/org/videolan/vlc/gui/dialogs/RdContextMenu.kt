@@ -114,7 +114,8 @@ object RdContextMenu {
     }
 
     /** The popup is used everywhere but on a TV (D-pad navigation keeps the sheet). */
-    fun wanted(activity: FragmentActivity) = !AndroidDevices.isTv && activity.window?.callback is Tracker
+    fun wanted(activity: FragmentActivity) = org.videolan.vlc.gui.tablet.RdTvWindow.isOn(activity) ||
+            (!AndroidDevices.isTv && activity.window?.callback is Tracker)
 
     /* ---- the groups of the desktop's menus ---- */
 
@@ -137,6 +138,10 @@ object RdContextMenu {
     fun show(activity: FragmentActivity, items: List<CtxMenuItem>, onPick: (ContextOption) -> Unit) {
         if (items.isEmpty()) return
         shown?.get()?.dismiss()
+        if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(activity)) {
+            RdTvMenu.show(activity, items, onPick)?.let { shown = WeakReference(it) }
+            return
+        }
         val ctx: Context = activity
         val decor = activity.window.decorView
         val rtl = decor.layoutDirection == View.LAYOUT_DIRECTION_RTL

@@ -120,6 +120,13 @@ private const val BOOKMARK_VISIBLE: String = "bookmark_visible"
 
 open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, SchedulerCallback, PlayerOptionsDelegateCallback {
 
+    override fun dispatchKeyEvent(event: android.view.KeyEvent): Boolean {
+        // VLC Redesign: the remote's rules of the TV layout's window (RdTvWindow)
+        if (org.videolan.vlc.gui.tablet.RdTvWindow.dispatchKey(this, event)) return true
+        return super.dispatchKeyEvent(event)
+    }
+
+
     private lateinit var onBackPressedCallback: OnBackPressedCallback
     private var bottomBar: BottomNavigationView? = null
     lateinit var appBarLayout: AppBarLayout

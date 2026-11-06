@@ -232,8 +232,8 @@ class VideoListAdapter(private var isSeenMediaMarkerVisible: Boolean, private va
             binding.setVariable(BR.selected, selected)
             overlay.setImageResource(if (selected) R.drawable.video_overlay_selected else if (isListMode) 0 else R.drawable.video_overlay_gradient)
             if (isListMode) overlay.visibility = if (selected) View.VISIBLE else View.GONE
-            // (the TV layout's grid is the design's: no menu button, the remote's long OK / Menu key opens the menu)
-            more.visibility = if (!isListMode && org.videolan.vlc.gui.tablet.RdTvWindow.isOn(more.context)) View.GONE
+            // (the TV layout's grid and rows are the design's: no menu button, the remote's long OK / Menu key opens the menu)
+            more.visibility = if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(more.context)) View.GONE
                 else if (multiSelectHelper.inActionMode) View.INVISIBLE else View.VISIBLE
         }
 

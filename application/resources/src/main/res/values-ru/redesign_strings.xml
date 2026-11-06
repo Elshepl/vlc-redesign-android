@@ -360,4 +360,13 @@
         <item quantity="few">%d элемента</item>
         <item quantity="other">%d элементов</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">Новый плейлист</string>
+    <string name="rd_np_details">Сведения о плейлисте</string>
+    <string name="rd_np_details_help">Плейлист будет сохранён и показан с этим названием и миниатюрой.</string>
+    <string name="rd_np_hint">напр., Любимые видео</string>
+    <string name="rd_np_files">Выбор файлов</string>
+    <string name="rd_np_files_help">Эти файлы будут добавлены в плейлист.</string>
+    <string name="rd_np_files_tv">Нажмите OK на +, чтобы выбрать файлы.</string>
+    <string name="rd_np_chosen">Выбрано: %s</string>
 </resources>

@@ -56,6 +56,7 @@ import org.videolan.tools.MultiSelectHelper
 import org.videolan.tools.Settings
 import org.videolan.vlc.BR
 import org.videolan.vlc.R
+import org.videolan.tools.dp
 import org.videolan.vlc.databinding.AudioBrowserCardItemBinding
 import org.videolan.vlc.databinding.AudioBrowserItemBinding
 import org.videolan.vlc.gui.helpers.MARQUEE_ACTION
@@ -87,6 +88,8 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         FastScroller.SeparatedAdapter, MultiSelectAdapter<MediaLibraryItem>, SwipeDragHelperAdapter
 {
     protected var listImageWidth: Int
+    /** VLC Redesign: the items' type (a playlist's card is the design's wide card in the TV layout) */
+    val rdType = type
     val multiSelectHelper: MultiSelectHelper<MediaLibraryItem> = MultiSelectHelper(this, UPDATE_SELECTION)
     protected val defaultCover: BitmapDrawable?
     private val defaultCoverCard: BitmapDrawable?
@@ -129,7 +132,22 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         }
         listImageWidth = ctx.resources.getDimension(R.dimen.audio_browser_item_size).toInt()
         defaultCover = getAudioIconDrawable(ctx, type, false)
-        defaultCoverCard = getAudioIconDrawable(ctx, type, true)
+        defaultCoverCard = if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(ctx)) rdTvCover(ctx, type) else getAudioIconDrawable(ctx, type, true)
+    }
+
+    /** The TV layout's card without a picture: the design's icon (48, #8F8F8F) on #1E1E1E (shell.css .sh-card-thumb.ph) */
+    private fun rdTvCover(ctx: Context, type: Int): BitmapDrawable? {
+        val icon = when (type) {
+            MediaLibraryItem.TYPE_PLAYLIST -> R.drawable.rd_tvd_playlist
+            else -> R.drawable.rd_tvd_songs
+        }
+        val d = androidx.core.content.ContextCompat.getDrawable(ctx, icon)?.mutate() ?: return null
+        val size = 48.dp
+        val bmp = android.graphics.Bitmap.createBitmap(size, size, android.graphics.Bitmap.Config.ARGB_8888)
+        d.setTint(0xFF8F8F8F.toInt())
+        d.setBounds(0, 0, size, size)
+        d.draw(android.graphics.Canvas(bmp))
+        return BitmapDrawable(ctx.resources, bmp)
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -233,6 +251,7 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         rdMarkDetail(holder.itemView, item)
         holder.binding.invalidateAll()
         holder.binding.executePendingBindings()
+        rdTvRow(holder.binding)
         if (position == focusNext) {
             holder.binding.root.requestFocus()
             focusNext = -1
@@ -252,6 +271,7 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
                     UPDATE_SELECTION -> {
                         val isSelected = multiSelectHelper.isSelected(position)
                         holder.selectView(isSelected)
+                        rdTvRow(holder.binding)
                     }
                     UPDATE_REORDER -> {
                        holder.binding.invalidateAll()
@@ -261,6 +281,14 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
                 }
             }
         }
+    }
+
+    /** The TV layout's row (layout-w1600dp/audio_browser_item): its second line, menu and move buttons stay hidden */
+    private fun rdTvRow(binding: ViewDataBinding) {
+        if (binding !is AudioBrowserItemBinding || !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(binding.root.context)) return
+        binding.subtitle.visibility = View.GONE
+        binding.itemMore.visibility = View.GONE
+        binding.itemMove.visibility = View.GONE
     }
 
     override fun onViewRecycled(h: AbstractMediaItemViewHolder<ViewDataBinding>) {
@@ -392,14 +420,48 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
                 }
             binding.imageWidth = cardSize
             binding.container.layoutParams.width = cardSize
+            if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(binding.root.context)) rdTvCard()
+        }
 
+        /**
+         * The TV layout at the design's size (shell.css .sh-card): the picture radius 8 (316 x 178 for a playlist,
+         * 200 x 200 for the others), no frame, play button nor menu button (the remote's long OK / Menu key), the
+         * name 20 under it (Inter 16, #969696) and its line 10 under that (#6B6B6B).
+         */
+        private fun rdTvCard() {
+            val c = binding.container
+            c.background = null
+            c.foreground = null
+            c.minHeight = 0
+            binding.mediaCoverContainer.apply {
+                radius = 8.dp.toFloat()
+                useCompatPadding = false
+                cardElevation = 0f
+                setCardBackgroundColor(0xFF1E1E1E.toInt())
+                binding.mediaCover.setBackgroundColor(0xFF1E1E1E.toInt())
+                (layoutParams as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams).dimensionRatio =
+                        if (rdType == MediaLibraryItem.TYPE_PLAYLIST) "316:178" else "1"
+            }
+            binding.mainActionButton.visibility = View.GONE
+            binding.mainActionButton.alpha = 0f
+            binding.itemMore.alpha = 0f
+            binding.itemMore.isFocusable = false
+            val inter = androidx.core.content.res.ResourcesCompat.getFont(c.context, R.font.inter)
+            for ((t, top, color) in listOf(Triple(binding.title, 20, 0xFF969696.toInt()), Triple(binding.subtitle, 10, 0xFF6B6B6B.toInt()))) {
+                t.typeface = inter
+                t.includeFontPadding = false
+                t.setTextSize(android.util.TypedValue.COMPLEX_UNIT_DIP, 16f)
+                t.setTextColor(color)
+                (t.layoutParams as ViewGroup.MarginLayoutParams).apply { topMargin = top.dp; marginStart = 0; marginEnd = 0; bottomMargin = 0 }
+            }
+            (binding.subtitle.layoutParams as ViewGroup.MarginLayoutParams).bottomMargin = 0
         }
 
         override fun selectView(selected: Boolean) {
             super.selectView(selected)
             binding.setVariable(BR.selected, selected)
             binding.itemMore.visibility = if (multiSelectHelper.inActionMode) View.INVISIBLE else View.VISIBLE
-            binding.mainActionButton.visibility = if (multiSelectHelper.inActionMode) View.INVISIBLE else View.VISIBLE
+            binding.mainActionButton.visibility = if (multiSelectHelper.inActionMode || org.videolan.vlc.gui.tablet.RdTvWindow.isOn(binding.root.context)) View.GONE else View.VISIBLE
         }
 
         override fun setItem(item: MediaLibraryItem?) {

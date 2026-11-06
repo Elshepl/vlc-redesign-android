@@ -223,7 +223,8 @@ class MainBrowserFragment : BaseFragment(), View.OnClickListener, CtxActionRecei
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        displayInList = Settings.getInstance(requireActivity()).getBoolean(displayInListKey, false)
+        // (the TV layout at the design's size: the design's rows at first, as its Network page)
+        displayInList = Settings.getInstance(requireActivity()).getBoolean(displayInListKey, org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext()))
 
         //local
         localEntry = view.findViewById(R.id.local_browser_entry)

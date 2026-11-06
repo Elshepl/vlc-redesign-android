@@ -359,4 +359,13 @@
         <item quantity="one">%d öğe</item>
         <item quantity="other">%d öğe</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">Yeni oynatma listesi</string>
+    <string name="rd_np_details">Oynatma listesi ayrıntıları</string>
+    <string name="rd_np_details_help">Oynatma listesi bu başlık ve küçük resimle kaydedilip gösterilecek.</string>
+    <string name="rd_np_hint">ör. Favori videolar</string>
+    <string name="rd_np_files">Dosya seç</string>
+    <string name="rd_np_files_help">Bu dosyalar oynatma listesine eklenecek.</string>
+    <string name="rd_np_files_tv">Dosyaları seçmek için + üzerinde OK\'a basın.</string>
+    <string name="rd_np_chosen">Seçilenler: %s</string>
 </resources>

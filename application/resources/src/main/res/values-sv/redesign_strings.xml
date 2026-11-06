@@ -359,4 +359,13 @@
         <item quantity="one">%d objekt</item>
         <item quantity="other">%d objekt</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">Ny spellista</string>
+    <string name="rd_np_details">Spellistans detaljer</string>
+    <string name="rd_np_details_help">Spellistan sparas och visas med den här titeln och miniatyren.</string>
+    <string name="rd_np_hint">t.ex. Favoritvideor</string>
+    <string name="rd_np_files">Välj filer</string>
+    <string name="rd_np_files_help">De här filerna läggs till i spellistan.</string>
+    <string name="rd_np_files_tv">Tryck OK på + för att välja filerna.</string>
+    <string name="rd_np_chosen">Valda: %s</string>
 </resources>

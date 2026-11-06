@@ -40,13 +40,13 @@ import org.videolan.tools.AppScope
 import org.videolan.tools.Settings
 import org.videolan.tools.dp
 import org.videolan.vlc.R
-import org.videolan.vlc.gui.ContentActivity
+import org.videolan.vlc.gui.AudioPlayerContainerActivity
 import org.videolan.vlc.media.MediaUtils
 import org.videolan.vlc.gui.dialogs.getPlaylistByName
 
 object RdTvNetworkDialog {
 
-    fun show(activity: ContentActivity) {
+    fun show(activity: AudioPlayerContainerActivity) {
         val ctx = activity
         val inter = ResourcesCompat.getFont(ctx, R.font.inter)
         val dialog = Dialog(ctx)

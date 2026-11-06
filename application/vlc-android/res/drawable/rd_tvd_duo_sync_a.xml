@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's menu icon "duo/sync", its accent part (the Samsung TV app's icons.js); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M4.35 14.06A8.02 8.02 0 0 0 19.86 14.04M14.42 15.4L19.86 14.04L21.94 17.52"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

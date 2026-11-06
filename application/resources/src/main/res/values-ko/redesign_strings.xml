@@ -359,4 +359,13 @@
         <item quantity="one">%d개 항목</item>
         <item quantity="other">%d개 항목</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">새 재생 목록</string>
+    <string name="rd_np_details">재생 목록 세부 정보</string>
+    <string name="rd_np_details_help">재생 목록이 이 제목과 미리보기 이미지로 저장되고 표시됩니다.</string>
+    <string name="rd_np_hint">예: 즐겨 찾는 동영상</string>
+    <string name="rd_np_files">파일 선택</string>
+    <string name="rd_np_files_help">이 파일들이 재생 목록에 추가됩니다.</string>
+    <string name="rd_np_files_tv">+에서 OK를 눌러 파일을 선택하세요.</string>
+    <string name="rd_np_chosen">선택됨: %s</string>
 </resources>

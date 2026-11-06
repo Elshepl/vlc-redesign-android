@@ -232,7 +232,7 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
                     outRect.right = 4.dp
                 }
             })
-        } else {
+        } else if (!org.videolan.vlc.gui.tablet.RdTvWindow.rows(binding.networkList)) {
             binding.networkList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         }
         binding.networkList.adapter?.let {
@@ -267,6 +267,7 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
         if (!this::adapter.isInitialized) adapter = BaseBrowserAdapter(this, viewModel.sort, !viewModel.desc, forMain = requireActivity() is MainActivity).apply { stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY }
         layoutManager = LinearLayoutManager(activity)
         binding.networkList.layoutManager = layoutManager
+        if (!inCards && org.videolan.vlc.gui.tablet.RdTvWindow.rows(binding.networkList)) layoutManager = binding.networkList.layoutManager as LinearLayoutManager
         binding.networkList.adapter = adapter
         registerSwiperRefreshlayout()
         viewModel.dataset.observe(viewLifecycleOwner) { mediaLibraryItems ->

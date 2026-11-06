@@ -42,7 +42,7 @@ class FilePickerProvider(context: Context, dataset: LiveDataset<MediaLibraryItem
     }
 
     override suspend fun findMedia(media: IMedia) = MLServiceLocator.getAbstractMediaWrapper(media)?.takeIf { mw ->
-        mw.type == MediaWrapper.TYPE_DIR || (pickerType == PickerType.SUBTITLE && mw.type == MediaWrapper.TYPE_SUBTITLE) || (pickerType == PickerType.SOUNDFONT && mw.uri.isSoundFont()) || (pickerType == PickerType.SETTINGS && mw.uri.isSettingsOrEq()) || (pickerType == PickerType.EQUALIZER && mw.uri.isSettingsOrEq())
+        mw.type == MediaWrapper.TYPE_DIR || (pickerType == PickerType.SUBTITLE && mw.type == MediaWrapper.TYPE_SUBTITLE) || (pickerType == PickerType.SOUNDFONT && mw.uri.isSoundFont()) || (pickerType == PickerType.SETTINGS && mw.uri.isSettingsOrEq()) || (pickerType == PickerType.EQUALIZER && mw.uri.isSettingsOrEq()) || (pickerType == PickerType.MEDIA && (mw.type == MediaWrapper.TYPE_VIDEO || mw.type == MediaWrapper.TYPE_AUDIO))
     }
 
     override fun computeHeaders(value: List<MediaLibraryItem>) {}
@@ -52,5 +52,7 @@ class FilePickerProvider(context: Context, dataset: LiveDataset<MediaLibraryItem
 
 
 enum class PickerType {
-    SUBTITLE, SOUNDFONT, SETTINGS, EQUALIZER
+    SUBTITLE, SOUNDFONT, SETTINGS, EQUALIZER,
+    /** VLC Redesign: videos and music (the TV layout's New Playlist) */
+    MEDIA
 }

@@ -176,6 +176,10 @@ abstract class BaseAudioBrowser<T : MedialibraryViewModel> : MediaBrowserFragmen
     }
 
     fun displayListInGrid(list: RecyclerView, adapter: AudioBrowserAdapter, provider: MedialibraryProvider<MediaLibraryItem>, spacing: Int) {
+        if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext())) {
+            rdTvGrid(list, adapter)
+            return
+        }
         val gridLayoutManager = object: GridLayoutManager(requireActivity(), nbColumns) {
             override fun onLayoutCompleted(state: RecyclerView.State?) {
                 super.onLayoutCompleted(state)
@@ -212,6 +216,23 @@ abstract class BaseAudioBrowser<T : MedialibraryViewModel> : MediaBrowserFragmen
                 provider
             )
         )
+    }
+
+    /**
+     * The TV layout at the design's size (Figma 970:2703, shell.css .sh-grid): the cards (316 wide for playlists, 200
+     * for the others) 20 apart in both ways, the first 28 from the sidebar and 19 under the header's line, as many in
+     * a row as the page holds (the rest of the row left empty).
+     */
+    private fun rdTvGrid(list: RecyclerView, adapter: AudioBrowserAdapter) {
+        val card = if (adapter.rdType == MediaLibraryItem.TYPE_PLAYLIST) 316 else 200
+        val width = resources.configuration.screenWidthDp - org.videolan.vlc.gui.tablet.RdTvWindow.MAIN_START
+        nbColumns = ((width - 18 - 13) / (card + 20)).coerceAtLeast(1)
+        adapter.cardSize = card.dp
+        list.layoutManager = GridLayoutManager(requireActivity(), nbColumns)
+        while (list.itemDecorationCount > 0) list.removeItemDecorationAt(0)
+        list.addItemDecoration(org.videolan.vlc.gui.helpers.ItemOffsetDecoration(10.dp, 10.dp))
+        list.setPadding(18.dp, 9.dp, (width - 18 - nbColumns * (card + 20)).dp, 40.dp)
+        list.clipToPadding = false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -273,6 +294,7 @@ abstract class BaseAudioBrowser<T : MedialibraryViewModel> : MediaBrowserFragmen
                         }
                     }
                 }
+                org.videolan.vlc.gui.tablet.RdTvWindow.rows(list)
             }
         }
         val lp = list.layoutParams

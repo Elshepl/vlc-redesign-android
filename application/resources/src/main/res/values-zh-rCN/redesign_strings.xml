@@ -359,4 +359,13 @@
         <item quantity="one">%d 个项目</item>
         <item quantity="other">%d 个项目</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">新建播放列表</string>
+    <string name="rd_np_details">播放列表详情</string>
+    <string name="rd_np_details_help">播放列表将以此标题和缩略图保存并显示。</string>
+    <string name="rd_np_hint">例如 喜爱的视频</string>
+    <string name="rd_np_files">选择文件</string>
+    <string name="rd_np_files_help">这些文件将添加到播放列表。</string>
+    <string name="rd_np_files_tv">在 + 上按 OK 选择文件。</string>
+    <string name="rd_np_chosen">已选择：%s</string>
 </resources>

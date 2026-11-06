@@ -508,7 +508,8 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
     }
 
     /** every tab but Tracks (artists, albums, genres, playlists: the desktop's list + detail views) */
-    private fun detailWanted() = currentTab in DETAIL_TABS && view != null &&
+    // (not in the TV layout: an artist, an album, a genre opens as its own page there, as the design's)
+    private fun detailWanted() = currentTab in DETAIL_TABS && view != null && !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext()) &&
             binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
 
     /** Shows or hides the detail pane for the window's width and the tab; the first entry is selected at first. */
@@ -551,7 +552,7 @@ class AudioBrowserFragment : BaseAudioBrowser<AudioBrowserViewModel>() {
         val wide = binding.root.width / resources.displayMetrics.density >= RdLibraryDetailPane.MIN_WIDTH_DP
         for (i in DETAIL_TABS) {
             if (i >= lists.size || i >= adapters.size) continue
-            val want = wide
+            val want = wide && !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext())
             if (want != paneListMode[i]) {
                 paneListMode[i] = want
                 @Suppress("UNCHECKED_CAST")

@@ -133,6 +133,12 @@ class TitleListView : ConstraintLayout {
             })
 
             list.setPadding(12.dp,0,12.dp,0)
+        } else if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(context)) {
+            // the TV layout at the design's size: the design's rows in four columns (Figma 970:3308)
+            list.layoutManager = androidx.recyclerview.widget.GridLayoutManager(context, 4)
+            list.addItemDecoration(org.videolan.vlc.gui.helpers.ItemOffsetDecoration(0, 5.dp))
+            // the rows 28 from the sidebar, as the library's
+            list.setPadding(26.dp, 0, 19.dp, 0)
         } else {
             list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             list.setPadding(0,0,0,0)

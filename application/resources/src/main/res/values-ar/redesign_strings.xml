@@ -358,4 +358,13 @@
         <item quantity="one">عنصر واحد</item>
         <item quantity="other">%d عنصر</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">قائمة تشغيل جديدة</string>
+    <string name="rd_np_details">تفاصيل قائمة التشغيل</string>
+    <string name="rd_np_details_help">سيتم حفظ قائمة التشغيل وعرضها بهذا العنوان والصورة المصغّرة.</string>
+    <string name="rd_np_hint">مثال: الفيديوهات المفضلة</string>
+    <string name="rd_np_files">اختيار الملفات</string>
+    <string name="rd_np_files_help">ستُضاف هذه الملفات إلى قائمة التشغيل.</string>
+    <string name="rd_np_files_tv">اضغط OK على + لاختيار الملفات.</string>
+    <string name="rd_np_chosen">المختارة: %s</string>
 </resources>

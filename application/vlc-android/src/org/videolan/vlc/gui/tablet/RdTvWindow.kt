@@ -44,7 +44,9 @@ import com.google.android.material.appbar.AppBarLayout
 import org.videolan.tools.Settings
 import org.videolan.tools.dp
 import org.videolan.vlc.R
-import org.videolan.vlc.gui.ContentActivity
+import org.videolan.vlc.gui.dialogs.RdTvMenu
+import org.videolan.vlc.gui.AudioPlayerContainerActivity
+import org.videolan.vlc.gui.HeaderMediaListActivity
 import org.videolan.vlc.gui.MainActivity
 import org.videolan.vlc.gui.SearchActivity
 import org.videolan.vlc.interfaces.Filterable
@@ -95,8 +97,10 @@ object RdTvWindow {
         }
     }
 
-    fun ContentActivity.applyTvWindow() {
+    fun AudioPlayerContainerActivity.applyTvWindow() {
         if (!isOn(this)) return
+        // the design's lists and grids have no letter headers (A, B, C...); the saved setting is kept for the other layouts
+        org.videolan.tools.Settings.showHeaders = false
         val coordinator = findViewById<CoordinatorLayout>(R.id.coordinator) ?: return
         if (coordinator.findViewById<View>(R.id.rd_tv_titlebar) != null) return
         coordinator.setBackgroundColor(PAGE)
@@ -110,7 +114,9 @@ object RdTvWindow {
         findViewById<Toolbar>(R.id.main_toolbar).visibility = View.GONE
         val header = header(this)
         appbar.addView(header, 0, AppBarLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, HEADER_HEIGHT.dp).apply { scrollFlags = 0 })
-        findViewById<View>(R.id.fragment_placeholder).let { ph ->
+        // a playlist's or an album's page (HeaderMediaListActivity): the library's header instead of its cover's
+        findViewById<View>(R.id.collapsing_toolbar)?.visibility = View.GONE
+        pageView(this)?.let { ph ->
             (ph.layoutParams as ViewGroup.MarginLayoutParams).apply { marginStart = MAIN_START.dp }
             // (a screen over the library had the Leanback TV's margins and no scrolling behaviour)
             if (this !is MainActivity) (ph.layoutParams as CoordinatorLayout.LayoutParams).apply {
@@ -124,13 +130,16 @@ object RdTvWindow {
         })
         if (this is MainActivity) backHome()
         // the first focus on the current page's row, once the sidebar is laid out
-        coordinator.postDelayed({ if (currentFocus == null || currentFocus?.id == R.id.rd_tv_title_menu) focusSidebar(this) }, 600)
+        // (again a little later: the library's first page may take its focus after the window is laid out)
+        for (delay in longArrayOf(600, 1500, 3000)) coordinator.postDelayed({
+            if (currentFocus == null || currentFocus?.id == R.id.rd_tv_title_menu) focusSidebar(this)
+        }, delay)
         // the header follows the page's menu and title as each page sets them
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener { sync(this) }
     }
 
     /** The title bar (Figma "topbar"): #1B1B1B, 40; the cone 13,8; the menu 51,6; the title in the middle; the clock. */
-    private fun titleBar(activity: ContentActivity): View {
+    private fun titleBar(activity: AudioPlayerContainerActivity): View {
         val ctx = activity
         val bar = FrameLayout(ctx).apply {
             id = R.id.rd_tv_titlebar
@@ -162,7 +171,7 @@ object RdTvWindow {
         return bar
     }
 
-    private fun openMore(activity: ContentActivity) {
+    private fun openMore(activity: AudioPlayerContainerActivity) {
         open(activity, R.id.nav_more)
     }
 
@@ -170,23 +179,22 @@ object RdTvWindow {
      * The title bar's menu (the desktop's main menu as the TV has it): Open Network Stream, Recent, Playlists, Edit
      * Sidebar, Settings, About, and More (the page with the rest).
      */
-    private fun appMenu(activity: ContentActivity, anchor: View) {
-        val popup = PopupMenu(activity, anchor, Gravity.START)
-        val m = popup.menu
+    private fun appMenu(activity: AudioPlayerContainerActivity, anchor: View) {
         fun secondary(fragment: String) = activity.startActivity(android.content.Intent(activity, org.videolan.vlc.gui.SecondaryActivity::class.java).putExtra("fragment", fragment))
-        val actions = mutableListOf<() -> Unit>()
-        fun add(title: Int, action: () -> Unit) { m.add(0, actions.size, actions.size, title); actions.add(action) }
-        add(R.string.rd_open_network_stream) { RdTvNetworkDialog.show(activity) }
-        add(R.string.rd_recent) { secondary(org.videolan.vlc.gui.SecondaryActivity.HISTORY) }
-        add(R.string.rd_tv_playlists) { open(activity, R.id.nav_playlists) }
-        if (activity is MainActivity) add(R.string.rd_tv_edit_sidebar) { org.videolan.vlc.gui.livetv.TvNavigation.editSidebar(activity) }
-        add(R.string.rd_settings) {
+        val entries = mutableListOf<RdTvMenu.Entry>()
+        fun add(title: Int, icon: String, separator: Boolean = false, action: () -> Unit) =
+                entries.add(RdTvMenu.Entry(activity.getString(title), icon, separatorBefore = separator, action = action))
+        add(R.string.rd_open_network_stream, "streaming") { RdTvNetworkDialog.show(activity) }
+        add(R.string.rd_recent, "recent") { secondary(org.videolan.vlc.gui.SecondaryActivity.HISTORY) }
+        add(R.string.rd_tv_playlists, "playlist") { open(activity, R.id.nav_playlists) }
+        if (activity is MainActivity) add(R.string.rd_tv_edit_sidebar, "ui", true) { org.videolan.vlc.gui.livetv.TvNavigation.editSidebar(activity) }
+        add(R.string.rd_settings, "settings", activity !is MainActivity) {
             activity.startActivityForResult(android.content.Intent(activity, org.videolan.vlc.gui.preferences.PreferencesActivity::class.java), org.videolan.resources.ACTIVITY_RESULT_PREFERENCES)
         }
-        add(R.string.rd_set_about) { secondary(org.videolan.vlc.gui.SecondaryActivity.ABOUT) }
-        add(R.string.more) { openMore(activity) }
-        popup.setOnMenuItemClickListener { actions.getOrNull(it.itemId)?.invoke(); true }
-        popup.show()
+        add(R.string.rd_set_about, "info") { secondary(org.videolan.vlc.gui.SecondaryActivity.ABOUT) }
+        add(R.string.more, "lists") { openMore(activity) }
+        // the desktop's main menu: 375 wide, under the title bar's button
+        RdTvMenu.show(activity, anchor, entries, width = 375, below = true)
     }
 
     /**
@@ -217,7 +225,7 @@ object RdTvWindow {
     private var pendingPage = 0
 
     /** Opens a page of the sidebar: in the library, or back to it from a screen over it */
-    fun open(activity: ContentActivity, id: Int) {
+    fun open(activity: AudioPlayerContainerActivity, id: Int) {
         if (activity is MainActivity) {
             val rail = activity.findViewById<com.google.android.material.navigationrail.NavigationRailView>(R.id.navigation_rail)
             if (rail?.menu?.findItem(id) != null) rail.selectedItemId = id else activity.openPage(id)
@@ -238,7 +246,7 @@ object RdTvWindow {
      * The design's sidebar on a screen over the library (a folder, a group, the history): the library's pages, Recent
      * and Add item, the page it was opened from as the current one; a row goes back to the library on that page.
      */
-    private fun sidebar(activity: ContentActivity): View {
+    private fun sidebar(activity: AudioPlayerContainerActivity): View {
         val ctx = activity
         val side = LinearLayout(ctx).apply {
             id = R.id.rd_tablet_sidebar
@@ -281,7 +289,7 @@ object RdTvWindow {
     }
 
     /** The library header (.sh-head, .sh-line): the row of 34 at 20 from the top, 28 from the sidebar, 20 from the end. */
-    private fun header(activity: ContentActivity): View {
+    private fun header(activity: AudioPlayerContainerActivity): View {
         val ctx = activity
         val box = FrameLayout(ctx).apply { id = R.id.rd_tv_header }
         val row = LinearLayout(ctx).apply {
@@ -316,7 +324,7 @@ object RdTvWindow {
                 // the sort's choices, or the page's display options that hold them
                 val sort = menu(activity)?.findItem(R.id.ml_menu_sortby)
                 if (visible(sort)) popup(activity, v, R.id.ml_menu_sortby)
-                else menu(activity)?.findItem(R.id.ml_menu_display_options)?.let { activity.onOptionsItemSelected(it) }
+                else if (!sortPopup(activity, v)) menu(activity)?.findItem(R.id.ml_menu_display_options)?.let { activity.onOptionsItemSelected(it) }
             }
         }, lp(-4, -4))
         row.addView(iconButton(ctx, R.drawable.rd_tvd_grid, MUTED, ctx.getString(R.string.display_settings)).apply {
@@ -332,7 +340,7 @@ object RdTvWindow {
     }
 
     /** The search field (.sh-search): 325 x 34, #151515, radius 6; the icon at 7,4; the text at 41. */
-    private fun searchField(activity: ContentActivity): View {
+    private fun searchField(activity: AudioPlayerContainerActivity): View {
         val ctx = activity
         val field = FrameLayout(ctx).apply {
             id = R.id.rd_tv_header_search
@@ -359,7 +367,7 @@ object RdTvWindow {
                 override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
                 override fun afterTextChanged(s: Editable?) {
-                    val f = activity.supportFragmentManager.findFragmentById(R.id.fragment_placeholder) as? Filterable ?: return
+                    val f = activity.supportFragmentManager.findFragmentById(R.id.fragment_placeholder) as? Filterable ?: activity as? Filterable ?: return
                     val q = s?.toString().orEmpty()
                     if (q.isEmpty()) f.restoreList() else f.filter(q)
                 }
@@ -367,7 +375,7 @@ object RdTvWindow {
             setOnEditorActionListener { v, action, event ->
                 if (action == EditorInfo.IME_ACTION_SEARCH || event?.keyCode == KeyEvent.KEYCODE_ENTER) {
                     // a page without a filter: the whole library's search, as the desktop's
-                    if (activity.supportFragmentManager.findFragmentById(R.id.fragment_placeholder) !is Filterable)
+                    if (activity.supportFragmentManager.findFragmentById(R.id.fragment_placeholder) !is Filterable && activity !is Filterable)
                         activity.startActivity(Intent(Intent.ACTION_SEARCH, null, activity, SearchActivity::class.java)
                                 .putExtra(android.app.SearchManager.QUERY, v.text.toString()))
                     true
@@ -378,12 +386,12 @@ object RdTvWindow {
         return field
     }
 
-    private fun menu(activity: ContentActivity): Menu? = activity.findViewById<Toolbar>(R.id.main_toolbar)?.menu
+    private fun menu(activity: AudioPlayerContainerActivity): Menu? = activity.findViewById<Toolbar>(R.id.main_toolbar)?.menu
 
     private fun visible(item: MenuItem?) = item != null && item.isVisible && item.isEnabled
 
     /** A screen that is a row of the sidebar itself (Recent, Add item): its name, the title of its own row */
-    private fun ownPage(activity: ContentActivity): Int? = when (activity.intent?.getStringExtra("fragment")) {
+    private fun ownPage(activity: AudioPlayerContainerActivity): Int? = when (activity.intent?.getStringExtra("fragment")) {
         org.videolan.vlc.gui.SecondaryActivity.HISTORY -> R.string.rd_recent
         org.videolan.vlc.gui.SecondaryActivity.STREAMS -> R.string.rd_open_network_stream
         else -> null
@@ -406,16 +414,18 @@ object RdTvWindow {
      * The remote in the design's window (the Samsung TV app's focus rules): Up from the top of the page goes to the
      * header's control above it (not to the sidebar), Down from the header goes into the page. True when handled.
      */
-    fun dispatchKey(activity: ContentActivity, event: android.view.KeyEvent): Boolean {
-        if (event.action != android.view.KeyEvent.ACTION_DOWN || !isOn(activity)) return false
+    fun dispatchKey(activity: AudioPlayerContainerActivity, event: android.view.KeyEvent): Boolean {
+        if (!isOn(activity)) return false
         val focused = activity.currentFocus ?: return false
-        val page = activity.findViewById<ViewGroup>(R.id.fragment_placeholder) ?: return false
+        val page = pageView(activity) ?: return false
         val header = activity.findViewById<ViewGroup>(R.id.rd_tv_header) ?: return false
         fun inside(v: View?, parent: View): Boolean {
             var p: View? = v
             while (p != null) { if (p === parent) return true; p = p.parent as? View }
             return false
         }
+        if (itemKeys(activity, event, focused, page)) return true
+        if (event.action != android.view.KeyEvent.ACTION_DOWN) return false
         val root = activity.window.decorView as ViewGroup
         val side = activity.findViewById<View>(R.id.rd_tablet_sidebar)
         when (event.keyCode) {
@@ -462,13 +472,90 @@ object RdTvWindow {
         return false
     }
 
+    private var okTarget: java.lang.ref.WeakReference<View>? = null
+    private var okLong = false
+
+    /** The item of a list that [v] is in (the list's own child), or null */
+    private fun itemOf(v: View): View? {
+        var c: View = v
+        while (true) {
+            val p = c.parent as? View ?: return null
+            if (p is androidx.recyclerview.widget.RecyclerView) return c
+            c = p
+        }
+    }
+
+    /** The item's menu (the design's context menu): its menu button's, else its context click */
+    private fun itemMenu(item: View) {
+        val more = item.findViewById<View>(R.id.item_more)
+        if (more == null || !more.performClick()) item.performContextClick()
+    }
+
+    /**
+     * The remote on the items of the page (the Samsung TV app's): OK opens or plays, a long OK or the Menu key opens
+     * the item's menu (not the phone's selection). True when handled.
+     */
+    private fun itemKeys(activity: AudioPlayerContainerActivity, event: android.view.KeyEvent, focused: View, page: View): Boolean {
+        val code = event.keyCode
+        val ok = code == android.view.KeyEvent.KEYCODE_DPAD_CENTER || code == android.view.KeyEvent.KEYCODE_ENTER || code == android.view.KeyEvent.KEYCODE_NUMPAD_ENTER
+        if (!ok && code != android.view.KeyEvent.KEYCODE_MENU) return false
+        if (focused is EditText) return false
+        var p: View? = focused
+        var inPage = false
+        while (p != null) { if (p === page) { inPage = true; break }; p = p.parent as? View }
+        if (!inPage) return false
+        val item = itemOf(focused) ?: return false
+        if (code == android.view.KeyEvent.KEYCODE_MENU) {
+            if (event.action == android.view.KeyEvent.ACTION_DOWN && event.repeatCount == 0) itemMenu(item)
+            return true
+        }
+        when (event.action) {
+            android.view.KeyEvent.ACTION_DOWN -> {
+                if (event.repeatCount == 0) { okTarget = java.lang.ref.WeakReference(focused); okLong = false }
+                else if (!okLong && (event.isLongPress || event.eventTime - event.downTime >= android.view.ViewConfiguration.getLongPressTimeout())) {
+                    okLong = true
+                    itemMenu(item)
+                }
+                return true
+            }
+            android.view.KeyEvent.ACTION_UP -> {
+                val target = okTarget?.get()
+                okTarget = null
+                if (target === focused && !okLong && !event.isCanceled) focused.performClick()
+                return true
+            }
+        }
+        return false
+    }
+
+    /**
+     * A list as the design's rows (Figma 970:3308, shell.css .sh-rows): rows of 32, 10 apart, in four columns from 28
+     * after the sidebar, the first 29 under the header's line. False when not in the TV layout.
+     */
+    fun rows(list: androidx.recyclerview.widget.RecyclerView): Boolean {
+        if (!isOn(list.context)) return false
+        // only in the library's window (not in a picker over it)
+        val activity = generateSequence(list.context) { (it as? android.content.ContextWrapper)?.baseContext }.firstOrNull { it is android.app.Activity }
+        if (activity !is AudioPlayerContainerActivity) return false
+        list.layoutManager = androidx.recyclerview.widget.GridLayoutManager(list.context, 4)
+        while (list.itemDecorationCount > 0) list.removeItemDecorationAt(0)
+        list.addItemDecoration(org.videolan.vlc.gui.helpers.ItemOffsetDecoration(0, 5.dp))
+        list.setPadding(28.dp, 24.dp, 19.dp, 40.dp)
+        list.clipToPadding = false
+        return true
+    }
+
     /** The first focus of the library: the current row of the sidebar (not the title bar's menu) */
-    fun focusSidebar(activity: ContentActivity) {
+    fun focusSidebar(activity: AudioPlayerContainerActivity) {
         val side = activity.findViewById<LinearLayout>(R.id.rd_tablet_sidebar) ?: return
         val row = (0 until side.childCount).map { side.getChildAt(it) }.firstOrNull { (it.isSelected || it.getTag(R.id.rd_tv_header_view) == true) && it.isFocusable }
                 ?: (0 until side.childCount).map { side.getChildAt(it) }.firstOrNull { it.isFocusable } ?: return
         row.requestFocus()
     }
+
+    /** The page: the library's fragment, or the list of a playlist's / an album's page */
+    private fun pageView(activity: AudioPlayerContainerActivity): ViewGroup? =
+            activity.findViewById(R.id.fragment_placeholder) ?: activity.findViewById(R.id.swipeLayout)
 
     /** The page's main list: the first vertical list in it (a grid or the rows of a library page) */
     private fun mainList(v: View): androidx.recyclerview.widget.RecyclerView? {
@@ -482,23 +569,104 @@ object RdTvWindow {
     }
 
     /** The header's sort ([id] = the sort item: its choices) or menu ([id] = 0: the page's other items). */
-    private fun popup(activity: ContentActivity, anchor: View, id: Int) {
-        val menu = menu(activity) ?: return
-        val items: List<MenuItem> = if (id != 0) {
-            val sub = menu.findItem(id)?.subMenu ?: return
-            (0 until sub.size()).map { sub.getItem(it) }.filter { visible(it) }
-        } else (0 until menu.size()).map { menu.getItem(it) }.filter { visible(it) && it.itemId !in HEADER_ITEMS && !it.hasSubMenu() }
-        if (items.isEmpty()) return
-        val popup = PopupMenu(activity, anchor, Gravity.END)
-        items.forEachIndexed { i, item -> popup.menu.add(0, i, i, item.title).apply { isCheckable = item.isCheckable; isChecked = item.isChecked } }
-        popup.setOnMenuItemClickListener { picked ->
-            items.getOrNull(picked.itemId)?.let { activity.onOptionsItemSelected(it) }
-            true
+    private fun popup(activity: AudioPlayerContainerActivity, anchor: View, id: Int) {
+        val menu = menu(activity)
+        val items: List<MenuItem> = when {
+            menu == null -> emptyList()
+            id != 0 -> {
+                val sub = menu.findItem(id)?.subMenu ?: return
+                (0 until sub.size()).map { sub.getItem(it) }.filter { visible(it) }
+            }
+            else -> (0 until menu.size()).map { menu.getItem(it) }.filter { visible(it) && it.itemId !in HEADER_ITEMS && !it.hasSubMenu() }
         }
-        popup.show()
+        // the design's Sorting Options (no icons, the accent's check on the chosen) or the page's menu
+        val entries = items.map { item ->
+            RdTvMenu.Entry(item.title ?: "", checked = item.isCheckable && item.isChecked) { activity.onOptionsItemSelected(item) }
+        }.toMutableList()
+        // the Playlists page: New Playlist first (the desktop's, Figma 6259:14954)
+        if (id == 0 && playlistsPage(activity)) entries.add(0, RdTvMenu.Entry(activity.getString(R.string.rd_new_playlist), "add") {
+            RdTvNewPlaylistDialog.show(activity)
+        })
+        // a playlist's / an album's page: its header's buttons (Play, Shuffle, Add to Playlist, Favorite) as the menu's
+        if (id == 0 && activity is HeaderMediaListActivity) {
+            val own = listOf(R.id.play_btn to "play", R.id.btn_shuffle to "shuffle", R.id.btn_add_playlist to "playlist", R.id.btn_favorite to "favorite")
+                    .mapNotNull { (bid, icon) ->
+                        activity.findViewById<View>(bid)?.takeIf { it.visibility == View.VISIBLE }?.let { b ->
+                            val label = (b as? TextView)?.text?.toString()?.takeIf { it.isNotBlank() } ?: b.contentDescription?.toString().orEmpty()
+                            RdTvMenu.Entry(label, icon) { b.performClick() }
+                        }
+                    }
+            entries.addAll(0, own)
+        }
+        if (entries.isEmpty()) return
+        RdTvMenu.show(activity, anchor, entries, below = true)
     }
 
-    private fun toggleView(activity: ContentActivity) {
+    private fun playlistsPage(activity: AudioPlayerContainerActivity) =
+            activity.supportFragmentManager.findFragmentById(R.id.fragment_placeholder) is org.videolan.vlc.gui.PlaylistFragment
+
+    /** The shown page that switches between the grid and the rows (the deepest one shown) */
+    private fun viewPage(fm: androidx.fragment.app.FragmentManager): org.videolan.vlc.gui.browser.MediaBrowserFragment<*>? {
+        for (f in fm.fragments.reversed()) {
+            if (!f.isAdded || f.view?.isShown != true) continue
+            viewPage(f.childFragmentManager)?.let { return it }
+            if (f is org.videolan.vlc.gui.browser.MediaBrowserFragment<*>) return f
+        }
+        return null
+    }
+
+    /** The page's list is in the grid (its cards are taller than the design's rows of 32) */
+    private fun inGrid(activity: AudioPlayerContainerActivity): Boolean? {
+        val page = viewPage(activity.supportFragmentManager) ?: return null
+        val list = page.view?.let { mainList(it) } ?: return null
+        val child = list.getChildAt(0) ?: return null
+        return child.height > 100.dp
+    }
+
+    /**
+     * The design's Sorting Options (Figma 856:2215): each order the page can take as its own entry ("Name A → Z",
+     * "Name Z → A", "Insertion date Newest first"...), the current one with the accent's check. False without a page.
+     */
+    private fun sortPopup(activity: AudioPlayerContainerActivity, anchor: View): Boolean {
+        val page = viewPage(activity.supportFragmentManager) ?: return false
+        val model = runCatching { page.viewModel }.getOrNull() ?: return false
+        fun s(id: Int) = activity.getString(id)
+        // (sort, its name, the ascending order's name, the descending order's name)
+        val orders = listOf(
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_ALPHA to Triple(s(R.string.sortby_name), s(R.string.sort_alpha_asc), s(R.string.sort_alpha_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_FILENAME to Triple(s(R.string.sortby_filename), s(R.string.sort_alpha_asc), s(R.string.sort_alpha_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_ARTIST to Triple(s(R.string.sortby_artist_name), s(R.string.sort_alpha_asc), s(R.string.sort_alpha_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_ALBUM to Triple(s(R.string.sortby_album_name), s(R.string.sort_alpha_asc), s(R.string.sort_alpha_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_DURATION to Triple(s(R.string.sortby_length), s(R.string.sortby_length_asc), s(R.string.sortby_length_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_INSERTIONDATE to Triple(s(R.string.sortby_date_insertion), s(R.string.sort_date_asc), s(R.string.sort_date_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_LASTMODIFICATIONDATE to Triple(s(R.string.sortby_date_last_modified), s(R.string.sort_date_asc), s(R.string.sort_date_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.SORT_RELEASEDATE to Triple(s(R.string.sortby_date_release), s(R.string.sort_date_asc), s(R.string.sort_date_desc)),
+                org.videolan.medialibrary.interfaces.Medialibrary.NbMedia to Triple(s(R.string.sortby_number), s(R.string.sortby_number_asc), s(R.string.sortby_number_desc)),
+        ).filter { model.canSortBy(it.first) }
+        if (orders.isEmpty()) return false
+        val current = model.sort.takeIf { it != org.videolan.medialibrary.interfaces.Medialibrary.SORT_DEFAULT } ?: org.videolan.medialibrary.interfaces.Medialibrary.SORT_ALPHA
+        val entries = orders.flatMap { (sort, names) ->
+            listOf(false, true).map { desc ->
+                RdTvMenu.Entry("${names.first} ${if (desc) names.third else names.second}", checked = current == sort && model.desc == desc) {
+                    // the page's sort turns the order round on its second time: as many times as it takes
+                    if (model.sort != sort) page.sortBy(sort)
+                    if (model.desc != desc) page.sortBy(sort)
+                }
+            }
+        }
+        RdTvMenu.show(activity, anchor, entries, below = true)
+        return true
+    }
+
+    /** The header's view button: the grid or the rows at once (the desktop's), not the display settings */
+    private fun toggleView(activity: AudioPlayerContainerActivity) {
+        val page = viewPage(activity.supportFragmentManager)
+        val grid = inGrid(activity)
+        if (page != null && grid != null) {
+            page.onDisplaySettingChanged(org.videolan.vlc.gui.dialogs.DISPLAY_IN_CARDS, !grid)
+            activity.invalidateOptionsMenu()
+            return
+        }
         val menu = menu(activity) ?: return
         val target = listOf(R.id.ml_menu_display_grid, R.id.ml_menu_display_list, R.id.ml_menu_display_options)
                 .firstNotNullOfOrNull { id -> menu.findItem(id)?.takeIf { visible(it) } } ?: return
@@ -510,7 +678,7 @@ object RdTvWindow {
             R.id.ml_menu_display_options, R.id.ml_menu_filter, R.id.ml_menu_search, R.id.ml_menu_renderers)
 
     /** The header as the page set its title and menu. */
-    private fun sync(activity: ContentActivity) {
+    private fun sync(activity: AudioPlayerContainerActivity) {
         val header = activity.findViewById<View>(R.id.rd_tv_header) ?: return
         val menu = menu(activity)
         header.findViewById<TextView>(R.id.rd_tv_header_crumb).let { crumb ->
@@ -519,7 +687,8 @@ object RdTvWindow {
             // a page of the sidebar: its name there (Videos, Music); a page opened from it: its own title
             val rail = activity.findViewById<com.google.android.material.navigationrail.NavigationRailView>(R.id.navigation_rail)
             val railTitle = rail?.menu?.let { m -> (0 until m.size()).map { m.getItem(it) }.firstOrNull { it.isChecked }?.title?.toString() }
-            val title = if (page is org.videolan.vlc.gui.MoreFragment) activity.getString(R.string.more)
+            val title = if (activity is HeaderMediaListActivity) activity.findViewById<TextView>(R.id.header_list_title)?.text?.toString().orEmpty()
+                else if (page is org.videolan.vlc.gui.MoreFragment) activity.getString(R.string.more)
                 else if (activity.supportFragmentManager.backStackEntryCount == 0 && railTitle != null) railTitle
                 else (page as? org.videolan.vlc.gui.BaseFragment)?.let { runCatching { it.getTitle() }.getOrNull() } ?: activity.title?.toString().orEmpty()
             val crumbs: CharSequence = if (activity is MainActivity) {
@@ -532,7 +701,7 @@ object RdTvWindow {
         fun show(id: Int, on: Boolean) = header.findViewById<View>(id).let { if (it.isVisible != on) it.isVisible = on }
         // the page's count of items (the desktop's "110 items"): the main list of a library page
         val shownPage = activity.supportFragmentManager.findFragmentById(R.id.fragment_placeholder)
-        val mainList = if (shownPage is org.videolan.vlc.gui.HomeFragment) null else shownPage?.view?.let { mainList(it) }
+        val mainList = if (shownPage is org.videolan.vlc.gui.HomeFragment) null else (shownPage?.view ?: pageView(activity))?.let { mainList(it) }
         val count = mainList?.adapter?.itemCount
         header.findViewById<TextView>(R.id.rd_tv_header_count).let { c ->
             val text = count?.let { activity.resources.getQuantityString(R.plurals.rd_items_count, it, it) }
@@ -540,16 +709,20 @@ object RdTvWindow {
             show(R.id.rd_tv_header_count, text != null)
         }
         val options = visible(menu?.findItem(R.id.ml_menu_display_options))
-        show(R.id.rd_tv_header_sort, visible(menu?.findItem(R.id.ml_menu_sortby)) || options)
+        show(R.id.rd_tv_header_sort, visible(menu?.findItem(R.id.ml_menu_sortby)) || options || viewPage(activity.supportFragmentManager) != null)
         val grid = visible(menu?.findItem(R.id.ml_menu_display_grid))
         val list = visible(menu?.findItem(R.id.ml_menu_display_list))
         show(R.id.rd_tv_header_view, grid || list || visible(menu?.findItem(R.id.ml_menu_display_options)))
         header.findViewById<ImageView>(R.id.rd_tv_header_view).let { v ->
-            // the view the page is in (the desktop shows the grid's icon in the grid view)
-            val icon = if (grid) R.drawable.rd_tvd_list else R.drawable.rd_tvd_grid
-            if (v.getTag(R.id.rd_tv_header_view) != icon) { v.setTag(R.id.rd_tv_header_view, icon); v.setImageResource(if (grid) R.drawable.rd_tvd_list else R.drawable.rd_tvd_grid) }
+            // the view the page is in (the desktop shows the grid's icon in the grid view, the list's in the rows)
+            val icon = when (inGrid(activity)) {
+                true -> R.drawable.rd_tvd_grid
+                false -> R.drawable.rd_tvd_list
+                null -> if (grid) R.drawable.rd_tvd_list else R.drawable.rd_tvd_grid
+            }
+            if (v.getTag(R.id.rd_tv_header_view) != icon) { v.setTag(R.id.rd_tv_header_view, icon); v.setImageResource(icon) }
         }
-        val more = menu != null && (0 until menu.size()).any { menu.getItem(it).let { i -> visible(i) && i.itemId !in HEADER_ITEMS && !i.hasSubMenu() } }
+        val more = playlistsPage(activity) || activity is HeaderMediaListActivity || menu != null && (0 until menu.size()).any { menu.getItem(it).let { i -> visible(i) && i.itemId !in HEADER_ITEMS && !i.hasSubMenu() } }
         show(R.id.rd_tv_header_more, more)
     }
 }

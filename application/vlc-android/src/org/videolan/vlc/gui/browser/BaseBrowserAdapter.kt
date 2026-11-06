@@ -164,6 +164,14 @@ open class BaseBrowserAdapter(val browserContainer: BrowserContainer<MediaLibrar
         }
         itemFocusChanged(position, false, (holder as MediaViewHolder).bindingContainer)
         if (!forMain) holder.bindingContainer.setupGrid()
+        rdTvRow(holder.bindingContainer)
+    }
+
+    /** The TV layout's row (layout-w1600dp/browser_item): its second line and menu button stay hidden */
+    private fun rdTvRow(c: BrowserItemBindingContainer) {
+        if (c.binding !is org.videolan.vlc.databinding.BrowserItemBinding || !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(c.container.context)) return
+        c.text.visibility = View.GONE
+        c.moreIcon.visibility = View.GONE
     }
 
     override fun onBindViewHolder(holder: ViewHolder<ViewDataBinding>, position: Int, payloads: MutableList<Any>) {
@@ -185,6 +193,7 @@ open class BaseBrowserAdapter(val browserContainer: BrowserContainer<MediaLibrar
             if (value == UPDATE_SELECTION) holder.selectView(multiSelectHelper.isSelected(position))
         }
         itemFocusChanged(position, false, (holder as MediaViewHolder).bindingContainer)
+        rdTvRow(holder.bindingContainer)
     }
 
     private fun onBindMediaViewHolder(vh: MediaViewHolder, position: Int) {

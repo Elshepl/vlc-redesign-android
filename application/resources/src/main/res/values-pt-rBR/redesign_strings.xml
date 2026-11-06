@@ -359,4 +359,13 @@
         <item quantity="one">%d item</item>
         <item quantity="other">%d itens</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">Nova playlist</string>
+    <string name="rd_np_details">Detalhes da playlist</string>
+    <string name="rd_np_details_help">A playlist será salva e exibida com este título e miniatura.</string>
+    <string name="rd_np_hint">ex.: Vídeos favoritos</string>
+    <string name="rd_np_files">Selecionar arquivos</string>
+    <string name="rd_np_files_help">Estes arquivos serão adicionados à playlist.</string>
+    <string name="rd_np_files_tv">Pressione OK no + para escolher os arquivos.</string>
+    <string name="rd_np_chosen">Escolhidos: %s</string>
 </resources>

@@ -343,4 +343,13 @@
         <item quantity="one">פריט %d</item>
         <item quantity="other">%d פריטים</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">רשימת השמעה חדשה</string>
+    <string name="rd_np_details">פרטי רשימת ההשמעה</string>
+    <string name="rd_np_details_help">רשימת ההשמעה תישמר ותוצג עם הכותרת והתמונה הממוזערת האלה.</string>
+    <string name="rd_np_hint">לדוגמה, סרטונים מועדפים</string>
+    <string name="rd_np_files">בחירת קבצים</string>
+    <string name="rd_np_files_help">הקבצים האלה יתווספו לרשימת ההשמעה.</string>
+    <string name="rd_np_files_tv">לחצו OK על + כדי לבחור קבצים.</string>
+    <string name="rd_np_chosen">נבחרו: %s</string>
 </resources>

@@ -458,10 +458,15 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
             binding.videoGrid.columnWidth = columnWidth
             binding.videoGrid.addItemDecoration(gridItemDecoration!!)
             binding.videoGrid.setPadding(4.dp, 4.dp, 4.dp, 4.dp)
+        } else if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext())) {
+            // the design's rows (Figma 970:3308): four columns of rows 32 high, 10 apart
+            gridItemDecoration = org.videolan.vlc.gui.helpers.ItemOffsetDecoration(0, 5.dp)
+            binding.videoGrid.addItemDecoration(gridItemDecoration!!)
+            binding.videoGrid.setPadding(28.dp, 24.dp, 19.dp, 40.dp)
         } else {
             binding.videoGrid.setPadding(0, 0, 0, 0)
         }
-        binding.videoGrid.setNumColumns(if (listMode) 1 else -1)
+        binding.videoGrid.setNumColumns(if (listMode) (if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext())) 4 else 1) else -1)
         videoListAdapter.isListMode = listMode
     }
 

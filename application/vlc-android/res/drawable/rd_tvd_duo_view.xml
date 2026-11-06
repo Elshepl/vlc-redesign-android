@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: the design's menu icon "duo/view", its grey part (the Samsung TV app's icons.js); tinted in code -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path
+        android:pathData="M6.5,4.75 h11 a2.75,2.75 0 0 1 2.75,2.75 v9 a2.75,2.75 0 0 1 -2.75,2.75 h-11 a2.75,2.75 0 0 1 -2.75,-2.75 v-9 a2.75,2.75 0 0 1 2.75,-2.75 z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

@@ -263,6 +263,11 @@ open class HeaderMediaListActivity : AudioPlayerContainerActivity(), IEventsHand
 
         binding.songs.layoutManager = LinearLayoutManager(this)
         binding.songs.adapter = audioBrowserAdapter
+        // VLC Redesign: the TV layout at the design's size: the library's window, the tracks as the design's rows
+        if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(this)) {
+            org.videolan.vlc.gui.tablet.RdTvWindow.rows(binding.songs)
+            with(org.videolan.vlc.gui.tablet.RdTvWindow) { applyTvWindow() }
+        }
 
         val context = this
         lifecycleScope.launch {

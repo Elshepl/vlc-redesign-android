@@ -31,6 +31,14 @@
     <string name="rd_net_optional">(optional)</string>
     <string name="rd_net_playlist_help">The playlist will be saved and displayed with this title.</string>
     <string name="rd_net_playlist_hint">e.g., Favorite TV Channels</string>
+    <string name="rd_new_playlist">New Playlist</string>
+    <string name="rd_np_details">Playlist Details</string>
+    <string name="rd_np_details_help">The playlist will be saved and displayed with this title and thumbnail.</string>
+    <string name="rd_np_hint">e.g., Favorite Videos</string>
+    <string name="rd_np_files">Select Files</string>
+    <string name="rd_np_files_help">These files will be added to the playlist.</string>
+    <string name="rd_np_files_tv">Press OK on + to choose the files.</string>
+    <string name="rd_np_chosen">Chosen: %s</string>
     <string name="rd_subtitle_timing">Subtitle timing</string>
     <string name="rd_mark_voice_heard">Mark voice heard</string>
     <string name="rd_mark_text_seen">Mark text seen</string>

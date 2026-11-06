@@ -254,6 +254,7 @@ class PlaylistFragment : BaseAudioBrowser<PlaylistsViewModel>(), SwipeRefreshLay
                     )
                 )
                 playlists.layoutManager = LinearLayoutManager(activity)
+                org.videolan.vlc.gui.tablet.RdTvWindow.rows(playlists)
             }
         }
 
@@ -272,7 +273,9 @@ class PlaylistFragment : BaseAudioBrowser<PlaylistsViewModel>(), SwipeRefreshLay
     private var rdPaneShown = false
     private var rdRestoreId = -1L
 
-    private fun rdPaneWanted() = view != null && actionMode == null && requireContext().isTablet() && (adapter?.itemCount ?: 0) > 0 &&
+    // not in the TV layout: its Playlists page is the design's (each playlist opens as its page)
+    private fun rdPaneWanted() = view != null && actionMode == null && requireContext().isTablet() &&
+            !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext()) && (adapter?.itemCount ?: 0) > 0 &&
             binding.root.width / resources.displayMetrics.density >= org.videolan.vlc.gui.audio.RdLibraryDetailPane.MIN_WIDTH_DP
 
     private fun rdUpdatePane() {

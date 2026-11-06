@@ -360,4 +360,13 @@
         <item quantity="few">%d položky</item>
         <item quantity="other">%d položek</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">Nový playlist</string>
+    <string name="rd_np_details">Podrobnosti playlistu</string>
+    <string name="rd_np_details_help">Playlist bude uložen a zobrazen s tímto názvem a miniaturou.</string>
+    <string name="rd_np_hint">např. Oblíbená videa</string>
+    <string name="rd_np_files">Vybrat soubory</string>
+    <string name="rd_np_files_help">Tyto soubory budou přidány do playlistu.</string>
+    <string name="rd_np_files_tv">Stiskněte OK na +, abyste vybrali soubory.</string>
+    <string name="rd_np_chosen">Vybráno: %s</string>
 </resources>

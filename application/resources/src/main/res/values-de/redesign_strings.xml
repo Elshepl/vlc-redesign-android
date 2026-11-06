@@ -359,4 +359,13 @@
         <item quantity="one">%d Element</item>
         <item quantity="other">%d Elemente</item>
     </plurals>
+    <!-- the TV layout's New Playlist -->
+    <string name="rd_new_playlist">Neue Wiedergabeliste</string>
+    <string name="rd_np_details">Details der Wiedergabeliste</string>
+    <string name="rd_np_details_help">Die Wiedergabeliste wird mit diesem Titel und Vorschaubild gespeichert und angezeigt.</string>
+    <string name="rd_np_hint">z. B. Lieblingsvideos</string>
+    <string name="rd_np_files">Dateien auswählen</string>
+    <string name="rd_np_files_help">Diese Dateien werden der Wiedergabeliste hinzugefügt.</string>
+    <string name="rd_np_files_tv">Drücke OK auf +, um die Dateien auszuwählen.</string>
+    <string name="rd_np_chosen">Ausgewählt: %s</string>
 </resources>
