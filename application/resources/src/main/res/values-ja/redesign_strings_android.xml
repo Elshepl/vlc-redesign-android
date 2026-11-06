@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
     <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: すべての画面が新しいデザインになり、リモコンで操作できます。ようこそ、設定、動画と音楽のプレーヤー、詳細、検索。</item>
-        <item>デザイナーの猫が待機画面に住み、Live TV のチャンネル表示はケーブルテレビのチューナーのような情報バーになりました。</item>
-        <item>音量は画面の端のメーターに表示されます（設定 > 音量インジケーター）。</item>
+        <item>Android TV：プレイリストとアルバムがデザインのウィンドウで、カードと行とともに開きます。</item>
+        <item>テレビでデザインのメニュー：項目で OK を長押し（または Menu を押す）するとメニューが開きます。</item>
+        <item>テレビで新しいプレイリスト：テレビのストレージからファイルを選べます。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕のサイズ</string>
     <string name="rd_cast_this_phone">このスマートフォン</string>

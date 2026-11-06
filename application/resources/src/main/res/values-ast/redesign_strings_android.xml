@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: toles páxines col diseñu y col mandu: la bienvenida, Axustes, los reproductores de videu y música, detalles y gueta.</item>
-        <item>La gata de la diseñadora vive na pantalla d\'espera, y la banda de canal de Live TV ye una barra d\'información como la d\'un descodificador.</item>
-        <item>El volume amuésase nun indicador al llau de la pantalla (Axustes > Volume indicator).</item>
+        <item>Android TV: les llistes de reproducción y los álbumes ábrense na ventana del diseñu, coles sos tarxetes y fileres.</item>
+        <item>Los menús del diseñu na TV: caltén OK (o primi Menú) nun elementu p\'abrir el so menú.</item>
+        <item>Llista nueva na TV, colos ficheros escoyíos del almacenamientu de la TV.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

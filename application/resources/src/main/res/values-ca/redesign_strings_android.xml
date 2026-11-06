@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: totes les pàgines amb el disseny i amb el comandament: la benvinguda, Configuració, els reproductors de vídeo i música, els detalls i la cerca.</item>
-        <item>La gata de la dissenyadora viu a la pantalla d\'espera, i el bàner del canal de Live TV és una barra d\'informació com la d\'un descodificador.</item>
-        <item>El volum es mostra en un indicador al costat de la pantalla (Configuració > Volume indicator).</item>
+        <item>Android TV: les llistes de reproducció i els àlbums s\'obren a la finestra del disseny, amb les seves targetes i files.</item>
+        <item>Els menús del disseny a la TV: manteniu premut OK (o premeu Menú) en un element per obrir-ne el menú.</item>
+        <item>Llista nova a la TV, amb els fitxers triats de l\'emmagatzematge de la TV.</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

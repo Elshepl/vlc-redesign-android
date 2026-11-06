@@ -31,9 +31,9 @@
     <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
     <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: pob tudalen yn y dyluniad, gyda’r teclyn rheoli: y croeso, Gosodiadau, y chwaraewyr fideo a cherddoriaeth, manylion a chwilio.</item>
-        <item>Mae cath y dylunydd yn byw ar y sgrin segur, ac mae baner sianel Live TV yn far gwybodaeth fel un blwch cebl.</item>
-        <item>Mae’r sain i’w gweld ar fesurydd wrth ochr y sgrin (Gosodiadau > Volume indicator).</item>
+        <item>Android TV: mae rhestrau chwarae ac albymau\'n agor yn ffenestr y dyluniad, gyda\'i gardiau a\'i resi.</item>
+        <item>Dewislenni\'r dyluniad ar y teledu: daliwch OK (neu pwyswch Menu) ar eitem i agor ei ddewislen.</item>
+        <item>Rhestr chwarae newydd ar y teledu, gyda ffeiliau o storfa\'r teledu.</item>
     </string-array>
     <string name="rd_subtitle_size">Maint isdeitlau</string>
     <string name="rd_cast_this_phone">Y ffôn hwn</string>

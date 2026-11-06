@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: minden oldal az új dizájnban, távirányítóval: üdvözlés, Beállítások, videó- és zenelejátszó, részletek és keresés.</item>
-        <item>A tervező macskája a várakozó képernyőn lakik, a Live TV csatornasávja pedig olyan infósáv, mint egy kábeles beltérié.</item>
-        <item>A hangerő a képernyő szélén, egy mérőn látszik (Beállítások > Volume indicator).</item>
+        <item>Android TV: a lejátszási listák és az albumok a dizájn ablakában nyílnak meg, kártyáival és soraival.</item>
+        <item>A dizájn menüi a tévén: tartsa lenyomva az OK gombot (vagy nyomja meg a Menu gombot) egy elem menüjéhez.</item>
+        <item>Új lejátszási lista a tévén, a tévé tárhelyéről választott fájlokkal.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>

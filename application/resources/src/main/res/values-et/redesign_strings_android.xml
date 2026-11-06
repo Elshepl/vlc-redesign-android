@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
     <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: kõik lehed uues kujunduses ja puldiga: tervitus, Seadistused, video- ja muusikamängija, üksikasjad ja otsing.</item>
-        <item>Disaineri kass elab ooteekraanil ja Live TV kanaliriba on inforiba nagu digiboksil.</item>
-        <item>Helitugevus on näha mõõdikul ekraani servas (Seadistused > Volume indicator).</item>
+        <item>Android TV: esitusloendid ja albumid avanevad kujunduse aknas, selle kaartide ja ridadega.</item>
+        <item>Kujunduse menüüd teleris: hoia OK all (või vajuta Menu) üksusel, et avada selle menüü.</item>
+        <item>Uus esitusloend teleris, failidega teleri mälust.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtiitrite suurus</string>
     <string name="rd_cast_this_phone">See telefon</string>

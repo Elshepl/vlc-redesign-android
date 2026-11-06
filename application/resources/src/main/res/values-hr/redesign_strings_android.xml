@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Čuva se samo na ovom uređaju, da biste nastavili gdje ste stali.</string>
     <string name="rd_ob_updates_help">Jednom dnevno traži noviju probnu verziju VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: svaka stranica u novom dizajnu i s daljinskim: dobrodošlica, Postavke, video i glazbeni player, pojedinosti i pretraživanje.</item>
-        <item>Mačka dizajnerice živi na zaslonu mirovanja, a traka kanala u Live TV je informacijska traka kao kod kabelskog prijamnika.</item>
-        <item>Glasnoća se prikazuje na mjeraču uz rub zaslona (Postavke > Volume indicator).</item>
+        <item>Android TV: popisi za reprodukciju i albumi otvaraju se u prozoru dizajna, s njegovim karticama i recima.</item>
+        <item>Izbornici dizajna na TV-u: držite OK (ili pritisnite Menu) na stavci da otvorite njezin izbornik.</item>
+        <item>Novi popis za reprodukciju na TV-u, s datotekama iz pohrane TV-a.</item>
     </string-array>
     <string name="rd_subtitle_size">Veličina titlova</string>
     <string name="rd_cast_this_phone">Ovaj telefon</string>

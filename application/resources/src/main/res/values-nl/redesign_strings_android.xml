@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Alleen op dit apparaat bewaard, om verder te gaan waar je gebleven was.</string>
     <string name="rd_ob_updates_help">Zoekt eenmaal per dag naar een nieuwere testversie van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: elke pagina in het ontwerp en met de afstandsbediening: het welkom, Instellingen, de video- en muziekspeler, details en zoeken.</item>
-        <item>De kat van de ontwerper woont op het rustscherm, en de kanaalbanner van Live TV is een infobalk zoals bij een kabelbox.</item>
-        <item>Het volume verschijnt in een meter aan de zijkant van het scherm (Instellingen > Volume-indicator).</item>
+        <item>Android TV: afspeellijsten en albums openen in het venster van het ontwerp, met zijn kaarten en rijen.</item>
+        <item>De menu\'s van het ontwerp op de tv: houd OK ingedrukt (of druk op Menu) op een item om het menu te openen.</item>
+        <item>Nieuwe afspeellijst op de tv, met bestanden uit de opslag van de tv.</item>
     </string-array>
     <string name="rd_subtitle_size">Ondertitelgrootte</string>
     <string name="rd_cast_this_phone">Deze telefoon</string>

@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: katra lapa jaunajā dizainā un ar pulti: sveiciens, Iestatījumi, video un mūzikas atskaņotāji, detaļas un meklēšana.</item>
-        <item>Dizaineres kaķis dzīvo gaidīšanas ekrānā, un Live TV kanāla josla ir informācijas josla kā kabeļtelevīzijas dekoderim.</item>
-        <item>Skaļums redzams mērītājā ekrāna malā (Iestatījumi > Volume indicator).</item>
+        <item>Android TV: atskaņošanas saraksti un albumi atveras dizaina logā ar tā kartītēm un rindām.</item>
+        <item>Dizaina izvēlnes televizorā: turiet OK (vai nospiediet Menu) uz vienuma, lai atvērtu tā izvēlni.</item>
+        <item>Jauns atskaņošanas saraksts televizorā ar failiem no televizora krātuves.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitru izmērs</string>
     <string name="rd_cast_this_phone">Šis tālrunis</string>

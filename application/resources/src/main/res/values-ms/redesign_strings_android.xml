@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Disimpan pada peranti ini sahaja, untuk menyambung dari tempat anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari binaan ujian VLC for Android yang lebih baharu sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: setiap halaman dalam reka bentuk baharu dan boleh digunakan dengan alat kawalan jauh: alu-aluan, Tetapan, pemain video dan muzik, butiran dan carian.</item>
-        <item>Kucing pereka tinggal di skrin melahu, dan sepanduk saluran Live TV kini bar maklumat seperti kotak kabel.</item>
-        <item>Kelantangan dipaparkan pada meter di tepi skrin (Tetapan > Volume indicator).</item>
+        <item>Android TV: senarai main dan album dibuka dalam tetingkap reka bentuk, dengan kad dan barisnya.</item>
+        <item>Menu reka bentuk pada TV: tahan OK (atau tekan Menu) pada item untuk membuka menunya.</item>
+        <item>Senarai main baharu pada TV, dengan fail yang dipilih daripada storan TV.</item>
     </string-array>
     <string name="rd_subtitle_size">Saiz sari kata</string>
     <string name="rd_cast_this_phone">Telefon ini</string>

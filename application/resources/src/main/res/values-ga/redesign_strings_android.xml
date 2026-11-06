@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
     <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: gach leathanach sa dearadh, leis an gcianrialtán: an fáilte, Socruithe, na seinnteoirí físe agus ceoil, sonraí agus cuardach.</item>
-        <item>Tá cat an dearthóra ina chónaí ar an scáileán díomhaoin, agus is barra eolais é meirge cainéil Live TV, cosúil le bosca cábla.</item>
-        <item>Taispeántar an airde i méadar ar thaobh an scáileáin (Socruithe > Volume indicator).</item>
+        <item>Android TV: osclaíonn seinmliostaí agus albaim i bhfuinneog an dearaidh, lena cártaí agus a rónna.</item>
+        <item>Roghchláir an dearaidh ar an teilifís: coinnigh OK síos (nó brúigh Menu) ar mhír chun a roghchlár a oscailt.</item>
+        <item>Seinmliosta nua ar an teilifís, le comhaid ó stóras na teilifíse.</item>
     </string-array>
     <string name="rd_subtitle_size">Méid na bhfotheideal</string>
     <string name="rd_cast_this_phone">An fón seo</string>

@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Lagres bare på denne enheten, så du kan fortsette der du slapp.</string>
     <string name="rd_ob_updates_help">Ser etter en nyere testversjon av VLC for Android én gang om dagen.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: hver side i det nye designet og med fjernkontrollen: velkomst, Innstillinger, video- og musikkspilleren, detaljer og søk.</item>
-        <item>Designerens katt bor på hvileskjermen, og kanalbanneret i Live TV er en infolinje som på en tv-dekoder.</item>
-        <item>Volumet vises på en måler ved siden av skjermen (Innstillinger > Volume indicator).</item>
+        <item>Android TV: spillelister og album åpnes i designets vindu, med kortene og radene.</item>
+        <item>Designets menyer på TV-en: hold inne OK (eller trykk Meny) på et element for å åpne menyen.</item>
+        <item>Ny spilleliste på TV-en, med filer valgt fra TV-ens lagring.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefonen</string>

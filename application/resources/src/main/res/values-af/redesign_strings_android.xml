@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">Net op hierdie toestel gehou, om voort te gaan waar jy opgehou het.</string>
     <string name="rd_ob_updates_help">Soek een keer per dag na ’n nuwer toetsweergawe van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: elke bladsy in die ontwerp, met die afstandbeheer: die welkom, Settings, die video- en musiekspelers, besonderhede en soek.</item>
-        <item>Die ontwerper se kat woon op die russkerm, en Live TV se kanaalbanier is ’n inligtingsbalk soos dié van ’n kabelboks.</item>
-        <item>Die volume wys in ’n meter aan die kant van die skerm (Settings > Volume indicator).</item>
+        <item>Android TV: Speellyste, speellyste en albums maak oop in die ontwerp se venster, met sy kaarte en rye.</item>
+        <item>Die ontwerp se kieslyste op die TV: hou OK in (of druk Menu) op \'n item om sy kieslys oop te maak.</item>
+        <item>Nuwe speellys op die TV, met lêers gekies uit die TV se berging.</item>
     </string-array>
     <string name="rd_subtitle_size">Onderskrifgrootte</string>
     <string name="rd_cast_this_phone">Hierdie foon</string>

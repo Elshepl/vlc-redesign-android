@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: mọi trang theo thiết kế mới và dùng được bằng điều khiển: chào mừng, Cài đặt, trình phát video và nhạc, chi tiết và tìm kiếm.</item>
-        <item>Chú mèo của nhà thiết kế sống trên màn hình chờ, và băng kênh của Live TV là thanh thông tin như đầu thu truyền hình cáp.</item>
-        <item>Âm lượng hiện trên một thước đo ở cạnh màn hình (Cài đặt > Volume indicator).</item>
+        <item>Android TV: danh sách phát và album mở trong cửa sổ của thiết kế, với thẻ và hàng của nó.</item>
+        <item>Menu của thiết kế trên TV: giữ OK (hoặc nhấn Menu) trên một mục để mở menu của mục đó.</item>
+        <item>Danh sách phát mới trên TV, với tệp chọn từ bộ nhớ của TV.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

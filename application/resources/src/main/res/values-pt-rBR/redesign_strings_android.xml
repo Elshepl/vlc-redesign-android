@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: todas as páginas no design e com o controle remoto: as boas-vindas, Configurações, os players de vídeo e música, os detalhes e a busca.</item>
-        <item>A gata da designer mora na tela de descanso, e a faixa do canal do Live TV é uma barra de informações como a de um decodificador de TV a cabo.</item>
-        <item>O volume aparece em um medidor ao lado da tela (Configurações > Indicador de volume).</item>
+        <item>Android TV: playlists e álbuns abrem na janela do design, com seus cartões e linhas.</item>
+        <item>Os menus do design na TV: segure OK (ou aperte Menu) em um item para abrir o menu dele.</item>
+        <item>Nova playlist na TV, com arquivos escolhidos do armazenamento da TV.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

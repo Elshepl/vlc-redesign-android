@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Nur auf diesem Gerät gespeichert, um dort weiterzumachen, wo Sie aufgehört haben.</string>
     <string name="rd_ob_updates_help">Sucht einmal täglich nach einer neueren Testversion von VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: jede Seite im Design und mit der Fernbedienung: Willkommen, Einstellungen, Video- und Musikplayer, Details und Suche.</item>
-        <item>Die Katze der Designerin wohnt auf dem Ruhebildschirm, und das Kanalbanner von Live TV ist eine Infoleiste wie bei einer Kabelbox.</item>
-        <item>Die Lautstärke erscheint als Anzeige am Bildschirmrand (Einstellungen > Lautstärkeanzeige).</item>
+        <item>Android TV: Wiedergabelisten und Alben öffnen sich im Fenster des Designs, mit seinen Karten und Zeilen.</item>
+        <item>Die Menüs des Designs auf dem TV: OK gedrückt halten (oder Menü drücken), um das Menü eines Elements zu öffnen.</item>
+        <item>Neue Wiedergabeliste auf dem TV, mit Dateien aus dem Speicher des TV.</item>
     </string-array>
     <string name="rd_subtitle_size">Untertitelgröße</string>
     <string name="rd_cast_this_phone">Dieses Telefon</string>

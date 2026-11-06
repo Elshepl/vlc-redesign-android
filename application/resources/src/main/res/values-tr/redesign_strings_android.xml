@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: her sayfa yeni tasarımda ve kumandayla: karşılama, Ayarlar, video ve müzik oynatıcılar, ayrıntılar ve arama.</item>
-        <item>Tasarımcının kedisi bekleme ekranında yaşıyor ve Live TV\'nin kanal bandı, kablo kutusundaki gibi bir bilgi çubuğu.</item>
-        <item>Ses düzeyi ekranın kenarındaki bir göstergede görünür (Ayarlar > Ses düzeyi göstergesi).</item>
+        <item>Android TV: oynatma listeleri ve albümler, tasarımın penceresinde kartları ve satırlarıyla açılır.</item>
+        <item>Tasarımın menüleri TV\'de: bir öğenin menüsünü açmak için OK\'a basılı tutun (veya Menu\'ya basın).</item>
+        <item>TV\'de yeni oynatma listesi, TV\'nin depolama alanından seçilen dosyalarla.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

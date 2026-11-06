@@ -32,9 +32,9 @@
     <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
     <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: her rûpel bi sêwirana nû û bi telekomandayê: bixêrhatin, Sazkarî, lîstikvanên vîdyo û muzîkê, hûrgilî û lêgerîn.</item>
-        <item>Pisîka sêwirînerê li ser ekrana bêkar dijî, û banera kanalê ya Live TV niha barek agahiyan e wekî ya qutiya kabloyê.</item>
-        <item>Deng li ser pîvaneke li kêleka ekranê xuya dibe (Sazkarî > Volume indicator).</item>
+        <item>Android TV: lîsteyên lêdanê û albûm di pencereya sêwiranê de bi kart û rêzên wê vedibin.</item>
+        <item>Menûyên sêwiranê li ser TV: OK bigire (an Menu bitikîne) li ser hêmanekê da ku menûya wê vebe.</item>
+        <item>Lîsteya lêdanê ya nû li ser TV, bi pelên ji bîrbara TV.</item>
     </string-array>
     <string name="rd_subtitle_size">قەبارەی ژێرنووس</string>
     <string name="rd_cast_this_phone">ئەم مۆبایلە</string>

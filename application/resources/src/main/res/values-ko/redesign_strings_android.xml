@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">이 기기에만 저장되며, 멈춘 곳부터 이어서 보는 데 쓰입니다.</string>
     <string name="rd_ob_updates_help">하루에 한 번 VLC for Android의 새 테스트 빌드를 확인합니다.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: 모든 화면이 새 디자인으로 바뀌고 리모컨으로 쓸 수 있습니다. 환영 화면, 설정, 동영상과 음악 플레이어, 상세 정보, 검색.</item>
-        <item>디자이너의 고양이가 대기 화면에 살고, Live TV의 채널 배너는 케이블 셋톱박스 같은 정보 표시줄이 되었습니다.</item>
-        <item>볼륨이 화면 옆의 막대에 표시됩니다(설정 > 볼륨 표시기).</item>
+        <item>Android TV: 재생 목록과 앨범이 디자인의 창에서 카드와 행과 함께 열립니다.</item>
+        <item>TV에서 디자인의 메뉴: 항목에서 OK를 길게 누르면(또는 Menu를 누르면) 메뉴가 열립니다.</item>
+        <item>TV에서 새 재생 목록: TV 저장소에서 파일을 고릅니다.</item>
     </string-array>
     <string name="rd_subtitle_size">자막 크기</string>
     <string name="rd_cast_this_phone">이 휴대전화</string>

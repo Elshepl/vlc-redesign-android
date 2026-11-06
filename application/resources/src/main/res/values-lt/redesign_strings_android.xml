@@ -30,9 +30,9 @@
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: kiekvienas puslapis naujame dizaine ir su pulteliu: pasveikinimas, Nuostatos, vaizdo ir muzikos grotuvai, informacija ir paieška.</item>
-        <item>Dizainerės katė gyvena laukimo ekrane, o Live TV kanalo juosta tapo informacine juosta kaip kabelinės TV priedėlyje.</item>
-        <item>Garsumas rodomas matuoklyje ekrano šone (Nuostatos > Volume indicator).</item>
+        <item>Android TV: grojaraščiai ir albumai atsidaro dizaino lange su jo kortelėmis ir eilutėmis.</item>
+        <item>Dizaino meniu televizoriuje: palaikykite OK (arba paspauskite Menu) ant elemento, kad atvertumėte jo meniu.</item>
+        <item>Naujas grojaraštis televizoriuje su failais iš televizoriaus atminties.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
     <string name="rd_cast_this_phone">Šis telefonas</string>

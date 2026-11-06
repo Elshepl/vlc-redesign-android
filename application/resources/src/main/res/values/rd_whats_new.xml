@@ -3,8 +3,8 @@
      translate"). -->
 <resources>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: every page in the design, with the remote: the welcome, Settings, the video and music players, details and search.</item>
-        <item>The designer\'s cat lives on the idle screen, and Live TV\'s channel banner is an information bar like a cable box\'s.</item>
-        <item>The volume shows in a meter at the side of the screen (Settings > Volume indicator).</item>
+        <item>Android TV: Playlists, playlists and albums open in the design\'s window, with its cards and its rows.</item>
+        <item>The design\'s menus on the TV: hold OK (or press Menu) on an item to open its menu.</item>
+        <item>New Playlist on the TV, with the files chosen from the TV\'s storage.</item>
     </string-array>
 </resources>

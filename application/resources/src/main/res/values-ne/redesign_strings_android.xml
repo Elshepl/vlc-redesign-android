@@ -31,9 +31,9 @@
     <string name="rd_ob_history_help">यसै यन्त्रमा मात्र राखिन्छ, तपाईंले छोडेको ठाउँबाट जारी राख्न।</string>
     <string name="rd_ob_updates_help">दिनमा एक पटक VLC for Android को नयाँ परीक्षण बिल्ड खोज्छ।</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: हरेक पृष्ठ नयाँ डिजाइनमा र रिमोटबाट चल्ने: स्वागत, सेटिङहरू, भिडियो र संगीत प्लेयर, विवरण र खोज।</item>
-        <item>डिजाइनरको बिरालो अब निष्क्रिय स्क्रिनमा बस्छ, र Live TV को च्यानल ब्यानर केबल बक्सजस्तै जानकारी पट्टी हो।</item>
-        <item>आवाज स्क्रिनको छेउमा एउटा मिटरमा देखिन्छ (सेटिङहरू > Volume indicator)।</item>
+        <item>Android TV: प्लेलिस्ट र एल्बमहरू डिजाइनको सञ्झ्यालमा, त्यसका कार्ड र पङ्क्तिहरूसँग खुल्छन्।</item>
+        <item>टिभीमा डिजाइनका मेनुहरू: कुनै वस्तुको मेनु खोल्न OK थिचिराख्नुहोस् (वा Menu थिच्नुहोस्)।</item>
+        <item>टिभीमा नयाँ प्लेलिस्ट, टिभीको भण्डारणबाट छानिएका फाइलहरूसँग।</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षकको आकार</string>
     <string name="rd_cast_this_phone">यो फोन</string>
