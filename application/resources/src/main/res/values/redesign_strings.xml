@@ -15,6 +15,13 @@
     <string name="rd_recent">Recent</string>
     <!-- the last row of the sidebar (the desktop's "Add item": add media) -->
     <string name="rd_add_item">Add item</string>
+    <!-- the TV layout's mini player (its card, read by TalkBack) -->
+    <string name="rd_mini_player">Mini player</string>
+    <!-- the library header's count of the page's items (the desktop's "110 items") -->
+    <plurals name="rd_items_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
     <string name="rd_open_network_stream">Open Network Stream</string>
     <string name="rd_subtitle_timing">Subtitle timing</string>
     <string name="rd_mark_voice_heard">Mark voice heard</string>

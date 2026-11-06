@@ -120,6 +120,8 @@ class SecondaryActivity : ContentActivity(), IDialogManager {
         fph.requestLayout()
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        // VLC Redesign: the TV layout at the design's size draws the design's window over this screen too
+        with(org.videolan.vlc.gui.tablet.RdTvWindow) { applyTvWindow() }
 
         if (supportFragmentManager.findFragmentById(R.id.fragment_placeholder) == null) {
             val fragmentId = intent.getStringExtra(KEY_FRAGMENT)

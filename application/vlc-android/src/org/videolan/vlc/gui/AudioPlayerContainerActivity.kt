@@ -259,7 +259,7 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
         // Bottom bar navigation
         bottomMargin += if (this is MainActivity && !useNavigationRail()) 58.dp else 0
         //mini player
-        bottomMargin += if (::playerBehavior.isInitialized && playerBehavior.state != STATE_HIDDEN) 72.dp else 0 + 4.dp
+        bottomMargin += if (::playerBehavior.isInitialized && playerBehavior.state != STATE_HIDDEN && !org.videolan.vlc.gui.tablet.RdTvWindow.isOn(this)) 72.dp else 0 + 4.dp
         fragmentContainer.setPadding(fragmentContainer.paddingLeft, fragmentContainer.paddingTop, fragmentContainer.paddingRight, bottomMargin)
     }
 
@@ -300,6 +300,8 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
         // VLC Redesign: beside the navigation rail, the mini player and the audio player start after it
         if (this is MainActivity) (audioPlayerContainer.layoutParams as CoordinatorLayout.LayoutParams).marginStart =
                 if (useNavigationRail()) resources.getDimensionPixelSize(R.dimen.navigation_margin) else 0
+        // VLC Redesign: the design's mini player in the TV layout
+        findViewById<androidx.coordinatorlayout.widget.CoordinatorLayout?>(R.id.coordinator)?.let { org.videolan.vlc.gui.tablet.RdTvMiniPlayer.attach(this, it) }
     }
 
     private fun updateToolbarScrollability(enabled: Boolean) {
@@ -320,7 +322,11 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
     }
 
     fun setTabLayoutVisibility(show: Boolean) {
-        tabLayout?.layoutParams?.height = if (show) ViewGroup.LayoutParams.WRAP_CONTENT else 0
+        // VLC Redesign: the TV layout's Videos page is the design's (no Videos / Playlists tabs: Playlists is a page
+        // of the sidebar)
+        val videosPage = supportFragmentManager.findFragmentById(R.id.fragment_placeholder) is org.videolan.vlc.gui.video.VideoBrowserFragment
+        val shown = show && !(videosPage && org.videolan.vlc.gui.tablet.RdTvWindow.isOn(this))
+        tabLayout?.layoutParams?.height = if (shown) ViewGroup.LayoutParams.WRAP_CONTENT else 0
         tabLayout?.requestLayout()
     }
 
@@ -372,7 +378,8 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener, Sched
             BottomNavigationBehavior.from(it) as BottomNavigationBehavior<View>
         }
         if (bottomIsHiddden) bottomBehavior?.setCollapsed() else hideStatusIfNeeded(playerBehavior.state)
-        playerBehavior.peekHeight = resources.getDimensionPixelSize(R.dimen.player_peek_height)
+        // VLC Redesign: the TV layout at the design's size shows its own mini player (RdTvMiniPlayer): no bar at the bottom
+        playerBehavior.peekHeight = if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(this)) 0 else resources.getDimensionPixelSize(R.dimen.player_peek_height)
         updateFragmentMargins()
         playerBehavior.setPeekHeightListener {
             applyMarginToProgressBar(playerBehavior.peekHeight)

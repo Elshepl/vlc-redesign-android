@@ -130,6 +130,8 @@ class BottomNavigationBehavior<V : View>(context: Context, attrs: AttributeSet) 
             if (player.layoutParams is CoordinatorLayout.LayoutParams) {
                 val params = player.layoutParams as CoordinatorLayout.LayoutParams
                 val playerBehavior = params.behavior as PlayerBehavior<*>
+                // VLC Redesign: the TV layout at the design's size has its own mini player (no bar at the bottom)
+                if (org.videolan.vlc.gui.tablet.RdTvWindow.isOn(child.context)) { playerBehavior.peekHeight = 0; return@let }
                 playerBehavior.peekHeight = child.context.resources.getDimensionPixelSize(R.dimen.player_peek_height) + child.height - if (stateIsScrolling || currentState == STATE_SCROLLED_DOWN) child.translationY.toInt() else 0
             }
         }

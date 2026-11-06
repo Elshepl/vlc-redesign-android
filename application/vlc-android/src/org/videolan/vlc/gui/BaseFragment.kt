@@ -134,8 +134,10 @@ abstract class BaseFragment : Fragment(), ActionMode.Callback {
     protected open fun hasFAB() = ::swipeRefreshLayout.isInitialized
 
     open fun setFabPlayVisibility(enable: Boolean) {
+        // VLC Redesign: the TV layout's pages are the design's (no floating play button: Play all is in the page's menu)
+        val shown = enable && !(context?.let { org.videolan.vlc.gui.tablet.RdTvWindow.isOn(it) } ?: false)
         fabPlay?.run {
-            if (enable) show() else hide()
+            if (shown) show() else hide()
         }
     }
 

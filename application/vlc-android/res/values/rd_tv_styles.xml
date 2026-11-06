@@ -5,6 +5,7 @@
     <item name="rd_tv_focus_listener" type="id" />
     <item name="rd_tv_focus_saved" type="id" />
     <item name="rd_tv_focus_skip" type="id" />
+    <item name="rd_tv_mini" type="id" />
     <item name="rd_tv_titlebar" type="id" />
     <item name="rd_tv_title_menu" type="id" />
     <item name="rd_tv_title_text" type="id" />

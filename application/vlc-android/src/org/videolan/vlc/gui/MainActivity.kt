@@ -236,6 +236,7 @@ class MainActivity : ContentActivity(),
 
     override fun onResume() {
         super.onResume()
+        with(org.videolan.vlc.gui.tablet.RdTvWindow) { applyPendingPage() }
         //Only the partial permission is granted for Android 11+
         if (!settings.getBoolean(PERMISSION_NEVER_ASK, false) && settings.getLong(PERMISSION_NEXT_ASK, 0L) < System.currentTimeMillis() && Permissions.canReadStorage(this) && !Permissions.hasAllAccess(this)) {
             UiTools.snackerMessageInfinite(this, getString(R.string.partial_content))?.setAction(R.string.more) {

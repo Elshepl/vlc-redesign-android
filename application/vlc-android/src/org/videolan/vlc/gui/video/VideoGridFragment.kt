@@ -444,7 +444,14 @@ class VideoGridFragment : MediaBrowserFragment<VideosViewModel>(), SwipeRefreshL
 
         // Select between grid or list
         binding.videoGrid.removeItemDecoration(gridItemDecoration!!)
-        if (!listMode) {
+        if (!listMode && org.videolan.vlc.gui.tablet.RdTvWindow.isOn(requireContext())) {
+            // the TV layout at the design's size (Figma 970:2703, shell.css .sh-grid): cards of 316, 20 apart, rows
+            // 256.5 apart, the first 28 from the sidebar and 19 under the header's line
+            gridItemDecoration = org.videolan.vlc.gui.helpers.ItemOffsetDecoration(10.dp, 10.dp)
+            binding.videoGrid.columnWidth = 316.dp
+            binding.videoGrid.addItemDecoration(gridItemDecoration!!)
+            binding.videoGrid.setPadding(18.dp, 9.dp, 13.dp, 40.dp)
+        } else if (!listMode) {
             val thumbnailWidth = res.getDimensionPixelSize(R.dimen.grid_card_thumb_width)
             val margin = binding.videoGrid.paddingStart + binding.videoGrid.paddingEnd
             val columnWidth = binding.videoGrid.getPerfectColumnWidth(thumbnailWidth, margin) - res.getDimensionPixelSize(R.dimen.left_right_1610_margin) * 2

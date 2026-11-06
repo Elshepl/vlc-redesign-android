@@ -259,7 +259,7 @@ object TabletSidebar {
     private const val EXTRA_ADD = "add"
 
     /** The design's icons of the sidebar (the desktop's SVGs), the current page's filled one */
-    private fun designIcon(id: Int, active: Boolean) = when (id) {
+    fun designIcon(id: Int, active: Boolean) = when (id) {
         R.id.nav_home -> if (active) R.drawable.rd_tvd_home_active else R.drawable.rd_tvd_home
         R.id.nav_video -> if (active) R.drawable.rd_tvd_videos_active else R.drawable.rd_tvd_videos
         R.id.nav_audio -> if (active) R.drawable.rd_tvd_songs_active else R.drawable.rd_tvd_songs
