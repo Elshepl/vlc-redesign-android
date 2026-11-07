@@ -27,7 +27,7 @@
     <string name="rd_help_threads">Број нити које се користе за декодирање, 0 значи аутоматски</string>
     <string name="rd_ob_whole_device">Цео уређај</string>
     <string name="rd_ob_folders_count">%1$s и још %2$d</string>
-    <string name="rd_ob_online_text">Без телеметрије, без реклама, без налога: VLC for Android сам ништа не шаље. Ови избори остају у Подешавањима, под Приватност.</string>
+    <string name="rd_ob_online_text">Без телеметрије, без реклама, без налога. Оно што само иде на интернет то наводи испод себе и шаље само оно што тамо пише. Ови избори остају у Подешавањима.</string>
     <string name="rd_ob_history_help">Чува се само на овом уређају, да наставите где сте стали.</string>
     <string name="rd_ob_updates_help">Једном дневно тражи новију пробну верзију VLC for Android.</string>
     <string-array name="rd_whats_new_items">

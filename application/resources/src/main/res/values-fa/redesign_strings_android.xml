@@ -28,7 +28,7 @@
     <string name="rd_help_threads">تعداد رشته‌های مورد استفاده برای رمزگشایی، 0 یعنی خودکار</string>
     <string name="rd_ob_whole_device">کل دستگاه</string>
     <string name="rd_ob_folders_count">%1$s و %2$d مورد دیگر</string>
-    <string name="rd_ob_online_text">بدون تله‌متری، بدون تبلیغ، بدون حساب کاربری: VLC for Android خودبه‌خود چیزی نمی‌فرستد. این انتخاب‌ها در تنظیمات، حریم خصوصی می‌مانند.</string>
+    <string name="rd_ob_online_text">بدون تله‌متری، بدون تبلیغات، بدون حساب کاربری. هر چیزی که خودبه‌خود به اینترنت وصل می‌شود، این را زیر خود می‌گوید و فقط همان چیزی را می‌فرستد که آنجا نوشته شده است. این انتخاب‌ها در تنظیمات باقی می‌مانند.</string>
     <string name="rd_ob_history_help">فقط روی همین دستگاه نگه داشته می‌شود، تا از جایی که رها کرده‌اید ادامه دهید.</string>
     <string name="rd_ob_updates_help">روزی یک بار به دنبال نسخهٔ آزمایشی تازه‌تری از VLC for Android می‌گردد.</string>
     <string-array name="rd_whats_new_items">

@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">インターレース映像 (テレビ録画など) の櫛状の線を取り除きます。VLC がデコードする映像に有効で、ハードウェアデコーダーには効きません。</string>
     <string name="rd_ob_whole_device">デバイス全体</string>
     <string name="rd_ob_folders_count">%1$s ほか %2$d 件</string>
-    <string name="rd_ob_online_text">テレメトリー、広告、アカウントは一切ありません。VLC for Android が自分から何かを送信することはありません。これらの選択は「設定」の「プライバシー」でいつでも変更できます。</string>
+    <string name="rd_ob_online_text">テレメトリーなし、広告なし、アカウント不要。自動的にオンラインに接続する機能には、その下にそのことが書かれており、そこに書かれた内容だけを送信します。これらの選択は設定に残り、いつでも変更できます。</string>
     <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
     <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
     <string-array name="rd_whats_new_items">

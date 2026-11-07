@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Fjerner kamlinjene i linjeflettet video (TV-opptak). Virker på video som VLC dekoder, ikke maskinvaredekoderen.</string>
     <string name="rd_ob_whole_device">Hele enheten</string>
     <string name="rd_ob_folders_count">%1$s og %2$d til</string>
-    <string name="rd_ob_online_text">Ingen telemetri, ingen reklame, ingen konto: VLC for Android sender ingenting av seg selv. Disse valgene ligger i Innstillinger, Personvern.</string>
+    <string name="rd_ob_online_text">Ingen telemetri, ingen reklame, ingen konto. Det som går på nettet av seg selv, sier det under seg og sender bare det som står der. Disse valgene finnes også i Innstillinger.</string>
     <string name="rd_ob_history_help">Lagres bare på denne enheten, så du kan fortsette der du slapp.</string>
     <string name="rd_ob_updates_help">Ser etter en nyere testversjon av VLC for Android én gang om dagen.</string>
     <string-array name="rd_whats_new_items">

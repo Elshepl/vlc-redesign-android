@@ -28,7 +28,7 @@
     <string name="rd_help_threads">დეკოდირებისთვის გამოყენებული ნაკადების რაოდენობა, 0 ნიშნავს ავტომატურს</string>
     <string name="rd_ob_whole_device">მთელი მოწყობილობა</string>
     <string name="rd_ob_folders_count">%1$s და კიდევ %2$d</string>
-    <string name="rd_ob_online_text">არანაირი ტელემეტრია, რეკლამა ან ანგარიში: VLC for Android თავისით არაფერს აგზავნის. ეს არჩევანი რჩება პარამეტრებში, კონფიდენციალურობაში.</string>
+    <string name="rd_ob_online_text">არანაირი ტელემეტრია, არანაირი რეკლამა, არანაირი ანგარიში. რაც თავისით გადის ინტერნეტში, ამას მის ქვემოთ წერს და აგზავნის მხოლოდ იმას, რაც იქ წერია. ეს არჩევანი პარამეტრებში რჩება.</string>
     <string name="rd_ob_history_help">ინახება მხოლოდ ამ მოწყობილობაზე, რომ იქიდან გააგრძელოთ, სადაც შეჩერდით.</string>
     <string name="rd_ob_updates_help">დღეში ერთხელ ეძებს VLC for Android-ის უფრო ახალ სატესტო ვერსიას.</string>
     <string-array name="rd_whats_new_items">

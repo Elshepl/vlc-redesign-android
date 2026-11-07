@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">מסיר את קווי המסרק של וידאו משולב (הקלטות טלוויזיה). פועל על וידאו ש-VLC מפענח, לא המפענח של החומרה.</string>
     <string name="rd_ob_whole_device">המכשיר כולו</string>
     <string name="rd_ob_folders_count">%1$s ועוד %2$d</string>
-    <string name="rd_ob_online_text">ללא טלמטריה, ללא פרסומות, ללא חשבון: VLC for Android לא שולח דבר מעצמו. הבחירות האלה נשארות בהגדרות, תחת פרטיות.</string>
+    <string name="rd_ob_online_text">בלי טלמטריה, בלי פרסומות, בלי חשבון. כל מה שמתחבר לאינטרנט מעצמו מציין זאת מתחתיו, ושולח רק את מה שכתוב שם. הבחירות האלה נשארות בהגדרות.</string>
     <string name="rd_ob_history_help">נשמר במכשיר הזה בלבד, כדי להמשיך מהמקום שבו הפסקת.</string>
     <string name="rd_ob_updates_help">מחפש גרסת בדיקה חדשה יותר של VLC for Android פעם ביום.</string>
     <string-array name="rd_whats_new_items">

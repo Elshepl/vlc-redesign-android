@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Прибирає «гребінку» черезрядкового відео (записи з ТБ). Працює з відео, яке декодує VLC, а не апаратний декодер.</string>
     <string name="rd_ob_whole_device">Увесь пристрій</string>
     <string name="rd_ob_folders_count">%1$s і ще %2$d</string>
-    <string name="rd_ob_online_text">Жодної телеметрії, реклами чи облікового запису: VLC for Android нічого не надсилає сам. Ці параметри залишаються в розділі «Параметри», «Приватність».</string>
+    <string name="rd_ob_online_text">Жодної телеметрії, жодної реклами, жодного облікового запису. Те, що саме виходить в Інтернет, повідомляє про це під собою й надсилає лише те, що там написано. Цей вибір залишається в Параметрах.</string>
     <string name="rd_ob_history_help">Зберігається лише на цьому пристрої, щоб продовжити з того місця, де ви зупинилися.</string>
     <string name="rd_ob_updates_help">Раз на день перевіряє, чи немає новішої тестової збірки VLC for Android.</string>
     <string-array name="rd_whats_new_items">

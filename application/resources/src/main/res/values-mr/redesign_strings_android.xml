@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">इंटरलेस्ड व्हिडिओच्या (टीव्ही रेकॉर्डिंग) कंगव्यासारख्या रेषा काढते. VLC डिकोड करत असलेल्या व्हिडिओवर काम करते, हार्डवेअर डिकोडरवर नाही.</string>
     <string name="rd_ob_whole_device">संपूर्ण उपकरण</string>
     <string name="rd_ob_folders_count">%1$s आणि आणखी %2$d</string>
-    <string name="rd_ob_online_text">टेलिमेट्री नाही, जाहिराती नाहीत, खाते नाही: VLC for Android स्वतःहून काहीही पाठवत नाही. हे पर्याय रचना, गोपनीयता येथे राहतात.</string>
+    <string name="rd_ob_online_text">टेलिमेट्री नाही, जाहिराती नाहीत, खाते नाही. जे आपोआप ऑनलाइन जाते ते त्याखाली तसे सांगते आणि तिथे लिहिलेलेच पाठवते. हे पर्याय रचनामध्ये राहतात.</string>
     <string name="rd_ob_history_help">फक्त याच उपकरणावर ठेवले जाते, तुम्ही जिथे थांबला होता तिथून पुढे चालू करण्यासाठी.</string>
     <string name="rd_ob_updates_help">दिवसातून एकदा VLC for Android ची नवी चाचणी आवृत्ती शोधते.</string>
     <string-array name="rd_whats_new_items">

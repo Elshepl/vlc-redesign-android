@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">移除交錯式影片（電視錄影）的梳狀線條。只對 VLC 解碼的影片有效，對硬體解碼器無效。</string>
     <string name="rd_ob_whole_device">整個裝置</string>
     <string name="rd_ob_folders_count">%1$s 等 %2$d 個</string>
-    <string name="rd_ob_online_text">沒有遙測、沒有廣告、不需要帳號：VLC for Android 不會自行傳送任何內容。這些選項隨時可在「設定 &gt; 隱私權」中變更。</string>
+    <string name="rd_ob_online_text">沒有遙測，沒有廣告，不需要帳號。會自行連線的功能都會在其下方註明，而且只傳送那裡寫明的內容。這些選擇會保留在設定中。</string>
     <string name="rd_ob_history_help">只儲存在這部裝置上，用來從上次停止的地方繼續。</string>
     <string name="rd_ob_updates_help">每天檢查一次是否有較新的 VLC for Android 測試版。</string>
     <string-array name="rd_whats_new_items">

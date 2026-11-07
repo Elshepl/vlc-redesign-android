@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Remove as linhas de pente do vídeo entrelaçado (gravações de TV). Funciona no vídeo decodificado pelo VLC, não pelo decodificador de hardware.</string>
     <string name="rd_ob_whole_device">O dispositivo inteiro</string>
     <string name="rd_ob_folders_count">%1$s e mais %2$d</string>
-    <string name="rd_ob_online_text">Sem telemetria, sem anúncios, sem conta: o VLC for Android não envia nada por conta própria. Essas escolhas ficam em Configurações, Privacidade.</string>
+    <string name="rd_ob_online_text">Sem telemetria, sem anúncios, sem conta. O que se conecta à internet sozinho avisa isso logo abaixo e envia só o que está escrito ali. Essas escolhas ficam nas Configurações.</string>
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">

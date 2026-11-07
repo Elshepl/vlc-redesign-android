@@ -28,7 +28,7 @@
     <string name="rd_help_threads">จำนวนเธรดที่ใช้ถอดรหัส 0 หมายถึงอัตโนมัติ</string>
     <string name="rd_ob_whole_device">ทั้งอุปกรณ์</string>
     <string name="rd_ob_folders_count">%1$s และอีก %2$d รายการ</string>
-    <string name="rd_ob_online_text">ไม่มีการเก็บข้อมูลการใช้งาน ไม่มีโฆษณา ไม่ต้องมีบัญชี: VLC for Android ไม่ส่งสิ่งใดออกไปเอง ตัวเลือกเหล่านี้อยู่ในค่าตั้ง ความเป็นส่วนตัว</string>
+    <string name="rd_ob_online_text">ไม่มีการเก็บข้อมูลการใช้งาน ไม่มีโฆษณา ไม่ต้องมีบัญชี สิ่งใดที่เชื่อมต่อออนไลน์เองจะบอกไว้ด้านล่าง และส่งเฉพาะสิ่งที่เขียนไว้ตรงนั้นเท่านั้น ตัวเลือกเหล่านี้ยังคงอยู่ในค่าตั้ง</string>
     <string name="rd_ob_history_help">เก็บไว้บนอุปกรณ์นี้เท่านั้น เพื่อเล่นต่อจากจุดที่หยุดไว้</string>
     <string name="rd_ob_updates_help">ตรวจหารุ่นทดสอบที่ใหม่กว่าของ VLC for Android วันละครั้ง</string>
     <string-array name="rd_whats_new_items">

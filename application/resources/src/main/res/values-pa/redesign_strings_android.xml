@@ -28,7 +28,7 @@
     <string name="rd_help_threads">ਡੀਕੋਡਿੰਗ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਥਰੈੱਡਾਂ ਦੀ ਗਿਣਤੀ, 0 ਦਾ ਅਰਥ ਆਟੋਮੈਟਿਕ</string>
     <string name="rd_ob_whole_device">ਪੂਰਾ ਡਿਵਾਈਸ</string>
     <string name="rd_ob_folders_count">%1$s ਅਤੇ %2$d ਹੋਰ</string>
-    <string name="rd_ob_online_text">ਕੋਈ ਟੈਲੀਮੈਟਰੀ ਨਹੀਂ, ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ, ਕੋਈ ਖਾਤਾ ਨਹੀਂ: VLC for Android ਆਪਣੇ ਆਪ ਕੁਝ ਨਹੀਂ ਭੇਜਦਾ। ਇਹ ਚੋਣਾਂ ਸੈਟਿੰਗ, ਪਰਾਈਵੇਸੀ ਵਿੱਚ ਰਹਿੰਦੀਆਂ ਹਨ।</string>
+    <string name="rd_ob_online_text">ਕੋਈ ਟੈਲੀਮੈਟਰੀ ਨਹੀਂ, ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ, ਕੋਈ ਖਾਤਾ ਨਹੀਂ। ਜੋ ਆਪਣੇ-ਆਪ ਆਨਲਾਈਨ ਜਾਂਦਾ ਹੈ, ਉਹ ਆਪਣੇ ਹੇਠਾਂ ਇਹ ਦੱਸਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ ਉਹੀ ਭੇਜਦਾ ਹੈ ਜੋ ਉੱਥੇ ਲਿਖਿਆ ਹੈ। ਇਹ ਚੋਣਾਂ ਸੈਟਿੰਗ ਵਿੱਚ ਰਹਿੰਦੀਆਂ ਹਨ।</string>
     <string name="rd_ob_history_help">ਸਿਰਫ਼ ਇਸੇ ਡਿਵਾਈਸ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕੋ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ।</string>
     <string name="rd_ob_updates_help">ਦਿਨ ਵਿੱਚ ਇੱਕ ਵਾਰ VLC for Android ਦਾ ਨਵਾਂ ਟੈਸਟ ਬਿਲਡ ਲੱਭਦਾ ਹੈ।</string>
     <string-array name="rd_whats_new_items">

@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">去除隔行扫描视频（电视录像）中的梳状线条。仅对 VLC 解码的视频有效，对硬件解码器无效。</string>
     <string name="rd_ob_whole_device">整个设备</string>
     <string name="rd_ob_folders_count">%1$s 等 %2$d 个</string>
-    <string name="rd_ob_online_text">无遥测、无广告、无需账号：VLC for Android 不会自行发送任何内容。这些选项可随时在“设置 &gt; 隐私”中更改。</string>
+    <string name="rd_ob_online_text">没有遥测，没有广告，无需账号。会自行联网的功能都会在其下方注明，并且只发送那里写明的内容。这些选择会保留在设置中。</string>
     <string name="rd_ob_history_help">仅保存在本设备上，用于从上次停下的地方继续。</string>
     <string name="rd_ob_updates_help">每天检查一次是否有更新的 VLC for Android 测试版。</string>
     <string-array name="rd_whats_new_items">

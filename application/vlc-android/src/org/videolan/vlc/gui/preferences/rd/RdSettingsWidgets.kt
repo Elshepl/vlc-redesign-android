@@ -193,12 +193,17 @@ class RdEditTextPreference @JvmOverloads constructor(context: Context, attrs: At
         summaryProvider = null
     }
 
+    /** a password: dots in the well, never its text */
+    var secret = false
+    /** what the well shows when it is empty (null: "Default", what VLC uses then) */
+    var emptyText: CharSequence? = null
+
     override fun getSummary(): CharSequence? = help
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
         super.onBindViewHolder(holder)
         (holder.findViewById(R.id.rd_well_text) as? TextView)?.let {
-            it.text = text?.takeIf { t -> t.isNotBlank() } ?: context.getString(R.string.rd_default_value)
+            it.text = text?.takeIf { t -> t.isNotBlank() }?.let { t -> if (secret) "••••••••" else t } ?: emptyText ?: context.getString(R.string.rd_default_value)
             it.alpha = if (text.isNullOrBlank()) 0.6f else 1f
         }
         holder.findViewById(android.R.id.summary)?.visibility = if (help.isNullOrEmpty()) View.GONE else View.VISIBLE
@@ -226,6 +231,8 @@ class RdActionPreference @JvmOverloads constructor(context: Context, attrs: Attr
             it.text = actionText
             it.setOnClickListener { performClick() }
         }
+        // (a help of several lines is read whole: how to get the OpenSubtitles.com key)
+        (holder.findViewById(android.R.id.summary) as? TextView)?.maxLines = 12
     }
 }
 

@@ -28,7 +28,7 @@
     <string name="rd_help_threads">குறிவிலக்கலுக்குப் பயன்படும் இழைகளின் எண்ணிக்கை, 0 என்றால் தானியங்கு</string>
     <string name="rd_ob_whole_device">முழுச் சாதனமும்</string>
     <string name="rd_ob_folders_count">%1$s மற்றும் மேலும் %2$d</string>
-    <string name="rd_ob_online_text">தொலைஅளவீடு இல்லை, விளம்பரங்கள் இல்லை, கணக்கு இல்லை: VLC for Android தானாக எதையும் அனுப்பாது. இந்தத் தேர்வுகள் அமைப்புகள், தனியுரிமை என்பதில் இருக்கும்.</string>
+    <string name="rd_ob_online_text">டெலிமெட்ரி இல்லை, விளம்பரங்கள் இல்லை, கணக்கு இல்லை. தானாக இணையத்துக்குச் செல்வது அதன் கீழே அதைக் குறிப்பிடுகிறது, அங்கே எழுதியிருப்பதை மட்டுமே அனுப்புகிறது. இந்தத் தேர்வுகள் அமைப்புகளில் இருக்கும்.</string>
     <string name="rd_ob_history_help">இந்தச் சாதனத்தில் மட்டுமே வைக்கப்படும், நீங்கள் விட்ட இடத்திலிருந்து தொடர.</string>
     <string name="rd_ob_updates_help">நாளுக்கு ஒருமுறை VLC for Android-இன் புதிய சோதனைப் பதிப்பைத் தேடுகிறது.</string>
     <string-array name="rd_whats_new_items">

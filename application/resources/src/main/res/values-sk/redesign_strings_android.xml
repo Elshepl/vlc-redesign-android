@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Odstráni „hrebienok“ prekladaného videa (televízne záznamy). Funguje pri videu dekódovanom VLC, nie hardvérovým dekodérom.</string>
     <string name="rd_ob_whole_device">Celé zariadenie</string>
     <string name="rd_ob_folders_count">%1$s a ďalšie (%2$d)</string>
-    <string name="rd_ob_online_text">Žiadna telemetria, žiadne reklamy, žiadny účet: VLC for Android sám nič neodosiela. Tieto voľby zostávajú v Nastaveniach, v časti Súkromie.</string>
+    <string name="rd_ob_online_text">Žiadna telemetria, žiadne reklamy, žiadny účet. Čo sa samo pripája na internet, uvádza to pod sebou a posiela iba to, čo je tam napísané. Tieto voľby zostanú v Nastaveniach.</string>
     <string name="rd_ob_history_help">Uchováva sa iba v tomto zariadení, aby ste mohli pokračovať tam, kde ste skončili.</string>
     <string name="rd_ob_updates_help">Raz denne hľadá novšiu testovaciu zostavu VLC for Android.</string>
     <string-array name="rd_whats_new_items">

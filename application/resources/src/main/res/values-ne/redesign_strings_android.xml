@@ -27,7 +27,7 @@
     <string name="rd_help_threads">डिकोडिङका लागि प्रयोग हुने थ्रेडहरूको सङ्ख्या, 0 भनेको स्वचालित</string>
     <string name="rd_ob_whole_device">सम्पूर्ण यन्त्र</string>
     <string name="rd_ob_folders_count">%1$s र थप %2$d</string>
-    <string name="rd_ob_online_text">टेलिमेट्री छैन, विज्ञापन छैन, खाता छैन: VLC for Android ले आफैँ केही पठाउँदैन। यी छनोटहरू सेटिङ्हरू, गोपनीयतामा रहन्छन्।</string>
+    <string name="rd_ob_online_text">टेलिमेट्री छैन, विज्ञापन छैन, खाता छैन। जुन कुरा आफैँ अनलाइन जान्छ, त्यसले आफ्नो तल त्यो बताउँछ र त्यहाँ लेखिएको मात्र पठाउँछ। यी छनोटहरू सेटिङ्हरूमा रहिरहन्छन्।</string>
     <string name="rd_ob_history_help">यसै यन्त्रमा मात्र राखिन्छ, तपाईंले छोडेको ठाउँबाट जारी राख्न।</string>
     <string name="rd_ob_updates_help">दिनमा एक पटक VLC for Android को नयाँ परीक्षण बिल्ड खोज्छ।</string>
     <string-array name="rd_whats_new_items">

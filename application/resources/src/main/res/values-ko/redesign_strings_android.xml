@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">인터레이스 동영상(TV 녹화)의 빗살 무늬를 없앱니다. VLC가 디코딩하는 동영상에만 적용되며 하드웨어 디코더에는 적용되지 않습니다.</string>
     <string name="rd_ob_whole_device">기기 전체</string>
     <string name="rd_ob_folders_count">%1$s 외 %2$d개</string>
-    <string name="rd_ob_online_text">원격 분석, 광고, 계정이 없습니다. VLC for Android는 스스로 아무것도 보내지 않습니다. 이 선택은 설정의 개인정보에서 언제든 바꿀 수 있습니다.</string>
+    <string name="rd_ob_online_text">원격 분석 없음, 광고 없음, 계정 없음. 스스로 온라인에 연결되는 기능은 그 아래에 그렇게 표시되며, 거기에 적힌 내용만 보냅니다. 이 선택은 설정에 그대로 남아 있습니다.</string>
     <string name="rd_ob_history_help">이 기기에만 저장되며, 멈춘 곳부터 이어서 보는 데 쓰입니다.</string>
     <string name="rd_ob_updates_help">하루에 한 번 VLC for Android의 새 테스트 빌드를 확인합니다.</string>
     <string-array name="rd_whats_new_items">

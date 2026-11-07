@@ -27,7 +27,7 @@
     <string name="rd_help_threads">Nifer yr edafedd a ddefnyddir i ddatgodio, mae 0 yn golygu awtomatig</string>
     <string name="rd_ob_whole_device">Y ddyfais gyfan</string>
     <string name="rd_ob_folders_count">%1$s a %2$d arall</string>
-    <string name="rd_ob_online_text">Dim telemetreg, dim hysbysebion, dim cyfrif: nid yw VLC for Android yn anfon dim ohono\'i hun. Mae\'r dewisiadau hyn yn aros yn Gosodiadau, Preifatrwydd.</string>
+    <string name="rd_ob_online_text">Dim telemetreg, dim hysbysebion, dim cyfrif. Mae\'r hyn sy\'n mynd ar-lein ohono\'i hun yn dweud hynny oddi tano, ac yn anfon dim ond yr hyn sydd wedi\'i ysgrifennu yno. Mae\'r dewisiadau hyn yn aros yn y Gosodiadau.</string>
     <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
     <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
     <string-array name="rd_whats_new_items">

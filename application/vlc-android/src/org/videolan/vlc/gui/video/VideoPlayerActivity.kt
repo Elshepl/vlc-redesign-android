@@ -1969,6 +1969,74 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     }
     private var seriesPresetAgain: Uri? = null
 
+    /** VLC Redesign: a subtitle downloaded from the internet (OnlineSubtitles): added to the video, shown when
+     *  select, and kept for the file (the downloaded subtitles of a media are added again when it plays) */
+    fun rdAddOnlineSubtitle(file: java.io.File, result: org.videolan.vlc.util.OnlineSubtitles.Result, select: Boolean) {
+        val s = service ?: return
+        val mediaPath = s.currentMediaWrapper?.uri?.path ?: return
+        val path = file.absolutePath
+        s.addUtf8SubtitleTrack(path, select)
+        addedExternalSubs.add(org.videolan.vlc.mediadb.models.ExternalSub(result.id, path, mediaPath, result.language, result.release, result.hearingImpaired))
+        ExternalSubRepository.getInstance(this).saveDownloadedSubtitle(result.id, path, mediaPath, result.language, result.release, result.hearingImpaired)
+    }
+
+    // VLC Redesign: the desktop's automatic search (SubtitleFinder::autoPick), once per media: when a video starts
+    // without subtitles in the user's language, the best one found online loads by itself (of that language, else
+    // of the second one), if the user said so (the welcome's privacy step, Settings › Subtitles). Files and shares
+    // only: a stream's or a channel's name is not a film's.
+    private var rdOnlineAutoUri: Uri? = null
+
+    private fun rdAutoOnlineSubtitles() {
+        val ctx = applicationContext
+        if (!Settings.getInstance(ctx).getBoolean(org.videolan.vlc.util.OnlineSubtitles.KEY_AUTO, false)) return
+        val mw = service?.currentMediaWrapper ?: return
+        val uri = mw.uri ?: return
+        if (uri == rdOnlineAutoUri) return
+        rdOnlineAutoUri = uri
+        if (mw.type != MediaWrapper.TYPE_VIDEO || uri.scheme !in setOf("file", "content", "smb", "nfs", "ftp", "sftp", "upnp")) return
+        lifecycleScope.launch {
+            kotlinx.coroutines.delay(1500L)
+            val s = service ?: return@launch
+            if (s.currentMediaWrapper?.uri != uri || isFinishing) return@launch
+            val wanted = org.videolan.vlc.util.OnlineSubtitles.wantedLanguages(ctx)
+            if (wanted.isEmpty()) return@launch
+            val local = rdLocalSubtitleLanguages(wanted)
+            if (wanted[0] in local) return@launch
+            val (media, downloaded) = withContext(Dispatchers.IO) {
+                val m = org.videolan.vlc.util.OnlineSubtitles.mediaOf(uri, mw.title)
+                Pair(m, wanted.any { org.videolan.vlc.util.OnlineSubtitles.hasDownloaded(ctx, m, it) })
+            }
+            if (downloaded) return@launch
+            val outcome = org.videolan.vlc.util.OnlineSubtitles.searchAll(ctx, media)
+            val pick = outcome.bestOf(wanted[0]) ?: wanted.getOrNull(1)?.takeIf { it !in local }?.let { outcome.bestOf(it) } ?: return@launch
+            if (service?.currentMediaWrapper?.uri != uri || isFinishing) return@launch
+            val (file, _) = org.videolan.vlc.util.OnlineSubtitles.download(ctx, pick.result, media)
+            if (file == null || service?.currentMediaWrapper?.uri != uri || isFinishing) return@launch
+            rdAddOnlineSubtitle(file, pick.result, select = true)
+            overlayDelegate.showInfo(org.videolan.vlc.gui.dialogs.RdOnlineSubtitlesSheet.loadedText(ctx, pick.result), 3000)
+        }
+    }
+
+    /** the user's languages the video has subtitles of already: its tracks' languages, or their names */
+    private fun rdLocalSubtitleLanguages(wanted: List<String>): Set<String> {
+        val found = HashSet<String>()
+        for (track in getCurrentMediaTracks()) {
+            if (track.type != IMedia.Track.Type.Text) continue
+            org.videolan.vlc.util.OnlineSubtitles.normalize(track.language).takeIf { it.isNotEmpty() }?.let { found.add(it) }
+        }
+        for (sub in addedExternalSubs) found.add(org.videolan.vlc.util.OnlineSubtitles.normalize(sub.subLanguageID))
+        // a file next to the video ("Track 2 - [Hebrew]", "Sintel.he.srt")
+        service?.spuTracks?.forEach { t ->
+            val name = t.getName().lowercase(java.util.Locale.ROOT)
+            for (code in wanted) {
+                val english = java.util.Locale(code.substringBefore('-')).getDisplayLanguage(java.util.Locale.ENGLISH).lowercase(java.util.Locale.ROOT)
+                val native = org.videolan.vlc.util.OnlineSubtitles.nativeName(code).lowercase(java.util.Locale.ROOT)
+                if ((english.isNotEmpty() && english in name) || (native.isNotEmpty() && native in name)) found.add(code)
+            }
+        }
+        return found
+    }
+
     private fun onPlaying() {
         val mw = service?.currentMediaWrapper ?: return
         isPlaying = true
@@ -1988,6 +2056,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         }
         setESTracks()
         applySeriesPreset()
+        rdAutoOnlineSubtitles()
         if (overlayDelegate.isHudRightBindingInitialized() && (overlayDelegate.hudRightBinding.playerOverlayTitle.length() == 0 || PlaybackService.hasRenderer()))
             overlayDelegate.setTitle(mw.title)
         // Get possible subtitles

@@ -27,7 +27,7 @@
     <string name="rd_help_threads">Talet på trådar som vert brukte til dekoding, 0 tyder automatisk</string>
     <string name="rd_ob_whole_device">Heile eininga</string>
     <string name="rd_ob_folders_count">%1$s og %2$d til</string>
-    <string name="rd_ob_online_text">Ingen telemetri, ingen reklame, ingen konto: VLC for Android sender ingenting av seg sjølv. Desse vala ligg i Innstillingar, Personvern.</string>
+    <string name="rd_ob_online_text">Ingen telemetri, ingen reklame, ingen konto. Det som går på nettet av seg sjølv, seier det under seg og sender berre det som står der. Desse vala finst òg i Innstillingar.</string>
     <string name="rd_ob_history_help">Vert berre lagra på denne eininga, så du kan halda fram der du slapp.</string>
     <string name="rd_ob_updates_help">Ser etter ein nyare testversjon av VLC for Android éin gong om dagen.</string>
     <string-array name="rd_whats_new_items">

@@ -1877,6 +1877,8 @@ class PlaybackService : MediaBrowserServiceCompat(), LifecycleOwner, CoroutineSc
     @MainThread
     fun addSubtitleTrack(uri: Uri, select: Boolean) = playlistManager.player.addSubtitleTrack(uri, select)
 
+    fun addUtf8SubtitleTrack(path: String, select: Boolean) = playlistManager.player.addUtf8SubtitleTrack(path, select)
+
     @MainThread
     fun setSpuTrack(index: String) = playlistManager.setSpuTrack(index)
 

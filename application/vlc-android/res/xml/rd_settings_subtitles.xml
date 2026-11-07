@@ -19,6 +19,65 @@
             android:summary="%s"
             android:title="@string/rd_text_encoding" />
     </PreferenceCategory>
+    <!-- VLC Redesign: the desktop's "Second Language & Online Subtitles" (SettingsSubtitleLanguages.qml), then the
+         services asked online (OnlineSubtitles): four free ones without an account, and OpenSubtitles.com with the
+         user's own free key, with where to get it -->
+    <PreferenceCategory android:title="@string/rd_os_section">
+        <org.videolan.vlc.gui.preferences.rd.RdListPreference
+            android:defaultValue=""
+            android:key="rd_sub_second_language"
+            android:persistent="true"
+            android:title="@string/rd_os_second" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="rd_sub_online_auto"
+            android:summary="@string/rd_os_auto_help"
+            android:title="@string/rd_os_auto_settings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/rd_os_services">
+        <Preference
+            android:key="rd_sub_services_help"
+            android:selectable="false"
+            android:summary="@string/rd_os_services_help" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rd_sub_service_opensubtitles"
+            android:summary="@string/rd_os_svc_opensubtitles"
+            android:title="@string/rd_os_name_opensubtitles" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rd_sub_service_wizdom"
+            android:summary="@string/rd_os_svc_wizdom"
+            android:title="@string/rd_os_name_wizdom" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rd_sub_service_addic7ed"
+            android:summary="@string/rd_os_svc_addic7ed"
+            android:title="@string/rd_os_name_addic7ed" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rd_sub_service_yify"
+            android:summary="@string/rd_os_svc_yify"
+            android:title="@string/rd_os_name_yify" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rd_sub_service_opensubtitlescom"
+            android:summary="@string/rd_os_svc_oscom"
+            android:title="@string/rd_os_name_oscom" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_opensubtitles_api_key"
+            android:title="@string/rd_os_key" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_opensubtitles_username"
+            android:title="@string/rd_os_username" />
+        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
+            android:key="rd_opensubtitles_password"
+            android:title="@string/rd_os_password" />
+        <org.videolan.vlc.gui.preferences.rd.RdActionPreference
+            android:key="rd_opensubtitles_help"
+            android:summary="@string/rd_os_key_help"
+            android:title="@string/rd_os_key_how" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/rd_sec_loading_subtitles">
         <CheckBoxPreference
             android:defaultValue="true"

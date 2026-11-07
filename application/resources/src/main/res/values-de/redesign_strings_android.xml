@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Entfernt die Kammlinien von Interlaced-Video (TV-Aufnahmen). Wirkt auf Video, das VLC decodiert, nicht der Hardware-Decoder.</string>
     <string name="rd_ob_whole_device">Das ganze Gerät</string>
     <string name="rd_ob_folders_count">%1$s und %2$d weitere</string>
-    <string name="rd_ob_online_text">Keine Telemetrie, keine Werbung, kein Konto: VLC for Android sendet von sich aus nichts. Diese Einstellungen finden Sie unter Einstellungen, Datenschutz.</string>
+    <string name="rd_ob_online_text">Keine Telemetrie, keine Werbung, kein Konto. Was von sich aus online geht, sagt es darunter und sendet nur, was dort steht. Diese Auswahl bleibt in den Einstellungen.</string>
     <string name="rd_ob_history_help">Nur auf diesem Gerät gespeichert, um dort weiterzumachen, wo Sie aufgehört haben.</string>
     <string name="rd_ob_updates_help">Sucht einmal täglich nach einer neueren Testversion von VLC for Android.</string>
     <string-array name="rd_whats_new_items">

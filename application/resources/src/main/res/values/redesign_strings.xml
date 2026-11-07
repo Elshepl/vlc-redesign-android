@@ -288,7 +288,7 @@
     <string name="rd_finish">Finish</string>
     <string name="rd_ob_whole_device">The whole device</string>
     <string name="rd_ob_folders_count">%1$s and %2$d more</string>
-    <string name="rd_ob_online_text">No telemetry, no ads, no account: VLC for Android sends nothing by itself. These choices stay in Settings, Privacy.</string>
+    <string name="rd_ob_online_text">No telemetry, no ads, no account. What goes online by itself says so under it, and sends only what is written there. These choices stay in Settings.</string>
     <string name="rd_ob_history_help">Kept on this device only, to continue where you left off.</string>
     <string name="rd_ob_updates_help">Looks for a newer test build of VLC for Android once a day.</string>
     <string-array name="rd_accent_entries" translatable="false">
@@ -486,4 +486,62 @@
     <string name="rd_volume_left_side">Left side</string>
     <string name="rd_volume_top_right">Top right corner</string>
     <string name="rd_volume_top_left">Top left corner</string>
+    <!-- Subtitles from the internet (OnlineSubtitles, RdOnlineSubtitlesSheet): the desktop's own wording -->
+    <string name="rd_os_search">Search subtitles online</string>
+    <string name="rd_os_search_again">Search subtitles online again</string>
+    <string name="rd_os_searching">Searching subtitles online…</string>
+    <string name="rd_os_identifying">Identifying the video…</string>
+    <string name="rd_os_looking">Looking for subtitles…</string>
+    <string name="rd_os_found">%1$s · %2$s found</string>
+    <string name="rd_os_downloads">%1$s downloads</string>
+    <string name="rd_os_downloads_k">%1$sk downloads</string>
+    <string name="rd_os_downloading">Downloading…</string>
+    <string name="rd_os_downloaded_from">Downloaded from %1$s</string>
+    <string name="rd_os_hi">For the hearing impaired</string>
+    <string name="rd_os_for_file">For this file</string>
+    <string name="rd_os_foreign">Foreign parts only</string>
+    <string name="rd_os_another">The video is another one: search by its title</string>
+    <string name="rd_os_title_hint">Title of the movie or series</string>
+    <string name="rd_os_unknown_language">Unknown language</string>
+    <string name="rd_os_auto">Find subtitles online automatically</string>
+    <string name="rd_os_auto_settings">Find subtitles online when a video has none in these languages</string>
+    <string name="rd_os_auto_help">When a video has none in your languages: its name and a fingerprint of the file to subtitle services (OpenSubtitles.org, Wizdom, Gestdown, YIFY Subtitles), its name to IMDb, Wikidata and Cinemeta to know the film.</string>
+    <string name="rd_os_second">Second language (when there are none in the preferred one)</string>
+    <string name="rd_os_section">Second Language &amp; Online Subtitles</string>
+    <string name="rd_os_services">Subtitle services</string>
+    <string name="rd_os_services_help">To find subtitles, the services turned on get the video\'s title, its IMDb id, its file name and hash (made from a part of the file), and nothing else.</string>
+    <string name="rd_os_svc_opensubtitles">All languages · movies and series · finds those made for your file</string>
+    <string name="rd_os_svc_wizdom">Hebrew · movies and series</string>
+    <string name="rd_os_svc_addic7ed">Series · many languages</string>
+    <string name="rd_os_svc_yify">Movies · many languages</string>
+    <string name="rd_os_err_no_answer">%1$s didn\'t answer.</string>
+    <string name="rd_os_err_busy">%1$s asks to wait a moment (too many searches).</string>
+    <string name="rd_os_err_status">%1$s didn\'t answer (%2$s).</string>
+    <string name="rd_os_err_rar">This subtitle comes as a RAR archive, which can\'t be opened here.</string>
+    <string name="rd_os_err_unpack">The subtitle couldn\'t be unpacked.</string>
+    <string name="rd_os_err_no_sub">The archive has no subtitle in it.</string>
+    <string name="rd_os_err_vip">OpenSubtitles keeps this subtitle for its paying members. Choose another one.</string>
+    <string name="rd_os_err_empty">The subtitle is empty.</string>
+    <string name="rd_os_err_save">The subtitle couldn\'t be saved.</string>
+    <string name="rd_os_err_offline">No connection to the internet.</string>
+    <string name="rd_os_err_download">The subtitle couldn\'t be downloaded (%1$s).</string>
+    <string name="rd_os_err_unidentified">The video couldn\'t be identified from its name.</string>
+    <string name="rd_os_err_not_found_title">\"%1$s\" wasn\'t found. Search for its title.</string>
+    <string name="rd_os_err_none_for">No subtitles were found for %1$s.</string>
+    <string name="rd_os_key">OpenSubtitles API key</string>
+    <string name="rd_os_username">Username</string>
+    <string name="rd_os_password">Password</string>
+    <string name="rd_os_login_failed">OpenSubtitles login failed. Check your account credentials.</string>
+    <!-- the user's own free OpenSubtitles.com key, and where to get it -->
+    <string name="rd_os_key_how">How to get a free key</string>
+    <string name="rd_os_key_help">No key yet? It\'s free: sign up on opensubtitles.com, open API consumers (opensubtitles.com/en/consumers), choose New consumer, name it (VLC Redesign) and copy its API key here. Your account\'s username and password raise how many subtitles you can download a day.</string>
+    <string name="rd_os_svc_oscom">All languages · movies and series · with your own free key</string>
+    <string name="rd_os_key_refused">%1$s: the API key was refused.</string>
+    <string name="rd_os_quota">%1$s: today\'s downloads are used up. Your account\'s username and password raise them.</string>
+    <string name="rd_os_more_with_key">More subtitles with your own free OpenSubtitles.com key: Settings › Subtitles.</string>
+    <string name="rd_os_name_opensubtitles" translatable="false">OpenSubtitles</string>
+    <string name="rd_os_name_wizdom" translatable="false">Wizdom</string>
+    <string name="rd_os_name_addic7ed" translatable="false">Addic7ed</string>
+    <string name="rd_os_name_yify" translatable="false">YIFY Subtitles</string>
+    <string name="rd_os_name_oscom" translatable="false">OpenSubtitles.com</string>
 </resources>

@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Elimina as liñas de peite do vídeo entrelazado (gravacións de TV). Funciona co vídeo que descodifica VLC, non o descodificador por hardware.</string>
     <string name="rd_ob_whole_device">Todo o dispositivo</string>
     <string name="rd_ob_folders_count">%1$s e %2$d máis</string>
-    <string name="rd_ob_online_text">Sen telemetría, sen anuncios, sen conta: VLC for Android non envía nada por si mesmo. Estas opcións quedan en Configuración, Privacidade.</string>
+    <string name="rd_ob_online_text">Sen telemetría, sen anuncios, sen conta. O que se conecta a internet por si mesmo indícao debaixo e só envía o que alí está escrito. Estas opcións quedan en Configuración.</string>
     <string name="rd_ob_history_help">Gárdase só neste dispositivo, para continuar onde o deixaches.</string>
     <string name="rd_ob_updates_help">Busca unha versión de proba máis recente de VLC for Android unha vez ao día.</string>
     <string-array name="rd_whats_new_items">
