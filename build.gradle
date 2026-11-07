@@ -63,15 +63,15 @@ ext {
     // VLC Redesign's own: it installs beside VideoLAN's VLC (org.videolan.vlc)
     appId = "org.kuchisofts.vlcredesign"
     // VLC Redesign: the app's own version (About, release notes); the libvlc base stays upstream's 3.7.2.
-    // versionCode keeps upstream's scheme (below) for the upstream base 3.7.2 = 30702xx and puts the redesign
-    // release counter in the tens digit of AA (the last digit stays the ABI, added per APK): 0.5.0 = 3070250.
-    // A redesign release on the same upstream base raises redesignBuild (at most 9); an upstream merge resets it.
+    // versionCode from the redesign's version (from 0.5.5): 3100000 + 10 * (major * 10000 + minor * 100 + patch),
+    // so 0.5.5 = 3105050. It only grows with the version, whatever upstream's base (its own scheme put the redesign's
+    // release counter in one digit of upstream's 3.7.2 = 30702xx: 0.5.0 = 3070250 ... 0.5.4 = 3070290, the last).
+    // The last digit stays the ABI's (added per APK, below), and every code is above 0.5.4's.
     redesignVersionName = '0.5.4'
-    redesignBuild = 9
-    versionCode = 3070200 + 10 * redesignBuild
+    versionCode = redesignVersionName.tokenize('.').with { v -> 3100000 + 10 * (v[0].toInteger() * 10000 + v[1].toInteger() * 100 + v[2].toInteger()) }
     vlcMajorVersion = project.hasProperty('forceVlc4') && project.getProperty('forceVlc4') ? 4 : 3
     versionName = vlcMajorVersion == 3 ? redesignVersionName : '4.0.0-preview - ' + versionCode
-    remoteAccessVersion = '0.26.0'
+    remoteAccessVersion = '0.27.0'
     libvlcVersion = vlcMajorVersion == 3 ? '3.7.7' :'4.0.0-eap29'
     medialibraryVersion = (vlcMajorVersion == 3 ? '0.13.24' : '0.13.22-vlc4')
 

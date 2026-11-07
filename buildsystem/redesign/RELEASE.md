@@ -4,10 +4,11 @@
 
 - `redesignVersionName` (root `build.gradle`) is the app's version: About, What's new and the APK name
   (`VLC-Android-<version>-<abi>.apk`). It follows the desktop's VLC Redesign version.
-- `versionCode` keeps upstream's scheme for the libvlc base (3.7.2 = `30702xx`) and puts the redesign release
-  counter `redesignBuild` in the tens digit (0.4.0 = `3070240`); each APK adds `10000000` and its ABI digit
-  (arm64-v8a = `13070246`). Raise `redesignBuild` for every release on the same upstream base (at most 9);
-  reset it to 0 when an upstream merge moves the base (for example 3.7.3 = `3070300`).
+- `versionCode` comes from `redesignVersionName` (from 0.5.5): `3100000 + 10 * (major * 10000 + minor * 100 +
+  patch)`, so 0.5.5 = `3105050`; each APK adds `10000000` and its ABI digit (arm64-v8a = `13105056`). Nothing to
+  raise by hand, and it only grows with the version whatever upstream's base. (Up to 0.5.4 the code was upstream's
+  3.7.2 = `30702xx` with a release counter in the tens digit: 0.5.4 = `3070290`, its last step; every new code is
+  above it, so 0.5.5 installs over 0.5.4.)
 
 ## Signing
 
