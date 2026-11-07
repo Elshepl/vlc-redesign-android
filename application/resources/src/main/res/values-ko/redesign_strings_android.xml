@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">이 기기에만 저장되며, 멈춘 곳부터 이어서 보는 데 쓰입니다.</string>
     <string name="rd_ob_updates_help">하루에 한 번 VLC for Android의 새 테스트 빌드를 확인합니다.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: 재생 목록과 앨범이 디자인의 창에서 카드와 행과 함께 열립니다.</item>
-        <item>TV에서 디자인의 메뉴: 항목에서 OK를 길게 누르면(또는 Menu를 누르면) 메뉴가 열립니다.</item>
-        <item>TV에서 새 재생 목록: TV 저장소에서 파일을 고릅니다.</item>
+        <item>Android TV: 백그라운드와 목록 스크롤 중 작업을 줄여 더 가볍고 부드러워졌습니다.</item>
+        <item>모든 언어의 번역을 최신으로 업데이트했습니다.</item>
     </string-array>
     <string name="rd_subtitle_size">자막 크기</string>
     <string name="rd_cast_this_phone">이 휴대전화</string>

@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: atskaņošanas saraksti un albumi atveras dizaina logā ar tā kartītēm un rindām.</item>
-        <item>Dizaina izvēlnes televizorā: turiet OK (vai nospiediet Menu) uz vienuma, lai atvērtu tā izvēlni.</item>
-        <item>Jauns atskaņošanas saraksts televizorā ar failiem no televizora krātuves.</item>
+        <item>Android TV: vieglāks un plūdenāks, ar mazāk darba fonā un ritinot sarakstus.</item>
+        <item>Tulkojumi atjaunināti visās valodās.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitru izmērs</string>
     <string name="rd_cast_this_phone">Šis tālrunis</string>

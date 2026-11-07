@@ -32,9 +32,8 @@
     <string name="rd_ob_history_help">يُحفظ على هذا الجهاز فقط، للمتابعة من حيث توقفت.</string>
     <string name="rd_ob_updates_help">يبحث مرة في اليوم عن إصدار تجريبي أحدث من VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: تُفتح قوائم التشغيل والألبومات في نافذة التصميم، ببطاقاته وصفوفه.</item>
-        <item>قوائم التصميم على التلفاز: اضغط مطولاً على OK (أو اضغط Menu) على عنصر لفتح قائمته.</item>
-        <item>قائمة تشغيل جديدة على التلفاز، مع ملفات تُختار من ذاكرة التلفاز.</item>
+        <item>Android TV: أخف وأكثر سلاسة، مع عمل أقل في الخلفية وأثناء تمرير القوائم.</item>
+        <item>تحديث الترجمات في كل اللغات.</item>
     </string-array>
     <string name="rd_subtitle_size">حجم الترجمة</string>
     <string name="rd_cast_this_phone">هذا الهاتف</string>

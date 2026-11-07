@@ -32,9 +32,8 @@
     <string name="rd_ob_history_help">فقط روی همین دستگاه نگه داشته می‌شود، تا از جایی که رها کرده‌اید ادامه دهید.</string>
     <string name="rd_ob_updates_help">روزی یک بار به دنبال نسخهٔ آزمایشی تازه‌تری از VLC for Android می‌گردد.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: فهرست‌های پخش و آلبوم‌ها در پنجرهٔ طراحی با کارت‌ها و ردیف‌هایش باز می‌شوند.</item>
-        <item>منوهای طراحی در تلویزیون: OK را نگه دارید (یا Menu را بزنید) تا منوی یک مورد باز شود.</item>
-        <item>فهرست پخش تازه در تلویزیون، با پرونده‌هایی از حافظهٔ تلویزیون.</item>
+        <item>Android TV: سبک‌تر و روان‌تر، با کار کمتر در پس‌زمینه و هنگام پیمایش فهرست‌ها.</item>
+        <item>ترجمه‌ها در همهٔ زبان‌ها به‌روز شدند.</item>
     </string-array>
     <string name="rd_subtitle_size">اندازهٔ زیرنویس</string>
     <string name="rd_cast_this_phone">این تلفن</string>

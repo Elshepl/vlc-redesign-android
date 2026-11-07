@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Зберігається лише на цьому пристрої, щоб продовжити з того місця, де ви зупинилися.</string>
     <string name="rd_ob_updates_help">Раз на день перевіряє, чи немає новішої тестової збірки VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: плейлисти й альбоми відкриваються у вікні дизайну, з його картками й рядками.</item>
-        <item>Меню дизайну на ТБ: утримуйте OK (або натисніть Menu) на елементі, щоб відкрити його меню.</item>
-        <item>Новий плейлист на ТБ із файлами, вибраними зі сховища ТБ.</item>
+        <item>Android TV: легше й плавніше, менше роботи у фоні та під час прокручування списків.</item>
+        <item>Переклади оновлено всіма мовами.</item>
     </string-array>
     <string name="rd_subtitle_size">Розмір субтитрів</string>
     <string name="rd_cast_this_phone">Цей телефон</string>

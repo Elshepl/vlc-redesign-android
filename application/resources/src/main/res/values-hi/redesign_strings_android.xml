@@ -32,9 +32,8 @@
     <string name="rd_ob_history_help">केवल इसी डिवाइस पर रखा जाता है, ताकि आप वहीं से जारी रख सकें जहाँ आपने छोड़ा था।</string>
     <string name="rd_ob_updates_help">दिन में एक बार VLC for Android का नया परीक्षण बिल्ड खोजता है।</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: प्लेलिस्ट और एल्बम डिज़ाइन की विंडो में, उसके कार्ड और पंक्तियों के साथ खुलते हैं।</item>
-        <item>टीवी पर डिज़ाइन के मेनू: किसी आइटम का मेनू खोलने के लिए OK दबाए रखें (या Menu दबाएँ)।</item>
-        <item>टीवी पर नई प्लेलिस्ट, टीवी के स्टोरेज से चुनी गई फ़ाइलों के साथ।</item>
+        <item>Android TV: हल्का और सहज, पृष्ठभूमि में और सूचियाँ स्क्रॉल करते समय कम काम।</item>
+        <item>सभी भाषाओं में अनुवाद अपडेट किए गए।</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षक का आकार</string>
     <string name="rd_cast_this_phone">यह फ़ोन</string>

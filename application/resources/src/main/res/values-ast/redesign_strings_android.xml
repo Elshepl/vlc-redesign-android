@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: les llistes de reproducción y los álbumes ábrense na ventana del diseñu, coles sos tarxetes y fileres.</item>
-        <item>Los menús del diseñu na TV: caltén OK (o primi Menú) nun elementu p\'abrir el so menú.</item>
-        <item>Llista nueva na TV, colos ficheros escoyíos del almacenamientu de la TV.</item>
+        <item>Android TV: más llixeru y fluyíu, con menos trabayu en segundu planu y al desplazar les llistes.</item>
+        <item>Les traducciones anováronse en toles llingües.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

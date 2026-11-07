@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Uchováva sa iba v tomto zariadení, aby ste mohli pokračovať tam, kde ste skončili.</string>
     <string name="rd_ob_updates_help">Raz denne hľadá novšiu testovaciu zostavu VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: playlisty a albumy sa otvárajú v okne dizajnu, s jeho kartami a riadkami.</item>
-        <item>Ponuky dizajnu na TV: podržte OK (alebo stlačte Menu) na položke a otvorí sa jej ponuka.</item>
-        <item>Nový playlist na TV so súbormi vybranými z úložiska TV.</item>
+        <item>Android TV: ľahší a plynulejší, menej práce na pozadí a pri posúvaní zoznamov.</item>
+        <item>Preklady aktualizované vo všetkých jazykoch.</item>
     </string-array>
     <string name="rd_subtitle_size">Veľkosť titulkov</string>
     <string name="rd_cast_this_phone">Tento telefón</string>

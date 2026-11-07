@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: les llistes de reproducció i els àlbums s\'obren a la finestra del disseny, amb les seves targetes i files.</item>
-        <item>Els menús del disseny a la TV: manteniu premut OK (o premeu Menú) en un element per obrir-ne el menú.</item>
-        <item>Llista nova a la TV, amb els fitxers triats de l\'emmagatzematge de la TV.</item>
+        <item>Android TV: més lleuger i fluid, amb menys feina en segon pla i en desplaçar les llistes.</item>
+        <item>Traduccions actualitzades en totes les llengües.</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

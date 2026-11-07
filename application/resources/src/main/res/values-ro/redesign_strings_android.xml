@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: listele de redare și albumele se deschid în fereastra designului, cu cardurile și rândurile sale.</item>
-        <item>Meniurile designului pe televizor: țineți apăsat OK (sau apăsați Menu) pe un element pentru a-i deschide meniul.</item>
-        <item>Listă de redare nouă pe televizor, cu fișiere alese din memoria televizorului.</item>
+        <item>Android TV: mai ușor și mai fluid, cu mai puțină muncă în fundal și la derularea listelor.</item>
+        <item>Traduceri actualizate în toate limbile.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
     <string name="rd_cast_this_phone">Acest telefon</string>

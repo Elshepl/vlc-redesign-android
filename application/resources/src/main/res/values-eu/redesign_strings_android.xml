@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
     <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: erreprodukzio-zerrendak eta albumak diseinuaren leihoan irekitzen dira, bere txartel eta errenkadekin.</item>
-        <item>Diseinuaren menuak telebistan: eutsi OK (edo sakatu Menu) elementu batean bere menua irekitzeko.</item>
-        <item>Erreprodukzio-zerrenda berria telebistan, telebistaren biltegiko fitxategiekin.</item>
+        <item>Android TV: arinagoa eta leunagoa, lan gutxiagorekin atzeko planoan eta zerrendak korritzean.</item>
+        <item>Itzulpenak hizkuntza guztietan eguneratuta.</item>
     </string-array>
     <string name="rd_subtitle_size">Azpitituluen tamaina</string>
     <string name="rd_cast_this_phone">Telefono hau</string>

@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: oynatma listeleri ve albümler, tasarımın penceresinde kartları ve satırlarıyla açılır.</item>
-        <item>Tasarımın menüleri TV\'de: bir öğenin menüsünü açmak için OK\'a basılı tutun (veya Menu\'ya basın).</item>
-        <item>TV\'de yeni oynatma listesi, TV\'nin depolama alanından seçilen dosyalarla.</item>
+        <item>Android TV: arka planda ve listeler kaydırılırken daha az işle daha hafif ve akıcı.</item>
+        <item>Çeviriler tüm dillerde güncellendi.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

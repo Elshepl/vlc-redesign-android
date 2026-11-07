@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Przechowywana tylko na tym urządzeniu, aby kontynuować od miejsca, w którym przerwano.</string>
     <string name="rd_ob_updates_help">Raz dziennie sprawdza, czy jest nowsza testowa wersja VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: playlisty i albumy otwierają się w oknie projektu, z jego kartami i wierszami.</item>
-        <item>Menu projektu na telewizorze: przytrzymaj OK (lub naciśnij Menu) na elemencie, aby otworzyć jego menu.</item>
-        <item>Nowa playlista na telewizorze, z plikami wybranymi z pamięci telewizora.</item>
+        <item>Android TV: lżejszy i płynniejszy, mniej pracy w tle i podczas przewijania list.</item>
+        <item>Tłumaczenia zaktualizowane we wszystkich językach.</item>
     </string-array>
     <string name="rd_subtitle_size">Rozmiar napisów</string>
     <string name="rd_cast_this_phone">Ten telefon</string>

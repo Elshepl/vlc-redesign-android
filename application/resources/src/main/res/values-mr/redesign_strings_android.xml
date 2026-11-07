@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">फक्त याच उपकरणावर ठेवले जाते, तुम्ही जिथे थांबला होता तिथून पुढे चालू करण्यासाठी.</string>
     <string name="rd_ob_updates_help">दिवसातून एकदा VLC for Android ची नवी चाचणी आवृत्ती शोधते.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: प्लेलिस्ट आणि अल्बम डिझाइनच्या खिडकीत, तिच्या कार्ड आणि ओळींसह उघडतात.</item>
-        <item>टीव्हीवर डिझाइनचे मेनू: एखाद्या आयटमचा मेनू उघडण्यासाठी OK दाबून ठेवा (किंवा Menu दाबा).</item>
-        <item>टीव्हीवर नवीन प्लेलिस्ट, टीव्हीच्या स्टोरेजमधून निवडलेल्या फायलींसह.</item>
+        <item>Android TV: पार्श्वभूमीत आणि याद्या स्क्रोल करताना कमी काम, अधिक हलके आणि सहज.</item>
+        <item>सर्व भाषांमधील भाषांतरे अद्ययावत केली.</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षकाचा आकार</string>
     <string name="rd_cast_this_phone">हा फोन</string>

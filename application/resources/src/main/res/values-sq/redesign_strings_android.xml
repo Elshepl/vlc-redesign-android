@@ -32,9 +32,8 @@
     <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
     <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: listat e luajtjes dhe albumet hapen në dritaren e dizajnit, me kartat dhe rreshtat e tij.</item>
-        <item>Menytë e dizajnit në TV: mbani shtypur OK (ose shtypni Menu) mbi një element për të hapur menynë e tij.</item>
-        <item>Listë e re luajtjeje në TV, me skedarë të zgjedhur nga hapësira e TV-së.</item>
+        <item>Android TV: më i lehtë dhe më i rrjedhshëm, me më pak punë në sfond dhe gjatë lëvizjes së listave.</item>
+        <item>Përkthimet u përditësuan në të gjitha gjuhët.</item>
     </string-array>
     <string name="rd_subtitle_size">Madhësia e titrave</string>
     <string name="rd_cast_this_phone">Ky telefon</string>

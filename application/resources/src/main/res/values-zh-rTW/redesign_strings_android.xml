@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">只儲存在這部裝置上，用來從上次停止的地方繼續。</string>
     <string name="rd_ob_updates_help">每天檢查一次是否有較新的 VLC for Android 測試版。</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV：播放清單和專輯在設計的視窗中開啟，帶有它的卡片和列。</item>
-        <item>電視上的設計選單：在項目上按住 OK（或按 Menu）即可開啟其選單。</item>
-        <item>電視上的新增播放清單，可從電視儲存空間選擇檔案。</item>
+        <item>Android TV：背景與清單捲動時的工作更少，更輕快流暢。</item>
+        <item>所有語言的翻譯均已更新。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">這支手機</string>

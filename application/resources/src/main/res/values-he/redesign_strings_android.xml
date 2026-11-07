@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">נשמר במכשיר הזה בלבד, כדי להמשיך מהמקום שבו הפסקת.</string>
     <string name="rd_ob_updates_help">מחפש גרסת בדיקה חדשה יותר של VLC for Android פעם ביום.</string>
     <string-array name="rd_whats_new_items">
-        <item>ב־Android TV רשימות השמעה ואלבומים נפתחים בחלון של העיצוב, עם הכרטיסים והשורות שלו.</item>
-        <item>התפריטים של העיצוב בטלוויזיה: לחיצה ארוכה על OK (או על Menu) בפריט פותחת את התפריט שלו.</item>
-        <item>רשימת השמעה חדשה בטלוויזיה, עם קבצים שנבחרים מהאחסון של הטלוויזיה.</item>
+        <item>ב־Android TV קל וחלק יותר, עם פחות עבודה ברקע ובזמן גלילת רשימות.</item>
+        <item>התרגומים עודכנו בכל השפות.</item>
     </string-array>
     <string name="rd_fx_luma_spat">עוצמת בהירות מרחבית (0-254)</string>
     <string name="rd_fx_luma_temp">עוצמת בהירות זמנית (0-254)</string>

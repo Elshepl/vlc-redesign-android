@@ -31,9 +31,8 @@
     <string name="rd_ob_history_help">Чува се само на овом уређају, да наставите где сте стали.</string>
     <string name="rd_ob_updates_help">Једном дневно тражи новију пробну верзију VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: плејлисте и албуми се отварају у прозору дизајна, са његовим картицама и редовима.</item>
-        <item>Менији дизајна на ТВ-у: држите OK (или притисните Menu) на ставци да отворите њен мени.</item>
-        <item>Нова плејлиста на ТВ-у, са датотекама из меморије ТВ-а.</item>
+        <item>Android TV: лакши и глаткији, са мање рада у позадини и при померању листа.</item>
+        <item>Преводи ажурирани на свим језицима.</item>
     </string-array>
     <string name="rd_subtitle_size">Величина титлова</string>
     <string name="rd_cast_this_phone">Овај телефон</string>

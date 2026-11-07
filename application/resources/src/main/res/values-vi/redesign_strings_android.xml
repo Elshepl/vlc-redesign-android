@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: danh sách phát và album mở trong cửa sổ của thiết kế, với thẻ và hàng của nó.</item>
-        <item>Menu của thiết kế trên TV: giữ OK (hoặc nhấn Menu) trên một mục để mở menu của mục đó.</item>
-        <item>Danh sách phát mới trên TV, với tệp chọn từ bộ nhớ của TV.</item>
+        <item>Android TV: nhẹ và mượt hơn, ít xử lý nền và khi cuộn danh sách hơn.</item>
+        <item>Bản dịch được cập nhật ở mọi ngôn ngữ.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

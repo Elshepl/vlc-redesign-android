@@ -32,9 +32,8 @@
     <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
     <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lîsteyên lêdanê û albûm di pencereya sêwiranê de bi kart û rêzên wê vedibin.</item>
-        <item>Menûyên sêwiranê li ser TV: OK bigire (an Menu bitikîne) li ser hêmanekê da ku menûya wê vebe.</item>
-        <item>Lîsteya lêdanê ya nû li ser TV, bi pelên ji bîrbara TV.</item>
+        <item>Android TV: siviktir û nermtir, bi karê kêmtir li paşxanê û dema lîste tên gerandin.</item>
+        <item>Werger di hemû zimanan de hatin nûkirin.</item>
     </string-array>
     <string name="rd_subtitle_size">قەبارەی ژێرنووس</string>
     <string name="rd_cast_this_phone">ئەم مۆبایلە</string>

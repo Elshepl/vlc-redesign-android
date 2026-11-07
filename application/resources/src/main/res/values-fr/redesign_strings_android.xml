@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Conservé sur cet appareil uniquement, pour reprendre là où vous vous êtes arrêté.</string>
     <string name="rd_ob_updates_help">Recherche une version de test plus récente de VLC for Android une fois par jour.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV : les listes de lecture et les albums s\'ouvrent dans la fenêtre du design, avec ses cartes et ses lignes.</item>
-        <item>Les menus du design sur la TV : maintenez OK (ou appuyez sur Menu) sur un élément pour ouvrir son menu.</item>
-        <item>Nouvelle liste de lecture sur la TV, avec des fichiers choisis dans le stockage de la TV.</item>
+        <item>Android TV : plus léger et plus fluide, avec moins de travail en arrière-plan et pendant le défilement des listes.</item>
+        <item>Traductions mises à jour dans toutes les langues.</item>
     </string-array>
     <string name="rd_subtitle_size">Taille des sous-titres</string>
     <string name="rd_cast_this_phone">Ce téléphone</string>

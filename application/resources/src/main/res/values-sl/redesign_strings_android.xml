@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Shranjeno samo v tej napravi, da lahko nadaljujete tam, kjer ste končali.</string>
     <string name="rd_ob_updates_help">Enkrat na dan poišče novejšo preizkusno izdajo VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: seznami predvajanja in albumi se odprejo v oknu oblikovanja, z njegovimi karticami in vrsticami.</item>
-        <item>Meniji oblikovanja na TV-ju: pridržite OK (ali pritisnite Menu) na elementu, da odprete njegov meni.</item>
-        <item>Nov seznam predvajanja na TV-ju, z datotekami iz shrambe TV-ja.</item>
+        <item>Android TV: lažji in bolj gladek, z manj dela v ozadju in med drsenjem seznamov.</item>
+        <item>Prevodi posodobljeni v vseh jezikih.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost podnapisov</string>
     <string name="rd_cast_this_phone">Ta telefon</string>

@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
     <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV：プレイリストとアルバムがデザインのウィンドウで、カードと行とともに開きます。</item>
-        <item>テレビでデザインのメニュー：項目で OK を長押し（または Menu を押す）するとメニューが開きます。</item>
-        <item>テレビで新しいプレイリスト：テレビのストレージからファイルを選べます。</item>
+        <item>Android TV：バックグラウンドとリストのスクロール中の処理を減らし、より軽く滑らかに。</item>
+        <item>すべての言語の翻訳を最新化しました。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕のサイズ</string>
     <string name="rd_cast_this_phone">このスマートフォン</string>

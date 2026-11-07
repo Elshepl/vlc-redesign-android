@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
     <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: soittolistat ja albumit avautuvat suunnittelun ikkunaan sen korttien ja rivien kanssa.</item>
-        <item>Suunnittelun valikot televisiossa: pidä OK painettuna (tai paina Menu) kohteen valikon avaamiseksi.</item>
-        <item>Uusi soittolista televisiossa, tiedostot television tallennustilasta.</item>
+        <item>Android TV: kevyempi ja sujuvampi, vähemmän työtä taustalla ja luetteloita vierittäessä.</item>
+        <item>Käännökset päivitetty kaikilla kielillä.</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
     <string name="rd_cast_this_phone">Tämä puhelin</string>

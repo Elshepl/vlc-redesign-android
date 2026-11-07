@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: orodha za kucheza na albamu hufunguka kwenye dirisha la muundo, pamoja na kadi na safu zake.</item>
-        <item>Menyu za muundo kwenye TV: shikilia OK (au bonyeza Menu) kwenye kipengee ili kufungua menyu yake.</item>
-        <item>Orodha mpya ya kucheza kwenye TV, na faili zilizochaguliwa kutoka kwenye hifadhi ya TV.</item>
+        <item>Android TV: nyepesi na laini zaidi, kwa kazi kidogo chinichini na wakati wa kusogeza orodha.</item>
+        <item>Tafsiri zimesasishwa katika lugha zote.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

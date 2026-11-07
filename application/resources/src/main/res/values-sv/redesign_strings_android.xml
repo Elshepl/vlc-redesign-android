@@ -30,9 +30,8 @@
     <string name="rd_ob_history_help">Sparas bara på den här enheten, så att du kan fortsätta där du slutade.</string>
     <string name="rd_ob_updates_help">Letar en gång om dagen efter en nyare testversion av VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: spellistor och album öppnas i designens fönster, med dess kort och rader.</item>
-        <item>Designens menyer på tv:n: håll in OK (eller tryck Meny) på ett objekt för att öppna dess meny.</item>
-        <item>Ny spellista på tv:n, med filer valda från tv:ns lagring.</item>
+        <item>Android TV: lättare och smidigare, med mindre arbete i bakgrunden och när listor rullas.</item>
+        <item>Översättningar uppdaterade på alla språk.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertextstorlek</string>
     <string name="rd_cast_this_phone">Den här telefonen</string>
