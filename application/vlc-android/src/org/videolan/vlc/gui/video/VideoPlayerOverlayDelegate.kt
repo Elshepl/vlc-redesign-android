@@ -1274,8 +1274,9 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
         hideOverlay(true)
         // VLC Redesign: the queue panel keeps clear of the status bar, the cutout and the navigation bar (the
         // player draws under them: its header went under the status bar, its last rows under the buttons)
-        player.window.decorView.rootWindowInsets?.let { wi ->
-            val bars = androidx.core.view.WindowInsetsCompat.toWindowInsetsCompat(wi)
+        // (the window's insets are known from Android 6; none before)
+        androidx.core.view.ViewCompat.getRootWindowInsets(player.window.decorView)?.let { wi ->
+            val bars = wi
                 .getInsetsIgnoringVisibility(androidx.core.view.WindowInsetsCompat.Type.systemBars() or androidx.core.view.WindowInsetsCompat.Type.displayCutout())
             playlistContainer.setPadding(bars.left, bars.top, bars.right, bars.bottom)
         }

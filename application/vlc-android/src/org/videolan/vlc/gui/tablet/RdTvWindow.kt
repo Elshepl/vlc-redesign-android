@@ -502,7 +502,10 @@ object RdTvWindow {
     /** The item's menu (the design's context menu): its menu button's, else its context click */
     private fun itemMenu(item: View) {
         val more = item.findViewById<View>(R.id.item_more)
-        if (more == null || !more.performClick()) item.performContextClick()
+        if (more == null || !more.performClick()) {
+            // (a context click is Android 6; a long click before)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) item.performContextClick() else item.performLongClick()
+        }
     }
 
     /**

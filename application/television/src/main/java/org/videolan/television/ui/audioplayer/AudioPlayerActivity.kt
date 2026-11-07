@@ -440,7 +440,8 @@ class AudioPlayerActivity : BaseTvActivity(),KeycodeListener, PlaybackService.Ca
         }
         val max = am.getStreamMaxVolume(android.media.AudioManager.STREAM_MUSIC).coerceAtLeast(1)
         d.percent = am.getStreamVolume(android.media.AudioManager.STREAM_MUSIC) * 100 / max
-        d.muted = am.isStreamMute(android.media.AudioManager.STREAM_MUSIC)
+        // (a stream's mute is Android 6; a volume of 0 before)
+        d.muted = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) am.isStreamMute(android.media.AudioManager.STREAM_MUSIC) else d.percent == 0
     }
 
     private fun showAdvancedOptions(@Suppress("UNUSED_PARAMETER") v: View?) {

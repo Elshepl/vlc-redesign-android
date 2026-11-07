@@ -53,13 +53,24 @@ object RdTvFocusRing {
         if (view.getTag(R.id.rd_tv_focus_skip) == true) return
         // a list that has the focus itself (between its rows): its rows show the focus, not the whole list
         if (view is androidx.recyclerview.widget.RecyclerView) return
-        view.setTag(R.id.rd_tv_focus_saved, view.foreground ?: NONE)
-        view.foreground = ring(view)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            view.setTag(R.id.rd_tv_focus_saved, view.foreground ?: NONE)
+            view.foreground = ring(view)
+        } else {
+            // a foreground is Android 6 (FrameLayout's only before): the ring is drawn in the view's overlay,
+            // over its content as well, with the view's size
+            val r = ring(view).apply { setBounds(0, 0, view.width, view.height) }
+            view.overlay.add(r)
+            view.setTag(R.id.rd_tv_focus_saved, OverlayRing(r))
+        }
     }
+
+    private class OverlayRing(val drawable: Drawable)
 
     private fun clear(view: View) {
         val saved = view.getTag(R.id.rd_tv_focus_saved) ?: return
-        view.foreground = saved as? Drawable
+        if (saved is OverlayRing) view.overlay.remove(saved.drawable)
+        else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) view.foreground = saved as? Drawable
         view.setTag(R.id.rd_tv_focus_saved, null)
     }
 }

@@ -74,7 +74,7 @@ class RdVolumeMeter @JvmOverloads constructor(context: Context, attrs: Attribute
     fun set(value: Int, maximum: Int) {
         volume = value.coerceIn(0, maximum)
         max = maximum.coerceAtLeast(1)
-        label = NumberFormat.getPercentInstance(resources.configuration.locales[0]).format(volume / 100.0)
+        label = NumberFormat.getPercentInstance(org.videolan.vlc.util.RdCompat.primaryLocale(resources.configuration)).format(volume / 100.0)
         val res = when {
             volume <= 0 -> R.drawable.rd_ic_volume_muted
             volume * 100 / max < 25 -> R.drawable.rd_ic_volume_low
@@ -95,7 +95,7 @@ class RdVolumeMeter @JvmOverloads constructor(context: Context, attrs: Attribute
     private val pad get() = dp(12f)
     private val gap get() = dp(10f)
     private val iconSize get() = dp(24f)
-    private val labelWidth get() = text.measureText(NumberFormat.getPercentInstance(resources.configuration.locales[0]).format(if (max > 100) 2.0 else 1.0))
+    private val labelWidth get() = text.measureText(NumberFormat.getPercentInstance(org.videolan.vlc.util.RdCompat.primaryLocale(resources.configuration)).format(if (max > 100) 2.0 else 1.0))
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val lineH = text.fontSpacing

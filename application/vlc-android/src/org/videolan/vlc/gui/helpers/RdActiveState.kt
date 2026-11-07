@@ -54,7 +54,7 @@ object RdActiveState {
     private fun themeColor(context: Context, attr: Int, fallback: Int): Int {
         val tv = TypedValue()
         if (!context.theme.resolveAttribute(attr, tv, true)) return fallback
-        return if (tv.resourceId != 0) try { context.getColor(tv.resourceId) } catch (e: Exception) { tv.data } else tv.data
+        return if (tv.resourceId != 0) try { org.videolan.vlc.util.RdCompat.color(context, tv.resourceId) } catch (e: Exception) { tv.data } else tv.data
     }
 
     private val NO_TINT = ColorStateList.valueOf(0)

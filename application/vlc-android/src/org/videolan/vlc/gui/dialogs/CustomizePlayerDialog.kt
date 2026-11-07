@@ -155,8 +155,7 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
                     // instead of broken anywhere and its end cut
                     maxLines = 3
                     ellipsize = android.text.TextUtils.TruncateAt.END
-                    hyphenationFrequency = android.text.Layout.HYPHENATION_FREQUENCY_NORMAL
-                    breakStrategy = android.text.Layout.BREAK_STRATEGY_HIGH_QUALITY
+                    org.videolan.vlc.util.RdCompat.hyphenate(this)
                     setPadding(0, 6.dp, 0, 0)
                 })
                 setOnClickListener { add(c.key) }
@@ -249,7 +248,9 @@ class CustomizePlayerDialog : VLCBottomSheetDialogFragment() {
     }
 
     private fun startDrag(v: View, key: String) {
-        v.startDragAndDrop(android.content.ClipData.newPlainText("control", key), View.DragShadowBuilder(v), key, 0)
+        val data = android.content.ClipData.newPlainText("control", key)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) v.startDragAndDrop(data, View.DragShadowBuilder(v), key, 0)
+        else @Suppress("DEPRECATION") v.startDrag(data, View.DragShadowBuilder(v), key, 0)
     }
 
     /** A control dropped in zone [zoneIndex]: before the control under the finger (the zone's end after the last) */

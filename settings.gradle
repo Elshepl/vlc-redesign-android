@@ -12,7 +12,9 @@ plugins {
 def vlcMajorVersion = hasProperty('forceVlc4') && getProperty('forceVlc4') ? 4 : 3
 
 android {
-    minSdk = vlcMajorVersion == 3 ? 17 : 23
+    // VLC Redesign: Android 5.0 (Android TV's first version) at least: the redesign's views use Android 5's API
+    // (elevation, outlines, tints); a later one's calls are checked (util/RdCompat.kt). VideoLAN's 3.x: 17.
+    minSdk = vlcMajorVersion == 3 ? 21 : 23
     targetSdk = 36
     compileSdk = 36 // Dockers: 3.0=36 / 4.0=36
     buildToolsVersion = '36.0.0'

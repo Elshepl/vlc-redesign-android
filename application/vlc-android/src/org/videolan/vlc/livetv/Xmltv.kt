@@ -91,7 +91,10 @@ object Xmltv {
         return key
     }
 
-    private val utc: ThreadLocal<Calendar> = ThreadLocal.withInitial { Calendar.getInstance(TimeZone.getTimeZone("UTC"), Locale.US) }
+    private val utc: ThreadLocal<Calendar> = object : ThreadLocal<Calendar>() {
+        // (ThreadLocal.withInitial is Android 8)
+        override fun initialValue(): Calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"), Locale.US)
+    }
 
     /** "20261025203000 +0300" -> seconds since the epoch, UTC (0 on an error). */
     fun parseTime(text: String): Long {

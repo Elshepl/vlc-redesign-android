@@ -53,8 +53,12 @@ object SubtitleCharset {
         val out = ArrayList<String>()
         preferred?.takeIf { it.isNotEmpty() }?.let { out.add(it) }
         appLocale?.takeIf { it.isNotEmpty() }?.let { out.add(it) }
-        val locales = android.content.res.Resources.getSystem().configuration.locales
-        for (i in 0 until locales.size()) locales[i]?.let { out.add(it.language); if (it.country.isNotEmpty()) out.add(it.language + "_" + it.country) }
+        val config = android.content.res.Resources.getSystem().configuration
+        // (a list of languages since Android 7; one language before)
+        val locales = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N)
+            (0 until config.locales.size()).mapNotNull { config.locales[it] }
+        else @Suppress("DEPRECATION") listOfNotNull(config.locale)
+        for (l in locales) { out.add(l.language); if (l.country.isNotEmpty()) out.add(l.language + "_" + l.country) }
         return out
     }
 
@@ -154,8 +158,7 @@ object SubtitleCharset {
      * marks of one direction a bracket resolves to it without N0 too. Override tags {...} are kept as they are.
      */
     internal fun markBrackets(line: String, rtl: Boolean): String {
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.N) return line
-        if (line.none { it in "()[]{}<>" || android.icu.lang.UCharacter.getIntPropertyValue(it.code, android.icu.lang.UProperty.BIDI_PAIRED_BRACKET_TYPE) != 0 }) return line
+        if (line.none { isBracket(it) }) return line
         // the visible text and where each of its characters is in the line
         val visible = StringBuilder()
         val at = ArrayList<Int>()
@@ -173,11 +176,19 @@ object SubtitleCharset {
             Character.DIRECTIONALITY_LEFT_TO_RIGHT -> hasL = true
         }
         if (!hasR || !hasL) return line
-        val bidi = android.icu.text.Bidi(text, if (rtl) android.icu.text.Bidi.DIRECTION_RIGHT_TO_LEFT else android.icu.text.Bidi.DIRECTION_LEFT_TO_RIGHT)
+        // ICU's bidi from Android 10; before, java.text.Bidi (ICU's too, with N0 from Android 5)
+        val levels = IntArray(text.length)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+            val bidi = android.icu.text.Bidi(text, if (rtl) android.icu.text.Bidi.DIRECTION_RIGHT_TO_LEFT else android.icu.text.Bidi.DIRECTION_LEFT_TO_RIGHT)
+            for (i in levels.indices) levels[i] = bidi.getLevelAt(i).toInt()
+        } else {
+            val bidi = java.text.Bidi(text, if (rtl) java.text.Bidi.DIRECTION_RIGHT_TO_LEFT else java.text.Bidi.DIRECTION_LEFT_TO_RIGHT)
+            for (i in levels.indices) levels[i] = bidi.getLevelAt(i)
+        }
         val marks = HashMap<Int, Char>()
         text.forEachIndexed { i, c ->
-            if (android.icu.lang.UCharacter.getIntPropertyValue(c.code, android.icu.lang.UProperty.BIDI_PAIRED_BRACKET_TYPE) != 0)
-                marks[at[i]] = if (bidi.getLevelAt(i) % 2 == 1) '‏' else '‎'
+            if (isBracket(c))
+                marks[at[i]] = if (levels[i] % 2 == 1) '‏' else '‎'
         }
         if (marks.isEmpty()) return line
         val out = StringBuilder(line.length + marks.size * 2)
@@ -187,6 +198,10 @@ object SubtitleCharset {
         }
         return out.toString()
     }
+
+    /** A paired bracket of the Unicode bidi algorithm (ICU's list from Android 7; the ASCII ones before) */
+    private fun isBracket(c: Char) = c in "()[]{}<>" || (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N &&
+            android.icu.lang.UCharacter.getIntPropertyValue(c.code, android.icu.lang.UProperty.BIDI_PAIRED_BRACKET_TYPE) != 0)
 
     /** Whether the first letter of a line of ASS text (its override tags skipped) is of a right-to-left script */
     private fun startsRtl(s: String): Boolean {

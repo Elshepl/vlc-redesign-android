@@ -123,7 +123,7 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
         // the end of the window in the reading direction (the desktop's panels: on the left in Hebrew or Arabic);
         // the window manager does not mirror a relative gravity: resolved here
         val rtl = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL ||
-                android.text.TextUtils.getLayoutDirectionFromLocale(resources.configuration.locales[0]) == View.LAYOUT_DIRECTION_RTL
+                android.text.TextUtils.getLayoutDirectionFromLocale(org.videolan.vlc.util.RdCompat.primaryLocale(resources.configuration)) == View.LAYOUT_DIRECTION_RTL
         dialog.window?.setGravity((if (rtl) Gravity.LEFT else Gravity.RIGHT) or Gravity.CENTER_VERTICAL)
         dialog.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)?.let { sheet ->
             sheet.updateLayoutParams<ViewGroup.MarginLayoutParams> {

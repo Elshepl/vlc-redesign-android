@@ -73,7 +73,9 @@ object TvNet {
                 c.disconnect()
                 throw IOException("HTTP $code")
             }
-            return c.inputStream to c.contentLengthLong
+            val length = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) c.contentLengthLong
+                else c.getHeaderField("Content-Length")?.toLongOrNull() ?: -1L
+            return c.inputStream to length
         }
     }
 
@@ -134,7 +136,8 @@ object TvNet {
     /* The secrets: AES-GCM with a key of the Android keystore (never leaves it) */
     private const val KEY_ALIAS = "vlc_redesign_livetv"
 
-    private fun key(): SecretKey? = try {
+    private fun key(): SecretKey? = if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) null // (keystore AES: Android 6)
+    else try {
         val ks = KeyStore.getInstance("AndroidKeyStore").apply { load(null) }
         (ks.getKey(KEY_ALIAS, null) as? SecretKey) ?: KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore").run {
             init(KeyGenParameterSpec.Builder(KEY_ALIAS, KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT)

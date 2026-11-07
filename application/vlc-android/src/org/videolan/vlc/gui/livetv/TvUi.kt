@@ -300,7 +300,7 @@ internal class TvFlow(context: Context, private val hGap: Int, private val vGap:
 
 internal object TvTexts {
     /** the language of the app (it can differ from the phone's), as the desktop's QLocale().toString(time, ShortFormat) */
-    private fun locale(context: Context) = context.resources.configuration.locales[0] ?: java.util.Locale.getDefault()
+    private fun locale(context: Context) = org.videolan.vlc.util.RdCompat.primaryLocale(context.resources.configuration)
 
     fun time(context: Context, secs: Long): String = DateFormat.getTimeInstance(DateFormat.SHORT, locale(context)).format(Date(secs * 1000))
 

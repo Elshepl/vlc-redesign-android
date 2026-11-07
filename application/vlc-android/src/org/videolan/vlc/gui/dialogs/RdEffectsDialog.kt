@@ -176,12 +176,22 @@ class RdEffectsDialog : VLCBottomSheetDialogFragment() {
         }
     }
 
-    private fun underline() = android.graphics.drawable.LayerDrawable(arrayOf(
-            android.graphics.drawable.GradientDrawable().apply { setColor(accent()) })).apply {
-        setLayerGravity(0, Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL)
-        setLayerHeight(0, dp(2f))
-        setLayerInsetLeft(0, dp(16f))
-        setLayerInsetRight(0, dp(16f))
+    /** The selected tab's line: 2 dp at the bottom, 16 dp in from each side (drawn by itself: LayerDrawable's
+     *  gravity and layer height are Android 6) */
+    private fun underline(): android.graphics.drawable.Drawable {
+        val height = dp(2f)
+        val inset = dp(16f)
+        val paint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { color = accent() }
+        return object : android.graphics.drawable.Drawable() {
+            override fun draw(canvas: android.graphics.Canvas) {
+                val b = bounds
+                canvas.drawRect((b.left + inset).toFloat(), (b.bottom - height).toFloat(), (b.right - inset).toFloat(), b.bottom.toFloat(), paint)
+            }
+            override fun setAlpha(alpha: Int) { paint.alpha = alpha }
+            override fun setColorFilter(colorFilter: android.graphics.ColorFilter?) { paint.colorFilter = colorFilter }
+            @Deprecated("Deprecated in Java")
+            override fun getOpacity() = android.graphics.PixelFormat.TRANSLUCENT
+        }
     }
 
     private fun note(s: String) = text(requireContext(), s, 14f, color(R.color.rd_fg_a3)).apply {

@@ -209,12 +209,13 @@ open class AudioBrowserAdapter @JvmOverloads constructor(
         @Suppress("UNCHECKED_CAST")
         val kept = view.getTag(R.id.rd_detail_marked) as? Array<android.graphics.drawable.Drawable?>
         if (marked && kept == null) {
-            val original = view.foreground
+            val original = org.videolan.vlc.util.RdCompat.foreground(view)
             val mark = androidx.core.content.ContextCompat.getDrawable(view.context, R.drawable.rd_list_detail_marked)
-            view.setTag(R.id.rd_detail_marked, arrayOf(original))
-            view.foreground = if (original != null) android.graphics.drawable.LayerDrawable(arrayOf(mark, original)) else mark
+            // (a row without a foreground before Android 6: marked as activated only)
+            if (org.videolan.vlc.util.RdCompat.setForeground(view, if (original != null) android.graphics.drawable.LayerDrawable(arrayOf(mark, original)) else mark))
+                view.setTag(R.id.rd_detail_marked, arrayOf(original))
         } else if (!marked && kept != null) {
-            view.foreground = kept[0]
+            org.videolan.vlc.util.RdCompat.setForeground(view, kept[0])
             view.setTag(R.id.rd_detail_marked, null)
         }
         view.isActivated = marked

@@ -89,7 +89,10 @@ open class PreferencesActivity : BaseActivity() {
 
         setContentView(R.layout.preferences_activity)
         setSupportActionBar(findViewById<View>(R.id.main_toolbar) as Toolbar)
-        val widthDp = windowManager.currentWindowMetrics.bounds.width() / resources.displayMetrics.density
+        // (the window's metrics are Android 11; the configuration's window width before)
+        val widthDp = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R)
+            windowManager.currentWindowMetrics.bounds.width() / resources.displayMetrics.density
+        else resources.configuration.screenWidthDp.toFloat()
         twoPane = widthDp >= 600
         findViewById<View>(R.id.rd_settings_sidebar).visibility = if (twoPane) View.VISIBLE else View.GONE
         val kept = RdPage.of(savedInstanceState?.getString(KEY_PAGE))
