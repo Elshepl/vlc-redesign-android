@@ -24,8 +24,11 @@ import com.google.android.material.snackbar.Snackbar
 import org.videolan.vlc.gui.BaseActivity
 import java.lang.ref.WeakReference
 
-class RdToast private constructor(private val context: Context, private var text: CharSequence, private val duration: Int) {
-    private var snack: Snackbar? = null
+class RdToast private constructor(context: Context, private var text: CharSequence, private val duration: Int) {
+    /** the application's context: a toast kept by a long-lived owner (the playback service) holds no activity */
+    private val context: Context = context.applicationContext ?: context
+    /** weak, and dropped when it is dismissed: a snackbar holds its activity, which must go when it is destroyed */
+    private var snack: WeakReference<Snackbar>? = null
     private var system: android.widget.Toast? = null
 
     fun setText(s: CharSequence) { text = s }
@@ -40,14 +43,21 @@ class RdToast private constructor(private val context: Context, private var text
         val activity = resumed?.get()?.takeIf { !it.isFinishing && !it.isDestroyed }
         val anchor = activity?.let { (it as? BaseActivity)?.getSnackAnchorView() ?: it.findViewById<View>(android.R.id.content) }
         if (anchor != null) {
-            snack = Snackbar.make(anchor, text, if (duration == LENGTH_LONG) Snackbar.LENGTH_LONG else Snackbar.LENGTH_SHORT).also { it.show() }
+            val bar = Snackbar.make(anchor, text, if (duration == LENGTH_LONG) Snackbar.LENGTH_LONG else Snackbar.LENGTH_SHORT)
+            bar.addCallback(object : Snackbar.Callback() {
+                override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                    if (snack?.get() === transientBottomBar) snack = null
+                }
+            })
+            snack = WeakReference(bar)
+            bar.show()
         } else {
-            system = android.widget.Toast.makeText(context.applicationContext, text, duration).also { it.show() }
+            system = android.widget.Toast.makeText(context, text, duration).also { it.show() }
         }
     }
 
     fun cancel() {
-        snack?.dismiss()
+        snack?.get()?.dismiss()
         snack = null
         system?.cancel()
         system = null
