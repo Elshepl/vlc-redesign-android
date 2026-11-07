@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lengvesnis ir sklandesnis, mažiau darbo fone ir slenkant sąrašus.</item>
-        <item>Vertimai atnaujinti visomis kalbomis.</item>
+        <item>Senesni įrenginiai: vaizdo įrašai, Nustatymai ir subtitrai nebestringa Android 5–10.</item>
+        <item>Mažiau atminties pasukus ekraną.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
     <string name="rd_cast_this_phone">Šis telefonas</string>

@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: arka planda ve listeler kaydırılırken daha az işle daha hafif ve akıcı.</item>
-        <item>Çeviriler tüm dillerde güncellendi.</item>
+        <item>Eski cihazlar: videolar, Ayarlar ve altyazılar Android 5–10\'da artık çökmüyor.</item>
+        <item>Ekran döndükten sonra daha az bellek.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

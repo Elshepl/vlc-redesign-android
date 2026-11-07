@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: nyepesi na laini zaidi, kwa kazi kidogo chinichini na wakati wa kusogeza orodha.</item>
-        <item>Tafsiri zimesasishwa katika lugha zote.</item>
+        <item>Vifaa vya zamani: video, Mipangilio na manukuu hayaanguki tena kwenye Android 5 hadi 10.</item>
+        <item>Kumbukumbu kidogo baada ya skrini kuzunguka.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

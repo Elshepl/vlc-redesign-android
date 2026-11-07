@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Conservata solo su questo dispositivo, per riprendere da dove avevi lasciato.</string>
     <string name="rd_ob_updates_help">Cerca una versione di prova più recente di VLC for Android una volta al giorno.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: più leggero e fluido, con meno lavoro in background e durante lo scorrimento degli elenchi.</item>
-        <item>Traduzioni aggiornate in tutte le lingue.</item>
+        <item>Dispositivi meno recenti: video, Impostazioni e sottotitoli non si bloccano più su Android da 5 a 10.</item>
+        <item>Meno memoria dopo la rotazione dello schermo.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
     <string name="rd_cast_this_phone">Questo telefono</string>

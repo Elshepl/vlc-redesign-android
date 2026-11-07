@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">仅保存在本设备上，用于从上次停下的地方继续。</string>
     <string name="rd_ob_updates_help">每天检查一次是否有更新的 VLC for Android 测试版。</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV：后台和列表滚动时的工作更少，更轻快流畅。</item>
-        <item>所有语言的翻译均已更新。</item>
+        <item>旧设备：在 Android 5 至 10 上，视频、设置和字幕不再崩溃。</item>
+        <item>旋转屏幕后占用更少内存。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">此手机</string>

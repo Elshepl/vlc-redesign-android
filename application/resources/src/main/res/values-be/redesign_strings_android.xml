@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Захоўваецца толькі на гэтай прыладзе, каб працягнуць з таго месца, дзе вы спыніліся.</string>
     <string name="rd_ob_updates_help">Раз на дзень правярае, ці няма навейшай тэставай зборкі VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: лягчэй і плаўней, менш працы ў фоне і пры пракручванні спісаў.</item>
-        <item>Пераклады абноўлены на ўсіх мовах.</item>
+        <item>Старыя прылады: відэа, Налады і субтытры больш не падаюць на Android 5–10.</item>
+        <item>Менш памяці пасля павароту экрана.</item>
     </string-array>
     <string name="rd_subtitle_size">Памер субтытраў</string>
     <string name="rd_cast_this_phone">Гэты тэлефон</string>

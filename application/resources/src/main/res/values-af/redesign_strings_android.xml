@@ -32,8 +32,8 @@
     <string name="rd_ob_history_help">Net op hierdie toestel gehou, om voort te gaan waar jy opgehou het.</string>
     <string name="rd_ob_updates_help">Soek een keer per dag na ’n nuwer toetsweergawe van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: ligter en gladder, met minder werk in die agtergrond en terwyl lyste rol.</item>
-        <item>Vertalings in elke taal bygewerk.</item>
+        <item>Ouer toestelle: video\'s, Instellings en onderskrifte breek nie meer op Android 5 tot 10 nie.</item>
+        <item>Minder geheue gebruik nadat die skerm draai.</item>
     </string-array>
     <string name="rd_subtitle_size">Onderskrifgrootte</string>
     <string name="rd_cast_this_phone">Hierdie foon</string>

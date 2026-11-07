@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Shranjeno samo v tej napravi, da lahko nadaljujete tam, kjer ste končali.</string>
     <string name="rd_ob_updates_help">Enkrat na dan poišče novejšo preizkusno izdajo VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lažji in bolj gladek, z manj dela v ozadju in med drsenjem seznamov.</item>
-        <item>Prevodi posodobljeni v vseh jezikih.</item>
+        <item>Starejše naprave: videoposnetki, Nastavitve in podnapisi se v Androidu 5 do 10 ne sesujejo več.</item>
+        <item>Manj pomnilnika po vrtenju zaslona.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost podnapisov</string>
     <string name="rd_cast_this_phone">Ta telefon</string>

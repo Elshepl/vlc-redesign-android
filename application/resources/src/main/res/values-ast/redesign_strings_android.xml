@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: más llixeru y fluyíu, con menos trabayu en segundu planu y al desplazar les llistes.</item>
-        <item>Les traducciones anováronse en toles llingües.</item>
+        <item>Preseos más vieyos: los vídeos, los Axustes y los sotítulos yá nun peten n\'Android 5 al 10.</item>
+        <item>Úsase menos memoria dempués de xirar la pantalla.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Uchovává se jen v tomto zařízení, abyste mohli pokračovat tam, kde jste skončili.</string>
     <string name="rd_ob_updates_help">Jednou denně hledá novější testovací sestavení VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lehčí a plynulejší, méně práce na pozadí a při posouvání seznamů.</item>
-        <item>Překlady aktualizovány ve všech jazycích.</item>
+        <item>Starší zařízení: videa, Nastavení a titulky už na Androidu 5 až 10 nepadají.</item>
+        <item>Méně paměti po otočení obrazovky.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost titulků</string>
     <string name="rd_cast_this_phone">Tento telefon</string>

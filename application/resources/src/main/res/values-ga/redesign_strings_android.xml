@@ -32,8 +32,8 @@
     <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
     <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: níos éadroime agus níos míne, le níos lú oibre sa chúlra agus liostaí á scrollú.</item>
-        <item>Aistriúcháin nuashonraithe i ngach teanga.</item>
+        <item>Gléasanna níos sine: ní thuairteálann físeáin, Socruithe ná fotheidil ar Android 5 go 10 a thuilleadh.</item>
+        <item>Níos lú cuimhne tar éis don scáileán casadh.</item>
     </string-array>
     <string name="rd_subtitle_size">Méid na bhfotheideal</string>
     <string name="rd_cast_this_phone">An fón seo</string>

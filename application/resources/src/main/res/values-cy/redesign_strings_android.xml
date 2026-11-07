@@ -31,8 +31,8 @@
     <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
     <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: ysgafnach a llyfnach, gyda llai o waith yn y cefndir ac wrth sgrolio rhestrau.</item>
-        <item>Cyfieithiadau wedi\'u diweddaru ym mhob iaith.</item>
+        <item>Dyfeisiau hŷn: nid yw fideos, Gosodiadau ac isdeitlau yn chwalu mwyach ar Android 5 i 10.</item>
+        <item>Llai o gof ar ôl i\'r sgrin droi.</item>
     </string-array>
     <string name="rd_subtitle_size">Maint isdeitlau</string>
     <string name="rd_cast_this_phone">Y ffôn hwn</string>

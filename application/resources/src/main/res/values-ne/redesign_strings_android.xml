@@ -31,8 +31,8 @@
     <string name="rd_ob_history_help">यसै यन्त्रमा मात्र राखिन्छ, तपाईंले छोडेको ठाउँबाट जारी राख्न।</string>
     <string name="rd_ob_updates_help">दिनमा एक पटक VLC for Android को नयाँ परीक्षण बिल्ड खोज्छ।</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: पृष्ठभूमिमा र सूची स्क्रोल गर्दा कम काम, अझ हलुका र सहज।</item>
-        <item>सबै भाषाका अनुवाद अद्यावधिक गरिए।</item>
+        <item>पुराना उपकरणहरू: Android 5 देखि 10 मा भिडियो, सेटिङ र उपशीर्षक अब क्र्यास हुँदैनन्।</item>
+        <item>स्क्रिन घुमाएपछि कम मेमोरी।</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षकको आकार</string>
     <string name="rd_cast_this_phone">यो फोन</string>

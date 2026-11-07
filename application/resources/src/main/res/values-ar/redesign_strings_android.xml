@@ -32,8 +32,8 @@
     <string name="rd_ob_history_help">يُحفظ على هذا الجهاز فقط، للمتابعة من حيث توقفت.</string>
     <string name="rd_ob_updates_help">يبحث مرة في اليوم عن إصدار تجريبي أحدث من VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: أخف وأكثر سلاسة، مع عمل أقل في الخلفية وأثناء تمرير القوائم.</item>
-        <item>تحديث الترجمات في كل اللغات.</item>
+        <item>الأجهزة الأقدم: لم تعد مقاطع الفيديو والإعدادات والترجمات تتعطل على Android 5 حتى 10.</item>
+        <item>استهلاك أقل للذاكرة بعد تدوير الشاشة.</item>
     </string-array>
     <string name="rd_subtitle_size">حجم الترجمة</string>
     <string name="rd_cast_this_phone">هذا الهاتف</string>

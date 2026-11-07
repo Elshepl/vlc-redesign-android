@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: mais leve e fluido, com menos trabalho em segundo plano e ao rolar listas.</item>
-        <item>Traduções atualizadas em todos os idiomas.</item>
+        <item>Aparelhos antigos: vídeos, Configurações e legendas não travam mais no Android 5 a 10.</item>
+        <item>Menos memória depois de girar a tela.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

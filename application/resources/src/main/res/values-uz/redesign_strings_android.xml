@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Faqat shu qurilmada saqlanadi, to‘xtagan joyingizdan davom ettirish uchun.</string>
     <string name="rd_ob_updates_help">Kuniga bir marta VLC for Android ning yangiroq sinov versiyasini qidiradi.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: fonda va roʻyxatlarni aylantirishda kamroq ish bilan yengilroq va silliqroq.</item>
-        <item>Tarjimalar barcha tillarda yangilandi.</item>
+        <item>Eski qurilmalar: Android 5–10 da videolar, Sozlamalar va subtitrlar endi ishdan chiqmaydi.</item>
+        <item>Ekran burilgandan keyin kamroq xotira.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitr oʻlchami</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

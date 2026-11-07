@@ -32,8 +32,8 @@
     <string name="rd_ob_history_help">ინახება მხოლოდ ამ მოწყობილობაზე, რომ იქიდან გააგრძელოთ, სადაც შეჩერდით.</string>
     <string name="rd_ob_updates_help">დღეში ერთხელ ეძებს VLC for Android-ის უფრო ახალ სატესტო ვერსიას.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: უფრო მსუბუქი და გლუვი, ნაკლები სამუშაოთი ფონზე და სიების გადახვევისას.</item>
-        <item>თარგმანები განახლდა ყველა ენაზე.</item>
+        <item>ძველი მოწყობილობები: ვიდეოები, პარამეტრები და სუბტიტრები Android 5–10-ზე აღარ იშლება.</item>
+        <item>ნაკლები მეხსიერება ეკრანის მობრუნების შემდეგ.</item>
     </string-array>
     <string name="rd_subtitle_size">სუბტიტრების ზომა</string>
     <string name="rd_cast_this_phone">ეს ტელეფონი</string>

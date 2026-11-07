@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: könnyebb és gördülékenyebb, kevesebb munkával a háttérben és a listák görgetésekor.</item>
-        <item>A fordítások minden nyelven frissültek.</item>
+        <item>Régebbi eszközök: a videók, a Beállítások és a feliratok már nem omlanak össze Android 5–10 alatt.</item>
+        <item>Kevesebb memória a képernyő elforgatása után.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>

@@ -32,8 +32,8 @@
     <string name="rd_ob_history_help">Geymt eingöngu á þessu tæki, til að halda áfram þar sem frá var horfið.</string>
     <string name="rd_ob_updates_help">Leitar einu sinni á dag að nýrri prófunarútgáfu af VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: léttara og mýkra, með minni vinnu í bakgrunni og þegar listum er flett.</item>
-        <item>Þýðingar uppfærðar á öllum tungumálum.</item>
+        <item>Eldri tæki: myndskeið, Stillingar og skjátextar hrynja ekki lengur á Android 5 til 10.</item>
+        <item>Minna minni eftir að skjárinn snýst.</item>
     </string-array>
     <string name="rd_subtitle_size">Stærð skjátexta</string>
     <string name="rd_cast_this_phone">Þessi sími</string>

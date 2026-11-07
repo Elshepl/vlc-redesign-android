@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Hanya disimpan di perangkat ini, untuk melanjutkan dari tempat terakhir Anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari build uji VLC for Android yang lebih baru sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lebih ringan dan mulus, dengan lebih sedikit kerja di latar belakang dan saat menggulir daftar.</item>
-        <item>Terjemahan diperbarui dalam semua bahasa.</item>
+        <item>Perangkat lama: video, Setelan, dan subtitel tidak lagi mogok di Android 5 hingga 10.</item>
+        <item>Lebih sedikit memori setelah layar diputar.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukuran subtitel</string>
     <string name="rd_cast_this_phone">Ponsel ini</string>

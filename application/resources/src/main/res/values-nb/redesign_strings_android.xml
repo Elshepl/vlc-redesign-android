@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Lagres bare på denne enheten, så du kan fortsette der du slapp.</string>
     <string name="rd_ob_updates_help">Ser etter en nyere testversjon av VLC for Android én gang om dagen.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lettere og jevnere, med mindre arbeid i bakgrunnen og når lister rulles.</item>
-        <item>Oversettelser oppdatert på alle språk.</item>
+        <item>Eldre enheter: videoer, Innstillinger og undertekster krasjer ikke lenger på Android 5 til 10.</item>
+        <item>Mindre minne etter at skjermen roteres.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefonen</string>

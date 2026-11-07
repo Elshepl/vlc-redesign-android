@@ -3,7 +3,7 @@
      translate"). -->
 <resources>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lighter and smoother, with less work in the background and while lists scroll.</item>
-        <item>Translations brought up to date in every language.</item>
+        <item>Older devices: videos, Settings and subtitles no longer crash on Android 5 to 10.</item>
+        <item>Less memory used after the screen rotates.</item>
     </string-array>
 </resources>

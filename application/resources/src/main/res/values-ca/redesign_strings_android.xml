@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: més lleuger i fluid, amb menys feina en segon pla i en desplaçar les llistes.</item>
-        <item>Traduccions actualitzades en totes les llengües.</item>
+        <item>Dispositius antics: els vídeos, la Configuració i els subtítols ja no fallen a l\'Android 5 al 10.</item>
+        <item>Menys memòria després de girar la pantalla.</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

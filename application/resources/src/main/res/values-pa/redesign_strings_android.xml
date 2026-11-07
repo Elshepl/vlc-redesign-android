@@ -32,8 +32,8 @@
     <string name="rd_ob_history_help">ਸਿਰਫ਼ ਇਸੇ ਡਿਵਾਈਸ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕੋ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ।</string>
     <string name="rd_ob_updates_help">ਦਿਨ ਵਿੱਚ ਇੱਕ ਵਾਰ VLC for Android ਦਾ ਨਵਾਂ ਟੈਸਟ ਬਿਲਡ ਲੱਭਦਾ ਹੈ।</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਅਤੇ ਸੂਚੀਆਂ ਸਕ੍ਰੋਲ ਕਰਦਿਆਂ ਘੱਟ ਕੰਮ, ਹੋਰ ਹਲਕਾ ਅਤੇ ਸੁਚਾਰੂ।</item>
-        <item>ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਅੱਪਡੇਟ ਕੀਤੇ।</item>
+        <item>ਪੁਰਾਣੇ ਡਿਵਾਈਸ: Android 5 ਤੋਂ 10 \'ਤੇ ਵੀਡੀਓ, ਸੈਟਿੰਗਾਂ ਅਤੇ ਉਪਸਿਰਲੇਖ ਹੁਣ ਕ੍ਰੈਸ਼ ਨਹੀਂ ਹੁੰਦੇ।</item>
+        <item>ਸਕ੍ਰੀਨ ਘੁੰਮਾਉਣ ਤੋਂ ਬਾਅਦ ਘੱਟ ਮੈਮਰੀ।</item>
     </string-array>
     <string name="rd_subtitle_size">ਉਪਸਿਰਲੇਖ ਦਾ ਆਕਾਰ</string>
     <string name="rd_cast_this_phone">ਇਹ ਫ਼ੋਨ</string>

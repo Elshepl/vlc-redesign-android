@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Disimpan pada peranti ini sahaja, untuk menyambung dari tempat anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari binaan ujian VLC for Android yang lebih baharu sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: lebih ringan dan lancar, dengan kurang kerja di latar belakang dan semasa menatal senarai.</item>
-        <item>Terjemahan dikemas kini dalam semua bahasa.</item>
+        <item>Peranti lama: video, Tetapan dan sari kata tidak lagi ranap pada Android 5 hingga 10.</item>
+        <item>Kurang memori selepas skrin berputar.</item>
     </string-array>
     <string name="rd_subtitle_size">Saiz sari kata</string>
     <string name="rd_cast_this_phone">Telefon ini</string>

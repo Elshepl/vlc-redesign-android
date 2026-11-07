@@ -30,8 +30,8 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Android TV: nhẹ và mượt hơn, ít xử lý nền và khi cuộn danh sách hơn.</item>
-        <item>Bản dịch được cập nhật ở mọi ngôn ngữ.</item>
+        <item>Thiết bị cũ: video, Cài đặt và phụ đề không còn bị dừng đột ngột trên Android 5 đến 10.</item>
+        <item>Dùng ít bộ nhớ hơn sau khi xoay màn hình.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>
