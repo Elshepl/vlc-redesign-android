@@ -1137,11 +1137,20 @@ object OnlineSubtitles {
     /** identifies the media, then asks the services */
     suspend fun searchAll(context: Context, media: Media): Outcome = search(context, media, withContext(Dispatchers.IO) { identify(context, media) })
 
+    /**
+     * the folder of a media's downloaded subtitles: in the app's own storage, read by the player without the shared
+     * storage's FUSE layer (an Android 14 media provider crashed on the player's reads of them there, and the
+     * player with it; 0.5.7 kept them in the shared app folder, still looked at)
+     */
+    private fun subtitleFolders(context: Context, media: Media): List<File> = listOfNotNull(
+        File(context.filesDir, "subtitles/" + sha1(media.key).take(20)),
+        context.getExternalFilesDir(null)?.let { File(it, "subtitles/" + sha1(media.key).take(20)) }
+    )
+
     /** whether a subtitle of that language was downloaded for the media already (its folder of the app) */
     fun hasDownloaded(context: Context, media: Media, language: String): Boolean {
-        val folder = File(context.getExternalFilesDir(null) ?: context.filesDir, "subtitles/" + sha1(media.key).take(20))
         val tag = "." + iso639_2(language) + "."
-        return folder.listFiles()?.any { tag in it.name && !it.name.endsWith(".part") } == true
+        return subtitleFolders(context, media).any { folder -> folder.listFiles()?.any { tag in it.name && !it.name.endsWith(".part") } == true }
     }
 
     /** what OpenSubtitles knows of this very file (its hash): the title most of the subtitles made for it are filed
@@ -1439,10 +1448,10 @@ object OnlineSubtitles {
 
     /** downloads a result into the app's subtitle folder of the media: its file, or the error to show */
     suspend fun download(context: Context, result: Result, media: Media): Pair<File?, Problem?> = withContext(Dispatchers.IO) {
-        val folder = File(context.getExternalFilesDir(null) ?: context.filesDir, "subtitles/" + sha1(media.key).take(20))
+        val folder = subtitleFolders(context, media).first()
         val release = result.release.replace(Regex("""[\\/:*?"<>|\s\p{Cc}]+"""), ".").take(80)
         val stem = "$release-${safeFileName(result.id.replace(':', '-'))}.${iso639_2(result.language)}"
-        for (ext in listOf("srt", "vtt", "ass", "ssa", "sub", "smi")) File(folder, "$stem.$ext").takeIf { it.exists() }?.let { return@withContext Pair(it, null) }
+        for (dir in subtitleFolders(context, media)) for (ext in listOf("srt", "vtt", "ass", "ssa", "sub", "smi")) File(dir, "$stem.$ext").takeIf { it.exists() }?.let { return@withContext Pair(it, null) }
         val headers = HashMap<String, String>()
         headers["User-Agent"] = userAgent
         if (result.provider == "opensubtitles") headers["X-User-Agent"] = userAgent
