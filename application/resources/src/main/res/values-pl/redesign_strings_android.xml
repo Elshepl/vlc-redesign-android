@@ -33,6 +33,7 @@
         <item>Napisy z internetu: wyszukiwanie prosto z odtwarzacza w OpenSubtitles, Wizdom (hebrajski), YIFY Subtitles i Addic7ed, za darmo i bez konta.</item>
         <item>Znajdowane nawet dla plików, których nazwy nic nie mówią. Opcjonalnie: własny klucz OpenSubtitles.com i automatyczne wyszukiwanie, w Ustawienia › Napisy.</item>
         <item>Telewizja na żywo: pasek informacji mieści się na telefonie trzymanym pionowo.</item>
+        <item>Android TV: pilot dociera do każdego filmu i każdego przycisku odtwarzacza.</item>
     </string-array>
     <string name="rd_subtitle_size">Rozmiar napisów</string>
     <string name="rd_cast_this_phone">Ten telefon</string>

@@ -33,6 +33,7 @@
         <item>Legendas da internet: busque direto do reprodutor no OpenSubtitles, Wizdom (hebraico), YIFY Subtitles e Addic7ed, de graça e sem conta.</item>
         <item>Encontradas até para arquivos cujo nome não diz nada. Opcional: sua própria chave do OpenSubtitles.com e uma busca automática, em Configurações › Legendas.</item>
         <item>TV ao vivo: a barra de informações cabe em um celular na vertical.</item>
+        <item>Android TV: o controle remoto alcança cada vídeo e cada botão do reprodutor.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

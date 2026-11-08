@@ -33,6 +33,7 @@
         <item>Sotítulos d\'internet: busca dende\'l reproductor n\'OpenSubtitles, Wizdom (hebréu), YIFY Subtitles y Addic7ed, de baldre y ensin cuenta.</item>
         <item>Alcuéntrense tamién pa ficheros con nomes que nun dicen nada. Opcional: la to clave propia d\'OpenSubtitles.com y una busca automática, en Axustes › Sotítulos.</item>
         <item>TV en direutu: la barra d\'información cabe nun teléfonu en vertical.</item>
+        <item>Android TV: el mandu llega a tolos vídeos y a tolos botones del reproductor.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

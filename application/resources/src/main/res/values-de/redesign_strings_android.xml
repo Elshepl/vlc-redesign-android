@@ -33,6 +33,7 @@
         <item>Untertitel aus dem Internet: Suche direkt im Player bei OpenSubtitles, Wizdom (Hebräisch), YIFY Subtitles und Addic7ed, kostenlos und ohne Konto.</item>
         <item>Gefunden auch für Dateien, deren Namen nichts verraten. Optional: Ihr eigener OpenSubtitles.com-Schlüssel und eine automatische Suche, unter Einstellungen › Untertitel.</item>
         <item>Live-TV: Die Infoleiste passt auf ein hochkant gehaltenes Telefon.</item>
+        <item>Android TV: Die Fernbedienung erreicht jedes Video und jede Taste des Players.</item>
     </string-array>
     <string name="rd_subtitle_size">Untertitelgröße</string>
     <string name="rd_cast_this_phone">Dieses Telefon</string>

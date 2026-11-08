@@ -33,6 +33,7 @@
         <item>כתוביות מהאינטרנט: חיפוש מתוך הנגן ב־OpenSubtitles, ב־Wizdom לעברית, ב־YIFY Subtitles וב־Addic7ed, בחינם ובלי חשבון.</item>
         <item>נמצאות גם לקבצים ששמם לא אומר כלום. לבחירתך: מפתח OpenSubtitles.com משלך וחיפוש אוטומטי, בהגדרות › כתוביות.</item>
         <item>טלוויזיה חיה: פס המידע מתאים לטלפון שמוחזק לאורך.</item>
+        <item>ב־Android TV: השלט מגיע לכל סרטון ולכל כפתור בנגן.</item>
     </string-array>
     <string name="rd_fx_luma_spat">עוצמת בהירות מרחבית (0-254)</string>
     <string name="rd_fx_luma_temp">עוצמת בהירות זמנית (0-254)</string>

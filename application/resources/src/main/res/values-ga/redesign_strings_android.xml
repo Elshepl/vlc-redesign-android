@@ -35,6 +35,7 @@
         <item>Fotheidil ón idirlíon: cuardaigh ón seinnteoir in OpenSubtitles, Wizdom (Eabhrais), YIFY Subtitles agus Addic7ed, saor in aisce agus gan chuntas.</item>
         <item>Aimsítear iad fiú do chomhaid nach ndeir a n-ainm tada. Roghnach: d\'eochair OpenSubtitles.com féin agus cuardach uathoibríoch, in Socruithe › Fotheidil.</item>
         <item>Teilifís bheo: luíonn an barra faisnéise ar fhón a choinnítear ina sheasamh.</item>
+        <item>Android TV: sroicheann an cianrialtán gach físeán agus gach cnaipe den seinnteoir.</item>
     </string-array>
     <string name="rd_subtitle_size">Méid na bhfotheideal</string>
     <string name="rd_cast_this_phone">An fón seo</string>

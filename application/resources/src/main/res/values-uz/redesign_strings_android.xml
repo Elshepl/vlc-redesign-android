@@ -33,6 +33,7 @@
         <item>Internetdan subtitrlar: pleyerning oʻzidan OpenSubtitles, Wizdom (ivrit), YIFY Subtitles va Addic7ed da qidiring, bepul va hisobsiz.</item>
         <item>Nomi hech narsa demaydigan fayllar uchun ham topiladi. Ixtiyoriy: oʻzingizning OpenSubtitles.com kalitingiz va avtomatik qidiruv, Sozlamalar › Subtitrlar boʻlimida.</item>
         <item>Jonli TV: maʼlumot paneli tik ushlangan telefonga sigʻadi.</item>
+        <item>Android TV: pult endi har bir videoga va pleyerning har bir tugmasiga yetadi.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitr oʻlchami</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

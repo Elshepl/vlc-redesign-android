@@ -33,6 +33,7 @@
         <item>Undertekster fra internettet: søg fra afspilleren i OpenSubtitles, Wizdom (hebraisk), YIFY Subtitles og Addic7ed, gratis og uden konto.</item>
         <item>Findes også til filer, hvis navne ikke siger noget. Valgfrit: din egen OpenSubtitles.com-nøgle og automatisk søgning, under Indstillinger › Undertekster.</item>
         <item>Live-tv: infobjælken passer til en telefon, der holdes lodret.</item>
+        <item>Android TV: fjernbetjeningen når hver video og hver knap i afspilleren.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefon</string>

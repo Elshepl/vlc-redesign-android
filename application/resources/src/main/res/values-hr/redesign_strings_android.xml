@@ -33,6 +33,7 @@
         <item>Titlovi s interneta: pretraživanje iz reproduktora na OpenSubtitles, Wizdom (hebrejski), YIFY Subtitles i Addic7ed, besplatno i bez računa.</item>
         <item>Pronalaze se čak i za datoteke čiji naziv ništa ne govori. Po želji: Vaš vlastiti ključ za OpenSubtitles.com i automatsko pretraživanje, u Postavke › Podnaslovi.</item>
         <item>TV uživo: traka s informacijama stane na telefon koji se drži uspravno.</item>
+        <item>Android TV: daljinski upravljač dolazi do svakog videozapisa i svakog gumba reproduktora.</item>
     </string-array>
     <string name="rd_subtitle_size">Veličina titlova</string>
     <string name="rd_cast_this_phone">Ovaj telefon</string>

@@ -33,6 +33,7 @@
         <item>Tekstitykset internetistä: hae suoraan soittimesta palveluista OpenSubtitles, Wizdom (heprea), YIFY Subtitles ja Addic7ed, ilmaiseksi ja ilman tiliä.</item>
         <item>Löytyvät myös tiedostoille, joiden nimi ei kerro mitään. Valinnainen: oma OpenSubtitles.com-avain ja automaattinen haku, kohdassa Asetukset › Tekstitykset.</item>
         <item>Suora TV: tietopalkki mahtuu pystyasennossa pidettävään puhelimeen.</item>
+        <item>Android TV: kaukosäädin ylettyy jokaiseen videoon ja soittimen jokaiseen painikkeeseen.</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
     <string name="rd_cast_this_phone">Tämä puhelin</string>

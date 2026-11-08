@@ -6,5 +6,6 @@
         <item>Subtitles from the internet: search from the player in OpenSubtitles, Wizdom (Hebrew), YIFY Subtitles and Addic7ed, free and without an account.</item>
         <item>Found even for files whose names say nothing. Optional: your own OpenSubtitles.com key and an automatic search, in Settings › Subtitles.</item>
         <item>Live TV: the info bar fits a phone held upright.</item>
+        <item>Android TV: the remote reaches every video and every button of the player.</item>
     </string-array>
 </resources>

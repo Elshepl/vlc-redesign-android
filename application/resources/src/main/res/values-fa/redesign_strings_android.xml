@@ -35,6 +35,7 @@
         <item>زیرنویس از اینترنت: جستجو از داخل پخش‌کننده در OpenSubtitles، Wizdom برای عبری، YIFY Subtitles و Addic7ed، رایگان و بدون حساب کاربری.</item>
         <item>حتی برای فایل‌هایی که نامشان چیزی نمی‌گوید هم پیدا می‌شوند. اختیاری: کلید OpenSubtitles.com خودتان و جستجوی خودکار، در تنظیمات › زیرنویس‌ها.</item>
         <item>تلویزیون زنده: نوار اطلاعات در گوشی عمودی هم جا می‌شود.</item>
+        <item>در Android TV: کنترل از راه دور به هر ویدیو و هر دکمهٔ پخش‌کننده می‌رسد.</item>
     </string-array>
     <string name="rd_subtitle_size">اندازهٔ زیرنویس</string>
     <string name="rd_cast_this_phone">این تلفن</string>

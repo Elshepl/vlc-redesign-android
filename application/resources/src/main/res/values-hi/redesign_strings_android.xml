@@ -35,6 +35,7 @@
         <item>इंटरनेट से उपशीर्षक: प्लेयर से ही OpenSubtitles, Wizdom (हिब्रू), YIFY Subtitles और Addic7ed में खोजें, मुफ़्त और बिना खाते के।</item>
         <item>उन फ़ाइलों के लिए भी मिलते हैं जिनके नाम से कुछ पता नहीं चलता। वैकल्पिक: आपकी अपनी OpenSubtitles.com कुंजी और अपने-आप खोज, सेटिंग्स › उपशीर्षक में।</item>
         <item>लाइव TV: फ़ोन को सीधा पकड़ने पर भी जानकारी पट्टी पूरी दिखती है।</item>
+        <item>Android TV: रिमोट अब हर वीडियो और प्लेयर के हर बटन तक पहुँचता है।</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षक का आकार</string>
     <string name="rd_cast_this_phone">यह फ़ोन</string>

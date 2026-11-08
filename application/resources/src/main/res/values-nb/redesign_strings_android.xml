@@ -33,6 +33,7 @@
         <item>Undertekster fra Internett: søk rett fra avspilleren i OpenSubtitles, Wizdom (hebraisk), YIFY Subtitles og Addic7ed, gratis og uten konto.</item>
         <item>Finnes selv for filer med navn som ikke sier noe. Valgfritt: din egen OpenSubtitles.com-nøkkel og automatisk søk, under Innstillinger › Undertekster.</item>
         <item>Direkte-TV: infolinjen får plass på en telefon som holdes stående.</item>
+        <item>Android TV: fjernkontrollen når hver video og hver knapp i avspilleren.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefonen</string>

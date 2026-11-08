@@ -35,6 +35,7 @@
         <item>Skjátextar af netinu: leitaðu beint úr spilaranum á OpenSubtitles, Wizdom (hebreska), YIFY Subtitles og Addic7ed, ókeypis og án aðgangs.</item>
         <item>Finnast líka fyrir skrár þar sem nafnið segir ekkert. Valfrjálst: þinn eigin OpenSubtitles.com-lykill og sjálfvirk leit, í Stillingar › Skjátextar.</item>
         <item>Beint sjónvarp: upplýsingastikan passar á síma sem haldið er uppréttum.</item>
+        <item>Android TV: fjarstýringin nær í hvert myndskeið og hvern hnapp spilarans.</item>
     </string-array>
     <string name="rd_subtitle_size">Stærð skjátexta</string>
     <string name="rd_cast_this_phone">Þessi sími</string>

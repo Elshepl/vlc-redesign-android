@@ -33,6 +33,7 @@
         <item>Manukuu kutoka mtandaoni: tafuta moja kwa moja kutoka kwenye kicheza video katika OpenSubtitles, Wizdom (Kiebrania), YIFY Subtitles na Addic7ed, bila malipo na bila akaunti.</item>
         <item>Hupatikana hata kwa faili ambazo majina yake hayasemi chochote. Hiari: ufunguo wako mwenyewe wa OpenSubtitles.com na utafutaji wa kiotomatiki, katika Mipangilio › Manukuu.</item>
         <item>TV ya moja kwa moja: upau wa taarifa unatosha kwenye simu iliyoshikwa wima.</item>
+        <item>Android TV: rimoti sasa inafikia kila video na kila kitufe cha kicheza video.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

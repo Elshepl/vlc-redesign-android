@@ -35,6 +35,7 @@
         <item>บทบรรยายจากอินเทอร์เน็ต: ค้นหาได้จากเครื่องเล่นโดยตรงใน OpenSubtitles, Wizdom (ภาษาฮีบรู), YIFY Subtitles และ Addic7ed ฟรีและไม่ต้องมีบัญชี</item>
         <item>พบได้แม้แต่กับไฟล์ที่ชื่อไม่บอกอะไรเลย ไม่บังคับ: คีย์ OpenSubtitles.com ของคุณเองและการค้นหาอัตโนมัติ ใน ค่าตั้ง › บทบรรยาย</item>
         <item>โทรทัศน์สด: แถบข้อมูลพอดีกับโทรศัพท์ที่ถือในแนวตั้ง</item>
+        <item>Android TV: รีโมตเข้าถึงทุกวิดีโอและทุกปุ่มของเครื่องเล่นได้แล้ว</item>
     </string-array>
     <string name="rd_subtitle_size">ขนาดคำบรรยาย</string>
     <string name="rd_cast_this_phone">โทรศัพท์เครื่องนี้</string>

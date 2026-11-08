@@ -35,6 +35,7 @@
         <item>Onderskrifte van die internet: soek vanuit die speler in OpenSubtitles, Wizdom (Hebreeus), YIFY Subtitles en Addic7ed, gratis en sonder \'n rekening.</item>
         <item>Gevind selfs vir lêers waarvan die name niks sê nie. Opsioneel: u eie OpenSubtitles.com-sleutel en \'n outomatiese soektog, in Instellings › Onderskrifte.</item>
         <item>Regstreekse TV: die inligtingstrook pas op \'n foon wat regop gehou word.</item>
+        <item>Android TV: die afstandbeheer bereik elke video en elke knoppie van die speler.</item>
     </string-array>
     <string name="rd_subtitle_size">Onderskrifgrootte</string>
     <string name="rd_cast_this_phone">Hierdie foon</string>

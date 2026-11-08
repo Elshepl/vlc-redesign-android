@@ -33,6 +33,7 @@
         <item>Ondertitels van internet: zoek vanuit de speler bij OpenSubtitles, Wizdom (Hebreeuws), YIFY Subtitles en Addic7ed, gratis en zonder account.</item>
         <item>Ook gevonden voor bestanden waarvan de naam niets zegt. Optioneel: uw eigen OpenSubtitles.com-sleutel en automatisch zoeken, in Instellingen › Ondertitels.</item>
         <item>Live-tv: de infobalk past op een rechtop gehouden telefoon.</item>
+        <item>Android TV: de afstandsbediening bereikt elke video en elke knop van de speler.</item>
     </string-array>
     <string name="rd_subtitle_size">Ondertitelgrootte</string>
     <string name="rd_cast_this_phone">Deze telefoon</string>

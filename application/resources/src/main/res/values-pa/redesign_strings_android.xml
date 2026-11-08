@@ -35,6 +35,7 @@
         <item>ਇੰਟਰਨੈੱਟ ਤੋਂ ਸਬ-ਟਾਈਟਲ: ਪਲੇਅਰ ਤੋਂ ਹੀ OpenSubtitles, Wizdom (ਹਿਬਰੂ), YIFY Subtitles ਅਤੇ Addic7ed ਵਿੱਚ ਖੋਜੋ, ਮੁਫ਼ਤ ਅਤੇ ਖਾਤੇ ਤੋਂ ਬਿਨਾਂ।</item>
         <item>ਉਹਨਾਂ ਫ਼ਾਈਲਾਂ ਲਈ ਵੀ ਮਿਲਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਨਾਂ ਤੋਂ ਕੁਝ ਪਤਾ ਨਹੀਂ ਲੱਗਦਾ। ਵਿਕਲਪਿਕ: ਤੁਹਾਡੀ ਆਪਣੀ OpenSubtitles.com ਕੁੰਜੀ ਅਤੇ ਆਟੋਮੈਟਿਕ ਖੋਜ, ਸੈਟਿੰਗ › ਸਬ-ਟਾਈਟਲ ਵਿੱਚ।</item>
         <item>ਲਾਈਵ TV: ਫ਼ੋਨ ਨੂੰ ਸਿੱਧਾ ਫੜਨ \'ਤੇ ਵੀ ਜਾਣਕਾਰੀ ਪੱਟੀ ਪੂਰੀ ਦਿਸਦੀ ਹੈ।</item>
+        <item>Android TV: ਰਿਮੋਟ ਹੁਣ ਹਰ ਵੀਡੀਓ ਅਤੇ ਪਲੇਅਰ ਦੇ ਹਰ ਬਟਨ ਤੱਕ ਪਹੁੰਚਦਾ ਹੈ।</item>
     </string-array>
     <string name="rd_subtitle_size">ਉਪਸਿਰਲੇਖ ਦਾ ਆਕਾਰ</string>
     <string name="rd_cast_this_phone">ਇਹ ਫ਼ੋਨ</string>

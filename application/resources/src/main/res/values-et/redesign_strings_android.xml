@@ -33,6 +33,7 @@
         <item>Subtiitrid internetist: otsi otse mängijast teenustest OpenSubtitles, Wizdom (heebrea), YIFY Subtitles ja Addic7ed, tasuta ja ilma kontota.</item>
         <item>Leitakse ka failidele, mille nimi ei ütle midagi. Valikuline: sinu enda OpenSubtitles.com-i võti ja automaatne otsing, jaotises Sätted › Subtiitrid.</item>
         <item>Otse-TV: infoariba mahub püsti hoitud telefonile.</item>
+        <item>Android TV: kaugjuhtimispult jõuab iga video ja mängija iga nupuni.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtiitrite suurus</string>
     <string name="rd_cast_this_phone">See telefon</string>

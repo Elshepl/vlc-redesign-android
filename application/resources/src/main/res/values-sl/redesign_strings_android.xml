@@ -33,6 +33,7 @@
         <item>Podnapisi iz interneta: iskanje kar iz predvajalnika v OpenSubtitles, Wizdom (hebrejščina), YIFY Subtitles in Addic7ed, brezplačno in brez računa.</item>
         <item>Najdejo se tudi za datoteke, katerih ime nič ne pove. Neobvezno: vaš lastni ključ OpenSubtitles.com in samodejno iskanje, v Nastavitve › Podnapisi.</item>
         <item>TV v živo: informacijska vrstica se prilega telefonu, ki ga držite pokonci.</item>
+        <item>Android TV: daljinski upravljalnik doseže vsak videoposnetek in vsak gumb predvajalnika.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost podnapisov</string>
     <string name="rd_cast_this_phone">Ta telefon</string>

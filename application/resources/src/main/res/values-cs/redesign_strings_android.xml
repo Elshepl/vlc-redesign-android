@@ -33,6 +33,7 @@
         <item>Titulky z internetu: hledání přímo z přehrávače na OpenSubtitles, Wizdom (hebrejština), YIFY Subtitles a Addic7ed, zdarma a bez účtu.</item>
         <item>Najdou se i pro soubory, jejichž názvy nic neříkají. Volitelně: vlastní klíč OpenSubtitles.com a automatické hledání v Nastavení › Titulky.</item>
         <item>Živá TV: informační lišta se vejde na telefon držený na výšku.</item>
+        <item>Android TV: dálkový ovladač se dostane ke každému videu i každému tlačítku přehrávače.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost titulků</string>
     <string name="rd_cast_this_phone">Tento telefon</string>

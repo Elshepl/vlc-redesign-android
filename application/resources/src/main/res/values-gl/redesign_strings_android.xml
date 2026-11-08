@@ -33,6 +33,7 @@
         <item>Subtítulos de internet: busca desde o reprodutor en OpenSubtitles, Wizdom (hebreo), YIFY Subtitles e Addic7ed, de balde e sen conta.</item>
         <item>Atópanse mesmo para ficheiros cuxo nome non di nada. Opcional: a súa propia chave de OpenSubtitles.com e unha busca automática, en Configuración › Subtítulos.</item>
         <item>TV en directo: a barra de información cabe nun teléfono en vertical.</item>
+        <item>Android TV: o mando chega a cada vídeo e a cada botón do reprodutor.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamaño dos subtítulos</string>
     <string name="rd_cast_this_phone">Este teléfono</string>

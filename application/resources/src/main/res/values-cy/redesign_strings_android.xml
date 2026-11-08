@@ -34,6 +34,7 @@
         <item>Isdeitlau o\'r rhyngrwyd: chwilio o\'r chwaraewr yn OpenSubtitles, Wizdom (Hebraeg), YIFY Subtitles ac Addic7ed, am ddim a heb gyfrif.</item>
         <item>Fe\'u ceir hyd yn oed ar gyfer ffeiliau nad yw eu henwau\'n dweud dim. Dewisol: eich allwedd OpenSubtitles.com eich hun a chwilio awtomatig, yn Gosodiadau › Isdeitlau.</item>
         <item>Teledu Byw: mae\'r bar gwybodaeth yn ffitio ffôn sy\'n cael ei ddal yn unionsyth.</item>
+        <item>Android TV: mae\'r teclyn rheoli o bell yn cyrraedd pob fideo a phob botwm yn y chwaraewr.</item>
     </string-array>
     <string name="rd_subtitle_size">Maint isdeitlau</string>
     <string name="rd_cast_this_phone">Y ffôn hwn</string>

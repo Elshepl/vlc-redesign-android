@@ -33,6 +33,7 @@
         <item>来自互联网的字幕：直接在播放器中搜索 OpenSubtitles、Wizdom（希伯来语）、YIFY Subtitles 和 Addic7ed，免费且无需账户。</item>
         <item>即使文件名看不出任何信息也能找到。可选：您自己的 OpenSubtitles.com 密钥和自动搜索，位于“设置 › 字幕”。</item>
         <item>电视直播：竖握手机时信息栏也能完整显示。</item>
+        <item>Android TV：遥控器现在可以到达每个视频和播放器的每个按钮。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">此手机</string>

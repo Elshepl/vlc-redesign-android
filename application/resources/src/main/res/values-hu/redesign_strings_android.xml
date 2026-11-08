@@ -33,6 +33,7 @@
         <item>Feliratok az internetről: keresés közvetlenül a lejátszóból az OpenSubtitles, a Wizdom (héber), a YIFY Subtitles és az Addic7ed szolgáltatásban, ingyen és fiók nélkül.</item>
         <item>Olyan fájlokhoz is megtalálhatók, amelyek neve semmit sem árul el. Választható: saját OpenSubtitles.com-kulcs és automatikus keresés, a Beállítások › Feliratok alatt.</item>
         <item>Élő TV: az információs sáv elfér az álló helyzetben tartott telefonon.</item>
+        <item>Android TV: a távirányító minden videót és a lejátszó minden gombját eléri.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>

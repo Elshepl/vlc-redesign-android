@@ -33,6 +33,7 @@
         <item>Subtitle dari internet: cari langsung dari pemutar di OpenSubtitles, Wizdom (Ibrani), YIFY Subtitles, dan Addic7ed, gratis dan tanpa akun.</item>
         <item>Ditemukan bahkan untuk file yang namanya tidak menjelaskan apa pun. Opsional: kunci OpenSubtitles.com milik Anda sendiri dan pencarian otomatis, di Pengaturan › Subtitle.</item>
         <item>TV Langsung: bilah info muat di ponsel yang dipegang tegak.</item>
+        <item>Android TV: remote kini menjangkau setiap video dan setiap tombol pemutar.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukuran subtitel</string>
     <string name="rd_cast_this_phone">Ponsel ini</string>

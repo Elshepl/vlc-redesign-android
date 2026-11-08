@@ -33,6 +33,7 @@
         <item>Sous-titres depuis Internet : recherche depuis le lecteur sur OpenSubtitles, Wizdom (hébreu), YIFY Subtitles et Addic7ed, gratuitement et sans compte.</item>
         <item>Trouvés même pour les fichiers dont le nom ne dit rien. En option : votre propre clé OpenSubtitles.com et une recherche automatique, dans Paramètres › Sous-titres.</item>
         <item>TV en direct : la barre d\'informations tient sur un téléphone tenu à la verticale.</item>
+        <item>Android TV : la télécommande atteint chaque vidéo et chaque bouton du lecteur.</item>
     </string-array>
     <string name="rd_subtitle_size">Taille des sous-titres</string>
     <string name="rd_cast_this_phone">Ce téléphone</string>
