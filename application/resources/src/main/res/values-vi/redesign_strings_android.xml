@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Thiết bị cũ: video, Cài đặt và phụ đề không còn bị dừng đột ngột trên Android 5 đến 10.</item>
-        <item>Dùng ít bộ nhớ hơn sau khi xoay màn hình.</item>
+        <item>Phụ đề từ internet: tìm ngay trong trình phát trên OpenSubtitles, Wizdom (tiếng Do Thái), YIFY Subtitles và Addic7ed, miễn phí và không cần tài khoản.</item>
+        <item>Tìm được cả cho những tệp có tên không nói lên điều gì. Tùy chọn: khóa OpenSubtitles.com của riêng bạn và tìm kiếm tự động, trong Thiết lập › Phụ đề.</item>
+        <item>TV trực tiếp: thanh thông tin vừa với điện thoại cầm dọc.</item>
+        <item>Android TV: điều khiển từ xa nay tới được mọi video và mọi nút của trình phát.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

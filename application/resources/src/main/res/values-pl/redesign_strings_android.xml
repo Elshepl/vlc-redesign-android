@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Przechowywana tylko na tym urządzeniu, aby kontynuować od miejsca, w którym przerwano.</string>
     <string name="rd_ob_updates_help">Raz dziennie sprawdza, czy jest nowsza testowa wersja VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Starsze urządzenia: filmy, Ustawienia i napisy nie zawieszają się już na Androidzie 5–10.</item>
-        <item>Mniej pamięci po obróceniu ekranu.</item>
+        <item>Napisy z internetu: wyszukiwanie prosto z odtwarzacza w OpenSubtitles, Wizdom (hebrajski), YIFY Subtitles i Addic7ed, za darmo i bez konta.</item>
+        <item>Znajdowane nawet dla plików, których nazwy nic nie mówią. Opcjonalnie: własny klucz OpenSubtitles.com i automatyczne wyszukiwanie, w Ustawienia › Napisy.</item>
+        <item>Telewizja na żywo: pasek informacji mieści się na telefonie trzymanym pionowo.</item>
+        <item>Android TV: pilot dociera do każdego filmu i każdego przycisku odtwarzacza.</item>
     </string-array>
     <string name="rd_subtitle_size">Rozmiar napisów</string>
     <string name="rd_cast_this_phone">Ten telefon</string>

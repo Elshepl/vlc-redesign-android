@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Dispositius antics: els vídeos, la Configuració i els subtítols ja no fallen a l\'Android 5 al 10.</item>
-        <item>Menys memòria després de girar la pantalla.</item>
+        <item>Subtítols d\'internet: cerca des del reproductor a OpenSubtitles, Wizdom (hebreu), YIFY Subtitles i Addic7ed, de franc i sense compte.</item>
+        <item>Es troben fins i tot per a fitxers amb noms que no diuen res. Opcional: la vostra pròpia clau d\'OpenSubtitles.com i una cerca automàtica, a Paràmetres › Subtítols.</item>
+        <item>TV en directe: la barra d\'informació cap en un telèfon en vertical.</item>
+        <item>Android TV: el comandament arriba a cada vídeo i a cada botó del reproductor.</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

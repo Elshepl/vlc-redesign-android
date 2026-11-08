@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">נשמר במכשיר הזה בלבד, כדי להמשיך מהמקום שבו הפסקת.</string>
     <string name="rd_ob_updates_help">מחפש גרסת בדיקה חדשה יותר של VLC for Android פעם ביום.</string>
     <string-array name="rd_whats_new_items">
-        <item>מכשירים ישנים: סרטונים, הגדרות וכתוביות כבר לא קורסים ב־Android 5 עד 10.</item>
-        <item>פחות זיכרון אחרי סיבוב המסך.</item>
+        <item>כתוביות מהאינטרנט: חיפוש מתוך הנגן ב־OpenSubtitles, ב־Wizdom לעברית, ב־YIFY Subtitles וב־Addic7ed, בחינם ובלי חשבון.</item>
+        <item>נמצאות גם לקבצים ששמם לא אומר כלום. לבחירתך: מפתח OpenSubtitles.com משלך וחיפוש אוטומטי, בהגדרות › כתוביות.</item>
+        <item>טלוויזיה חיה: פס המידע מתאים לטלפון שמוחזק לאורך.</item>
+        <item>ב־Android TV: השלט מגיע לכל סרטון ולכל כפתור בנגן.</item>
     </string-array>
     <string name="rd_fx_luma_spat">עוצמת בהירות מרחבית (0-254)</string>
     <string name="rd_fx_luma_temp">עוצמת בהירות זמנית (0-254)</string>

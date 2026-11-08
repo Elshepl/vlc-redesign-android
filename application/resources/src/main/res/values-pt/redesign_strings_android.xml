@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Guardado apenas neste dispositivo, para continuar onde parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais recente do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Dispositivos antigos: vídeos, Definições e legendas já não falham no Android 5 a 10.</item>
-        <item>Menos memória depois de rodar o ecrã.</item>
+        <item>Legendas da Internet: pesquise a partir do leitor no OpenSubtitles, Wizdom (hebraico), YIFY Subtitles e Addic7ed, grátis e sem conta.</item>
+        <item>Encontradas mesmo para ficheiros cujo nome não diz nada. Opcional: a sua própria chave do OpenSubtitles.com e uma pesquisa automática, em Definições › Legendas.</item>
+        <item>TV em direto: a barra de informações cabe num telemóvel na vertical.</item>
+        <item>Android TV: o comando chega a cada vídeo e a cada botão do leitor.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este telemóvel</string>

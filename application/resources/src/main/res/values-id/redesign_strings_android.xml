@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Hanya disimpan di perangkat ini, untuk melanjutkan dari tempat terakhir Anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari build uji VLC for Android yang lebih baru sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Perangkat lama: video, Setelan, dan subtitel tidak lagi mogok di Android 5 hingga 10.</item>
-        <item>Lebih sedikit memori setelah layar diputar.</item>
+        <item>Subtitle dari internet: cari langsung dari pemutar di OpenSubtitles, Wizdom (Ibrani), YIFY Subtitles, dan Addic7ed, gratis dan tanpa akun.</item>
+        <item>Ditemukan bahkan untuk file yang namanya tidak menjelaskan apa pun. Opsional: kunci OpenSubtitles.com milik Anda sendiri dan pencarian otomatis, di Pengaturan › Subtitle.</item>
+        <item>TV Langsung: bilah info muat di ponsel yang dipegang tegak.</item>
+        <item>Android TV: remote kini menjangkau setiap video dan setiap tombol pemutar.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukuran subtitel</string>
     <string name="rd_cast_this_phone">Ponsel ini</string>

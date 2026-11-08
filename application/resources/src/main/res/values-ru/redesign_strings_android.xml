@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Хранится только на этом устройстве, чтобы продолжить с того места, где вы остановились.</string>
     <string name="rd_ob_updates_help">Раз в день проверяет, нет ли более новой тестовой сборки VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Старые устройства: видео, Настройки и субтитры больше не вылетают на Android 5–10.</item>
-        <item>Меньше памяти после поворота экрана.</item>
+        <item>Субтитры из интернета: поиск прямо из плеера в OpenSubtitles, Wizdom (иврит), YIFY Subtitles и Addic7ed, бесплатно и без учётной записи.</item>
+        <item>Находятся даже для файлов, по названию которых ничего не понять. По желанию: ваш собственный ключ OpenSubtitles.com и автоматический поиск, в разделе Настройки › Субтитры.</item>
+        <item>ТВ в прямом эфире: информационная панель помещается на телефоне в вертикальном положении.</item>
+        <item>Android TV: с пульта доступны все видео и все кнопки плеера.</item>
     </string-array>
     <string name="rd_subtitle_size">Размер субтитров</string>
     <string name="rd_cast_this_phone">Этот телефон</string>

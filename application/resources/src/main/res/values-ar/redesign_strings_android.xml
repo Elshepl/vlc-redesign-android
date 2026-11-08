@@ -32,8 +32,10 @@
     <string name="rd_ob_history_help">يُحفظ على هذا الجهاز فقط، للمتابعة من حيث توقفت.</string>
     <string name="rd_ob_updates_help">يبحث مرة في اليوم عن إصدار تجريبي أحدث من VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>الأجهزة الأقدم: لم تعد مقاطع الفيديو والإعدادات والترجمات تتعطل على Android 5 حتى 10.</item>
-        <item>استهلاك أقل للذاكرة بعد تدوير الشاشة.</item>
+        <item>ترجمات من الإنترنت: ابحث من داخل المشغّل في OpenSubtitles وWizdom للعبرية وYIFY Subtitles وAddic7ed، مجانًا ودون حساب.</item>
+        <item>يُعثر عليها حتى للملفات التي لا تدل أسماؤها على شيء. اختياري: مفتاح OpenSubtitles.com الخاص بك والبحث التلقائي، في الإعدادات › الترجمة.</item>
+        <item>التلفزيون المباشر: صار شريط المعلومات يلائم الهاتف في الوضع العمودي.</item>
+        <item>على Android TV: يصل جهاز التحكم عن بُعد إلى كل فيديو وكل زر في المشغّل.</item>
     </string-array>
     <string name="rd_subtitle_size">حجم الترجمة</string>
     <string name="rd_cast_this_phone">هذا الهاتف</string>

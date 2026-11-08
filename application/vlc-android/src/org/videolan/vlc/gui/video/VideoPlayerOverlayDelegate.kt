@@ -686,6 +686,7 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
                 updateTitleConstraints()
                 updateHudMargins()
                 hudBinding.rdBar.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> syncHudBackground() }
+                if (RdTvWindow.isOn(player)) tvSeekBarKeys()
 
                 initSeekButton()
 
@@ -732,6 +733,56 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
             R.drawable.ic_player_forward_10_disabled)
         if (!player.isLocked)
             hudBinding.playerOverlaySeekbar.isEnabled = seekable
+    }
+
+    /**
+     * VLC Redesign, the TV layout: the remote on the bar, as on the Samsung TV app. Left / Right go on to the next
+     * controls (the bar kept them to seek: the tracks, the settings and the queue after it couldn't be reached);
+     * OK takes the bar (its handle grows), then Left / Right seek, and OK, Back, Up or Down let it go.
+     */
+    private fun tvSeekBarKeys() {
+        val bar = hudBinding.playerOverlaySeekbar
+        val handle = bar.thumb ?: return
+        val bigHandle = (handle.constantState?.newDrawable(player.resources, player.theme)?.mutate() as? android.graphics.drawable.GradientDrawable)
+            ?.apply { setSize(12.dp, 28.dp) }
+        var held = false
+        fun hold(on: Boolean) {
+            if (held == on) return
+            held = on
+            bar.thumb = if (on && bigHandle != null) bigHandle else handle
+            if (on) showOverlayTimeout(VideoPlayerActivity.OVERLAY_INFINITE) else showOverlayTimeout(Settings.videoHudDelay * 1000)
+        }
+        bar.setOnKeyListener { v, keyCode, event ->
+            val down = event.action == android.view.KeyEvent.ACTION_DOWN
+            when (keyCode) {
+                android.view.KeyEvent.KEYCODE_DPAD_LEFT, android.view.KeyEvent.KEYCODE_DPAD_RIGHT -> {
+                    // (the bar hidden: the player's own seek)
+                    if (!player.isShowing) return@setOnKeyListener false
+                    val right = keyCode == android.view.KeyEvent.KEYCODE_DPAD_RIGHT
+                    if (down) {
+                        if (held) player.touchDelegate.seekDelta((if (right) 1 else -1) * Settings.videoDoubleTapJumpDelay * 1000)
+                        else v.focusSearch(if (right) View.FOCUS_RIGHT else View.FOCUS_LEFT)?.requestFocus()
+                    }
+                    true
+                }
+                android.view.KeyEvent.KEYCODE_DPAD_CENTER, android.view.KeyEvent.KEYCODE_ENTER, android.view.KeyEvent.KEYCODE_NUMPAD_ENTER -> {
+                    if (!player.isShowing || (!held && !bar.isEnabled)) return@setOnKeyListener false
+                    if (!down) hold(!held)
+                    true
+                }
+                android.view.KeyEvent.KEYCODE_BACK, android.view.KeyEvent.KEYCODE_DPAD_UP, android.view.KeyEvent.KEYCODE_DPAD_DOWN -> {
+                    if (!held) return@setOnKeyListener false
+                    if (!down) hold(false)
+                    true
+                }
+                else -> false
+            }
+        }
+        val focusBefore = bar.onFocusChangeListener
+        bar.setOnFocusChangeListener { v, has ->
+            focusBefore?.onFocusChange(v, has)
+            if (!has) hold(false)
+        }
     }
 
     fun setListeners(enabled: Boolean) {

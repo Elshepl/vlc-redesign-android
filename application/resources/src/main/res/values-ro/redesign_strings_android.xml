@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Dispozitive mai vechi: videoclipurile, Setările și subtitrările nu se mai blochează pe Android 5–10.</item>
-        <item>Mai puțină memorie după rotirea ecranului.</item>
+        <item>Subtitluri de pe internet: căutare direct din player pe OpenSubtitles, Wizdom (ebraică), YIFY Subtitles și Addic7ed, gratuit și fără cont.</item>
+        <item>Găsite chiar și pentru fișierele al căror nume nu spune nimic. Opțional: propria dumneavoastră cheie OpenSubtitles.com și o căutare automată, în Setări › Subtitluri.</item>
+        <item>TV în direct: bara de informații încape pe un telefon ținut vertical.</item>
+        <item>Android TV: telecomanda ajunge la fiecare videoclip și la fiecare buton al playerului.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
     <string name="rd_cast_this_phone">Acest telefon</string>

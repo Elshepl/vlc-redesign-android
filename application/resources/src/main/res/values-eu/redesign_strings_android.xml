@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
     <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
     <string-array name="rd_whats_new_items">
-        <item>Gailu zaharragoak: bideoek, Ezarpenek eta azpitituluek ez dute gehiago huts egiten Android 5etik 10era.</item>
-        <item>Memoria gutxiago pantaila biratu ondoren.</item>
+        <item>Interneteko azpitituluak: bilatu erreproduzigailutik OpenSubtitles, Wizdom (hebreera), YIFY Subtitles eta Addic7ed zerbitzuetan, doan eta konturik gabe.</item>
+        <item>Izenak ezer esaten ez duten fitxategientzat ere aurkitzen dira. Aukerakoa: zure OpenSubtitles.com gako propioa eta bilaketa automatikoa, Ezarpenak › Azpitituluak atalean.</item>
+        <item>Zuzeneko telebista: informazio-barra zutik dagoen telefono batean sartzen da.</item>
+        <item>Android TV: urruneko agintea bideo guztietara eta erreproduzigailuaren botoi guztietara iristen da.</item>
     </string-array>
     <string name="rd_subtitle_size">Azpitituluen tamaina</string>
     <string name="rd_cast_this_phone">Telefono hau</string>

@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Lagres bare på denne enheten, så du kan fortsette der du slapp.</string>
     <string name="rd_ob_updates_help">Ser etter en nyere testversjon av VLC for Android én gang om dagen.</string>
     <string-array name="rd_whats_new_items">
-        <item>Eldre enheter: videoer, Innstillinger og undertekster krasjer ikke lenger på Android 5 til 10.</item>
-        <item>Mindre minne etter at skjermen roteres.</item>
+        <item>Undertekster fra Internett: søk rett fra avspilleren i OpenSubtitles, Wizdom (hebraisk), YIFY Subtitles og Addic7ed, gratis og uten konto.</item>
+        <item>Finnes selv for filer med navn som ikke sier noe. Valgfritt: din egen OpenSubtitles.com-nøkkel og automatisk søk, under Innstillinger › Undertekster.</item>
+        <item>Direkte-TV: infolinjen får plass på en telefon som holdes stående.</item>
+        <item>Android TV: fjernkontrollen når hver video og hver knapp i avspilleren.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefonen</string>

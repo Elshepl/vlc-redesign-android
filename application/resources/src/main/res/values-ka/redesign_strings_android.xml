@@ -32,8 +32,10 @@
     <string name="rd_ob_history_help">ინახება მხოლოდ ამ მოწყობილობაზე, რომ იქიდან გააგრძელოთ, სადაც შეჩერდით.</string>
     <string name="rd_ob_updates_help">დღეში ერთხელ ეძებს VLC for Android-ის უფრო ახალ სატესტო ვერსიას.</string>
     <string-array name="rd_whats_new_items">
-        <item>ძველი მოწყობილობები: ვიდეოები, პარამეტრები და სუბტიტრები Android 5–10-ზე აღარ იშლება.</item>
-        <item>ნაკლები მეხსიერება ეკრანის მობრუნების შემდეგ.</item>
+        <item>ტიტრები ინტერნეტიდან: ძებნა პირდაპირ პლეერიდან OpenSubtitles-ში, Wizdom-ში (ებრაული), YIFY Subtitles-სა და Addic7ed-ში, უფასოდ და ანგარიშის გარეშე.</item>
+        <item>მოიძებნება იმ ფაილებისთვისაც, რომელთა სახელიც არაფერს ამბობს. სურვილისამებრ: თქვენი საკუთარი OpenSubtitles.com გასაღები და ავტომატური ძებნა, პარამეტრები › ტიტრები.</item>
+        <item>პირდაპირი ტელევიზია: საინფორმაციო ზოლი ეტევა ვერტიკალურად დაჭერილ ტელეფონზე.</item>
+        <item>Android TV: პულტი აღწევს ყველა ვიდეოს და პლეერის ყველა ღილაკს.</item>
     </string-array>
     <string name="rd_subtitle_size">სუბტიტრების ზომა</string>
     <string name="rd_cast_this_phone">ეს ტელეფონი</string>

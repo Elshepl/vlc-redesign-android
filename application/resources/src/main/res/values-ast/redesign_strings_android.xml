@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Preseos más vieyos: los vídeos, los Axustes y los sotítulos yá nun peten n\'Android 5 al 10.</item>
-        <item>Úsase menos memoria dempués de xirar la pantalla.</item>
+        <item>Sotítulos d\'internet: busca dende\'l reproductor n\'OpenSubtitles, Wizdom (hebréu), YIFY Subtitles y Addic7ed, de baldre y ensin cuenta.</item>
+        <item>Alcuéntrense tamién pa ficheros con nomes que nun dicen nada. Opcional: la to clave propia d\'OpenSubtitles.com y una busca automática, en Axustes › Sotítulos.</item>
+        <item>TV en direutu: la barra d\'información cabe nun teléfonu en vertical.</item>
+        <item>Android TV: el mandu llega a tolos vídeos y a tolos botones del reproductor.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

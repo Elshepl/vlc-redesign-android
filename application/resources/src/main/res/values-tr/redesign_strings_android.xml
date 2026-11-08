@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>Eski cihazlar: videolar, Ayarlar ve altyazılar Android 5–10\'da artık çökmüyor.</item>
-        <item>Ekran döndükten sonra daha az bellek.</item>
+        <item>İnternetten altyazılar: doğrudan oynatıcıdan OpenSubtitles, Wizdom (İbranice), YIFY Subtitles ve Addic7ed\'de arayın, ücretsiz ve hesapsız.</item>
+        <item>Adı hiçbir şey söylemeyen dosyalar için bile bulunur. İsteğe bağlı: kendi OpenSubtitles.com anahtarınız ve otomatik arama, Ayarlar › Altyazılar bölümünde.</item>
+        <item>Canlı TV: bilgi çubuğu dik tutulan bir telefona sığıyor.</item>
+        <item>Android TV: kumanda artık her videoya ve oynatıcının her düğmesine ulaşıyor.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

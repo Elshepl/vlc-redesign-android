@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Shranjeno samo v tej napravi, da lahko nadaljujete tam, kjer ste končali.</string>
     <string name="rd_ob_updates_help">Enkrat na dan poišče novejšo preizkusno izdajo VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Starejše naprave: videoposnetki, Nastavitve in podnapisi se v Androidu 5 do 10 ne sesujejo več.</item>
-        <item>Manj pomnilnika po vrtenju zaslona.</item>
+        <item>Podnapisi iz interneta: iskanje kar iz predvajalnika v OpenSubtitles, Wizdom (hebrejščina), YIFY Subtitles in Addic7ed, brezplačno in brez računa.</item>
+        <item>Najdejo se tudi za datoteke, katerih ime nič ne pove. Neobvezno: vaš lastni ključ OpenSubtitles.com in samodejno iskanje, v Nastavitve › Podnapisi.</item>
+        <item>TV v živo: informacijska vrstica se prilega telefonu, ki ga držite pokonci.</item>
+        <item>Android TV: daljinski upravljalnik doseže vsak videoposnetek in vsak gumb predvajalnika.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost podnapisov</string>
     <string name="rd_cast_this_phone">Ta telefon</string>

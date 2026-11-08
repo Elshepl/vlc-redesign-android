@@ -32,8 +32,10 @@
     <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
     <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Pajisjet më të vjetra: videot, Cilësimet dhe titrat nuk rrëzohen më në Android 5 deri 10.</item>
-        <item>Më pak memorie pas rrotullimit të ekranit.</item>
+        <item>Titra nga interneti: kërkoni drejt nga luajtësi në OpenSubtitles, Wizdom (hebraisht), YIFY Subtitles dhe Addic7ed, falas dhe pa llogari.</item>
+        <item>Gjenden edhe për skedarë emri i të cilëve nuk thotë asgjë. Opsionale: çelësi juaj i OpenSubtitles.com dhe kërkimi automatik, te Cilësimet › Titra.</item>
+        <item>TV drejtpërdrejt: shiriti i informacionit nxë në një telefon të mbajtur drejt.</item>
+        <item>Android TV: telekomanda arrin çdo video dhe çdo buton të luajtësit.</item>
     </string-array>
     <string name="rd_subtitle_size">Madhësia e titrave</string>
     <string name="rd_cast_this_phone">Ky telefon</string>

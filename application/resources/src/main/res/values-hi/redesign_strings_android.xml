@@ -32,8 +32,10 @@
     <string name="rd_ob_history_help">केवल इसी डिवाइस पर रखा जाता है, ताकि आप वहीं से जारी रख सकें जहाँ आपने छोड़ा था।</string>
     <string name="rd_ob_updates_help">दिन में एक बार VLC for Android का नया परीक्षण बिल्ड खोजता है।</string>
     <string-array name="rd_whats_new_items">
-        <item>पुराने डिवाइस: Android 5 से 10 पर वीडियो, सेटिंग्स और सबटाइटल अब क्रैश नहीं होते।</item>
-        <item>स्क्रीन घुमाने के बाद कम मेमोरी।</item>
+        <item>इंटरनेट से उपशीर्षक: प्लेयर से ही OpenSubtitles, Wizdom (हिब्रू), YIFY Subtitles और Addic7ed में खोजें, मुफ़्त और बिना खाते के।</item>
+        <item>उन फ़ाइलों के लिए भी मिलते हैं जिनके नाम से कुछ पता नहीं चलता। वैकल्पिक: आपकी अपनी OpenSubtitles.com कुंजी और अपने-आप खोज, सेटिंग्स › उपशीर्षक में।</item>
+        <item>लाइव TV: फ़ोन को सीधा पकड़ने पर भी जानकारी पट्टी पूरी दिखती है।</item>
+        <item>Android TV: रिमोट अब हर वीडियो और प्लेयर के हर बटन तक पहुँचता है।</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षक का आकार</string>
     <string name="rd_cast_this_phone">यह फ़ोन</string>

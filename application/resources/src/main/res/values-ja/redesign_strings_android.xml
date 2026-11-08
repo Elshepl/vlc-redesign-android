@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
     <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
     <string-array name="rd_whats_new_items">
-        <item>古い端末：Android 5〜10 で動画・設定・字幕がクラッシュしなくなりました。</item>
-        <item>画面回転後のメモリ使用量を削減しました。</item>
+        <item>インターネットから字幕：プレーヤーから OpenSubtitles、Wizdom（ヘブライ語）、YIFY Subtitles、Addic7ed を無料・アカウント不要で検索できます。</item>
+        <item>名前から何もわからないファイルでも見つかります。オプション：ご自身の OpenSubtitles.com キーと自動検索（設定 › 字幕）。</item>
+        <item>ライブ TV：スマートフォンを縦に持っても情報バーが収まるようになりました。</item>
+        <item>Android TV：リモコンですべての動画とプレーヤーのすべてのボタンを操作できるようになりました。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕のサイズ</string>
     <string name="rd_cast_this_phone">このスマートフォン</string>

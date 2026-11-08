@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">
-        <item>Vecākas ierīces: video, Iestatījumi un subtitri vairs neavarē Android 5–10.</item>
-        <item>Mazāk atmiņas pēc ekrāna pagriešanas.</item>
+        <item>Subtitri no interneta: meklēšana tieši no atskaņotāja vietnēs OpenSubtitles, Wizdom (ivrits), YIFY Subtitles un Addic7ed, bez maksas un bez konta.</item>
+        <item>Tiek atrasti pat failiem, kuru nosaukumi neko nepasaka. Pēc izvēles: jūsu pašu OpenSubtitles.com atslēga un automātiska meklēšana, sadaļā Iestatījumi › Subtitri.</item>
+        <item>Tiešraides TV: informācijas josla ietilpst vertikāli turētā tālrunī.</item>
+        <item>Android TV: ar tālvadības pulti var sasniegt katru video un katru atskaņotāja pogu.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitru izmērs</string>
     <string name="rd_cast_this_phone">Šis tālrunis</string>

@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Aparelhos antigos: vídeos, Configurações e legendas não travam mais no Android 5 a 10.</item>
-        <item>Menos memória depois de girar a tela.</item>
+        <item>Legendas da internet: busque direto do reprodutor no OpenSubtitles, Wizdom (hebraico), YIFY Subtitles e Addic7ed, de graça e sem conta.</item>
+        <item>Encontradas até para arquivos cujo nome não diz nada. Opcional: sua própria chave do OpenSubtitles.com e uma busca automática, em Configurações › Legendas.</item>
+        <item>TV ao vivo: a barra de informações cabe em um celular na vertical.</item>
+        <item>Android TV: o controle remoto alcança cada vídeo e cada botão do reprodutor.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

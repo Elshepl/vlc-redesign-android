@@ -30,8 +30,10 @@
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">
-        <item>Senesni įrenginiai: vaizdo įrašai, Nustatymai ir subtitrai nebestringa Android 5–10.</item>
-        <item>Mažiau atminties pasukus ekraną.</item>
+        <item>Subtitrai iš interneto: paieška tiesiai iš grotuvo per OpenSubtitles, Wizdom (hebrajų k.), YIFY Subtitles ir Addic7ed, nemokamai ir be paskyros.</item>
+        <item>Randami net failams, kurių pavadinimai nieko nesako. Pasirinktinai: jūsų pačių OpenSubtitles.com raktas ir automatinė paieška, skiltyje Nuostatos › Subtitrai.</item>
+        <item>Tiesioginė TV: informacijos juosta telpa vertikaliai laikomame telefone.</item>
+        <item>Android TV: nuotolinio valdymo pultu pasiekiamas kiekvienas vaizdo įrašas ir kiekvienas grotuvo mygtukas.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
     <string name="rd_cast_this_phone">Šis telefonas</string>

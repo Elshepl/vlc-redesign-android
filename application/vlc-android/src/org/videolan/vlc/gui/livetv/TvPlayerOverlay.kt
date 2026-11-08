@@ -145,6 +145,10 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
     }
     private val bNextText = ctx.tvText("", 14f, Dark.A0)
     private val bEnd = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL; gravity = Gravity.END }
+    private val bDivider = View(ctx).apply { setBackgroundColor(Dark.DIVIDER) }
+    private val bInfo = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
+    /** the banner in one row (null: not laid out yet), or stacked on a phone held upright */
+    private var stacked: Boolean? = null
     private val bClock = ctx.tvText("", 26f, Dark.FG1).apply { typeface = semibold; fontFeatureSettings = "tnum" }
     private val bMarks = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
     private val bPrev = ctx.tvIconButton(R.drawable.rd_ic_arrow_left, ctx.getString(R.string.rd_tv_programme_before), Dark.A2) { browse(-1) }
@@ -283,9 +287,9 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
         who.addView(bGroup, LinearLayout.LayoutParams(match, wrap).apply { topMargin = ctx.tvPx(4f) })
         bHead.addView(who, LinearLayout.LayoutParams(0, wrap, 1f).apply { marginStart = ctx.tvPx(12f) })
         bBody.addView(bHead, LinearLayout.LayoutParams(ctx.tvPx(260f), match))
-        bBody.addView(View(ctx).apply { setBackgroundColor(Dark.DIVIDER) }, LinearLayout.LayoutParams(maxOf(1, ctx.tvPx(1f)), match))
+        bBody.addView(bDivider, LinearLayout.LayoutParams(maxOf(1, ctx.tvPx(1f)), match))
         // the programme: its state, title, hours, how far it is, its story, what comes next
-        val info = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL; setPadding(ctx.tvPx(20f), ctx.tvPx(13f), ctx.tvPx(20f), ctx.tvPx(13f)) }
+        val info = bInfo.apply { setPadding(ctx.tvPx(20f), ctx.tvPx(13f), ctx.tvPx(20f), ctx.tvPx(13f)) }
         val titleRow = LinearLayout(ctx).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL; minimumHeight = ctx.tvPx(26f) }
         bWhere.background = rounded(Dark.TRACK, ctx.tvDp(5f))
         titleRow.addView(bWhere, LinearLayout.LayoutParams(wrap, ctx.tvPx(22f)).apply { marginEnd = ctx.tvPx(12f) })
@@ -353,15 +357,17 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
             lp.bottomMargin = bottom
             banner.layoutParams = lp
         }
-        // a phone held upright: the channel's column narrower, its logo smaller; a long name widens it (up to a
-        // third of the screen), then takes two lines
+        // a phone held upright: the bar stacked (the channel, then the programme across the whole width, then the
+        // time and the arrows in a row), its logo smaller; in one row a long name widens the channel's column (up
+        // to a third of the screen), then takes two lines
         val narrow = w < ctx.tvPx(600f)
+        stack(narrow)
         val logo = ctx.tvPx(if (narrow) 44f else 64f)
         val number = if (bNumber.text.isEmpty()) 0 else bNumber.paint.measureText(bNumber.text.toString()).toInt() + ctx.tvPx(8f)
         val star = if (bFav.visibility == View.VISIBLE) ctx.tvPx(22f) else 0
         val around = bHead.paddingLeft + bHead.paddingRight + logo + ctx.tvPx(12f) + number + star
         val name = bName.paint.measureText(bName.text.toString()).toInt() + ctx.tvPx(2f)
-        val headW = if (narrow) ctx.tvPx(150f) else (around + name).coerceIn(ctx.tvPx(260f), maxOf(ctx.tvPx(260f), w / 3))
+        val headW = if (narrow) ViewGroup.LayoutParams.MATCH_PARENT else (around + name).coerceIn(ctx.tvPx(260f), maxOf(ctx.tvPx(260f), w / 3))
         val cut = androidx.core.view.ViewCompat.getRootWindowInsets(root)?.getInsets(androidx.core.view.WindowInsetsCompat.Type.displayCutout())
         val pad = ctx.tvPx(if (narrow) 4f else 24f)
         val left = pad + (cut?.left ?: 0)
@@ -370,7 +376,38 @@ class TvPlayerOverlay(private val activity: VideoPlayerActivity) {
         (bHead.layoutParams as LinearLayout.LayoutParams).let { if (it.width != headW) { it.width = headW; bHead.layoutParams = it } }
         (bLogo.layoutParams as LinearLayout.LayoutParams).let { if (it.width != logo) { it.width = logo; it.height = logo; bLogo.layoutParams = it } }
         // the name as long as the column lets it, the star right after it
-        bName.maxWidth = maxOf(ctx.tvPx(40f), headW - around)
+        bName.maxWidth = maxOf(ctx.tvPx(40f), (if (narrow) w - left - right else headW) - around)
+    }
+
+    /** One row (the channel | the programme | the time and the arrows), or stacked on a narrow screen, where the
+     *  programme had a few letters between the channel's column and the side (a phone held upright). */
+    private fun stack(on: Boolean) {
+        if (stacked == on) return
+        stacked = on
+        val wrap = ViewGroup.LayoutParams.WRAP_CONTENT
+        val match = ViewGroup.LayoutParams.MATCH_PARENT
+        val line = maxOf(1, ctx.tvPx(1f))
+        bBody.orientation = if (on) LinearLayout.VERTICAL else LinearLayout.HORIZONTAL
+        bHead.layoutParams = LinearLayout.LayoutParams(if (on) match else ctx.tvPx(260f), if (on) wrap else match)
+        bHead.setPadding(ctx.tvPx(18f), ctx.tvPx(if (on) 10f else 13f), ctx.tvPx(14f), ctx.tvPx(if (on) 4f else 13f))
+        bDivider.layoutParams = if (on) LinearLayout.LayoutParams(match, line).apply { marginStart = ctx.tvPx(18f); marginEnd = ctx.tvPx(18f) }
+                                else LinearLayout.LayoutParams(line, match)
+        bInfo.layoutParams = if (on) LinearLayout.LayoutParams(match, wrap) else LinearLayout.LayoutParams(0, wrap, 1f)
+        bInfo.setPadding(ctx.tvPx(if (on) 18f else 20f), ctx.tvPx(if (on) 10f else 13f), ctx.tvPx(if (on) 18f else 20f), ctx.tvPx(if (on) 4f else 13f))
+        // the side becomes a row: the time at the start, the arrows (and OK's action) at the end
+        bEnd.orientation = if (on) LinearLayout.HORIZONTAL else LinearLayout.VERTICAL
+        bEnd.gravity = if (on) Gravity.CENTER_VERTICAL else Gravity.END
+        bEnd.minimumWidth = if (on) 0 else ctx.tvPx(150f)
+        bEnd.setPadding(ctx.tvPx(if (on) 18f else 0f), ctx.tvPx(if (on) 0f else 12f), ctx.tvPx(18f), ctx.tvPx(if (on) 4f else 12f))
+        bEnd.layoutParams = LinearLayout.LayoutParams(if (on) match else wrap, if (on) wrap else match)
+        bClock.setTextSize(TypedValue.COMPLEX_UNIT_SP, if (on) 20f else 26f)
+        // (its children: the time, a gap, the arrows, a gap, the remote's keys: in a row only the first gap grows)
+        bEnd.getChildAt(3)?.let { gap -> (gap.layoutParams as? LinearLayout.LayoutParams)?.let { it.weight = if (on) 0f else 1f; gap.layoutParams = it } }
+        (bMarks.layoutParams as? LinearLayout.LayoutParams)?.let {
+            it.topMargin = ctx.tvPx(if (on) 0f else 8f)
+            it.bottomMargin = ctx.tvPx(if (on) 0f else 8f)
+            bMarks.layoutParams = it
+        }
     }
 
     private fun navigationInset(): Int {

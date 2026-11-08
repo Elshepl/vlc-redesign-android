@@ -113,7 +113,11 @@ object OnlineSubtitles {
     /** a result in the list shown: its score, the rank of its language among the user's */
     data class Ranked(val result: Result, val score: Double, val languageRank: Int, val hearingImpaired: Boolean)
 
-    class Outcome(val media: Media, val match: Match?, val results: List<Ranked>, val error: Problem?, val anyAnswered: Boolean) {
+    /** a service asked: its name, how many it found, whether it failed to answer */
+    data class Asked(val name: String, val count: Int, val failed: Boolean)
+
+    class Outcome(val media: Media, val match: Match?, val results: List<Ranked>, val error: Problem?, val anyAnswered: Boolean,
+                  val asked: List<Asked> = emptyList()) {
         /** "Sintel (2010)", "Breaking Bad · S01E02" */
         val matchTitle: String
             get() {
@@ -896,10 +900,69 @@ object OnlineSubtitles {
         return folder.listFiles()?.any { tag in it.name && !it.name.endsWith(".part") } == true
     }
 
+    /** what OpenSubtitles knows of this very file (its hash): the title most of the subtitles made for it are filed
+     *  under (the series for an episode), its season and episode; strong when those subtitles agree on it */
+    data class Identity(val match: Match, val season: Int, val episode: Int)
+
+    private val quotedRe = Regex("^\"([^\"]+)\"")
+
+    internal fun identityOfHash(json: String): Identity? {
+        val votes = LinkedHashMap<String, Int>()
+        val identities = HashMap<String, Identity>()
+        var total = 0
+        val array = try { JSONArray(json) } catch (e: Exception) { return null }
+        for (i in 0 until array.length()) {
+            val o = array.optJSONObject(i) ?: continue
+            fun text(key: String) = o.opt(key)?.toString()?.trim() ?: ""
+            if (text("MatchedBy") != "moviehash") continue
+            val series = text("MovieKind") == "episode"
+            val number = (if (series) text("SeriesIMDBParent") else text("IDMovieImdb")).toLongOrNull() ?: 0L
+            if (number <= 0) continue
+            var title = text("MovieName")
+            var season = -1
+            var episode = -1
+            if (series) {
+                // (the series in quotes, the episode after it: "\"Breaking Bad\" Pilot")
+                quotedRe.find(title)?.let { title = it.groupValues[1] }
+                season = text("SeriesSeason").toIntOrNull() ?: 0
+                episode = text("SeriesEpisode").toIntOrNull() ?: 0
+                if (season <= 0 && episode <= 0) { season = -1; episode = -1 }
+            }
+            if (title.isEmpty()) continue
+            val imdb = "tt%07d".format(Locale.ROOT, number)
+            val key = "$imdb/$season/$episode"
+            votes[key] = (votes[key] ?: 0) + 1
+            total++
+            if (key !in identities)
+                identities[key] = Identity(Match(imdb, title, if (series) 0 else text("MovieYear").toIntOrNull() ?: 0, series, false), season, episode)
+        }
+        val best = votes.maxByOrNull { it.value } ?: return null
+        val identity = identities[best.key] ?: return null
+        return identity.copy(match = identity.match.copy(strong = best.value * 2 > total))
+    }
+
+    private fun identifyByHash(media: Media): Identity? {
+        if (media.hash.isEmpty() || media.size <= 0) return null
+        val r = get(osUrl(listOf("moviebytesize-${media.size}", "moviehash-${media.hash}")), mapOf("User-Agent" to userAgent, "X-User-Agent" to userAgent))
+        return if (ok(r)) identityOfHash(String(r.body, Charsets.UTF_8)) else null
+    }
+
     /** asks the services together for the media taken for match (null: not identified) */
-    suspend fun search(context: Context, media: Media, match: Match?): Outcome = withContext(Dispatchers.IO) {
+    suspend fun search(context: Context, mediaAsked: Media, match: Match?): Outcome = withContext(Dispatchers.IO) {
         val wanted = wantedLanguages(context)
-        val m = match
+        var m = match
+        var media = mediaAsked
+        // its name didn't say what it is, or only a guess: OpenSubtitles may know this very file (its hash). With its
+        // title every service is asked (YIFY and Wizdom go by the IMDb id), not only the hash's
+        if (m == null || !m.strong) {
+            val found = identifyByHash(media)
+            // (about this very file: it wins over a guess from the name)
+            if (found != null) {
+                Log.d(TAG, "the file's hash says ${found.match.title} (${found.match.imdb})${if (found.match.strong) "" else ", a guess"}")
+                m = found.match
+                if (found.match.series && media.season < 0 && found.season >= 0) media = media.copy(season = found.season, episode = found.episode)
+            }
+        }
         val query = Query(
             imdb = m?.imdb ?: "", title = m?.title ?: media.title, year = m?.year ?: media.year,
             series = m?.series ?: (media.season >= 0), season = media.season, episode = media.episode,
@@ -927,7 +990,8 @@ object OnlineSubtitles {
         val found = answers.flatMap { it.first }
         val errors = answers.mapNotNull { it.second }
         Log.d(TAG, "\"${media.title}\" is ${m?.title ?: "unknown"} (${m?.imdb ?: "-"}${if (m?.strong == true) ", sure" else ""}), the hash ${media.hash.ifEmpty { "unknown" }}: ${found.size} found")
-        Outcome(media, m, rank(found, media, wanted), errors.firstOrNull(), answers.any { it.second == null } || asked.isEmpty())
+        Outcome(media, m, rank(found, media, wanted), errors.firstOrNull(), answers.any { it.second == null } || asked.isEmpty(),
+            asked.mapIndexed { i, p -> Asked(p.name, answers[i].first.size, answers[i].second != null) })
     }
 
     // ---------------------------------------------------------------------------------------------------------------
