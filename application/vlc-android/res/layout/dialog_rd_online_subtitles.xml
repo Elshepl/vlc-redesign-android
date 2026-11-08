@@ -72,6 +72,26 @@
             android:textSize="13sp"
             tools:text="Sintel (2010) · 24 found" />
 
+    <!-- every service asked and what it found, not only those with results ("OpenSubtitles 87 · Wizdom 4 · YIFY
+         Subtitles 0"; a dash for one that didn't answer) -->
+    <TextView
+            android:id="@+id/rd_os_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="6dp"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            android:textColor="?android:attr/textColorTertiary"
+            android:textSize="12sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="OpenSubtitles 87  ·  Wizdom 4  ·  YIFY Subtitles 0" />
+
     <androidx.core.widget.NestedScrollView
             android:id="@+id/rd_os_scroll"
             android:layout_width="match_parent"

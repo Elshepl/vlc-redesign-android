@@ -202,6 +202,39 @@ class OnlineSubtitlesTest {
     }
 
     @Test
+    fun identityOfTheFileHash() {
+        // most of the subtitles made for the file name one title: that one, sure; the others' are a guess
+        val film = """[
+            {"MatchedBy":"moviehash","MovieKind":"movie","IDMovieImdb":"133093","MovieName":"The Matrix","MovieYear":"1999"},
+            {"MatchedBy":"moviehash","MovieKind":"movie","IDMovieImdb":"133093","MovieName":"The Matrix","MovieYear":"1999"},
+            {"MatchedBy":"moviehash","MovieKind":"movie","IDMovieImdb":"234215","MovieName":"The Matrix Reloaded","MovieYear":"2003"},
+            {"MatchedBy":"imdbid","MovieKind":"movie","IDMovieImdb":"999","MovieName":"Other","MovieYear":"2000"}]"""
+        val f = OnlineSubtitles.identityOfHash(film)
+        assertNotNull(f)
+        assertEquals("tt0133093", f!!.match.imdb)
+        assertEquals("The Matrix", f.match.title)
+        assertEquals(1999, f.match.year)
+        assertTrue(f.match.strong)
+        // an episode: its series (in quotes in the name) with its season and episode
+        val episode = """[{"MatchedBy":"moviehash","MovieKind":"episode","IDMovieImdb":"959621","SeriesIMDBParent":"903747",
+            "MovieName":"\"Breaking Bad\" Pilot","MovieYear":"2008","SeriesSeason":"1","SeriesEpisode":"1"}]"""
+        val e = OnlineSubtitles.identityOfHash(episode)
+        assertNotNull(e)
+        assertEquals("tt0903747", e!!.match.imdb)
+        assertEquals("Breaking Bad", e.match.title)
+        assertTrue(e.match.series)
+        assertEquals(1, e.season)
+        assertEquals(1, e.episode)
+        // nothing made for the file, or not an answer
+        assertNull(OnlineSubtitles.identityOfHash("[]"))
+        assertNull(OnlineSubtitles.identityOfHash("<html>"))
+        // two titles as many times each: a guess
+        val split = """[{"MatchedBy":"moviehash","MovieKind":"movie","IDMovieImdb":"1","MovieName":"A","MovieYear":"2001"},
+            {"MatchedBy":"moviehash","MovieKind":"movie","IDMovieImdb":"2","MovieName":"B","MovieYear":"2002"}]"""
+        assertTrue(OnlineSubtitles.identityOfHash(split)?.match?.strong == false)
+    }
+
+    @Test
     fun similarity() {
         assertEquals(1.0, OnlineSubtitles.titleSimilarity("Sintel", "sintel"), 0.0)
         assertTrue(OnlineSubtitles.titleSimilarity("Big Buck Bunny", "Big Buck") > 0.5)
