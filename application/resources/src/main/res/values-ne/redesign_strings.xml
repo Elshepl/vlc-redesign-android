@@ -428,4 +428,13 @@
     <string name="rd_os_svc_subsro">तपाईंको निःशुल्क कुञ्जीसँग · रोमानियाली</string>
     <string name="rd_os_svc_napisy24">तपाईंको निःशुल्क खातासँग · पोलिस · तपाईंको फाइलका लागि बनाइएका फेला पार्छ</string>
     <string name="rd_os_svc_legendasnet">तपाईंको निःशुल्क खातासँग · पोर्तुगाली (ब्राजिल)</string>
+    <string name="rd_os_langs">खोज्ने भाषाहरू</string>
+    <string name="rd_os_add_language">भाषा थप्नुहोस्</string>
+    <string name="rd_os_every_other">अन्य सबै भाषा पनि</string>
+    <string name="rd_os_fewer_faster">कम भाषा: छिटो खोज</string>
+    <string name="rd_os_move_up">माथि सार्नुहोस्</string>
+    <string name="rd_os_move_down">तल सार्नुहोस्</string>
+    <string name="rd_os_find_language">भाषा खोज्नुहोस्</string>
+    <string name="rd_os_picked_in_player">प्लेयरमा छानिएको</string>
+    <string name="rd_os_second_short">दोस्रो भाषा</string>
 </resources>

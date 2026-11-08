@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">使用您自己的免費金鑰 · 羅馬尼亞語</string>
     <string name="rd_os_svc_napisy24">使用您的免費帳號 · 波蘭語 · 尋找為您的檔案製作的字幕</string>
     <string name="rd_os_svc_legendasnet">使用您的免費帳號 · 葡萄牙語 (巴西)</string>
+    <string name="rd_os_langs">要搜尋的語言</string>
+    <string name="rd_os_add_language">新增語言</string>
+    <string name="rd_os_every_other">以及其他所有語言</string>
+    <string name="rd_os_fewer_faster">語言越少，搜尋越快</string>
+    <string name="rd_os_move_up">上移</string>
+    <string name="rd_os_move_down">下移</string>
+    <string name="rd_os_find_language">尋找語言</string>
+    <string name="rd_os_picked_in_player">在播放器中選取</string>
+    <string name="rd_os_second_short">第二語言</string>
 </resources>

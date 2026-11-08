@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">나만의 무료 키 사용 · 루마니아어</string>
     <string name="rd_os_svc_napisy24">나만의 무료 계정 사용 · 폴란드어 · 파일에 맞게 제작된 자막을 찾음</string>
     <string name="rd_os_svc_legendasnet">나만의 무료 계정 사용 · 포르투갈어(브라질)</string>
+    <string name="rd_os_langs">검색할 언어</string>
+    <string name="rd_os_add_language">언어 추가</string>
+    <string name="rd_os_every_other">다른 모든 언어도</string>
+    <string name="rd_os_fewer_faster">언어가 적을수록 검색이 빠릅니다</string>
+    <string name="rd_os_move_up">위로 이동</string>
+    <string name="rd_os_move_down">아래로 이동</string>
+    <string name="rd_os_find_language">언어 찾기</string>
+    <string name="rd_os_picked_in_player">플레이어에서 선택됨</string>
+    <string name="rd_os_second_short">두 번째 언어</string>
 </resources>

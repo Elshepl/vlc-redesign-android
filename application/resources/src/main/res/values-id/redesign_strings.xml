@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Dengan kunci gratis milik Anda sendiri · Rumania</string>
     <string name="rd_os_svc_napisy24">Dengan akun gratis Anda · Polandia · menemukan yang dibuat untuk file Anda</string>
     <string name="rd_os_svc_legendasnet">Dengan akun gratis Anda · Portugis (Brasil)</string>
+    <string name="rd_os_langs">Bahasa yang dicari</string>
+    <string name="rd_os_add_language">Tambahkan bahasa</string>
+    <string name="rd_os_every_other">Juga semua bahasa lainnya</string>
+    <string name="rd_os_fewer_faster">Lebih sedikit bahasa: pencarian lebih cepat</string>
+    <string name="rd_os_move_up">Pindahkan ke atas</string>
+    <string name="rd_os_move_down">Pindahkan ke bawah</string>
+    <string name="rd_os_find_language">Cari bahasa</string>
+    <string name="rd_os_picked_in_player">Dipilih di pemutar</string>
+    <string name="rd_os_second_short">Bahasa kedua</string>
 </resources>

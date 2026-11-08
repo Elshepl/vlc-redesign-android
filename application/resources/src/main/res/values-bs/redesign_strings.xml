@@ -428,4 +428,13 @@
     <string name="rd_os_svc_subsro">S vašim besplatnim ključem · rumunski</string>
     <string name="rd_os_svc_napisy24">S vašim besplatnim računom · poljski · pronalazi one napravljene za vašu datoteku</string>
     <string name="rd_os_svc_legendasnet">S vašim besplatnim računom · portugalski (Brazil)</string>
+    <string name="rd_os_langs">Jezici za pretragu</string>
+    <string name="rd_os_add_language">Dodaj jezik</string>
+    <string name="rd_os_every_other">I svi ostali jezici</string>
+    <string name="rd_os_fewer_faster">Manje jezika: brža pretraga</string>
+    <string name="rd_os_move_up">Pomjeri gore</string>
+    <string name="rd_os_move_down">Pomjeri dolje</string>
+    <string name="rd_os_find_language">Pronađi jezik</string>
+    <string name="rd_os_picked_in_player">Bira se tokom reprodukcije</string>
+    <string name="rd_os_second_short">Drugi jezik</string>
 </resources>

@@ -423,4 +423,13 @@
     <string name="rd_os_svc_subsro">بە کلیلی بێبەرامبەری تۆ · ڕۆمانی</string>
     <string name="rd_os_svc_napisy24">بە هەژماری بێبەرامبەری تۆ · پۆڵەندی · ئەوانە دەدۆزێتەوە کە بۆ پەڕگەکەت دروستکراون</string>
     <string name="rd_os_svc_legendasnet">بە هەژماری بێبەرامبەری تۆ · پورتوگالی (بەڕازیل)</string>
+    <string name="rd_os_langs">زمانەکانی گەڕان</string>
+    <string name="rd_os_add_language">زیادکردنی زمان</string>
+    <string name="rd_os_every_other">هەموو زمانەکانی تریش</string>
+    <string name="rd_os_fewer_faster">زمانی کەمتر: گەڕانی خێراتر</string>
+    <string name="rd_os_move_up">بردنە سەرەوە</string>
+    <string name="rd_os_move_down">بردنە خوارەوە</string>
+    <string name="rd_os_find_language">زمانێک بدۆزەرەوە</string>
+    <string name="rd_os_picked_in_player">لە لێدەرەکەدا هەڵبژێردراوە</string>
+    <string name="rd_os_second_short">زمانی دووەم</string>
 </resources>

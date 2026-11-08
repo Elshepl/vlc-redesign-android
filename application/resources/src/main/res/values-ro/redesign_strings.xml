@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Cu cheia dumneavoastră gratuită · română</string>
     <string name="rd_os_svc_napisy24">Cu contul dumneavoastră gratuit · poloneză · le găsește pe cele făcute pentru fișierul dumneavoastră</string>
     <string name="rd_os_svc_legendasnet">Cu contul dumneavoastră gratuit · portugheză (Brazilia)</string>
+    <string name="rd_os_langs">Limbi de căutat</string>
+    <string name="rd_os_add_language">Adaugă o limbă</string>
+    <string name="rd_os_every_other">Și toate celelalte limbi</string>
+    <string name="rd_os_fewer_faster">Mai puține limbi: o căutare mai rapidă</string>
+    <string name="rd_os_move_up">Mută în sus</string>
+    <string name="rd_os_move_down">Mută în jos</string>
+    <string name="rd_os_find_language">Caută o limbă</string>
+    <string name="rd_os_picked_in_player">Aleasă în player</string>
+    <string name="rd_os_second_short">A doua limbă</string>
 </resources>

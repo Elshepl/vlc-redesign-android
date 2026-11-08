@@ -1171,7 +1171,22 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     /** A subtitle track was chosen: the size changed while none was shown is taken now (#10) */
     fun onSubtitleTrackChosen(trackId: String) {
         if (subtitleScalePending && trackId != "-1") handler.postDelayed(subtitleScaleReload, 300L)
+        // VLC Redesign: the language of a subtitle the user chose joins Settings › Subtitles › Languages to search
+        // (off until turned on there)
+        if (trackId != "-1") try {
+            val language = getCurrentMediaTracks().firstOrNull { it.type == IMedia.Track.Type.Text && it.id.toString() == trackId }?.language
+                ?.takeIf { org.videolan.vlc.util.OnlineSubtitles.normalize(it).isNotEmpty() }
+                ?: service?.spuTracks?.firstOrNull { it.getId() == trackId }?.getName()?.let { name ->
+                    rdTrackLanguageRe.find(name)?.groupValues?.get(1)?.let { org.videolan.vlc.util.OnlineSubtitles.fromEnglishName(it) }
+                }
+            org.videolan.vlc.util.OnlineSubtitles.learnLanguage(applicationContext, language)
+        } catch (e: Exception) {
+            Log.w(TAG, "onSubtitleTrackChosen: ${e.message}")
+        }
     }
+
+    // "Track 2 - [Hebrew]": the language in its name (every bracket escaped: Android's ICU)
+    private val rdTrackLanguageRe = Regex("""\[([^\]]+)\]""")
 
     private fun surfaceKey(f: androidx.fragment.app.Fragment): String? = when (f) {
         is org.videolan.vlc.gui.dialogs.VideoTracksDialog -> "tracks"

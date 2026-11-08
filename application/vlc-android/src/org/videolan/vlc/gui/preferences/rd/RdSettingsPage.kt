@@ -142,6 +142,7 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
     private var subtitlesChanged = false
     private var needToRestartOnResume = false
     private var services: RdSubtitleServices? = null
+    private var languages: RdSubtitleLanguages? = null
 
     private val pinCodeResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) openSub(PreferencesParentalControl())
@@ -204,6 +205,8 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         }
         // the subtitle services, each with its switch, its key or account and its checks (RdSubtitleServices)
         if (pref<Preference>(RdSubtitleServices.CATEGORY) != null) services = RdSubtitleServices(this).also { it.setup() }
+        // the languages they are asked for (RdSubtitleLanguages)
+        if (pref<Preference>(RdSubtitleLanguages.CATEGORY) != null) languages = RdSubtitleLanguages(this).also { it.build() }
         pref<ListPreference>("subtitles_presets")?.let { preset ->
             preset.value = "-1"
             preset.setOnPreferenceChangeListener { _, newValue -> applySubtitlePreset(newValue as String); false }
@@ -317,6 +320,7 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         val activity = requireActivity()
         if (org.videolan.vlc.gui.livetv.TvSettings.click(this, key)) return true
         if (services?.click(key) == true) return true
+        if (languages?.click(key) == true) return true
         when (key) {
             // Library
             "directories" -> {
@@ -541,6 +545,10 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         org.videolan.vlc.gui.livetv.TvSettings.changed(activity, key)
         // a service's switch or state (a check, a search): its row drawn again
         if (key.startsWith("rd_sub_service")) services?.refresh()
+        // the preferred or the second language: in the languages to search; a language on or off: the services of
+        // one language say whether it is on
+        languages?.changed(key)
+        if (key == org.videolan.vlc.util.OnlineSubtitles.KEY_LANGUAGES) services?.refresh()
         when (key) {
             // General / Interface
             // the desktop switches its language at once: this screen now, the others as they come back

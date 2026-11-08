@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Ingyenes kulcsával · román</string>
     <string name="rd_os_svc_napisy24">Ingyenes fiókjával · lengyel · a fájlhoz készülteket is megtalálja</string>
     <string name="rd_os_svc_legendasnet">Ingyenes fiókjával · portugál (brazíliai)</string>
+    <string name="rd_os_langs">Keresési nyelvek</string>
+    <string name="rd_os_add_language">Nyelv hozzáadása</string>
+    <string name="rd_os_every_other">Minden más nyelv is</string>
+    <string name="rd_os_fewer_faster">Kevesebb nyelv: gyorsabb keresés</string>
+    <string name="rd_os_move_up">Mozgatás felfelé</string>
+    <string name="rd_os_move_down">Mozgatás lefelé</string>
+    <string name="rd_os_find_language">Nyelv keresése</string>
+    <string name="rd_os_picked_in_player">A lejátszóban kiválasztva</string>
+    <string name="rd_os_second_short">Második nyelv</string>
 </resources>

@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Sinu tasuta võtmega · rumeenia</string>
     <string name="rd_os_svc_napisy24">Sinu tasuta kontoga · poola · leiab sinu failile tehtud subtiitrid</string>
     <string name="rd_os_svc_legendasnet">Sinu tasuta kontoga · portugali (Brasiilia)</string>
+    <string name="rd_os_langs">Otsingukeeled</string>
+    <string name="rd_os_add_language">Lisa keel</string>
+    <string name="rd_os_every_other">Ka kõik muud keeled</string>
+    <string name="rd_os_fewer_faster">Vähem keeli: kiirem otsing</string>
+    <string name="rd_os_move_up">Liiguta üles</string>
+    <string name="rd_os_move_down">Liiguta alla</string>
+    <string name="rd_os_find_language">Otsi keelt</string>
+    <string name="rd_os_picked_in_player">Valitud mängijas</string>
+    <string name="rd_os_second_short">Teine keel</string>
 </resources>

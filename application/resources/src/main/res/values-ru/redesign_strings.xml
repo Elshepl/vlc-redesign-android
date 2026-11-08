@@ -453,4 +453,13 @@
     <string name="rd_os_svc_subsro">С вашим бесплатным ключом · румынский</string>
     <string name="rd_os_svc_napisy24">С вашей бесплатной учётной записью · польский · находит субтитры, сделанные для вашего файла</string>
     <string name="rd_os_svc_legendasnet">С вашей бесплатной учётной записью · португальский (Бразилия)</string>
+    <string name="rd_os_langs">Языки для поиска</string>
+    <string name="rd_os_add_language">Добавить язык</string>
+    <string name="rd_os_every_other">И все остальные языки</string>
+    <string name="rd_os_fewer_faster">Меньше языков: быстрее поиск</string>
+    <string name="rd_os_move_up">Переместить вверх</string>
+    <string name="rd_os_move_down">Переместить вниз</string>
+    <string name="rd_os_find_language">Найти язык</string>
+    <string name="rd_os_picked_in_player">Выбирается в плеере</string>
+    <string name="rd_os_second_short">Второй язык</string>
 </resources>

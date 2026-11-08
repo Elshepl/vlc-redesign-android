@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Su jūsų nemokamu raktu · rumunų</string>
     <string name="rd_os_svc_napisy24">Su jūsų nemokama paskyra · lenkų · randa sukurtus jūsų failui</string>
     <string name="rd_os_svc_legendasnet">Su jūsų nemokama paskyra · portugalų (Brazilija)</string>
+    <string name="rd_os_langs">Paieškos kalbos</string>
+    <string name="rd_os_add_language">Pridėti kalbą</string>
+    <string name="rd_os_every_other">Ir visos kitos kalbos</string>
+    <string name="rd_os_fewer_faster">Mažiau kalbų: greitesnė paieška</string>
+    <string name="rd_os_move_up">Perkelti aukštyn</string>
+    <string name="rd_os_move_down">Perkelti žemyn</string>
+    <string name="rd_os_find_language">Rasti kalbą</string>
+    <string name="rd_os_picked_in_player">Pasirenkama grotuve</string>
+    <string name="rd_os_second_short">Antroji kalba</string>
 </resources>

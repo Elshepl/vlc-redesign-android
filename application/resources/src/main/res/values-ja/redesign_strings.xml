@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">ご自身の無料キーを使用 · ルーマニア語</string>
     <string name="rd_os_svc_napisy24">ご自身の無料アカウントを使用 · ポーランド語 · ファイルに合わせた字幕を検索</string>
     <string name="rd_os_svc_legendasnet">ご自身の無料アカウントを使用 · ポルトガル語 (ブラジル)</string>
+    <string name="rd_os_langs">検索する言語</string>
+    <string name="rd_os_add_language">言語を追加</string>
+    <string name="rd_os_every_other">その他のすべての言語も</string>
+    <string name="rd_os_fewer_faster">言語が少ないほど検索が速くなります</string>
+    <string name="rd_os_move_up">上へ移動</string>
+    <string name="rd_os_move_down">下へ移動</string>
+    <string name="rd_os_find_language">言語を検索</string>
+    <string name="rd_os_picked_in_player">プレイヤーで選択</string>
+    <string name="rd_os_second_short">第2言語</string>
 </resources>

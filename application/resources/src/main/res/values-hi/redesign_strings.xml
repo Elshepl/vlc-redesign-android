@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">आपकी मुफ़्त कुंजी के साथ · रोमानियाई</string>
     <string name="rd_os_svc_napisy24">आपके मुफ़्त खाते के साथ · पोलिश · आपकी फ़ाइल के लिए बने उपशीर्षक खोजता है</string>
     <string name="rd_os_svc_legendasnet">आपके मुफ़्त खाते के साथ · पुर्तगाली (ब्राज़ील)</string>
+    <string name="rd_os_langs">खोज के लिए भाषाएँ</string>
+    <string name="rd_os_add_language">भाषा जोड़ें</string>
+    <string name="rd_os_every_other">बाकी सभी भाषाएँ भी</string>
+    <string name="rd_os_fewer_faster">कम भाषाएँ: तेज़ खोज</string>
+    <string name="rd_os_move_up">ऊपर ले जाएँ</string>
+    <string name="rd_os_move_down">नीचे ले जाएँ</string>
+    <string name="rd_os_find_language">भाषा खोजें</string>
+    <string name="rd_os_picked_in_player">प्लेयर में चुनी गई</string>
+    <string name="rd_os_second_short">दूसरी भाषा</string>
 </resources>

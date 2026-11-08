@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">Met uw gratis sleutel · Roemeens</string>
     <string name="rd_os_svc_napisy24">Met uw gratis account · Pools · vindt de ondertitels die voor uw bestand gemaakt zijn</string>
     <string name="rd_os_svc_legendasnet">Met uw gratis account · Portugees (Brazilië)</string>
+    <string name="rd_os_langs">Talen om in te zoeken</string>
+    <string name="rd_os_add_language">Taal toevoegen</string>
+    <string name="rd_os_every_other">Ook alle andere talen</string>
+    <string name="rd_os_fewer_faster">Minder talen: sneller zoeken</string>
+    <string name="rd_os_move_up">Omhoog</string>
+    <string name="rd_os_move_down">Omlaag</string>
+    <string name="rd_os_find_language">Taal zoeken</string>
+    <string name="rd_os_picked_in_player">Gekozen in de speler</string>
+    <string name="rd_os_second_short">Tweede taal</string>
 </resources>

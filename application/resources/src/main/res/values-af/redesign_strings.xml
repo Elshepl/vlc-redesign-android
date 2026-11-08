@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">Met u gratis sleutel · Roemeens</string>
     <string name="rd_os_svc_napisy24">Met u gratis rekening · Pools · vind dié wat vir u lêer gemaak is</string>
     <string name="rd_os_svc_legendasnet">Met u gratis rekening · Portugees (Brasilië)</string>
+    <string name="rd_os_langs">Tale om in te soek</string>
+    <string name="rd_os_add_language">Voeg ’n taal by</string>
+    <string name="rd_os_every_other">Ook elke ander taal</string>
+    <string name="rd_os_fewer_faster">Minder tale: ’n vinniger soektog</string>
+    <string name="rd_os_move_up">Skuif op</string>
+    <string name="rd_os_move_down">Skuif af</string>
+    <string name="rd_os_find_language">Soek ’n taal</string>
+    <string name="rd_os_picked_in_player">Gekies in die speler</string>
+    <string name="rd_os_second_short">Tweede taal</string>
 </resources>

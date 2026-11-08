@@ -575,4 +575,14 @@
     <string name="rd_os_svc_subsro">With your free key · Romanian</string>
     <string name="rd_os_svc_napisy24">With your free account · Polish · finds those made for your file</string>
     <string name="rd_os_svc_legendasnet">With your free account · Portuguese (Brazil)</string>
+    <!-- Settings > Subtitles > Languages to search: a switch per language, their order is the order of the results -->
+    <string name="rd_os_langs">Languages to search</string>
+    <string name="rd_os_add_language">Add a language</string>
+    <string name="rd_os_every_other">Every other language too</string>
+    <string name="rd_os_fewer_faster">Fewer languages: a faster search</string>
+    <string name="rd_os_move_up">Move up</string>
+    <string name="rd_os_move_down">Move down</string>
+    <string name="rd_os_find_language">Find a language</string>
+    <string name="rd_os_picked_in_player">Chosen in the player</string>
+    <string name="rd_os_second_short">Second language</string>
 </resources>

@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">З вашым бясплатным ключом · румынская</string>
     <string name="rd_os_svc_napisy24">З вашым бясплатным уліковым запісам · польская · знаходзіць зробленыя для вашага файла</string>
     <string name="rd_os_svc_legendasnet">З вашым бясплатным уліковым запісам · партугальская (Бразілія)</string>
+    <string name="rd_os_langs">Мовы для пошуку</string>
+    <string name="rd_os_add_language">Дадаць мову</string>
+    <string name="rd_os_every_other">Таксама ўсе іншыя мовы</string>
+    <string name="rd_os_fewer_faster">Менш моў: хутчэйшы пошук</string>
+    <string name="rd_os_move_up">Перамясціць уверх</string>
+    <string name="rd_os_move_down">Перамясціць уніз</string>
+    <string name="rd_os_find_language">Знайсці мову</string>
+    <string name="rd_os_picked_in_player">Выбіраецца ў прайгравальніку</string>
+    <string name="rd_os_second_short">Другая мова</string>
 </resources>

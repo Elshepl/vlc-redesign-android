@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Dengan kunci percuma anda sendiri · Romania</string>
     <string name="rd_os_svc_napisy24">Dengan akaun percuma anda · Poland · mencari yang dibuat untuk fail anda</string>
     <string name="rd_os_svc_legendasnet">Dengan akaun percuma anda · Portugis (Brazil)</string>
+    <string name="rd_os_langs">Bahasa untuk dicari</string>
+    <string name="rd_os_add_language">Tambah bahasa</string>
+    <string name="rd_os_every_other">Semua bahasa lain juga</string>
+    <string name="rd_os_fewer_faster">Kurang bahasa: carian lebih pantas</string>
+    <string name="rd_os_move_up">Alih ke atas</string>
+    <string name="rd_os_move_down">Alih ke bawah</string>
+    <string name="rd_os_find_language">Cari bahasa</string>
+    <string name="rd_os_picked_in_player">Dipilih dalam pemain</string>
+    <string name="rd_os_second_short">Bahasa kedua</string>
 </resources>

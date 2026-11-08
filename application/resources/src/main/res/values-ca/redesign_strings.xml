@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Amb la vostra clau gratuïta · romanès</string>
     <string name="rd_os_svc_napisy24">Amb el vostre compte gratuït · polonès · troba els fets per al vostre fitxer</string>
     <string name="rd_os_svc_legendasnet">Amb el vostre compte gratuït · portuguès (Brasil)</string>
+    <string name="rd_os_langs">Idiomes de cerca</string>
+    <string name="rd_os_add_language">Afegeix un idioma</string>
+    <string name="rd_os_every_other">També tots els altres idiomes</string>
+    <string name="rd_os_fewer_faster">Menys idiomes: una cerca més ràpida</string>
+    <string name="rd_os_move_up">Mou amunt</string>
+    <string name="rd_os_move_down">Mou avall</string>
+    <string name="rd_os_find_language">Cerca un idioma</string>
+    <string name="rd_os_picked_in_player">Triat al reproductor</string>
+    <string name="rd_os_second_short">Segon idioma</string>
 </resources>

@@ -428,4 +428,13 @@
     <string name="rd_os_svc_subsro">Gyda\'ch allwedd am ddim · Rwmaneg</string>
     <string name="rd_os_svc_napisy24">Gyda\'ch cyfrif am ddim · Pwyleg · yn canfod y rhai a wnaed ar gyfer eich ffeil</string>
     <string name="rd_os_svc_legendasnet">Gyda\'ch cyfrif am ddim · Portiwgaleg (Brasil)</string>
+    <string name="rd_os_langs">Ieithoedd i\'w chwilio</string>
+    <string name="rd_os_add_language">Ychwanegu iaith</string>
+    <string name="rd_os_every_other">Pob iaith arall hefyd</string>
+    <string name="rd_os_fewer_faster">Llai o ieithoedd: chwilio cyflymach</string>
+    <string name="rd_os_move_up">Symud i fyny</string>
+    <string name="rd_os_move_down">Symud i lawr</string>
+    <string name="rd_os_find_language">Canfod iaith</string>
+    <string name="rd_os_picked_in_player">Wedi\'i dewis yn y chwaraewr</string>
+    <string name="rd_os_second_short">Ail iaith</string>
 </resources>

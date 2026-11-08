@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Με το δωρεάν κλειδί σας · ρουμανικά</string>
     <string name="rd_os_svc_napisy24">Με τον δωρεάν λογαριασμό σας · πολωνικά · βρίσκει όσους φτιάχτηκαν για το αρχείο σας</string>
     <string name="rd_os_svc_legendasnet">Με τον δωρεάν λογαριασμό σας · πορτογαλικά (Βραζιλίας)</string>
+    <string name="rd_os_langs">Γλώσσες αναζήτησης</string>
+    <string name="rd_os_add_language">Προσθήκη γλώσσας</string>
+    <string name="rd_os_every_other">Και όλες οι άλλες γλώσσες</string>
+    <string name="rd_os_fewer_faster">Λιγότερες γλώσσες: ταχύτερη αναζήτηση</string>
+    <string name="rd_os_move_up">Μετακίνηση επάνω</string>
+    <string name="rd_os_move_down">Μετακίνηση κάτω</string>
+    <string name="rd_os_find_language">Εύρεση γλώσσας</string>
+    <string name="rd_os_picked_in_player">Επιλέγεται στο πρόγραμμα αναπαραγωγής</string>
+    <string name="rd_os_second_short">Δεύτερη γλώσσα</string>
 </resources>

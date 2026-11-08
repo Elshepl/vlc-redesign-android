@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">Með ókeypis lyklinum þínum · rúmenska</string>
     <string name="rd_os_svc_napisy24">Með ókeypis aðganginum þínum · pólska · finnur þá sem gerðir eru fyrir skrána þína</string>
     <string name="rd_os_svc_legendasnet">Með ókeypis aðganginum þínum · portúgalska (Brasilía)</string>
+    <string name="rd_os_langs">Tungumál til að leita á</string>
+    <string name="rd_os_add_language">Bæta við tungumáli</string>
+    <string name="rd_os_every_other">Öll önnur tungumál líka</string>
+    <string name="rd_os_fewer_faster">Færri tungumál: hraðari leit</string>
+    <string name="rd_os_move_up">Færa upp</string>
+    <string name="rd_os_move_down">Færa niður</string>
+    <string name="rd_os_find_language">Finna tungumál</string>
+    <string name="rd_os_picked_in_player">Valið í spilaranum</string>
+    <string name="rd_os_second_short">Annað tungumál</string>
 </resources>

@@ -34,6 +34,21 @@
             android:summary="@string/rd_os_auto_help"
             android:title="@string/rd_os_auto_settings" />
     </PreferenceCategory>
+    <!-- the languages the services are asked for, each on or off, in the order of the results (RdSubtitleLanguages);
+         "Every other language too" off: only those, a faster search -->
+    <PreferenceCategory
+        android:key="rd_sub_langs"
+        android:title="@string/rd_os_langs">
+        <Preference
+            android:key="rd_sub_langs_add"
+            android:persistent="false"
+            android:title="@string/rd_os_add_language" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="rd_sub_every_other"
+            android:summary="@string/rd_os_fewer_faster"
+            android:title="@string/rd_os_every_other" />
+    </PreferenceCategory>
     <!-- one row per service, made by RdSubtitleServices (OnlineSubtitles.providers): its switch, its key or account
          (kept encrypted, out of the exported settings), Test or Sign in, Remove; Add a service brings one back -->
     <PreferenceCategory

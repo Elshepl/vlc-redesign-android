@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">S vaším kľúčom zadarmo · rumunčina</string>
     <string name="rd_os_svc_napisy24">S vaším účtom zadarmo · poľština · nájde titulky vytvorené pre váš súbor</string>
     <string name="rd_os_svc_legendasnet">S vaším účtom zadarmo · portugalčina (Brazília)</string>
+    <string name="rd_os_langs">Jazyky na vyhľadávanie</string>
+    <string name="rd_os_add_language">Pridať jazyk</string>
+    <string name="rd_os_every_other">Aj všetky ostatné jazyky</string>
+    <string name="rd_os_fewer_faster">Menej jazykov: rýchlejšie vyhľadávanie</string>
+    <string name="rd_os_move_up">Posunúť nahor</string>
+    <string name="rd_os_move_down">Posunúť nadol</string>
+    <string name="rd_os_find_language">Nájsť jazyk</string>
+    <string name="rd_os_picked_in_player">Volí sa v prehrávači</string>
+    <string name="rd_os_second_short">Druhý jazyk</string>
 </resources>

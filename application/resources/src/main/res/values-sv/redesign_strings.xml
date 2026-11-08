@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">Med din gratis nyckel · rumänska</string>
     <string name="rd_os_svc_napisy24">Med ditt gratis konto · polska · hittar de som gjorts för din fil</string>
     <string name="rd_os_svc_legendasnet">Med ditt gratis konto · portugisiska (Brasilien)</string>
+    <string name="rd_os_langs">Språk att söka på</string>
+    <string name="rd_os_add_language">Lägg till ett språk</string>
+    <string name="rd_os_every_other">Även alla andra språk</string>
+    <string name="rd_os_fewer_faster">Färre språk: snabbare sökning</string>
+    <string name="rd_os_move_up">Flytta upp</string>
+    <string name="rd_os_move_down">Flytta ned</string>
+    <string name="rd_os_find_language">Hitta ett språk</string>
+    <string name="rd_os_picked_in_player">Valt i spelaren</string>
+    <string name="rd_os_second_short">Andra språk</string>
 </resources>

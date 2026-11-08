@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">Ilmaisella avaimellasi · romania</string>
     <string name="rd_os_svc_napisy24">Ilmaisella tililläsi · puola · löytää tiedostollesi tehdyt</string>
     <string name="rd_os_svc_legendasnet">Ilmaisella tililläsi · portugali (Brasilia)</string>
+    <string name="rd_os_langs">Haettavat kielet</string>
+    <string name="rd_os_add_language">Lisää kieli</string>
+    <string name="rd_os_every_other">Myös kaikki muut kielet</string>
+    <string name="rd_os_fewer_faster">Vähemmän kieliä: nopeampi haku</string>
+    <string name="rd_os_move_up">Siirrä ylös</string>
+    <string name="rd_os_move_down">Siirrä alas</string>
+    <string name="rd_os_find_language">Etsi kieli</string>
+    <string name="rd_os_picked_in_player">Valittu soittimessa</string>
+    <string name="rd_os_second_short">Toinen kieli</string>
 </resources>

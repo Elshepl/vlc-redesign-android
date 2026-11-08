@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">Me çelësin tuaj falas · rumanisht</string>
     <string name="rd_os_svc_napisy24">Me llogarinë tuaj falas · polonisht · gjen ato të bëra për skedarin tuaj</string>
     <string name="rd_os_svc_legendasnet">Me llogarinë tuaj falas · portugalisht (Brazil)</string>
+    <string name="rd_os_langs">Gjuhët për kërkim</string>
+    <string name="rd_os_add_language">Shto një gjuhë</string>
+    <string name="rd_os_every_other">Edhe të gjitha gjuhët e tjera</string>
+    <string name="rd_os_fewer_faster">Më pak gjuhë: kërkim më i shpejtë</string>
+    <string name="rd_os_move_up">Lëviz lart</string>
+    <string name="rd_os_move_down">Lëviz poshtë</string>
+    <string name="rd_os_find_language">Gjej një gjuhë</string>
+    <string name="rd_os_picked_in_player">Zgjidhet te luajtësi</string>
+    <string name="rd_os_second_short">Gjuha e dytë</string>
 </resources>

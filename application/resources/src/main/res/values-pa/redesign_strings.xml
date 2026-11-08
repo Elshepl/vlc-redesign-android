@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">ਤੁਹਾਡੀ ਮੁਫ਼ਤ ਕੁੰਜੀ ਨਾਲ · ਰੋਮਾਨੀਆਈ</string>
     <string name="rd_os_svc_napisy24">ਤੁਹਾਡੇ ਮੁਫ਼ਤ ਖਾਤੇ ਨਾਲ · ਪੋਲਿਸ਼ · ਤੁਹਾਡੀ ਫਾਇਲ ਲਈ ਬਣੇ ਸਬ-ਟਾਈਟਲ ਲੱਭਦਾ ਹੈ</string>
     <string name="rd_os_svc_legendasnet">ਤੁਹਾਡੇ ਮੁਫ਼ਤ ਖਾਤੇ ਨਾਲ · ਪੁਰਤਗਾਲੀ (ਬ੍ਰਾਜ਼ੀਲ)</string>
+    <string name="rd_os_langs">ਖੋਜ ਲਈ ਭਾਸ਼ਾਵਾਂ</string>
+    <string name="rd_os_add_language">ਭਾਸ਼ਾ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="rd_os_every_other">ਬਾਕੀ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵੀ</string>
+    <string name="rd_os_fewer_faster">ਘੱਟ ਭਾਸ਼ਾਵਾਂ: ਤੇਜ਼ ਖੋਜ</string>
+    <string name="rd_os_move_up">ਉੱਪਰ ਲਿਜਾਓ</string>
+    <string name="rd_os_move_down">ਹੇਠਾਂ ਲਿਜਾਓ</string>
+    <string name="rd_os_find_language">ਭਾਸ਼ਾ ਲੱਭੋ</string>
+    <string name="rd_os_picked_in_player">ਪਲੇਅਰ ਵਿੱਚ ਚੁਣੀ ਗਈ</string>
+    <string name="rd_os_second_short">ਦੂਜੀ ਭਾਸ਼ਾ</string>
 </resources>

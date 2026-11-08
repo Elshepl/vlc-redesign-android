@@ -449,4 +449,13 @@
     <string name="rd_os_svc_subsro">ជាមួយកូនសោឥតគិតថ្លៃផ្ទាល់ខ្លួនរបស់អ្នក · រូម៉ានី</string>
     <string name="rd_os_svc_napisy24">ជាមួយគណនីឥតគិតថ្លៃរបស់អ្នក · ប៉ូឡូញ · រកចំណងជើងរងដែលធ្វើសម្រាប់ឯកសាររបស់អ្នក</string>
     <string name="rd_os_svc_legendasnet">ជាមួយគណនីឥតគិតថ្លៃរបស់អ្នក · ព័រទុយហ្គាល់ (ប្រេស៊ីល)</string>
+    <string name="rd_os_langs">ភាសាដែលត្រូវស្វែងរក</string>
+    <string name="rd_os_add_language">បន្ថែមភាសា</string>
+    <string name="rd_os_every_other">ព្រមទាំងភាសាផ្សេងទៀតទាំងអស់</string>
+    <string name="rd_os_fewer_faster">ភាសាតិចជាង៖ ការស្វែងរកលឿនជាង</string>
+    <string name="rd_os_move_up">ផ្លាស់ទីឡើងលើ</string>
+    <string name="rd_os_move_down">ផ្លាស់ទីចុះក្រោម</string>
+    <string name="rd_os_find_language">រកភាសា</string>
+    <string name="rd_os_picked_in_player">បានជ្រើសក្នុងកម្មវិធីចាក់</string>
+    <string name="rd_os_second_short">ភាសាទីពីរ</string>
 </resources>

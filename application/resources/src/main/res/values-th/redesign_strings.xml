@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">ใช้คีย์ฟรีของคุณเอง · โรมาเนีย</string>
     <string name="rd_os_svc_napisy24">ใช้บัญชีฟรีของคุณ · โปแลนด์ · ค้นหาบทบรรยายที่ทำมาสำหรับแฟ้มของคุณ</string>
     <string name="rd_os_svc_legendasnet">ใช้บัญชีฟรีของคุณ · โปรตุเกส (บราซิล)</string>
+    <string name="rd_os_langs">ภาษาที่จะค้นหา</string>
+    <string name="rd_os_add_language">เพิ่มภาษา</string>
+    <string name="rd_os_every_other">รวมถึงภาษาอื่นทั้งหมด</string>
+    <string name="rd_os_fewer_faster">ภาษาน้อยลง: ค้นหาได้เร็วขึ้น</string>
+    <string name="rd_os_move_up">เลื่อนขึ้น</string>
+    <string name="rd_os_move_down">เลื่อนลง</string>
+    <string name="rd_os_find_language">ค้นหาภาษา</string>
+    <string name="rd_os_picked_in_player">เลือกในตัวเล่น</string>
+    <string name="rd_os_second_short">ภาษาที่สอง</string>
 </resources>

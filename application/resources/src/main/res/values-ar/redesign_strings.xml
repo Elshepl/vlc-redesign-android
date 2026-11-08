@@ -451,4 +451,13 @@
     <string name="rd_os_svc_subsro">بمفتاحك المجاني · الرومانية</string>
     <string name="rd_os_svc_napisy24">بحسابك المجاني · البولندية · يجد الترجمات المُعدّة لملفك</string>
     <string name="rd_os_svc_legendasnet">بحسابك المجاني · البرتغالية (البرازيل)</string>
+    <string name="rd_os_langs">لغات البحث</string>
+    <string name="rd_os_add_language">إضافة لغة</string>
+    <string name="rd_os_every_other">كل اللغات الأخرى أيضًا</string>
+    <string name="rd_os_fewer_faster">لغات أقل: بحث أسرع</string>
+    <string name="rd_os_move_up">نقل للأعلى</string>
+    <string name="rd_os_move_down">نقل للأسفل</string>
+    <string name="rd_os_find_language">ابحث عن لغة</string>
+    <string name="rd_os_picked_in_player">المختارة في المشغّل</string>
+    <string name="rd_os_second_short">اللغة الثانية</string>
 </resources>

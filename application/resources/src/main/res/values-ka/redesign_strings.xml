@@ -427,4 +427,13 @@
     <string name="rd_os_svc_subsro">თქვენი უფასო გასაღებით · რუმინული</string>
     <string name="rd_os_svc_napisy24">თქვენი უფასო ანგარიშით · პოლონური · პოულობს თქვენი ფაილისთვის შექმნილს</string>
     <string name="rd_os_svc_legendasnet">თქვენი უფასო ანგარიშით · პორტუგალიური (ბრაზილია)</string>
+    <string name="rd_os_langs">საძიებო ენები</string>
+    <string name="rd_os_add_language">ენის დამატება</string>
+    <string name="rd_os_every_other">ასევე ყველა სხვა ენა</string>
+    <string name="rd_os_fewer_faster">ნაკლები ენა: უფრო სწრაფი ძებნა</string>
+    <string name="rd_os_move_up">ზემოთ გადატანა</string>
+    <string name="rd_os_move_down">ქვემოთ გადატანა</string>
+    <string name="rd_os_find_language">ენის პოვნა</string>
+    <string name="rd_os_picked_in_player">ირჩევა პლეერში</string>
+    <string name="rd_os_second_short">მეორე ენა</string>
 </resources>

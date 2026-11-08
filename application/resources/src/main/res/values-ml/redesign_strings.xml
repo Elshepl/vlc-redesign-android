@@ -429,4 +429,13 @@
     <string name="rd_os_svc_subsro">നിങ്ങളുടെ സൗജന്യ കീ ഉപയോഗിച്ച് · റൊമാനിയൻ</string>
     <string name="rd_os_svc_napisy24">നിങ്ങളുടെ സൗജന്യ അക്കൗണ്ട് ഉപയോഗിച്ച് · പോളിഷ് · നിങ്ങളുടെ ഫയലിനായി നിർമ്മിച്ചവ കണ്ടെത്തുന്നു</string>
     <string name="rd_os_svc_legendasnet">നിങ്ങളുടെ സൗജന്യ അക്കൗണ്ട് ഉപയോഗിച്ച് · പോർച്ചുഗീസ് (ബ്രസീൽ)</string>
+    <string name="rd_os_langs">തിരയേണ്ട ഭാഷകൾ</string>
+    <string name="rd_os_add_language">ഒരു ഭാഷ ചേർക്കുക</string>
+    <string name="rd_os_every_other">മറ്റെല്ലാ ഭാഷകളും</string>
+    <string name="rd_os_fewer_faster">കുറച്ച് ഭാഷകൾ: വേഗതയേറിയ തിരയൽ</string>
+    <string name="rd_os_move_up">മുകളിലേക്ക് നീക്കുക</string>
+    <string name="rd_os_move_down">താഴേക്ക് നീക്കുക</string>
+    <string name="rd_os_find_language">ഭാഷ കണ്ടെത്തുക</string>
+    <string name="rd_os_picked_in_player">പ്ലേയറിൽ തിരഞ്ഞെടുത്തത്</string>
+    <string name="rd_os_second_short">രണ്ടാമത്തെ ഭാഷ</string>
 </resources>

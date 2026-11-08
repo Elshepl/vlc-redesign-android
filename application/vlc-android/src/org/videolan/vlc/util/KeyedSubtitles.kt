@@ -124,6 +124,9 @@ internal object KeyedSubtitles {
         "tok" to listOf("toki_pona"), "tr" to listOf("turkish"), "tk" to listOf("turkmen"), "uk" to listOf("ukrainian"),
         "ur" to listOf("urdu"), "uz" to listOf("uzbek"), "vi" to listOf("vietnamese"), "cy" to listOf("welsh")
     )
+    /** the languages SubSource knows (the app's codes): Add a language lists them */
+    val languageCodes: Set<String> get() = subSourceNames.keys
+
     private val fromSubSourceNames: Map<String, String> by lazy {
         val m = HashMap<String, String>()
         for ((code, names) in subSourceNames) for (n in names) if (n !in m) m[n] = code

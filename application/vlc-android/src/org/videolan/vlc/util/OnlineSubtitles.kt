@@ -81,7 +81,9 @@ object OnlineSubtitles {
     data class Query(
         val imdb: String = "", val title: String = "", val year: Int = 0, val series: Boolean = false,
         val season: Int = -1, val episode: Int = -1, val fileName: String = "", val hash: String = "",
-        val size: Long = 0, val languages: List<String> = emptyList()
+        val size: Long = 0, val languages: List<String> = emptyList(),
+        /** asked in other languages too ("Every other language too"); off: only in those of the list */
+        val everyOther: Boolean = true
     )
 
     data class Result(
@@ -255,16 +257,77 @@ object OnlineSubtitles {
         return name.replaceFirstChar { it.titlecase(locale) }
     }
 
-    /** the user's languages: the preferred one (else the app's), then the second */
-    fun wantedLanguages(context: Context): List<String> {
-        val settings = Settings.getInstance(context)
-        val list = ArrayList<String>()
-        normalize(settings.getString(KEY_SUBTITLE_PREFERRED_LANGUAGE, null)).ifEmpty {
-            normalize(context.resources.configuration.let { RdCompat.primaryLocale(it).toLanguageTag() })
-        }.let { if (it.isNotEmpty()) list.add(it) }
-        normalize(settings.getString(KEY_SECOND, null)).let { if (it.isNotEmpty() && it !in list) list.add(it) }
+    // ---------------------------------------------------------------------------------------------------------------
+    // Languages to search (Settings › Subtitles): the languages the services are asked for, each on or off, in the
+    // order of the results; by default the preferred language and the second one (on), then the languages chosen in
+    // the player (off until turned on). "Every other language too" (off): the services asked in no other language,
+    // which makes the search faster
+
+    const val KEY_LANGUAGES = "rd_sub_search_languages"
+    const val KEY_EVERY_OTHER = "rd_sub_every_other"
+    private const val KEY_PICKED = "rd_sub_picked_languages"
+
+    data class SearchLanguage(val code: String, val on: Boolean)
+
+    /** "he:1,en:1,fr:0" */
+    internal fun parseLanguages(text: String?): List<SearchLanguage> = (text ?: "").split(',').mapNotNull { item ->
+        val code = normalize(item.substringBefore(':')).ifEmpty { return@mapNotNull null }
+        SearchLanguage(code, item.substringAfter(':', "1") != "0")
+    }.distinctBy { it.code }
+
+    internal fun formatLanguages(list: List<SearchLanguage>) = list.joinToString(",") { it.code + ":" + if (it.on) "1" else "0" }
+
+    /** the preferred language (else the app's) */
+    fun preferredLanguage(context: Context): String = normalize(Settings.getInstance(context).getString(KEY_SUBTITLE_PREFERRED_LANGUAGE, null)).ifEmpty {
+        normalize(RdCompat.primaryLocale(context.resources.configuration).toLanguageTag())
+    }
+
+    /** the list as kept, with the preferred language at its top (on) and the second one in it */
+    internal fun completeLanguages(stored: List<SearchLanguage>?, preferred: String, second: String, picked: List<String>): List<SearchLanguage> {
+        val list = (stored ?: buildList {
+            if (preferred.isNotEmpty()) add(SearchLanguage(preferred, true))
+            if (second.isNotEmpty()) add(SearchLanguage(second, true))
+            for (p in picked) add(SearchLanguage(p, false))
+        }).distinctBy { it.code }.toMutableList()
+        if (preferred.isNotEmpty() && list.none { it.code == preferred }) list.add(0, SearchLanguage(preferred, true))
+        if (second.isNotEmpty() && list.none { it.code == second }) list.add(minOf(1, list.size), SearchLanguage(second, true))
         return list
     }
+
+    fun searchLanguages(context: Context): List<SearchLanguage> {
+        val settings = Settings.getInstance(context)
+        val stored = settings.getString(KEY_LANGUAGES, null)?.let { parseLanguages(it) }
+        return completeLanguages(stored, preferredLanguage(context), normalize(settings.getString(KEY_SECOND, null)), pickedLanguages(context))
+    }
+
+    fun setSearchLanguages(context: Context, list: List<SearchLanguage>) =
+        Settings.getInstance(context).edit().putString(KEY_LANGUAGES, formatLanguages(list.distinctBy { it.code })).apply()
+
+    fun everyOtherLanguage(context: Context) = Settings.getInstance(context).getBoolean(KEY_EVERY_OTHER, false)
+
+    fun pickedLanguages(context: Context) = (Settings.getInstance(context).getString(KEY_PICKED, null) ?: "").split(',').map { normalize(it) }.filter { it.isNotEmpty() }
+
+    /** a subtitle language the user chose in the player: in the list of Languages to search, off until turned on */
+    fun learnLanguage(context: Context, language: String?) {
+        val code = normalize(language).ifEmpty { return }
+        val settings = Settings.getInstance(context)
+        val picked = (listOf(code) + pickedLanguages(context)).distinct().take(6)
+        val edit = settings.edit().putString(KEY_PICKED, picked.joinToString(","))
+        settings.getString(KEY_LANGUAGES, null)?.let { stored ->
+            val list = parseLanguages(stored)
+            if (list.none { it.code == code }) edit.putString(KEY_LANGUAGES, formatLanguages(list + SearchLanguage(code, false)))
+        }
+        edit.apply()
+    }
+
+    /** the user's languages, in their order: those switched on of Languages to search (the preferred one at least) */
+    fun wantedLanguages(context: Context): List<String> {
+        val on = searchLanguages(context).filter { it.on }.map { it.code }
+        return on.ifEmpty { listOfNotNull(preferredLanguage(context).ifEmpty { null }) }
+    }
+
+    /** a result in one of the languages asked for (pt and pt-BR are told apart in the order, not here) */
+    internal fun inLanguages(language: String, wanted: List<String>) = language in wanted || wanted.any { it.substringBefore('-') == language.substringBefore('-') }
 
     /** its switch (a service that needs the user's key or account is asked only when they are given as well). On by
      *  default: the free ones (OpenSubtitles, Wizdom, Addic7ed, YIFY Subtitles); the others are off until the user
@@ -803,7 +866,9 @@ object OnlineSubtitles {
         }
     }
 
-    private suspend fun searchOpenSubtitles(q: Query): Pair<List<Result>, Problem?> {
+    /** the requests of OpenSubtitles.org: by the file's hash, then by the title in each language (and in every
+     *  language when the user asks for every other one too) */
+    internal fun openSubtitlesUrls(q: Query): List<String> {
         val wanted = q.languages.map { openSubtitlesCode(it) }.filter { it.isNotEmpty() }.distinct()
         val episode = if (q.series && q.season >= 0 && q.episode >= 0) listOf("episode-${q.episode}", "season-${q.season}") else emptyList()
         val urls = ArrayList<String>()
@@ -812,11 +877,16 @@ object OnlineSubtitles {
         if (imdb.isNotEmpty()) {
             val padded = "imdbid-%07d".format(imdb.toLongOrNull() ?: 0L)
             for (code in wanted) urls.add(osUrl(episode + padded + "sublanguageid-$code"))
-            urls.add(osUrl(episode + padded))
+            if (q.everyOther || wanted.isEmpty()) urls.add(osUrl(episode + padded))
         } else if (q.title.isNotEmpty()) {
             val encoded = enc(q.title.lowercase(Locale.ROOT))
             for (code in wanted) urls.add(osUrl(episode + "query-$encoded" + "sublanguageid-$code"))
         }
+        return urls
+    }
+
+    private suspend fun searchOpenSubtitles(q: Query): Pair<List<Result>, Problem?> {
+        val urls = openSubtitlesUrls(q)
         val results = ArrayList<Result>()
         val seen = HashSet<String>()
         var error: Problem? = null
@@ -1140,7 +1210,7 @@ object OnlineSubtitles {
         val query = Query(
             imdb = m?.imdb ?: "", title = m?.title ?: media.title, year = m?.year ?: media.year,
             series = m?.series ?: (media.season >= 0), season = media.season, episode = media.episode,
-            fileName = media.name, hash = media.hash, size = media.size, languages = wanted
+            fileName = media.name, hash = media.hash, size = media.size, languages = wanted, everyOther = everyOtherLanguage(context)
         )
         // the services on (with the user's key or account when they need one), of this kind of video, of one of the
         // user's languages (Wizdom: when Hebrew is one of them)
@@ -1169,11 +1239,14 @@ object OnlineSubtitles {
             val state = stateOf(problem)
             if (problem == null || state != null) setServiceState(context, p.id, state)
         }
-        val found = answers.flatMap { it.first }
+        // only the languages of the list, unless every other one is asked for too (the line of the services counts
+        // those shown)
+        val kept = answers.map { a -> a.first.filter { query.everyOther || inLanguages(it.language, wanted) } }
+        val found = kept.flatten()
         val errors = answers.mapNotNull { it.second }
         Log.d(TAG, "\"${media.title}\" is ${m?.title ?: "unknown"} (${m?.imdb ?: "-"}${if (m?.strong == true) ", sure" else ""}), the hash ${media.hash.ifEmpty { "unknown" }}: ${found.size} found")
         Outcome(media, m, rank(found, media, wanted), errors.firstOrNull(), answers.any { it.second == null } || asked.isEmpty(),
-            asked.mapIndexed { i, p -> Asked(p.name, answers[i].first.size, answers[i].second != null, p.id, answers[i].second) })
+            asked.mapIndexed { i, p -> Asked(p.name, kept[i].size, answers[i].second != null, p.id, answers[i].second) })
     }
 
     // ---------------------------------------------------------------------------------------------------------------

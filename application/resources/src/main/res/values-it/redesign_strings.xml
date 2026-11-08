@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">Con la tua chiave gratuita · rumeno</string>
     <string name="rd_os_svc_napisy24">Con il tuo account gratuito · polacco · trova quelli fatti per il tuo file</string>
     <string name="rd_os_svc_legendasnet">Con il tuo account gratuito · portoghese (Brasile)</string>
+    <string name="rd_os_langs">Lingue da cercare</string>
+    <string name="rd_os_add_language">Aggiungi una lingua</string>
+    <string name="rd_os_every_other">Anche tutte le altre lingue</string>
+    <string name="rd_os_fewer_faster">Meno lingue: una ricerca più veloce</string>
+    <string name="rd_os_move_up">Sposta su</string>
+    <string name="rd_os_move_down">Sposta giù</string>
+    <string name="rd_os_find_language">Cerca una lingua</string>
+    <string name="rd_os_picked_in_player">Scelta nel lettore</string>
+    <string name="rd_os_second_short">Seconda lingua</string>
 </resources>

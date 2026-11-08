@@ -436,4 +436,13 @@
     <string name="rd_os_svc_subsro">עם המפתח החינמי שלך · רומנית</string>
     <string name="rd_os_svc_napisy24">עם החשבון החינמי שלך · פולנית · מוצא כתוביות שהותאמו לקובץ שלך</string>
     <string name="rd_os_svc_legendasnet">עם החשבון החינמי שלך · פורטוגזית (ברזיל)</string>
+    <string name="rd_os_langs">שפות לחיפוש</string>
+    <string name="rd_os_add_language">הוסף שפה</string>
+    <string name="rd_os_every_other">גם כל שאר השפות</string>
+    <string name="rd_os_fewer_faster">פחות שפות: חיפוש מהיר יותר</string>
+    <string name="rd_os_move_up">הזז למעלה</string>
+    <string name="rd_os_move_down">הזז למטה</string>
+    <string name="rd_os_find_language">חפש שפה</string>
+    <string name="rd_os_picked_in_player">נבחרה בנגן</string>
+    <string name="rd_os_second_short">שפה שנייה</string>
 </resources>

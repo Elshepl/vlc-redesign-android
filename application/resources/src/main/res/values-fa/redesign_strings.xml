@@ -428,4 +428,13 @@
     <string name="rd_os_svc_subsro">با کلید رایگان شما · رومانیایی</string>
     <string name="rd_os_svc_napisy24">با حساب رایگان شما · لهستانی · زیرنویس‌های ساخته‌شده برای پروندهٔ شما را پیدا می‌کند</string>
     <string name="rd_os_svc_legendasnet">با حساب رایگان شما · پرتغالی (برزیل)</string>
+    <string name="rd_os_langs">زبان‌های جستجو</string>
+    <string name="rd_os_add_language">افزودن زبان</string>
+    <string name="rd_os_every_other">همهٔ زبان‌های دیگر هم</string>
+    <string name="rd_os_fewer_faster">زبان‌های کمتر: جستجوی سریع‌تر</string>
+    <string name="rd_os_move_up">انتقال به بالا</string>
+    <string name="rd_os_move_down">انتقال به پایین</string>
+    <string name="rd_os_find_language">یافتن زبان</string>
+    <string name="rd_os_picked_in_player">انتخاب‌شده در پخش‌کننده</string>
+    <string name="rd_os_second_short">زبان دوم</string>
 </resources>

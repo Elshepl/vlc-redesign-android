@@ -452,4 +452,13 @@
     <string name="rd_os_svc_subsro">Ücretsiz anahtarınızla · Rumence</string>
     <string name="rd_os_svc_napisy24">Ücretsiz hesabınızla · Lehçe · dosyanız için yapılanları bulur</string>
     <string name="rd_os_svc_legendasnet">Ücretsiz hesabınızla · Portekizce (Brezilya)</string>
+    <string name="rd_os_langs">Aranacak diller</string>
+    <string name="rd_os_add_language">Dil ekle</string>
+    <string name="rd_os_every_other">Diğer tüm diller de</string>
+    <string name="rd_os_fewer_faster">Daha az dil: daha hızlı arama</string>
+    <string name="rd_os_move_up">Yukarı taşı</string>
+    <string name="rd_os_move_down">Aşağı taşı</string>
+    <string name="rd_os_find_language">Dil bul</string>
+    <string name="rd_os_picked_in_player">Oynatıcıda seçilir</string>
+    <string name="rd_os_second_short">İkinci dil</string>
 </resources>
