@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Bideo gurutzelarkatuaren orrazi-lerroak kentzen ditu (telebista-grabazioak). VLC-k deskodetutako bideoan dabil, ez hardware-deskodetzailean.</string>
     <string name="rd_ob_whole_device">Gailu osoa</string>
     <string name="rd_ob_folders_count">%1$s eta beste %2$d</string>
-    <string name="rd_ob_online_text">Telemetriarik, iragarkirik eta konturik gabe: VLC for Android-ek ez du ezer bidaltzen bere kabuz. Aukera hauek Ezarpenak, Pribatutasuna atalean geratzen dira.</string>
+    <string name="rd_ob_online_text">Telemetriarik ez, iragarkirik ez, konturik ez. Bere kabuz linean sartzen denak hala dio azpian, eta bertan idatzitakoa soilik bidaltzen du. Aukera hauek Ezarpenetan geratzen dira.</string>
     <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
     <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
     <string-array name="rd_whats_new_items">

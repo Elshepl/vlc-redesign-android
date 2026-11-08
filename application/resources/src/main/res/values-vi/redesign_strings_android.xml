@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Xóa các đường răng lược của video quét xen kẽ (bản ghi truyền hình). Chỉ có tác dụng với video do VLC giải mã, không phải bộ giải mã phần cứng.</string>
     <string name="rd_ob_whole_device">Toàn bộ thiết bị</string>
     <string name="rd_ob_folders_count">%1$s và %2$d mục khác</string>
-    <string name="rd_ob_online_text">Không thu thập dữ liệu sử dụng, không quảng cáo, không cần tài khoản: VLC for Android không tự gửi đi bất cứ thứ gì. Các lựa chọn này nằm trong Thiết lập, Quyền riêng tư.</string>
+    <string name="rd_ob_online_text">Không thu thập dữ liệu từ xa, không quảng cáo, không tài khoản. Những gì tự kết nối trực tuyến đều ghi rõ điều đó bên dưới và chỉ gửi những gì được viết ở đó. Các lựa chọn này vẫn có trong Thiết lập.</string>
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">

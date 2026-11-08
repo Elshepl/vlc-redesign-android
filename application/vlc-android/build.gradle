@@ -217,6 +217,8 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-intents:$rootProject.espressoVersion"
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    // VLC Redesign: org.json on the JVM for the tests of OnlineSubtitles (android.jar's is a stub there)
+    testImplementation 'org.json:json:20231013'
     androidTestImplementation "androidx.room:room-testing:$rootProject.ext.roomVersion"
     testImplementation "androidx.arch.core:core-testing:$rootProject.ext.archVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.ext.archVersion"

@@ -28,7 +28,7 @@
     <string name="rd_help_threads">عدد مسارات المعالجة المستخدمة لفك الترميز، و0 يعني تلقائيًا</string>
     <string name="rd_ob_whole_device">الجهاز بأكمله</string>
     <string name="rd_ob_folders_count">%1$s و%2$d أخرى</string>
-    <string name="rd_ob_online_text">لا قياس عن بُعد، ولا إعلانات، ولا حساب: لا يرسل VLC for Android أي شيء من تلقاء نفسه. تبقى هذه الخيارات في الإعدادات، الخصوصية.</string>
+    <string name="rd_ob_online_text">لا قياس عن بُعد، ولا إعلانات، ولا حساب. ما يتصل بالإنترنت من تلقاء نفسه يذكر ذلك تحته، ولا يرسل إلا ما هو مكتوب هناك. تبقى هذه الخيارات في الإعدادات.</string>
     <string name="rd_ob_history_help">يُحفظ على هذا الجهاز فقط، للمتابعة من حيث توقفت.</string>
     <string name="rd_ob_updates_help">يبحث مرة في اليوم عن إصدار تجريبي أحدث من VLC for Android.</string>
     <string-array name="rd_whats_new_items">

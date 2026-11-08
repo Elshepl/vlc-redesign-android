@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Прыбірае «грэбень» празрадковага відэа (запісы з ТБ). Працуе з відэа, якое дэкадуе VLC, а не апаратны дэкодар.</string>
     <string name="rd_ob_whole_device">Уся прылада</string>
     <string name="rd_ob_folders_count">%1$s і яшчэ %2$d</string>
-    <string name="rd_ob_online_text">Без тэлеметрыі, рэкламы і ўліковага запісу: VLC for Android нічога не адпраўляе сам. Гэтыя параметры застаюцца ў раздзеле «Настаўленні», «Прыватнасць».</string>
+    <string name="rd_ob_online_text">Ніякай тэлеметрыі, ніякай рэкламы, ніякага ўліковага запісу. Тое, што само выходзіць у сетку, паведамляе пра гэта пад сабой і адпраўляе толькі тое, што там напісана. Гэты выбар застаецца ў Настаўленнях.</string>
     <string name="rd_ob_history_help">Захоўваецца толькі на гэтай прыладзе, каб працягнуць з таго месца, дзе вы спыніліся.</string>
     <string name="rd_ob_updates_help">Раз на дзень правярае, ці няма навейшай тэставай зборкі VLC for Android.</string>
     <string-array name="rd_whats_new_items">

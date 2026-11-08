@@ -195,6 +195,31 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
             it.entries = localePair.localeEntries
             it.entryValues = localePair.localeEntryValues
         }
+        // VLC Redesign: the second language and the online subtitles (OnlineSubtitles)
+        pref<ListPreference>(org.videolan.vlc.util.OnlineSubtitles.KEY_SECOND)?.let {
+            val localePair = LocaleUtils.getLocalesUsedInProject(BuildConfig.TRANSLATION_ARRAY, getString(R.string.no_track_preference), requireActivity().getLocales())
+            it.entries = localePair.localeEntries
+            it.entryValues = localePair.localeEntryValues
+        }
+        pref<RdEditTextPreference>(org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_PASSWORD)?.let {
+            it.secret = true
+            it.setOnBindEditTextListener { field -> field.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD }
+        }
+        for (key in arrayOf(org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_KEY, org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_USER))
+            pref<RdEditTextPreference>(key)?.setOnBindEditTextListener { field ->
+                field.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            }
+        // (nothing of VLC's own stands in for the user's account: an empty field reads empty)
+        for (key in arrayOf(org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_KEY, org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_USER, org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_PASSWORD))
+            pref<RdEditTextPreference>(key)?.emptyText = "—"
+        pref<Preference>("rd_opensubtitles_help")?.setOnPreferenceClickListener {
+            try {
+                startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(org.videolan.vlc.util.OnlineSubtitles.OSCOM_KEY_PAGE)))
+            } catch (e: Exception) {
+                // (no browser, a TV: the address is in the text)
+            }
+            true
+        }
         pref<ListPreference>("subtitles_presets")?.let { preset ->
             preset.value = "-1"
             preset.setOnPreferenceChangeListener { _, newValue -> applySubtitlePreset(newValue as String); false }

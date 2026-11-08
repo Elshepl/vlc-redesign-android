@@ -28,7 +28,7 @@
     <string name="rd_help_threads">Numri i rrjedhave të përdorura për dekodim, 0 do të thotë automatik</string>
     <string name="rd_ob_whole_device">E gjithë pajisja</string>
     <string name="rd_ob_folders_count">%1$s dhe %2$d të tjera</string>
-    <string name="rd_ob_online_text">Pa telemetri, pa reklama, pa llogari: VLC for Android nuk dërgon asgjë vetvetiu. Këto zgjedhje mbeten te Cilësimet, Privatësia.</string>
+    <string name="rd_ob_online_text">Pa telemetri, pa reklama, pa llogari. Çdo gjë që lidhet vetë në internet e thotë këtë poshtë saj dhe dërgon vetëm atë që shkruhet aty. Këto zgjedhje mbeten te Cilësimet.</string>
     <string name="rd_ob_history_help">Ruhet vetëm në këtë pajisje, për të vazhduar aty ku e latë.</string>
     <string name="rd_ob_updates_help">Kërkon një herë në ditë për një version prove më të ri të VLC for Android.</string>
     <string-array name="rd_whats_new_items">

@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Eemaldab ülerealaotusega video (telesalvestiste) kammjooned. Toimib videol, mida dekodeerib VLC, mitte riistvaraline dekooder.</string>
     <string name="rd_ob_whole_device">Kogu seade</string>
     <string name="rd_ob_folders_count">%1$s ja veel %2$d</string>
-    <string name="rd_ob_online_text">Telemeetriat, reklaame ega kontot pole: VLC for Android ei saada iseenesest midagi. Need valikud jäävad menüüsse Sätted, Privaatsus.</string>
+    <string name="rd_ob_online_text">Telemeetriat pole, reklaame pole, kontot pole. Mis iseenesest veebi läheb, ütleb seda enda all ja saadab ainult seda, mis seal kirjas on. Need valikud jäävad alles Sätetes.</string>
     <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
     <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
     <string-array name="rd_whats_new_items">

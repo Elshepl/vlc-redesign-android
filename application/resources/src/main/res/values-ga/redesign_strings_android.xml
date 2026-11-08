@@ -28,7 +28,7 @@
     <string name="rd_help_threads">Líon na snáitheanna a úsáidtear le haghaidh díchódaithe, ciallaíonn 0 uathoibríoch</string>
     <string name="rd_ob_whole_device">An gléas ar fad</string>
     <string name="rd_ob_folders_count">%1$s agus %2$d eile</string>
-    <string name="rd_ob_online_text">Gan teiliméadracht, gan fógraí, gan chuntas: ní sheolann VLC for Android aon rud uaidh féin. Fanann na roghanna seo i Socruithe, Príobháideachas.</string>
+    <string name="rd_ob_online_text">Gan teiliméadracht, gan fógraí, gan chuntas. Aon rud a théann ar líne as a stuaim féin, deir sé sin faoina bhun agus ní sheolann sé ach a bhfuil scríofa ansin. Fanann na roghanna seo sna Socruithe.</string>
     <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
     <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
     <string-array name="rd_whats_new_items">

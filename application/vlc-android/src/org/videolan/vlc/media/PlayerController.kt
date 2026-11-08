@@ -196,6 +196,10 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
         return mediaplayer.addSlave(IMedia.Slave.Type.Subtitle, target, select)
     }
 
+    /** VLC Redesign: a subtitle known to be UTF-8 already (downloaded by OnlineSubtitles): added as it is, with no
+     *  read of it on the calling thread */
+    fun addUtf8SubtitleTrack(path: String, select: Boolean) = mediaplayer.addSlave(IMedia.Slave.Type.Subtitle, Uri.fromFile(java.io.File(path)), select)
+
     fun getSpuTracks(): Array<out VlcTrack>? = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.getAllSpuTracks() else emptyArray()
 
     fun getSpuTrack() = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.getSelectedSpuTrack()?.getId() ?: "-1" else "-1"

@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Membuang garis sikat video berjalin (rakaman TV). Berfungsi pada video yang dinyahkod oleh VLC, bukan oleh penyahkod perkakasan.</string>
     <string name="rd_ob_whole_device">Seluruh peranti</string>
     <string name="rd_ob_folders_count">%1$s dan %2$d lagi</string>
-    <string name="rd_ob_online_text">Tiada telemetri, tiada iklan, tiada akaun: VLC for Android tidak menghantar apa-apa dengan sendirinya. Pilihan ini kekal dalam Tetapan, Privasi.</string>
+    <string name="rd_ob_online_text">Tiada telemetri, tiada iklan, tiada akaun. Apa-apa yang pergi ke dalam talian dengan sendirinya menyatakannya di bawahnya dan hanya menghantar apa yang tertulis di situ. Pilihan ini kekal dalam Tetapan.</string>
     <string name="rd_ob_history_help">Disimpan pada peranti ini sahaja, untuk menyambung dari tempat anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari binaan ujian VLC for Android yang lebih baharu sekali sehari.</string>
     <string-array name="rd_whats_new_items">

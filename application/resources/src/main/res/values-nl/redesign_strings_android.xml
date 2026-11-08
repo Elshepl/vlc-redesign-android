@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Verwijdert de kamlijnen van geïnterlinieerde video (tv-opnamen). Werkt op video die VLC decodeert, niet op de hardwaredecoder.</string>
     <string name="rd_ob_whole_device">Het hele apparaat</string>
     <string name="rd_ob_folders_count">%1$s en nog %2$d</string>
-    <string name="rd_ob_online_text">Geen telemetrie, geen advertenties, geen account: VLC for Android verzendt niets uit zichzelf. Deze keuzes blijven in Instellingen, Privacy.</string>
+    <string name="rd_ob_online_text">Geen telemetrie, geen advertenties, geen account. Wat uit zichzelf online gaat, staat eronder vermeld en verstuurt alleen wat daar staat. Deze keuzes blijven beschikbaar in Instellingen.</string>
     <string name="rd_ob_history_help">Alleen op dit apparaat bewaard, om verder te gaan waar je gebleven was.</string>
     <string name="rd_ob_updates_help">Zoekt eenmaal per dag naar een nieuwere testversie van VLC for Android.</string>
     <string-array name="rd_whats_new_items">

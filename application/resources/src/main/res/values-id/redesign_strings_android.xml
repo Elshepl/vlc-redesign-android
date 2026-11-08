@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Menghilangkan garis sisir pada video interlaced (rekaman TV). Berlaku untuk video yang didekode oleh VLC, bukan oleh dekoder perangkat keras.</string>
     <string name="rd_ob_whole_device">Seluruh perangkat</string>
     <string name="rd_ob_folders_count">%1$s dan %2$d lainnya</string>
-    <string name="rd_ob_online_text">Tanpa telemetri, tanpa iklan, tanpa akun: VLC for Android tidak mengirim apa pun dengan sendirinya. Pilihan ini tetap ada di Pengaturan, Privasi.</string>
+    <string name="rd_ob_online_text">Tanpa telemetri, tanpa iklan, tanpa akun. Apa pun yang online dengan sendirinya menyebutkannya di bawahnya, dan hanya mengirim apa yang tertulis di sana. Pilihan ini tetap ada di Pengaturan.</string>
     <string name="rd_ob_history_help">Hanya disimpan di perangkat ini, untuk melanjutkan dari tempat terakhir Anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari build uji VLC for Android yang lebih baru sekali sehari.</string>
     <string-array name="rd_whats_new_items">

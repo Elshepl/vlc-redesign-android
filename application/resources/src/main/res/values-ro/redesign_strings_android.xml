@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Elimină liniile în pieptene ale videoclipurilor întrețesute (înregistrări TV). Funcționează pe video decodat de VLC, nu de decodorul hardware.</string>
     <string name="rd_ob_whole_device">Tot dispozitivul</string>
     <string name="rd_ob_folders_count">%1$s și încă %2$d</string>
-    <string name="rd_ob_online_text">Fără telemetrie, fără reclame, fără cont: VLC for Android nu trimite nimic de la sine. Aceste opțiuni rămân în Setări, Confidențialitate.</string>
+    <string name="rd_ob_online_text">Fără telemetrie, fără reclame, fără cont. Ce se conectează singur la internet spune asta dedesubt și trimite doar ce scrie acolo. Aceste alegeri rămân în Setări.</string>
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">

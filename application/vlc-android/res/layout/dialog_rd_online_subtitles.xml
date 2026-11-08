@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: subtitles from the internet (the desktop's online part of the subtitles panel,
+     SubtitleTracksPanel.qml): what the video was taken for and how the search goes, the subtitles found by
+     language (the user's first), "The video is another one: search by its title", and the hint of the free
+     OpenSubtitles.com key. A bottom sheet; a centred framed window on a tablet; every row is focusable for a
+     TV remote. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="12dp">
+
+        <TextView
+                android:id="@+id/rd_os_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_medium"
+                android:maxLines="1"
+                android:text="@string/rd_os_search"
+                android:textAlignment="viewStart"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+        <ProgressBar
+                android:id="@+id/rd_os_busy"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="8dp"
+                android:importantForAccessibility="no"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        <ImageView
+                android:id="@+id/rd_os_again"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/rd_os_search_again"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_refresh"
+                app:tint="?android:attr/textColorSecondary" />
+    </LinearLayout>
+
+    <!-- "Sintel (2010)", then how the search goes -->
+    <TextView
+            android:id="@+id/rd_os_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="6dp"
+            android:textAlignment="viewStart"
+            android:textDirection="firstStrong"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp"
+            tools:text="Sintel (2010) · 24 found" />
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/rd_os_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false">
+
+        <LinearLayout
+                android:id="@+id/rd_os_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- another title: typed, then the titles found to choose from -->
+    <TextView
+            android:id="@+id/rd_os_another"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/inter"
+            android:minHeight="44dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/rd_os_another"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="14sp" />
+
+    <LinearLayout
+            android:id="@+id/rd_os_title_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="12dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        <EditText
+                android:id="@+id/rd_os_title_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter"
+                android:hint="@string/rd_os_title_hint"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textSize="15sp" />
+
+        <ImageView
+                android:id="@+id/rd_os_title_go"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/rd_os_search"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_search"
+                app:tint="?android:attr/textColorSecondary" />
+    </LinearLayout>
+
+    <!-- the free OpenSubtitles.com key, when there is none -->
+    <TextView
+            android:id="@+id/rd_os_key_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/inter"
+            android:paddingStart="20dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="6dp"
+            android:text="@string/rd_os_more_with_key"
+            android:textAlignment="viewStart"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+</LinearLayout>

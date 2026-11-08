@@ -28,7 +28,7 @@
     <string name="rd_help_threads">Fjöldi þráða sem notaðir eru við afkóðun, 0 þýðir sjálfvirkt</string>
     <string name="rd_ob_whole_device">Allt tækið</string>
     <string name="rd_ob_folders_count">%1$s og %2$d í viðbót</string>
-    <string name="rd_ob_online_text">Engin fjarmæling, engar auglýsingar, enginn aðgangur: VLC for Android sendir ekkert af sjálfsdáðum. Þessir valkostir eru áfram í Stillingum, Persónuvernd.</string>
+    <string name="rd_ob_online_text">Engin fjarmæling, engar auglýsingar, enginn aðgangur. Það sem fer sjálft á netið segir frá því fyrir neðan sig og sendir aðeins það sem þar stendur. Þessir valkostir haldast í Stillingum.</string>
     <string name="rd_ob_history_help">Geymt eingöngu á þessu tæki, til að halda áfram þar sem frá var horfið.</string>
     <string name="rd_ob_updates_help">Leitar einu sinni á dag að nýrri prófunarútgáfu af VLC for Android.</string>
     <string-array name="rd_whats_new_items">

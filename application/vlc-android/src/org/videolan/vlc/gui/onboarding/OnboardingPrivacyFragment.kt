@@ -44,6 +44,12 @@ class OnboardingPrivacyFragment : OnboardingFragment() {
         row(rows, getString(R.string.rd_tv_addon), getString(R.string.rd_tv_addon_help), settings.getBoolean(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, true)) {
             settings.putSingle(org.videolan.vlc.livetv.KEY_IPTV_ENABLED, it)
         }
+        // subtitles found online when a video has none in the user's languages (OnlineSubtitles): on, as the
+        // desktop's welcome offers it; asked here, so it searches by itself only for those who saw this step
+        if (!settings.contains(org.videolan.vlc.util.OnlineSubtitles.KEY_AUTO)) settings.putSingle(org.videolan.vlc.util.OnlineSubtitles.KEY_AUTO, true)
+        row(rows, getString(R.string.rd_os_auto), getString(R.string.rd_os_auto_help), settings.getBoolean(org.videolan.vlc.util.OnlineSubtitles.KEY_AUTO, true)) {
+            settings.putSingle(org.videolan.vlc.util.OnlineSubtitles.KEY_AUTO, it)
+        }
         // VLC Redesign's releases on GitHub, once a day (RdUpdateCheck)
         row(rows, getString(R.string.rd_check_updates), getString(R.string.rd_update_check_daily), settings.getBoolean(org.videolan.vlc.util.RdUpdateCheck.KEY_CHECK, true)) {
             settings.putSingle(org.videolan.vlc.util.RdUpdateCheck.KEY_CHECK, it)

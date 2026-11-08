@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Pašalina persipynusio vaizdo (TV įrašų) šukų linijas. Veikia vaizdui, kurį iškoduoja VLC, ne aparatinis iškoduotuvas.</string>
     <string name="rd_ob_whole_device">Visas įrenginys</string>
     <string name="rd_ob_folders_count">%1$s ir dar %2$d</string>
-    <string name="rd_ob_online_text">Jokios telemetrijos, jokių reklamų, jokios paskyros: VLC for Android pati nieko nesiunčia. Šie pasirinkimai lieka skiltyje Nuostatos, Privatumas.</string>
+    <string name="rd_ob_online_text">Jokios telemetrijos, jokių reklamų, jokios paskyros. Kas pats jungiasi prie interneto, tai nurodo po savimi ir siunčia tik tai, kas ten parašyta. Šie pasirinkimai lieka Nuostatose.</string>
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">

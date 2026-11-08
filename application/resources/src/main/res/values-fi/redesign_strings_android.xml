@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Poistaa lomitetun videon (TV-tallenteiden) kampamaiset viivat. Toimii videoon, jonka VLC dekoodaa, ei laitteistodekooderiin.</string>
     <string name="rd_ob_whole_device">Koko laite</string>
     <string name="rd_ob_folders_count">%1$s ja %2$d muuta</string>
-    <string name="rd_ob_online_text">Ei telemetriaa, ei mainoksia, ei tiliä: VLC for Android ei lähetä mitään itsestään. Nämä valinnat löytyvät kohdasta Asetukset, Tietosuoja.</string>
+    <string name="rd_ob_online_text">Ei telemetriaa, ei mainoksia, ei tiliä. Se, mikä menee verkkoon itsestään, kertoo sen alapuolellaan ja lähettää vain sen, mitä siinä lukee. Nämä valinnat pysyvät Asetuksissa.</string>
     <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
     <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
     <string-array name="rd_whats_new_items">

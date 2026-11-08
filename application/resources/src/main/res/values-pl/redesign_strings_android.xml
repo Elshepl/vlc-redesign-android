@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Usuwa „grzebień” wideo z przeplotem (nagrania telewizyjne). Działa na wideo dekodowanym przez VLC, a nie przez dekoder sprzętowy.</string>
     <string name="rd_ob_whole_device">Całe urządzenie</string>
     <string name="rd_ob_folders_count">%1$s i jeszcze %2$d</string>
-    <string name="rd_ob_online_text">Bez telemetrii, reklam i konta: VLC for Android sam niczego nie wysyła. Te ustawienia pozostają w Ustawieniach, w sekcji Prywatność.</string>
+    <string name="rd_ob_online_text">Bez telemetrii, bez reklam, bez konta. To, co samo łączy się z internetem, informuje o tym pod spodem i wysyła tylko to, co tam napisano. Te wybory pozostają w Ustawieniach.</string>
     <string name="rd_ob_history_help">Przechowywana tylko na tym urządzeniu, aby kontynuować od miejsca, w którym przerwano.</string>
     <string name="rd_ob_updates_help">Raz dziennie sprawdza, czy jest nowsza testowa wersja VLC for Android.</string>
     <string-array name="rd_whats_new_items">

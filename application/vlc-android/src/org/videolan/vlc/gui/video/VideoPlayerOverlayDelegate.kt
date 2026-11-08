@@ -1465,8 +1465,10 @@ class VideoPlayerOverlayDelegate (private val player: VideoPlayerActivity) {
 
     }
 
+    // VLC Redesign: the desktop's online search (free services, no account), not VLC for Android's
+    // OpenSubtitles.com downloader (it needs VideoLAN's own key)
     private fun downloadSubtitles() = player.service?.currentMediaWrapper?.let {
-        MediaUtils.getSubs(player, it)
+        org.videolan.vlc.gui.dialogs.RdOnlineSubtitlesSheet.show(player.supportFragmentManager)
     }
 
     fun showBookmarks() {

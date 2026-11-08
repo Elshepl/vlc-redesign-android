@@ -28,7 +28,7 @@
     <string name="rd_help_threads">ژمارەی ئەو داوانەی بۆ کۆدکردنەوە بەکاردێن، 0 واتە خۆکار</string>
     <string name="rd_ob_whole_device">هەموو ئامێرەکە</string>
     <string name="rd_ob_folders_count">%1$s و %2$d ی تر</string>
-    <string name="rd_ob_online_text">بێ تێلێمێتری، بێ ڕیکلام، بێ هەژمار: VLC for Android خۆی هیچ شتێک نانێرێت. ئەم هەڵبژاردنانە لە ڕێکخستنەکان، تایبەتمەندی دەمێننەوە.</string>
+    <string name="rd_ob_online_text">بێ تێلێمەتری، بێ ڕیکلام، بێ هەژمار. ئەوەی خۆی دەچێتە سەرهێڵ، لە ژێرییەوە ئەمە دەڵێت و تەنها ئەوە دەنێرێت کە لەوێ نووسراوە. ئەم هەڵبژاردنانە لە ڕێکخستنەکاندا دەمێننەوە.</string>
     <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
     <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
     <string-array name="rd_whats_new_items">

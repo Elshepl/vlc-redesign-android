@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Noņem rindpārleces video (TV ierakstu) ķemmes līnijas. Darbojas ar video, ko atkodē VLC, nevis aparatūras atkodētājs.</string>
     <string name="rd_ob_whole_device">Visa ierīce</string>
     <string name="rd_ob_folders_count">%1$s un vēl %2$d</string>
-    <string name="rd_ob_online_text">Bez telemetrijas, bez reklāmām, bez konta: VLC for Android pati neko nesūta. Šīs izvēles paliek sadaļā Iestatījumi, Privātums.</string>
+    <string name="rd_ob_online_text">Nekādas telemetrijas, nekādu reklāmu, nekāda konta. Tas, kas pats pieslēdzas tiešsaistei, to norāda zem sevis un sūta tikai to, kas tur rakstīts. Šīs izvēles paliek Iestatījumos.</string>
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">

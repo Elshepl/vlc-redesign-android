@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Tar bort kamlinjerna i sammanflätad video (tv-inspelningar). Fungerar på video som VLC avkodar, inte hårdvaruavkodaren.</string>
     <string name="rd_ob_whole_device">Hela enheten</string>
     <string name="rd_ob_folders_count">%1$s och %2$d till</string>
-    <string name="rd_ob_online_text">Ingen telemetri, ingen reklam, inget konto: VLC for Android skickar ingenting av sig självt. De här valen finns kvar i Inställningar, Sekretess.</string>
+    <string name="rd_ob_online_text">Ingen telemetri, inga annonser, inget konto. Det som går ut på nätet av sig självt säger det under sig och skickar bara det som står där. De här valen finns kvar i Inställningar.</string>
     <string name="rd_ob_history_help">Sparas bara på den här enheten, så att du kan fortsätta där du slutade.</string>
     <string name="rd_ob_updates_help">Letar en gång om dagen efter en nyare testversion av VLC for Android.</string>
     <string-array name="rd_whats_new_items">

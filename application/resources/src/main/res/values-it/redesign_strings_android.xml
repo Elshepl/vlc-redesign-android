@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Rimuove le righe a pettine del video interlacciato (registrazioni TV). Agisce sul video decodificato da VLC, non dal decodificatore hardware.</string>
     <string name="rd_ob_whole_device">L\'intero dispositivo</string>
     <string name="rd_ob_folders_count">%1$s e altre %2$d</string>
-    <string name="rd_ob_online_text">Niente telemetria, niente pubblicità, nessun account: VLC for Android non invia nulla di sua iniziativa. Queste scelte restano in Impostazioni, Privacy.</string>
+    <string name="rd_ob_online_text">Niente telemetria, niente pubblicità, nessun account. Ciò che va online da solo lo indica sotto di sé e invia solo quello che vi è scritto. Queste scelte restano nelle Impostazioni.</string>
     <string name="rd_ob_history_help">Conservata solo su questo dispositivo, per riprendere da dove avevi lasciato.</string>
     <string name="rd_ob_updates_help">Cerca una versione di prova più recente di VLC for Android una volta al giorno.</string>
     <string-array name="rd_whats_new_items">

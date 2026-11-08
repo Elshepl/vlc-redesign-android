@@ -26,7 +26,7 @@
     <string name="rd_help_deinterlace">Eltávolítja a váltottsoros videó „fésűs” vonalait (tévéfelvételek). A VLC által dekódolt videón működik, a hardveres dekóderén nem.</string>
     <string name="rd_ob_whole_device">A teljes eszköz</string>
     <string name="rd_ob_folders_count">%1$s és még %2$d</string>
-    <string name="rd_ob_online_text">Nincs telemetria, nincs reklám, nincs fiók: a VLC for Android magától semmit sem küld. Ezek a beállítások a Beállítások, Adatvédelem részben maradnak.</string>
+    <string name="rd_ob_online_text">Nincs telemetria, nincsenek hirdetések, nincs fiók. Ami magától az internetre csatlakozik, az alatta jelzi ezt, és csak azt küldi el, ami ott le van írva. Ezek a választások a Beállításokban maradnak.</string>
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
