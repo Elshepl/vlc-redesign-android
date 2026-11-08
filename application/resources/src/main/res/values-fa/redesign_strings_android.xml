@@ -32,8 +32,9 @@
     <string name="rd_ob_history_help">فقط روی همین دستگاه نگه داشته می‌شود، تا از جایی که رها کرده‌اید ادامه دهید.</string>
     <string name="rd_ob_updates_help">روزی یک بار به دنبال نسخهٔ آزمایشی تازه‌تری از VLC for Android می‌گردد.</string>
     <string-array name="rd_whats_new_items">
-        <item>دستگاه‌های قدیمی‌تر: ویدیوها، تنظیمات و زیرنویس‌ها دیگر در Android 5 تا 10 از کار نمی‌افتند.</item>
-        <item>مصرف حافظهٔ کمتر پس از چرخش صفحه.</item>
+        <item>زیرنویس از اینترنت: جستجو از داخل پخش‌کننده در OpenSubtitles، Wizdom برای عبری، YIFY Subtitles و Addic7ed، رایگان و بدون حساب کاربری.</item>
+        <item>حتی برای فایل‌هایی که نامشان چیزی نمی‌گوید هم پیدا می‌شوند. اختیاری: کلید OpenSubtitles.com خودتان و جستجوی خودکار، در تنظیمات › زیرنویس‌ها.</item>
+        <item>تلویزیون زنده: نوار اطلاعات در گوشی عمودی هم جا می‌شود.</item>
     </string-array>
     <string name="rd_subtitle_size">اندازهٔ زیرنویس</string>
     <string name="rd_cast_this_phone">این تلفن</string>

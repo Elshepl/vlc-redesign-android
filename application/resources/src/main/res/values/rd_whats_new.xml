@@ -3,7 +3,8 @@
      translate"). -->
 <resources>
     <string-array name="rd_whats_new_items">
-        <item>Older devices: videos, Settings and subtitles no longer crash on Android 5 to 10.</item>
-        <item>Less memory used after the screen rotates.</item>
+        <item>Subtitles from the internet: search from the player in OpenSubtitles, Wizdom (Hebrew), YIFY Subtitles and Addic7ed, free and without an account.</item>
+        <item>Found even for files whose names say nothing. Optional: your own OpenSubtitles.com key and an automatic search, in Settings › Subtitles.</item>
+        <item>Live TV: the info bar fits a phone held upright.</item>
     </string-array>
 </resources>

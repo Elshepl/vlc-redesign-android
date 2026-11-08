@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Vifaa vya zamani: video, Mipangilio na manukuu hayaanguki tena kwenye Android 5 hadi 10.</item>
-        <item>Kumbukumbu kidogo baada ya skrini kuzunguka.</item>
+        <item>Manukuu kutoka mtandaoni: tafuta moja kwa moja kutoka kwenye kicheza video katika OpenSubtitles, Wizdom (Kiebrania), YIFY Subtitles na Addic7ed, bila malipo na bila akaunti.</item>
+        <item>Hupatikana hata kwa faili ambazo majina yake hayasemi chochote. Hiari: ufunguo wako mwenyewe wa OpenSubtitles.com na utafutaji wa kiotomatiki, katika Mipangilio › Manukuu.</item>
+        <item>TV ya moja kwa moja: upau wa taarifa unatosha kwenye simu iliyoshikwa wima.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

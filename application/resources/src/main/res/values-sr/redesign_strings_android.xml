@@ -31,8 +31,9 @@
     <string name="rd_ob_history_help">Чува се само на овом уређају, да наставите где сте стали.</string>
     <string name="rd_ob_updates_help">Једном дневно тражи новију пробну верзију VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Старији уређаји: видео снимци, Подешавања и титлови се више не руше на Android-у 5 до 10.</item>
-        <item>Мање меморије после окретања екрана.</item>
+        <item>Титлови са интернета: претрага директно из плејера на OpenSubtitles, Wizdom (хебрејски), YIFY Subtitles и Addic7ed, бесплатно и без налога.</item>
+        <item>Проналазе се чак и за датотеке чији назив ништа не говори. По избору: ваш сопствени OpenSubtitles.com кључ и аутоматска претрага, у Подешавања › Титлови.</item>
+        <item>ТВ уживо: трака са информацијама стаје на телефон који се држи усправно.</item>
     </string-array>
     <string name="rd_subtitle_size">Величина титлова</string>
     <string name="rd_cast_this_phone">Овај телефон</string>

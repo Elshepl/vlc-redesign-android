@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Gárdase só neste dispositivo, para continuar onde o deixaches.</string>
     <string name="rd_ob_updates_help">Busca unha versión de proba máis recente de VLC for Android unha vez ao día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Dispositivos antigos: os vídeos, os Axustes e os subtítulos xa non fallan en Android 5 a 10.</item>
-        <item>Menos memoria despois de xirar a pantalla.</item>
+        <item>Subtítulos de internet: busca desde o reprodutor en OpenSubtitles, Wizdom (hebreo), YIFY Subtitles e Addic7ed, de balde e sen conta.</item>
+        <item>Atópanse mesmo para ficheiros cuxo nome non di nada. Opcional: a súa propia chave de OpenSubtitles.com e unha busca automática, en Configuración › Subtítulos.</item>
+        <item>TV en directo: a barra de información cabe nun teléfono en vertical.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamaño dos subtítulos</string>
     <string name="rd_cast_this_phone">Este teléfono</string>

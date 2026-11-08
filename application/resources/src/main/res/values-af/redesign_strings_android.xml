@@ -32,8 +32,9 @@
     <string name="rd_ob_history_help">Net op hierdie toestel gehou, om voort te gaan waar jy opgehou het.</string>
     <string name="rd_ob_updates_help">Soek een keer per dag na ’n nuwer toetsweergawe van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Ouer toestelle: video\'s, Instellings en onderskrifte breek nie meer op Android 5 tot 10 nie.</item>
-        <item>Minder geheue gebruik nadat die skerm draai.</item>
+        <item>Onderskrifte van die internet: soek vanuit die speler in OpenSubtitles, Wizdom (Hebreeus), YIFY Subtitles en Addic7ed, gratis en sonder \'n rekening.</item>
+        <item>Gevind selfs vir lêers waarvan die name niks sê nie. Opsioneel: u eie OpenSubtitles.com-sleutel en \'n outomatiese soektog, in Instellings › Onderskrifte.</item>
+        <item>Regstreekse TV: die inligtingstrook pas op \'n foon wat regop gehou word.</item>
     </string-array>
     <string name="rd_subtitle_size">Onderskrifgrootte</string>
     <string name="rd_cast_this_phone">Hierdie foon</string>

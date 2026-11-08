@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Conservata solo su questo dispositivo, per riprendere da dove avevi lasciato.</string>
     <string name="rd_ob_updates_help">Cerca una versione di prova più recente di VLC for Android una volta al giorno.</string>
     <string-array name="rd_whats_new_items">
-        <item>Dispositivi meno recenti: video, Impostazioni e sottotitoli non si bloccano più su Android da 5 a 10.</item>
-        <item>Meno memoria dopo la rotazione dello schermo.</item>
+        <item>Sottotitoli da internet: cerca dal lettore su OpenSubtitles, Wizdom (ebraico), YIFY Subtitles e Addic7ed, gratis e senza account.</item>
+        <item>Trovati anche per i file il cui nome non dice nulla. Facoltativo: la tua chiave OpenSubtitles.com e una ricerca automatica, in Impostazioni › Sottotitoli.</item>
+        <item>TV in diretta: la barra informazioni sta su un telefono tenuto in verticale.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
     <string name="rd_cast_this_phone">Questo telefono</string>

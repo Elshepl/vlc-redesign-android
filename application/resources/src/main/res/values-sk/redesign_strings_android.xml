@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Uchováva sa iba v tomto zariadení, aby ste mohli pokračovať tam, kde ste skončili.</string>
     <string name="rd_ob_updates_help">Raz denne hľadá novšiu testovaciu zostavu VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Staršie zariadenia: videá, Nastavenia a titulky už na Androide 5 až 10 nepadajú.</item>
-        <item>Menej pamäte po otočení obrazovky.</item>
+        <item>Titulky z internetu: hľadanie priamo z prehrávača na OpenSubtitles, Wizdom (hebrejčina), YIFY Subtitles a Addic7ed, zadarmo a bez účtu.</item>
+        <item>Nájdu sa aj pre súbory, ktorých názvy nič nehovoria. Voliteľne: vlastný kľúč OpenSubtitles.com a automatické hľadanie v Nastavenia › Titulky.</item>
+        <item>Živá TV: informačný pruh sa zmestí na telefón držaný na výšku.</item>
     </string-array>
     <string name="rd_subtitle_size">Veľkosť titulkov</string>
     <string name="rd_cast_this_phone">Tento telefón</string>

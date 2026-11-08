@@ -32,8 +32,9 @@
     <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
     <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
     <string-array name="rd_whats_new_items">
-        <item>Amûrên kevntir: vîdyo, Mîheng û binnivîs êdî li ser Android 5 heta 10 naqelişin.</item>
-        <item>Piştî zivirîna ekranê bîra kêmtir.</item>
+        <item>Binnivîs ji înternetê: dema temaşekirinê li OpenSubtitles, Wizdom (Îbranî), YIFY Subtitles û Addic7ed bigere, belaş û bê hesab.</item>
+        <item>Ji bo pelên ku navê wan tiştekî nabêje jî tên dîtin. Vebijarkî: mifteya te ya OpenSubtitles.com û lêgerîna xweber, di Mîheng › Binnivîs de.</item>
+        <item>TV ya zindî: darika agahiyan êdî li ser telefona ku stûnî tê girtin cih digire.</item>
     </string-array>
     <string name="rd_subtitle_size">قەبارەی ژێرنووس</string>
     <string name="rd_cast_this_phone">ئەم مۆبایلە</string>

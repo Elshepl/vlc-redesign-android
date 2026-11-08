@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
     <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
     <string-array name="rd_whats_new_items">
-        <item>Vanemad seadmed: videod, Seaded ja subtiitrid ei jookse Android 5–10 peal enam kokku.</item>
-        <item>Vähem mälu pärast ekraani pööramist.</item>
+        <item>Subtiitrid internetist: otsi otse mängijast teenustest OpenSubtitles, Wizdom (heebrea), YIFY Subtitles ja Addic7ed, tasuta ja ilma kontota.</item>
+        <item>Leitakse ka failidele, mille nimi ei ütle midagi. Valikuline: sinu enda OpenSubtitles.com-i võti ja automaatne otsing, jaotises Sätted › Subtiitrid.</item>
+        <item>Otse-TV: infoariba mahub püsti hoitud telefonile.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtiitrite suurus</string>
     <string name="rd_cast_this_phone">See telefon</string>

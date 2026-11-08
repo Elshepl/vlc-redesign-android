@@ -32,8 +32,9 @@
     <string name="rd_ob_history_help">เก็บไว้บนอุปกรณ์นี้เท่านั้น เพื่อเล่นต่อจากจุดที่หยุดไว้</string>
     <string name="rd_ob_updates_help">ตรวจหารุ่นทดสอบที่ใหม่กว่าของ VLC for Android วันละครั้ง</string>
     <string-array name="rd_whats_new_items">
-        <item>อุปกรณ์รุ่นเก่า: วิดีโอ การตั้งค่า และคำบรรยายไม่ขัดข้องอีกต่อไปบน Android 5 ถึง 10</item>
-        <item>ใช้หน่วยความจำน้อยลงหลังหมุนหน้าจอ</item>
+        <item>บทบรรยายจากอินเทอร์เน็ต: ค้นหาได้จากเครื่องเล่นโดยตรงใน OpenSubtitles, Wizdom (ภาษาฮีบรู), YIFY Subtitles และ Addic7ed ฟรีและไม่ต้องมีบัญชี</item>
+        <item>พบได้แม้แต่กับไฟล์ที่ชื่อไม่บอกอะไรเลย ไม่บังคับ: คีย์ OpenSubtitles.com ของคุณเองและการค้นหาอัตโนมัติ ใน ค่าตั้ง › บทบรรยาย</item>
+        <item>โทรทัศน์สด: แถบข้อมูลพอดีกับโทรศัพท์ที่ถือในแนวตั้ง</item>
     </string-array>
     <string name="rd_subtitle_size">ขนาดคำบรรยาย</string>
     <string name="rd_cast_this_phone">โทรศัพท์เครื่องนี้</string>

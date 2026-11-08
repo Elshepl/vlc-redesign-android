@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
     <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
     <string-array name="rd_whats_new_items">
-        <item>Vanhemmat laitteet: videot, Asetukset ja tekstitykset eivät enää kaadu Android 5–10:ssä.</item>
-        <item>Vähemmän muistia näytön kääntämisen jälkeen.</item>
+        <item>Tekstitykset internetistä: hae suoraan soittimesta palveluista OpenSubtitles, Wizdom (heprea), YIFY Subtitles ja Addic7ed, ilmaiseksi ja ilman tiliä.</item>
+        <item>Löytyvät myös tiedostoille, joiden nimi ei kerro mitään. Valinnainen: oma OpenSubtitles.com-avain ja automaattinen haku, kohdassa Asetukset › Tekstitykset.</item>
+        <item>Suora TV: tietopalkki mahtuu pystyasennossa pidettävään puhelimeen.</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
     <string name="rd_cast_this_phone">Tämä puhelin</string>

@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Alleen op dit apparaat bewaard, om verder te gaan waar je gebleven was.</string>
     <string name="rd_ob_updates_help">Zoekt eenmaal per dag naar een nieuwere testversie van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Oudere apparaten: video\'s, Instellingen en ondertitels crashen niet meer op Android 5 tot en met 10.</item>
-        <item>Minder geheugen na het draaien van het scherm.</item>
+        <item>Ondertitels van internet: zoek vanuit de speler bij OpenSubtitles, Wizdom (Hebreeuws), YIFY Subtitles en Addic7ed, gratis en zonder account.</item>
+        <item>Ook gevonden voor bestanden waarvan de naam niets zegt. Optioneel: uw eigen OpenSubtitles.com-sleutel en automatisch zoeken, in Instellingen › Ondertitels.</item>
+        <item>Live-tv: de infobalk past op een rechtop gehouden telefoon.</item>
     </string-array>
     <string name="rd_subtitle_size">Ondertitelgrootte</string>
     <string name="rd_cast_this_phone">Deze telefoon</string>

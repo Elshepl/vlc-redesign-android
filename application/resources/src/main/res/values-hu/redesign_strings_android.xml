@@ -30,8 +30,9 @@
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
-        <item>Régebbi eszközök: a videók, a Beállítások és a feliratok már nem omlanak össze Android 5–10 alatt.</item>
-        <item>Kevesebb memória a képernyő elforgatása után.</item>
+        <item>Feliratok az internetről: keresés közvetlenül a lejátszóból az OpenSubtitles, a Wizdom (héber), a YIFY Subtitles és az Addic7ed szolgáltatásban, ingyen és fiók nélkül.</item>
+        <item>Olyan fájlokhoz is megtalálhatók, amelyek neve semmit sem árul el. Választható: saját OpenSubtitles.com-kulcs és automatikus keresés, a Beállítások › Feliratok alatt.</item>
+        <item>Élő TV: az információs sáv elfér az álló helyzetben tartott telefonon.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>
