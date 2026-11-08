@@ -1,0 +1,12 @@
+dk4.dk	dk4
+DR1.dk	DR1
+DR2.dk	DR2
+DRRamasjang.dk	DR Ramasjang
+Kanal4.dk	Kanal 4	Channel 4
+Kanal5.dk	Kanal 5
+TV2.dk	TV 2
+TV2Charlie.dk	TV 2 Charlie
+TV2News.dk	TV 2 News
+TV3.dk	TV3
+TV3Plus.dk	TV3+
+TV3Sport.dk	TV3 Sport

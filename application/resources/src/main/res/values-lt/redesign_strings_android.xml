@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Laikoma tik šiame įrenginyje, kad galėtumėte tęsti nuo ten, kur baigėte.</string>
     <string name="rd_ob_updates_help">Kartą per dieną ieško naujesnės VLC for Android bandomosios versijos.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtitrai iš interneto: paieška tiesiai iš grotuvo per OpenSubtitles, Wizdom (hebrajų k.), YIFY Subtitles ir Addic7ed, nemokamai ir be paskyros.</item>
-        <item>Randami net failams, kurių pavadinimai nieko nesako. Pasirinktinai: jūsų pačių OpenSubtitles.com raktas ir automatinė paieška, skiltyje Nuostatos › Subtitrai.</item>
-        <item>Tiesioginė TV: informacijos juosta telpa vertikaliai laikomame telefone.</item>
-        <item>Android TV: nuotolinio valdymo pultu pasiekiamas kiekvienas vaizdo įrašas ir kiekvienas grotuvo mygtukas.</item>
+        <item>Subtitrai: SubSource (arabų k.), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 ir Legendas.net – su jūsų pačių nemokamu raktu arba paskyra. Kiekviena paslauga – skiltyje Nuostatos › Subtitrai, su savo jungikliu.</item>
+        <item>Paieškos kalbos: įjunkite arba išjunkite kiekvieną subtitrų kalbą, kad paieška būtų greitesnė.</item>
+        <item>Tiesioginės TV paskyros: jūsų Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR arba HDHomeRun ir Schedules Direct TV programa. Serveriai jūsų tinkle randami savaime.</item>
+        <item>Tiesioginė TV: savaime randama TV programa kanalams, kurie jos neturi, skirtukas TV programos su kiekvieno šaltinio programomis, o kataloge pirmiausia jūsų šalies šaltiniai.</item>
+        <item>Pataisymai: subtitrai įrašomi į pačios programėlės saugyklą (strigtis Android 14 sistemoje), slaptažodžio laukai slepia įvestą slaptažodį, TV pulto fokusas, žodis „Šalis“ daugelyje kalbų ir žodis „slaptažodis“ arabų kalba.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitrų dydis</string>
     <string name="rd_cast_this_phone">Šis telefonas</string>

@@ -1,0 +1,59 @@
+AlArabyTV.qa	Al Araby TV	العربي
+AlArabyTV2.qa	Al Araby TV 2	العربي 2
+AlJazeera.qa	Al Jazeera	الجزيرة‎
+AlJazeera2.qa	Al Jazeera 2	الجزيرة 2
+AlJazeeraDocumentary.qa	Al Jazeera Documentary	الجزيرة الوثائقية
+AlJazeeraMubasher.qa	Al Jazeera Mubasher	الجزيرة مباشر
+AlkassEight.qa	Alkass Eight	الكأس 8
+AlkassFive.qa	Alkass Five	الكأس 5
+AlkassFour.qa	Alkass Four	الكأس 4
+AlkassOne.qa	Alkass One	الكأس 1
+AlkassSeven.qa	Alkass Seven	الكأس 7
+AlkassSix.qa	Alkass Six	الكأس 6
+AlkassThree.qa	Alkass Three	الكأس 3
+AlkassTwo.qa	Alkass Two	الكأس 2
+AlRayyanTV.qa	Al Rayyan TV	الريان
+Baraem.qa	Baraem	براعم
+beIN4K.qa	beIN 4K
+beINDrama1.qa	beIN Drama 1
+beINGourmet.qa	beIN Gourmet
+beINMovies1Premiere.qa	beIN Movies 1 Premiere
+beINMovies2Action.qa	beIN Movies 2 Action
+beINMovies3Drama.qa	beIN Movies 3 Drama
+beINMovies4Family.qa	beIN Movies 4 Family
+beINSeries1.qa	beIN Series 1
+beINSeries2.qa	beIN Series 2
+beINSports.qa	beIN Sports
+beINSports1.qa	beIN Sports 1
+beINSports2.qa	beIN Sports 2
+beINSports3.qa	beIN Sports 3
+beINSports4.qa	beIN Sports 4
+beINSports4KHDR.qa	beIN Sports 4K HDR
+beINSports5.qa	beIN Sports 5
+beINSports6.qa	beIN Sports 6
+beINSports7.qa	beIN Sports 7
+beINSports8.qa	beIN Sports 8
+beINSports9.qa	beIN Sports 9
+beINSportsAFC.qa	beIN Sports AFC
+beINSportsAFC1.qa	beIN Sports AFC 1
+beINSportsAFC2.qa	beIN Sports AFC 2
+beINSportsAFC3.qa	beIN Sports AFC 3
+beINSportsenEspanol.qa	beIN Sports en Espanol	beIN Sports en Español
+beINSportsMax1.qa	beIN Sports Max 1
+beINSportsMax10.qa	beIN Sports Max 10
+beINSportsMax2.qa	beIN Sports Max 2
+beINSportsMax3.qa	beIN Sports Max 3
+beINSportsMax4.qa	beIN Sports Max 4
+beINSportsMax5.qa	beIN Sports Max 5
+beINSportsMax6.qa	beIN Sports Max 6
+beINSportsMax7.qa	beIN Sports Max 7
+beINSportsMax8.qa	beIN Sports Max 8
+beINSportsMax9.qa	beIN Sports Max 9
+beINSportsNBA.qa	beIN Sports NBA
+beINSportsNews.qa	beIN Sports News
+beINSportsXtra1.qa	beIN Sports Xtra 1
+beINSportsXtra2.qa	beIN Sports Xtra 2
+BeJunior.qa	Be Junior
+JeemTV.qa	JeemTV	تلفزيون جيم
+QatarTelevision.qa	Qatar Television	Qatar TV	QTV	تلفزيون قطر	قطر تي في
+QatarTelevision2.qa	Qatar Television 2	قناة قطر 2	Qatar TV 2	QTV 2

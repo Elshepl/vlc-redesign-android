@@ -535,13 +535,54 @@
     <!-- the user's own free OpenSubtitles.com key, and where to get it -->
     <string name="rd_os_key_how">How to get a free key</string>
     <string name="rd_os_key_help">No key yet? It\'s free: sign up on opensubtitles.com, open API consumers (opensubtitles.com/en/consumers), choose New consumer, name it (VLC Redesign) and copy its API key here. Your account\'s username and password raise how many subtitles you can download a day.</string>
-    <string name="rd_os_svc_oscom">All languages · movies and series · with your own free key</string>
+    <string name="rd_os_svc_oscom">With your own free key · all languages</string>
     <string name="rd_os_key_refused">%1$s: the API key was refused.</string>
     <string name="rd_os_quota">%1$s: today\'s downloads are used up. Your account\'s username and password raise them.</string>
-    <string name="rd_os_more_with_key">More subtitles with your own free OpenSubtitles.com key: Settings › Subtitles.</string>
-    <string name="rd_os_name_opensubtitles" translatable="false">OpenSubtitles</string>
-    <string name="rd_os_name_wizdom" translatable="false">Wizdom</string>
-    <string name="rd_os_name_addic7ed" translatable="false">Addic7ed</string>
-    <string name="rd_os_name_yify" translatable="false">YIFY Subtitles</string>
-    <string name="rd_os_name_oscom" translatable="false">OpenSubtitles.com</string>
+    <string name="rd_os_more_with_key">More subtitles with your own free key or account: Settings › Subtitles › Subtitle services.</string>
+    <!-- Settings > Subtitles > Subtitle services: one row per service (its switch, its key or account, Test or
+         Sign in, Get a free key, Remove in its menu), the same words as the desktop and the Samsung TV app -->
+    <string name="rd_os_svc_subsource">With your own free key · strong in Arabic, many languages</string>
+    <string name="rd_os_svc_subdl">With your own free key · the Subscene archive, many languages</string>
+    <string name="rd_os_get_key">Get a free key</string>
+    <string name="rd_os_create_account">Create a free account</string>
+    <string name="rd_os_test">Test</string>
+    <string name="rd_os_sign_in">Sign in</string>
+    <string name="rd_os_sign_out">Sign out</string>
+    <string name="rd_os_clear">Clear</string>
+    <string name="rd_os_testing">Checking…</string>
+    <string name="rd_os_key_works">Key works</string>
+    <string name="rd_os_key_refused_short">Key refused</string>
+    <string name="rd_os_signed_in_as">Signed in as %1$s</string>
+    <string name="rd_os_wrong_login">Wrong user name or password</string>
+    <string name="rd_os_no_answer_retry">No answer, try again</string>
+    <string name="rd_os_add_service">Add a service</string>
+    <string name="rd_os_only_when">Asked only when %1$s is one of your subtitle languages</string>
+    <string name="rd_os_key_refused_check">Key refused: check it</string>
+    <string name="rd_os_login_refused_check">Sign-in refused: check it</string>
+    <string name="rd_os_busy_minute">Busy: try again in a minute</string>
+    <string name="rd_os_your_key">Your free key</string>
+    <string name="rd_os_your_token">Your free token</string>
+    <string name="rd_os_email">Email</string>
+    <string name="rd_os_optional">%1$s (optional)</string>
+    <string name="rd_os_open_elsewhere">Open %1$s on a phone or a computer.</string>
+    <string name="rd_os_show_text">Show</string>
+    <string name="rd_os_hide_text">Hide</string>
+    <!-- the services with a free key or account (wave 2) -->
+    <string name="rd_os_svc_titlovi">With your free account · Croatian, Serbian, Bosnian, Slovenian, Macedonian</string>
+    <string name="rd_os_svc_assrt">With your free token · Chinese</string>
+    <string name="rd_os_svc_jimaku">With your free key · anime, Japanese</string>
+    <string name="rd_os_svc_betaseries">With your free key · series, French</string>
+    <string name="rd_os_svc_subsro">With your free key · Romanian</string>
+    <string name="rd_os_svc_napisy24">With your free account · Polish · finds those made for your file</string>
+    <string name="rd_os_svc_legendasnet">With your free account · Portuguese (Brazil)</string>
+    <!-- Settings > Subtitles > Languages to search: a switch per language, their order is the order of the results -->
+    <string name="rd_os_langs">Languages to search</string>
+    <string name="rd_os_add_language">Add a language</string>
+    <string name="rd_os_every_other">Every other language too</string>
+    <string name="rd_os_fewer_faster">Fewer languages: a faster search</string>
+    <string name="rd_os_move_up">Move up</string>
+    <string name="rd_os_move_down">Move down</string>
+    <string name="rd_os_find_language">Find a language</string>
+    <string name="rd_os_picked_in_player">Chosen in the player</string>
+    <string name="rd_os_second_short">Second language</string>
 </resources>

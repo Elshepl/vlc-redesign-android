@@ -1,0 +1,14 @@
+CTiAsia.tw	CTi Asia	中天亞洲台
+CTiTV.tw	CTi TV	中天電視
+EBCNewsAsia.tw	EBC News Asia
+ETTVAsiaNews.tw	ETTV Asia News	東森亚洲新聞台
+ETTVChina.tw	ETTV China
+ETTVDrama.tw	ETTV Drama	東森戲劇台
+ETTVGlobal.tw	ETTV Global
+ETTVNews.tw	ETTV News	東森新聞台
+FTV.tw	FTV	民視	Formosa TV	民間全民電視公司
+SETInternational.tw	SET International
+SETTaiwan.tw	SET Taiwan	三立台灣台
+TaiwanPlusTV.tw	Taiwan Plus TV
+TVBSAsia.tw	TVBS-Asia
+TVBSNews.tw	TVBS News

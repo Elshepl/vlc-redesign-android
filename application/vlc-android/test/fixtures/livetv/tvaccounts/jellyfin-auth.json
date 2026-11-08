@@ -1,0 +1,9 @@
+{
+ "User": {
+  "Id": "u-1234",
+  "Name": "Demo User"
+ },
+ "SessionInfo": {},
+ "AccessToken": "jf-token-abc",
+ "ServerId": "srv-1"
+}

@@ -252,4 +252,52 @@
     <string name="rd_tv_live_mark">Live</string>
     <string name="rd_tv_next_mark">Next</string>
     <string name="rd_tv_programmes">Programmes</string>
+    <!-- TV Sources: the accounts of the user's TV servers and paid guides (TvAccounts), the same words as the desktop
+         and the Samsung TV app -->
+    <string name="rd_tv_accounts">Accounts</string>
+    <string name="rd_tv_add_account">Add an account</string>
+    <string name="rd_tv_accounts_help">Your own TV servers and paid services, with their sign-in. A server on your network is found by itself, or by the address you type.</string>
+    <string name="rd_tv_acc_jellyfin">Your Jellyfin server\'s Live TV: its channels and guide</string>
+    <string name="rd_tv_acc_emby">Your Emby server\'s Live TV: its channels and guide</string>
+    <string name="rd_tv_acc_tvheadend">Your Tvheadend server: its channels and guide</string>
+    <string name="rd_tv_acc_nextpvr">Your NextPVR server: its channels and guide</string>
+    <string name="rd_tv_acc_channelsdvr">Your Channels DVR server: its channels and guide</string>
+    <string name="rd_tv_acc_hdhomerun">Your network tuner: its channels and its free guide</string>
+    <string name="rd_tv_acc_schedulesdirect">A paid guide (US, Canada and more) for your sources\' channels</string>
+    <string name="rd_tv_acc_m3ulogin">A playlist and a guide behind a user name and password</string>
+    <string name="rd_tv_acc_m3ulogin_name">M3U with a sign-in</string>
+    <string name="rd_tv_guide_for_sources">A guide for your sources\' channels</string>
+    <string name="rd_tv_server_address">Server address</string>
+    <string name="rd_tv_pin">PIN</string>
+    <string name="rd_tv_api_key">API key</string>
+    <string name="rd_tv_access_code">Access code</string>
+    <string name="rd_tv_guide_link">Guide link</string>
+    <string name="rd_tv_port">Port %1$s</string>
+    <string name="rd_tv_example">e.g., %1$s</string>
+    <string name="rd_tv_signing_in">Signing in…</string>
+    <string name="rd_tv_works">Works</string>
+    <string name="rd_tv_quick_connect">Quick Connect: type %1$s in a Jellyfin app signed in to this server</string>
+    <string name="rd_tv_found_network">Found on your network</string>
+    <string name="rd_tv_looking_network">Looking on your network…</string>
+    <string name="rd_tv_look_again">Look again</string>
+    <!-- TV Sources > Guides, and the guide found for a source's channels by itself -->
+    <string name="rd_tv_guides_help">The guides of your sources: their own, those you added and those found for their channels.</string>
+    <string name="rd_tv_from_playlist">From its playlist</string>
+    <string name="rd_tv_added_by_you">Added by you</string>
+    <string name="rd_tv_found_for_channels">Found for its channels</string>
+    <string name="rd_tv_from_account">From its account</string>
+    <string name="rd_tv_find_guide">Find a guide</string>
+    <string name="rd_tv_finding_guide">Finding a guide…</string>
+    <string name="rd_tv_guide_found">Guide found for %1$s of %2$s channels</string>
+    <string name="rd_tv_no_guide_found">No guide found for these channels</string>
+    <string name="rd_tv_remove_found_guide">Remove the guide found</string>
+    <string name="rd_tv_undo">Undo</string>
+    <!-- the catalog for the user first -->
+    <string name="rd_tv_recommended">Recommended</string>
+    <string name="rd_tv_for_you">For you</string>
+    <string name="rd_tv_not_answering">Not answering</string>
+    <!-- a channel's menu: its id in the guide, given by the user -->
+    <string name="rd_tv_its_guide_id">Its guide id</string>
+    <string name="rd_tv_forget_guide_id">Forget its guide id</string>
+    <string name="rd_tv_guide_id_of">The id of %1$s in the guide</string>
 </resources>

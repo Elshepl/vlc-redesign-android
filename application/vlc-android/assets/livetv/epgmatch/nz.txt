@@ -1,0 +1,59 @@
+Bravo.nz	Bravo
+Channel200.nz	Channel 200
+ComedyCentral.nz	Comedy Central
+CountryTV.nz	Country TV
+DiscoveryChannel.nz	Discovery Channel	Discovery
+eden.nz	eden	Gusto	Choice TV
+FaceTV.nz	Face TV
+Firstlight.nz	Firstlight
+HGTV.nz	HGTV
+HopeChannelNewZealand.nz	Hope Channel New Zealand
+InvestigationDiscovery.nz	Investigation Discovery	ID
+JONES.nz	JONES!
+JONEStoo.nz	JONES! too
+Living.nz	Living
+ParliamentTV.nz	Parliament TV
+Rialto.nz	Rialto
+Rush.nz	Rush
+ShineTV.nz	Shine TV
+Sky5.nz	Sky 5
+SkyArena.nz	Sky Arena
+SkyArts.nz	Sky Arts
+SkyBoxOffice040.nz	Sky Box Office 040	SBO Movies 1
+SkyBoxOffice041.nz	Sky Box Office 041	SBO Movies 2
+SkyBoxOffice042.nz	Sky Box Office 042	SBO Movies 3
+SkyBoxOffice043.nz	Sky Box Office 043	SBO Movies 4
+SkyBoxSets.nz	Sky Box Sets
+SkyMoviesAction.nz	Sky Movies Action
+SkyMoviesClassics.nz	Sky Movies Classics	MGM Channel
+SkyMoviesCollection.nz	Sky Movies Collection
+SkyMoviesComedy.nz	Sky Movies Comedy	Sky Movies Extra
+SkyMoviesFamily.nz	Sky Movies Family
+SkyMoviesGreats.nz	Sky Movies Greats
+SkyMoviesPremiere.nz	Sky Movies Premiere
+SkyNewsNewZealand.nz	Sky News New Zealand
+SkyOpen.nz	Sky Open	Prime
+SkySport1.nz	Sky Sport 1
+SkySport2.nz	Sky Sport 2
+SkySport3.nz	Sky Sport 3
+SkySport4.nz	Sky Sport 4
+SkySport5.nz	Sky Sport 5
+SkySport6.nz	Sky Sport 6
+SkySport7.nz	Sky Sport 7
+SkySport8.nz	Sky Sport 8
+SkySport9.nz	Sky Sport 9
+SkySportPremierLeague.nz	Sky Sport Premier League
+SkySportSelect.nz	Sky Sport Select
+TABTrackside1.nz	TAB Trackside 1	Action TV	Trackside
+TABTrackside2.nz	TAB Trackside 2	TAB TV
+TeReo.nz	Te Reo
+TheShoppingChannel.nz	The Shopping Channel
+Three.nz	Three
+TLC.nz	TLC
+TVNZ1.nz	TVNZ 1	Te Reo Tātaki Tahi
+TVNZ2.nz	TVNZ 2	Te Reo Tātaki Rua
+TVNZDUKE.nz	TVNZ DUKE	Te Reo Tātaki Tiuka
+UniversalTV.nz	Universal TV
+Vibe.nz	Vibe
+WairarapaTV.nz	Wairarapa TV
+WhakaataMaori.nz	Whakaata Maori	Whakaata Māori	Māori Television

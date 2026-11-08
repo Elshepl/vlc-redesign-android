@@ -1,0 +1,13 @@
+RUV.is	RUV	RÚV
+RUV2.is	RUV 2	RÚV 2
+SiminnSport.is	Siminn Sport	Síminn Sport
+SiminnSport2.is	Siminn Sport 2	Síminn Sport 2
+SjonvarpSimans.is	Sjonvarp Simans	Sjónvarp Símans
+Stod2.is	Stod 2	Stöð 2
+Stod2Esport.is	Stod 2 Esport	Stöð 2 Esport
+Stod2Fjolskylda.is	Stod 2 Fjolskylda	Stöð 2 Fjölskylda
+Stod2Golf.is	Stod 2 Golf	Stöð 2 Golf
+Stod2Sport.is	Stod 2 Sport	Stöð 2 Sport
+Stod2Sport2.is	Stod 2 Sport 2	Stöð 2 Sport 2
+Stod2Sport3.is	Stod 2 Sport 3	Stöð 2 Sport 3
+Stod2Sport4.is	Stod 2 Sport 4	Stöð 2 Sport 4

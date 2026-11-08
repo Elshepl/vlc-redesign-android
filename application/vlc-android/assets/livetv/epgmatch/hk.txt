@@ -1,0 +1,75 @@
+AsianDrama.hk	Asian Drama	亞洲劇台
+AsianVariety.hk	Asian Variety	亞洲綜藝台
+CelestialMovies.hk	Celestial Movies	天映频道
+CelestialMoviesPinoy.hk	Celestial Movies Pinoy	天映频道
+ChineseDrama.hk	Chinese Drama	華語劇台
+ChineseOperaChannel.hk	Chinese Opera Channel	戲曲台
+ClassicMovies.hk	Classic Movies	粵語片台
+CreationTV.hk	Creation TV	創世電視
+EntertainmentNews.hk	Entertainment News	娛樂新聞台
+FoxActionMoviesMENA.hk	Fox Action Movies MENA
+GoldenJade.hk	Golden Jade	黃金翡翠台
+HandsUpChannel.hk	Hands Up Channel
+J2.hk	J2	TVB J2
+Jade.hk	Jade	TVB翡翠台	TVB Jade
+KIX.hk	KIX
+MainlandNewsChannel.hk	Mainland News Channel	神州新聞台
+MeiAhMovieChannel.hk	Mei Ah Movie Channel	美亞電影台
+MovieMovie.hk	Movie Movie
+myTVSUPER18.hk	myTV SUPER 18	myTV SUPER 18台
+myTVSUPERLiveSoccer1.hk	myTV SUPER Live Soccer 1	myTV SUPER直播足球1台
+myTVSUPERLiveSoccer2.hk	myTV SUPER Live Soccer 2	myTV SUPER直播足球2台
+myTVSUPERLiveSoccer3.hk	myTV SUPER Live Soccer 3	myTV SUPER直播足球3台
+myTVSUPERLiveSoccer4.hk	myTV SUPER Live Soccer 4	myTV SUPER直播足球4台
+myTVSUPERLiveSoccer5.hk	myTV SUPER Live Soccer 5	myTV SUPER直播足球5台
+NewsWorld.hk	NewsWorld
+now668.hk	now 668
+nowBaoguMovies.hk	now Baogu Movies	now爆谷台
+nowBaoguSuperstars.hk	now Baogu Superstars	now爆谷星影台
+nowBusinessNewsChannel.hk	now Business News Channel	now財經台
+nowChineseDramaChannel.hk	now Chinese Drama Channel	now華劇台
+nowData.hk	now Data	now報價台
+nowDirect.hk	now Direct	now直播台
+nowGolf2.hk	now Golf 2
+nowGolf3.hk	now Golf 3
+nowJelli.hk	now Jelli	nowJelli紫金國際台
+nowNews.hk	now News	now新聞台
+nowSports1.hk	now Sports 1
+nowSports2.hk	now Sports 2
+nowSports3.hk	now Sports 3
+nowSports4.hk	now Sports 4
+nowSports4K1.hk	now Sports 4K 1
+nowSports4K2.hk	now Sports 4K 2
+nowSports4K616.hk	now Sports 4K 616
+nowSports4K617.hk	now Sports 4K 617
+nowSports5.hk	now Sports 5
+nowSports6.hk	now Sports 6
+nowSports618.hk	now Sports 618
+nowSports619.hk	now Sports 619
+nowSports7.hk	now Sports 7
+nowSportsPlus.hk	now Sports Plus
+nowSportsPremierLeague1.hk	now Sports Premier League 1
+nowSportsPremierLeague2.hk	now Sports Premier League 2
+nowSportsPremierLeague3.hk	now Sports Premier League 3
+nowSportsPremierLeague4.hk	now Sports Premier League 4
+nowSportsPremierLeague5.hk	now Sports Premier League 5
+nowSportsPremierLeague6.hk	now Sports Premier League 6
+nowSportsPremierLeagueTV.hk	now Sports Premier League TV
+nowSportsPrime.hk	now Sports Prime
+Pearl.hk	Pearl	TVB明珠台	TVB Pearl
+PhoenixChineseChannel.hk	Phoenix Chinese Channel	鳳凰衛視中文台	凤凰中文
+PhoenixCNEChannel.hk	Phoenix CNE Channel	鳳凰衛視歐洲台	PCNE Chinese	Phoenix Chinese News and Entertainment Channel
+PhoenixHongKongChannel.hk	Phoenix Hong Kong Channel	鳳凰衛視香港台
+PhoenixInfoNewsChannel.hk	Phoenix InfoNews Channel	鳳凰衛視資訊台	凤凰资讯
+RTHKTV31.hk	RTHK TV 31	港台電視31
+RTHKTV32.hk	RTHK TV 32	港台電視32
+RTHKTV33.hk	RTHK TV 33	港台電視33
+RTHKTV34.hk	RTHK TV 34	港台電視34
+Thrill.hk	Thrill
+TVBClassic.hk	TVB Classic	TVB經典台
+TVBFinanceSportsInformationChannel.hk	TVB Finance Sports & Information Channel	TVB Finance Channel	TVB Finance & Information Channel	無綫財經 體育 資訊台
+TVBNewsChannel.hk	TVB News Channel	TVB無綫新聞台	无线新闻
+TVBXingHe.hk	TVB Xing He	TVB星河頻道
+tvNAsia.hk	tvN Asia
+tvNMoviesAsia.hk	tvN Movies Asia
+ViuChannel.hk	Viu Channel	Viu 頻道

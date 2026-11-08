@@ -4,5 +4,7 @@
     <exclude domain="root" path="app_db"/>
     <exclude domain="root" path="keystore"/>
     <exclude domain="root" path="app_keystore"/>
+    <!-- VLC Redesign: the keys and accounts of the subtitle services (util/SubtitleSecrets) never leave the device -->
+    <exclude domain="sharedpref" path="rd_subtitle_secrets.xml"/>
 </full-backup-content>
 

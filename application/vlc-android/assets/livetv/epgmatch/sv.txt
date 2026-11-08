@@ -1,0 +1,9 @@
+Canal10.sv	Canal 10
+Canal12.sv	Canal 12
+Canal2.sv	Canal 2
+Canal4.sv	Canal 4
+Canal6.sv	Canal 6
+MegavisionCanal19.sv	Megavision Canal 19	Megavisión Canal 19
+MegavisionCanal21.sv	Megavision Canal 21	Megavisión Canal 21
+TigoSports.sv	Tigo Sports
+TVOCanal23.sv	TVO Canal 23	Televisión Oriental

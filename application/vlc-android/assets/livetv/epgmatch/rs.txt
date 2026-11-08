@@ -1,0 +1,113 @@
+AgroTV.rs	Agro TV	Агро ТВ
+ArenaEsport.rs	Arena Esport	Arena Esport Srbija
+ArenaFight.rs	Arena Fight	Arena Fight Srbija
+ArenaSport1.rs	Arena Sport 1	Arena Sport 1 Srbija
+ArenaSport10.rs	Arena Sport 10	Arena Sport 10 Srbija
+ArenaSport1Premium.rs	Arena Sport 1 Premium	Arena Sport 1 Premium Srbija
+ArenaSport1x2.rs	Arena Sport 1x2	Arena Sport 1x2 Srbija
+ArenaSport2.rs	Arena Sport 2	Arena Sport 2 Srbija
+ArenaSport2Premium.rs	Arena Sport 2 Premium	Arena Sport 2 Premium Srbija
+ArenaSport3.rs	Arena Sport 3	Arena Sport 3 Srbija
+ArenaSport3Premium.rs	Arena Sport 3 Premium	Arena Sport 3 Premium Srbija
+ArenaSport4.rs	Arena Sport 4	Arena Sport 4 Srbija
+ArenaSport4Premium.rs	Arena Sport 4 Premium	Arena Sport 4 Premium Srbija
+ArenaSport5.rs	Arena Sport 5	Arena Sport 5 Srbija
+ArenaSport5Premium.rs	Arena Sport 5 Premium	Arena Sport 5 Premium Srbija
+ArenaSport6.rs	Arena Sport 6	Arena Sport 6 Srbija
+ArenaSport7.rs	Arena Sport 7	Arena Sport 7 Srbija
+ArenaSport8.rs	Arena Sport 8	Arena Sport 8 Srbija
+ArenaSport9.rs	Arena Sport 9	Arena Sport 9 Srbija
+ArenaSportAdrenalin.rs	Arena Sport Adrenalin	Arena Sport Adrenalin Srbija
+ArenaSportTenis.rs	Arena Sport Tenis	Arena Sport Tenis Srbija
+B92.rs	B92
+BalkanTripTV.rs	Balkan Trip TV	Balkan Trip
+BelleAmie.rs	Belle Amie
+BloombergAdria.rs	Bloomberg Adria
+BrainzTV.rs	Brainz TV
+Cinemania.rs	Cinemania
+CineStarTV1.rs	CineStar TV 1
+CineStarTVAction.rs	CineStar TV Action
+DexyTV.rs	Dexy TV	Dexy World TV
+DMSat.rs	DM Sat
+FilmKlub.rs	Film Klub
+FoxLife.rs	Fox Life
+Grand.rs	Grand
+HAHA.rs	HA HA
+Happy.rs	Happy
+HappyReality1.rs	Happy Reality 1
+HappyReality2.rs	Happy Reality 2
+IDJTV.rs	IDJTV
+Kazbuka.rs	Kazbuka	Казбука
+KitchenTV.rs	Kitchen TV
+KurirTV.rs	Kurir TV
+LOL.rs	LOL
+Loviribolov.rs	Lov i ribolov
+NarodnaTV.rs	Narodna TV
+Nova.rs	Nova	Nova S	Top
+NovosadskaTV.rs	Novosadska TV	Новосадска ТВ
+PannonTV.rs	Pannon TV
+PinkAction.rs	Pink Action
+PinkClassic.rs	Pink Classic
+PinkComedy.rs	Pink Comedy
+PinkCrimeMystery.rs	Pink Crime & Mystery
+PinkExtra.rs	Pink Extra
+PinkFamily.rs	Pink Family
+PinkFashion.rs	Pink Fashion
+PinkFilm.rs	Pink Film
+PinkFolk1.rs	Pink Folk 1
+PinkHits.rs	Pink Hits
+PinkHorror.rs	Pink Horror
+PinkKids.rs	Pink Kids
+PinkKoncert.rs	Pink Koncert
+PinkKuvar.rs	Pink Kuvar
+PinkMovies.rs	Pink Movies
+PinkMusic.rs	Pink Music
+PinknRoll.rs	Pink n Roll
+PinkPedia.rs	Pink Pedia
+PinkPlus.rs	Pink Plus
+PinkPremium.rs	Pink Premium
+PinkReality.rs	Pink Reality
+PinkRomance.rs	Pink Romance
+PinkSciFiFantasy.rs	Pink Sci-Fi & Fantasy
+PinkSerije.rs	Pink Serije
+PinkShow.rs	Pink Show
+PinkSoap.rs	Pink Soap
+PinkStyle.rs	Pink Style
+PinkSuperKids.rs	Pink Super Kids
+PinkThriller.rs	Pink Thriller
+PinkWestern.rs	Pink Western
+PinkWorld.rs	Pink World
+PinkWorldCinema.rs	Pink World Cinema
+PinkZabava.rs	Pink Zabava
+Prva.rs	Prva	Prva Srpska Televizija	Прва
+PrvaFiles.rs	Prva Files
+PrvaKick.rs	Prva Kick
+PrvaLife.rs	Prva Life
+PrvaMax.rs	Prva Max
+PrvaPlus.rs	Prva Plus	Прва Плус
+PrvaWorld.rs	Prva World
+RTS1.rs	RTS 1	РТС 1
+RTS2.rs	RTS 2	РТС 2
+RTS3.rs	RTS 3	РТС 3
+RTSDrama.rs	RTS Drama	РТС Драма
+RTSKlasika.rs	RTS Klasika	РТС Класика
+RTSKolo.rs	RTS Kolo	РТС Коло
+RTSMuzika.rs	RTS Muzika	РТС Музика
+RTSPoletarac.rs	RTS Poletarac	РТС Полетарац
+RTSSvet.rs	RTS Svet	РТС Свет	RTS Satelit	RTS Sat	RTS BSatelit	TVB Satelit
+RTSTrezor.rs	RTS Trezor	РТС Трезор
+RTV1.rs	RTV 1	РТВ 1
+RTV2.rs	RTV 2	РТВ 2
+SciFi.rs	Sci Fi	Scifi Србија
+SUPERSTARTV.rs	SUPERSTAR TV
+ToxicTV.rs	Toxic TV
+TVDugaPlus.rs	TV Duga+
+TVGalaksija32.rs	TV Galaksija 32	ТВ Галаксија 32
+TVHram.rs	TV Hram	ТВ Храм
+TVKCN1.rs	TV K::CN 1	TV K::CN Kopernikus 1
+TVKCN2.rs	TV K::CN 2	TV K::CN Music 2	K:CN 2 Music
+TVKCN3.rs	TV K::CN 3	TV K::CN Svet+ 3	K:CN 3
+TVKCNK.rs	TV K:CN K
+UNATV.rs	UNA TV
+Vesti.rs	Vesti	Вести
+ZICOTV.rs	ZICO TV

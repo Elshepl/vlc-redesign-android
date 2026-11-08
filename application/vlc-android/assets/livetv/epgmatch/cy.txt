@@ -1,0 +1,10 @@
+AdaTV.cy	Ada TV
+BRT1.cy	BRT 1
+BRT2.cy	BRT 2
+BRT3.cy	BRT 3
+KibrisGencTV.cy	Kibris Genc TV	Kibris Genç TV
+KibrisKanalT.cy	Kibris Kanal T
+KibrisTV.cy	Kibris TV
+RIKSat.cy	RIK Sat
+Sat7Arabic.cy	Sat 7 Arabic
+Sat7Kids.cy	Sat 7 Kids

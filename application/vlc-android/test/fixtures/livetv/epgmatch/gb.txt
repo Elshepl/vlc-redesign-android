@@ -1,0 +1,7 @@
+BBCNews.uk	BBC News
+BBCOne.uk	BBC One	BBC1	BBC Television	BBC Television Service
+BBCTwo.uk	BBC Two
+Channel4.uk	Channel 4
+E4.uk	E4
+ITV1.uk	ITV1	ITV
+SkyNews.uk	Sky News

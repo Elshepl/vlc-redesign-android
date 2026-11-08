@@ -1,0 +1,63 @@
+78TV.bg	7/8 TV	Седем-осми ТВ
+AgroTV.bg	Agro TV	АГРО ТВ
+AlfaTV.bg	Alfa TV	Алфа ТВ
+BalkanikaTV.bg	Balkanika TV	Balkanika Music Television	Балканика ТВ	Балканика мюзик телевижън
+BGMusicChannel.bg	BG Music Channel
+BloombergTVBulgaria.bg	Bloomberg TV Bulgaria
+BNT1.bg	BNT 1
+BNT2.bg	BNT 2
+BNT3.bg	BNT 3
+BNT4.bg	BNT 4
+BOXTV.bg	BOX TV
+bTV.bg	bTV
+bTVAction.bg	bTV Action
+bTVCinema.bg	bTV Cinema
+bTVComedy.bg	bTV Comedy
+bTVLady.bg	bTV Lady
+BulgariaOnAir.bg	Bulgaria On Air
+CityTV.bg	City TV
+CodeFashionTV.bg	Code Fashion TV
+CodeHealthTV.bg	Code Health TV
+Diema.bg	Diema	Диема
+DiemaFamily.bg	Diema Family
+DiemaSport.bg	Diema Sport
+DiemaSport2.bg	Diema Sport 2
+DiemaSport3.bg	Diema Sport 3
+DiscoveryChannel.bg	Discovery Channel	Discovery Channel България
+DisneyChannel.bg	Disney Channel
+EKids.bg	EKids
+Eurocom.bg	Eurocom	Евроком
+FenFolkTV.bg	Fen Folk TV	Фен Фолк ТВ
+FenTV.bg	Fen TV	Фен ТВ
+KinoNova.bg	Kino Nova	Кино Нова
+MagicTV.bg	Magic TV
+MaxSport1.bg	Max Sport 1
+MaxSport2.bg	Max Sport 2
+MaxSport3.bg	Max Sport 3
+MaxSport4.bg	Max Sport 4
+MovieStar.bg	Movie Star
+NationalGeographic.bg	National Geographic
+NationalGeographicWild.bg	National Geographic Wild
+Nickelodeon.bg	Nickelodeon
+NickJr.bg	Nick Jr.
+Nicktoons.bg	Nicktoons
+Nostalgia.bg	Nostalgia
+Nova.bg	Nova	Нова Телевизия	НТВ	NTV
+NovaNews.bg	Nova News
+NovaSport.bg	Nova Sport	Нова Спорт
+PlanetaFolk.bg	Planeta Folk	Планета Фолк
+PlanetaTV.bg	Planeta TV	Планета ТВ
+RING.bg	RING
+SKAT.bg	SKAT	СКАТ
+StarChannel.bg	Star Channel
+StarCrime.bg	Star Crime
+StarLife.bg	Star Life
+SuperToons.bg	Super Toons
+TheVoice.bg	The Voice
+TravelTV.bg	Travel TV
+TV1.bg	TV 1	ТВ1
+TVEvropa.bg	TV Evropa
+TVRodina.bg	TV Rodina	ТВ Родина
+VivacomArena.bg	Vivacom Arena
+VTK.bg	VTK	ВТК	Военен Телевизионен Канал
+WnessTV.bg	Wness TV

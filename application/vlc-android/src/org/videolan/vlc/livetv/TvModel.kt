@@ -117,12 +117,33 @@ fun EntryList.firstEndingAfter(t: Long): Int {
     return lo
 }
 
-/** A source of channels: an M3U playlist (a link or a file) or an Xtream Codes account, with its guides. */
+/** The automatic guide of a source: the channels matched, the free guides added for them, when. */
+class AutoGuide(val found: Int, val total: Int, val guides: List<String>, val at: Long)
+
+/**
+ * A source of channels: an M3U playlist (a link or a file), an Xtream Codes account, or an account of a TV server
+ * or a paid guide (TvAccounts), with its guides.
+ */
 class SourceConfig {
     var id = ""
     var name = ""
-    /** "m3u" or "xtream" */
+    /** "m3u", "xtream" or "account" */
     var kind = "m3u"
+    /** an account's type (TvAccounts.TYPES: jellyfin, emby, tvheadend...) */
+    var accountType = ""
+    /** an account's PIN, API key, access code, guide link and sign-in token (secrets), its user's id, the token's end */
+    var pin = ""
+    var key = ""
+    var code = ""
+    var guideUrl = ""
+    var token = ""
+    var userId = ""
+    var tokenUntil = 0L
+    /** the guides the user turned off */
+    val guidesOff = ArrayList<String>()
+    /** the automatic guide found for its channels (null: none), and whether the user took it away */
+    var autoGuide: AutoGuide? = null
+    var autoGuideOff = false
     /** the playlist (secret: often holds a token) */
     var url = ""
     /** the guides the user added */
@@ -136,7 +157,21 @@ class SourceConfig {
     var enabled = true
     /** the guides the playlist names itself */
     var useHeaderGuides = true
+
+    /** What its account type needs, from it. */
+    fun account() = TvAccount(server, username, password, pin, key, code, url, guideUrl, token, userId, tokenUntil)
 }
+
+/** A guide of a source and what it gives: from its playlist, added by the user, found for its channels, its account's. */
+data class GuideStatus(
+    val url: String,
+    val kind: String,
+    val on: Boolean,
+    val channels: Int,
+    val programmes: Int,
+    val error: String,
+    val updated: Long,
+)
 
 /** What a source holds and what the add-on is doing with it, for the interface. */
 data class SourceStatus(
@@ -156,6 +191,20 @@ data class SourceStatus(
     val vod: Boolean,
     val series: Boolean,
     val epg: List<String>,
+    val accountType: String = "",
+    /** its account's sign-in refused (a search, an update): said on its row until it works */
+    val refused: Boolean = false,
+    /** the last Sign in / Test */
+    val check: TvCheck? = null,
+    val checking: Boolean = false,
+    val autoFound: Int = 0,
+    val autoTotal: Int = 0,
+    val autoBusy: Boolean = false,
+    /** looked for, none found */
+    val autoNone: Boolean = false,
+    val guides: List<GuideStatus> = emptyList(),
+    /** an account's server address (no secret in it): a server found on the network and added isn't offered again */
+    val address: String = "",
 )
 
 /** A channel of the add-on: its key, its source, its guide when one has it. */

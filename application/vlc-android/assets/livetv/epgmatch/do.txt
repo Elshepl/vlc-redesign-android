@@ -1,0 +1,13 @@
+Antena7.do	Antena 7
+CDN.do	CDN
+CDNDeportes.do	CDN Deportes
+ColorVision.do	Color Vision	Color Visión
+Digital15.do	Digital 15
+LaVozdeMaria.do	La Voz de Maria	La Voz de María
+TeleAntillas.do	Tele Antillas
+Telecentro.do	Telecentro
+Telemicro.do	Telemicro
+TelemicroInternacional.do	Telemicro Internacional
+Telesistema11.do	Telesistema 11
+Teleunion.do	Teleunion
+Teleuniverso.do	Teleuniverso

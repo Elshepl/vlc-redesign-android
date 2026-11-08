@@ -1,0 +1,3 @@
+ChannelI.bd	Channel I	চ্যানেল আই
+NTV.bd	NTV	এনটিভি
+NTVEurope.bd	NTV Europe

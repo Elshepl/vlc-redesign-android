@@ -104,6 +104,12 @@ internal fun Context.tvField(hint: CharSequence, password: Boolean = false, mult
         else -> android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_URI
     }
     if (!multiLine) isSingleLine = true else { minLines = 2; maxLines = 5; gravity = Gravity.TOP or Gravity.START }
+    // (one line puts its own transformation in place of the password's, and the password's type sets a monospace
+    // font: a password was shown as typed)
+    if (password) {
+        transformationMethod = android.text.method.PasswordTransformationMethod.getInstance()
+        typeface = inter
+    }
 }
 
 /**

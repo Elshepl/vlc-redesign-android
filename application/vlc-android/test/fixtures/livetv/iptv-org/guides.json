@@ -1,0 +1,12 @@
+[
+ {"channel": "BBCOne.uk", "feed": "SD", "site": "bbc.co.uk", "site_id": "bbc_one", "site_name": "BBC One", "lang": "en"},
+ {"channel": "BBCOne.uk", "feed": "HD", "site": "sky.com", "site_id": "2076", "site_name": "BBC One HD", "lang": "en"},
+ {"channel": "BBCChoice.uk", "feed": null, "site": "old.example", "site_id": "1", "site_name": "BBC Choice", "lang": "en"},
+ {"channel": "UKTVGold.uk", "feed": null, "site": "old.example", "site_id": "2", "site_name": "UK Gold", "lang": "en"},
+ {"channel": "ZDF.de", "feed": null, "site": "tvspielfilm.de", "site_id": "ZDF", "site_name": "ZDF", "lang": "de"},
+ {"channel": "ARDalpha.de", "feed": null, "site": "tvspielfilm.de", "site_id": "ARD-alpha", "site_name": "ARD alpha", "lang": "de"},
+ {"channel": "Kan11.il", "feed": null, "site": "kan.org.il", "site_id": "11", "site_name": "Kan 11", "lang": "he"},
+ {"channel": "Worldwide.int", "feed": null, "site": "world.example", "site_id": "w", "site_name": "Worldwide", "lang": "en"},
+ {"channel": "NoName.de", "feed": null, "site": "x.example", "site_id": "n", "site_name": "", "lang": "de"},
+ {"channel": null, "feed": null, "site": "x.example", "site_id": "z", "site_name": "Nothing", "lang": "en"}
+]

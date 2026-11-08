@@ -1,0 +1,148 @@
+24TV.tr	24 TV
+360.tr	360
+A2TV.tr	A2TV
+AHaber.tr	A Haber
+AkitTV.tr	Akit TV
+AlQanat9.tr	Al Qanat 9
+ANews.tr	A News
+APara.tr	A Para
+ASpor.tr	A Spor
+ASTV.tr	AS TV
+ATV.tr	ATV
+ATVAvrupa.tr	ATV Avrupa
+beINGurme.tr	beIN Gurme
+beINHE.tr	beIN H&E
+beINIZ.tr	beIN IZ	beIN İZ
+beINMoviesPremiere.tr	beIN Movies Premiere
+beINMoviesStars.tr	beIN Movies Stars
+beINMoviesTurk.tr	beIN Movies Turk	beIN Movies Türk
+beINSportsHaber.tr	beIN Sports Haber
+BenguturkTV.tr	Benguturk TV	Bengütürk TV
+BeyazTV.tr	Beyaz TV
+BizimevTV.tr	Bizimev TV
+BloombergHT.tr	Bloomberg HT
+BluTVPlay1.tr	BluTV Play 1	Blu Play 1
+BluTVPlay2.tr	BluTV Play 2	Blu Play 2
+CartoonNetwork.tr	Cartoon Network
+CiftciTV.tr	Ciftci TV	Çiftçi TV
+CNBCe.tr	CNBC-e	CNBC Türkiye
+CNNTurk.tr	CNN Turk	CNN Türk
+Digiturk4K.tr	Digiturk 4K
+DiscoveryChannel.tr	Discovery Channel
+DisneyJr.tr	Disney Jr.	Playhouse Disney
+DiyanetTV.tr	Diyanet TV
+DiziSmartMax.tr	DiziSmart Max
+DMAX.tr	DMAX
+DreamTurk.tr	Dream Turk	Dream Türk
+Ekoturk.tr	Ekoturk	Ekotürk
+EuroD.tr	Euro D
+EuroStar.tr	EuroStar	Star Avrupa Radyo ve Televizyon
+FBTV.tr	FB TV	Fenerbahçe TV
+FlashHaberTV.tr	Flash Haber TV
+FMTV.tr	FM TV
+FX.tr	FX	FX Türkiye
+GZT.tr	GZT	GZT TV
+HaberGlobal.tr	Haber Global
+HaberturkTV.tr	Haberturk TV	Habertürk TV
+HalkTV.tr	Halk TV
+HTSporTV.tr	HTSpor TV	HT SPOR
+KabloInfo.tr	Kablo Info
+KadirgaTV.tr	Kadirga TV
+Kanal23.tr	Kanal 23
+Kanal26.tr	Kanal 26
+Kanal33.tr	Kanal 33
+Kanal7.tr	Kanal 7
+Kanal7Avrupa.tr	Kanal 7 Avrupa
+KanalB.tr	Kanal B
+KanalD.tr	Kanal D
+KanalDDrama.tr	Kanal D Drama
+KanalV.tr	Kanal V
+KonTV.tr	Kon TV
+KRT.tr	KRT
+LiderHaber.tr	Lider Haber
+MedMuzik.tr	Med Muzik	Med Muzîk
+MeltemTV.tr	Meltem TV
+MinikaCocuk.tr	Minika Cocuk	Minika Çocuk
+MinikaGo.tr	Minika Go
+MovieSmartClassic.tr	MovieSmart Classic
+MovieSmartTurk.tr	MovieSmart Turk	MovieSmart Türk
+NationalGeographic.tr	National Geographic
+NationalGeographicWild.tr	National Geographic Wild
+Nickelodeon.tr	Nickelodeon
+NickJr.tr	Nick Jr.
+Nicktoons.tr	Nicktoons
+NTV.tr	NTV
+Number1Damar.tr	Number 1 Damar
+Number1Turk.tr	Number 1 Turk	Number 1 Türk
+Number1TV.tr	Number 1 TV
+On6.tr	On 6
+PowerTurkTV.tr	PowerTurk TV	PowerTürk TV
+PowerTV.tr	Power TV
+SemerkandTV.tr	Semerkand TV
+ShowMax.tr	Show Max
+ShowTurk.tr	Show Turk
+ShowTV.tr	Show TV
+Sinema1001.tr	Sinema 1001
+Sinema1002.tr	Sinema 1002
+Sinema2.tr	Sinema 2
+SinemaAile.tr	Sinema Aile
+SinemaAile2.tr	Sinema Aile 2
+SinemaAksiyon.tr	Sinema Aksiyon
+SinemaAksiyon2.tr	Sinema Aksiyon 2
+SinemaKomedi.tr	Sinema Komedi
+SinemaKomedi2.tr	Sinema Komedi 2
+SinemaTV.tr	Sinema TV
+SinemaYerli.tr	Sinema Yerli
+SinemaYerli2.tr	Sinema Yerli 2
+SozcuTV.tr	Sozcu TV	Sözcü TV	SZC TV
+SpacetoonTurkey.tr	Spacetoon Turkey	Spacetoon Türkiye	STOON	Space Toon TV
+SporSmart.tr	Spor Smart
+SporSmart2.tr	Spor Smart 2
+SportsTV.tr	Sports TV
+SSport.tr	S Sport
+SSport2.tr	S Sport 2
+StarTV.tr	Star TV
+TarihTV.tr	Tarih TV
+TarimTV.tr	Tarim TV
+Tele1.tr	Tele 1
+TGRTBelgesel.tr	TGRT Belgesel
+TGRTEurope.tr	TGRT Europe
+TGRTHaber.tr	TGRT Haber
+Tivi6.tr	Tivi 6
+TivibuSpor2.tr	Tivibu Spor 2
+TivibuSpor3.tr	Tivibu Spor 3
+TLC.tr	TLC
+TMB.tr	TMB
+TRT1.tr	TRT 1
+TRT2.tr	TRT 2
+TRT3.tr	TRT 3
+TRT4K.tr	TRT 4K
+TRTArabi.tr	TRT Arabi
+TRTAvaz.tr	TRT Avaz
+TRTBelgesel.tr	TRT Belgesel
+TRTCocuk.tr	TRT Cocuk	TRT Çocuk
+TRTDiyanetCocuk.tr	TRT Diyanet Cocuk	TRT Diyanet Çocuk
+TRTEBA.tr	TRT EBA	TRT EBA TV Ortaokul	TRT Okul
+TRTHaber.tr	TRT Haber
+TRTKurdi.tr	TRT Kurdi	TRT Kurdî
+TRTMuzik.tr	TRT Muzik	TRT Müzik
+TRTSpor.tr	TRT Spor
+TRTSporYildiz.tr	TRT Spor Yildiz
+TRTTurk.tr	TRT Turk	TRT Türk
+TRTWorld.tr	TRT World
+TurkHaberTV.tr	TurkHaber TV	TürkHaber TV	TH Türk Haber
+TV100.tr	TV 100
+TV4.tr	TV 4
+TV41.tr	TV 41
+TV5.tr	TV 5
+TV8.tr	TV8
+TV85.tr	TV 8.5
+TV8int.tr	TV8int	TV8 International
+TVNET.tr	TVNET
+TYTTurk.tr	TYT Turk	TYT Türk	TYT
+UlkeTV.tr	Ulke TV	Ülke TV
+UlusalKanal.tr	Ulusal Kanal
+VavTV.tr	Vav TV
+ViasatExplore.tr	Viasat Explore
+ViasatHistory.tr	Viasat History
+YabanTV.tr	Yaban TV

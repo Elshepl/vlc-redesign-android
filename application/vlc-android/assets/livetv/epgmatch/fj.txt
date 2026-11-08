@@ -1,0 +1,8 @@
+Channel2.fj	Channel 2	Na Lololo
+FBC2.fj	FBC 2
+FBCSports.fj	FBC Sports
+FBCTV.fj	FBC TV
+FijiOne.fj	Fiji One
+HopeChannelFiji.fj	Hope Channel Fiji
+MaiTV.fj	Mai TV
+ParliamentofFiji.fj	Parliament of Fiji

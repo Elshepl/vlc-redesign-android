@@ -1,0 +1,21 @@
+AlfaTV.mk	Alfa TV	Алфа ТВ
+Alsat.mk	Alsat	Алсат	Albanian Satellite	Alsat-M	Алсат-М
+BalkanMusicTV.mk	Balkan Music TV	Balkanika Music Television	Балканика ТВ	Балканика мюзик телевижън
+Kanal5.mk	Kanal 5	Канал 5
+KlanMacedonia.mk	Klan Macedonia
+MRT1.mk	MRT 1
+MRT2.mk	MRT 2
+MRT2Sat.mk	MRT 2 Sat
+MRT3.mk	MRT 3
+MRT4.mk	MRT 4
+MRT5.mk	MRT 5
+MRTSobraniskikanal.mk	MRT Sobraniski kanal
+NasaTV.mk	Nasa TV	Наша ТВ
+Sitel.mk	Sitel	Сител
+TelmaTV.mk	Telma TV
+TeraTV.mk	Tera TV
+TV21.mk	TV21	ТВ21
+TV24.mk	TV 24
+TVEdo.mk	TV Edo
+TVShenja.mk	TV Shenja
+TVSonce.mk	TV Sonce

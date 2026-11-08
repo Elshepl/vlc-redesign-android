@@ -1,0 +1,11 @@
+[
+ {"id": "BBCOne.uk", "name": "BBC One", "alt_names": ["BBC1", "BBC\tTelevision  Service"], "network": "BBC", "owners": ["BBC"], "country": "UK", "categories": ["general"], "is_nsfw": false, "launched": "1936-11-02", "closed": null, "replaced_by": null, "website": "https://www.bbc.co.uk/bbcone"},
+ {"id": "BBCChoice.uk", "name": "BBC Choice", "alt_names": [], "country": "UK", "closed": "2003-02-09", "replaced_by": "BBCThree.uk"},
+ {"id": "UKTVGold.uk", "name": "UK Gold", "alt_names": [], "country": "UK", "closed": null, "replaced_by": "GoldUK.uk"},
+ {"id": "ZDF.de", "name": "ZDF", "alt_names": ["ZDF", "Zweites Deutsches Fernsehen"], "country": "DE", "closed": null, "replaced_by": null},
+ {"id": "ARDalpha.de", "name": "ARD alpha", "alt_names": null, "country": "DE", "closed": null, "replaced_by": null},
+ {"id": "Kan11.il", "name": "Kan 11", "alt_names": ["כאן 11"], "country": "IL", "closed": null, "replaced_by": null},
+ {"id": "NotCarried.il", "name": "Not Carried", "alt_names": [], "country": "IL", "closed": null, "replaced_by": null},
+ {"id": "Worldwide.int", "name": "Worldwide", "alt_names": [], "country": "INT", "closed": null, "replaced_by": null},
+ {"id": "NoName.de", "name": "", "alt_names": [], "country": "DE", "closed": null, "replaced_by": null}
+]

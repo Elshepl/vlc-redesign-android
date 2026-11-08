@@ -1,0 +1,31 @@
+{
+ "map": [
+  {
+   "stationID": "11111",
+   "channel": "2.1"
+  },
+  {
+   "stationID": "22222",
+   "channel": "4.1"
+  }
+ ],
+ "stations": [
+  {
+   "stationID": "11111",
+   "name": "Demo Open Movies",
+   "callsign": "WDMO",
+   "affiliate": "DEMO"
+  },
+  {
+   "stationID": "22222",
+   "name": "Bunny Kids Network",
+   "callsign": "KBNY",
+   "affiliate": "BNY"
+  }
+ ],
+ "metadata": {
+  "lineup": "USA-OTA-90210",
+  "modified": "2026-11-07T00:00:00Z",
+  "transport": "Antenna"
+ }
+}

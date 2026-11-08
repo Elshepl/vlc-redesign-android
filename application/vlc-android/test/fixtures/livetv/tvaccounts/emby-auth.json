@@ -1,0 +1,8 @@
+{
+ "User": {
+  "Id": "eu-1",
+  "Name": "Demo"
+ },
+ "AccessToken": "emby-token",
+ "ServerId": "e1"
+}

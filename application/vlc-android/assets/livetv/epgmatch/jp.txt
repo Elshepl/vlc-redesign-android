@@ -1,0 +1,109 @@
+ActionChannel.jp	Action Channel	アクションチャンネル
+AnimalPlanet.jp	Animal Planet	アニマルプラネット	動物チャンネル/アニマルプラネット
+AsiaDramaticTV.jp	Asia Dramatic TV	アジアドラマチックTV	アジドラ
+ATX.jp	AT-X	アニメシアターX
+BS11.jp	BS 11	BS11	BS11イレブン
+BS12.jp	BS 12	BS12	BS12 トゥエルビ
+BSAsahi.jp	BS Asahi	BS朝日
+BSAsahi4K.jp	BS Asahi 4K	BS朝日4K
+BSFuji.jp	BS Fuji	BSフジ
+BSFuji4K.jp	BS Fuji 4K	BSフジ4K
+BSNipponTV.jp	BS Nippon TV	BS日テレ
+BSNipponTV4K.jp	BS Nippon TV 4K	BS日テレ 4K
+BSTBS.jp	BS-TBS
+BSTBS4K.jp	BS-TBS 4K
+BSTVTokyo.jp	BS TV Tokyo	BSテレ東
+BSTVTokyo4K.jp	BS TV Tokyo 4K	BSテレ東 4K
+BSYoshimoto.jp	BS Yoshimoto	BSよしもと
+CartoonNetwork.jp	Cartoon Network	カートゥーン ネットワーク
+ChannelGinga.jp	Channel Ginga	チャンネル銀河
+ChannelNECO.jp	Channel NECO	チャンネルNECO
+CNNj.jp	CNNj
+DisneyChannel.jp	Disney Channel	ディズニー・チャンネル
+DisneyJunior.jp	Disney Junior	ディズニージュニア
+Dlife.jp	Dlife	ディーライフ
+EiseiGekijo.jp	Eisei Gekijo	衛星劇場
+EntermeiTele.jp	Entermei Tele	エンタメ～テレ
+FamilyGekijyo.jp	Family Gekijyo	ファミリー劇場	Family Theatre
+FIGHTINGTVSamurai.jp	FIGHTING TV Samurai!	FIGHTING TV サムライ
+FishingVision.jp	Fishing Vision	釣りビジョン
+FujiTVNEXT.jp	Fuji TV NEXT	フジテレビNEXT
+FujiTVONE.jp	Fuji TV ONE	フジテレビONE
+FujiTVTWO.jp	Fuji TV TWO	フジテレビTWO
+GAORASPORTS.jp	GAORA SPORTS	チャンピオンシップ
+GolfNetwork.jp	Golf Network	ゴルフネットワーク
+GreenChannel.jp	Green Channel	グリーンチャンネル
+GreenChannel2.jp	Green Channel 2	グリーンチャンネル2
+GSTV.jp	GSTV
+History.jp	History	ヒストリーチャンネル
+HomeDramaChannel.jp	Home Drama Channel	ホームドラマチャンネル
+IgoShogiChannel.jp	Igo & Shogi Channel	囲碁・将棋チャンネル
+JCOMHigashiKanto.jp	J:COM Higashi Kanto
+JCOMPremierChannel.jp	J:COM Premier Channel
+JCOMTV.jp	J:COM TV	J:COMチャンネル
+JidaigekiSenmonChannel.jp	Jidaigeki Senmon Channel	時代劇専門チャンネル
+JLC.jp	JLC	Japan Leisure Channel
+JSPORTS1.jp	J SPORTS 1
+JSPORTS2.jp	J SPORTS 2
+JSPORTS3.jp	J SPORTS 3
+JSPORTS4.jp	J SPORTS 4
+KayoPops.jp	Kayo Pops	歌謡ポップスチャンネル
+KBSWorldJapan.jp	KBS World Japan
+KidsStation.jp	Kids Station	キッズステーション
+KNTV.jp	KNTV
+LaLaTV.jp	LaLa TV
+MidnightBlue.jp	Midnight Blue	ミッドナイト・ブルー
+MnetJapan.jp	Mnet Japan
+MONDOTV.jp	MONDO TV
+MoviePlus.jp	Movie Plus	ムービープラス
+MTV.jp	MTV
+MusicAir.jp	Music Air	ミュージック・エア
+MUSICONTV.jp	MUSIC ON! TV	エムオン!
+MysteryChannel.jp	Mystery Channel	ミステリーチャンネル
+NationalGeographic.jp	National Geographic	ナショナル ジオグラフィック チャンネル
+NHKBS.jp	NHK BS
+NHKBSP4K.jp	NHK BSP4K
+NHKWorldJapan.jp	NHK World-Japan	NHK World
+NHKWorldPremium.jp	NHK World Premium	NHK WP
+NihonEigaSenmonChannel.jp	Nihon Eiga Senmon Channel	日本映画専門チャンネル
+NihonJidai4K.jp	Nihon Jidai 4K
+NikkeiCNBC.jp	Nikkei CNBC	日経CNBC
+NipponTVPlus.jp	Nippon TV Plus
+NitteleGPlus.jp	Nittele G+	日テレジータス
+NittelePlus.jp	Nittele Plus	日テレプラス
+NTVNEWS24.jp	NTV NEWS24	日テレNEWS24
+PachinkoPachisloTV.jp	Pachinko Pachislo TV	パチンコ★パチスロTV！
+ParadiseTV.jp	Paradise TV	パラダイステレビ
+PlayboyChannel.jp	Playboy Channel	プレイボーイチャンネル
+QVC.jp	QVC
+RedCherry.jp	Red Cherry	レッドチェリー
+ShopChannel.jp	Shop Channel	ショップチャンネル
+ShopChannelPlus.jp	Shop Channel Plus	ショップチャンネルプラス
+SkyA.jp	Sky A	スカイＡ
+SpaceShowerTV.jp	Space Shower TV	スペースシャワーＴＶ
+SpaceShowerTVPlus.jp	Space Shower TV Plus	100％ヒッツ！スペースシャワーTV プラス
+SpeedChannel1.jp	Speed Channel 1	ＳＰＥＥＤチャンネル1
+SportsLivePlus.jp	Sports Live +	スポーツライブ＋
+StarBS10.jp	Star BS10
+Sukachan1.jp	Sukachan 1
+SuperDramaTV.jp	Super! Drama TV	スーパー！ドラマTV
+TABIChannel.jp	TABI Channel	旅チャンネル
+TAKARAZUKASKYSTAGE.jp	TAKARAZUKA SKY STAGE
+TBSChannel1.jp	TBS Channel 1	TBS Channel	TBSチャンネル1 最新ドラマ・音楽・映画
+TBSChannel2.jp	TBS Channel 2	TBSチャンネル2 名作ドラマ・スポーツ・アニメ
+TBSNewsCS.jp	TBS News CS	ティービーエス ニュース	TBS NEWS (CS放送)
+TheCinema.jp	The Cinema	ザ・シネマ
+ToeiChannel.jp	Toei Channel	東映チャンネル
+TokyoMX1.jp	Tokyo MX1
+TokyoMX2.jp	Tokyo MX2
+TSS.jp	TSS	Television Shin-Hiroshima
+TVAsahiChannel1.jp	TV Asahi Channel 1	テレ朝チャンネル１
+TVAsahiChannel2.jp	TV Asahi Channel 2	テレ朝チャンネル２
+TVJapan.jp	TV Japan
+VParadise.jp	V Paradise	V☆パラダイス
+WakuWakuJapanSouthEastAsia.jp	WakuWaku Japan South East Asia
+WOWOWCinema.jp	WOWOW Cinema	WOWOWシネマ
+WOWOWLive.jp	WOWOW Live	WOWOWライブ
+WOWOWPlus.jp	WOWOW Plus	WOWOWプラス
+WOWOWPrime.jp	WOWOW Prime	WOWOWプライム
+YoseChannel.jp	Yose Channel

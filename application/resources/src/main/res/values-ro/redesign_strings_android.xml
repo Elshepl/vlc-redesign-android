@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Păstrat doar pe acest dispozitiv, pentru a continua de unde ați rămas.</string>
     <string name="rd_ob_updates_help">Caută o dată pe zi o versiune de test mai nouă a VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtitluri de pe internet: căutare direct din player pe OpenSubtitles, Wizdom (ebraică), YIFY Subtitles și Addic7ed, gratuit și fără cont.</item>
-        <item>Găsite chiar și pentru fișierele al căror nume nu spune nimic. Opțional: propria dumneavoastră cheie OpenSubtitles.com și o căutare automată, în Setări › Subtitluri.</item>
-        <item>TV în direct: bara de informații încape pe un telefon ținut vertical.</item>
-        <item>Android TV: telecomanda ajunge la fiecare videoclip și la fiecare buton al playerului.</item>
+        <item>Subtitluri: SubSource (arabă), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 și Legendas.net cu propria dumneavoastră cheie gratuită sau cu un cont gratuit. Fiecare în Setări › Subtitluri, cu comutatorul său.</item>
+        <item>Limbi de căutat: activați sau dezactivați fiecare limbă de subtitrare pentru o căutare mai rapidă.</item>
+        <item>Conturi TV în direct: propriul dumneavoastră Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR sau HDHomeRun și ghidul Schedules Direct. Serverele din rețeaua dumneavoastră sunt găsite automat.</item>
+        <item>TV în direct: un ghid găsit automat pentru canalele care nu au unul, o filă Ghiduri cu ghidurile fiecărei surse și sursele din țara dumneavoastră afișate primele în catalog.</item>
+        <item>Remedieri: subtitluri salvate în spațiul de stocare propriu al aplicației (o închidere neașteptată pe Android 14), câmpuri de parolă ascunse, focalizarea telecomenzii TV, traducerea pentru „Țară” în multe limbi și cea pentru „parolă” în arabă.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensiunea subtitrărilor</string>
     <string name="rd_cast_this_phone">Acest telefon</string>

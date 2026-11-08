@@ -1,0 +1,5 @@
+ABC.us	ABC
+CNN.us	CNN
+ESPN.us	ESPN
+FoxNewsChannel.us	Fox News Channel
+HBO.us	HBO

@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Gailu honetan soilik gordetzen da, utzi zenuen tokitik jarraitzeko.</string>
     <string name="rd_ob_updates_help">VLC for Android-en proba-bertsio berriago bat bilatzen du egunean behin.</string>
     <string-array name="rd_whats_new_items">
-        <item>Interneteko azpitituluak: bilatu erreproduzigailutik OpenSubtitles, Wizdom (hebreera), YIFY Subtitles eta Addic7ed zerbitzuetan, doan eta konturik gabe.</item>
-        <item>Izenak ezer esaten ez duten fitxategientzat ere aurkitzen dira. Aukerakoa: zure OpenSubtitles.com gako propioa eta bilaketa automatikoa, Ezarpenak › Azpitituluak atalean.</item>
-        <item>Zuzeneko telebista: informazio-barra zutik dagoen telefono batean sartzen da.</item>
-        <item>Android TV: urruneko agintea bideo guztietara eta erreproduzigailuaren botoi guztietara iristen da.</item>
+        <item>Azpitituluak: SubSource (arabiera), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 eta Legendas.net zure doako gakoarekin edo kontuarekin. Bakoitza Ezarpenak › Azpitituluak atalean, bere etengailuarekin.</item>
+        <item>Bilatzeko hizkuntzak: aktibatu edo desaktibatu azpitituluen hizkuntza bakoitza, bilaketa azkarragoa izateko.</item>
+        <item>Zuzeneko telebistako kontuak: zure Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR edo HDHomeRun, eta Schedules Direct gida. Zure sareko zerbitzariak automatikoki aurkitzen dira.</item>
+        <item>Zuzeneko telebista: gidarik ez duten kanaletarako automatikoki aurkitutako gida bat, Gidak fitxa bat iturburu bakoitzaren gidekin, eta zure herrialdeko iturburuak lehenengo katalogoan.</item>
+        <item>Zuzenketak: azpitituluak aplikazioaren biltegi propioan gordeta (kraskatze bat Android 14-n), pasahitz-eremuak ezkutatuta, telebistako urruneko agintearen fokua, «Herrialdea» hitzaren itzulpena hizkuntza askotan eta «pasahitza» hitzarena arabieraz.</item>
     </string-array>
     <string name="rd_subtitle_size">Azpitituluen tamaina</string>
     <string name="rd_cast_this_phone">Telefono hau</string>

@@ -1,0 +1,9 @@
+ClicTV.ec	Clic TV
+EcuadorTV.ec	Ecuador TV
+Ecuavisa.ec	Ecuavisa	Canal 8
+EcuavisaInternacional.ec	Ecuavisa Internacional
+Gamavision.ec	Gamavision	Gamavisión
+IntiTV.ec	Inti TV
+MakroDigitalTelevision.ec	MakroDigital Television	MakroDigital
+RTS.ec	RTS
+Teleamazonas.ec	Teleamazonas

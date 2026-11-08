@@ -1,0 +1,11 @@
+Belarus24.by	Belarus-24	Беларусь 24
+BugTV.by	Bug-TV	Буг-ТВ
+NTVBelarus.by	NTV-Belarus	НТВ-Беларусь
+ONT.by	ONT	ОНТ
+PerviyInformationniy.by	Perviy Informationniy	Первый информационный
+RTRBelarus.by	RTR-Belarus	РТР-Беларусь
+STV.by	STV	СТБ
+SvetloeTV.by	Svetloe TV	Светлое ТВ
+Varjag.by	Varjag	Варяг
+Vitebsk.by	Vitebsk	Витебск
+Zvyazda.by	Zvyazda	Звязда

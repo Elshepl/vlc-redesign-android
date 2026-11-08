@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Guardado apenas neste dispositivo, para continuar onde parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais recente do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Legendas da Internet: pesquise a partir do leitor no OpenSubtitles, Wizdom (hebraico), YIFY Subtitles e Addic7ed, grátis e sem conta.</item>
-        <item>Encontradas mesmo para ficheiros cujo nome não diz nada. Opcional: a sua própria chave do OpenSubtitles.com e uma pesquisa automática, em Definições › Legendas.</item>
-        <item>TV em direto: a barra de informações cabe num telemóvel na vertical.</item>
-        <item>Android TV: o comando chega a cada vídeo e a cada botão do leitor.</item>
+        <item>Legendas: SubSource (árabe), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 e Legendas.net com a sua chave ou conta gratuita. Cada um em Definições › Legendas, com o respetivo interruptor.</item>
+        <item>Idiomas a pesquisar: ative ou desative cada idioma de legendas para uma pesquisa mais rápida.</item>
+        <item>Contas de TV em direto: o seu Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR ou HDHomeRun, e o guia Schedules Direct. Os servidores na sua rede são encontrados automaticamente.</item>
+        <item>TV em direto: um guia encontrado automaticamente para os canais sem guia, um separador Guias com os guias de cada fonte e, primeiro, as fontes do seu país no catálogo.</item>
+        <item>Correções: legendas guardadas no armazenamento próprio da aplicação (uma falha no Android 14), campos de palavra-passe ocultos, o foco do comando da TV, a tradução de «País» em muitos idiomas e a de «palavra-passe» em árabe.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este telemóvel</string>

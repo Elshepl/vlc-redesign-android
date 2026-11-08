@@ -1,0 +1,8 @@
+ChamberTV.lu	Chamber TV
+DirectOneTV.lu	Direct One TV
+eldoTV.lu	eldo.TV
+LuckyJacktv.lu	Lucky Jack.tv
+LuxeTV.lu	Luxe TV
+RTL9.lu	RTL9
+RTLZwee.lu	RTL Zwee
+UHD1.lu	UHD 1

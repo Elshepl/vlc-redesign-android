@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Glabājas tikai šajā ierīcē, lai turpinātu tur, kur palikāt.</string>
     <string name="rd_ob_updates_help">Reizi dienā meklē jaunāku VLC for Android testa versiju.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtitri no interneta: meklēšana tieši no atskaņotāja vietnēs OpenSubtitles, Wizdom (ivrits), YIFY Subtitles un Addic7ed, bez maksas un bez konta.</item>
-        <item>Tiek atrasti pat failiem, kuru nosaukumi neko nepasaka. Pēc izvēles: jūsu pašu OpenSubtitles.com atslēga un automātiska meklēšana, sadaļā Iestatījumi › Subtitri.</item>
-        <item>Tiešraides TV: informācijas josla ietilpst vertikāli turētā tālrunī.</item>
-        <item>Android TV: ar tālvadības pulti var sasniegt katru video un katru atskaņotāja pogu.</item>
+        <item>Subtitri: SubSource (arābu), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 un Legendas.net – ar jūsu pašu bezmaksas atslēgu vai kontu. Katrs sadaļā Iestatījumi › Subtitri, ar savu slēdzi.</item>
+        <item>Meklēšanas valodas: ieslēdziet vai izslēdziet katru subtitru valodu ātrākai meklēšanai.</item>
+        <item>Tiešraides TV konti: jūsu Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR vai HDHomeRun un Schedules Direct gids. Serveri jūsu tīklā tiek atrasti automātiski.</item>
+        <item>Tiešraides TV: automātiski atrasts gids kanāliem bez gida, cilne Gidi ar katra avota gidiem un katalogā vispirms jūsu valsts avoti.</item>
+        <item>Labojumi: subtitri tiek saglabāti pašas lietotnes krātuvē (avārija Android 14 ierīcēs), paroles lauki slēpj ievadīto paroli, TV tālvadības pults fokuss, vārds „Valsts“ daudzās valodās un vārds „parole“ arābu valodā.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitru izmērs</string>
     <string name="rd_cast_this_phone">Šis tālrunis</string>

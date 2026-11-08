@@ -1,0 +1,96 @@
+ABolaTV.pt	A Bola TV
+AlmaLusa.pt	Alma Lusa
+AMCBreak.pt	AMC Break	Blaze	A&E	The Biography Channel
+AMCCrime.pt	AMC Crime	Crimen + Investigaçao
+ARTV.pt	ARTV	Canal Parlamento
+AXN.pt	AXN	AXN Portugal
+AXNMovies.pt	AXN Movies	AXN Black Portugal	Animax Portugal
+BenficaTV.pt	Benfica TV
+BomSomTV.pt	Bom Som TV
+Canal11.pt	Canal 11
+Canal180.pt	Canal180
+CanalHollywood.pt	Canal Hollywood
+CanalNos.pt	Canal Nos
+CanalQ.pt	Canal Q
+CanalUmEuropa.pt	Canal Um Europa
+CasaeCozinha.pt	Casa e Cozinha
+CineMundo.pt	Cine Mundo
+CMTV.pt	CM TV
+CNNPortugal.pt	CNN Portugal	TVI24
+ConecTVAlgarve.pt	ConecTV Algarve
+ContaLa.pt	Conta La	Conta Lá
+DiscoveryChannel.pt	Discovery Channel
+DisneyChannel.pt	Disney Channel
+DisneyJunior.pt	Disney Junior
+FUELTV.pt	FUEL TV
+Globo.pt	Globo
+Historia.pt	Historia	História
+HOT.pt	HOT
+HOTMan.pt	HOT Man
+HOTTaboo.pt	HOT Taboo
+KuriakosTV.pt	Kuriakos TV
+LocalVisaoTV.pt	LocalVisao TV	LocalVisão TV
+MTV.pt	MTV
+NationalGeographic.pt	National Geographic
+NationalGeographicWild.pt	National Geographic Wild
+NewsNow.pt	News Now
+Nickelodeon.pt	Nickelodeon
+NickJr.pt	Nick Jr.
+NosStudios.pt	Nos Studios
+NovoTempoPortugal.pt	Novo Tempo Portugal
+Odisseia.pt	Odisseia	Canal Odisseia
+PandaKids.pt	Panda Kids
+PortoCanal.pt	Porto Canal
+RecordTVEuropa.pt	RecordTV Europa
+RTP1.pt	RTP 1
+RTP2.pt	RTP 2
+RTPAcores.pt	RTP Acores	RTP Açores
+RTPAfrica.pt	RTP Africa	RTP África
+RTPMadeira.pt	RTP Madeira
+RTPmAmerica.pt	RTPm America	RTPi América
+RTPmAsia.pt	RTPm Asia	RTPi América
+RTPMemoria.pt	RTP Memoria	RTP Memória
+RTPMundo.pt	RTP Mundo	RTP Internacional
+RTPNoticias.pt	RTP Noticias	RTP 3
+SIC.pt	SIC
+SICAltaDefinicao.pt	SIC Alta Definicao	SIC Alta Definição
+SICCaras.pt	SIC Caras
+SICInternacional.pt	SIC Internacional
+SICK.pt	SIC K
+SICMulher.pt	SIC Mulher
+SICNoticias.pt	SIC Noticias	SIC Notícias
+SICNovelas.pt	SIC Novelas
+SICRadical.pt	SIC Radical
+SICReplay.pt	SIC Replay
+SPlus.pt	S+
+SportingTV.pt	Sporting TV
+SportTV1.pt	Sport TV1
+SportTV2.pt	Sport TV2
+SportTV3.pt	Sport TV3
+SportTV4.pt	Sport TV4
+SportTV5.pt	Sport TV5
+SportTV6.pt	Sport TV6
+SportTV7.pt	Sport TV7
+SportTVAfrica1.pt	Sport TV Africa 1	Sport TV África 1
+SportTVPlus.pt	Sport TV+
+StarChannel.pt	Star Channel
+StarComedy.pt	Star Comedy
+StarCrime.pt	Star Crime
+StarLife.pt	Star Life
+StarMovies.pt	Star Movies
+Syfy.pt	Syfy
+TLC.pt	TLC
+TVCancaoNova.pt	TV Cancao Nova	TV Canção Nova
+TVCineAction.pt	TVCine Action
+TVCineEdition.pt	TVCine Edition
+TVCineEmotion.pt	TVCine Emotion
+TVCineTop.pt	TVCine Top
+TVI.pt	TVI
+TVIAfrica.pt	TVI Africa	TVI África
+TVIFiccao.pt	TVI Ficcao	TVI Ficção
+TVIInternacional.pt	TVI Internacional
+TVIReality.pt	TVI Reality
+UnifeTV.pt	Unife TV	Unifé TV
+VinTV.pt	VinTV
+VITECAzoresTV.pt	VITEC Azores TV
+VPlusTVI.pt	V+ TVI	TVI Ficção

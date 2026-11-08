@@ -1,0 +1,41 @@
+Cablenoticias.co	Cablenoticias
+CaliTV.co	CaliTV
+Canal1.co	Canal 1	Canal Uno	Inravisión Cadena Uno	Inravisión Cadena 1	Inravisión Primera Cadena Color	Inravisión Primera Cadena	Inravisión Canal Nacional	Televisora Nacional de Colombia	HJTV-2	HJRN-TV
+CanalC.co	Canal C
+CanalCapital.co	Canal Capital
+CanalCartagena.co	Canal Cartagena
+CanalCongreso.co	Canal Congreso
+CanalInstitucional.co	Canal Institucional	CITV Canal Institucional	Señal Institucional	Institucional	Señal Colombia Institucional
+CanalRCN.co	Canal RCN	RCN Televisión
+CanalTRO.co	Canal TRO
+CaracolInternacional.co	Caracol Internacional
+CaracolTV.co	Caracol TV
+CitytvBogota.co	Citytv Bogota	Citytv Bogotá
+ClaroMusicaTV.co	Claro Musica TV	Claro Música TV
+Cosmovision.co	Cosmovision	Cosmovisión
+Cristovision.co	Cristovision	Cristovisión
+ElTiempoTV.co	El Tiempo TV
+MiGenteTV.co	Mi Gente TV
+NoticiasRCN.co	Noticias RCN
+NTN24.co	NTN24
+NuestraTeleInternacional.co	Nuestra Tele Internacional	Nuestra Tele	TV Colombia
+RCNMas.co	RCN Mas	RCN Más
+RCNNovelas.co	RCN Novelas	RCN Telenovelas
+RedPlus.co	Red+
+RumbaTV.co	Rumba TV
+SenalColombia.co	Senal Colombia	Señal Colombia
+SinLimites.co	Sin Limites	Sin Límites
+StarChannel.co	Star Channel
+TeleAmiga.co	Tele Amiga
+Teleantioquia.co	Teleantioquia
+Telecafe.co	Telecafe	Telecafé
+Telecaribe.co	Telecaribe
+Teleislas.co	Teleislas
+Telemedellin.co	Telemedellin	Telemedellín
+TeleNostalgia.co	TeleNostalgia
+Telepacifico.co	Telepacifico	Telepacífico
+TeleVid.co	Tele Vid
+Trece.co	Trece
+TVAgro.co	TVAgro
+WinSports.co	Win Sports
+Zoom.co	Zoom	Canal Universitario de Colombia

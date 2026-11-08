@@ -1,0 +1,13 @@
+AfroMusicChannel.ao	Afro Music Channel
+BeKuduro.ao	Be Kuduro
+GloboOn.ao	Globo On
+KanucaTV.ao	Kanuca TV
+LaLiganaZap.ao	LaLiga na Zap
+MyMusicChannel.ao	My Music Channel
+PlusHitsAfrica.ao	+Hits Africa
+TPA1.ao	TPA1	TPA
+TPA2.ao	TPA2
+TVZimbo.ao	TV Zimbo
+TVZimboInternacional.ao	TV Zimbo Internacional
+ZapNovelas.ao	Zap Novelas
+ZapViva.ao	Zap Viva

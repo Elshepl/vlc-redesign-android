@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Säilytetään vain tällä laitteella, jotta voit jatkaa siitä, mihin jäit.</string>
     <string name="rd_ob_updates_help">Etsii kerran päivässä uudempaa VLC for Androidin testiversiota.</string>
     <string-array name="rd_whats_new_items">
-        <item>Tekstitykset internetistä: hae suoraan soittimesta palveluista OpenSubtitles, Wizdom (heprea), YIFY Subtitles ja Addic7ed, ilmaiseksi ja ilman tiliä.</item>
-        <item>Löytyvät myös tiedostoille, joiden nimi ei kerro mitään. Valinnainen: oma OpenSubtitles.com-avain ja automaattinen haku, kohdassa Asetukset › Tekstitykset.</item>
-        <item>Suora TV: tietopalkki mahtuu pystyasennossa pidettävään puhelimeen.</item>
-        <item>Android TV: kaukosäädin ylettyy jokaiseen videoon ja soittimen jokaiseen painikkeeseen.</item>
+        <item>Tekstitykset: SubSource (arabia), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 ja Legendas.net omalla ilmaisella avaimellasi tai tililläsi. Jokainen palvelu kohdassa Asetukset › Tekstitykset omalla kytkimellään.</item>
+        <item>Haettavat kielet: kytke jokainen tekstityskieli päälle tai pois, niin haku on nopeampi.</item>
+        <item>Suoran TV:n tilit: oma Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR tai HDHomeRun sekä Schedules Direct -ohjelmaopas. Verkossasi olevat palvelimet löytyvät itsestään.</item>
+        <item>Suora TV: itsestään löytyvä ohjelmaopas kanaville, joilla sitä ei ole, Ohjelmaoppaat-välilehti jokaisen lähteen oppaille ja luettelossa ensin maasi lähteet.</item>
+        <item>Korjaukset: ladatut tekstitykset tallennetaan sovelluksen omaan tallennustilaan (korjaa kaatumisen Android 14 -versiossa), salasanakentät eivät enää näytä salasanaa, TV-kaukosäätimen kohdistus, sanan \"Maa\" käännös monella kielellä ja salasanaa tarkoittava sana arabiaksi.</item>
     </string-array>
     <string name="rd_subtitle_size">Tekstityksen koko</string>
     <string name="rd_cast_this_phone">Tämä puhelin</string>

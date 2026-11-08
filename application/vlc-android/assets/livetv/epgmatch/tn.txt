@@ -1,0 +1,11 @@
+AlJanoubiyaTV.tn	Al Janoubiya TV	قناة الجنوبية
+AttessiaTV.tn	Attessia TV	قناة الإنسان
+CarthagePlus.tn	Carthage+
+ElhiwarEttounsiTV.tn	Elhiwar Ettounsi TV	الحوار التونسي
+ElWatania1.tn	El Watania 1	Télévision Tunisienne 1	الوطنية 1
+ElWatania2.tn	El Watania 2	Télévision Tunisienne 2	الوطنية 2
+HannibalTV.tn	Hannibal TV	قناة حنبعل
+NessmaElJadida.tn	Nessma El Jadida	الجديدة نسمة	New Breeze	Nessma TV	قناة نسمة	Breeze TV	Nessma Rouge	نسمة روج	Red Breeze
+TelvzaTV.tn	Telvza TV	تلفزة تي في
+TT1.tn	TT1	Tunisie Télévision 1
+TunisnaTV.tn	Tunisna TV	تونسنا

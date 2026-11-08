@@ -1,0 +1,85 @@
+10.au	10
+10Bold.au	10 Bold	10 Boss	One	One HD
+10Peach.au	10 Peach
+7flix.au	7flix
+7mate.au	7mate
+7two.au	7two
+9Gem.au	9Gem
+9Go.au	9Go!
+9Life.au	9Life
+9Rush.au	9Rush
+ABCAustralia.au	ABC Australia
+ABCKids.au	ABC Kids
+ABCNews.au	ABC News
+ABCTVPlus.au	ABC TV Plus
+AnimalPlanet.au	Animal Planet
+Arena.au	Arena	FOX Arena
+AuroraTV.au	Aurora TV
+AusbizTV.au	Ausbiz TV
+BBCUKTV.au	BBC UKTV	UKTV
+BoxSets.au	BoxSets
+C31Melbourne.au	C31 Melbourne	Channel 31
+CartoonNetwork.au	Cartoon Network
+CBeebies.au	CBeebies
+Channel44.au	Channel 44
+Channel7.au	Channel 7	Seven
+Channel9.au	Channel 9
+Classics.au	Classics	FOX Classics	Fox Kids
+CMT.au	CMT
+CNBCAustralia.au	CNBC Australia
+ComedyCentral.au	Comedy Central
+CricketGold.au	Cricket Gold
+Crime.au	Crime	FOX Crime	TVHits
+CrimePlusInvestigation.au	Crime + Investigation	CI
+DiscoveryChannel.au	Discovery Channel
+DiscoveryTurbo.au	Discovery Turbo
+DreamWorksChannel.au	DreamWorks Channel
+ESPN.au	ESPN
+ESPN2.au	ESPN2
+ExpoChannel.au	Expo Channel
+Fox8.au	Fox8
+FoxCricket.au	Fox Cricket	Fox Sports 501
+FoxCrime.au	Fox Crime
+FoxFooty.au	Fox Footy
+FoxLeague.au	Fox League
+FoxSports503.au	Fox Sports 503
+FoxSports505.au	Fox Sports 505
+FoxSports506.au	Fox Sports 506
+FoxSportsMorePlus.au	Fox Sports More+
+FoxSportsNews.au	Fox Sports News
+FoxtelMoviesAction.au	Foxtel Movies Action
+FoxtelMoviesComedy.au	Foxtel Movies Comedy
+FoxtelMoviesDrama.au	Foxtel Movies Drama
+FoxtelMoviesFamily.au	Foxtel Movies Family
+FoxtelMoviesGreats.au	Foxtel Movies Greats
+FoxtelMoviesHits.au	Foxtel Movies Hits
+FoxtelMoviesPremiere.au	Foxtel Movies Premiere
+FoxtelMoviesRomance.au	Foxtel Movies Romance
+FoxtelOne.au	Foxtel One	FOX One
+GOOD.au	GOOD.	ACCTV	Australian Christian Channel
+History.au	History	The History Channel	Fox History
+InvestigationDiscovery.au	Investigation Discovery	ID
+LifeStyle.au	LifeStyle
+LifestyleFood.au	Lifestyle Food
+LifestyleHome.au	Lifestyle Home
+LMN.au	LMN	Lifetime Movie Network
+Nickelodeon.au	Nickelodeon
+NickJr.au	Nick Jr.
+NITV.au	NITV
+Racingcom.au	Racing.com
+RealLife.au	Real Life
+SBNTV.au	SBN TV	SonLife
+SBS.au	SBS
+SBSFood.au	SBS Food
+SBSViceland.au	SBS Viceland
+SBSWorldMovies.au	SBS World Movies
+SBSWorldWatch.au	SBS WorldWatch
+Showcase.au	Showcase	FOX Showcase
+SkyRacing1.au	Sky Racing 1
+SkyRacing2.au	Sky Racing 2
+SkyThoroughbredCentral.au	Sky Thoroughbred Central
+Sleuth.au	Sleuth	FOX Sleuth
+tickerNews.au	ticker News
+TLC.au	TLC
+TVSN.au	TVSN
+UniversalTV.au	Universal TV	Universal Channel	Hallmark Channel

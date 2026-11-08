@@ -1,0 +1,12 @@
+AlIttihadTV.lb	Al Ittihad TV	قناة الاتحاد
+AlJadeed.lb	Al Jadeed	الجديد
+AlManar.lb	Al-Manar	المنار
+AlMayadeenTV.lb	Al Mayadeen TV	الميادين
+LanaTV.lb	Lana TV	LTV
+LBCEurope.lb	LBC Europe
+LBCInternational.lb	LBC International	المؤسسةللإرسال انترناسيونال اللبنانية
+NabaaTV.lb	Nabaa TV
+NBN.lb	NBN
+NourAlKoddass.lb	Nour Al Koddass	نور القداس
+NourMariam.lb	Nour Mariam	نور مريم
+OTV.lb	OTV	أو تي في

@@ -1,0 +1,8 @@
+AmericaTeVe.pr	America TeVe	América TeVé
+CDMInternacional.pr	CDM Internacional
+DeFianceMedia.pr	DeFiance Media
+TeleOnce.pr	TeleOnce
+WAPATV41.pr	WAPA-TV 4.1	WAPA-TV	WAPA HD
+WAPATV42.pr	WAPA-TV 4.2	WAPA Deportes	WAPA 2 Deportes	WAPA2HD
+WIPRTV61.pr	WIPR-TV 6.1	WIPR-TV	WIPR-HD
+WKAQTV22.pr	WKAQ-TV 2.2	Punto 2	WKAQ .2

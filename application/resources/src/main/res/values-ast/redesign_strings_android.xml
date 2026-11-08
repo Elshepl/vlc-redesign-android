@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Guárdase namás nesti preséu, pa siguir onde lo dexasti.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más nueva de VLC for Android una vegada al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Sotítulos d\'internet: busca dende\'l reproductor n\'OpenSubtitles, Wizdom (hebréu), YIFY Subtitles y Addic7ed, de baldre y ensin cuenta.</item>
-        <item>Alcuéntrense tamién pa ficheros con nomes que nun dicen nada. Opcional: la to clave propia d\'OpenSubtitles.com y una busca automática, en Axustes › Sotítulos.</item>
-        <item>TV en direutu: la barra d\'información cabe nun teléfonu en vertical.</item>
-        <item>Android TV: el mandu llega a tolos vídeos y a tolos botones del reproductor.</item>
+        <item>Sotítulos: SubSource (árabe), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 y Legendas.net cola to clave o cuenta de baldre. Caún en Axustes › Sotítulos, col so interruptor.</item>
+        <item>Llingües de busca: activa o desactiva cada llingua de sotítulos pa una busca más rápida.</item>
+        <item>Cuentes de TV en direutu: el to Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR o HDHomeRun, y la guía Schedules Direct. Los sirvidores de la to rede alcuéntrense automáticamente.</item>
+        <item>TV en direutu: una guía alcontrada automáticamente pa canales ensin guía, una llingüeta Guíes coles guíes de cada fonte y, primero, les fontes del to país nel catálogu.</item>
+        <item>Correiciones: sotítulos guardaos nel almacenamientu propiu de l\'aplicación (un casque n\'Android 14), campos de contraseña anubríos, el focu del mandu de la TV, la traducción de «País» en munches llingües y la de «contraseña» n\'árabe.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamañu de los subtítulos</string>
     <string name="rd_cast_this_phone">Esti teléfonu</string>

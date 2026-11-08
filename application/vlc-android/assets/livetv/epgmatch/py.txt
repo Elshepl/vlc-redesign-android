@@ -1,0 +1,11 @@
+C9N.py	C9N
+Latele.py	Latele
+NPY.py	NPY	Noticias Paraguay
+ParaguayTV.py	Paraguay TV
+Paravision.py	Paravision	Paravisión	Canal 5
+SNT.py	SNT
+SURTVItapua.py	SUR TV Itapua	SUR TV Itapúa	SUR Televisión
+Telefuturo.py	Telefuturo
+Trece.py	Trece
+Unicanal.py	Unicanal
+UnionTV.py	Union TV	Unión TV

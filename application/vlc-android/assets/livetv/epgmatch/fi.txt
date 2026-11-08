@@ -1,0 +1,19 @@
+DiscoveryChannel.fi	Discovery Channel
+Eveo.fi	Eveo	TapahtumaTV Eveo
+Frii.fi	Frii
+Hero.fi	Hero
+Jim.fi	Jim
+Kutonen.fi	Kutonen
+Liv.fi	Liv
+MTV3.fi	MTV3
+NationalGeographic.fi	National Geographic
+Nelonen.fi	Nelonen	Number Four
+STARChannel.fi	STAR Channel
+TaevasTV7.fi	Taevas TV7
+TaivasTV7.fi	Taivas TV7
+TLC.fi	TLC
+TV5.fi	TV5
+TVFinland.fi	TV Finland
+YleTeemaFem.fi	Yle Teema & Fem
+YleTV1.fi	Yle TV1
+YleTV2.fi	Yle TV2

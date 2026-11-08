@@ -1,0 +1,614 @@
+10TV.in	10 TV
+4TVNews.in	4TV News
+7SMusic.in	7S Music
+9XJalwa.in	9X Jalwa
+9XJhakaas.in	9X Jhakaas
+9XM.in	9XM
+9XTashan.in	9X Tashan
+AadinathTV.in	Aadinath TV
+AajTak.in	Aaj Tak
+AakaashAath.in	Aakaash Aath
+AaseervathamTV.in	Aaseervatham TV
+Aastha.in	Aastha
+AasthaBhajan.in	Aastha Bhajan
+AasthaKannada.in	Aastha Kannada
+AasthaTelugu.in	Aastha Telugu
+ABNAndhraJyoti.in	ABN Andhra Jyoti
+ABPAnanda.in	ABP Ananda
+ABPAsmita.in	ABP Asmita
+ABPMajha.in	ABP Majha
+ABPNews.in	ABP News
+AdithyaTV.in	Adithya TV	ஆதித்யா டிவி
+AKDCalcuttaNews.in	AKD Calcutta News
+AlankarTV.in	Alankar TV	ଅଳଙ୍କାର
+AllTimeMovies.in	All Time Movies
+AmritaTV.in	Amrita TV
+AnaadiTV.in	Anaadi TV
+AnandTV.in	Anand TV
+ANBNews.in	ANB News
+Andpictures.in	&pictures
+AndTV.in	&TV
+AndxplorHD.in	&xplor HD
+AngelTV.in	Angel TV
+AnimalPlanet.in	Animal Planet
+AnjanTV.in	Anjan TV
+AnmolCinema.in	Anmol Cinema
+AnmolCinema2.in	Anmol Cinema 2	Zee Anmol Cinema 2
+AnmolTV.in	Anmol TV
+APN.in	APN
+AradanaTV.in	Aradana TV
+ArgusNews.in	Argus News
+AryanTVNational.in	Aryan TV National
+Asianet.in	Asianet
+AsianetMovies.in	Asianet Movies
+AsianetNews.in	Asianet News	ഏഷ്യാനെറ്റ് ന്യൂസ്‌
+AsianetPlus.in	Asianet Plus
+AsianetSuvarnaNews.in	Asianet Suvarna News	ಸುವರ್ಣ ನ್ಯೂಸ್
+AssamTalks.in	Assam Talks
+AwakeningTV.in	Awakening TV
+AyushTV.in	Ayush TV
+B4UBhojpuri.in	B4U Bhojpuri
+B4UKadak.in	B4U Kadak
+B4UMovies.in	B4U Movies
+B4UMusic.in	B4U Music
+BalleBalle.in	Balle Balle
+BansalNews.in	Bansal News
+BhakthiTV.in	Bhakthi TV
+Bharat24.in	Bharat24
+BharatExpress.in	Bharat Express
+BharatSamachar.in	Bharat Samachar
+BhojpuriCinema.in	Bhojpuri Cinema
+BigMagic.in	Big Magic
+BIGTV.in	BIG TV
+BoxCinema.in	Box Cinema
+BRKNews.in	BRK News
+CalvaryTV.in	Calvary TV
+CartoonNetwork.in	Cartoon Network
+CartoonNetworkHDPlus.in	Cartoon Network HD+	CN HD+
+Channel100.in	Channel 100
+ChannelDivya.in	Channel Divya
+ChannelWIN.in	Channel WIN
+ChardiklaTimeTV.in	Chardikla Time TV
+ChintuTV.in	Chintu TV	ಚಿಂಟು ಟಿ ವಿ
+Chithiram.in	Chithiram	Kalaignar Chithiram
+ChuttiTV.in	Chutti TV	சுட்டி டிவி
+CNBCAwaaz.in	CNBC Awaaz	CNBC आवाज़
+CNBCBajar.in	CNBC Bajar	CNBC બજાર
+CNBCTV18.in	CNBC TV18
+CNBCTV18PrimeHD.in	CNBC TV18 Prime HD
+CnewsBharat.in	Cnews Bharat
+CNNNews18.in	CNN News 18
+Colors.in	Colors
+ColorsAsiaPacific.in	Colors Asia Pacific
+ColorsBangla.in	Colors Bangla
+ColorsBanglaCinema.in	Colors Bangla Cinema
+ColorsCineplex.in	Colors Cineplex
+ColorsCineplexBollywood.in	Colors Cineplex Bollywood
+ColorsCineplexSuperhits.in	Colors Cineplex Superhits
+ColorsGujarati.in	Colors Gujarati
+ColorsGujaratiCinema.in	Colors Gujarati Cinema
+ColorsInfinity.in	Colors Infinity
+ColorsKannada.in	Colors Kannada	ETV Kannada	Colors ಕನ್ನಡ
+ColorsKannadaCinema.in	Colors Kannada Cinema	Colors ಕನ್ನಡ ಸಿನಿಮಾ
+ColorsMarathi.in	Colors Marathi
+ColorsMENA.in	Colors MENA
+ColorsRishteyEurope.in	Colors Rishtey Europe
+ColorsSuper.in	Colors Super
+ColorsTamil.in	Colors Tamil
+CTVNAKDPlus.in	CTVN AKD Plus
+CVRNews.in	CVR News
+Dangal2.in	Dangal 2
+DangalTV.in	Dangal TV
+DarshanaTV.in	Darshana TV
+DaVinciLearning.in	Da Vinci Learning
+DDArunPrabha.in	DD Arun Prabha
+DDAssam.in	DD Assam
+DDBangla.in	DD Bangla
+DDBharati.in	DD Bharati
+DDBihar.in	DD Bihar
+DDChandana.in	DD Chandana
+DDChhattisgarh.in	DD Chhattisgarh
+DDGirnar.in	DD Girnar
+DDGoa.in	DD Goa
+DDHaryana.in	DD Haryana
+DDHimachalPradesh.in	DD Himachal Pradesh
+DDIndia.in	DD India
+DDJharkhand.in	DD Jharkhand
+DDKashir.in	DD Kashir
+DDKisan.in	DD Kisan
+DDMadhyaPradesh.in	DD Madhya Pradesh	दूरदर्शन मध्यप्रदेश
+DDMalayalam.in	DD Malayalam
+DDManipur.in	DD Manipur
+DDMeghalaya.in	DD Meghalaya
+DDMizoram.in	DD Mizoram
+DDNagaland.in	DD Nagaland
+DDNational.in	DD National
+DDNews.in	DD News
+DDOdia.in	DD Odia
+DDPunjabi.in	DD Punjabi
+DDRajasthan.in	DD Rajasthan
+DDSahyadri.in	DD Sahyadri
+DDSaptagiri.in	DD Saptagiri	దూరదర్శన్ సప్తగిరి
+DDSports.in	DD Sports
+DDTamil.in	DD Tamil
+DDTripura.in	DD Tripura
+DDUrdu.in	DD Urdu
+DDUttarakhand.in	DD Uttarakhand	DD Uttrakhand	दूरदर्शन उत्तराखंड	DD उत्तराखंड
+DDUttarPradesh.in	DD Uttar Pradesh	दूरदर्शन उत्तर प्रदेश
+DDYadagiri.in	DD Yadagiri	DD Telangana
+DharmSandesh.in	Dharm Sandesh
+DhoomMusic.in	Dhoom Music
+DiscoveryChannel.in	Discovery Channel
+DiscoveryKids.in	Discovery Kids
+DiscoveryScience.in	Discovery Science
+DiscoveryTurbo.in	Discovery Turbo
+DishBuzz.in	Dish Buzz
+DisneyChannel.in	Disney Channel
+DisneyInternationalHD.in	Disney International HD
+DisneyJunior.in	Disney Junior
+DisneyStories.in	Disney Stories
+DivyavaniTV.in	Divyavani TV
+DTamil.in	DTamil	Discovery Tamil	Discovery Channel Tamil
+DY365.in	DY 365
+E24.in	E 24
+Enterr10Bangla.in	Enterr 10 Bangla
+EpicBharat.in	Epic Bharat	EPIC भारत	Nazara TV
+EpicBhojpuri.in	Epic Bhojpuri	Filamchi Bhojpuri
+EpicKids.in	Epic Kids	Gubbare
+EpicMusic.in	Epic Music	ShowBox
+EpicParivar.in	Epic Parivar	Ishara
+EpicTV.in	Epic TV
+ETNow.in	ET Now
+ETNowSwadesh.in	ET Now Swadesh
+ETVAndhraPradesh.in	ETV Andhra Pradesh
+ETVBalBharat.in	ETV Bal Bharat
+ETVCinema.in	ETV Cinema
+ETVLife.in	ETV Life
+ETVPlus.in	ETV Plus
+ETVTelangana.in	ETV Telangana
+ETVTelugu.in	ETV Telugu
+Eurosport.in	Eurosport
+FaktMarathi.in	Fakt Marathi
+FashionTV.in	FashionTV
+FatehTV.in	Fateh TV
+FirstIndiaNews.in	First India News	लाइव टीवी
+FlowersTV.in	Flowers TV
+FMNews.in	FM News
+FoodFood.in	Food Food
+Goldmines.in	Goldmines	Dhinchaak
+GoldminesBollywood.in	Goldmines Bollywood
+GoldminesMovies.in	Goldmines Movies	Dhinchaak 2
+GoodnessTV.in	Goodness TV
+GoodNewsToday.in	Good News Today	GNT
+GoodNewsTV.in	GoodNews TV
+GTCNews.in	GTC News
+GTCPunjabi.in	GTC Punjabi
+GujaratFirst.in	Gujarat First
+GulistanNews.in	Gulistan News
+Gyandarshan.in	Gyandarshan
+HareKrsnaTV.in	Hare Krsna TV
+HarKhabar.in	Har Khabar	हर ख़बर
+HarvestTV.in	Harvest TV
+HindiKhabar.in	Hindi Khabar
+HinduDharmam.in	Hindu Dharmam
+HistoryTV18.in	History TV18
+HMTV.in	HMTV
+HNN24x7.in	HNN 24x7
+HornbillTV.in	Hornbill TV
+HungamaTV.in	Hungama TV
+IBC24.in	IBC 24
+Ind24.in	Ind 24
+IndiaAhead.in	India Ahead
+IndiaDailyLive.in	India Daily Live
+IndiaNews.in	India News
+IndiaNewsGujarati.in	India News Gujarati
+IndiaNewsHaryana.in	India News Haryana
+IndiaNewsMadhyaPradeshChhattisgarh.in	India News Madhya Pradesh/Chhattisgarh
+IndiaNewsPunjabHimachal.in	India News Punjab/Himachal	India News Punjab
+IndiaNewsRajasthan.in	India News Rajasthan
+IndiaNewsUttarPradesh.in	India News Uttar Pradesh
+IndiaToday.in	India Today
+IndiaTV.in	India TV	इंडिया टी.वी.
+IndiaTVSpeedNews.in	India TV Speed News
+IndiaVoice.in	India Voice
+INH24x7.in	INH 24x7
+InvestigationDiscovery.in	Investigation Discovery
+IsaiAruvi.in	Isai Aruvi
+IshwarBhaktiTV.in	Ishwar Bhakti TV
+JaihindTV.in	Jaihind TV
+JaiMaharashtra.in	Jai Maharashtra
+JalshaMovies.in	Jalsha Movies	Star Jalsha Movies
+JanamTV.in	Janam TV
+JantantraTV.in	Jantantra TV
+JantaTV.in	Janta TV
+JanTV.in	Jan TV
+JayaMax.in	Jaya Max
+JayaPlus.in	Jaya Plus
+JayaTV.in	Jaya TV
+JeevanTV.in	Jeevan TV
+JinvaniChannel.in	Jinvani Channel
+JK24x7News.in	JK 24x7 News
+JMovie.in	J Movie	Jaya Movie
+Jonack.in	Jonack
+JothiTV.in	Jothi TV
+KairaliNews.in	Kairali News
+KairaliTV.in	Kairali TV
+KairaliWe.in	Kairali We	We TV	WE
+KalaignarMurasu.in	Kalaignar Murasu	Murasu TV	முரசு
+KalaignarSeithigal.in	Kalaignar Seithigal
+KalaignarTV.in	Kalaignar TV
+KalingaTV.in	Kalinga TV
+KanakNews.in	Kanak News
+KappaTV.in	Kappa TV
+KashishNews.in	Kashish News
+KaumudyTV.in	Kaumudy TV
+KhabarFast.in	Khabar Fast
+KhabrainAbhiTak.in	Khabrain Abhi Tak
+KhushbooBangla.in	Khushboo Bangla
+KNewsIndia.in	K News India
+KochuTV.in	Kochu TV	കൊച്ചു ടി വി
+KolkataTV.in	Kolkata TV
+KTV.in	KTV
+KushiTV.in	Kushi TV
+LivingIndiaNews.in	Living India News
+LokshahiNews.in	Lokshahi News
+MadhaTV.in	Madha TV
+MahaaMax.in	Mahaa Max
+MakkalTV.in	Makkal TV
+MalaiMurasuTV.in	Malai Murasu TV	Malai Murasu Seithigal	மாலைமுரசு செய்திகள்
+ManoramaNews.in	Manorama News
+ManoranjanGrand.in	Manoranjan Grand
+ManoranjanMovies.in	Manoranjan Movies
+ManoranjanPrime.in	Manoranjan Prime
+ManoranjanTV.in	Manoranjan TV
+MathrubhumiNews.in	Mathrubhumi News
+MazhavilManorama.in	Mazhavil Manorama
+MBCTV.in	MBC TV
+MediaOne.in	Media One
+Mega24.in	Mega 24	மெகா டிவி
+MegaMusiq.in	Mega Musiq
+MegaTV.in	Mega TV	மெகா டிவி
+Mh1Music.in	Mh 1 Music
+Mh1News.in	Mh 1 News
+MHOneDilSe.in	MH One Dil Se
+MHOneShraddha.in	MH One Shraddha
+MirrorNow.in	Mirror Now
+MNX.in	MNX
+MoviesNow.in	Movies Now
+MoviesNowPlus.in	Movies Now +	MN+
+MTV.in	MTV
+MunsifTV.in	Munsif TV
+MusicIndia.in	Music India
+NaaptolTamil.in	Naaptol Tamil
+NaaptolTelugu.in	Naaptol Telugu
+NambikkaiTV.in	Nambikkai TV
+NandighoshaTV.in	Nandighosha TV
+NationalGeographic.in	National Geographic	National Geographic Channel
+NationalGeographicWild.in	National Geographic Wild	Nat Geo Wild
+NDTVGoodTimes.in	NDTV Good Times
+NDTVIndia.in	NDTV India
+NDTVMadhyaPradeshChhattisgarh.in	NDTV Madhya Pradesh Chhattisgarh	NDTV MPCG
+NDTVMarathi.in	NDTV Marathi	NDTV मराठी
+NDTVProfit.in	NDTV Profit
+NDTVRajasthan.in	NDTV Rajasthan	NDTV राजस्थान लाइव टीवी स्ट्रीम
+NENews.in	NE News
+Nepal1.in	Nepal 1	N1 Nepal
+Network10.in	Network 10
+News11.in	News 11
+News18AssamNorthEast.in	News18 Assam North-East
+News18Bangla.in	News18 Bangla	News18 বাংলা
+News18BiharJharkhand.in	News18 Bihar Jharkhand
+News18DelhiNCRJK.in	News18 Delhi NCR JK	News18 Delhi NCR/Jammu/Kashmir
+News18Gujarati.in	News18 Gujarati	News18 ગુજરાતી
+News18India.in	News18 India	News18 इंडिया
+News18Kannada.in	News18 Kannada
+News18Kerala.in	News18 Kerala	News18 Keralam	News18 കേരളം
+News18MadhyaPradeshChhattisgarh.in	News18 Madhya Pradesh/Chhattisgarh
+News18Marathi.in	News18 Marathi
+News18Odia.in	News18 Odia
+News18PunjabHaryanaHimachal.in	News18 Punjab/Haryana/Himachal	News18 Punjab/Haryana
+News18Rajasthan.in	News18 Rajasthan
+News18TamilNadu.in	News18 Tamil Nadu
+News18UttarPradeshUttarakhand.in	News18 Uttar Pradesh Uttarakhand
+News1India.in	News 1 India
+News1st.in	News 1st
+News24.in	News 24
+News24MPChhattisgarh.in	News 24 MP & Chhattisgarh
+News7Tamil.in	News 7 Tamil
+News9Live.in	News9Live	News9
+NewsIndia24x7.in	News India 24x7
+NewsJ.in	News J
+NewsLive.in	News Live
+NewsMalayalam24x7.in	News Malayalam 24x7	ന്യൂസ് മലയാളം 24x7	News മലയാളം 24x7
+NewsNation.in	News Nation
+NewsStateMPCHG.in	News State MP & CHG	News State Madhya Pradesh Chhattisgarh	News State MP Chhattisgarh	न्यूज स्टेट मध्य प्रदेश छत्तीसगढ़
+NewsStatePunjabHaryanaHimachal.in	News State Punjab Haryana Himachal
+NewsStateUPUK.in	News State UP & UK
+NewsTamil24x7.in	News Tamil 24x7
+NewsTimeBangla.in	NewsTime Bangla
+NewsX.in	NewsX
+NewsXWorld.in	NewsX World
+Nickelodeon.in	Nickelodeon	Nick
+NickHDPlus.in	Nick HD+
+NickJr.in	Nick Jr.
+NireekshanaTV.in	Nireekshana TV
+NKTV24x7.in	NK TV 24x7	NK TV Plus	NKTV Plus
+NortheastLive.in	Northeast Live
+NTVTelugu.in	NTV Telugu
+OdishaTV.in	Odisha TV	ଓଡ଼ିଶା ଟିଭି	OTV
+OneTV.in	One TV
+OnlyBharat.in	Only Bharat	AMV Network
+OscarMoviesBhojpuri.in	Oscar Movies Bhojpuri
+ParasGold.in	Paras Gold
+PasandTV.in	Pasand TV
+PeaceofMindTV.in	Peace of Mind TV
+PearTV.in	Pear TV
+PeppersTV.in	Peppers TV
+Pitaara.in	Pitaara
+Pogo.in	Pogo
+PolimerNews.in	Polimer News
+PolimerTV.in	Polimer TV
+PowerTV.in	Power TV
+PowervisionTV.in	Powervision TV
+PragNews.in	Prag News
+PrarthanaBhawanTV.in	Prarthana Bhawan TV
+PratidinTime.in	Pratidin Time
+PravahPicture.in	Pravah Picture	Star Pravah Picture
+Prime9News.in	Prime9 News
+PrimeTVGoa.in	Prime TV Goa
+PTCChakde.in	PTC Chakde
+PTCMusic.in	PTC Music
+PTCNews.in	PTC News
+PTCPunjabi.in	PTC Punjabi
+PTCPunjabiGold.in	PTC Punjabi Gold
+PTCSimran.in	PTC Simran
+PublicMovies.in	Public Movies
+PublicMusic.in	Public Music
+PublicTV.in	Public TV
+PudhariNews.in	Pudhari News
+PuthiyaThalaimurai.in	Puthiya Thalaimurai
+PuthuyugamTV.in	Puthuyugam TV
+RaftaarMedia.in	Raftaar Media
+RajAsia.in	Raj Asia	Raj Nagaichuvai
+RajDigitalPlus.in	Raj Digital Plus
+RajMusixKannada.in	Raj Musix Kannada
+RajMusixMalayalam.in	Raj Musix Malayalam
+RajMusixTamil.in	Raj Musix Tamil
+RajMusixTelugu.in	Raj Musix Telugu
+RajNews.in	Raj News
+RajNewsKannada.in	Raj News Kannada
+RajNewsMalayalam.in	Raj News Malayalam
+RajNewsTelugu.in	Raj News Telugu
+RajPariwar.in	Raj Pariwar
+RajTV.in	Raj TV
+Ramdhenu.in	Ramdhenu
+Rang.in	Rang
+RDXGoa.in	RDX Goa
+RealNewsKerala.in	Real News Kerala
+Rengoni.in	Rengoni
+ReporterTV.in	Reporter TV
+RepublicBangla.in	Republic Bangla	R.বাংলা	রিপাবলিক বাংলা
+RepublicBharat.in	Republic Bharat	R.भारत	रिपब्लिक भारत
+RepublicKannada.in	Republic Kannada	R.ಕನ್ನಡ	ರಿಪಬ್ಲಿಕ ಕನ್ನಡ
+RepublicTV.in	Republic TV
+RojaMovies.in	Roja Movies
+RojaTV.in	Roja TV
+RomedyNow.in	Romedy Now
+RongeenTV.in	Rongeen TV
+RTIndia.in	RT India
+RupasiBangla.in	Rupasi Bangla
+SaamTV.in	Saam TV
+Sadhna.in	Sadhna
+SadhnaNewsMadhyaPradeshChhattisgarh.in	Sadhna News Madhya Pradesh/Chhattisgarh
+SadhnaPlusNews.in	Sadhna Plus News
+SadhnaTV.in	Sadhna TV
+SadvidyaTV.in	Sadvidya TV
+SafariTV.in	Safari TV
+SaiTV.in	Sai TV
+SakshiTV.in	Sakshi TV
+SalaamTV.in	Salaam TV	Zee Salaam
+SamacharPlus24x7.in	Samachar Plus 24x7
+SanaPlus.in	Sana Plus
+SanaTV.in	Sana TV
+SandeshNews.in	Sandesh News
+SangeetBangla.in	Sangeet Bangla
+SangeetBhojpuri.in	Sangeet Bhojpuri
+SangeetMarathi.in	Sangeet Marathi
+SankaraTV.in	Sankara TV
+SansadTV1.in	Sansad TV 1	Lok Sabha
+SansadTV2.in	Sansad TV 2	Rajya Sabha
+SanskarTV.in	Sanskar TV	संस्कार
+SanskarUK.in	Sanskar UK	संस्कार UK
+SantvaniChannel.in	Santvani Channel
+SathiyamTV.in	Sathiyam TV
+SatsangTV.in	Satsang TV
+Shalom.in	Shalom
+ShekinahTV.in	Shekinah TV
+ShemarooJosh.in	Shemaroo Josh	Chumbak TV
+ShemarooMarathiBana.in	Shemaroo Marathi Bana
+ShemarooTV.in	Shemaroo TV
+ShemarooUmang.in	Shemaroo Umang
+ShikshaTV.in	Shiksha TV
+ShubhsandeshTV.in	Shubhsandesh TV
+ShubhTV.in	Shubh TV
+SiriKannada.in	Siri Kannada
+SirippoliTV.in	Sirippoli TV
+SongdewTV.in	Songdew TV
+Sonic.in	Sonic	Nickelodeon Sonic	Sonic Nickelodeon
+SonyAath.in	Sony Aath
+SonyBBCEarth.in	Sony BBC Earth
+SonyEntertainmentTelevision.in	Sony Entertainment Television	SET	Sony TV	SET India
+SonyEntertainmentTelevisionAsia.in	Sony Entertainment Television Asia	SET Asia	Sony Entertainment TV Asia
+SonyMarathi.in	Sony Marathi
+SonyMax.in	Sony Max	SET Max
+SonyMax1.in	Sony Max 1
+SonyMax2.in	Sony Max 2
+SonyPal.in	Sony Pal
+SonyPix.in	Sony Pix
+SonySAB.in	Sony SAB	SAB TV
+SonySABAsia.in	Sony SAB Asia
+SonySportsTen1.in	Sony Sports Ten 1	Sony Ten 1	Ten 1	Ten Sports
+SonySportsTen2.in	Sony Sports Ten 2	Sony Ten 2	Ten 2	Ten Action	Ten Action+
+SonySportsTen3Hindi.in	Sony Sports Ten 3 Hindi	Sony Sports Ten 3	Sony Ten 3	Ten 3	Ten Cricket
+SonySportsTen4.in	Sony Sports Ten 4	Sony Ten 4
+SonySportsTen5.in	Sony Sports Ten 5	Sony Six	Sony Max HD
+SonyWah.in	Sony Wah
+SonyYay.in	Sony Yay!
+SouthStation.in	South Station
+StarBharat.in	Star Bharat	Life OK	Star One
+StarGold.in	Star Gold
+StarGold2.in	Star Gold 2
+StarGoldRomance.in	Star Gold Romance	UTV Movies
+StarGoldSelect.in	Star Gold Select
+StarGoldThrills.in	Star Gold Thrills	UTV Action	Bindass Movies
+StarJalsha.in	Star Jalsha
+StarKiran.in	Star Kiran
+StarLifeAfrica.in	Star Life Africa
+StarMaa.in	Star Maa
+StarMaaGold.in	Star Maa Gold	Maa Gold	Maa Junior
+StarMaaMovies.in	Star Maa Movies	Maa Movies
+StarMaaMusic.in	Star Maa Music	Maa Music
+StarMovies.in	Star Movies
+StarMoviesSelect.in	Star Movies Select
+StarPlus.in	StarPlus	Star Plus
+StarPravah.in	Star Pravah
+StarSports1.in	Star Sports 1	Star Sports
+StarSports1Hindi.in	Star Sports 1 Hindi	Star Sports 3	Star Cricket
+StarSports1Kannada.in	Star Sports 1 Kannada
+StarSports1Tamil.in	Star Sports 1 Tamil	Star Sports 4
+StarSports1Telugu.in	Star Sports 1 Telugu
+StarSports2.in	Star Sports 2
+StarSports2Hindi.in	Star Sports 2 Hindi	Sports18 1
+StarSports2Kannada.in	Star Sports 2 Kannada	Star Sports First
+StarSports2Tamil.in	Star Sports 2 Tamil	Sports18 3
+StarSports2Telugu.in	Star Sports 2 Telugu	Sports18 2
+StarSports3.in	Star Sports 3
+StarSportsKhel.in	Star Sports Khel	Sports18 Khel
+StarSportsSelect1.in	Star Sports Select 1
+StarSportsSelect2.in	Star Sports Select 2
+StarSuvarna.in	Star Suvarna	Asianet Suvarna
+StarSuvarnaPlus.in	Star Suvarna Plus
+StarUtsav.in	Star Utsav
+StarUtsavMovies.in	Star Utsav Movies
+StarVijay.in	Star Vijay	Vijay TV	Golden Eagle Communication
+SubhavaarthaTV.in	Subhavaartha TV
+SubinTV.in	Subin TV
+SudarshanNews.in	Sudarshan News
+SunBangla.in	Sun Bangla
+SunGemini.in	Sun Gemini	Sun జెమినీ
+SunGeminiComedy.in	Sun Gemini Comedy	Sun జెమినీ Comedy
+SunGeminiLife.in	Sun Gemini Life	Sun జెమినీ Life	Gemini Life
+SunGeminiMovies.in	Sun Gemini Movies	Sun జెమినీ Movies
+SunGeminiMusic.in	Sun Gemini Music	Sun జెమినీ Music
+SunLife.in	Sun Life
+SunMarathi.in	Sun Marathi
+SunMusic.in	Sun Music
+SunNeo.in	Sun Neo
+SunNews.in	Sun News
+SunSurya.in	Sun Surya	Sun സൂര്യ	Surya TV	Surya
+SunSuryaComedy.in	Sun Surya Comedy	Sun സൂര്യ Comedy	Surya Comedy
+SunSuryaMovies.in	Sun Surya Movies	Sun സൂര്യ Movies	Surya Movies	Kiran TV
+SunSuryaMusic.in	Sun Surya Music	Sun സൂര്യ Music	Surya Music
+SunTV.in	Sun TV
+SunUdaya.in	Sun Udaya	ಸನ್‌ ಉದಯ	Udaya TV	Udaya
+SunUdayaComedy.in	Sun Udaya Comedy	Sun ಉದಯ Comedy	Udaya Comedy
+SunUdayaMovies.in	Sun Udaya Movies	Sun ಉದಯ Movies	Udaya Movies
+SunUdayaMusic.in	Sun Udaya Music	Sun ಉದಯ Music	Udaya Music	U2
+SuperHungama.in	Super Hungama	Marvel HQ	Disney XD	Toon Disney	Jetix
+SuriyanTV.in	Suriyan TV
+SVBC.in	SVBC	శ్రీ వేంకటేశ్వర భక్తి ఛానల్
+SVBC2.in	SVBC 2	ஶ்ரீ வேங்கடேஸ்வரா பக்தி சேனல்
+SVBC3.in	SVBC 3	ಶ್ರೀ ವೆಂಕಟೇಶ್ವರ ಭಕ್ತಿ ಚಾನೆಲ್
+SwadeshNews.in	Swadesh News
+SwarajExpressSMBC.in	Swaraj Express SMBC
+SwaraSagar.in	Swara Sagar
+TabbarHits.in	Tabbar Hits
+TamilJanam.in	Tamil Janam
+TarangMusic.in	Tarang Music	ତରଙ୍ଗ ମ୍ୟୁଜିକ୍
+TarangTV.in	Tarang TV	ତରଙ୍ଗ ଭିଜନ୍
+TataPlayBollywoodPremiere.in	Tata Play Bollywood Premiere	Tata Sky Bollywood Premiere
+TataSky4K.in	Tata Sky 4K
+TataSkyAradhana.in	Tata Sky Aradhana
+TataSkyBeauty.in	Tata Sky Beauty
+TataSkyIbaadat.in	Tata Sky Ibaadat
+TataSkyShortsTV.in	Tata Sky ShortsTV
+TimesNow.in	Times Now
+TimesNowNavbharat.in	Times Now Navbharat
+TimesNowWorld.in	Times Now World
+TLC.in	TLC
+TNews.in	T News
+TotalTVHaryana.in	Total TV Haryana
+Travelxp.in	Travelxp
+TravelxpTamil.in	Travelxp Tamil
+TV100.in	TV 100
+TV5Kannada.in	TV5 Kannada
+TV5News.in	TV5 News
+TV9Bangla.in	TV9 Bangla
+TV9Bharatvarsh.in	TV9 Bharatvarsh
+TV9Gujarati.in	TV9 Gujarati
+TV9Kannada.in	TV9 Kannada
+TV9Marathi.in	TV9 Marathi
+TV9Telugu.in	TV9 Telugu
+TwentyFourNews.in	Twenty Four News
+UltimateTV.in	Ultimate TV	UTV
+UniqueTV.in	Unique TV
+Unite8Sports1.in	Unite8 Sports 1
+Unite8Sports2.in	Unite8 Sports 2
+V6News.in	V6 News
+VanithaTV.in	Vanitha TV
+VasanthTV.in	Vasanth TV
+Vedic.in	Vedic
+VelichamTV.in	Velicham TV
+VendharTV.in	Vendhar TV
+VijaySuper.in	Vijay Super	Star Vijay Super
+VijayTakkar.in	Vijay Takkar	Star Vijay Takkar	Vijay Music	Star Vijay Music
+VijayTVAsia.in	Vijay TV Asia	Star Vijay
+VIPNews.in	VIP News
+VissaTV.in	Vissa TV
+VistaarNews.in	Vistaar News
+VTVNews.in	VTV News
+WION.in	WION	World is One News
+Zee24Ghanta.in	Zee 24 Ghanta
+Zee24Kalak.in	Zee 24 Kalak
+Zee24Taas.in	Zee 24 Taas
+ZeeAction.in	Zee Action	Action Cinema
+ZeeBangla.in	Zee Bangla
+ZeeBanglaSonar.in	Zee Bangla Sonar
+ZeeBharat.in	Zee Bharat	Zee Hindustan
+ZeeBiharJharkhand.in	Zee Bihar Jharkhand
+ZeeBiskope.in	Zee Biskope
+ZeeBollywood.in	Zee Bollywood
+ZeeBusiness.in	Zee Business
+ZeeCinema.in	Zee Cinema
+ZeeCinemalu.in	Zee Cinemalu
+ZeeClassic.in	Zee Classic
+ZeeComedyNation.in	Zee Comedy Nation	Z Comedy Nation
+ZeeDelhiNCRHaryana.in	Zee Delhi NCR Haryana
+ZeeDilSe.in	Zee Dil Se	Z Dil Se
+ZeeHorrorNights.in	Zee Horror Nights	Z Horror Nights
+ZeeKannada.in	Zee Kannada
+ZeeKannadaNews.in	Zee Kannada News	Zee ಕನ್ನಡ News	ಜೀ ಕನ್ನಡ ನ್ಯೂಸ್‌
+ZeeKeralam.in	Zee Keralam
+ZeeMadhyaPradeshChhattisgarh.in	Zee Madhya Pradesh Chhattisgarh
+ZeeMalayalamNews.in	Zee Malayalam News
+ZeeMarathi.in	Zee Marathi
+ZeeNews.in	Zee News
+ZeePower.in	Zee Power	Zee Picchar
+ZeePunjabHaryanaHimachal.in	Zee Punjab Haryana Himachal
+ZeePunjabi.in	Zee Punjabi
+ZeeRajasthan.in	Zee Rajasthan
+ZeeSarthak.in	Zee Sarthak
+ZeeSouthFlix.in	Zee South Flix	Z South Flix
+ZeeTalkies.in	Zee Talkies
+ZeeTamil.in	Zee Tamil
+ZeeTamilNews.in	Zee Tamil News	Zee தமிழ் News	ZEE News Tamil	ஜீ நியூஸ் தமிழ்
+ZeeTelugu.in	Zee Telugu
+ZeeTeluguNews.in	Zee Telugu News
+ZeeThirai.in	Zee Thirai
+ZeeTV.in	Zee TV
+ZeeUttarPradeshUttarakhand.in	Zee Uttar Pradesh/Uttarakhand
+ZeeYuva.in	Zee Yuva
+ZeeZest.in	Zee Zest
+Zing.in	Zing!
+ZingHome.in	Zing Home
+Zoom.in	Zoom

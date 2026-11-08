@@ -1,0 +1,13 @@
+2M.ma	2M	2M وطني	2M National
+2MMonde.ma	2M Monde	2M International
+AlAoula.ma	Al Aoula	قناة الأولى
+AlMaghribia.ma	Al Maghribia	المغربية
+AlOnsTV.ma	Al Ons TV	قناة الأنس
+Arryadia.ma	Arryadia	قناة الرياضية
+Assadissa.ma	Assadissa	قناة السادسة	The Sixth
+Athaqafia.ma	Athaqafia	Arrabiaa	قناة الثقافية	الثقافية
+ChadaTV.ma	Chada TV	أول قناة فنية بالمغرب
+LaayouneTV.ma	Laayoune TV	قناة العيون الجهوية
+Medi1TVAfrique.ma	Medi1TV Afrique	Medi 1 TV Afrique	مدي آن تي في
+TamazightTV.ma	Tamazight TV	ⵜⴰⵎⴰⵣⵉⵖⵜ	Amazigh TV	قناة تمازيغت	الأمازيغية
+TeleMaroc.ma	Tele Maroc	Télé Maroc

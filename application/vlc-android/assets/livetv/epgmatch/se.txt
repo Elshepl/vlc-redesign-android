@@ -1,0 +1,119 @@
+AryenTV.se	Aryen TV
+ATGLive.se	ATG Live
+AxessTV.se	Axess TV
+DiscoveryChannel.se	Discovery Channel
+DiscoveryPlusExtra1.se	Discovery+ Extra 1
+DiscoveryPlusExtra2.se	Discovery+ Extra 2
+DiscoveryPlusExtra3.se	Discovery+ Extra 3
+DiscoveryPlusExtra4.se	Discovery+ Extra 4
+DiscoveryPlusExtra5.se	Discovery+ Extra 5
+DiscoveryPlusExtra6.se	Discovery+ Extra 6
+DiscoveryPlusExtra7.se	Discovery+ Extra 7
+DiscoveryPlusExtra8.se	Discovery+ Extra 8
+eSportsTV.se	eSportsTV
+Godare.se	Godare
+History.se	History
+InvestigationDiscovery.se	Investigation Discovery
+Kanal10.se	Kanal 10
+Kanal11.se	Kanal 11
+Kanal5.se	Kanal 5
+Kanal9.se	Kanal 9
+Kunskapskanalen.se	Kunskapskanalen	SVTK
+NationalGeographic.se	National Geographic
+NationalGeographicWild.se	National Geographic Wild
+Nickelodeon.se	Nickelodeon
+PlutoTVAction.se	Pluto TV Action
+PlutoTVAlienInvasion.se	Pluto TV Alien Invasion
+PlutoTVBrittiskCrimeDrama.se	Pluto TV Brittisk Crime & Drama
+PlutoTVBudTerence.se	Pluto TV Bud & Terence
+PlutoTVBuskis.se	Pluto TV Buskis
+PlutoTVDanskeklassikere.se	Pluto TV Danske klassikere
+PlutoTVDokumentar.se	Pluto TV Dokumentar	Pluto TV Dokumentär
+PlutoTVFilm.se	Pluto TV Film
+PlutoTVFishing.se	Pluto TV Fishing
+PlutoTVHandboldHighlights.se	Pluto TV Handbold Highlights	Pluto TV Håndbold Highlights
+PlutoTVHandboldLive.se	Pluto TV Handbold Live	Pluto TV Håndbold Live
+PlutoTVHandbollHighlights.se	Pluto TV Handboll Highlights
+PlutoTVHandbollLive.se	Pluto TV Handboll Live
+PlutoTVHarlequin.se	Pluto TV Harlequin
+PlutoTVHorror.se	Pluto TV Horror
+PlutoTVHumor.se	Pluto TV Humor
+PlutoTVJohnWayne.se	Pluto TV John Wayne
+PlutoTVJuniorklubben.se	Pluto TV Juniorklubben
+PlutoTVKlassisketegnefilm.se	Pluto TV Klassiske tegnefilm
+PlutoTVKlassisketegnefilmer.se	Pluto TV Klassiske tegnefilmer
+PlutoTVKomedi.se	Pluto TV Komedi
+PlutoTVKomedie.se	Pluto TV Komedie
+PlutoTVKultfilm.se	Pluto TV Kultfilm
+PlutoTVKultfilmer.se	Pluto TV Kultfilmer
+PlutoTVMotor.se	Pluto TV Motor
+PlutoTVOvernaturlig.se	Pluto TV Overnaturlig
+PlutoTVParanormal.se	Pluto TV Paranormal
+PlutoTVRomantik.se	Pluto TV Romantik
+PlutoTVRomantikk.se	Pluto TV Romantikk
+PlutoTVSciFi.se	Pluto TV Sci-Fi
+PlutoTVSnooker900.se	Pluto TV Snooker 900
+PlutoTVSpace.se	Pluto TV Space
+PlutoTVSport.se	Pluto TV Sport
+PlutoTVStarTrek.se	Pluto TV Star Trek
+PlutoTVTecknadeklassiker.se	Pluto TV Tecknade klassiker
+PlutoTVTecknat.se	Pluto TV Tecknat
+PlutoTVTegnefilm.se	Pluto TV Tegnefilm
+PlutoTVTrueCrime.se	Pluto TV True Crime
+PlutoTVUngdomsserier.se	Pluto TV Ungdomsserier
+PlutoTVVarldskrigen.se	Pluto TV Varldskrigen	Pluto TV Världskrigen
+PlutoTVVerdenskrigene.se	Pluto TV Verdenskrigene
+PlutoTVWildWest.se	Pluto TV Wild West
+PodRadiopaPlutoTV.se	PodRadio pa Pluto TV	PodRadio på Pluto TV
+SFkanalen.se	SF-kanalen
+Sjuan.se	Sjuan
+SkyShowtime1.se	Sky Showtime 1
+SkyShowtime2.se	Sky Showtime 2
+SVT1.se	SVT1
+SVT2.se	SVT2
+SVT24.se	SVT24	24	svt 24
+SVTBarn.se	SVT Barn
+SVTBarnSVT24.se	SVT Barn/SVT24
+TLC.se	TLC
+TV10.se	TV10
+TV12.se	TV12
+TV3.se	TV3
+TV4.se	TV4
+TV4Fakta.se	TV4 Fakta
+TV4Film.se	TV4 Film
+TV4Fotboll.se	TV4 Fotboll
+TV4Guld.se	TV4 Guld
+TV4Hits.se	TV4 Hits	Hits
+TV4Hockey.se	TV4 Hockey
+TV4Motor.se	TV4 Motor
+TV4Sportkanalen.se	TV4 Sportkanalen
+TV4SportLive1.se	TV4 Sport Live 1
+TV4SportLive2.se	TV4 Sport Live 2
+TV4SportLive3.se	TV4 Sport Live 3
+TV4SportLive4.se	TV4 Sport Live 4
+TV4Stars.se	TV4 Stars	Stars
+TV4Tennis.se	TV4 Tennis
+TV6.se	TV6
+TV8.se	TV8
+TVVisionSverige.se	TV Vision Sverige
+VFilmAction.se	V Film Action
+VFilmFamily.se	V Film Family
+VFilmHits.se	V Film Hits
+VFilmPremiere.se	V Film Premiere
+ViasatExplore.se	Viasat Explore
+ViasatHistory.se	Viasat History
+ViasatNature.se	Viasat Nature
+VSeries.se	V Series
+VSport1.se	V Sport 1
+VSportExtra.se	V Sport Extra
+VSportFootball.se	V Sport Football
+VSportGolf.se	V Sport Golf
+VSportLive1.se	V Sport Live 1
+VSportLive2.se	V Sport Live 2
+VSportLive3.se	V Sport Live 3
+VSportLive4.se	V Sport Live 4
+VSportLive5.se	V Sport Live 5
+VSportMotor.se	V Sport Motor
+VSportPremium.se	V Sport Premium
+VSportUltraHD.se	V Sport Ultra HD
+VSportVinter.se	V Sport Vinter

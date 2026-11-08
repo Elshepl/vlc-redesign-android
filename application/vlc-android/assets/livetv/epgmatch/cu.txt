@@ -1,0 +1,10 @@
+CanalCaribe.cu	Canal Caribe
+CanalClave.cu	Canal Clave
+CanalEducativo.cu	Canal Educativo
+CanalEducativo2.cu	Canal Educativo 2
+CanalHabana.cu	Canal Habana
+Cubavision.cu	Cubavision	Cubavisión
+CubavisionInternacional.cu	Cubavision Internacional	Cubavisión Internacional
+CubavisionPlus.cu	Cubavision Plus	Cubavisión Plus
+Multivision.cu	Multivision	Multivisión
+TeleRebelde.cu	Tele Rebelde

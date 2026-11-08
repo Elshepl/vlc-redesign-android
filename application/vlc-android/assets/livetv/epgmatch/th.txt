@@ -1,0 +1,57 @@
+ALTV.th	ALTV	Active Learning Television	Channel 4
+AlureChannel.th	A'lure Channel
+AmarinTV.th	Amarin TV	อมรินทร์ทีวี เอชดี ช่อง 34
+Channel7.th	Channel 7	CH7 HD	Channel 7 HD	Bangkok Broadcasting & Television Company Limited Channel 7	สถานีโทรทัศน์ช่อง 7 เอชดี
+Channel8.th	Channel 8	CH8	Channel 8 Infinity
+DLTV1.th	DLTV 1	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV10.th	DLTV 10	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV11.th	DLTV 11	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV12.th	DLTV 12	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV13.th	DLTV 13	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV14.th	DLTV 14	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV15.th	DLTV 15	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV2.th	DLTV 2	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV3.th	DLTV 3	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV4.th	DLTV 4	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV5.th	DLTV 5	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV6.th	DLTV 6	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV7.th	DLTV 7	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV8.th	DLTV 8	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+DLTV9.th	DLTV 9	สถานีวิทยุโทรทัศน์การศึกษาทางไกลผ่านดาวเทียม
+ETV.th	ETV
+GMM25.th	GMM 25	GMM Channel	BiG
+JKN18.th	JKN 18	New 18	New	เจเคเอ็น 18 TV	Daily News TV
+Khongdee.th	Khongdee
+Mangorn.th	Mangorn
+MCOTHD.th	MCOT HD	บริษัท อสมท จำกัด (มหาชน)
+MySci.th	MySci
+NationTV.th	Nation TV	Nation Channel	เนชั่นแชนแนล
+NBT2HD.th	NBT 2 HD	เอ็นบีที 2 เอชดี
+PPTV.th	PPTV	PPTV HD	PPTV HD 36	Prasert Prasarttong-Osoth Television
+Samrujlok.th	Samrujlok
+ThainessTV.th	Thainess TV
+ThaiParliamentTelevision.th	Thai Parliament Television	TPTV
+ThaiPBS.th	Thai PBS	ITV	TITV	TPBS	TV Thai
+ThairathTV.th	Thairath TV	ไทยรัฐทีวี	Channel 32
+ThaiTVGlobalNetwork.th	Thai TV Global Network
+TNN16.th	TNN16	TNN24	News 24	UBC News	UTV News	IBC News
+TNN2.th	TNN 2
+True4U.th	True4U	True10	Shopping Network	SMEs Shop Channel	Shopping@Home
+TrueExploreLife.th	True Explore Life
+TrueExploreSci.th	True Explore Sci
+TrueFilm1.th	True Film 1
+TrueFilm2.th	True Film 2
+TrueFilmAsia.th	True Film Asia
+TrueMovieHits.th	True Movie Hits
+TruePremierFootball2.th	True Premier Football 2	ทรู พรีเมียร์ ฟุตบอล 2
+TruePremierFootball3.th	True Premier Football 3	ทรู พรีเมียร์ ฟุตบอล 3
+TruePremierFootball4.th	True Premier Football 4	ทรู พรีเมียร์ ฟุตบอล 4
+TruePremierFootball5.th	True Premier Football 5	ทรู พรีเมียร์ ฟุตบอล 5
+TrueSeries.th	True Series
+TrueSports2.th	TrueSports 2	ทรูสปอร์ต 2
+TrueSports5.th	TrueSports 5	ทรูสปอร์ต 5
+TrueSports7.th	TrueSports 7	ทรูสปอร์ต 7
+TrueThaiFilm.th	True Thai Film
+TrueXZyte.th	True X-Zyte
+TSports7.th	T Sports 7	T Sports Channel
+WorkpointTV.th	Workpoint TV	Workpoint 23	Workpoint 1 Creative TV

@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Čuva se samo na ovom uređaju, da biste nastavili gdje ste stali.</string>
     <string name="rd_ob_updates_help">Jednom dnevno traži noviju probnu verziju VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Titlovi s interneta: pretraživanje iz reproduktora na OpenSubtitles, Wizdom (hebrejski), YIFY Subtitles i Addic7ed, besplatno i bez računa.</item>
-        <item>Pronalaze se čak i za datoteke čiji naziv ništa ne govori. Po želji: Vaš vlastiti ključ za OpenSubtitles.com i automatsko pretraživanje, u Postavke › Podnaslovi.</item>
-        <item>TV uživo: traka s informacijama stane na telefon koji se drži uspravno.</item>
-        <item>Android TV: daljinski upravljač dolazi do svakog videozapisa i svakog gumba reproduktora.</item>
+        <item>Podnaslovi: SubSource (arapski), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 i Legendas.net s vašim besplatnim ključem ili računom. Svaka usluga u Postavke › Podnaslovi, sa svojim prekidačem.</item>
+        <item>Jezici za pretragu: uključite ili isključite svaki jezik podnaslova za bržu pretragu.</item>
+        <item>Računi za TV uživo: vaš Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR ili HDHomeRun i vodič Schedules Direct. Poslužitelji u vašoj mreži pronalaze se sami.</item>
+        <item>TV uživo: vodič pronađen automatski za kanale koji ga nemaju, kartica „Vodiči” s vodičima svih izvora i izvori vaše države na početku kataloga.</item>
+        <item>Ispravci: preuzeti podnaslovi spremaju se u vlastitu pohranu aplikacije (rušenje na sustavu Android 14), polja za zaporku skrivaju upisanu zaporku, fokus pri upravljanju daljinskim upravljačem, prijevod riječi „Država” na mnogim jezicima i riječ „zaporka” na arapskom.</item>
     </string-array>
     <string name="rd_subtitle_size">Veličina titlova</string>
     <string name="rd_cast_this_phone">Ovaj telefon</string>

@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Es desa només en aquest dispositiu, per continuar on ho vau deixar.</string>
     <string name="rd_ob_updates_help">Cerca una versió de prova més nova del VLC for Android un cop al dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtítols d\'internet: cerca des del reproductor a OpenSubtitles, Wizdom (hebreu), YIFY Subtitles i Addic7ed, de franc i sense compte.</item>
-        <item>Es troben fins i tot per a fitxers amb noms que no diuen res. Opcional: la vostra pròpia clau d\'OpenSubtitles.com i una cerca automàtica, a Paràmetres › Subtítols.</item>
-        <item>TV en directe: la barra d\'informació cap en un telèfon en vertical.</item>
-        <item>Android TV: el comandament arriba a cada vídeo i a cada botó del reproductor.</item>
+        <item>Subtítols: SubSource (àrab), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 i Legendas.net amb la vostra clau o el vostre compte gratuïts. Cadascun a Paràmetres › Subtítols, amb el seu interruptor.</item>
+        <item>Idiomes de cerca: activeu o desactiveu cada idioma de subtítols per a una cerca més ràpida.</item>
+        <item>Comptes de TV en directe: el vostre Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR o HDHomeRun, i la guia Schedules Direct. Els servidors de la vostra xarxa es troben automàticament.</item>
+        <item>TV en directe: una guia trobada automàticament per als canals que no en tenen, una pestanya Guies amb les guies de cada font i, primer, les fonts del vostre país al catàleg.</item>
+        <item>Correccions: subtítols desats a l\'emmagatzematge propi de l\'aplicació (una fallada a Android 14), camps de contrasenya ocults, el focus del comandament de la TV, la traducció de «País» en molts idiomes i la de «contrasenya» en àrab.</item>
     </string-array>
     <string name="rd_subtitle_size">Mida dels subtítols</string>
     <string name="rd_cast_this_phone">Aquest telèfon</string>

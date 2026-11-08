@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Huhifadhiwa kwenye kifaa hiki pekee, ili kuendelea ulipoishia.</string>
     <string name="rd_ob_updates_help">Hutafuta toleo jipya la majaribio la VLC for Android mara moja kwa siku.</string>
     <string-array name="rd_whats_new_items">
-        <item>Manukuu kutoka mtandaoni: tafuta moja kwa moja kutoka kwenye kicheza video katika OpenSubtitles, Wizdom (Kiebrania), YIFY Subtitles na Addic7ed, bila malipo na bila akaunti.</item>
-        <item>Hupatikana hata kwa faili ambazo majina yake hayasemi chochote. Hiari: ufunguo wako mwenyewe wa OpenSubtitles.com na utafutaji wa kiotomatiki, katika Mipangilio › Manukuu.</item>
-        <item>TV ya moja kwa moja: upau wa taarifa unatosha kwenye simu iliyoshikwa wima.</item>
-        <item>Android TV: rimoti sasa inafikia kila video na kila kitufe cha kicheza video.</item>
+        <item>Manukuu: SubSource (Kiarabu), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 na Legendas.net kwa ufunguo au akaunti yako mwenyewe ya bure. Kila huduma katika Mipangilio › Manukuu, na swichi yake.</item>
+        <item>Lugha za kutafuta: washa au zima kila lugha ya manukuu ili utafutaji uwe wa haraka zaidi.</item>
+        <item>Akaunti za TV ya moja kwa moja: Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR au HDHomeRun yako, na mwongozo wa Schedules Direct. Seva zilizo kwenye mtandao wako hupatikana zenyewe.</item>
+        <item>TV ya moja kwa moja: mwongozo unaopatikana wenyewe kwa chaneli zisizo na mwongozo, kichupo cha Miongozo chenye miongozo ya kila chanzo, na vyanzo vya nchi yako kwanza kwenye katalogi.</item>
+        <item>Marekebisho: manukuu yanahifadhiwa kwenye hifadhi ya programu yenyewe (programu iliacha kufanya kazi kwenye Android 14), sehemu za nenosiri zinaficha nenosiri, ulengaji wa rimoti ya TV, neno Nchi katika lugha nyingi na neno nenosiri kwa Kiarabu.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukubwa wa manukuu</string>
     <string name="rd_cast_this_phone">Simu hii</string>

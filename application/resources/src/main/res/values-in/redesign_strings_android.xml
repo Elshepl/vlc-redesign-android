@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Hanya disimpan di perangkat ini, untuk melanjutkan dari tempat terakhir Anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari build uji VLC for Android yang lebih baru sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtitle dari internet: cari langsung dari pemutar di OpenSubtitles, Wizdom (Ibrani), YIFY Subtitles, dan Addic7ed, gratis dan tanpa akun.</item>
-        <item>Ditemukan bahkan untuk file yang namanya tidak menjelaskan apa pun. Opsional: kunci OpenSubtitles.com milik Anda sendiri dan pencarian otomatis, di Pengaturan › Subtitle.</item>
-        <item>TV Langsung: bilah info muat di ponsel yang dipegang tegak.</item>
-        <item>Android TV: remote kini menjangkau setiap video dan setiap tombol pemutar.</item>
+        <item>Subtitle: SubSource (Arab), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24, dan Legendas.net dengan kunci gratis atau akun milik Anda sendiri. Masing-masing ada di Pengaturan › Subtitle, dengan sakelarnya.</item>
+        <item>Bahasa yang dicari: aktifkan atau nonaktifkan tiap bahasa subtitle agar pencarian lebih cepat.</item>
+        <item>Akun TV Langsung: Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR, atau HDHomeRun milik Anda, dan panduan Schedules Direct. Server di jaringan Anda ditemukan secara otomatis.</item>
+        <item>TV Langsung: panduan yang ditemukan otomatis untuk kanal yang belum punya, tab Panduan untuk panduan dari setiap sumber, dan sumber dari negara Anda tampil pertama di katalog.</item>
+        <item>Perbaikan: subtitle disimpan di penyimpanan aplikasi sendiri (aplikasi berhenti mendadak di Android 14), kolom kata sandi disembunyikan, fokus remote TV, terjemahan Negara di banyak bahasa, dan terjemahan kata sandi dalam bahasa Arab.</item>
     </string-array>
     <string name="rd_subtitle_size">Ukuran subtitel</string>
     <string name="rd_cast_this_phone">Ponsel ini</string>

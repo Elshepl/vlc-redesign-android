@@ -3,7 +3,9 @@
  * sources (M3U playlists and Xtream Codes accounts) with their guides, kept and read on a worker thread of its
  * own: the playlists and guides cached on disk, a guide indexed once (ready in a fraction of a second at the next
  * start), the channels with their guide matched by tvg-id then by name. Off (Settings > General), nothing of it
- * is loaded and what it held is let go.
+ * is loaded and what it held is let go. The accounts of TV servers and paid guides (TvAccounts) are sources too; a
+ * source's channels without a guide find one by themselves (EpgMatch, the free guides of the catalog), and the
+ * catalog's entries keep what the app saw of them (works, its channels; not answering after two failures).
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General
  * Public License as published by the Free Software Foundation; either version 2 of the License, or (at your
@@ -29,6 +31,8 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 private const val TAG = "VLC/LiveTv"
+/** the guide of an account given as JSON, read by TvAccounts.guide: "account:<source id>" */
+private const val ACCOUNT_GUIDE = "account:"
 
 const val KEY_IPTV_ENABLED = "iptv_enabled"
 const val KEY_IPTV_REFRESH = "iptv_refresh"
@@ -73,6 +77,18 @@ object LiveTv {
         var busy = false
         var hasVod = false
         var hasSeries = false
+        /** an account's sign-in refused (an update), its last Sign in / Test */
+        var refused = false
+        var check: TvCheck? = null
+        var checking = false
+        /** its account gives its guide as JSON (read by TvAccounts.guide) */
+        var jsonGuide = false
+        /** the automatic guide: looking, none found, when it was last looked for */
+        var autoBusy = false
+        var autoNone = false
+        var autoTried = 0L
+        /** the guide keys found for its channels (by ident: its tvg-id, else its name) and their "+1" */
+        var autoKeys: Map<String, Pair<List<String>, Int>> = emptyMap()
     }
 
     private class GuideData(val url: String, val sourceId: String) {
@@ -176,6 +192,20 @@ object LiveTv {
                 s.catalogId = o.optString("catalogId")
                 s.enabled = o.optBoolean("enabled", true)
                 s.useHeaderGuides = o.optBoolean("useHeaderGuides", true)
+                s.accountType = o.optString("accountType")
+                s.pin = TvNet.decrypt(o.optString("pin"))
+                s.key = TvNet.decrypt(o.optString("key"))
+                s.code = TvNet.decrypt(o.optString("code"))
+                s.guideUrl = TvNet.decrypt(o.optString("guideUrl"))
+                s.token = TvNet.decrypt(o.optString("token"))
+                s.userId = o.optString("userId")
+                s.tokenUntil = o.optLong("tokenUntil")
+                o.optJSONArray("guidesOff")?.let { e -> for (j in 0 until e.length()) s.guidesOff.add(e.optString(j)) }
+                o.optJSONObject("autoGuide")?.let { a ->
+                    val g = a.optJSONArray("guides")?.let { e -> (0 until e.length()).map { e.optString(it) } } ?: emptyList()
+                    s.autoGuide = AutoGuide(a.optInt("found"), a.optInt("total"), g, a.optLong("at"))
+                }
+                s.autoGuideOff = o.optBoolean("autoGuideOff")
                 if (s.id.isNotEmpty()) list.add(s)
             }
         } catch (e: Exception) {
@@ -197,6 +227,12 @@ object LiveTv {
                 put("epg", JSONArray(s.epg))
                 put("server", s.server); put("username", s.username); put("password", TvNet.encrypt(s.password))
                 put("catalogId", s.catalogId); put("enabled", s.enabled); put("useHeaderGuides", s.useHeaderGuides)
+                // an account's secrets as the password: encrypted, never in the settings' copy
+                put("accountType", s.accountType); put("pin", TvNet.encrypt(s.pin)); put("key", TvNet.encrypt(s.key))
+                put("code", TvNet.encrypt(s.code)); put("guideUrl", TvNet.encrypt(s.guideUrl)); put("token", TvNet.encrypt(s.token))
+                put("userId", s.userId); put("tokenUntil", s.tokenUntil); put("guidesOff", JSONArray(s.guidesOff))
+                s.autoGuide?.let { a -> put("autoGuide", JSONObject().put("found", a.found).put("total", a.total).put("guides", JSONArray(a.guides)).put("at", a.at)) }
+                put("autoGuideOff", s.autoGuideOff)
             })
         }
         dataDir.mkdirs()
@@ -207,14 +243,14 @@ object LiveTv {
     }
 
     /** A copy of a source's configuration (the dialog of the sources edits it). */
-    fun source(id: String): SourceConfig? = synchronized(lock) {
-        sources.firstOrNull { it.id == id }?.let { s ->
-            SourceConfig().also { c ->
-                c.id = s.id; c.name = s.name; c.kind = s.kind; c.url = s.url; c.epg.addAll(s.epg); c.server = s.server
-                c.username = s.username; c.password = s.password; c.catalogId = s.catalogId; c.enabled = s.enabled
-                c.useHeaderGuides = s.useHeaderGuides
-            }
-        }
+    fun source(id: String): SourceConfig? = synchronized(lock) { sources.firstOrNull { it.id == id }?.let { copyOf(it) } }
+
+    private fun copyOf(s: SourceConfig) = SourceConfig().also { c ->
+        c.id = s.id; c.name = s.name; c.kind = s.kind; c.url = s.url; c.epg.addAll(s.epg); c.server = s.server
+        c.username = s.username; c.password = s.password; c.catalogId = s.catalogId; c.enabled = s.enabled
+        c.useHeaderGuides = s.useHeaderGuides; c.accountType = s.accountType; c.pin = s.pin; c.key = s.key; c.code = s.code
+        c.guideUrl = s.guideUrl; c.token = s.token; c.userId = s.userId; c.tokenUntil = s.tokenUntil; c.guidesOff.addAll(s.guidesOff)
+        c.autoGuide = s.autoGuide; c.autoGuideOff = s.autoGuideOff
     }
 
     /** Adds a source (id empty) or saves one edited; its channels and guides are read at once. */
@@ -228,8 +264,19 @@ object LiveTv {
                 } else {
                     val i = sources.indexOfFirst { it.id == config.id }
                     if (i >= 0) {
-                        // the password stays when the field was left empty
-                        if (config.password.isEmpty()) config.password = sources[i].password
+                        // the password (PIN, key, code) stays when the field was left empty
+                        val old = sources[i]
+                        if (config.password.isEmpty()) config.password = old.password
+                        if (config.pin.isEmpty()) config.pin = old.pin
+                        if (config.key.isEmpty()) config.key = old.key
+                        if (config.code.isEmpty()) config.code = old.code
+                        // a sign-in of another account, or another server: its token let go
+                        if (config.server != old.server || config.username != old.username || config.password != old.password || config.key != old.key) {
+                            config.token = ""; config.userId = ""; config.tokenUntil = 0
+                        } else { config.token = old.token; config.userId = old.userId; config.tokenUntil = old.tokenUntil }
+                        if (config.guidesOff.isEmpty()) config.guidesOff.addAll(old.guidesOff)
+                        if (config.autoGuide == null) config.autoGuide = old.autoGuide
+                        config.autoGuideOff = config.autoGuideOff || old.autoGuideOff
                         sources[i] = config
                     } else sources.add(config)
                 }
@@ -300,6 +347,7 @@ object LiveTv {
         for (s in list) {
             val st = SourceState()
             loadPlaylist(s, false, st)
+            if (s.autoGuide != null) st.autoKeys = readAutoKeys(s.id)
             synchronized(lock) { states[s.id] = st }
         }
         loadGuides(false, emptyList())
@@ -332,21 +380,32 @@ object LiveTv {
         if (due.isNotEmpty() || hours > 0) refreshNow(due, false, guidesByAge = true)
     }
 
-    private fun playlistFile(s: SourceConfig) = File(sourceDir(s.id), if (s.kind == "xtream") "live.json" else "playlist.m3u")
+    private fun playlistFile(s: SourceConfig) = File(sourceDir(s.id), when {
+        s.kind == "xtream" -> "live.json"
+        s.kind == "account" && accountIsJson(s) -> "channels.json"
+        else -> "playlist.m3u"
+    })
+
+    /** an account whose channels come as JSON (not as an M3U) */
+    private fun accountIsJson(s: SourceConfig) = s.accountType in setOf("jellyfin", "emby", "nextpvr", "hdhomerun", "schedulesdirect")
 
     private fun refreshNow(ids: List<String>, force: Boolean, guidesByAge: Boolean = false) {
         for (id in ids) {
             if (quit.get()) return
             val cfg = synchronized(lock) { sources.firstOrNull { it.id == id && it.enabled } } ?: continue
-            val st = synchronized(lock) { states.getOrPut(id) { SourceState() } }
+            val st = synchronized(lock) { states.getOrPut(id) { SourceState().also { if (cfg.autoGuide != null) it.autoKeys = readAutoKeys(id) } } }
             st.busy = true; st.stage = "playlist"; st.received = 0
             publish()
-            loadPlaylist(cfg, true, st)
+            val ok = loadPlaylist(cfg, true, st)
             st.busy = false; st.stage = ""
+            // what the app saw of a catalog entry: works (its channels), else one more failure
+            if (cfg.catalogId.isNotEmpty()) setCatalogHealth(cfg.catalogId, ok && st.channels.isNotEmpty(), st.channels.size)
             publish()
         }
         loadGuides(true, if (force) ids else emptyList(), forced = force, byAge = guidesByAge || !force)
         rebuild()
+        // a source without a guide finds one by itself (unless the user took it away), once a day the others
+        for (id in ids) autoGuideIfDue(id)
     }
 
     private fun progress(id: String, stage: String, received: Long) {
@@ -359,6 +418,7 @@ object LiveTv {
         val dir = sourceDir(cfg.id).apply { mkdirs() }
         try {
             if (cfg.kind == "xtream") return loadXtream(cfg, download, st, dir)
+            if (cfg.kind == "account") return loadAccount(cfg, download, st, dir)
             val file = File(dir, "playlist.m3u")
             if (download || !file.exists()) {
                 try {
@@ -437,6 +497,78 @@ object LiveTv {
         return st.channels.isNotEmpty()
     }
 
+    /**
+     * An account's channels: from its server (an M3U kept as the playlist, or its channels as JSON), else from the
+     * cache. A refused sign-in is said on its row; a token it gave is kept (encrypted).
+     */
+    private fun loadAccount(cfg: SourceConfig, download: Boolean, st: SourceState, dir: File): Boolean {
+        val json = accountIsJson(cfg)
+        val file = File(dir, if (json) "channels.json" else "playlist.m3u")
+        val auth = TvAccounts.authOf(cfg.accountType, cfg.account())
+        if (download || !file.exists()) {
+            try {
+                val loaded = TvAccounts.load(cfg.accountType, cfg.account())
+                if (json) file.writeText(channelsJson(loaded.channels).toString()) else file.writeText(loaded.playlist)
+                File(dir, "account.json").writeText(JSONObject().put("guides", JSONArray(loaded.guides)).put("jsonGuide", loaded.jsonGuide).toString())
+                st.error = ""
+                st.refused = false
+                // its token (Jellyfin, Emby, NextPVR's session, HDHomeRun's DeviceAuth, Schedules Direct's)
+                if (loaded.token.isNotEmpty() && (loaded.token != cfg.token || loaded.userId != cfg.userId)) {
+                    synchronized(lock) {
+                        sources.firstOrNull { it.id == cfg.id }?.let {
+                            it.token = loaded.token; it.userId = loaded.userId.ifEmpty { it.userId }
+                            if (loaded.tokenUntil > 0) it.tokenUntil = loaded.tokenUntil
+                        }
+                    }
+                    saveConfig()
+                }
+            } catch (e: CancelledException) {
+                throw e
+            } catch (e: TvAccountException) {
+                st.refused = e.refused
+                st.error = if (e.refused) app.getString(org.videolan.vlc.R.string.rd_os_login_refused_check) else e.message ?: "?"
+                if (!file.exists()) return cfg.accountType == "schedulesdirect" && !e.refused
+            } catch (e: Exception) {
+                st.error = e.message ?: e.javaClass.simpleName
+                if (!file.exists()) return false
+            }
+        }
+        val info = try { JSONObject(File(dir, "account.json").readText()) } catch (e: Exception) { JSONObject() }
+        st.jsonGuide = info.optBoolean("jsonGuide", json)
+        val own = info.optJSONArray("guides")?.let { a -> (0 until a.length()).map { a.optString(it) } } ?: emptyList()
+        st.headerGuides = own + if (st.jsonGuide) listOf(ACCOUNT_GUIDE + cfg.id) else emptyList()
+        st.channels = if (!file.exists()) emptyList() else if (json) channelsOf(JSONObject(file.readText())) else {
+            val playlist = Xmltv.open(file).bufferedReader(Charsets.UTF_8).use { M3u.parse(it, cfg.url.ifEmpty { cfg.server }) }
+            // the player answers the server's sign-in from the address (the cached list keeps none)
+            if (auth != null) {
+                val host = TvAccounts.hostOf(if (cfg.accountType == "m3ulogin") cfg.url else cfg.server)
+                for (c in playlist.channels) if (TvAccounts.hostOf(c.url) == host) c.url = TvAccounts.withCredentials(c.url, auth.user, auth.password)
+            }
+            playlist.channels
+        }
+        st.playlistUpdated = if (file.exists()) file.lastModified() / 1000 else 0
+        return st.channels.isNotEmpty() || cfg.accountType == "schedulesdirect"
+    }
+
+    private fun channelsJson(list: List<Channel>) = JSONObject().put("channels", JSONArray().apply {
+        for (c in list) put(JSONObject().put("name", c.name).put("url", c.url).put("id", c.tvgId).put("logo", c.logo).put("group", c.group).put("number", c.number))
+    })
+
+    private fun channelsOf(o: JSONObject): List<Channel> {
+        val a = o.optJSONArray("channels") ?: return emptyList()
+        return (0 until a.length()).mapNotNull { a.optJSONObject(it) }.map { j ->
+            Channel().also { it.name = j.optString("name"); it.url = j.optString("url"); it.tvgId = j.optString("id"); it.logo = j.optString("logo"); it.group = j.optString("group"); it.number = j.optInt("number") }
+        }
+    }
+
+    /** The guides of a source: its playlist's, those the user added, those found for its channels; less those turned off. */
+    private fun guideUrlsOf(s: SourceConfig, st: SourceState?): List<String> {
+        val out = ArrayList<String>(s.epg)
+        if (s.useHeaderGuides || s.kind == "xtream" || s.kind == "account") st?.headerGuides?.let { out.addAll(it) }
+        s.autoGuide?.let { out.addAll(it.guides) }
+        return out.distinct().filter { it.isNotEmpty() && it !in s.guidesOff }
+    }
+
     private fun guideKeysOf(c: Channel): List<String> {
         val keys = LinkedHashSet<String>()
         if (c.tvgId.isNotEmpty()) keys.add(Xmltv.guideKey(c.tvgId))
@@ -463,11 +595,14 @@ object LiveTv {
             for (s in sources) {
                 if (!s.enabled) continue
                 val st = states[s.id] ?: continue
-                val urls = ArrayList(s.epg)
-                if (s.useHeaderGuides || s.kind == "xtream") urls.addAll(st.headerGuides)
-                for (u in urls) if (wanted.none { it.url == u }) wanted.add(Wanted(u, s.id))
-                for (c in st.channels) for (k in guideKeysOf(c)) filter.keys.add(k)
+                for (u in guideUrlsOf(s, st)) if (wanted.none { it.url == u }) wanted.add(Wanted(u, s.id))
+                for (c in st.channels) for (k in keysOf(s.id, st, c)) filter.keys.add(k)
             }
+            // a paid guide (Schedules Direct) is for the channels of every source: its programmes are named by them
+            if (sources.any { it.enabled && it.kind == "account" && it.accountType == "schedulesdirect" })
+                for (st in states.values) for (c in st.channels) filter.keys.add(Xmltv.guideKey(c.name))
+            // the guide ids the user gave channels
+            for (v in guideIds().values) Xmltv.guideKey(v).takeIf { it.isNotEmpty() }?.let { filter.keys.add(it) }
         }
         val days = guideDays()
         val hours = refreshHours()
@@ -489,7 +624,8 @@ object LiveTv {
             if (download && mine && (age < 0 || (forced && onlySources.isNotEmpty()) || (byAge && hours > 0 && age > hours * 3600L - 600))) {
                 progress(w.sourceId, "guide", 0)
                 try {
-                    TvNet.download(app, w.url, path, quit) { r, _ -> progress(w.sourceId, "guide", r) }
+                    if (w.url.startsWith(ACCOUNT_GUIDE)) accountGuide(w.sourceId, path, days)
+                    else TvNet.download(app, w.url, path, quit, guideAuthOf(w.sourceId, w.url)) { r, _ -> progress(w.sourceId, "guide", r) }
                 } catch (e: CancelledException) {
                     return
                 } catch (e: Exception) {
@@ -579,12 +715,12 @@ object LiveTv {
     /** The channels of every source in order, each with its guide (its sources' guides first). */
     private fun rebuild(loaded: Boolean = true) {
         val out = ArrayList<TvChannel>()
+        val guideIds = guideIds()
         synchronized(lock) {
             val ordered = ArrayList<GuideData>()
             for (s in sources) {
                 if (!s.enabled) continue
-                val urls = ArrayList(s.epg).apply { addAll(states[s.id]?.headerGuides ?: emptyList()) }
-                for (u in urls) guides[u]?.let { if (!ordered.contains(it)) ordered.add(it) }
+                for (u in guideUrlsOf(s, states[s.id])) guides[u]?.let { if (!ordered.contains(it)) ordered.add(it) }
             }
             var sequence = 0
             val used = HashSet<String>()
@@ -601,7 +737,9 @@ object LiveTv {
                         while (!used.add("$key#$n")) ++n
                         key = "$key#$n"
                     }
-                    val keys = guideKeysOf(c)
+                    val keys = keysOf(s.id, st, c, key)
+                    // a "+1" channel matched to its main one: the guide an hour later
+                    val shift = if (c.guideShiftSecs == 0) (st.autoKeys[identOf(c)]?.second ?: 0) * 3600 else 0
                     var found: List<Entry>? = null
                     var desc = ""
                     for (g in mine) {
@@ -614,7 +752,8 @@ object LiveTv {
                         }
                         if (!f.isNullOrEmpty()) { found = f; desc = g.descPath; break }
                     }
-                    out.add(TvChannel(key, s.id, c, if (c.number > 0) c.number else sequence, found, desc))
+                    val channel = if (shift != 0 && guideIds[key].isNullOrEmpty()) c.copy().also { it.guideShiftSecs = shift } else c
+                    out.add(TvChannel(key, s.id, channel, if (c.number > 0) c.number else sequence, found, desc))
                 }
             }
             ++revision
@@ -635,16 +774,385 @@ object LiveTv {
             for (s in sources) {
                 val st = states[s.id]
                 val mine = lastChannels.filter { it.sourceId == s.id }
-                val g = guides.values.filter { it.sourceId == s.id }
+                val urls = guideUrlsOf(s, st)
+                val g = urls.mapNotNull { guides[it] }
                 val error = st?.error?.ifEmpty { g.firstOrNull { it.error.isNotEmpty() && it.byKey.isEmpty() }?.error ?: "" } ?: ""
+                // every guide of the source, those turned off too
+                val all = (urls + s.guidesOff).distinct()
+                val own = st?.headerGuides ?: emptyList()
+                val found = s.autoGuide?.guides ?: emptyList()
+                val guideStatuses = all.map { u ->
+                    val d = guides[u]
+                    GuideStatus(u, when { u.startsWith(ACCOUNT_GUIDE) -> "account"; u in s.epg -> "added"; u in found -> "found"; u in own -> "playlist"; else -> "added" },
+                        u !in s.guidesOff, d?.byKey?.size ?: 0, d?.programmes ?: 0, d?.error ?: "", d?.updated ?: 0)
+                }
                 statuses.add(SourceStatus(s.id, s.name, s.kind, s.enabled, s.catalogId, mine.size, mine.count { it.hasGuide },
                     mine.maxOfOrNull { it.catchupDays } ?: 0, st?.busy == true, st?.stage ?: "", st?.received ?: 0, error,
-                    st?.playlistUpdated ?: 0, st?.hasVod == true, st?.hasSeries == true, s.epg.toList()))
+                    st?.playlistUpdated ?: 0, st?.hasVod == true, st?.hasSeries == true, s.epg.toList(), s.accountType,
+                    st?.refused == true, st?.check, st?.checking == true, s.autoGuide?.found ?: 0, s.autoGuide?.total ?: 0,
+                    st?.autoBusy == true, st?.autoNone == true, guideStatuses, if (s.kind == "account") s.server else ""))
             }
             for (g in guides.values) languages.addAll(g.languages)
         }
         _state.value = TvState(revision, isLoaded, lastChannels, statuses, languages)
     }
+
+    /* Accounts, guides, the automatic guide, the catalog's health */
+
+    /** a channel within its source: its tvg-id, else its name (as the automatic guide keeps its keys) */
+    private fun identOf(c: Channel) = if (c.tvgId.isNotEmpty()) "i:" + c.tvgId else "n:" + c.name
+
+    /** the keys a channel is looked for in the guides: the guide id the user gave it, else its own and those found for it */
+    private fun keysOf(sourceId: String, st: SourceState, c: Channel, channelKey: String = ""): List<String> {
+        val given = if (channelKey.isNotEmpty()) guideIds()[channelKey] else null
+        if (!given.isNullOrEmpty()) return listOf(Xmltv.guideKey(given))
+        val auto = st.autoKeys[identOf(c)]?.first ?: emptyList()
+        return if (auto.isEmpty()) guideKeysOf(c) else (guideKeysOf(c) + auto).distinct()
+    }
+
+    @Volatile private var guideIdsCache: Map<String, String>? = null
+
+    /** the guide ids the user gave channels (a channel's menu: Its guide id), by the channel's key */
+    fun guideIds(): Map<String, String> {
+        guideIdsCache?.let { return it }
+        val o = try { JSONObject(prefs.getString("guideIds", "{}")!!) } catch (e: Exception) { JSONObject() }
+        return o.keys().asSequence().associateWith { o.optString(it) }.filterValues { it.isNotEmpty() }.also { guideIdsCache = it }
+    }
+
+    fun setGuideId(channelKey: String, guideId: String) {
+        val map = guideIds().toMutableMap()
+        if (guideId.isBlank()) map.remove(channelKey) else map[channelKey] = guideId.trim()
+        guideIdsCache = map
+        prefs.edit { putString("guideIds", JSONObject(map as Map<*, *>).toString()) }
+        start()
+        post { loadGuides(false, emptyList()); rebuild() }
+    }
+
+    /** the account of a guide that asks for its sign-in (an M3U with a sign-in, Tvheadend) */
+    private fun guideAuthOf(sourceId: String, url: String): TvAuth? {
+        val s = synchronized(lock) { sources.firstOrNull { it.id == sourceId } } ?: return null
+        if (s.kind != "account" || url !in (synchronized(lock) { states[sourceId]?.headerGuides } ?: emptyList())) return null
+        return TvAccounts.authOf(s.accountType, s.account())
+    }
+
+    /** an account's JSON guide written as XMLTV where the guides' index reads it */
+    private fun accountGuide(sourceId: String, path: File, days: Int) {
+        val s = synchronized(lock) { sources.firstOrNull { it.id == sourceId }?.let { copyOf(it) } } ?: return
+        val channels = synchronized(lock) {
+            if (s.accountType == "schedulesdirect") states.filterKeys { k -> sources.any { it.id == k && it.enabled } }.values.flatMap { it.channels }
+            else states[sourceId]?.channels ?: emptyList()
+        }
+        val now = System.currentTimeMillis() / 1000
+        val a = s.account()
+        try {
+            val progs = TvAccounts.guide(s.accountType, a, channels, now - 3600 * 6, now + days.coerceAtMost(7) * 86400L)
+            val tmp = File(path.path + ".part")
+            tmp.bufferedWriter(Charsets.UTF_8).use { TvAccounts.writeXmltv(progs, it) }
+            if (!tmp.renameTo(path)) { path.delete(); tmp.renameTo(path) }
+            synchronized(lock) { states[sourceId]?.refused = false }
+        } catch (e: TvAccountException) {
+            synchronized(lock) { states[sourceId]?.let { if (e.refused) it.refused = true } }
+            throw java.io.IOException(e.message)
+        }
+        // a token it took (Schedules Direct's lasts a day)
+        if (a.token.isNotEmpty() && a.token != s.token) {
+            synchronized(lock) {
+                sources.firstOrNull { it.id == sourceId }?.let { it.token = a.token; it.userId = a.userId.ifEmpty { it.userId }; if (a.tokenUntil > 0) it.tokenUntil = a.tokenUntil }
+            }
+            saveConfig()
+        }
+    }
+
+    /** Sign in / Test of an account (a new one, or one added): its answer kept for its row; a token kept. */
+    fun checkAccount(config: SourceConfig, progress: (TvCheck) -> Unit, done: (TvCheck) -> Unit) {
+        start()
+        val id = config.id
+        synchronized(lock) { states[id]?.let { it.checking = true } }
+        publish()
+        Thread {
+            // (an empty secret of an account being edited: the one kept)
+            val kept = if (id.isNotEmpty()) source(id) else null
+            val a = config.account()
+            if (kept != null) {
+                if (a.password.isEmpty()) a.password = kept.password
+                if (a.pin.isEmpty()) a.pin = kept.pin
+                if (a.key.isEmpty()) a.key = kept.key
+                if (a.code.isEmpty()) a.code = kept.code
+            }
+            val r = TvAccounts.check(config.accountType, a, progress)
+            synchronized(lock) {
+                states[id]?.let { it.checking = false; it.check = r; it.refused = r.state == TvCheckState.WRONG || r.state == TvCheckState.REFUSED }
+                if (r.token.isNotEmpty()) sources.firstOrNull { it.id == id }?.let { it.token = r.token; it.userId = r.userId; it.tokenUntil = r.tokenUntil }
+            }
+            if (id.isNotEmpty() && r.token.isNotEmpty()) post { saveConfig() }
+            publish()
+            done(r)
+        }.start()
+    }
+
+    /** Sign out: an account's secrets and token forgotten (it stays, refused until signed in again). */
+    fun signOut(id: String) {
+        post {
+            synchronized(lock) {
+                sources.firstOrNull { it.id == id }?.let { it.password = ""; it.pin = ""; it.key = ""; it.code = ""; it.token = ""; it.userId = ""; it.tokenUntil = 0 }
+                states[id]?.let { it.check = null; it.refused = false }
+            }
+            saveConfig()
+            publish()
+        }
+    }
+
+    /** The TV servers of this network (TvDiscovery), not added yet. */
+    fun discover(done: (List<TvFound>) -> Unit) {
+        Thread {
+            // debug builds: the addresses the tests answer on too (the emulator's host)
+            val extra = if (BuildConfig.DEBUG) (settings.getString("rd_debug_discovery_hosts", "") ?: "").split(',').map { it.trim() }.filter { it.isNotEmpty() } else emptyList()
+            val ports = TvDiscovery.Ports.of(if (BuildConfig.DEBUG) settings.getString("rd_debug_discovery_ports", "") ?: "" else "")
+            val found = TvDiscovery.find(extra, extraPorts = ports)
+            val have = synchronized(lock) { sources.filter { it.kind == "account" }.map { it.server.trimEnd('/').lowercase() }.toSet() }
+            done(found.filter { it.address.lowercase() !in have })
+        }.start()
+    }
+
+    /* Guides: on/off, update, edit, remove */
+
+    fun setGuideOn(sourceId: String, url: String, on: Boolean) {
+        post {
+            synchronized(lock) { sources.firstOrNull { it.id == sourceId }?.let { if (on) it.guidesOff.remove(url) else if (url !in it.guidesOff) it.guidesOff.add(url) } }
+            saveConfig()
+            if (on) refreshNow(listOf(sourceId), true) else { loadGuides(false, emptyList()); rebuild() }
+        }
+    }
+
+    /** A guide the user added, or one found for the channels, taken away (one of the playlist's: turned off). */
+    fun removeGuide(sourceId: String, url: String) {
+        post {
+            synchronized(lock) {
+                sources.firstOrNull { it.id == sourceId }?.let { s ->
+                    when {
+                        s.epg.remove(url) -> {}
+                        s.autoGuide?.guides?.contains(url) == true -> s.autoGuide = s.autoGuide?.let { a -> AutoGuide(a.found, a.total, a.guides - url, a.at) }
+                        url !in s.guidesOff -> s.guidesOff.add(url)
+                    }
+                }
+            }
+            saveConfig()
+            loadGuides(false, emptyList())
+            rebuild()
+        }
+    }
+
+    fun replaceGuide(sourceId: String, old: String, new: String) {
+        post {
+            synchronized(lock) { sources.firstOrNull { it.id == sourceId }?.let { s -> val i = s.epg.indexOf(old); if (i >= 0) s.epg[i] = new.trim() else s.epg.add(new.trim()) } }
+            saveConfig()
+            refreshNow(listOf(sourceId), true)
+        }
+    }
+
+    /** a source's guides downloaded again now (Update of a guide) */
+    fun refreshGuides(sourceId: String) {
+        start()
+        post { loadGuides(true, listOf(sourceId), forced = true); rebuild() }
+    }
+
+    /* The catalog's health: what the app saw of an entry (works, its channels; not answering after two failures) */
+
+    fun catalogHealth(): Map<String, CatalogHealth> {
+        val o = try { JSONObject(prefs.getString("catalogHealth", "{}")!!) } catch (e: Exception) { JSONObject() }
+        return o.keys().asSequence().mapNotNull { k -> CatalogHealth.of(o.optJSONObject(k))?.let { k to it } }.toMap()
+    }
+
+    private fun setCatalogHealth(id: String, ok: Boolean, channels: Int) {
+        val o = try { JSONObject(prefs.getString("catalogHealth", "{}")!!) } catch (e: Exception) { JSONObject() }
+        o.put(id, CatalogHealth.next(CatalogHealth.of(o.optJSONObject(id)), ok, channels, System.currentTimeMillis() / 1000).toJson())
+        prefs.edit { putString("catalogHealth", o.toString()) }
+    }
+
+    /* The automatic guide (EpgMatch): a source's channels without a guide matched to iptv-org's database, the free
+     * guides of the catalog that carry them added for its countries */
+
+    @Volatile private var matchIndex: Set<String>? = null
+    private val matchTables = HashMap<String, EpgMatch.Table>()
+
+    /** the tables made from iptv-org's channels.json this week (the app's files), else the app's own */
+    private fun matchDir() = File(dataDir, "epgmatch")
+
+    private fun knownCountries(): Set<String> {
+        matchIndex?.let { return it }
+        val text = try {
+            File(matchDir(), "index.json").takeIf { it.exists() }?.readText() ?: app.assets.open("livetv/epgmatch/index.json").bufferedReader().use { it.readText() }
+        } catch (e: Exception) { "{}" }
+        val o = try { JSONObject(text).optJSONObject("countries") ?: JSONObject() } catch (e: Exception) { JSONObject() }
+        return o.keys().asSequence().toSet().also { matchIndex = it }
+    }
+
+    private fun matchTable(cc: String): EpgMatch.Table? = synchronized(matchTables) {
+        matchTables[cc] ?: try {
+            val f = File(matchDir(), "$cc.txt")
+            val text = if (f.exists()) f.readText() else app.assets.open("livetv/epgmatch/$cc.txt").bufferedReader().use { it.readText() }
+            EpgMatch.table(text, cc).also { matchTables[cc] = it }
+        } catch (e: Exception) { null }
+    }
+
+    /**
+     * iptv-org's channels.json (8 MB) and guides.json (25 MB: which channels a guide carries) read once a week into
+     * the tables, only the fields needed, on a network that isn't metered (Wi-Fi, Ethernet: the app's own tables
+     * meanwhile, those the Samsung TV app ships too).
+     */
+    private fun refreshMatchTables() {
+        val index = File(matchDir(), "index.json")
+        val tried = File(dataDir, "epgmatch-tried")
+        if (System.currentTimeMillis() - maxOf(index.lastModified(), tried.lastModified()) < 7 * 86400_000L) return
+        val cm = app.getSystemService(Context.CONNECTIVITY_SERVICE) as? android.net.ConnectivityManager
+        if (cm == null || cm.isActiveNetworkMetered) return
+        dataDir.mkdirs()
+        tried.writeText("")
+        val guidesFile = File(cacheDir, "guides.json")
+        val channelsFile = File(cacheDir, "channels.json")
+        try {
+            fun android.util.JsonReader.text(): String = if (peek() == android.util.JsonToken.STRING) nextString() else { skipValue(); "" }
+            TvNet.download(app, "https://iptv-org.github.io/api/guides.json", guidesFile, quit)
+            val carried = HashSet<String>()
+            android.util.JsonReader(guidesFile.bufferedReader(Charsets.UTF_8)).use { r ->
+                r.beginArray()
+                while (r.hasNext()) {
+                    r.beginObject()
+                    while (r.hasNext()) if (r.nextName() == "channel") r.text().takeIf { it.isNotEmpty() }?.let { carried.add(it) } else r.skipValue()
+                    r.endObject()
+                }
+                r.endArray()
+            }
+            guidesFile.delete()
+            if (carried.size < 1000) return
+            TvNet.download(app, "https://iptv-org.github.io/api/channels.json", channelsFile, quit)
+            val tables = EpgMatch.TableBuilder(carried)
+            android.util.JsonReader(channelsFile.bufferedReader(Charsets.UTF_8)).use { r ->
+                r.beginArray()
+                while (r.hasNext()) {
+                    var id = ""; var name = ""; var cc = ""; var closed = false
+                    val alt = ArrayList<String>()
+                    r.beginObject()
+                    while (r.hasNext()) {
+                        when (r.nextName()) {
+                            "id" -> id = r.text()
+                            "name" -> name = r.text()
+                            "country" -> cc = r.text()
+                            "alt_names" -> if (r.peek() == android.util.JsonToken.BEGIN_ARRAY) {
+                                r.beginArray(); while (r.hasNext()) r.text().takeIf { it.isNotEmpty() }?.let { alt.add(it) }; r.endArray()
+                            } else r.skipValue()
+                            "closed", "replaced_by" -> if (r.peek() == android.util.JsonToken.NULL) r.nextNull() else if (r.text().isNotEmpty()) closed = true
+                            else -> r.skipValue()
+                        }
+                    }
+                    r.endObject()
+                    tables.add(id, name, alt, cc, closed)
+                }
+                r.endArray()
+            }
+            channelsFile.delete()
+            if (tables.countries < 50) return
+            val dir = matchDir().apply { mkdirs() }
+            dir.listFiles()?.forEach { if (it.name.endsWith(".txt")) it.delete() }
+            val counts = JSONObject()
+            for ((c, file) in tables.files()) {
+                File(dir, "$c.txt").writeText(file.first)
+                counts.put(c, file.second)
+            }
+            File(dir, "index.json").writeText(JSONObject().put("countries", counts).put("source", "https://iptv-org.github.io/api/").toString())
+            synchronized(matchTables) { matchTables.clear() }
+            matchIndex = null
+        } catch (e: CancelledException) {
+            throw e
+        } catch (e: Exception) {
+            Log.i(TAG, "iptv-org's channels could not be read: ${e.javaClass.simpleName}")
+        } finally {
+            guidesFile.delete()
+            channelsFile.delete()
+        }
+    }
+
+    private fun autoGuideIfDue(id: String) {
+        val s = synchronized(lock) { sources.firstOrNull { it.id == id && it.enabled }?.let { copyOf(it) } } ?: return
+        if (s.autoGuideOff || s.kind == "account") return
+        val st = synchronized(lock) { states[id] } ?: return
+        if (st.channels.isEmpty()) return
+        val mine = synchronized(lock) { lastChannels.filter { it.sourceId == id } }
+        val noGuide = (s.epg + st.headerGuides).none { it !in s.guidesOff }
+        val daily = System.currentTimeMillis() - st.autoTried > 86400_000L
+        // none of its own, or found before: now (quietly the second); its guides cover a part: once a day, quietly
+        if (s.autoGuide != null || noGuide) autoGuide(id, quiet = s.autoGuide != null)
+        else if (daily && mine.count { it.hasGuide } < mine.size) autoGuide(id, quiet = true)
+    }
+
+    /** Finds a guide for a source's channels: all of them when it has none of its own, else those its guides don't cover. */
+    fun autoGuide(id: String, quiet: Boolean = false) {
+        start()
+        post {
+            val s = synchronized(lock) { sources.firstOrNull { it.id == id }?.let { copyOf(it) } } ?: return@post
+            val st = synchronized(lock) { states[id] } ?: return@post
+            if (st.autoBusy) return@post
+            st.autoBusy = true
+            publish()
+            try {
+                refreshMatchTables()
+                val own = (s.epg + st.headerGuides).filter { it !in s.guidesOff }
+                val covered = synchronized(lock) { lastChannels.filter { it.sourceId == id && it.hasGuide && it.channel.guideShiftSecs == 0 }.map { identOf(it.channel) }.toSet() }
+                val need = st.channels.filter { c -> own.isEmpty() || identOf(c) !in covered || st.autoKeys.containsKey(identOf(c)) }
+                val catalog = catalog().optJSONArray("sources")?.let { a -> (0 until a.length()).mapNotNull { a.optJSONObject(it) } } ?: emptyList()
+                val entry = catalog.firstOrNull { s.catalogId.isNotEmpty() && it.optString("id") == s.catalogId }
+                val entryCountries = entry?.optJSONArray("countries")?.let { a -> (0 until a.length()).map { a.optString(it) } } ?: emptyList()
+                val order = EpgMatch.countriesOf(need, entryCountries, TvCatalogRules.userCountry(), knownCountries()).take(6)
+                val tables = order.mapNotNull { cc -> matchTable(cc)?.let { cc to it } }.toMap()
+                val r = EpgMatch.match(need, tables, order)
+                val keys = HashMap<String, Pair<List<String>, Int>>()
+                need.forEachIndexed { i, c -> r.matches[i]?.let { m -> keys[identOf(c)] = EpgMatch.keys(m) to m.shift } }
+                st.autoKeys = keys
+                sourceDir(id).mkdirs()
+                File(sourceDir(id), "autoguide.json").writeText(JSONObject().apply {
+                    for ((k, v) in keys) put(k, JSONObject().put("keys", JSONArray(v.first)).put("shift", v.second))
+                }.toString())
+                val health = catalogHealth()
+                val guides = EpgMatch.guides(r.countries, catalog, own) { health[it]?.notAnswering == true }
+                synchronized(lock) {
+                    sources.firstOrNull { it.id == id }?.autoGuide = if (r.found > 0) AutoGuide(r.found, r.total, guides.map { it.url }, System.currentTimeMillis()) else null
+                }
+                st.autoNone = r.found == 0
+                st.autoTried = System.currentTimeMillis()
+                saveConfig()
+                st.autoBusy = false
+                loadGuides(true, listOf(id))
+                rebuild()
+                if (r.found > 0 && !quiet) message(app.getString(org.videolan.vlc.R.string.rd_tv_guide_found, r.found.toString(), r.total.toString()))
+            } finally {
+                st.autoBusy = false
+                publish()
+            }
+        }
+    }
+
+    /** the automatic guide taken away (Undo, Remove): not looked for again by itself */
+    fun removeAutoGuide(id: String) {
+        post {
+            synchronized(lock) {
+                sources.firstOrNull { it.id == id }?.let { it.autoGuide = null; it.autoGuideOff = true }
+                states[id]?.let { it.autoKeys = emptyMap(); it.autoNone = false }
+            }
+            File(sourceDir(id), "autoguide.json").delete()
+            saveConfig()
+            loadGuides(false, emptyList())
+            rebuild()
+        }
+    }
+
+    /** the keys found before, read with the source's cached channels */
+    private fun readAutoKeys(id: String): Map<String, Pair<List<String>, Int>> = try {
+        val o = JSONObject(File(sourceDir(id), "autoguide.json").readText())
+        o.keys().asSequence().associateWith { k ->
+            val e = o.optJSONObject(k)
+            (e?.optJSONArray("keys")?.let { a -> (0 until a.length()).map { a.optString(it) } } ?: emptyList()) to (e?.optInt("shift") ?: 0)
+        }
+    } catch (e: Exception) { emptyMap() }
 
     /* Answers for the interface */
 

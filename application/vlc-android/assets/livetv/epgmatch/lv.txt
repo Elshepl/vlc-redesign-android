@@ -1,0 +1,17 @@
+1Plus2.lv	1+2
+360TV.lv	360TV
+8TV.lv	8TV
+DiscoveryChannel.lv	Discovery Channel
+LatvijasSlagerkanals.lv	Latvijas Slagerkanals	Latvijas Šlāgerkanāls
+LTV1.lv	LTV1
+LTV7.lv	LTV7
+MovifyKino.lv	Movify Kino	Movify Кино
+MuzikasVideoKanals.lv	Muzikas Video Kanals	Mūzikas Video Kanāls
+Pingviins.lv	Pingviins	Pingvīns
+ReTV.lv	Re TV
+SeaTV.lv	Sea TV
+TV3.lv	TV3
+TV3Life.lv	TV3 Life
+TV3Mini.lv	TV3 Mini
+TV3Plus.lv	TV3 Plus	TV3+
+TV6.lv	TV6

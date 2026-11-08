@@ -1,0 +1,6 @@
+FUSIONTV.mq	FUSION TV	Canal 43
+KMT.mq	KMT	Kanal Martinique Télévision
+Martinique1ere.mq	Martinique 1ere	Martinique 1ère	Martinique La Première
+ViaATV.mq	ViaATV	ViàATV
+ZitataTV.mq	Zitata TV
+ZoukTV.mq	Zouk TV

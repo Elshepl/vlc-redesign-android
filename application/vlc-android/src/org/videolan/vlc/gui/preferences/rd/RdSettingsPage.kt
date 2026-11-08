@@ -141,6 +141,8 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
     private lateinit var settings: SharedPreferences
     private var subtitlesChanged = false
     private var needToRestartOnResume = false
+    private var services: RdSubtitleServices? = null
+    private var languages: RdSubtitleLanguages? = null
 
     private val pinCodeResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) openSub(PreferencesParentalControl())
@@ -148,6 +150,22 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
 
     override fun getXml() = page.xml
     override fun getTitleId() = page.title
+
+    /**
+     * The TV remote: the rows a little below (and above) the list laid out as well. A row of several controls (a
+     * subtitle service: its switch, its key, its buttons) moved the focus off the list's last laid-out row; the list
+     * then scrolled and recycled it, and the focus went back to the top of the screen. With the next rows there,
+     * the focus finds them and the list scrolls to them.
+     */
+    override fun onCreateLayoutManager(): androidx.recyclerview.widget.RecyclerView.LayoutManager =
+        object : androidx.recyclerview.widget.LinearLayoutManager(requireContext()) {
+            override fun calculateExtraLayoutSpace(state: androidx.recyclerview.widget.RecyclerView.State, extraLayoutSpace: IntArray) {
+                super.calculateExtraLayoutSpace(state, extraLayoutSpace)
+                val extra = height / 2
+                extraLayoutSpace[0] = maxOf(extraLayoutSpace[0], extra)
+                extraLayoutSpace[1] = maxOf(extraLayoutSpace[1], extra)
+            }
+        }
 
     private fun <T : Preference> pref(key: String): T? = findPreference(key)
 
@@ -201,25 +219,10 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
             it.entries = localePair.localeEntries
             it.entryValues = localePair.localeEntryValues
         }
-        pref<RdEditTextPreference>(org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_PASSWORD)?.let {
-            it.secret = true
-            it.setOnBindEditTextListener { field -> field.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD }
-        }
-        for (key in arrayOf(org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_KEY, org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_USER))
-            pref<RdEditTextPreference>(key)?.setOnBindEditTextListener { field ->
-                field.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-            }
-        // (nothing of VLC's own stands in for the user's account: an empty field reads empty)
-        for (key in arrayOf(org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_KEY, org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_USER, org.videolan.vlc.util.OnlineSubtitles.KEY_OSCOM_PASSWORD))
-            pref<RdEditTextPreference>(key)?.emptyText = "—"
-        pref<Preference>("rd_opensubtitles_help")?.setOnPreferenceClickListener {
-            try {
-                startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(org.videolan.vlc.util.OnlineSubtitles.OSCOM_KEY_PAGE)))
-            } catch (e: Exception) {
-                // (no browser, a TV: the address is in the text)
-            }
-            true
-        }
+        // the subtitle services, each with its switch, its key or account and its checks (RdSubtitleServices)
+        if (pref<Preference>(RdSubtitleServices.CATEGORY) != null) services = RdSubtitleServices(this).also { it.setup() }
+        // the languages they are asked for (RdSubtitleLanguages)
+        if (pref<Preference>(RdSubtitleLanguages.CATEGORY) != null) languages = RdSubtitleLanguages(this).also { it.build() }
         pref<ListPreference>("subtitles_presets")?.let { preset ->
             preset.value = "-1"
             preset.setOnPreferenceChangeListener { _, newValue -> applySubtitlePreset(newValue as String); false }
@@ -332,6 +335,8 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         val key = preference.key ?: return false
         val activity = requireActivity()
         if (org.videolan.vlc.gui.livetv.TvSettings.click(this, key)) return true
+        if (services?.click(key) == true) return true
+        if (languages?.click(key) == true) return true
         when (key) {
             // Library
             "directories" -> {
@@ -554,6 +559,12 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
         val activity = activity as? PreferencesActivity ?: return
         if (sharedPreferences == null || key == null) return
         org.videolan.vlc.gui.livetv.TvSettings.changed(activity, key)
+        // a service's switch or state (a check, a search): its row drawn again
+        if (key.startsWith("rd_sub_service")) services?.refresh()
+        // the preferred or the second language: in the languages to search; a language on or off: the services of
+        // one language say whether it is on
+        languages?.changed(key)
+        if (key == org.videolan.vlc.util.OnlineSubtitles.KEY_LANGUAGES) services?.refresh()
         when (key) {
             // General / Interface
             // the desktop switches its language at once: this screen now, the others as they come back

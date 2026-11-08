@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">仅保存在本设备上，用于从上次停下的地方继续。</string>
     <string name="rd_ob_updates_help">每天检查一次是否有更新的 VLC for Android 测试版。</string>
     <string-array name="rd_whats_new_items">
-        <item>来自互联网的字幕：直接在播放器中搜索 OpenSubtitles、Wizdom（希伯来语）、YIFY Subtitles 和 Addic7ed，免费且无需账户。</item>
-        <item>即使文件名看不出任何信息也能找到。可选：您自己的 OpenSubtitles.com 密钥和自动搜索，位于“设置 › 字幕”。</item>
-        <item>电视直播：竖握手机时信息栏也能完整显示。</item>
-        <item>Android TV：遥控器现在可以到达每个视频和播放器的每个按钮。</item>
+        <item>字幕：SubSource（阿拉伯语）、SubDL、Titlovi、Assrt、Jimaku、BetaSeries、Subs.ro、Napisy24 和 Legendas.net 使用您自己的免费密钥或账号。每个服务都在“设置 › 字幕”中，各有开关。</item>
+        <item>要搜索的语言：可单独开启或关闭每种字幕语言，让搜索更快。</item>
+        <item>电视直播账户：您的 Jellyfin、Emby、Tvheadend、NextPVR、Channels DVR 或 HDHomeRun，以及 Schedules Direct 节目指南。网络中的服务器会自动找到。</item>
+        <item>电视直播：为没有节目指南的频道自动找到节目指南，新的“节目指南”标签页汇集所有来源的节目指南，目录中您所在国家的来源排在最前。</item>
+        <item>修复：字幕保存在应用自己的存储空间中（Android 14 上曾崩溃）、密码栏隐藏输入内容、电视遥控器的焦点问题、多种语言中“国家”的译法，以及阿拉伯语中“密码”的译法。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕大小</string>
     <string name="rd_cast_this_phone">此手机</string>

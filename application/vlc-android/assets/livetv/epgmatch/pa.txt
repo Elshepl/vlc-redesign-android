@@ -1,0 +1,3 @@
+SerTV.pa	SerTV
+TVMax.pa	TVMax
+TVN.pa	TVN	Televisora Nacional

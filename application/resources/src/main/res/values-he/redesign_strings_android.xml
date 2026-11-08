@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">נשמר במכשיר הזה בלבד, כדי להמשיך מהמקום שבו הפסקת.</string>
     <string name="rd_ob_updates_help">מחפש גרסת בדיקה חדשה יותר של VLC for Android פעם ביום.</string>
     <string-array name="rd_whats_new_items">
-        <item>כתוביות מהאינטרנט: חיפוש מתוך הנגן ב־OpenSubtitles, ב־Wizdom לעברית, ב־YIFY Subtitles וב־Addic7ed, בחינם ובלי חשבון.</item>
-        <item>נמצאות גם לקבצים ששמם לא אומר כלום. לבחירתך: מפתח OpenSubtitles.com משלך וחיפוש אוטומטי, בהגדרות › כתוביות.</item>
-        <item>טלוויזיה חיה: פס המידע מתאים לטלפון שמוחזק לאורך.</item>
-        <item>ב־Android TV: השלט מגיע לכל סרטון ולכל כפתור בנגן.</item>
+        <item>כתוביות: SubSource לערבית, SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 ו־Legendas.net עם מפתח או חשבון חינמי משלך. כל אחד בהגדרות › כתוביות, עם מתג משלו.</item>
+        <item>שפות לחיפוש: מפעילים או מכבים כל שפת כתוביות, לחיפוש מהיר יותר.</item>
+        <item>חשבונות בטלוויזיה חיה: השרת שלך (Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR או HDHomeRun) והמדריך של Schedules Direct. שרתים ברשת שלך נמצאים אוטומטית.</item>
+        <item>טלוויזיה חיה: מדריך שנמצא אוטומטית לערוצים שאין להם מדריך, לשונית מדריכים עם המדריכים של כל מקור, והמקורות של המדינה שלך ראשונים בקטלוג.</item>
+        <item>תיקונים: כתוביות שהורדו נשמרות באחסון של היישום עצמו (קריסה ב־Android 14), שדות סיסמה מוסתרים, המיקוד של שלט הטלוויזיה, המילה \"מדינה\" בשפות רבות והמילה \"סיסמה\" בערבית.</item>
     </string-array>
     <string name="rd_fx_luma_spat">עוצמת בהירות מרחבית (0-254)</string>
     <string name="rd_fx_luma_temp">עוצמת בהירות זמנית (0-254)</string>

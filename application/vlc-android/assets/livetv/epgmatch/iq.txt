@@ -1,0 +1,35 @@
+AfaqTV.iq	Afaq TV	قناة آفاق الفضائية
+AlAyyamTV.iq	Al Ayyam TV
+AlEshraqTV.iq	Al Eshraq TV
+AlFallujahTV.iq	Al Fallujah TV
+AlForatTV.iq	Al Forat TV	قناة الفرات الفضائية
+AlghadeerTV.iq	Alghadeer TV	قناة الغدير الفضائية
+AlIraqia.iq	Al Iraqia	العراقيّة
+AlIraqiaNews.iq	Al Iraqia News
+AlNaeemTV.iq	Al-Naeem TV	قناة النعيم
+AlNujabaTV.iq	Al-Nujaba TV	قناة النجباء الفضائية
+AlRasheedTV.iq	Al Rasheed TV	قناة الرشيد الفضائية
+AlSalamTV.iq	Al Salam TV	السلام
+AlshaaerTV.iq	Alshaaer TV
+AlSharqiya.iq	Al Sharqiya	الشرقية
+AlSharqiyaNews.iq	Al Sharqiya News	الشرقية للأخبار
+Alsumaria.iq	Alsumaria	السومرية
+AltaleaaTV.iq	Altaleaa TV
+AmozhgaryTV.iq	Amozhgary TV	کەناڵی ئامۆژگاری
+AnwarTV2.iq	Anwar TV2	Al Anwar TV2	قناة الثانية الفضائية	قناة الانوار 2
+BangawazTV.iq	Bangawaz TV
+DijlahTV.iq	Dijlah TV	دجلة	قناة دجلة الفضائية
+ImamHusseinTV2.iq	Imam Hussein TV 2
+IraqFuture.iq	Iraq Future
+IraqNow.iq	Iraq Now
+KirkukTV.iq	Kirkuk TV
+Kurdistan24.iq	Kurdistan 24
+KurdistanTV.iq	Kurdistan TV	کوردستان تیڤی
+Kurdsat.iq	Kurdsat
+ManuChat.iq	Manu Chat
+MBCIraq.iq	MBC Iraq	إم بي سي العراق
+NRT4.iq	NRT 4
+PayamTV.iq	Payam TV
+RudawTV.iq	Rudaw TV	Rûdaw TV
+SalahalddinTV.iq	Salahalddin TV
+UTV.iq	UTV

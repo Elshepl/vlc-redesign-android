@@ -34,49 +34,36 @@
             android:summary="@string/rd_os_auto_help"
             android:title="@string/rd_os_auto_settings" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/rd_os_services">
+    <!-- the languages the services are asked for, each on or off, in the order of the results (RdSubtitleLanguages);
+         "Every other language too" off: only those, a faster search -->
+    <PreferenceCategory
+        android:key="rd_sub_langs"
+        android:title="@string/rd_os_langs">
+        <Preference
+            android:key="rd_sub_langs_add"
+            android:persistent="false"
+            android:title="@string/rd_os_add_language" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="rd_sub_every_other"
+            android:summary="@string/rd_os_fewer_faster"
+            android:title="@string/rd_os_every_other" />
+    </PreferenceCategory>
+    <!-- one row per service, made by RdSubtitleServices (OnlineSubtitles.providers): its switch, its key or account
+         (kept encrypted, out of the exported settings), Test or Sign in, Remove; Add a service brings one back -->
+    <PreferenceCategory
+        android:key="rd_sub_services"
+        android:title="@string/rd_os_services">
         <Preference
             android:key="rd_sub_services_help"
+            android:persistent="false"
             android:selectable="false"
             android:summary="@string/rd_os_services_help" />
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="rd_sub_service_opensubtitles"
-            android:summary="@string/rd_os_svc_opensubtitles"
-            android:title="@string/rd_os_name_opensubtitles" />
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="rd_sub_service_wizdom"
-            android:summary="@string/rd_os_svc_wizdom"
-            android:title="@string/rd_os_name_wizdom" />
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="rd_sub_service_addic7ed"
-            android:summary="@string/rd_os_svc_addic7ed"
-            android:title="@string/rd_os_name_addic7ed" />
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="rd_sub_service_yify"
-            android:summary="@string/rd_os_svc_yify"
-            android:title="@string/rd_os_name_yify" />
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="rd_sub_service_opensubtitlescom"
-            android:summary="@string/rd_os_svc_oscom"
-            android:title="@string/rd_os_name_oscom" />
-        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
-            android:key="rd_opensubtitles_api_key"
-            android:title="@string/rd_os_key" />
-        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
-            android:key="rd_opensubtitles_username"
-            android:title="@string/rd_os_username" />
-        <org.videolan.vlc.gui.preferences.rd.RdEditTextPreference
-            android:key="rd_opensubtitles_password"
-            android:title="@string/rd_os_password" />
-        <org.videolan.vlc.gui.preferences.rd.RdActionPreference
-            android:key="rd_opensubtitles_help"
-            android:summary="@string/rd_os_key_help"
-            android:title="@string/rd_os_key_how" />
+        <Preference
+            android:key="rd_sub_services_add"
+            android:persistent="false"
+            android:title="@string/rd_os_add_service"
+            app:isPreferenceVisible="false" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/rd_sec_loading_subtitles">
         <CheckBoxPreference

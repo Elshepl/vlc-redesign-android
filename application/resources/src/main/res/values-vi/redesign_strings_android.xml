@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Chỉ lưu trên thiết bị này, để tiếp tục từ chỗ bạn đã dừng.</string>
     <string name="rd_ob_updates_help">Mỗi ngày kiểm tra một lần xem có bản thử nghiệm mới hơn của VLC for Android không.</string>
     <string-array name="rd_whats_new_items">
-        <item>Phụ đề từ internet: tìm ngay trong trình phát trên OpenSubtitles, Wizdom (tiếng Do Thái), YIFY Subtitles và Addic7ed, miễn phí và không cần tài khoản.</item>
-        <item>Tìm được cả cho những tệp có tên không nói lên điều gì. Tùy chọn: khóa OpenSubtitles.com của riêng bạn và tìm kiếm tự động, trong Thiết lập › Phụ đề.</item>
-        <item>TV trực tiếp: thanh thông tin vừa với điện thoại cầm dọc.</item>
-        <item>Android TV: điều khiển từ xa nay tới được mọi video và mọi nút của trình phát.</item>
+        <item>Phụ đề: SubSource (tiếng Ả Rập), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 và Legendas.net với khóa miễn phí hoặc tài khoản của riêng bạn. Mỗi dịch vụ đều có trong Thiết lập › Phụ đề, kèm công tắc riêng.</item>
+        <item>Ngôn ngữ cần tìm: bật hoặc tắt từng ngôn ngữ phụ đề để tìm nhanh hơn.</item>
+        <item>Tài khoản TV trực tiếp: Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR hoặc HDHomeRun của bạn, và hướng dẫn chương trình Schedules Direct. Máy chủ trong mạng của bạn được tự động tìm thấy.</item>
+        <item>TV trực tiếp: tự tìm hướng dẫn chương trình cho các kênh chưa có, thẻ Hướng dẫn chứa hướng dẫn của mọi nguồn, và danh mục hiện các nguồn của quốc gia bạn trước.</item>
+        <item>Sửa lỗi: phụ đề lưu trong bộ nhớ riêng của ứng dụng (lỗi dừng đột ngột trên Android 14), ô mật khẩu được che, tiêu điểm của điều khiển từ xa TV, từ dịch cho Quốc gia trong nhiều ngôn ngữ và từ dịch cho mật khẩu trong tiếng Ả Rập.</item>
     </string-array>
     <string name="rd_subtitle_size">Cỡ phụ đề</string>
     <string name="rd_cast_this_phone">Điện thoại này</string>

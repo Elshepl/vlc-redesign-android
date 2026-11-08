@@ -1,0 +1,14 @@
+BahiaTV.dz	Bahia TV	قناة الباهية
+EchoroukNews.dz	Echorouk News	الشروق الإخبارية
+EchoroukTV.dz	Echorouk TV	الشروق
+ElBiladTV.dz	El Bilad TV	البلاد تيفي
+ElHayatTV.dz	El Hayat TV	قناة الحياة
+EnnaharTV.dz	Ennahar TV	النهار تي في
+SamiraTV.dz	Samira TV	سميرة تي في
+TV2.dz	TV2	Canal Algérie	الجزائر تي في
+TV3.dz	TV3	الجزائرية الثالثة	El Ikhbariya	الجزائرية الإخبارية	Algeria 3	A3
+TV4.dz	TV4	Tamazight TV	ⵜⴰⵎⴰⵣⵉⵖⵜ	الجزائرية الرابعة
+TV5.dz	TV5	الجزائرية الخامسة	Coran TV	قناة القرآن الكريم
+TV6.dz	TV6	الجزائرية السادسة	Youth channel	الشبابية
+TV7.dz	TV7	الجزائرية السابعة	El maarifa TV
+TV8.dz	TV8	الجزائرية الثامنة	El-Dhakira TV

@@ -1,0 +1,188 @@
+20.it	20	20Mediaset
+7Gold.it	7 Gold
+ACISportTV.it	ACI Sport TV
+AlmaTV.it	Alma TV
+AntennaTre.it	Antenna Tre	A3
+ArteInvestimenti.it	Arte Investimenti
+BeJoykids.it	BeJoy.kids	BeJoy
+BikeChannel.it	Bike Channel	BIKE	Bike Smart Mobility
+BizzarroMovies.it	Bizzarro Movies
+Blaze.it	Blaze
+Boing.it	Boing
+BoingPlus.it	Boing Plus	Pop
+Boomerang.it	Boomerang
+ByoBlu.it	ByoBlu	Canale 262
+CacciaePesca.it	Caccia e Pesca
+CameradeiDeputati.it	Camera dei Deputati
+Canale5.it	Canale 5	Canale 10	Telemilano
+CanaleItalia.it	Canale Italia
+CanaleItalia83.it	Canale Italia 83
+CanaleItalia84.it	Canale Italia 84
+Cartoonito.it	Cartoonito
+CartoonNetwork.it	Cartoon Network
+CentoXCentoTV.it	CentoXCento TV
+Cielo.it	Cielo
+Cine34.it	Cine34
+ClassCNBC.it	Class CNBC	CFN-CNBC	CFN
+ClassTVModa.it	Class TV Moda
+ComedyCentral.it	Comedy Central
+DeAJunior.it	DeA Junior
+DeAKids.it	DeA Kids
+DeejayTV.it	Deejay TV
+DiscoveryChannel.it	Discovery Channel
+DMAX.it	DMAX
+DonnaTV.it	Donna TV
+EQUtv.it	EQUtv
+EspansioneTV.it	Espansione TV
+ExplorerHDChannel.it	Explorer HD Channel
+Focus.it	Focus
+FoodNetwork.it	Food Network
+Frisbee.it	Frisbee
+GamberoRossoChannel.it	Gambero Rosso Channel	Gambero Rosso
+Giallo.it	Giallo	CanalOne	QOOB	FLUX	XXXX
+GM24.it	GM24	HSE24	Canale D	Home Shopping Europe	Home Order Television
+GOTVCanale163.it	GO-TV Canale 163
+HGTV.it	HGTV
+History.it	History	The History Channel
+HorseTV.it	Horse TV
+InterTV.it	Inter TV	Inter Channel
+Iris.it	Iris
+Italia1.it	Italia 1
+Italia2.it	Italia 2
+ItaliaChannel.it	Italia Channel
+ItalianFishingTV.it	Italian Fishing TV
+Juwelo.it	Juwelo	Juwelo TV
+K2.it	K2	K-2
+KissKissTV.it	Kiss Kiss TV
+La5.it	La5
+LA7.it	LA7	Telemontecarlo
+La7Cinema.it	La7 Cinema
+LaCTV.it	La C TV
+LazioStyleChannel.it	Lazio Style Channel
+MarcoPoloTravelTV.it	MarcoPolo Travel TV
+MediasetItalia.it	Mediaset Italia
+MilanTV.it	Milan TV	Milan Channel
+MotorTrend.it	Motor Trend
+MTV.it	MTV	MTV Next
+MTVMusic.it	MTV Music	MTV+
+NauticalChannel.it	Nautical Channel
+Nickelodeon.it	Nickelodeon
+NickJr.it	Nick Jr.
+Nove.it	Nove	Deejay TV - Nove	Deejay TV
+OrlerTV.it	Orler TV
+PadrePioTV.it	Padre Pio TV
+ParolediVita.it	Parole di Vita
+PescaeCaccia.it	Pesca e Caccia
+QVC.it	QVC
+R101TV.it	R101 TV
+Radio105TV.it	Radio 105 TV
+Radiofreccia.it	Radiofreccia	RTL Rock
+RadioItaliaTrendTV.it	Radio Italia Trend TV	Radio Italia Rap TV
+RadioItaliaTV.it	Radio Italia TV
+RadioMonteCarloTV.it	Radio Monte Carlo TV
+RadioNorbaTV.it	Radio Norba TV	Radionorba TV
+RadioTicinoChannel.it	Radio Ticino Channel
+RadioZeta.it	Radio Zeta
+Rai1.it	Rai 1	Rai Uno	Rete 1	TV1	Programma Nazionale	ReteTV
+Rai2.it	Rai 2	RAI Due
+Rai3.it	Rai 3	Rai Tre	Third Network	Rete 3
+Rai4.it	Rai 4
+Rai5.it	Rai 5
+RaiGulp.it	Rai Gulp
+RaiItalia.it	Rai Italia
+RaiMovie.it	Rai Movie	RaiSat Cinema	RaiSat Cinema World
+RaiNews24.it	Rai News 24	Rai News
+RaiPremium.it	Rai Premium	Rai Sat Prem1um	Rai Sat Fiction
+RaiSport.it	Rai Sport	Rai Sport 1	Rai Sport +	Rai Sport Più	Rai Sport Satellite
+RaiStoria.it	Rai Storia	Rai Edu 2
+RaiYoyo.it	Rai Yoyo	Rai YoYo	RaiSat YoYo
+RDSSocialTV.it	RDS Social TV
+RealTime.it	Real Time
+Rete4.it	Rete 4
+Rete55.it	Rete 55
+RTL1025Caliente.it	RTL 102.5 Caliente	RTL 102.5 Romeo&Juliet	RTL1025RomeoJuliet
+RTL1025TV.it	RTL 102.5 TV	RTL 102.5 Radio and television	RTL 102.5 Hit Channel	Hit Channel	102.5 Hit Channel
+SCT.it	SCT
+SenatoTV.it	Senato TV
+Sextosenso.it	Sextosenso	Sext6senso
+SkyAdventure.it	Sky Adventure
+SkyArte.it	Sky Arte
+SkyAtlantic.it	Sky Atlantic
+SkyAtlanticMaratone.it	Sky Atlantic Maratone	Sky Atlantic +1 HD
+SkyCalcio10.it	Sky Calcio 10
+SkyCalcio11.it	Sky Calcio 11
+SkyCinemaAction.it	Sky Cinema Action	Sky Cinema Max
+SkyCinemaCollection.it	Sky Cinema Collection	Sky Cinema Hits
+SkyCinemaComedy.it	Sky Cinema Comedy
+SkyCinemaDrama.it	Sky Cinema Drama
+SkyCinemaDue.it	Sky Cinema Due	Sky Cinema Cult	Cult	Cult Network Italia
+SkyCinemaFamily.it	Sky Cinema Family
+SkyCinemaRomance.it	Sky Cinema Romance	Sky Cinema Passion
+SkyCinemaSuspense.it	Sky Cinema Suspense
+SkyCinemaUno.it	Sky Cinema Uno	Sky Cinema 1
+SkyClassica.it	Sky Classica	Classica HD
+SkyCrime.it	Sky Crime
+SkyDocumentaries.it	Sky Documentaries	Sky Documentaries HD
+SkyInvestigation.it	Sky Investigation	Sky Investigation HD
+SkyMeteo24.it	Sky Meteo 24
+SkyNature.it	Sky Nature	Sky Nature HD
+SkyPrimafila1.it	Sky Primafila 1
+SkyPrimafila2.it	Sky Primafila 2
+SkyPrimafila3.it	Sky Primafila 3
+SkyPrimafila4.it	Sky Primafila 4
+SkyPrimafila5.it	Sky Primafila 5
+SkySerie.it	Sky Serie	Sky Serie HD
+SkySport24.it	Sky Sport 24
+SkySport251.it	Sky Sport 251
+SkySport252.it	Sky Sport 252
+SkySport253.it	Sky Sport 253
+SkySport254.it	Sky Sport 254
+SkySport255.it	Sky Sport 255
+SkySport256.it	Sky Sport 256
+SkySport257.it	Sky Sport 257
+SkySport258.it	Sky Sport 258
+SkySport259.it	Sky Sport 259
+SkySport4K.it	Sky Sport 4K
+SkySportAction.it	Sky Sport Action
+SkySportArena.it	Sky Sport Arena
+SkySportBasket.it	Sky Sport Basket	Sky Sport NBA
+SkySportCalcio.it	Sky Sport Calcio	Sky Sport Serie A	Sky Supercalcio
+SkySportF1.it	Sky Sport F1
+SkySportFootball.it	Sky Sport Football
+SkySportGolf.it	Sky Sport Golf
+SkySportLegend.it	Sky Sport Legend
+SkySportMax.it	Sky Sport Max
+SkySportMotoGP.it	Sky Sport Moto GP
+SkySportTennis.it	Sky Sport Tennis	Sky Sport Collection	Sky Sport Golf
+SkySportUno.it	Sky Sport Uno
+SkyTG24PrimoPiano.it	Sky TG24 Primo Piano
+SkyUno.it	Sky Uno
+Sportitalia.it	Sportitalia
+SportitaliaSolocalcio.it	Sportitalia Solocalcio
+Super.it	Super!
+SuperTennis.it	SuperTennis
+Telecupole.it	Telecupole
+Telelombardia.it	Telelombardia
+Telenova.it	Telenova
+TelepaceNews.it	Telepace News
+Telesardegna.it	Telesardegna
+TGCom24.it	TGCom24
+TGNorba24.it	TG Norba 24
+TopCalcio24.it	Top Calcio 24
+TopCrime.it	Top Crime	For You	ME	Mediashopping
+TrentinoTV.it	Trentino TV
+TRMh24.it	TRM h24
+TV2000.it	TV2000	SAT2000
+TV8.it	TV8	MTV8	MTV
+TVAVicenza.it	TVA Vicenza
+Twentyseven.it	Twentyseven	27Twentyseven
+UniNettunoUniversityTV.it	UniNettuno University TV	Rai Nettuno Sat Uno	Rai Sat Nettuno Lezioni Universitarie
+Value24TV.it	Value 24 TV
+VH1.it	VH1
+Videolina.it	Videolina
+VirginRadioTV.it	Virgin Radio TV
+WellTV.it	Well TV
+ZonaDAZN.it	Zona DAZN
+ZonaDAZN2.it	Zona DAZN 2
+ZonaDAZN3.it	Zona DAZN 3
+ZonaDAZN4.it	Zona DAZN 4

@@ -247,6 +247,10 @@ class TvFragment : BaseFragment(), Filterable {
         m.menu.add(0, 3, 3, if (LiveTv.isFavorite(c.key)) R.string.rd_tv_unfavorite else R.string.rd_tv_favorite)
         m.menu.add(0, 4, 4, R.string.rd_tv_show_in_guide)
         m.menu.add(0, 5, 5, R.string.rd_tv_whats_on).isEnabled = now != null
+        // its id in the guide, given by the user (it wins over the matching), and forgotten
+        val given = LiveTv.guideIds()[c.key]
+        m.menu.add(0, 6, 6, R.string.rd_tv_its_guide_id)
+        if (!given.isNullOrEmpty()) m.menu.add(0, 7, 7, R.string.rd_tv_forget_guide_id)
         m.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 1 -> play(c)
@@ -254,10 +258,34 @@ class TvFragment : BaseFragment(), Filterable {
                 3 -> LiveTv.toggleFavorite(c.key)
                 4 -> { setView("guide"); guide.post { guide.showChannel(c.key) } }
                 5 -> now?.let { TvProgrammeDialog.show(ctx, c, it) }
+                6 -> editGuideId(c)
+                7 -> LiveTv.setGuideId(c.key, "")
             }
             true
         }
         m.show()
+    }
+
+    /** "The id of BBC One in the guide": the channel's id as its guide names it ("BBCOne.uk") */
+    private fun editGuideId(c: TvChannel) {
+        val ctx = requireContext()
+        val field = ctx.tvField(c.channel.tvgId.ifEmpty { "BBCOne.uk" }).apply {
+            setText(LiveTv.guideIds()[c.key] ?: "")
+            textDirection = View.TEXT_DIRECTION_LTR
+        }
+        val box = android.widget.LinearLayout(ctx).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            setPadding(ctx.tvPx(20f), ctx.tvPx(8f), ctx.tvPx(20f), 0)
+            addView(ctx.tvText(getString(R.string.rd_tv_guide_id_of, c.name), 13f, ctx.tvColor(R.color.rd_fg_a3), lines = 0))
+            addView(field)
+        }
+        val d = androidx.appcompat.app.AlertDialog.Builder(ctx)
+            .setTitle(R.string.rd_tv_its_guide_id)
+            .setView(box)
+            .setPositiveButton(R.string.rd_tv_save) { _, _ -> LiveTv.setGuideId(c.key, field.text.toString()) }
+            .setNegativeButton(R.string.cancel, null)
+            .show()
+        org.videolan.vlc.gui.helpers.RdTvFocusRing.attach(d.window)
     }
 
     private fun refresh(state: TvState = LiveTv.state.value) {
@@ -299,7 +327,8 @@ class TvFragment : BaseFragment(), Filterable {
         guide.channels = list
         // the status of the sources
         val busy = state.sources.firstOrNull { it.busy }
-        val failed = state.sources.firstOrNull { it.error.isNotEmpty() && it.channels == 0 }
+        // (one turned off says nothing)
+        val failed = state.sources.firstOrNull { it.enabled && it.error.isNotEmpty() && it.channels == 0 }
         status.text = when {
             busy != null -> if (busy.stage == "guide") getString(R.string.rd_tv_updating_guide_of, busy.name, "%.1f".format(busy.received / 1048576.0))
                             else getString(R.string.rd_tv_updating_channels_of, busy.name)

@@ -1,0 +1,37 @@
+24KZ.kz	24KZ
+31Kanal.kz	31 Kanal	31 канал
+AbaiTV.kz	Abai TV	Абай ТВ
+AlmatyTV.kz	Almaty TV	Channel 31
+Altai.kz	Altai
+Aqjaiyq.kz	Aqjaiyq
+Aqtobe.kz	Aqtobe	Aqtóbe
+AstanaTV.kz	Astana TV
+AtamekenBusiness.kz	Atameken Business
+Atyray.kz	Atyray	Atyraý
+Balapan.kz	Balapan
+CaspianNews.kz	Caspian News
+ChannelOneEurasia.kz	Channel One Eurasia	Первый канал Евразия	Perviy Kanal Eurasia
+CNLEurope.kz	CNL Europe	CNL Европа
+Ertis.kz	Ertis
+Jambyl.kz	Jambyl
+JibekJoly.kz	Jibek Joly
+Khabar.kz	Khabar	Хабар
+Kokshe.kz	Kokshe	Kókshe
+KTK.kz	KTK
+Mangystay.kz	Mangystay	Mańǵystaý
+MunaraTV.kz	Munara TV
+MuzLife.kz	MuzLife
+MuzzOne.kz	MuzzOne
+Novoetelevidenie.kz	Novoe televidenie
+NTK.kz	NTK	НТК
+Ontustik.kz	Ontustik	Ontústik
+Qazaqstan.kz	Qazaqstan
+Qostanai.kz	Qostanai
+Qyzyljar.kz	Qyzyljar
+Qyzylorda.kz	Qyzylorda
+Saryarqa.kz	Saryarqa
+Semei.kz	Semei	Semeı
+TDK42.kz	TDK 42
+TuranTV.kz	Turan TV
+Turkistan.kz	Turkistan
+Ulytau.kz	Ulytau

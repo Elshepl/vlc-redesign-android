@@ -1,0 +1,5 @@
+Canal10.gp	Canal 10
+Guadeloupe1ere.gp	Guadeloupe 1ere	Guadeloupe 1ère	Guadeloupe La Première
+MadrasFMTV.gp	Madras FM TV
+MyTVCaraibes.gp	MyTV Caraibes	MyTV Caraïbes
+TMA.gp	TMA	Télévision Musicale Antillaise	TMA Caraibes

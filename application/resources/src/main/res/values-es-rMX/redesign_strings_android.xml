@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Se guarda solo en este dispositivo, para continuar donde lo dejaste.</string>
     <string name="rd_ob_updates_help">Busca una versión de prueba más reciente de VLC for Android una vez al día.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtítulos de internet: busca desde el reproductor en OpenSubtitles, Wizdom (hebreo), YIFY Subtitles y Addic7ed, gratis y sin cuenta.</item>
-        <item>Se encuentran incluso para archivos cuyo nombre no dice nada. Opcional: su propia clave de OpenSubtitles.com y una búsqueda automática, en Configuración › Subtítulos.</item>
-        <item>TV en vivo: la barra de información cabe en un teléfono en vertical.</item>
-        <item>Android TV: el control remoto llega a cada video y a cada botón del reproductor.</item>
+        <item>Subtítulos: SubSource (árabe), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 y Legendas.net con su clave o cuenta gratuita. Cada uno en Configuración › Subtítulos, con su interruptor.</item>
+        <item>Idiomas de búsqueda: active o desactive cada idioma de subtítulos para una búsqueda más rápida.</item>
+        <item>Cuentas de TV en vivo: su Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR o HDHomeRun, y la guía Schedules Direct. Los servidores de su red se encuentran automáticamente.</item>
+        <item>TV en vivo: una guía encontrada automáticamente para los canales sin guía, una pestaña Guías con las guías de cada fuente y, primero, las fuentes de su país en el catálogo.</item>
+        <item>Correcciones: subtítulos guardados en el almacenamiento propio de la aplicación (un cierre inesperado en Android 14), campos de contraseña ocultos, el foco del control remoto de la TV, la traducción de “País” en muchos idiomas y la de “contraseña” en árabe.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamaño de los subtítulos</string>
     <string name="rd_cast_this_phone">Este teléfono</string>

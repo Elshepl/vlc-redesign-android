@@ -1,0 +1,3 @@
+AzTV.az	Az TV	Azərbaycan Televiziyası
+CBCSport.az	CBC Sport
+MedeniyyetTV.az	Medeniyyet TV

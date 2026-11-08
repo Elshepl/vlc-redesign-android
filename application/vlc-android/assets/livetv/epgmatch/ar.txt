@@ -1,0 +1,64 @@
+247CanaldeNoticias.ar	24/7 Canal de Noticias
+A24.ar	A24
+AmericaSports.ar	America Sports
+AmericaTV.ar	America TV	América TV
+ArgentinisimaSatelital.ar	Argentinisima Satelital	Argentinísima Satelital
+C5N.ar	C5N
+Canal10Cordoba.ar	Canal 10 Cordoba	Canal 10 Córdoba
+Canal20VillaMaria.ar	Canal 20 Villa Maria	Canal 20 Villa María
+Canal26.ar	Canal 26	26 TV
+Canal7Jujuy.ar	Canal 7 Jujuy
+CanalA.ar	Canal A	Canal (á)
+CanaldelaCiudad.ar	Canal de la Ciudad
+CanalLuz.ar	Canal Luz
+CanalOrbe21.ar	Canal Orbe 21
+CanalRural.ar	Canal Rural
+CanalU.ar	Canal U
+CineAr.ar	Cine.Ar
+CiudadMagazine.ar	Ciudad Magazine
+CMElCanaldelaMusica.ar	CM El Canal de la Musica	CM El Canal de la Música
+ConexionEducativa.ar	Conexion Educativa	Conexión Educativa
+ConstruirTV.ar	Construir TV
+CronicaTV.ar	Cronica TV	Crónica TV
+DeporTV.ar	DeporTV
+DiputadosTV.ar	Diputados TV
+DisneyChannelLatinAmerica.ar	Disney Channel Latin America
+DisneyJrLatinAmerica.ar	Disney Jr. Latin America
+ElGourmet.ar	El Gourmet
+ElNueve.ar	El Nueve
+ElTrece.ar	El Trece	Canal 13
+ElTreceInternacionalLatinAmerica.ar	El Trece Internacional Latin America	Canal 13
+Encuentro.ar	Encuentro
+ESPNPremium.ar	ESPN Premium	Fox Sports Premium Argentina
+EuropaEuropa.ar	Europa Europa
+FilmArts.ar	Film & Arts
+FoxSports.ar	Fox Sports
+GarageTVLatinAmerica.ar	Garage TV Latin America	El Garage TV Latin America
+GenTV.ar	GenTV
+HAPSATV.ar	HAPSATV
+LaNacionPlus.ar	La Nacion +	La Nación +	La Nación Más	LN+
+Metro.ar	Metro
+Much.ar	Much
+MusicTop.ar	MusicTop
+NETTV.ar	NET TV
+Pakapaka.ar	Pakapaka
+QuieroMusicaenmiIdioma.ar	Quiero Musica en mi Idioma
+Space.ar	Space
+TECTV.ar	TEC TV
+TelediarioTV.ar	Telediario TV
+Telefe.ar	Telefe
+TelefeCordoba.ar	Telefe Cordoba	Telefe Córdoba
+TelefeInternacional.ar	Telefe Internacional
+TelefeRosario.ar	Telefe Rosario
+TelefeSantaFe.ar	Telefe Santa Fe
+Telemax.ar	Telemax
+TN.ar	TN
+TNTSports.ar	TNT Sports
+TurismoVisionArgentina.ar	Turismo Vision Argentina	Turismo Visión Argentina
+TyCSports.ar	TyC Sports
+TyCSports2.ar	TyC Sports 2
+TyCSportsLatinAmerica.ar	TyC Sports Latin America
+Venus.ar	Venus
+ViajarTV.ar	Viajar TV
+Volver.ar	Volver
+WOBI.ar	WOBI

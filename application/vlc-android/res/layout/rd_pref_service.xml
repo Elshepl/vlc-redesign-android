@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: a subtitle service of Settings > Subtitles > Subtitle services (RdSubtitleServices): its name, what
+     it has, a note (its key refused, busy, the language that turns it on), its switch and its menu (Remove); a
+     service of a free key or account also has the well of what the user gave (opens the fields), Test or Sign in,
+     Clear or Sign out, Get a free key or Create a free account, and the check's answer. Every control is reached
+     with the D-pad (the row itself is not focusable). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/rd_svc_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@android:id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:textSize="14sp"
+                    android:textColor="@color/rd_fg_a2"
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@android:id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/inter"
+                    android:textSize="12sp"
+                    android:textColor="@color/rd_fg_a3"
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/rd_svc_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="12sp"
+                    android:textColor="@color/rd_fg_a3"
+                    android:textAlignment="viewStart"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <org.videolan.vlc.gui.preferences.rd.RdToggleView
+                android:id="@+id/rd_svc_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/rd_svc_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:padding="8dp"
+            android:src="@drawable/rd_ic_more"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/more_actions" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rd_svc_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/rd_svc_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginTop="2dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:gravity="center_vertical|start"
+            android:background="@drawable/rd_pref_field_bg"
+            android:fontFamily="@font/inter"
+            android:textSize="14sp"
+            android:textColor="@color/rd_fg_a2"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <org.videolan.vlc.gui.preferences.rd.RdFlowLayout
+            android:id="@+id/rd_svc_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/rd_svc_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="12sp"
+            android:textColor="@color/rd_fg_a2"
+            android:textAlignment="viewStart"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

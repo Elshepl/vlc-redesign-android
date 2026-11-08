@@ -1,0 +1,33 @@
+1TV.ge	1TV	პირველი არხი	First Channel
+2TV.ge	2 TV	რუსთავი
+Adjarasport1.ge	Adjarasport 1
+AjaraTV.ge	Ajara TV	აჭარის ტელევიზია
+ChveniMagti.ge	Chveni Magti	მაგთიკომი
+ComedyTV.ge	Comedy TV
+Dardimandi.ge	Dardimandi
+EnkiBenki.ge	Enki Benki
+Ertsulovneba.ge	Ertsulovneba
+Formula.ge	Formula
+GDSTV.ge	GDS TV
+GurjaaniTV.ge	Gurjaani TV
+ImediTV.ge	Imedi TV
+KavkasiaTV.ge	Kavkasia TV	ტელეკომპანია კავკასია
+Maestro.ge	Maestro	მაესტრო
+MagtiHiti.ge	Magti Hiti
+MagtiKino.ge	Magti Kino
+MaraoTV.ge	Marao TV
+MtavariArkhi.ge	Mtavari Arkhi	მთავარი არხი
+ObieqtiviTV.ge	Obieqtivi TV
+PalitraNews.ge	Palitra News	პალიტრანიუსი
+PosTV.ge	Pos TV
+QartuliArkhi.ge	Qartuli Arkhi
+QualityChannel.ge	Quality Channel
+RioniTV.ge	Rioni TV
+RugbyTV.ge	Rugby TV
+Rustavi2.ge	Rustavi 2
+SaperaviTV.ge	Saperavi TV
+SetantaSportsGeorgia.ge	Setanta Sports Georgia
+SetantaSportsPlusGeorgia.ge	Setanta Sports+ Georgia
+SilkUniversal.ge	Silk Universal
+TV25.ge	TV 25
+TVPirveli.ge	TV Pirveli

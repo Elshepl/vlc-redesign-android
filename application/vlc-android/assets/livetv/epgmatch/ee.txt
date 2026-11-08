@@ -1,0 +1,37 @@
+7D7.ee	7D7	Канал 7D7
+AloTV.ee	Alo TV
+Duo3.ee	Duo 3
+Duo4.ee	Duo 4
+Duo5.ee	Duo 5
+Duo6.ee	Duo 6
+EestiKanal.ee	Eesti Kanal
+ETV.ee	ETV
+ETV2.ee	ETV 2
+ETVPlus.ee	ETV+
+Filmzone.ee	Filmzone
+FilmzonePlus.ee	Filmzone+
+FXLife.ee	FX Life
+Go3Films.ee	Go3 Films
+Go3Sport1.ee	Go3 Sport 1	TV3 Sport	TVPlay Sports	Viasat Sport Baltic
+Go3Sport2.ee	Go3 Sport 2
+Go3Sport3.ee	Go3 Sport 3
+Go3Sport4.ee	Go3 Sport 4
+Go3SportOpen.ee	Go3 Sport Open
+Inspira.ee	Inspira
+Kanal2.ee	Kanal 2
+Kanal7.ee	Kanal 7	Канал 7
+KidZoneMax.ee	KidZone Max
+KidZoneMini.ee	KidZone Mini
+LifeTV.ee	Life TV
+MyHits.ee	MyHits
+OrsentTV.ee	Orsent TV
+Smartzone.ee	Smartzone
+TBNBaltia.ee	TBN Baltia
+TV3.ee	TV3
+TV3Life.ee	TV3 Life
+TV6.ee	TV6	TV6 Eesti
+TVN.ee	TVN
+VantageClassic.ee	Vantage Classic
+VantageDance.ee	Vantage Dance
+VantageMusic.ee	Vantage Music
+VantageRock.ee	Vantage Rock

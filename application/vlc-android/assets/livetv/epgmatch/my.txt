@@ -1,0 +1,43 @@
+8TV.my	8TV	八度空间
+AstroAEC.my	Astro AEC
+AstroAOD311.my	Astro AOD 311
+AstroArena.my	Astro Arena
+AstroArena2.my	Astro Arena 2
+AstroAura.my	Astro Aura
+AstroAwani.my	Astro Awani
+AstroBoxOfficeThangathirai.my	Astro Box Office Thangathirai
+AstroCeria.my	Astro Ceria
+AstroCitra.my	Astro Citra
+AstroCricket.my	Astro Cricket
+AstroOasis.my	Astro Oasis
+AstroPrima.my	Astro Prima
+AstroRania.my	Astro Rania
+AstroRia.my	Astro Ria
+AstroTutorTVSPM.my	Astro Tutor TV SPM
+AstroUHD.my	Astro UHD
+AstroVaanavil.my	Astro Vaanavil
+AstroVellithirai.my	Astro Vellithirai
+AstroWarna.my	Astro Warna
+BeritaRTM.my	Berita RTM
+BernamaTV.my	Bernama TV
+Boo.my	Boo
+CinemaWorld.my	CinemaWorld
+DuniaSinema.my	Dunia Sinema
+GolfChannel.my	Golf Channel
+Inspirasi.my	Inspirasi
+NTV7.my	NTV7
+Okey.my	Okey
+ParlimenMalaysia.my	Parlimen Malaysia
+Pesona.my	Pesona
+Sensasi.my	Sensasi
+ShowcaseMovies.my	Showcase Movies
+SIAR.my	SIAR
+SunTVMalaysia.my	Sun TV Malaysia
+TV1.my	TV1
+TV2.my	TV2
+TV3.my	TV3
+TV6.my	TV6
+TV9.my	TV9
+TVAlhijrah.my	TV Alhijrah
+TVS.my	TVS
+UnifiSports1.my	Unifi Sports 1

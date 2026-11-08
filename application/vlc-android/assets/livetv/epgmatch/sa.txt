@@ -1,0 +1,61 @@
+AbdulmajeedAbdullah.sa	Abdulmajeed Abdullah	عبدالمجيد عبدالله
+Aflam.sa	Aflam	أفلام
+AlArabiyaEnglish.sa	Al Arabiya English
+AlEkhbariya.sa	Al Ekhbariya	السعودية الإخبارية
+AlHadath.sa	Al Hadath	قناة الحدث
+AlkhuzamaRadio.sa	Alkhuzama Radio	خزامى راديو
+AlMajdHolyQuran.sa	Al-Majd Holy Quran
+AlQuranAlKareemTV.sa	Al Quran Al Kareem TV
+AlResalah.sa	Al Resalah	الرساله
+AlRiyadhRadio.sa	Al Riyadh Radio	إذاعة الرياض
+AlSahraaTV.sa	Al Sahraa TV
+AlSaudiya.sa	Al Saudiya	السعودية	Saudi TV Channel 1	KSA 1
+AlSaudiyaAlaan.sa	Al Saudiya Alaan	السعودية الآن
+AlSunnahAlNabawiyahTV.sa	Al Sunnah Al Nabawiyah TV
+ARTAflam1.sa	ART Aflam 1
+ARTAflam2.sa	ART Aflam 2
+ARTAmerica.sa	ART America
+ARTCinema.sa	ART Cinema
+ARTHekayat.sa	ART Hekayat
+ARTHekayat2.sa	ART Hekayat 2
+AsharqDiscovery.sa	Asharq Discovery	الشرق ديسكفري
+AsharqDocumentary.sa	Asharq Documentary	الشرق الوثائقية
+AsharqNews.sa	Asharq News	الشرق للأخبار
+BabAlHara.sa	Bab Al Hara	باب الحارة
+BigTimePlus.sa	Big Time Plus
+BinOthaimeen.sa	Bin Othaimeen
+Fairuz.sa	Fairuz	فيروز
+GoalZone.sa	Goal Zone	Spooky Nights
+IqraaAfricaEurope.sa	Iqraa Africa & Europe
+IqraaArabic.sa	Iqraa Arabic	اقرأ
+JeddahRadio.sa	Jeddah Radio
+KSASports1.sa	KSA Sports 1	القناة الرياضية السعودية
+LBC.sa	LBC	إل بي سي
+MajidAlMohandis.sa	Majid Al Mohandis	ماجد المهندس
+MakkahTV.sa	Makkah TV
+Maraya.sa	Maraya	مرايا‎
+Masah.sa	Masah
+MBCMasrDrama.sa	MBC Masr Drama	إم بي سي مصر دراما
+MBCMood.sa	MBC Mood
+MBCPlusDrama.sa	MBC+ Drama
+MohammedAbdo.sa	Mohammed Abdo	محمد عبده
+MoviesAction.sa	Movies Action
+MoviesThriller.sa	Movies Thriller
+MPlus.sa	M+
+OyounAlWatanTV.sa	Oyoun Al-Watan TV
+PanoramaFM.sa	Panorama FM
+RabehSaqer.sa	Rabeh Saqer	رابح صقر
+RashidAlMajed.sa	Rashid AlMajed	راشد الماجد
+RotanaAflamPlus.sa	Rotana Aflam+
+RotanaCinemaKSA.sa	Rotana Cinema KSA	روتانا سينما السعودية
+RotanaClassic.sa	Rotana Classic	روتانا كلاسيك
+RotanaClip.sa	Rotana Clip	روتانا كليب
+RotanaComedy.sa	Rotana Comedy	روتانا كوميدي
+RotanaDrama.sa	Rotana Drama	روتانا دراما
+RotanaKhalijia.sa	Rotana Khalijia	روتانا خليجية	Rotana Khalijea	Rotana Khalijiah
+RotanaKids.sa	Rotana Kids
+RotanaMusic.sa	Rotana Music
+SaudiThaqafiyaTV.sa	Saudi Thaqafiya TV	الثقافية السعودية
+SBC.sa	SBC	اس بي سي
+Tarab.sa	Tarab	طرب
+ThikrayatTV.sa	Thikrayat TV	قناة ذكريات

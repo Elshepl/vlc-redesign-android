@@ -1,0 +1,13 @@
+{
+ "channels": [
+  {
+   "channelId": 7148,
+   "channelNumber": 1,
+   "channelMinor": 0,
+   "channelNumberFormated": "1",
+   "channelName": "Llama Toons",
+   "channelType": 1,
+   "channelIcon": true
+  }
+ ]
+}

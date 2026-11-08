@@ -1,0 +1,64 @@
+AbuDhabiEmirates.ae	Abu Dhabi Emirates	قناة الإمارات
+AbuDhabiSports1.ae	Abu Dhabi Sports 1	AD Sports 1	أبو ظبي الرياضية 1
+AbuDhabiSports2.ae	Abu Dhabi Sports 2	AD Sports 2	أبو ظبي الرياضية 2
+AbuDhabiTV.ae	Abu Dhabi TV	قناة أبوظبي	أبو ظبي تي في
+AlAanTV.ae	Al Aan TV	Alaan TV	تلفزيون الآن
+Alarabiya.ae	Alarabiya	العربية
+AlArabiyaBusiness.ae	Al Arabiya Business	العربية أسواق
+AlarabiyaPortrait.ae	Alarabiya Portrait	العربية عامودي
+AlArabiyaPrograms.ae	Al Arabiya Programs	العربية برامج
+AlDafrahTV.ae	Al Dafrah TV	قناة الظفرة
+AlQamarTV.ae	Al Qamar TV
+AlSharqiyaMinKabla.ae	Al Sharqiya Min Kabla
+CartoonNetworkArabic.ae	Cartoon Network Arabic	كرتون نتورك بالعربية
+ChinaArabTV.ae	China Arab TV	CATV
+CNBCArabiya.ae	CNBC Arabiya	CNBC عربية
+CNNArabic.ae	CNN Arabic
+DubaiOne.ae	Dubai One
+DubaiRacing.ae	Dubai Racing	دبي ريسينج 1
+DubaiRacing2.ae	Dubai Racing 2	دبي ريسينج 2
+DubaiRacing3.ae	Dubai Racing 3	دبي ريسينج 3
+DubaiSports1.ae	Dubai Sports 1	دبي الرياضية 1
+DubaiSports2.ae	Dubai Sports 2	دبي الرياضية 2
+DubaiSports3.ae	Dubai Sports 3	دبي الرياضية 3
+DubaiTV.ae	Dubai TV
+DubaiZaman.ae	Dubai Zaman
+Fatafeat.ae	Fatafeat	فتافيت
+FoxArabia.ae	Fox Arabia
+FujairahTV.ae	Fujairah TV	الفجيرة
+MBC1.ae	MBC 1	ام بي سي 1
+MBC2.ae	MBC 2	ام بي سي 2
+MBC3.ae	MBC 3
+MBC4.ae	MBC 4	ام بي سي 4
+MBC5.ae	MBC 5
+MBCAction.ae	MBC Action
+MBCBollywood.ae	MBC Bollywood	एमबीसी बॉलीवुड
+MBCDrama.ae	MBC Drama	إم بي سي دراما
+MBCFM.ae	MBC FM	MBC Loud FM
+MBCPersia.ae	MBC Persia
+NationalGeographicAbuDhabi.ae	National Geographic Abu Dhabi	Nat Geo Abu Dhabi
+NickelodeonArabia.ae	Nickelodeon Arabia
+NickJrArabia.ae	Nick Jr. Arabia
+NicktoonsArabia.ae	Nicktoons Arabia
+NoorDubai.ae	Noor Dubai	نور دبي تي في
+OSNComedy.ae	OSN Comedy
+OSNKids.ae	OSN Kids
+OSNMezze.ae	OSN Mezze
+OSNMoviesAction.ae	OSN Movies Action
+OSNMoviesHollywood.ae	OSN Movies Hollywood
+OSNMoviesPremiere.ae	OSN Movies Premiere
+OSNShowcase.ae	OSN Showcase
+OSNYahala.ae	OSN Yahala	أو أس أن ياهلا
+OSNYahalaAflam.ae	OSN Yahala Aflam
+OSNYahalaBilArabi.ae	OSN Yahala Bil Arabi
+SamaDubai.ae	Sama Dubai
+SharjahSports.ae	Sharjah Sports	الشارقة الرياضية
+SharjahTV.ae	Sharjah TV	الشارقة تي في
+SkyNewsArabia.ae	Sky News Arabia	سكاي نيوز عربية	Sky News عربية
+SpacetoonArabic.ae	Spacetoon Arabic	سبيس تون
+StarMoviesMiddleEast.ae	Star Movies Middle East
+StarWorldMiddleEast.ae	Star World Middle East
+YasTV.ae	Yas TV	ياس تي في
+ZeeAflam.ae	Zee Aflam	زي أفلام
+ZeeAlwan.ae	Zee Alwan	زي ألوان
+ZeeTVMiddleEast.ae	Zee TV Middle East

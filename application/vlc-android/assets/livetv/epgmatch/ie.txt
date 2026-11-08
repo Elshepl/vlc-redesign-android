@@ -1,0 +1,54 @@
+alibi.ie	alibi
+CBBC.ie	CBBC
+CBeebies.ie	CBeebies
+Challenge.ie	Challenge
+ComedyCentral.ie	Comedy Central
+ComedyCentralExtra.ie	Comedy Central Extra
+Cula4.ie	Cula4	Cúla4	Cúlabúla
+Dave.ie	Dave
+Drama.ie	Drama
+E4.ie	E4
+F1Channel.ie	F1 Channel
+Film4.ie	Film4
+FoodNetwork.ie	Food Network
+GREATtv.ie	GREAT! tv
+More4.ie	More4
+MTV.ie	MTV	MTV Ireland
+Nickelodeon.ie	Nickelodeon
+NickJr.ie	Nick Jr.
+NickJrToo.ie	Nick Jr. Too
+Nicktoons.ie	Nicktoons
+OireachtasTV.ie	Oireachtas TV
+PremierSports1.ie	Premier Sports 1	Viaplay Sports 1	Premier Sports	MSK
+PremierSports1Asia.ie	Premier Sports 1 Asia
+PremierSports2.ie	Premier Sports 2	Viaplay Sports 2
+QuestRed.ie	Quest Red
+Really.ie	Really
+RTE2.ie	RTE2	RTÉ2	RTÉ Two	N2	Network Two	Network 2	RTÉ 2
+RTEjr.ie	RTEjr	RTÉjr
+RTENews.ie	RTE News	RTÉ News
+RTEOne.ie	RTE One	RTÉ One	RTÉ 1	RTÉ	Telefís Éireann
+SkyAtlantic.ie	Sky Atlantic
+SkyComedy.ie	Sky Comedy
+SkyCrime.ie	Sky Crime
+SkyDocumentaries.ie	Sky Documentaries
+SkyMix.ie	Sky Mix
+SkyNews.ie	Sky News
+SkySportsCricket.ie	Sky Sports Cricket
+SkySportsF1.ie	Sky Sports F1
+SkySportsFootball.ie	Sky Sports Football
+SkySportsGolf.ie	Sky Sports Golf
+SkySportsMainEvent.ie	Sky Sports Main Event
+SkySportsNews.ie	Sky Sports News
+SkySportsNFL.ie	Sky Sports NFL
+SkySportsPremierLeague.ie	Sky Sports Premier League
+SkySportsTennis.ie	Sky Sports Tennis
+SkyWitness.ie	Sky Witness
+TG4.ie	TG4	Teilifís na Gaeilge (TnaG)	Teilifís na Gaeltachta (Pirate)
+TLC.ie	TLC
+VirginMediaFour.ie	Virgin Media Four	Four
+VirginMediaMore.ie	Virgin Media More
+VirginMediaOne.ie	Virgin Media One	Virgin One	TV3	TV Three
+VirginMediaThree.ie	Virgin Media Three	Virgin Three	be3	UTV Ireland
+VirginMediaTwo.ie	Virgin Media Two	Virgin Two	3e	Channel 6
+W.ie	W

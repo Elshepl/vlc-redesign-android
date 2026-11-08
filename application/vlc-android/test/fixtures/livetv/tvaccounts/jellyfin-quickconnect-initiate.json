@@ -1,0 +1,8 @@
+{
+ "Authenticated": false,
+ "Secret": "s3cr3t",
+ "Code": "123456",
+ "DeviceId": "x",
+ "DeviceName": "Samsung TV",
+ "AppName": "Juxto Media Player"
+}

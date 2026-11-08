@@ -1,0 +1,20 @@
+FLivingChannel.mt	FLiving Channel
+ITVShopping.mt	ITV Shopping
+MelitaMore.mt	Melita More
+NationalGeographic.mt	National Geographic
+NationalGeographicWild.mt	National Geographic Wild
+One.mt	One
+ParliamentofMalta.mt	Parliament of Malta	Parliament TV	Parliament Channel
+SmashTV.mt	Smash TV
+TSN1.mt	TSN1
+TSN2.mt	TSN2
+TSN3.mt	TSN3
+TSN4.mt	TSN4
+TSN5.mt	TSN5
+TSN6.mt	TSN6
+TSN7.mt	TSN7
+TSN8.mt	TSN8
+TVM.mt	TVM	Television Malta
+TVMnewsPlus.mt	TVMnews+
+TVMsportPlus.mt	TVMsport+
+Xejk.mt	Xejk

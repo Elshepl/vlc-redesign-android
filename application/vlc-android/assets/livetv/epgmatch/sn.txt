@@ -1,0 +1,8 @@
+2STV.sn	2STV
+OneNationTV.sn	One Nation TV
+PULAAGU.sn	PULAAGU
+RTS1.sn	RTS 1
+SenTV.sn	Sen TV
+SunuYeuf.sn	Sunu Yeuf
+TerangaSenegalTV.sn	Teranga Senegal TV	Téranga Sénégal TV
+TFM.sn	TFM

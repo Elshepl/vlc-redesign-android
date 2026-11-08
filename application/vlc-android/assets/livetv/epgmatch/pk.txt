@@ -1,0 +1,11 @@
+ARYDigital.pk	ARY Digital	ڈیجیٹل
+ARYQtv.pk	ARY Qtv
+ARYZauq.pk	ARY Zauq
+FastSports.pk	Fast Sports
+GeoNews.pk	Geo News	جیو نیوز
+GeoNewsInternational.pk	Geo News International
+GeoUK.pk	Geo UK
+HumEurope.pk	Hum Europe
+HumTV.pk	Hum TV
+MadaniChannelEnglish.pk	Madani Channel English
+MasalaTV.pk	Masala TV	مصالحہ
