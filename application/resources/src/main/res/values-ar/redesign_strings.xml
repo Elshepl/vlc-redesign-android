@@ -410,7 +410,7 @@
     <string name="rd_os_err_none_for">لم يُعثر على ترجمات لـ %1$s.</string>
     <string name="rd_os_key">مفتاح API لـ OpenSubtitles</string>
     <string name="rd_os_username">اسم المستخدم</string>
-    <string name="rd_os_password">كلمة السڒ</string>
+    <string name="rd_os_password">كلمة المرور</string>
     <string name="rd_os_login_failed">فشل تسجيل الدخول إلى OpenSubtitles. تحقق من بيانات اعتماد حسابك.</string>
     <string name="rd_os_key_how">كيف تحصل على مفتاح مجاني</string>
     <string name="rd_os_key_help">ليس لديك مفتاح بعد؟ إنه مجاني: أنشئ حسابًا على opensubtitles.com، وافتح \"API consumers\" (opensubtitles.com/en/consumers)، واختر \"New consumer\"، وسمِّه (VLC Redesign)، ثم انسخ مفتاح API الخاص به إلى هنا. يزيد اسم المستخدم وكلمة المرور لحسابك عدد الترجمات التي يمكنك تنزيلها في اليوم.</string>

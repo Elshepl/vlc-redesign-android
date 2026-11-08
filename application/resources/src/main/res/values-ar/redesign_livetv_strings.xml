@@ -102,7 +102,7 @@
     <string name="rd_tv_server_help">عنوان لوحة المزود، مع منفذها (http://host:8080).</string>
     <string name="rd_tv_server_hint">مثال: http://example.com:8080</string>
     <string name="rd_tv_user_name">اسم المستخدم</string>
-    <string name="rd_tv_password">كلمة السڒ</string>
+    <string name="rd_tv_password">كلمة المرور</string>
     <string name="rd_tv_password_unchanged">(فارغ: دون تغيير)</string>
     <string name="rd_tv_for_source">للمصدر</string>
     <string name="rd_tv_for_source_help">تتم مطابقة قنواته بمعرّف الدليل، ثم بالاسم.</string>
