@@ -92,6 +92,25 @@
             tools:visibility="visible"
             tools:text="OpenSubtitles 87  ·  Wizdom 4  ·  YIFY Subtitles 0" />
 
+    <!-- why a service of the line failed ("SubSource: the API key was refused.") -->
+    <TextView
+            android:id="@+id/rd_os_services_why"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="6dp"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            android:textColor="?android:attr/textColorTertiary"
+            android:textSize="12sp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="SubSource: the API key was refused." />
+
     <androidx.core.widget.NestedScrollView
             android:id="@+id/rd_os_scroll"
             android:layout_width="match_parent"

@@ -3,7 +3,8 @@
  * subtitle_search.cpp and subtitle_providers.cpp, ported). The video is identified from its name (its title, year,
  * season and episode read from it; IMDb's suggestions, else Wikidata, then Stremio's Cinemeta give its IMDb id); the
  * free services are asked together, without an account: OpenSubtitles.org (also by the file's own hash: those made for
- * this very file), Wizdom (Hebrew), Addic7ed through Gestdown (series) and YIFY Subtitles (films). Their subtitles are
+ * this very file), Wizdom (Hebrew), Addic7ed through Gestdown (series) and YIFY Subtitles (films); with the user's own
+ * free key or account, OpenSubtitles.com and the services of KeyedSubtitles. Their subtitles are
  * ranked by language (the user's first) and by how close they are to this file. One is downloaded, unpacked (gzip,
  * zip), converted to UTF-8 (the service's encoding, else the code page of its language), cleaned of the services' ads
  * and saved; the player then adds it and remembers it for the file.
@@ -89,17 +90,43 @@ object OnlineSubtitles {
         val foreignOnly: Boolean = false, val downloads: Int = 0, val rank: Double = 0.0, val fps: Double = 0.0
     )
 
-    /** a service: its id, its name, whether it has films and series, its only language (empty: all) */
-    data class Provider(val id: String, val name: String, val movies: Boolean, val series: Boolean, val onlyLanguage: String = "")
+    /** what the user gives a service: an API key (or token), a user name, a password, an email (to sign in with) */
+    enum class Field(val pref: String) { KEY("key"), USERNAME("username"), PASSWORD("password"), EMAIL("email") }
+
+    /**
+     * a service: its id, its name, whether it has films and series, its languages (asked only when one of them is
+     * one of the user's; empty: all), the fields the user gives it (none: free) and those of them it can do without,
+     * the page where its free key or account is made, whether its key is called a token
+     */
+    data class Provider(
+        val id: String, val name: String, val movies: Boolean, val series: Boolean, val languages: Set<String> = emptySet(),
+        val fields: List<Field> = emptyList(), val optional: Set<Field> = emptySet(), val page: String = "", val token: Boolean = false
+    ) {
+        /** it needs something of the user's (a key or an account) */
+        val keyed: Boolean get() = fields.isNotEmpty()
+        /** it signs in (a user name or an email, and a password) */
+        val login: Boolean get() = Field.PASSWORD in fields
+        /** the fields that must be given before it is asked */
+        val needs: List<Field> get() = fields.filter { it !in optional }
+    }
 
     val providers = listOf(
         Provider("opensubtitles", "OpenSubtitles", movies = true, series = true),
-        // asked only with the user's own key
-        Provider("opensubtitlescom", "OpenSubtitles.com", movies = true, series = true),
-        Provider("wizdom", "Wizdom", movies = true, series = true, onlyLanguage = "he"),
+        // asked only with the user's own key (the account raises how many may be downloaded a day)
+        Provider("opensubtitlescom", "OpenSubtitles.com", movies = true, series = true,
+            fields = listOf(Field.KEY, Field.USERNAME, Field.PASSWORD), optional = setOf(Field.USERNAME, Field.PASSWORD), page = OSCOM_KEY_PAGE),
+        Provider("subsource", "SubSource", movies = true, series = true, fields = listOf(Field.KEY), page = "https://subsource.net"),
+        Provider("subdl", "SubDL", movies = true, series = true, fields = listOf(Field.KEY), page = "https://subdl.com/panel/api"),
+        Provider("wizdom", "Wizdom", movies = true, series = true, languages = setOf("he")),
         Provider("addic7ed", "Addic7ed", movies = false, series = true),
         Provider("yify", "YIFY Subtitles", movies = true, series = false)
     )
+
+    fun provider(id: String) = providers.firstOrNull { it.id == id }
+
+    /** a service is asked for these languages: one of them is one of the user's (Wizdom: Hebrew) */
+    fun languageAllows(p: Provider, wanted: List<String>) = p.languages.isEmpty() ||
+        wanted.any { it in p.languages || it.substringBefore('-') in p.languages }
 
     /** what is known of the video playing */
     data class Media(
@@ -113,8 +140,8 @@ object OnlineSubtitles {
     /** a result in the list shown: its score, the rank of its language among the user's */
     data class Ranked(val result: Result, val score: Double, val languageRank: Int, val hearingImpaired: Boolean)
 
-    /** a service asked: its name, how many it found, whether it failed to answer */
-    data class Asked(val name: String, val count: Int, val failed: Boolean)
+    /** a service asked: its name, how many it found, whether it failed to answer (and why) */
+    data class Asked(val name: String, val count: Int, val failed: Boolean, val id: String = "", val problem: Problem? = null)
 
     class Outcome(val media: Media, val match: Match?, val results: List<Ranked>, val error: Problem?, val anyAnswered: Boolean,
                   val asked: List<Asked> = emptyList()) {
@@ -226,19 +253,106 @@ object OnlineSubtitles {
         return list
     }
 
-    fun serviceEnabled(context: Context, id: String) = Settings.getInstance(context).getBoolean(KEY_SERVICE + id, true) &&
-        (id != "opensubtitlescom" || oscomKey(context).isNotEmpty())
+    /** its switch (a service that needs the user's key or account is asked only when they are given as well). On by
+     *  default: the free ones (OpenSubtitles, Wizdom, Addic7ed, YIFY Subtitles); the others are off until the user
+     *  turns them on, or their key or sign-in is checked and works (OpenSubtitles.com stays on for a user who had
+     *  given its key before) */
+    fun switchOn(context: Context, id: String): Boolean {
+        val settings = Settings.getInstance(context)
+        if (settings.contains(KEY_SERVICE + id)) return settings.getBoolean(KEY_SERVICE + id, false)
+        // (an OpenSubtitles.com key of before was stored with its switch on: SubtitleSecrets.migrate)
+        return provider(id)?.keyed == false
+    }
+
+    /** a key or sign-in checked and working: the service turns on by itself the first time */
+    fun onCredentialsWork(context: Context, id: String) {
+        val settings = Settings.getInstance(context)
+        if (!settings.contains(KEY_SERVICE + id)) settings.edit().putBoolean(KEY_SERVICE + id, true).apply()
+    }
+
+    /** whether the search asks it: in the list, switched on, and given what it needs */
+    fun serviceEnabled(context: Context, id: String): Boolean {
+        val p = provider(id) ?: return false
+        return !isRemoved(context, id) && switchOn(context, id) && hasCredentials(context, p)
+    }
 
     fun setServiceEnabled(context: Context, id: String, enabled: Boolean) = Settings.getInstance(context).edit().putBoolean(KEY_SERVICE + id, enabled).apply()
 
-    fun oscomKey(context: Context) = Settings.getInstance(context).getString(KEY_OSCOM_KEY, null)?.trim() ?: ""
+    /** the services taken out of the list (Settings › Subtitles: Remove; Add a service brings one back) */
+    private const val KEY_REMOVED = "rd_sub_services_removed"
+
+    fun removedServices(context: Context): List<String> =
+        (Settings.getInstance(context).getString(KEY_REMOVED, null) ?: "").split(',').filter { id -> id.isNotEmpty() && providers.any { it.id == id } }
+
+    fun isRemoved(context: Context, id: String) = id in removedServices(context)
+
+    fun setRemoved(context: Context, id: String, removed: Boolean) {
+        val list = removedServices(context).toMutableList()
+        list.remove(id)
+        if (removed) list.add(id)
+        Settings.getInstance(context).edit().putString(KEY_REMOVED, list.joinToString(",")).apply()
+    }
+
+    /** the user gave the service all it needs (for a free one: nothing) */
+    fun hasCredentials(context: Context, p: Provider) = p.needs.all { SubtitleSecrets.has(context, p.id, it.pref) }
+
+    /** the user's key, user name, password or email for a service ("" when not given); off the main thread (it is
+     *  kept encrypted by the Android keystore) */
+    fun credential(context: Context, id: String, field: Field): String {
+        val v = SubtitleSecrets.get(context, id, field.pref)
+        // (a password is kept as typed)
+        return if (field == Field.PASSWORD) v else v.trim()
+    }
+
+    // What the last search or check found of a service: its key or its sign-in refused (shown on its row until a
+    // search succeeds or they change), or busy (a 429) a short while
+    private const val KEY_STATE = "rd_sub_service_state_"
+    private const val BUSY_SHOWN_MS = 5 * 60_000L
+
+    enum class ServiceState { KEY_REFUSED, LOGIN_REFUSED, BUSY }
+
+    fun serviceState(context: Context, id: String): ServiceState? {
+        val v = Settings.getInstance(context).getString(KEY_STATE + id, null) ?: return null
+        return when {
+            v == "key" -> ServiceState.KEY_REFUSED
+            v == "login" -> ServiceState.LOGIN_REFUSED
+            v.startsWith("busy:") -> if (System.currentTimeMillis() - (v.substring(5).toLongOrNull() ?: 0L) < BUSY_SHOWN_MS) ServiceState.BUSY else null
+            else -> null
+        }
+    }
+
+    fun setServiceState(context: Context, id: String, state: ServiceState?) {
+        val settings = Settings.getInstance(context)
+        val v = when (state) {
+            ServiceState.KEY_REFUSED -> "key"
+            ServiceState.LOGIN_REFUSED -> "login"
+            ServiceState.BUSY -> "busy:${System.currentTimeMillis()}"
+            null -> null
+        }
+        if (settings.getString(KEY_STATE + id, null) == v) return
+        settings.edit().apply { if (v == null) remove(KEY_STATE + id) else putString(KEY_STATE + id, v) }.apply()
+    }
+
+    /** a service's answer to a search: its state on its row follows */
+    internal fun stateOf(problem: Problem?): ServiceState? = when (problem) {
+        is Problem.KeyRefused -> ServiceState.KEY_REFUSED
+        is Problem.LoginRefused, Problem.LoginFailed -> ServiceState.LOGIN_REFUSED
+        is Problem.Busy -> ServiceState.BUSY
+        else -> null
+    }
+
+    fun oscomKey(context: Context) = credential(context, "opensubtitlescom", Field.KEY)
+
+    /** a service that needs a key or an account is in the list without them: the sheet says where to give them */
+    fun keyedServiceWithout(context: Context) = providers.any { it.keyed && !isRemoved(context, it.id) && !hasCredentials(context, it) } &&
+        providers.none { it.keyed && serviceEnabled(context, it.id) }
 
     // ---------------------------------------------------------------------------------------------------------------
     // HTTP
 
     class Response(val status: Int, val body: ByteArray, val error: String?)
 
-    private fun get(url: String, headers: Map<String, String>, maxBytes: Int = MAX_LIST_BYTES, timeoutMs: Int = 15_000): Response {
+    internal fun get(url: String, headers: Map<String, String>, maxBytes: Int = MAX_LIST_BYTES, timeoutMs: Int = 15_000): Response {
         var connection: HttpURLConnection? = null
         return try {
             connection = URL(url).openConnection() as HttpURLConnection
@@ -260,7 +374,8 @@ object OnlineSubtitles {
             }
             Response(status, out.toByteArray(), null)
         } catch (e: Exception) {
-            Response(0, ByteArray(0), e.message ?: e.javaClass.simpleName)
+            // (its kind only: a message may carry the address, and a key with it)
+            Response(0, ByteArray(0), e.javaClass.simpleName)
         } finally {
             connection?.disconnect()
         }
@@ -281,13 +396,42 @@ object OnlineSubtitles {
             val stream: InputStream? = if (status in 200..299) connection.inputStream else connection.errorStream
             Response(status, stream?.use { readLimited(it, MAX_LIST_BYTES) } ?: ByteArray(0), null)
         } catch (e: Exception) {
-            Response(0, ByteArray(0), e.message ?: e.javaClass.simpleName)
+            // (its kind only: a message may carry the address, and a key with it)
+            Response(0, ByteArray(0), e.javaClass.simpleName)
         } finally {
             connection?.disconnect()
         }
     }
 
-    private fun ok(r: Response) = r.error == null && r.status == 200
+    /** a POST of a form or of nothing (the parameters in the address): the answer as bytes, at most maxBytes */
+    internal fun postBody(url: String, headers: Map<String, String>, body: ByteArray, contentType: String?, maxBytes: Int = MAX_LIST_BYTES,
+                          timeoutMs: Int = 15_000): Response {
+        var connection: HttpURLConnection? = null
+        return try {
+            connection = URL(url).openConnection() as HttpURLConnection
+            connection.connectTimeout = timeoutMs
+            connection.readTimeout = timeoutMs
+            connection.requestMethod = "POST"
+            connection.doOutput = true
+            // (a length, even 0: Titlovi refuses a POST without one)
+            connection.setFixedLengthStreamingMode(body.size)
+            for ((k, v) in headers) connection.setRequestProperty(k, v)
+            if (contentType != null) connection.setRequestProperty("Content-Type", contentType)
+            connection.outputStream.use { it.write(body) }
+            val status = connection.responseCode
+            val stream: InputStream? = if (status in 200..299) connection.inputStream else connection.errorStream
+            val data = stream?.use { readLimited(it, maxBytes) } ?: ByteArray(0)
+            Response(status, data, null)
+        } catch (e: Exception) {
+            Response(0, ByteArray(0), e.javaClass.simpleName)
+        } finally {
+            connection?.disconnect()
+        }
+    }
+
+    internal fun form(values: Map<String, String>) = values.entries.joinToString("&") { "${enc(it.key)}=${enc(it.value)}" }.toByteArray(Charsets.UTF_8)
+
+    internal fun ok(r: Response) = r.error == null && r.status == 200
 
     /** what went wrong, shown in the interface language by the screen that asked */
     sealed class Problem {
@@ -295,6 +439,8 @@ object OnlineSubtitles {
         data class Busy(val service: String) : Problem()
         data class Status(val service: String, val code: Int) : Problem()
         data class KeyRefused(val service: String) : Problem()
+        /** its user name (or email) and password were refused */
+        data class LoginRefused(val service: String) : Problem()
         data class Quota(val service: String) : Problem()
         object LoginFailed : Problem()
         object Rar : Problem()
@@ -307,13 +453,13 @@ object OnlineSubtitles {
         data class Download(val code: Int) : Problem()
     }
 
-    private fun failure(name: String, r: Response): Problem = when (r.status) {
+    internal fun failure(name: String, r: Response): Problem = when (r.status) {
         0 -> Problem.NoAnswer(name)
         429 -> Problem.Busy(name)
         else -> Problem.Status(name, r.status)
     }
 
-    private fun enc(text: String) = URLEncoder.encode(text, "UTF-8").replace("+", "%20")
+    internal fun enc(text: String) = URLEncoder.encode(text, "UTF-8").replace("+", "%20")
 
     // ---------------------------------------------------------------------------------------------------------------
     // Names
@@ -822,28 +968,41 @@ object OnlineSubtitles {
         return Pair(parseOscom(String(r.body, Charsets.UTF_8)), null)
     }
 
-    @Volatile private var oscomToken: Pair<String, String>? = null // (username, token)
+    /** what a sign-in of OpenSubtitles.com answered: its token and the host to download from, or why not */
+    internal class OscomLogin(val token: String?, val base: String, val problem: Problem?)
+
+    internal fun oscomLoginOf(status: Int, body: String): OscomLogin {
+        // (403: the key itself refused; 401: the user name or the password)
+        if (status == 401) return OscomLogin(null, OSCOM_API, Problem.LoginRefused("OpenSubtitles.com"))
+        if (status == 403) return OscomLogin(null, OSCOM_API, Problem.KeyRefused("OpenSubtitles.com"))
+        if (status == 429) return OscomLogin(null, OSCOM_API, Problem.Busy("OpenSubtitles.com"))
+        if (status != 200) return OscomLogin(null, OSCOM_API, if (status == 0) Problem.NoAnswer("OpenSubtitles.com") else Problem.Status("OpenSubtitles.com", status))
+        val o = try { JSONObject(body) } catch (e: Exception) { JSONObject() }
+        val token = o.optString("token").ifEmpty { null } ?: return OscomLogin(null, OSCOM_API, Problem.LoginFailed)
+        val host = o.optString("base_url").removePrefix("https://").substringBefore('/')
+        return OscomLogin(token, if (host == "vip-api.opensubtitles.com") "https://$host/api/v1/" else OSCOM_API, null)
+    }
+
+    /** signs in to OpenSubtitles.com with the user's account (its token kept, 12 hours) */
+    internal fun oscomSignIn(context: Context, force: Boolean = false): OscomLogin {
+        val key = oscomKey(context)
+        val user = credential(context, "opensubtitlescom", Field.USERNAME)
+        val password = credential(context, "opensubtitlescom", Field.PASSWORD)
+        if (user.isEmpty() || password.isEmpty()) return OscomLogin(null, OSCOM_API, null)
+        if (!force) SubtitleSecrets.token(context, "opensubtitlescom", user)?.let { return OscomLogin(it.substringBefore('|'), it.substringAfter('|', OSCOM_API), null) }
+        val login = post(OSCOM_API + "login", oscomHeaders(key), JSONObject().put("username", user).put("password", password).toString())
+        val result = oscomLoginOf(login.status, String(login.body, Charsets.UTF_8))
+        if (result.token != null) SubtitleSecrets.setToken(context, "opensubtitlescom", user, result.token + "|" + result.base, System.currentTimeMillis() + 12 * 3600_000L)
+        return result
+    }
 
     /** the link to download a file of OpenSubtitles.com from, or the error to show */
     private fun oscomLink(context: Context, fileId: String): Pair<String?, Problem?> {
-        val settings = Settings.getInstance(context)
         val key = oscomKey(context)
-        val user = settings.getString(KEY_OSCOM_USER, null)?.trim() ?: ""
-        val password = settings.getString(KEY_OSCOM_PASSWORD, null) ?: ""
-        var base = OSCOM_API
-        var token: String? = null
-        if (user.isNotEmpty() && password.isNotEmpty()) {
-            token = oscomToken?.takeIf { it.first == user }?.second
-            if (token == null) {
-                val login = post(OSCOM_API + "login", oscomHeaders(key), JSONObject().put("username", user).put("password", password).toString())
-                if (login.status != 200) return Pair(null, Problem.LoginFailed)
-                val o = try { JSONObject(String(login.body, Charsets.UTF_8)) } catch (e: Exception) { JSONObject() }
-                token = o.optString("token").ifEmpty { null }
-                val host = o.optString("base_url").removePrefix("https://").substringBefore('/')
-                if (host == "vip-api.opensubtitles.com") base = "https://$host/api/v1/"
-                if (token != null) oscomToken = Pair(user, token)
-            }
-        }
+        val login = oscomSignIn(context)
+        if (login.problem != null) return Pair(null, login.problem)
+        val base = login.base
+        val token = login.token
         val r = post(base + "download", oscomHeaders(key, token), JSONObject().put("file_id", fileId.toLongOrNull() ?: 0L).toString())
         if (r.status == 406 || r.status == 429) return Pair(null, Problem.Quota("OpenSubtitles.com"))
         if (r.status == 401 || r.status == 403) return Pair(null, Problem.KeyRefused("OpenSubtitles.com"))
@@ -968,7 +1127,9 @@ object OnlineSubtitles {
             series = m?.series ?: (media.season >= 0), season = media.season, episode = media.episode,
             fileName = media.name, hash = media.hash, size = media.size, languages = wanted
         )
-        val asked = providers.filter { serviceEnabled(context, it.id) && (if (query.series) it.series else it.movies) }
+        // the services on (with the user's key or account when they need one), of this kind of video, of one of the
+        // user's languages (Wizdom: when Hebrew is one of them)
+        val asked = providers.filter { serviceEnabled(context, it.id) && (if (query.series) it.series else it.movies) && languageAllows(it, wanted) }
         val answers = coroutineScope {
             asked.map { p ->
                 async {
@@ -979,7 +1140,7 @@ object OnlineSubtitles {
                             "wizdom" -> searchWizdom(query)
                             "addic7ed" -> searchAddic7ed(query)
                             "yify" -> searchYify(query)
-                            else -> Pair(emptyList<Result>(), null)
+                            else -> KeyedSubtitles.search(context, p, query)
                         }
                     } catch (e: Exception) {
                         Pair(emptyList<Result>(), Problem.NoAnswer(p.name))
@@ -987,11 +1148,17 @@ object OnlineSubtitles {
                 }
             }.awaitAll()
         }
+        // its row in the settings: a refused key or sign-in, or busy; cleared by a search it answered
+        asked.forEachIndexed { i, p ->
+            val problem = answers[i].second
+            val state = stateOf(problem)
+            if (problem == null || state != null) setServiceState(context, p.id, state)
+        }
         val found = answers.flatMap { it.first }
         val errors = answers.mapNotNull { it.second }
         Log.d(TAG, "\"${media.title}\" is ${m?.title ?: "unknown"} (${m?.imdb ?: "-"}${if (m?.strong == true) ", sure" else ""}), the hash ${media.hash.ifEmpty { "unknown" }}: ${found.size} found")
         Outcome(media, m, rank(found, media, wanted), errors.firstOrNull(), answers.any { it.second == null } || asked.isEmpty(),
-            asked.mapIndexed { i, p -> Asked(p.name, answers[i].first.size, answers[i].second != null) })
+            asked.mapIndexed { i, p -> Asked(p.name, answers[i].first.size, answers[i].second != null, p.id, answers[i].second) })
     }
 
     // ---------------------------------------------------------------------------------------------------------------
@@ -1192,12 +1359,21 @@ object OnlineSubtitles {
         headers["User-Agent"] = userAgent
         if (result.provider == "opensubtitles") headers["X-User-Agent"] = userAgent
         if (result.provider == "yify") headers["Referer"] = "https://yifysubtitles.ch/"
+        headers.putAll(KeyedSubtitles.downloadHeaders(context, result))
         val url = if (result.provider == "opensubtitlescom") {
             val (link, error) = oscomLink(context, result.url)
+            if (link == null) stateOf(error)?.let { setServiceState(context, result.provider, it) }
             link ?: return@withContext Pair(null, error)
         } else result.url
         val r = get(url, headers, MAX_DOWNLOAD_BYTES, 30_000)
-        if (!ok(r) || r.body.isEmpty()) return@withContext Pair(null, if (r.status == 0) Problem.Offline else Problem.Download(r.status))
+        if (!ok(r) || r.body.isEmpty()) {
+            // a key or a sign-in refused: said so, and on the service's row
+            KeyedSubtitles.downloadProblem(result, r.status)?.let { p ->
+                stateOf(p)?.let { setServiceState(context, result.provider, it) }
+                return@withContext Pair(null, p)
+            }
+            return@withContext Pair(null, if (r.status == 0) Problem.Offline else Problem.Download(r.status))
+        }
         val (unpacked, error) = subtitleOf(r.body, result, media.name)
         unpacked ?: return@withContext Pair(null, error)
         folder.mkdirs()

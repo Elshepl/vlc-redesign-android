@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12 and later: the same as backup_rules.xml (Android 11 and earlier), for the cloud backup and for a
+     transfer to a new device. VLC Redesign: the keys and accounts of the subtitle services (util/SubtitleSecrets,
+     encrypted by this device's keystore) never leave the device. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="db"/>
+        <exclude domain="root" path="app_db"/>
+        <exclude domain="root" path="keystore"/>
+        <exclude domain="root" path="app_keystore"/>
+        <exclude domain="sharedpref" path="rd_subtitle_secrets.xml"/>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" path="db"/>
+        <exclude domain="root" path="app_db"/>
+        <exclude domain="root" path="keystore"/>
+        <exclude domain="root" path="app_keystore"/>
+        <exclude domain="sharedpref" path="rd_subtitle_secrets.xml"/>
+    </device-transfer>
+</data-extraction-rules>

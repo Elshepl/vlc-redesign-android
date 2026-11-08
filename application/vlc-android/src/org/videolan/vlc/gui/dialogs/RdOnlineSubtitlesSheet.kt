@@ -3,8 +3,9 @@
  * (OnlineSubtitles): "Identifying the video…", "Looking for subtitles…", then what it was taken for and the
  * subtitles found, by language (the user's first; in each, those made for this very file first), each with its
  * service. A row downloads that subtitle, adds it to the video, shows it and keeps it for the file; the sheet then
- * closes. "The video is another one: search by its title" finds the right title, kept for the file. Without the
- * user's own OpenSubtitles.com key, a line says where to get one, free.
+ * closes. "The video is another one: search by its title" finds the right title, kept for the file. Under the
+ * line of the services asked, why one failed; while a service of a free key or account has none, a line leads to
+ * Settings › Subtitles › Subtitle services.
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General
  * Public License as published by the Free Software Foundation; either version 2 of the License, or (at your
@@ -44,6 +45,7 @@ import org.videolan.vlc.gui.video.VideoPlayerActivity
 import org.videolan.vlc.util.OnlineSubtitles
 import org.videolan.vlc.util.OnlineSubtitles.Problem
 import org.videolan.vlc.util.RdToast
+import org.videolan.vlc.util.SubtitleSecrets
 
 class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
 
@@ -56,6 +58,7 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
     private lateinit var titleBox: View
     private lateinit var titleField: EditText
     private lateinit var keyHint: TextView
+    private lateinit var servicesWhy: TextView
     private var job: Job? = null
     private var media: OnlineSubtitles.Media? = null
     private var loading: String? = null
@@ -93,27 +96,41 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
                 find(); true
             } else false
         }
-        keyHint.isVisible = OnlineSubtitles.oscomKey(requireContext()).isEmpty()
+        // (shown once the services' keys are read, off the main thread)
+        keyHint.isVisible = false
         keyHint.setOnClickListener {
-            try {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(OnlineSubtitles.OSCOM_KEY_PAGE)))
-            } catch (e: Exception) {
-                // (no browser, a TV: the address is in the text)
+            val activity = activity ?: return@setOnClickListener
+            activity.lifecycleScope.launch {
+                try {
+                    org.videolan.vlc.gui.preferences.PreferencesActivity.launchWithPref(activity, "rd_sub_services_help")
+                } catch (e: Exception) {
+                    // (the settings' row not found: the text says where)
+                }
             }
+            dismissAllowingStateLoss()
         }
+        servicesWhy = root.findViewById(R.id.rd_os_services_why)
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         search(null, identify = true)
+        val ctx = requireContext().applicationContext
+        lifecycleScope.launch {
+            // a service of a free key or account is in the list without them: where to give them
+            keyHint.isVisible = withContext(Dispatchers.IO) { SubtitleSecrets.preload(ctx); OnlineSubtitles.keyedServiceWithout(ctx) }
+        }
     }
 
     private fun service(): PlaybackService? = (activity as? VideoPlayerActivity)?.service ?: PlaybackService.instance
 
     private fun setBusy(on: Boolean, text: String) {
         busy.isVisible = on
-        if (on) services.isVisible = false
+        if (on) {
+            services.isVisible = false
+            servicesWhy.isVisible = false
+        }
         again.isEnabled = !on
         status.text = text
     }
@@ -137,9 +154,13 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
         busy.isVisible = false
         again.isEnabled = true
         rows.removeAllViews()
-        // every service asked, what each found
+        // every service asked, what each found; a dash for one that failed, and why under the line
         services.text = outcome.asked.joinToString("  ·  ") { if (it.failed) "${it.name} –" else "${it.name} ${it.count}" }
         services.isVisible = outcome.asked.isNotEmpty() && outcome.anyAnswered
+        val why = outcome.asked.mapNotNull { a -> a.problem?.let { problemText(ctx, it) } }.distinct()
+        servicesWhy.text = why.joinToString("\n")
+        servicesWhy.isVisible = services.isVisible && why.isNotEmpty()
+        services.contentDescription = if (why.isEmpty()) null else services.text.toString() + ". " + why.joinToString(" ")
         val title = outcome.matchTitle
         if (outcome.results.isEmpty()) {
             status.text = when {
@@ -276,6 +297,7 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
             is Problem.Busy -> ctx.getString(R.string.rd_os_err_busy, p.service)
             is Problem.Status -> ctx.getString(R.string.rd_os_err_status, p.service, p.code.toString())
             is Problem.KeyRefused -> ctx.getString(R.string.rd_os_key_refused, p.service)
+            is Problem.LoginRefused -> p.service + ": " + ctx.getString(R.string.rd_os_wrong_login)
             is Problem.Quota -> ctx.getString(R.string.rd_os_quota, p.service)
             Problem.LoginFailed -> ctx.getString(R.string.rd_os_login_failed)
             Problem.Rar -> ctx.getString(R.string.rd_os_err_rar)
