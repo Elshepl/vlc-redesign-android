@@ -1,0 +1,12 @@
+{
+ "code": 0,
+ "lineups": [
+  {
+   "lineup": "USA-OTA-90210",
+   "name": "Antenna",
+   "transport": "Antenna",
+   "location": "90210",
+   "uri": "/20141201/lineups/USA-OTA-90210"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+[
+ {
+  "stationID": "11111",
+  "programs": [
+   {
+    "programID": "EP000000000001",
+    "airDateTime": "2026-11-08T10:00:00Z",
+    "duration": 3600,
+    "md5": "a"
+   },
+   {
+    "programID": "MV000000000002",
+    "airDateTime": "2026-11-08T11:00:00Z",
+    "duration": 5400,
+    "md5": "b"
+   }
+  ],
+  "metadata": {
+   "modified": "2026-11-07T00:00:00Z",
+   "md5": "x",
+   "startDate": "2026-11-08"
+  }
+ }
+]

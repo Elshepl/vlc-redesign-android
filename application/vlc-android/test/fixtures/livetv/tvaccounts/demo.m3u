@@ -1,0 +1,7 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="openmovie" tvg-chno="101",Open Movie One
+http://demo.invalid/ch/openmovie.ts
+#EXTINF:-1 tvg-id="bunnykids" tvg-chno="102",Bunny Kids
+http://demo.invalid/ch/bunnykids.ts
+#EXTINF:-1 tvg-id="dreamtheatre" tvg-chno="103",Dream Theatre
+http://demo.invalid/ch/dreamtheatre.ts

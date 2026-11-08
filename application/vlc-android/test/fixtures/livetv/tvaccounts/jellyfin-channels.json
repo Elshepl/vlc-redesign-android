@@ -1,0 +1,23 @@
+{
+ "Items": [
+  {
+   "Id": "c1",
+   "Name": "Open Movie One",
+   "Number": "101",
+   "ChannelNumber": "101",
+   "ImageTags": {
+    "Primary": "tag1"
+   },
+   "Type": "TvChannel"
+  },
+  {
+   "Id": "c2",
+   "Name": "Bunny Kids",
+   "Number": "102",
+   "ChannelNumber": "102",
+   "ImageTags": {}
+  }
+ ],
+ "TotalRecordCount": 2,
+ "StartIndex": 0
+}

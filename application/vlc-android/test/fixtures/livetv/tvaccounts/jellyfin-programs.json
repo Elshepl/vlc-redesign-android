@@ -1,0 +1,20 @@
+{
+ "Items": [
+  {
+   "Id": "p1",
+   "ChannelId": "c1",
+   "Name": "Open Movie Night",
+   "EpisodeTitle": "Part One",
+   "Overview": "Short films made with free software.",
+   "StartDate": "2026-11-08T10:00:00.0000000Z",
+   "EndDate": "2026-11-08T11:00:00.0000000Z"
+  },
+  {
+   "Id": "p2",
+   "ChannelId": "c2",
+   "Name": "Meadow Mornings",
+   "StartDate": "2026-11-08T10:00:00.0000000Z",
+   "EndDate": "2026-11-08T10:30:00.0000000Z"
+  }
+ ]
+}

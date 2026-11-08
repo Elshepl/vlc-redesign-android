@@ -1,0 +1,5 @@
+3sat.de	3sat
+DasErste.de	Das Erste	ARD	Erstes Deutsches Fernsehen	Deutsches Fernsehen	NWDR Fernsehen	NWD Fernsehrundfunk	Fernsehsender Paul Nipkow
+ProSieben.de	ProSieben	Pro7
+RTL.de	RTL	RTL Television	RTL Plus	RTL Plus Television
+ZDF.de	ZDF
