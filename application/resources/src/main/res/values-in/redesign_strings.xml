@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Buka %1$s di ponsel atau komputer.</string>
     <string name="rd_os_show_text">Tampilkan</string>
     <string name="rd_os_hide_text">Sembunyikan</string>
+    <string name="rd_os_svc_titlovi">Dengan akun gratis Anda · Kroasia, Serbia, Bosnia, Slovenia, Makedonia</string>
+    <string name="rd_os_svc_assrt">Dengan token gratis Anda · Tionghoa</string>
+    <string name="rd_os_svc_jimaku">Dengan kunci gratis milik Anda sendiri · anime, Jepang</string>
+    <string name="rd_os_svc_betaseries">Dengan kunci gratis milik Anda sendiri · serial, Prancis</string>
+    <string name="rd_os_svc_subsro">Dengan kunci gratis milik Anda sendiri · Rumania</string>
+    <string name="rd_os_svc_napisy24">Dengan akun gratis Anda · Polandia · menemukan yang dibuat untuk file Anda</string>
+    <string name="rd_os_svc_legendasnet">Dengan akun gratis Anda · Portugis (Brasil)</string>
 </resources>

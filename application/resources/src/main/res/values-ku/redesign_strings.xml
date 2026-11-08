@@ -416,4 +416,11 @@
     <string name="rd_os_open_elsewhere">%1$s لە مۆبایل یان کۆمپیوتەرێک بکەرەوە.</string>
     <string name="rd_os_show_text">پیشاندان</string>
     <string name="rd_os_hide_text">شاردنەوە</string>
+    <string name="rd_os_svc_titlovi">بە هەژماری بێبەرامبەری تۆ · کرواتی، سڕبی، بۆسنی، سلۆڤێنی، مەقدۆنی</string>
+    <string name="rd_os_svc_assrt">بە تۆکنی بێبەرامبەری تۆ · چینی</string>
+    <string name="rd_os_svc_jimaku">بە کلیلی بێبەرامبەری تۆ · ئەنیمە، ژاپۆنی</string>
+    <string name="rd_os_svc_betaseries">بە کلیلی بێبەرامبەری تۆ · زنجیرە، فەرەنسی</string>
+    <string name="rd_os_svc_subsro">بە کلیلی بێبەرامبەری تۆ · ڕۆمانی</string>
+    <string name="rd_os_svc_napisy24">بە هەژماری بێبەرامبەری تۆ · پۆڵەندی · ئەوانە دەدۆزێتەوە کە بۆ پەڕگەکەت دروستکراون</string>
+    <string name="rd_os_svc_legendasnet">بە هەژماری بێبەرامبەری تۆ · پورتوگالی (بەڕازیل)</string>
 </resources>

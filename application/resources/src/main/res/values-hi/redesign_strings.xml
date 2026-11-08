@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">%1$s को फ़ोन या कंप्यूटर पर खोलें।</string>
     <string name="rd_os_show_text">दिखाएँ</string>
     <string name="rd_os_hide_text">छिपाएँ</string>
+    <string name="rd_os_svc_titlovi">आपके मुफ़्त खाते के साथ · क्रोएशियाई, सर्बियाई, बोस्नियाई, स्लोवेनियाई, मैसेडोनियाई</string>
+    <string name="rd_os_svc_assrt">आपके मुफ़्त टोकन के साथ · चीनी</string>
+    <string name="rd_os_svc_jimaku">आपकी मुफ़्त कुंजी के साथ · एनीमे, जापानी</string>
+    <string name="rd_os_svc_betaseries">आपकी मुफ़्त कुंजी के साथ · सीरीज़, फ़्रेंच</string>
+    <string name="rd_os_svc_subsro">आपकी मुफ़्त कुंजी के साथ · रोमानियाई</string>
+    <string name="rd_os_svc_napisy24">आपके मुफ़्त खाते के साथ · पोलिश · आपकी फ़ाइल के लिए बने उपशीर्षक खोजता है</string>
+    <string name="rd_os_svc_legendasnet">आपके मुफ़्त खाते के साथ · पुर्तगाली (ब्राज़ील)</string>
 </resources>

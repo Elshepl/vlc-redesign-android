@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">Oscail %1$s ar fhón nó ar ríomhaire.</string>
     <string name="rd_os_show_text">Taispeáin</string>
     <string name="rd_os_hide_text">Folaigh</string>
+    <string name="rd_os_svc_titlovi">Le do chuntas saor in aisce · Cróitis, Seirbis, Boisnis, Slóivéinis, Macadóinis</string>
+    <string name="rd_os_svc_assrt">Le do chomhartha saor in aisce · Sínis</string>
+    <string name="rd_os_svc_jimaku">Le d\'eochair saor in aisce · anime, Seapáinis</string>
+    <string name="rd_os_svc_betaseries">Le d\'eochair saor in aisce · sraitheanna, Fraincis</string>
+    <string name="rd_os_svc_subsro">Le d\'eochair saor in aisce · Rómáinis</string>
+    <string name="rd_os_svc_napisy24">Le do chuntas saor in aisce · Polainnis · aimsíonn sé iad siúd a rinneadh do do chomhad</string>
+    <string name="rd_os_svc_legendasnet">Le do chuntas saor in aisce · Portaingéilis (an Bhrasaíl)</string>
 </resources>

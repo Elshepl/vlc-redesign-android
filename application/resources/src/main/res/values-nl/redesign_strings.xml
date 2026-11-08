@@ -445,4 +445,11 @@
     <string name="rd_os_open_elsewhere">Open %1$s op een telefoon of een computer.</string>
     <string name="rd_os_show_text">Tonen</string>
     <string name="rd_os_hide_text">Verbergen</string>
+    <string name="rd_os_svc_titlovi">Met uw gratis account · Kroatisch, Servisch, Bosnisch, Sloveens, Macedonisch</string>
+    <string name="rd_os_svc_assrt">Met uw gratis token · Chinees</string>
+    <string name="rd_os_svc_jimaku">Met uw gratis sleutel · anime, Japans</string>
+    <string name="rd_os_svc_betaseries">Met uw gratis sleutel · series, Frans</string>
+    <string name="rd_os_svc_subsro">Met uw gratis sleutel · Roemeens</string>
+    <string name="rd_os_svc_napisy24">Met uw gratis account · Pools · vindt de ondertitels die voor uw bestand gemaakt zijn</string>
+    <string name="rd_os_svc_legendasnet">Met uw gratis account · Portugees (Brazilië)</string>
 </resources>

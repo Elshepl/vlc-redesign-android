@@ -442,4 +442,11 @@
     <string name="rd_os_open_elsewhere">បើក %1$s នៅលើទូរស័ព្ទ ឬកុំព្យូទ័រ។</string>
     <string name="rd_os_show_text">បង្ហាញ</string>
     <string name="rd_os_hide_text">លាក់</string>
+    <string name="rd_os_svc_titlovi">ជាមួយគណនីឥតគិតថ្លៃរបស់អ្នក · ក្រូអាត, ស៊ែប, បូស្នី, ស្លូវេនី, ម៉ាសេដូនី</string>
+    <string name="rd_os_svc_assrt">ជាមួយថូខឹនឥតគិតថ្លៃរបស់អ្នក · ចិន</string>
+    <string name="rd_os_svc_jimaku">ជាមួយកូនសោឥតគិតថ្លៃផ្ទាល់ខ្លួនរបស់អ្នក · អានីមេ, ជប៉ុន</string>
+    <string name="rd_os_svc_betaseries">ជាមួយកូនសោឥតគិតថ្លៃផ្ទាល់ខ្លួនរបស់អ្នក · រឿងភាគ, បារាំង</string>
+    <string name="rd_os_svc_subsro">ជាមួយកូនសោឥតគិតថ្លៃផ្ទាល់ខ្លួនរបស់អ្នក · រូម៉ានី</string>
+    <string name="rd_os_svc_napisy24">ជាមួយគណនីឥតគិតថ្លៃរបស់អ្នក · ប៉ូឡូញ · រកចំណងជើងរងដែលធ្វើសម្រាប់ឯកសាររបស់អ្នក</string>
+    <string name="rd_os_svc_legendasnet">ជាមួយគណនីឥតគិតថ្លៃរបស់អ្នក · ព័រទុយហ្គាល់ (ប្រេស៊ីល)</string>
 </resources>

@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">%1$s फोन किंवा संगणकावर उघडा.</string>
     <string name="rd_os_show_text">दाखवा</string>
     <string name="rd_os_hide_text">लपवा</string>
+    <string name="rd_os_svc_titlovi">तुमच्या विनामूल्य खात्यासह · क्रोएशियन, सर्बियन, बोस्नियन, स्लोव्हेनियन, मॅसेडोनियन</string>
+    <string name="rd_os_svc_assrt">तुमच्या विनामूल्य टोकनसह · चिनी</string>
+    <string name="rd_os_svc_jimaku">तुमच्या विनामूल्य कीसह · ॲनिमे, जपानी</string>
+    <string name="rd_os_svc_betaseries">तुमच्या विनामूल्य कीसह · मालिका, फ्रेंच</string>
+    <string name="rd_os_svc_subsro">तुमच्या विनामूल्य कीसह · रोमानियन</string>
+    <string name="rd_os_svc_napisy24">तुमच्या विनामूल्य खात्यासह · पोलिश · तुमच्या धारिकेसाठी बनवलेल्या शोधते</string>
+    <string name="rd_os_svc_legendasnet">तुमच्या विनामूल्य खात्यासह · पोर्तुगीज (ब्राझील)</string>
 </resources>

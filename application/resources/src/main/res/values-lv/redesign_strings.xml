@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Atveriet %1$s tālrunī vai datorā.</string>
     <string name="rd_os_show_text">Rādīt</string>
     <string name="rd_os_hide_text">Paslēpt</string>
+    <string name="rd_os_svc_titlovi">Ar jūsu bezmaksas kontu · horvātu, serbu, bosniešu, slovēņu, maķedoniešu</string>
+    <string name="rd_os_svc_assrt">Ar jūsu bezmaksas marķieri · ķīniešu</string>
+    <string name="rd_os_svc_jimaku">Ar jūsu bezmaksas atslēgu · anime, japāņu</string>
+    <string name="rd_os_svc_betaseries">Ar jūsu bezmaksas atslēgu · seriāli, franču</string>
+    <string name="rd_os_svc_subsro">Ar jūsu bezmaksas atslēgu · rumāņu</string>
+    <string name="rd_os_svc_napisy24">Ar jūsu bezmaksas kontu · poļu · atrod tos, kas veidoti jūsu datnei</string>
+    <string name="rd_os_svc_legendasnet">Ar jūsu bezmaksas kontu · portugāļu (Brazīlija)</string>
 </resources>

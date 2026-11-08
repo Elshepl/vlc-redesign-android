@@ -421,4 +421,11 @@
     <string name="rd_os_open_elsewhere">Opna %1$s på ein telefon eller ei datamaskin.</string>
     <string name="rd_os_show_text">Vis</string>
     <string name="rd_os_hide_text">Gøym</string>
+    <string name="rd_os_svc_titlovi">Med din gratis konto · kroatisk, serbisk, bosnisk, slovensk, makedonsk</string>
+    <string name="rd_os_svc_assrt">Med ditt gratis token · kinesisk</string>
+    <string name="rd_os_svc_jimaku">Med din gratis nøkkel · anime, japansk</string>
+    <string name="rd_os_svc_betaseries">Med din gratis nøkkel · seriar, fransk</string>
+    <string name="rd_os_svc_subsro">Med din gratis nøkkel · rumensk</string>
+    <string name="rd_os_svc_napisy24">Med din gratis konto · polsk · finn dei som er laga for fila di</string>
+    <string name="rd_os_svc_legendasnet">Med din gratis konto · portugisisk (Brasil)</string>
 </resources>

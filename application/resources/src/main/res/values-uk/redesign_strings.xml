@@ -446,4 +446,11 @@
     <string name="rd_os_open_elsewhere">Відкрийте %1$s на телефоні або комп’ютері.</string>
     <string name="rd_os_show_text">Показати</string>
     <string name="rd_os_hide_text">Сховати</string>
+    <string name="rd_os_svc_titlovi">З вашим безкоштовним обліковим записом · хорватська, сербська, боснійська, словенська, македонська</string>
+    <string name="rd_os_svc_assrt">З вашим безкоштовним токеном · китайська</string>
+    <string name="rd_os_svc_jimaku">З вашим безкоштовним ключем · аніме, японська</string>
+    <string name="rd_os_svc_betaseries">З вашим безкоштовним ключем · серіали, французька</string>
+    <string name="rd_os_svc_subsro">З вашим безкоштовним ключем · румунська</string>
+    <string name="rd_os_svc_napisy24">З вашим безкоштовним обліковим записом · польська · знаходить зроблені для вашого файлу</string>
+    <string name="rd_os_svc_legendasnet">З вашим безкоштовним обліковим записом · португальська (Бразилія)</string>
 </resources>

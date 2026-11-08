@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Avaa %1$s puhelimella tai tietokoneella.</string>
     <string name="rd_os_show_text">Näytä</string>
     <string name="rd_os_hide_text">Piilota</string>
+    <string name="rd_os_svc_titlovi">Ilmaisella tililläsi · kroatia, serbia, bosnia, slovenia, makedonia</string>
+    <string name="rd_os_svc_assrt">Ilmaisella tokenillasi · kiina</string>
+    <string name="rd_os_svc_jimaku">Ilmaisella avaimellasi · anime, japani</string>
+    <string name="rd_os_svc_betaseries">Ilmaisella avaimellasi · sarjat, ranska</string>
+    <string name="rd_os_svc_subsro">Ilmaisella avaimellasi · romania</string>
+    <string name="rd_os_svc_napisy24">Ilmaisella tililläsi · puola · löytää tiedostollesi tehdyt</string>
+    <string name="rd_os_svc_legendasnet">Ilmaisella tililläsi · portugali (Brasilia)</string>
 </resources>

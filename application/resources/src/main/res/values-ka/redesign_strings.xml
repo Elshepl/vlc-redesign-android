@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">გახსენით %1$s ტელეფონში ან კომპიუტერში.</string>
     <string name="rd_os_show_text">ჩვენება</string>
     <string name="rd_os_hide_text">დამალვა</string>
+    <string name="rd_os_svc_titlovi">თქვენი უფასო ანგარიშით · ხორვატული, სერბული, ბოსნიური, სლოვენური, მაკედონური</string>
+    <string name="rd_os_svc_assrt">თქვენი უფასო ტოკენით · ჩინური</string>
+    <string name="rd_os_svc_jimaku">თქვენი უფასო გასაღებით · ანიმე, იაპონური</string>
+    <string name="rd_os_svc_betaseries">თქვენი უფასო გასაღებით · სერიალები, ფრანგული</string>
+    <string name="rd_os_svc_subsro">თქვენი უფასო გასაღებით · რუმინული</string>
+    <string name="rd_os_svc_napisy24">თქვენი უფასო ანგარიშით · პოლონური · პოულობს თქვენი ფაილისთვის შექმნილს</string>
+    <string name="rd_os_svc_legendasnet">თქვენი უფასო ანგარიშით · პორტუგალიური (ბრაზილია)</string>
 </resources>

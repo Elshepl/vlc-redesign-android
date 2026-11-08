@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Åbn %1$s på en telefon eller en computer.</string>
     <string name="rd_os_show_text">Vis</string>
     <string name="rd_os_hide_text">Skjul</string>
+    <string name="rd_os_svc_titlovi">Med din gratis konto · kroatisk, serbisk, bosnisk, slovensk, makedonsk</string>
+    <string name="rd_os_svc_assrt">Med dit gratis token · kinesisk</string>
+    <string name="rd_os_svc_jimaku">Med din gratis nøgle · anime, japansk</string>
+    <string name="rd_os_svc_betaseries">Med din gratis nøgle · serier, fransk</string>
+    <string name="rd_os_svc_subsro">Med din gratis nøgle · rumænsk</string>
+    <string name="rd_os_svc_napisy24">Med din gratis konto · polsk · finder dem, der er lavet til din fil</string>
+    <string name="rd_os_svc_legendasnet">Med din gratis konto · portugisisk (Brasilien)</string>
 </resources>

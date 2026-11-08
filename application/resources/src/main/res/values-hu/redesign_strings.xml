@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Nyissa meg telefonon vagy számítógépen: %1$s.</string>
     <string name="rd_os_show_text">Megjelenítés</string>
     <string name="rd_os_hide_text">Elrejtés</string>
+    <string name="rd_os_svc_titlovi">Ingyenes fiókjával · horvát, szerb, bosnyák, szlovén, macedón</string>
+    <string name="rd_os_svc_assrt">Ingyenes tokenjével · kínai</string>
+    <string name="rd_os_svc_jimaku">Ingyenes kulcsával · anime, japán</string>
+    <string name="rd_os_svc_betaseries">Ingyenes kulcsával · sorozatok, francia</string>
+    <string name="rd_os_svc_subsro">Ingyenes kulcsával · román</string>
+    <string name="rd_os_svc_napisy24">Ingyenes fiókjával · lengyel · a fájlhoz készülteket is megtalálja</string>
+    <string name="rd_os_svc_legendasnet">Ingyenes fiókjával · portugál (brazíliai)</string>
 </resources>

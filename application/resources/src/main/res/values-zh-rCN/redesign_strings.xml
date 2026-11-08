@@ -445,4 +445,11 @@
     <string name="rd_os_open_elsewhere">请在手机或电脑上打开 %1$s。</string>
     <string name="rd_os_show_text">显示</string>
     <string name="rd_os_hide_text">隐藏</string>
+    <string name="rd_os_svc_titlovi">使用您的免费账号 · 克罗地亚语、塞尔维亚语、波斯尼亚语、斯洛文尼亚语、马其顿语</string>
+    <string name="rd_os_svc_assrt">使用您的免费令牌 · 中文</string>
+    <string name="rd_os_svc_jimaku">使用您自己的免费密钥 · 动漫、日语</string>
+    <string name="rd_os_svc_betaseries">使用您自己的免费密钥 · 剧集、法语</string>
+    <string name="rd_os_svc_subsro">使用您自己的免费密钥 · 罗马尼亚语</string>
+    <string name="rd_os_svc_napisy24">使用您的免费账号 · 波兰语 · 查找为您的文件制作的字幕</string>
+    <string name="rd_os_svc_legendasnet">使用您的免费账号 · 葡萄牙语 (巴西)</string>
 </resources>

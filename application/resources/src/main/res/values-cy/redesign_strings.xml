@@ -421,4 +421,11 @@
     <string name="rd_os_open_elsewhere">Agorwch %1$s ar ffôn neu gyfrifiadur.</string>
     <string name="rd_os_show_text">Dangos</string>
     <string name="rd_os_hide_text">Cuddio</string>
+    <string name="rd_os_svc_titlovi">Gyda\'ch cyfrif am ddim · Croateg, Serbeg, Bosneg, Slofeneg, Macedoneg</string>
+    <string name="rd_os_svc_assrt">Gyda\'ch tocyn am ddim · Tsieinëeg</string>
+    <string name="rd_os_svc_jimaku">Gyda\'ch allwedd am ddim · anime, Japaneeg</string>
+    <string name="rd_os_svc_betaseries">Gyda\'ch allwedd am ddim · cyfresi, Ffrangeg</string>
+    <string name="rd_os_svc_subsro">Gyda\'ch allwedd am ddim · Rwmaneg</string>
+    <string name="rd_os_svc_napisy24">Gyda\'ch cyfrif am ddim · Pwyleg · yn canfod y rhai a wnaed ar gyfer eich ffeil</string>
+    <string name="rd_os_svc_legendasnet">Gyda\'ch cyfrif am ddim · Portiwgaleg (Brasil)</string>
 </resources>

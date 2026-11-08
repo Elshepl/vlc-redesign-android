@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Abra %1$s en un teléfono o una computadora.</string>
     <string name="rd_os_show_text">Mostrar</string>
     <string name="rd_os_hide_text">Ocultar</string>
+    <string name="rd_os_svc_titlovi">Con su cuenta gratuita · croata, serbio, bosnio, esloveno, macedonio</string>
+    <string name="rd_os_svc_assrt">Con su token gratuito · chino</string>
+    <string name="rd_os_svc_jimaku">Con su clave gratuita · anime, japonés</string>
+    <string name="rd_os_svc_betaseries">Con su clave gratuita · series, francés</string>
+    <string name="rd_os_svc_subsro">Con su clave gratuita · rumano</string>
+    <string name="rd_os_svc_napisy24">Con su cuenta gratuita · polaco · encuentra los hechos para su archivo</string>
+    <string name="rd_os_svc_legendasnet">Con su cuenta gratuita · portugués (Brasil)</string>
 </resources>

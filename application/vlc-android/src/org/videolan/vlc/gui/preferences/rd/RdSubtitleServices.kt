@@ -421,6 +421,13 @@ class RdSubtitleServices(private val page: PreferenceFragmentCompat) {
             "wizdom" -> R.string.rd_os_svc_wizdom
             "addic7ed" -> R.string.rd_os_svc_addic7ed
             "yify" -> R.string.rd_os_svc_yify
+            "titlovi" -> R.string.rd_os_svc_titlovi
+            "assrt" -> R.string.rd_os_svc_assrt
+            "jimaku" -> R.string.rd_os_svc_jimaku
+            "betaseries" -> R.string.rd_os_svc_betaseries
+            "subsro" -> R.string.rd_os_svc_subsro
+            "napisy24" -> R.string.rd_os_svc_napisy24
+            "legendasnet" -> R.string.rd_os_svc_legendasnet
             else -> R.string.rd_os_services
         })
 

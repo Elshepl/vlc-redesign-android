@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">เปิด %1$s บนโทรศัพท์หรือคอมพิวเตอร์</string>
     <string name="rd_os_show_text">แสดง</string>
     <string name="rd_os_hide_text">ซ่อน</string>
+    <string name="rd_os_svc_titlovi">ใช้บัญชีฟรีของคุณ · โครเอเชีย, เซอร์เบีย, บอสเนีย, สโลวีเนีย, มาซิโดเนีย</string>
+    <string name="rd_os_svc_assrt">ใช้โทเค็นฟรีของคุณ · จีน</string>
+    <string name="rd_os_svc_jimaku">ใช้คีย์ฟรีของคุณเอง · อนิเมะ, ญี่ปุ่น</string>
+    <string name="rd_os_svc_betaseries">ใช้คีย์ฟรีของคุณเอง · ซีรีส์, ฝรั่งเศส</string>
+    <string name="rd_os_svc_subsro">ใช้คีย์ฟรีของคุณเอง · โรมาเนีย</string>
+    <string name="rd_os_svc_napisy24">ใช้บัญชีฟรีของคุณ · โปแลนด์ · ค้นหาบทบรรยายที่ทำมาสำหรับแฟ้มของคุณ</string>
+    <string name="rd_os_svc_legendasnet">ใช้บัญชีฟรีของคุณ · โปรตุเกส (บราซิล)</string>
 </resources>

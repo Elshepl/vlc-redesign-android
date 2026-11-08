@@ -446,4 +446,11 @@
     <string name="rd_os_open_elsewhere">Otevřete %1$s v telefonu nebo počítači.</string>
     <string name="rd_os_show_text">Zobrazit</string>
     <string name="rd_os_hide_text">Skrýt</string>
+    <string name="rd_os_svc_titlovi">S vaším účtem zdarma · chorvatština, srbština, bosenština, slovinština, makedonština</string>
+    <string name="rd_os_svc_assrt">S vaším tokenem zdarma · čínština</string>
+    <string name="rd_os_svc_jimaku">S vaším klíčem zdarma · anime, japonština</string>
+    <string name="rd_os_svc_betaseries">S vaším klíčem zdarma · seriály, francouzština</string>
+    <string name="rd_os_svc_subsro">S vaším klíčem zdarma · rumunština</string>
+    <string name="rd_os_svc_napisy24">S vaším účtem zdarma · polština · najde titulky vytvořené pro váš soubor</string>
+    <string name="rd_os_svc_legendasnet">S vaším účtem zdarma · portugalština (Brazílie)</string>
 </resources>

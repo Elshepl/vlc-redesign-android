@@ -429,4 +429,11 @@
     <string name="rd_os_open_elsewhere">פתח את %1$s בטלפון או במחשב.</string>
     <string name="rd_os_show_text">הצג</string>
     <string name="rd_os_hide_text">הסתר</string>
+    <string name="rd_os_svc_titlovi">עם החשבון החינמי שלך · קרואטית, סרבית, בוסנית, סלובנית, מקדונית</string>
+    <string name="rd_os_svc_assrt">עם הטוקן החינמי שלך · סינית</string>
+    <string name="rd_os_svc_jimaku">עם המפתח החינמי שלך · אנימה, יפנית</string>
+    <string name="rd_os_svc_betaseries">עם המפתח החינמי שלך · סדרות, צרפתית</string>
+    <string name="rd_os_svc_subsro">עם המפתח החינמי שלך · רומנית</string>
+    <string name="rd_os_svc_napisy24">עם החשבון החינמי שלך · פולנית · מוצא כתוביות שהותאמו לקובץ שלך</string>
+    <string name="rd_os_svc_legendasnet">עם החשבון החינמי שלך · פורטוגזית (ברזיל)</string>
 </resources>

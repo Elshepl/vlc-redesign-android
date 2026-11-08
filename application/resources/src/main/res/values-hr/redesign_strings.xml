@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Otvorite %1$s na telefonu ili računalu.</string>
     <string name="rd_os_show_text">Prikaži</string>
     <string name="rd_os_hide_text">Sakrij</string>
+    <string name="rd_os_svc_titlovi">S Vašim besplatnim računom · hrvatski, srpski, bosanski, slovenski, makedonski</string>
+    <string name="rd_os_svc_assrt">S Vašim besplatnim tokenom · kineski</string>
+    <string name="rd_os_svc_jimaku">S Vašim besplatnim ključem · anime, japanski</string>
+    <string name="rd_os_svc_betaseries">S Vašim besplatnim ključem · serije, francuski</string>
+    <string name="rd_os_svc_subsro">S Vašim besplatnim ključem · rumunjski</string>
+    <string name="rd_os_svc_napisy24">S Vašim besplatnim računom · poljski · pronalazi one izrađene za Vašu datoteku</string>
+    <string name="rd_os_svc_legendasnet">S Vašim besplatnim računom · portugalski (Brazil)</string>
 </resources>

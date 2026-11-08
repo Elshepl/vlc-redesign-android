@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">Maak %1$s op ’n foon of ’n rekenaar oop.</string>
     <string name="rd_os_show_text">Wys</string>
     <string name="rd_os_hide_text">Versteek</string>
+    <string name="rd_os_svc_titlovi">Met u gratis rekening · Kroaties, Serwies, Bosnies, Sloweens, Masedonies</string>
+    <string name="rd_os_svc_assrt">Met u gratis token · Chinees</string>
+    <string name="rd_os_svc_jimaku">Met u gratis sleutel · anime, Japannees</string>
+    <string name="rd_os_svc_betaseries">Met u gratis sleutel · reekse, Frans</string>
+    <string name="rd_os_svc_subsro">Met u gratis sleutel · Roemeens</string>
+    <string name="rd_os_svc_napisy24">Met u gratis rekening · Pools · vind dié wat vir u lêer gemaak is</string>
+    <string name="rd_os_svc_legendasnet">Met u gratis rekening · Portugees (Brasilië)</string>
 </resources>

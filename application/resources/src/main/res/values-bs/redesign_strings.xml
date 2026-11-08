@@ -421,4 +421,11 @@
     <string name="rd_os_open_elsewhere">Otvorite %1$s na telefonu ili računaru.</string>
     <string name="rd_os_show_text">Prikaži</string>
     <string name="rd_os_hide_text">Sakrij</string>
+    <string name="rd_os_svc_titlovi">S vašim besplatnim računom · hrvatski, srpski, bosanski, slovenski, makedonski</string>
+    <string name="rd_os_svc_assrt">S vašim besplatnim tokenom · kineski</string>
+    <string name="rd_os_svc_jimaku">S vašim besplatnim ključem · anime, japanski</string>
+    <string name="rd_os_svc_betaseries">S vašim besplatnim ključem · serije, francuski</string>
+    <string name="rd_os_svc_subsro">S vašim besplatnim ključem · rumunski</string>
+    <string name="rd_os_svc_napisy24">S vašim besplatnim računom · poljski · pronalazi one napravljene za vašu datoteku</string>
+    <string name="rd_os_svc_legendasnet">S vašim besplatnim računom · portugalski (Brazil)</string>
 </resources>

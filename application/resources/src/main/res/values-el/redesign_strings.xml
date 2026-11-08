@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Ανοίξτε το %1$s σε τηλέφωνο ή υπολογιστή.</string>
     <string name="rd_os_show_text">Εμφάνιση</string>
     <string name="rd_os_hide_text">Απόκρυψη</string>
+    <string name="rd_os_svc_titlovi">Με τον δωρεάν λογαριασμό σας · κροατικά, σερβικά, βοσνιακά, σλοβενικά, μακεδονικά</string>
+    <string name="rd_os_svc_assrt">Με το δωρεάν διακριτικό σας · κινεζικά</string>
+    <string name="rd_os_svc_jimaku">Με το δωρεάν κλειδί σας · anime, ιαπωνικά</string>
+    <string name="rd_os_svc_betaseries">Με το δωρεάν κλειδί σας · σειρές, γαλλικά</string>
+    <string name="rd_os_svc_subsro">Με το δωρεάν κλειδί σας · ρουμανικά</string>
+    <string name="rd_os_svc_napisy24">Με τον δωρεάν λογαριασμό σας · πολωνικά · βρίσκει όσους φτιάχτηκαν για το αρχείο σας</string>
+    <string name="rd_os_svc_legendasnet">Με τον δωρεάν λογαριασμό σας · πορτογαλικά (Βραζιλίας)</string>
 </resources>

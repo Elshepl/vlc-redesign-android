@@ -446,4 +446,11 @@
     <string name="rd_os_open_elsewhere">Otwórz %1$s na telefonie lub komputerze.</string>
     <string name="rd_os_show_text">Pokaż</string>
     <string name="rd_os_hide_text">Ukryj</string>
+    <string name="rd_os_svc_titlovi">Z Twoim darmowym kontem · chorwacki, serbski, bośniacki, słoweński, macedoński</string>
+    <string name="rd_os_svc_assrt">Z Twoim darmowym tokenem · chiński</string>
+    <string name="rd_os_svc_jimaku">Z Twoim darmowym kluczem · anime, japoński</string>
+    <string name="rd_os_svc_betaseries">Z Twoim darmowym kluczem · seriale, francuski</string>
+    <string name="rd_os_svc_subsro">Z Twoim darmowym kluczem · rumuński</string>
+    <string name="rd_os_svc_napisy24">Z Twoim darmowym kontem · polski · znajduje napisy dopasowane do Twojego pliku</string>
+    <string name="rd_os_svc_legendasnet">Z Twoim darmowym kontem · portugalski (Brazylia)</string>
 </resources>

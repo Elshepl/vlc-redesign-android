@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Atidarykite %1$s telefone arba kompiuteryje.</string>
     <string name="rd_os_show_text">Rodyti</string>
     <string name="rd_os_hide_text">Slėpti</string>
+    <string name="rd_os_svc_titlovi">Su jūsų nemokama paskyra · kroatų, serbų, bosnių, slovėnų, makedonų</string>
+    <string name="rd_os_svc_assrt">Su jūsų nemokamu žetonu · kinų</string>
+    <string name="rd_os_svc_jimaku">Su jūsų nemokamu raktu · anime, japonų</string>
+    <string name="rd_os_svc_betaseries">Su jūsų nemokamu raktu · serialai, prancūzų</string>
+    <string name="rd_os_svc_subsro">Su jūsų nemokamu raktu · rumunų</string>
+    <string name="rd_os_svc_napisy24">Su jūsų nemokama paskyra · lenkų · randa sukurtus jūsų failui</string>
+    <string name="rd_os_svc_legendasnet">Su jūsų nemokama paskyra · portugalų (Brazilija)</string>
 </resources>

@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">Hapeni %1$s në një telefon ose kompjuter.</string>
     <string name="rd_os_show_text">Shfaq</string>
     <string name="rd_os_hide_text">Fshih</string>
+    <string name="rd_os_svc_titlovi">Me llogarinë tuaj falas · kroatisht, serbisht, boshnjakisht, sllovenisht, maqedonisht</string>
+    <string name="rd_os_svc_assrt">Me tokenin tuaj falas · kinezisht</string>
+    <string name="rd_os_svc_jimaku">Me çelësin tuaj falas · anime, japonisht</string>
+    <string name="rd_os_svc_betaseries">Me çelësin tuaj falas · seriale, frëngjisht</string>
+    <string name="rd_os_svc_subsro">Me çelësin tuaj falas · rumanisht</string>
+    <string name="rd_os_svc_napisy24">Me llogarinë tuaj falas · polonisht · gjen ato të bëra për skedarin tuaj</string>
+    <string name="rd_os_svc_legendasnet">Me llogarinë tuaj falas · portugalisht (Brazil)</string>
 </resources>

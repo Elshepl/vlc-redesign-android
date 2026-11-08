@@ -119,7 +119,20 @@ object OnlineSubtitles {
         Provider("subdl", "SubDL", movies = true, series = true, fields = listOf(Field.KEY), page = "https://subdl.com/panel/api"),
         Provider("wizdom", "Wizdom", movies = true, series = true, languages = setOf("he")),
         Provider("addic7ed", "Addic7ed", movies = false, series = true),
-        Provider("yify", "YIFY Subtitles", movies = true, series = false)
+        Provider("yify", "YIFY Subtitles", movies = true, series = false),
+        // with the user's free key or account, each for its languages (Bazarr's providers: their requests)
+        Provider("titlovi", "Titlovi", movies = true, series = true, languages = setOf("hr", "sr", "bs", "sl", "mk"),
+            fields = listOf(Field.USERNAME, Field.PASSWORD), page = "https://titlovi.com"),
+        Provider("assrt", "Assrt", movies = true, series = true, languages = setOf("zh"), fields = listOf(Field.KEY),
+            page = "https://assrt.net/usercp.php", token = true),
+        Provider("jimaku", "Jimaku", movies = true, series = true, languages = setOf("ja"), fields = listOf(Field.KEY), page = "https://jimaku.cc/account"),
+        Provider("betaseries", "BetaSeries", movies = false, series = true, languages = setOf("fr"), fields = listOf(Field.KEY),
+            page = "https://www.betaseries.com/api/"),
+        Provider("subsro", "Subs.ro", movies = true, series = true, languages = setOf("ro"), fields = listOf(Field.KEY), page = "https://subs.ro/api"),
+        Provider("napisy24", "Napisy24", movies = true, series = true, languages = setOf("pl"), fields = listOf(Field.USERNAME, Field.PASSWORD),
+            page = "https://napisy24.pl"),
+        Provider("legendasnet", "Legendas.net", movies = true, series = true, languages = setOf("pt"), fields = listOf(Field.EMAIL, Field.PASSWORD),
+            page = "https://legendas.net")
     )
 
     fun provider(id: String) = providers.firstOrNull { it.id == id }
@@ -753,6 +766,8 @@ object OnlineSubtitles {
             listOf(match.imdb, match.title.replace('|', ' '), match.year.toString(), if (match.series) "series" else "movie").joinToString("|")).apply()
     }
 
+    internal fun shortHash(text: String) = sha1(text).take(12)
+
     private fun sha1(text: String) = MessageDigest.getInstance("SHA-1").digest(text.toByteArray()).joinToString("") { "%02x".format(it) }
 
     // ---------------------------------------------------------------------------------------------------------------
@@ -1365,7 +1380,7 @@ object OnlineSubtitles {
             if (link == null) stateOf(error)?.let { setServiceState(context, result.provider, it) }
             link ?: return@withContext Pair(null, error)
         } else result.url
-        val r = get(url, headers, MAX_DOWNLOAD_BYTES, 30_000)
+        val r = KeyedSubtitles.fetch(context, result, MAX_DOWNLOAD_BYTES) ?: get(url, headers, MAX_DOWNLOAD_BYTES, 30_000)
         if (!ok(r) || r.body.isEmpty()) {
             // a key or a sign-in refused: said so, and on the service's row
             KeyedSubtitles.downloadProblem(result, r.status)?.let { p ->

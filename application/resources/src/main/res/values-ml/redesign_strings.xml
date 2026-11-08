@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">ഒരു ഫോണിലോ കമ്പ്യൂട്ടറിലോ %1$s തുറക്കുക.</string>
     <string name="rd_os_show_text">കാണിക്കുക</string>
     <string name="rd_os_hide_text">മറയ്ക്കുക</string>
+    <string name="rd_os_svc_titlovi">നിങ്ങളുടെ സൗജന്യ അക്കൗണ്ട് ഉപയോഗിച്ച് · ക്രൊയേഷ്യൻ, സെർബിയൻ, ബോസ്നിയൻ, സ്ലൊവേനിയൻ, മാസിഡോണിയൻ</string>
+    <string name="rd_os_svc_assrt">നിങ്ങളുടെ സൗജന്യ ടോക്കൺ ഉപയോഗിച്ച് · ചൈനീസ്</string>
+    <string name="rd_os_svc_jimaku">നിങ്ങളുടെ സൗജന്യ കീ ഉപയോഗിച്ച് · അനിമെ, ജാപ്പനീസ്</string>
+    <string name="rd_os_svc_betaseries">നിങ്ങളുടെ സൗജന്യ കീ ഉപയോഗിച്ച് · സീരീസുകൾ, ഫ്രഞ്ച്</string>
+    <string name="rd_os_svc_subsro">നിങ്ങളുടെ സൗജന്യ കീ ഉപയോഗിച്ച് · റൊമാനിയൻ</string>
+    <string name="rd_os_svc_napisy24">നിങ്ങളുടെ സൗജന്യ അക്കൗണ്ട് ഉപയോഗിച്ച് · പോളിഷ് · നിങ്ങളുടെ ഫയലിനായി നിർമ്മിച്ചവ കണ്ടെത്തുന്നു</string>
+    <string name="rd_os_svc_legendasnet">നിങ്ങളുടെ സൗജന്യ അക്കൗണ്ട് ഉപയോഗിച്ച് · പോർച്ചുഗീസ് (ബ്രസീൽ)</string>
 </resources>

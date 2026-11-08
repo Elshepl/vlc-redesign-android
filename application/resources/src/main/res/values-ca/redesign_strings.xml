@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Obriu %1$s en un telèfon o un ordinador.</string>
     <string name="rd_os_show_text">Mostra</string>
     <string name="rd_os_hide_text">Amaga</string>
+    <string name="rd_os_svc_titlovi">Amb el vostre compte gratuït · croat, serbi, bosnià, eslovè, macedoni</string>
+    <string name="rd_os_svc_assrt">Amb el vostre testimoni gratuït · xinès</string>
+    <string name="rd_os_svc_jimaku">Amb la vostra clau gratuïta · anime, japonès</string>
+    <string name="rd_os_svc_betaseries">Amb la vostra clau gratuïta · sèries, francès</string>
+    <string name="rd_os_svc_subsro">Amb la vostra clau gratuïta · romanès</string>
+    <string name="rd_os_svc_napisy24">Amb el vostre compte gratuït · polonès · troba els fets per al vostre fitxer</string>
+    <string name="rd_os_svc_legendasnet">Amb el vostre compte gratuït · portuguès (Brasil)</string>
 </resources>

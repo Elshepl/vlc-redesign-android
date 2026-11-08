@@ -445,4 +445,11 @@
     <string name="rd_os_open_elsewhere">%1$s adresini bir telefonda veya bilgisayarda açın.</string>
     <string name="rd_os_show_text">Göster</string>
     <string name="rd_os_hide_text">Gizle</string>
+    <string name="rd_os_svc_titlovi">Ücretsiz hesabınızla · Hırvatça, Sırpça, Boşnakça, Slovence, Makedonca</string>
+    <string name="rd_os_svc_assrt">Ücretsiz belirtecinizle · Çince</string>
+    <string name="rd_os_svc_jimaku">Ücretsiz anahtarınızla · anime, Japonca</string>
+    <string name="rd_os_svc_betaseries">Ücretsiz anahtarınızla · diziler, Fransızca</string>
+    <string name="rd_os_svc_subsro">Ücretsiz anahtarınızla · Rumence</string>
+    <string name="rd_os_svc_napisy24">Ücretsiz hesabınızla · Lehçe · dosyanız için yapılanları bulur</string>
+    <string name="rd_os_svc_legendasnet">Ücretsiz hesabınızla · Portekizce (Brezilya)</string>
 </resources>

@@ -445,4 +445,11 @@
     <string name="rd_os_open_elsewhere">Öppna %1$s på en telefon eller en dator.</string>
     <string name="rd_os_show_text">Visa</string>
     <string name="rd_os_hide_text">Dölj</string>
+    <string name="rd_os_svc_titlovi">Med ditt gratis konto · kroatiska, serbiska, bosniska, slovenska, makedonska</string>
+    <string name="rd_os_svc_assrt">Med din gratis token · kinesiska</string>
+    <string name="rd_os_svc_jimaku">Med din gratis nyckel · anime, japanska</string>
+    <string name="rd_os_svc_betaseries">Med din gratis nyckel · serier, franska</string>
+    <string name="rd_os_svc_subsro">Med din gratis nyckel · rumänska</string>
+    <string name="rd_os_svc_napisy24">Med ditt gratis konto · polska · hittar de som gjorts för din fil</string>
+    <string name="rd_os_svc_legendasnet">Med ditt gratis konto · portugisiska (Brasilien)</string>
 </resources>

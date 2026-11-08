@@ -421,4 +421,11 @@
     <string name="rd_os_open_elsewhere">%1$s را در تلفن یا رایانه باز کنید.</string>
     <string name="rd_os_show_text">نمایش</string>
     <string name="rd_os_hide_text">پنهان کردن</string>
+    <string name="rd_os_svc_titlovi">با حساب رایگان شما · کرواتی، صربی، بوسنیایی، اسلوونیایی، مقدونی</string>
+    <string name="rd_os_svc_assrt">با توکن رایگان شما · چینی</string>
+    <string name="rd_os_svc_jimaku">با کلید رایگان شما · انیمه، ژاپنی</string>
+    <string name="rd_os_svc_betaseries">با کلید رایگان شما · سریال، فرانسوی</string>
+    <string name="rd_os_svc_subsro">با کلید رایگان شما · رومانیایی</string>
+    <string name="rd_os_svc_napisy24">با حساب رایگان شما · لهستانی · زیرنویس‌های ساخته‌شده برای پروندهٔ شما را پیدا می‌کند</string>
+    <string name="rd_os_svc_legendasnet">با حساب رایگان شما · پرتغالی (برزیل)</string>
 </resources>

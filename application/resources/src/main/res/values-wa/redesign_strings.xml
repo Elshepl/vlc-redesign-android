@@ -454,4 +454,11 @@
     <string name="rd_os_open_elsewhere">Drovoz %1$s so on telefone ou ene copiutrece.</string>
     <string name="rd_os_show_text">Mostrer</string>
     <string name="rd_os_hide_text">Catchî</string>
+    <string name="rd_os_svc_titlovi">Avou vosse conte a gråtis · crowate, serbe, bosnyake, slovene, macedonyin</string>
+    <string name="rd_os_svc_assrt">Avou vosse djeton a gråtis · chinwès</string>
+    <string name="rd_os_svc_jimaku">Avou vosse clé a gråtis · anime, djaponès</string>
+    <string name="rd_os_svc_betaseries">Avou vosse clé a gråtis · séreyes, francès</string>
+    <string name="rd_os_svc_subsro">Avou vosse clé a gråtis · roumin</string>
+    <string name="rd_os_svc_napisy24">Avou vosse conte a gråtis · polonès · trove cenes fwaites po vosse fitchî</string>
+    <string name="rd_os_svc_legendasnet">Avou vosse conte a gråtis · portuguès (Braezi)</string>
 </resources>

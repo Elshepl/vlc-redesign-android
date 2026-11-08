@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Адкрыйце %1$s на тэлефоне або камп\'ютары.</string>
     <string name="rd_os_show_text">Паказаць</string>
     <string name="rd_os_hide_text">Схаваць</string>
+    <string name="rd_os_svc_titlovi">З вашым бясплатным уліковым запісам · харвацкая, сербская, баснійская, славенская, македонская</string>
+    <string name="rd_os_svc_assrt">З вашым бясплатным токенам · кітайская</string>
+    <string name="rd_os_svc_jimaku">З вашым бясплатным ключом · анімэ, японская</string>
+    <string name="rd_os_svc_betaseries">З вашым бясплатным ключом · серыялы, французская</string>
+    <string name="rd_os_svc_subsro">З вашым бясплатным ключом · румынская</string>
+    <string name="rd_os_svc_napisy24">З вашым бясплатным уліковым запісам · польская · знаходзіць зробленыя для вашага файла</string>
+    <string name="rd_os_svc_legendasnet">З вашым бясплатным уліковым запісам · партугальская (Бразілія)</string>
 </resources>

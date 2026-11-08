@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Ireki %1$s telefono edo ordenagailu batean.</string>
     <string name="rd_os_show_text">Erakutsi</string>
     <string name="rd_os_hide_text">Ezkutatu</string>
+    <string name="rd_os_svc_titlovi">Zure doako kontuarekin · kroaziera, serbiera, bosniera, esloveniera, mazedoniera</string>
+    <string name="rd_os_svc_assrt">Zure doako tokenarekin · txinera</string>
+    <string name="rd_os_svc_jimaku">Zure doako gakoarekin · animea, japoniera</string>
+    <string name="rd_os_svc_betaseries">Zure doako gakoarekin · telesailak, frantsesa</string>
+    <string name="rd_os_svc_subsro">Zure doako gakoarekin · errumaniera</string>
+    <string name="rd_os_svc_napisy24">Zure doako kontuarekin · poloniera · zure fitxategirako eginak aurkitzen ditu</string>
+    <string name="rd_os_svc_legendasnet">Zure doako kontuarekin · portugesa (Brasil)</string>
 </resources>

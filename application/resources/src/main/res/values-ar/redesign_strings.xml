@@ -444,4 +444,11 @@
     <string name="rd_os_open_elsewhere">افتح %1$s على هاتف أو كمبيوتر.</string>
     <string name="rd_os_show_text">إظهار</string>
     <string name="rd_os_hide_text">إخفاء</string>
+    <string name="rd_os_svc_titlovi">بحسابك المجاني · الكرواتية، الصربية، البوسنية، السلوفينية، المقدونية</string>
+    <string name="rd_os_svc_assrt">برمزك المميز المجاني · الصينية</string>
+    <string name="rd_os_svc_jimaku">بمفتاحك المجاني · أنمي، اليابانية</string>
+    <string name="rd_os_svc_betaseries">بمفتاحك المجاني · مسلسلات، الفرنسية</string>
+    <string name="rd_os_svc_subsro">بمفتاحك المجاني · الرومانية</string>
+    <string name="rd_os_svc_napisy24">بحسابك المجاني · البولندية · يجد الترجمات المُعدّة لملفك</string>
+    <string name="rd_os_svc_legendasnet">بحسابك المجاني · البرتغالية (البرازيل)</string>
 </resources>

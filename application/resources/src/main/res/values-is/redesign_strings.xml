@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">Opnaðu %1$s í síma eða tölvu.</string>
     <string name="rd_os_show_text">Sýna</string>
     <string name="rd_os_hide_text">Fela</string>
+    <string name="rd_os_svc_titlovi">Með ókeypis aðganginum þínum · króatíska, serbneska, bosníska, slóvenska, makedónska</string>
+    <string name="rd_os_svc_assrt">Með ókeypis tókanum þínum · kínverska</string>
+    <string name="rd_os_svc_jimaku">Með ókeypis lyklinum þínum · anime, japanska</string>
+    <string name="rd_os_svc_betaseries">Með ókeypis lyklinum þínum · þáttaraðir, franska</string>
+    <string name="rd_os_svc_subsro">Með ókeypis lyklinum þínum · rúmenska</string>
+    <string name="rd_os_svc_napisy24">Með ókeypis aðganginum þínum · pólska · finnur þá sem gerðir eru fyrir skrána þína</string>
+    <string name="rd_os_svc_legendasnet">Með ókeypis aðganginum þínum · portúgalska (Brasilía)</string>
 </resources>

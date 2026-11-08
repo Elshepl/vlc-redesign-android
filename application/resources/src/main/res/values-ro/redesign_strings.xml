@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Deschideți %1$s pe un telefon sau un computer.</string>
     <string name="rd_os_show_text">Afișează</string>
     <string name="rd_os_hide_text">Ascunde</string>
+    <string name="rd_os_svc_titlovi">Cu contul dumneavoastră gratuit · croată, sârbă, bosniacă, slovenă, macedoneană</string>
+    <string name="rd_os_svc_assrt">Cu tokenul dumneavoastră gratuit · chineză</string>
+    <string name="rd_os_svc_jimaku">Cu cheia dumneavoastră gratuită · anime, japoneză</string>
+    <string name="rd_os_svc_betaseries">Cu cheia dumneavoastră gratuită · seriale, franceză</string>
+    <string name="rd_os_svc_subsro">Cu cheia dumneavoastră gratuită · română</string>
+    <string name="rd_os_svc_napisy24">Cu contul dumneavoastră gratuit · poloneză · le găsește pe cele făcute pentru fișierul dumneavoastră</string>
+    <string name="rd_os_svc_legendasnet">Cu contul dumneavoastră gratuit · portugheză (Brazilia)</string>
 </resources>

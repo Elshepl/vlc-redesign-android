@@ -445,4 +445,11 @@
     <string name="rd_os_open_elsewhere">휴대전화나 컴퓨터에서 %1$s에 접속하세요.</string>
     <string name="rd_os_show_text">표시</string>
     <string name="rd_os_hide_text">숨기기</string>
+    <string name="rd_os_svc_titlovi">나만의 무료 계정 사용 · 크로아티아어, 세르비아어, 보스니아어, 슬로베니아어, 마케도니아어</string>
+    <string name="rd_os_svc_assrt">나만의 무료 토큰 사용 · 중국어</string>
+    <string name="rd_os_svc_jimaku">나만의 무료 키 사용 · 애니메이션, 일본어</string>
+    <string name="rd_os_svc_betaseries">나만의 무료 키 사용 · 시리즈, 프랑스어</string>
+    <string name="rd_os_svc_subsro">나만의 무료 키 사용 · 루마니아어</string>
+    <string name="rd_os_svc_napisy24">나만의 무료 계정 사용 · 폴란드어 · 파일에 맞게 제작된 자막을 찾음</string>
+    <string name="rd_os_svc_legendasnet">나만의 무료 계정 사용 · 포르투갈어(브라질)</string>
 </resources>

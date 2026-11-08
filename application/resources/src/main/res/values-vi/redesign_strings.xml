@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Mở %1$s trên điện thoại hoặc máy tính.</string>
     <string name="rd_os_show_text">Hiện</string>
     <string name="rd_os_hide_text">Ẩn</string>
+    <string name="rd_os_svc_titlovi">Với tài khoản miễn phí của bạn · tiếng Croatia, tiếng Serbia, tiếng Bosnia, tiếng Slovenia, tiếng Macedonia</string>
+    <string name="rd_os_svc_assrt">Với mã token miễn phí của bạn · tiếng Trung</string>
+    <string name="rd_os_svc_jimaku">Với khóa miễn phí của riêng bạn · anime, tiếng Nhật</string>
+    <string name="rd_os_svc_betaseries">Với khóa miễn phí của riêng bạn · phim bộ, tiếng Pháp</string>
+    <string name="rd_os_svc_subsro">Với khóa miễn phí của riêng bạn · tiếng Romania</string>
+    <string name="rd_os_svc_napisy24">Với tài khoản miễn phí của bạn · tiếng Ba Lan · tìm phụ đề làm riêng cho tập tin của bạn</string>
+    <string name="rd_os_svc_legendasnet">Với tài khoản miễn phí của bạn · tiếng Bồ Đào Nha (Brazil)</string>
 </resources>

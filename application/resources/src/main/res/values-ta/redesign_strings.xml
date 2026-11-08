@@ -420,4 +420,11 @@
     <string name="rd_os_open_elsewhere">ஃபோன் அல்லது கணினியில் %1$s ஐத் திறக்கவும்.</string>
     <string name="rd_os_show_text">காட்டு</string>
     <string name="rd_os_hide_text">மறை</string>
+    <string name="rd_os_svc_titlovi">உங்கள் இலவசக் கணக்குடன் · குரோஷியன், செர்பியன், போஸ்னியன், ஸ்லோவேனியன், மாசிடோனியன்</string>
+    <string name="rd_os_svc_assrt">உங்கள் இலவச டோக்கனுடன் · சீனம்</string>
+    <string name="rd_os_svc_jimaku">உங்கள் இலவச விசையுடன் · அனிமே, ஜப்பானியம்</string>
+    <string name="rd_os_svc_betaseries">உங்கள் இலவச விசையுடன் · தொடர்கள், பிரெஞ்சு</string>
+    <string name="rd_os_svc_subsro">உங்கள் இலவச விசையுடன் · ருமேனியன்</string>
+    <string name="rd_os_svc_napisy24">உங்கள் இலவசக் கணக்குடன் · போலிஷ் · உங்கள் கோப்புக்காக உருவாக்கப்பட்டவற்றைக் கண்டறியும்</string>
+    <string name="rd_os_svc_legendasnet">உங்கள் இலவசக் கணக்குடன் · போர்ச்சுகீஸ் (பிரேசில்)</string>
 </resources>

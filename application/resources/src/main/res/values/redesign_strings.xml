@@ -567,4 +567,12 @@
     <string name="rd_os_open_elsewhere">Open %1$s on a phone or a computer.</string>
     <string name="rd_os_show_text">Show</string>
     <string name="rd_os_hide_text">Hide</string>
+    <!-- the services with a free key or account (wave 2) -->
+    <string name="rd_os_svc_titlovi">With your free account · Croatian, Serbian, Bosnian, Slovenian, Macedonian</string>
+    <string name="rd_os_svc_assrt">With your free token · Chinese</string>
+    <string name="rd_os_svc_jimaku">With your free key · anime, Japanese</string>
+    <string name="rd_os_svc_betaseries">With your free key · series, French</string>
+    <string name="rd_os_svc_subsro">With your free key · Romanian</string>
+    <string name="rd_os_svc_napisy24">With your free account · Polish · finds those made for your file</string>
+    <string name="rd_os_svc_legendasnet">With your free account · Portuguese (Brazil)</string>
 </resources>

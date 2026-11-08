@@ -422,4 +422,11 @@
     <string name="rd_os_open_elsewhere">Ava %1$s telefonis või arvutis.</string>
     <string name="rd_os_show_text">Kuva</string>
     <string name="rd_os_hide_text">Peida</string>
+    <string name="rd_os_svc_titlovi">Sinu tasuta kontoga · horvaadi, serbia, bosnia, sloveeni, makedoonia</string>
+    <string name="rd_os_svc_assrt">Sinu tasuta tõendiga · hiina</string>
+    <string name="rd_os_svc_jimaku">Sinu tasuta võtmega · anime, jaapani</string>
+    <string name="rd_os_svc_betaseries">Sinu tasuta võtmega · sarjad, prantsuse</string>
+    <string name="rd_os_svc_subsro">Sinu tasuta võtmega · rumeenia</string>
+    <string name="rd_os_svc_napisy24">Sinu tasuta kontoga · poola · leiab sinu failile tehtud subtiitrid</string>
+    <string name="rd_os_svc_legendasnet">Sinu tasuta kontoga · portugali (Brasiilia)</string>
 </resources>

@@ -1,8 +1,11 @@
 /*
  * VLC Redesign: the subtitle services asked with the user's own free key or account (OnlineSubtitles asks them with
- * the free ones): SubSource (strong in Arabic) and SubDL (the Subscene archive), their search, their answers read,
- * their errors told apart (a key refused, busy), and the check of a key (Settings › Subtitles: Test). Their shapes
- * are those of the maintained Kodi add-on a4kSubtitles (services/subsource.py, subdl.py).
+ * the free ones): SubSource (strong in Arabic), SubDL (the Subscene archive), Titlovi (the Balkan languages), Assrt
+ * (Chinese), Jimaku (anime in Japanese), BetaSeries (series in French), Subs.ro (Romanian), Napisy24 (Polish, by the
+ * file's hash) and Legendas.net (Portuguese of Brazil): their search, their answers read, their errors told apart (a
+ * key or a sign-in refused, busy), and the check of a key or an account (Settings › Subtitles: Test, Sign in).
+ * SubSource's and SubDL's shapes are those of the maintained Kodi add-on a4kSubtitles (services/subsource.py,
+ * subdl.py); the others', those of Bazarr's providers (custom_libs/subliminal_patch/providers).
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General
  * Public License as published by the Free Software Foundation; either version 2 of the License, or (at your
@@ -38,6 +41,13 @@ internal object KeyedSubtitles {
     suspend fun search(context: Context, p: Provider, q: Query): Pair<List<Result>, Problem?> = when (p.id) {
         "subsource" -> searchSubSource(context, q)
         "subdl" -> searchSubDl(context, q)
+        "titlovi" -> searchTitlovi(context, q)
+        "assrt" -> searchAssrt(context, q)
+        "jimaku" -> searchJimaku(context, q)
+        "betaseries" -> searchBetaSeries(context, q)
+        "subsro" -> searchSubsRo(context, q)
+        "napisy24" -> searchNapisy24(context, q)
+        "legendasnet" -> searchLegendas(context, q)
         else -> Pair(emptyList(), null)
     }
 
@@ -319,12 +329,494 @@ internal object KeyedSubtitles {
     }
 
     // ---------------------------------------------------------------------------------------------------------------
+    // Titlovi (kodi.titlovi.com, the Balkan languages): signs in for a token (kept until it expires), then searches
+    // by the title and the IMDb id; a download is a zip (or a RAR, which can't be opened here)
+
+    private const val TITLOVI = "https://kodi.titlovi.com/api/subtitles"
+
+    private val titloviNames = linkedMapOf("hr" to "Hrvatski", "sr" to "Srpski", "bs" to "Bosanski", "sl" to "Slovenski", "mk" to "Makedonski", "en" to "English")
+
+    fun fromTitlovi(name: String): String = when (name.trim()) {
+        "Cirilica" -> "sr"
+        else -> titloviNames.entries.firstOrNull { it.value.equals(name.trim(), true) }?.key ?: ""
+    }
+
+    /** the token of /gettoken: (token, user id, until), or the problem */
+    fun titloviLoginOf(r: Response, now: Long = System.currentTimeMillis()): Pair<Triple<String, String, Long>?, Problem?> {
+        if (r.status == 0 || r.error != null) return Pair(null, Problem.NoAnswer("Titlovi"))
+        if (r.status == 401 || r.status == 403) return Pair(null, Problem.LoginRefused("Titlovi"))
+        if (r.status == 429) return Pair(null, Problem.Busy("Titlovi"))
+        if (r.status != 200) return Pair(null, Problem.Status("Titlovi", r.status))
+        val o = json(r.body) ?: return Pair(null, Problem.LoginRefused("Titlovi"))
+        val token = o.optString("Token").ifEmpty { return Pair(null, Problem.LoginRefused("Titlovi")) }
+        val user = o.opt("UserId")?.toString() ?: ""
+        val until = isoTime(o.optString("ExpirationDate")).takeIf { it > now } ?: (now + 6 * 3600_000L)
+        return Pair(Triple(token, user, until), null)
+    }
+
+    /** "2026-11-15T12:00:00.123+01:00" -> its time (0 when it isn't one) */
+    fun isoTime(text: String): Long = try {
+        val f = java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ROOT)
+        f.timeZone = java.util.TimeZone.getTimeZone("UTC")
+        f.parse(text.take(19))?.time ?: 0L
+    } catch (e: Exception) {
+        0L
+    }
+
+    fun parseTitlovi(json: String, q: Query): List<Result> {
+        val items = try { JSONObject(json).optJSONArray("SubtitleResults") } catch (e: Exception) { null } ?: return emptyList()
+        val list = ArrayList<Result>()
+        for (i in 0 until items.length()) {
+            val o = items.optJSONObject(i) ?: continue
+            val id = o.opt("Id")?.toString()?.takeIf { it.isNotEmpty() && it.all { c -> c.isDigit() } } ?: continue
+            val link = o.optString("Link")
+            if (!link.startsWith("https://") && !link.startsWith("http://")) continue
+            val language = fromTitlovi(o.optString("Lang")).ifEmpty { continue }
+            if (q.series && q.season >= 0 && q.episode >= 0) {
+                if (intOf(o, "Season") != q.season) continue
+                val e = intOf(o, "Episode")
+                if (e > 0 && e != q.episode) continue
+            }
+            val downloads = max(o.optInt("DownloadCount"), 0)
+            list.add(Result("titlovi:$id", "titlovi", language, o.optString("Release").ifEmpty { o.optString("Title") }.trim(),
+                url = link.replaceFirst("http://", "https://"), downloads = downloads,
+                rank = log10(downloads + 1.0) * 3 + o.optDouble("Rating", 0.0).let { if (it.isNaN()) 0.0 else it }))
+        }
+        return list
+    }
+
+    private fun titloviToken(context: Context, force: Boolean): Pair<Pair<String, String>?, Problem?> {
+        val user = OnlineSubtitles.credential(context, "titlovi", Field.USERNAME)
+        val password = OnlineSubtitles.credential(context, "titlovi", Field.PASSWORD)
+        if (user.isEmpty() || password.isEmpty()) return Pair(null, null)
+        if (!force) SubtitleSecrets.token(context, "titlovi", user)?.let { return Pair(Pair(it.substringBefore('|'), it.substringAfter('|')), null) }
+        val r = OnlineSubtitles.postBody("$TITLOVI/gettoken?username=${enc(user)}&password=${enc(password)}&json=True",
+            mapOf("User-Agent" to userAgent, "Accept" to "application/json"), ByteArray(0), null)
+        val (login, problem) = titloviLoginOf(r)
+        login ?: return Pair(null, problem)
+        SubtitleSecrets.setToken(context, "titlovi", user, login.first + "|" + login.second, login.third)
+        return Pair(Pair(login.first, login.second), null)
+    }
+
+    private suspend fun searchTitlovi(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        if (q.title.isEmpty()) return Pair(emptyList(), null)
+        val langs = q.languages.mapNotNull { titloviNames[it.substringBefore('-')] }.distinct()
+        if (langs.isEmpty()) return Pair(emptyList(), null)
+        for (attempt in 0..1) {
+            val (token, problem) = titloviToken(context, force = attempt > 0)
+            token ?: return Pair(emptyList(), problem)
+            val params = ArrayList<String>()
+            params += "query=${enc(q.title)}"
+            params += "lang=${enc(langs.joinToString("|"))}"
+            if (q.series && q.season >= 0 && q.episode >= 0) params += "season=${q.season}"
+            if (q.imdb.startsWith("tt")) params += "imdbID=${q.imdb}"
+            params += listOf("token=${enc(token.first)}", "userid=${enc(token.second)}", "json=True")
+            val r = OnlineSubtitles.get("$TITLOVI/search?" + params.joinToString("&"), mapOf("User-Agent" to userAgent, "Accept" to "application/json"))
+            // (a token gone stale: a new one, once)
+            if ((r.status == 401 || r.status == 403) && attempt == 0) { delay(REQUEST_GAP_MS); continue }
+            if (r.status == 401 || r.status == 403) return Pair(emptyList(), Problem.LoginRefused("Titlovi"))
+            if (r.status == 429) return Pair(emptyList(), Problem.Busy("Titlovi"))
+            if (!OnlineSubtitles.ok(r)) return Pair(emptyList(), OnlineSubtitles.failure("Titlovi", r))
+            return Pair(parseTitlovi(String(r.body, Charsets.UTF_8), q), null)
+        }
+        return Pair(emptyList(), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
+    // Assrt (api.assrt.net, Chinese): the user's token in the address; the search gives the subtitles, their files
+    // are listed by /sub/detail when one is downloaded
+
+    private const val ASSRT = "https://api.assrt.net/v1"
+
+    /** Assrt's own status in an answer: 0 is no error */
+    fun assrtProblem(r: Response): Problem? {
+        if (r.status == 0 || r.error != null) return Problem.NoAnswer("Assrt")
+        if (r.status == 429) return Problem.Busy("Assrt")
+        val o = json(r.body)
+        val status = o?.optInt("status", if (r.status == 200) 0 else -1) ?: if (r.status == 200) 0 else -1
+        return when (status) {
+            0 -> if (r.status in 200..299) null else Problem.Status("Assrt", r.status)
+            20000, 20001, 20002 -> Problem.KeyRefused("Assrt")
+            30900 -> Problem.Busy("Assrt")
+            // (a keyword too short, nothing found)
+            101, 20400 -> null
+            else -> if (r.status == 401 || r.status == 403) Problem.KeyRefused("Assrt") else Problem.Status("Assrt", if (status > 0) status else r.status)
+        }
+    }
+
+    /** the languages of an Assrt subtitle ("langchs", "langcht", "langeng") */
+    fun assrtLanguages(langlist: JSONObject?): List<String> {
+        val list = ArrayList<String>()
+        for (k in langlist?.keys()?.asSequence()?.toList() ?: emptyList()) {
+            if (!langlist!!.optBoolean(k, true)) continue
+            when (k.removePrefix("lang")) {
+                "chs", "chn" -> "zh"
+                "cht", "twn" -> "zh-TW"
+                "eng" -> "en"
+                else -> null
+            }?.let { if (it !in list) list.add(it) }
+        }
+        return list
+    }
+
+    fun parseAssrt(json: String, q: Query): List<Result> {
+        val subs = try { JSONObject(json).optJSONObject("sub")?.optJSONArray("subs") } catch (e: Exception) { null } ?: return emptyList()
+        val list = ArrayList<Result>()
+        for (i in 0 until subs.length()) {
+            val o = subs.optJSONObject(i) ?: continue
+            val id = o.opt("id")?.toString()?.takeIf { it.isNotEmpty() && it.all { c -> c.isDigit() } } ?: continue
+            val languages = assrtLanguages(o.optJSONObject("lang")?.optJSONObject("langlist"))
+            // a Chinese one (with English as well, or not): Chinese, the traditional script when only that
+            val language = when {
+                "zh" in languages -> "zh"
+                "zh-TW" in languages -> "zh-TW"
+                else -> continue
+            }
+            var name = o.optString("videoname").trim()
+            if (name.isEmpty() || name == "不知道") name = o.opt("native_name")?.let { if (it is JSONArray) it.optString(0) else it.toString() }?.trim() ?: ""
+            if (q.series && !forEpisode(listOf(name), q.season, q.episode)) continue
+            list.add(Result("assrt:$id", "assrt", language, name, url = "assrt:$id",
+                rank = o.optDouble("vote_score", 0.0).let { if (it.isNaN()) 0.0 else it.coerceIn(0.0, 10.0) }))
+        }
+        return list
+    }
+
+    /** the file of /sub/detail to download: the episode's, a Chinese one, the first; the archive when none listed */
+    fun assrtFile(json: String, season: Int, episode: Int): String? {
+        val sub = try { JSONObject(json).optJSONObject("sub")?.optJSONArray("subs")?.optJSONObject(0) } catch (e: Exception) { null } ?: return null
+        val files = sub.optJSONArray("filelist")
+        if (files == null || files.length() == 0) return sub.optString("url").takeIf { it.startsWith("https://") || it.startsWith("http://") }
+        val list = (0 until files.length()).mapNotNull { files.optJSONObject(it) }.filter { it.optString("url").startsWith("http") }
+        val ofEpisode = if (season >= 0 && episode >= 0) list.filter { episodeOf(it.optString("f")) == Pair(season, episode) } else emptyList()
+        val pool = ofEpisode.ifEmpty { list }
+        val chinese = pool.firstOrNull { f -> listOf("chs", "简", "cht", "繁", "chn").any { it in f.optString("f").lowercase(Locale.ROOT) } }
+        return (chinese ?: pool.firstOrNull())?.optString("url")
+    }
+
+    private suspend fun searchAssrt(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        val token = OnlineSubtitles.credential(context, "assrt", Field.KEY)
+        if (token.isEmpty() || q.title.isEmpty()) return Pair(emptyList(), null)
+        val words = if (q.series && q.season >= 0 && q.episode >= 0) "%s S%02dE%02d".format(Locale.ROOT, q.title, q.season, q.episode)
+        else if (q.year > 0) "${q.title} ${q.year}" else q.title
+        val r = OnlineSubtitles.get("$ASSRT/sub/search?token=${enc(token)}&q=${enc(words)}&is_file=1", mapOf("User-Agent" to userAgent, "Accept" to "application/json"))
+        assrtProblem(r)?.let { return Pair(emptyList(), it) }
+        return Pair(parseAssrt(String(r.body, Charsets.UTF_8), q), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
+    // Jimaku (jimaku.cc, anime in Japanese): the key in Authorization; the entry of the title, then its files
+
+    private const val JIMAKU = "https://jimaku.cc/api"
+
+    fun jimakuProblem(r: Response): Problem? = when {
+        r.status == 0 || r.error != null -> Problem.NoAnswer("Jimaku")
+        r.status == 401 || r.status == 403 -> Problem.KeyRefused("Jimaku")
+        r.status == 429 -> Problem.Busy("Jimaku")
+        r.status == 404 -> null
+        r.status != 200 -> Problem.Status("Jimaku", r.status)
+        else -> null
+    }
+
+    /** the entry of /entries/search named most like the title (its English or its own name) */
+    fun jimakuEntry(json: String, q: Query): Long? {
+        val items = try { JSONArray(json) } catch (e: Exception) { return null }
+        var best: Long? = null
+        var bestScore = 0.0
+        for (i in 0 until items.length()) {
+            val o = items.optJSONObject(i) ?: continue
+            val id = o.opt("id")?.toString()?.toLongOrNull() ?: continue
+            val movie = o.optJSONObject("flags")?.optBoolean("movie") == true
+            var score = listOf("english_name", "name", "japanese_name").maxOf { OnlineSubtitles.titleSimilarity(o.optString(it), q.title) }
+            if (score < 0.6) continue
+            if (movie == !q.series) score += 0.1
+            if (score > bestScore) { bestScore = score; best = id }
+        }
+        return best
+    }
+
+    private val whisperRe = Regex("""whisper""", RegexOption.IGNORE_CASE)
+
+    fun parseJimaku(json: String, entry: Long): List<Result> {
+        val items = try { JSONArray(json) } catch (e: Exception) { return emptyList() }
+        val list = ArrayList<Result>()
+        for (i in 0 until items.length()) {
+            val o = items.optJSONObject(i) ?: continue
+            val name = o.optString("name").trim()
+            val url = o.optString("url")
+            if (name.isEmpty() || !url.startsWith("https://")) continue
+            val lower = name.lowercase(Locale.ROOT)
+            // (7z can't be opened here; a file that small is broken; made by a machine)
+            if (lower.endsWith(".7z") || o.optLong("size", 1000L) < 500 || whisperRe.containsMatchIn(name)) continue
+            list.add(Result("jimaku:$entry:${OnlineSubtitles.shortHash(url)}", "jimaku", "ja", name.substringBeforeLast('.'), fileName = name, url = url))
+        }
+        return list
+    }
+
+    private suspend fun searchJimaku(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        val key = OnlineSubtitles.credential(context, "jimaku", Field.KEY)
+        if (key.isEmpty() || q.title.isEmpty()) return Pair(emptyList(), null)
+        val headers = mapOf("Authorization" to key, "User-Agent" to userAgent, "Accept" to "application/json")
+        val r = OnlineSubtitles.get("$JIMAKU/entries/search?query=${enc(q.title.lowercase(Locale.ROOT))}", headers)
+        jimakuProblem(r)?.let { return Pair(emptyList(), it) }
+        val entry = jimakuEntry(String(r.body, Charsets.UTF_8), q) ?: return Pair(emptyList(), null)
+        delay(REQUEST_GAP_MS)
+        val files = OnlineSubtitles.get("$JIMAKU/entries/$entry/files" + (if (q.series && q.episode > 0) "?episode=${q.episode}" else ""), headers)
+        jimakuProblem(files)?.let { return Pair(emptyList(), it) }
+        return Pair(parseJimaku(String(files.body, Charsets.UTF_8), entry), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
+    // BetaSeries (api.betaseries.com, series in French): the show of the IMDb id, then the episode's subtitles
+
+    private const val BETASERIES = "https://api.betaseries.com"
+
+    /** its errors: 1001 the key, 4001 nothing of that id */
+    fun betaSeriesProblem(r: Response): Problem? {
+        if (r.status == 0 || r.error != null) return Problem.NoAnswer("BetaSeries")
+        if (r.status == 429) return Problem.Busy("BetaSeries")
+        val code = json(r.body)?.optJSONArray("errors")?.optJSONObject(0)?.optInt("code") ?: 0
+        return when {
+            code == 1001 || r.status == 401 || r.status == 403 -> Problem.KeyRefused("BetaSeries")
+            code == 4001 || r.status == 404 -> null
+            r.status != 200 -> Problem.Status("BetaSeries", r.status)
+            else -> null
+        }
+    }
+
+    fun betaSeriesShow(json: String): Long? = try { JSONObject(json).optJSONObject("show")?.opt("id")?.toString()?.toLongOrNull() } catch (e: Exception) { null }
+
+    fun parseBetaSeries(json: String): List<Result> {
+        val o = try { JSONObject(json) } catch (e: Exception) { return emptyList() }
+        val subs = o.optJSONObject("episode")?.optJSONArray("subtitles") ?: o.optJSONArray("episodes")?.optJSONObject(0)?.optJSONArray("subtitles") ?: return emptyList()
+        val list = ArrayList<Result>()
+        for (i in 0 until subs.length()) {
+            val s = subs.optJSONObject(i) ?: continue
+            val id = s.opt("id")?.toString()?.takeIf { it.isNotEmpty() && it.all { c -> c.isDigit() } } ?: continue
+            val language = when (s.optString("language").uppercase(Locale.ROOT)) { "VF" -> "fr"; "VO" -> "en"; else -> continue }
+            // (seriessub's links don't download, as Bazarr found)
+            if (s.optString("source") == "seriessub") continue
+            val url = s.optString("url")
+            if (!url.startsWith("https://") && !url.startsWith("http://")) continue
+            list.add(Result("betaseries:$id", "betaseries", language, s.optString("file").substringBeforeLast('.'), fileName = s.optString("file"),
+                url = url.replaceFirst("http://", "https://"), rank = s.optDouble("quality", 0.0).let { if (it.isNaN()) 0.0 else it.coerceIn(0.0, 5.0) }))
+        }
+        return list
+    }
+
+    private suspend fun searchBetaSeries(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        val key = OnlineSubtitles.credential(context, "betaseries", Field.KEY)
+        if (key.isEmpty() || !q.series || !q.imdb.startsWith("tt") || q.season < 0 || q.episode < 0) return Pair(emptyList(), null)
+        val headers = mapOf("User-Agent" to userAgent, "Accept" to "application/json", "X-BetaSeries-Version" to "3.0")
+        val show = OnlineSubtitles.get("$BETASERIES/shows/display?key=${enc(key)}&imdb_id=${q.imdb}&v=3.0", headers)
+        betaSeriesProblem(show)?.let { return Pair(emptyList(), it) }
+        val id = betaSeriesShow(String(show.body, Charsets.UTF_8)) ?: return Pair(emptyList(), null)
+        delay(REQUEST_GAP_MS)
+        val r = OnlineSubtitles.get("$BETASERIES/shows/episodes?key=${enc(key)}&id=$id&season=${q.season}&episode=${q.episode}&subtitles=1&v=3.0", headers)
+        betaSeriesProblem(r)?.let { return Pair(emptyList(), it) }
+        return Pair(parseBetaSeries(String(r.body, Charsets.UTF_8)), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
+    // Subs.ro (api.subs.ro, Romanian): the key in X-Subs-Api-Key; by the IMDb id (a series': its own)
+
+    private const val SUBSRO = "https://api.subs.ro/v1.0"
+
+    fun subsRoProblem(r: Response): Problem? = when {
+        r.status == 0 || r.error != null -> Problem.NoAnswer("Subs.ro")
+        r.status == 401 || r.status == 403 -> Problem.KeyRefused("Subs.ro")
+        r.status == 429 -> Problem.Busy("Subs.ro")
+        r.status == 404 -> null
+        r.status != 200 -> Problem.Status("Subs.ro", r.status)
+        else -> null
+    }
+
+    private val sezonRe = Regex("""[Ss]ezon(?:ul)?\s*(\d{1,2})""")
+
+    fun parseSubsRo(json: String, q: Query): List<Result> {
+        val o = try { JSONObject(json) } catch (e: Exception) { return emptyList() }
+        if (o.optInt("status", 200) != 200) return emptyList()
+        val items = o.optJSONArray("items") ?: return emptyList()
+        val list = ArrayList<Result>()
+        for (i in 0 until items.length()) {
+            val s = items.optJSONObject(i) ?: continue
+            val id = s.opt("id")?.toString()?.takeIf { it.isNotEmpty() && it.all { c -> c.isLetterOrDigit() } } ?: continue
+            val link = s.optString("downloadLink")
+            if (!link.startsWith("https://")) continue
+            val title = s.optString("title")
+            val description = s.optString("description")
+            if (q.series && q.season >= 0) {
+                val season = sezonRe.find(title)?.groupValues?.get(1)?.toIntOrNull() ?: sezonRe.find(description)?.groupValues?.get(1)?.toIntOrNull()
+                    ?: episodeOf(description)?.first
+                if (season != null && season != q.season) continue
+                if (!forEpisode(listOf(description), q.season, q.episode)) continue
+            }
+            list.add(Result("subsro:$id", "subsro", if (s.optString("language") == "en") "en" else "ro",
+                description.lineSequence().firstOrNull()?.trim()?.ifEmpty { null } ?: title, url = link))
+        }
+        return list
+    }
+
+    private fun searchSubsRo(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        val key = OnlineSubtitles.credential(context, "subsro", Field.KEY)
+        if (key.isEmpty() || !q.imdb.startsWith("tt")) return Pair(emptyList(), null)
+        val r = OnlineSubtitles.get("$SUBSRO/search/imdbid/${q.imdb.substring(2)}?language=ro", mapOf("X-Subs-Api-Key" to key, "User-Agent" to userAgent, "Accept" to "application/json"))
+        subsRoProblem(r)?.let { return Pair(emptyList(), it) }
+        return Pair(parseSubsRo(String(r.body, Charsets.UTF_8), q), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
+    // Napisy24 (napisy24.pl, Polish): the user's account and the file's hash (OpenSubtitles' kind) in one POST; the
+    // answer is a status line ("OK-2|imdb:…|napisId:…") and the zip of the subtitle made for this very file
+
+    private const val NAPISY24 = "https://napisy24.pl/run/CheckSubAgent.php"
+
+    class Napisy24Answer(val status: String, val info: Map<String, String>, val zip: ByteArray?, val problem: Problem?)
+
+    fun napisy24Of(r: Response): Napisy24Answer {
+        if (r.status == 0 || r.error != null) return Napisy24Answer("", emptyMap(), null, Problem.NoAnswer("Napisy24"))
+        if (r.status != 200) return Napisy24Answer("", emptyMap(), null, if (r.status == 429) Problem.Busy("Napisy24") else Problem.Status("Napisy24", r.status))
+        val body = r.body
+        var cut = -1
+        for (i in 0 until body.size - 1) if (body[i] == '|'.code.toByte() && body[i + 1] == '|'.code.toByte()) { cut = i; break }
+        val head = String(body, 0, if (cut >= 0) cut else body.size, Charsets.UTF_8).trim()
+        if (head.startsWith("login error", true)) return Napisy24Answer("", emptyMap(), null, Problem.LoginRefused("Napisy24"))
+        if (!head.startsWith("OK")) return Napisy24Answer("", emptyMap(), null, Problem.Status("Napisy24", 200))
+        val parts = head.split('|')
+        val info = parts.drop(1).mapNotNull { p -> p.indexOf(':').takeIf { it > 0 }?.let { p.substring(0, it) to p.substring(it + 1) } }.toMap()
+        val zip = if (cut >= 0 && parts[0].startsWith("OK-2")) body.copyOfRange(cut + 2, body.size) else null
+        return Napisy24Answer(parts[0].take(4), info, zip, null)
+    }
+
+    private fun napisy24Request(context: Context, hash: String, size: Long, fileName: String): Response {
+        val user = OnlineSubtitles.credential(context, "napisy24", Field.USERNAME)
+        val password = OnlineSubtitles.credential(context, "napisy24", Field.PASSWORD)
+        return OnlineSubtitles.postBody(NAPISY24, mapOf("User-Agent" to userAgent),
+            OnlineSubtitles.form(linkedMapOf("postAction" to "CheckSub", "ua" to user, "ap" to password, "fs" to size.toString(),
+                "fh" to hash, "fn" to fileName, "n24pref" to "1")), "application/x-www-form-urlencoded", 8 * 1024 * 1024)
+    }
+
+    private fun searchNapisy24(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        if (q.hash.isEmpty() || q.size <= 0) return Pair(emptyList(), null)
+        val a = napisy24Of(napisy24Request(context, q.hash, q.size, q.fileName))
+        if (a.problem != null) return Pair(emptyList(), a.problem)
+        if (a.zip == null || a.zip.isEmpty()) return Pair(emptyList(), null)
+        return Pair(listOf(Result("napisy24:${q.hash}", "napisy24", "pl", a.info["ftitle"]?.trim()?.ifEmpty { null } ?: q.fileName.substringBeforeLast('.'),
+            url = "napisy24:${q.hash}:${q.size}:${q.fileName}", exact = true)), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
+    // Legendas.net (Portuguese of Brazil): signs in with the email and password for a token, then searches by the
+    // IMDb id; a download is a zip, with the token
+
+    private const val LEGENDAS = "https://legendas.net/api/v1/"
+
+    fun legendasLoginOf(r: Response): Pair<String?, Problem?> = when {
+        r.status == 0 || r.error != null -> Pair(null, Problem.NoAnswer("Legendas.net"))
+        r.status == 401 || r.status == 403 || r.status == 422 -> Pair(null, Problem.LoginRefused("Legendas.net"))
+        r.status == 429 -> Pair(null, Problem.Busy("Legendas.net"))
+        r.status != 200 -> Pair(null, Problem.Status("Legendas.net", r.status))
+        else -> json(r.body)?.optString("access_token")?.ifEmpty { null }?.let { Pair(it, null) } ?: Pair(null, Problem.LoginRefused("Legendas.net"))
+    }
+
+    fun parseLegendas(json: String, q: Query): List<Result> {
+        val o = try { JSONObject(json) } catch (e: Exception) { return emptyList() }
+        if ((o.has("success") && !o.optBoolean("success")) || (o.has("status") && o.opt("status") == false)) return emptyList()
+        val items = o.optJSONArray(if (q.series) "tv_shows" else "movies") ?: return emptyList()
+        val list = ArrayList<Result>()
+        for (i in 0 until items.length()) {
+            val s = items.optJSONObject(i) ?: continue
+            val id = s.opt("id")?.toString()?.takeIf { it.isNotEmpty() && it.all { c -> c.isLetterOrDigit() } } ?: continue
+            val path = s.optString("path").ifEmpty { continue }
+            val url = if (path.startsWith("https://")) path else if (path.startsWith("/") && !path.startsWith("//")) "https://legendas.net$path" else continue
+            if (q.series && q.season >= 0 && q.episode >= 0) {
+                val season = intOf(s, "season")
+                val episode = intOf(s, "episode")
+                if (season > 0 && season != q.season) continue
+                if (episode > 0 && episode != q.episode) continue
+            }
+            val forced = listOf("forced", "foreign").any { it in s.optString("comment").lowercase(Locale.ROOT) }
+            list.add(Result("legendasnet:$id", "legendasnet", "pt-BR", s.optString("release_name").trim(), url = url, foreignOnly = forced))
+        }
+        return list
+    }
+
+    internal fun legendasToken(context: Context, force: Boolean): Pair<String?, Problem?> {
+        val email = OnlineSubtitles.credential(context, "legendasnet", Field.EMAIL)
+        val password = OnlineSubtitles.credential(context, "legendasnet", Field.PASSWORD)
+        if (email.isEmpty() || password.isEmpty()) return Pair(null, null)
+        if (!force) SubtitleSecrets.token(context, "legendasnet", email)?.let { return Pair(it, null) }
+        val r = OnlineSubtitles.postBody(LEGENDAS + "login", mapOf("User-Agent" to userAgent, "Accept" to "application/json"),
+            JSONObject().put("email", email).put("password", password).toString().toByteArray(Charsets.UTF_8), "application/json")
+        val (token, problem) = legendasLoginOf(r)
+        if (token != null) SubtitleSecrets.setToken(context, "legendasnet", email, token, System.currentTimeMillis() + 12 * 3600_000L)
+        return Pair(token, problem)
+    }
+
+    private suspend fun searchLegendas(context: Context, q: Query): Pair<List<Result>, Problem?> {
+        if (!q.imdb.startsWith("tt") && q.title.isEmpty()) return Pair(emptyList(), null)
+        for (attempt in 0..1) {
+            val (token, problem) = legendasToken(context, force = attempt > 0)
+            token ?: return Pair(emptyList(), problem)
+            // (Bazarr sends these as a JSON body of the GET, which Android can't: the same as parameters)
+            val params = arrayListOf("page=1", "per_page=25")
+            if (q.imdb.startsWith("tt")) params += "imdb_id=${q.imdb}" else params += "name=${enc(q.title)}"
+            if (q.series && q.season >= 0 && q.episode >= 0) params += listOf("tv_season=${q.season}", "tv_episode=${q.episode}")
+            val r = OnlineSubtitles.get(LEGENDAS + (if (q.series) "search/tv?" else "search/movie?") + params.joinToString("&"),
+                mapOf("Authorization" to "Bearer $token", "User-Agent" to userAgent, "Accept" to "application/json"))
+            if ((r.status == 401 || r.status == 403) && attempt == 0) { delay(REQUEST_GAP_MS); continue }
+            if (r.status == 401 || r.status == 403) return Pair(emptyList(), Problem.LoginRefused("Legendas.net"))
+            if (r.status == 429) return Pair(emptyList(), Problem.Busy("Legendas.net"))
+            if (r.status == 404) return Pair(emptyList(), null)
+            if (!OnlineSubtitles.ok(r)) return Pair(emptyList(), OnlineSubtitles.failure("Legendas.net", r))
+            return Pair(parseLegendas(String(r.body, Charsets.UTF_8), q), null)
+        }
+        return Pair(emptyList(), null)
+    }
+
+    // ---------------------------------------------------------------------------------------------------------------
     // Downloads
 
-    /** what a download of theirs needs (SubSource: the key) */
+    /** what a download of theirs needs (SubSource, Jimaku, Subs.ro: the key; Legendas.net: the sign-in's token) */
     fun downloadHeaders(context: Context, r: Result): Map<String, String> = when (r.provider) {
         "subsource" -> mapOf("X-API-Key" to OnlineSubtitles.credential(context, "subsource", Field.KEY))
+        "jimaku" -> mapOf("Authorization" to OnlineSubtitles.credential(context, "jimaku", Field.KEY))
+        "subsro" -> mapOf("X-Subs-Api-Key" to OnlineSubtitles.credential(context, "subsro", Field.KEY))
+        "legendasnet" -> legendasToken(context, false).first?.let { mapOf("Authorization" to "Bearer $it") } ?: emptyMap()
         else -> emptyMap()
+    }
+
+    /**
+     * a download that isn't one address: Assrt lists the files of a subtitle first (/sub/detail), Napisy24 gives
+     * the subtitle in the answer of its POST; null for the others (their result's address)
+     */
+    fun fetch(context: Context, r: Result, maxBytes: Int): Response? = when (r.provider) {
+        "assrt" -> {
+            val token = OnlineSubtitles.credential(context, "assrt", Field.KEY)
+            val id = r.url.removePrefix("assrt:")
+            val detail = OnlineSubtitles.get("$ASSRT/sub/detail?token=${enc(token)}&id=${enc(id)}", mapOf("User-Agent" to userAgent, "Accept" to "application/json"))
+            when (assrtProblem(detail)) {
+                null -> {
+                    val episode = episodeOf(r.release)
+                    assrtFile(String(detail.body, Charsets.UTF_8), episode?.first ?: -1, episode?.second ?: -1)
+                        ?.let { OnlineSubtitles.get(it.replaceFirst("http://", "https://"), mapOf("User-Agent" to userAgent), maxBytes, 30_000) }
+                        ?: Response(404, ByteArray(0), null)
+                }
+                is Problem.KeyRefused -> Response(401, ByteArray(0), null)
+                is Problem.Busy -> Response(429, ByteArray(0), null)
+                else -> Response(if (detail.status == 200) 502 else detail.status, ByteArray(0), detail.error)
+            }
+        }
+        "napisy24" -> {
+            val p = r.url.removePrefix("napisy24:").split(':', limit = 3)
+            val a = napisy24Of(napisy24Request(context, p.getOrElse(0) { "" }, p.getOrNull(1)?.toLongOrNull() ?: 0L, p.getOrElse(2) { "" }))
+            when {
+                a.zip != null && a.zip.isNotEmpty() -> Response(200, a.zip, null)
+                a.problem is Problem.LoginRefused -> Response(401, ByteArray(0), null)
+                a.problem is Problem.NoAnswer -> Response(0, ByteArray(0), "NoAnswer")
+                else -> Response(404, ByteArray(0), null)
+            }
+        }
+        else -> null
     }
 
     /** a download refused: the key (or the sign-in) of the service, to say so and show it on its row */
@@ -346,6 +838,10 @@ internal object KeyedSubtitles {
         val problem = when (id) {
             "subsource" -> subSourceProblem(r)
             "subdl" -> subDlProblem(r)
+            "assrt" -> assrtProblem(r)
+            "jimaku" -> jimakuProblem(r)
+            "betaseries" -> betaSeriesProblem(r)
+            "subsro" -> subsRoProblem(r)
             else -> when {
                 r.status == 0 || r.error != null -> Problem.NoAnswer(id)
                 r.status == 401 || r.status == 403 -> Problem.KeyRefused(id)
@@ -361,6 +857,15 @@ internal object KeyedSubtitles {
             is Problem.Busy -> Check.BUSY
             else -> Check.NO_ANSWER
         }
+    }
+
+    /** a sign-in's answer: signed in as that user, or why not */
+    fun signInCheckOf(signedIn: Boolean, problem: Problem?, user: String): CheckResult = when {
+        signedIn -> CheckResult(Check.SIGNED_IN, user)
+        problem is Problem.LoginRefused || problem == Problem.LoginFailed -> CheckResult(Check.LOGIN_REFUSED)
+        problem is Problem.KeyRefused -> CheckResult(Check.KEY_REFUSED)
+        problem is Problem.Busy -> CheckResult(Check.BUSY)
+        else -> CheckResult(Check.NO_ANSWER)
     }
 
     private fun checkOscom(context: Context): CheckResult {
@@ -390,6 +895,21 @@ internal object KeyedSubtitles {
                 subSourceHeaders(OnlineSubtitles.credential(context, id, Field.KEY)))))
             "subdl" -> CheckResult(keyCheckOf(id, OnlineSubtitles.get("$SUBDL_V2?type=movie&imdb_id=tt0133093&languages=en",
                 mapOf("Authorization" to "Bearer " + OnlineSubtitles.credential(context, id, Field.KEY), "User-Agent" to userAgent, "Accept" to "application/json"))))
+            "assrt" -> CheckResult(keyCheckOf(id, OnlineSubtitles.get("$ASSRT/user/quota?token=${enc(OnlineSubtitles.credential(context, id, Field.KEY))}",
+                mapOf("User-Agent" to userAgent, "Accept" to "application/json"))))
+            "jimaku" -> CheckResult(keyCheckOf(id, OnlineSubtitles.get("$JIMAKU/entries/search?query=frieren",
+                mapOf("Authorization" to OnlineSubtitles.credential(context, id, Field.KEY), "User-Agent" to userAgent, "Accept" to "application/json"))))
+            "betaseries" -> CheckResult(keyCheckOf(id, OnlineSubtitles.get("$BETASERIES/shows/display?key=${enc(OnlineSubtitles.credential(context, id, Field.KEY))}&imdb_id=tt0903747&v=3.0",
+                mapOf("User-Agent" to userAgent, "Accept" to "application/json"))))
+            "subsro" -> CheckResult(keyCheckOf(id, OnlineSubtitles.get("$SUBSRO/search/imdbid/0133093?language=ro",
+                mapOf("X-Subs-Api-Key" to OnlineSubtitles.credential(context, id, Field.KEY), "User-Agent" to userAgent, "Accept" to "application/json"))))
+            // the services of an account: a sign-in
+            "titlovi" -> titloviToken(context, force = true).let { (token, problem) ->
+                signInCheckOf(token != null, problem, OnlineSubtitles.credential(context, id, Field.USERNAME)) }
+            "legendasnet" -> legendasToken(context, force = true).let { (token, problem) ->
+                signInCheckOf(token != null, problem, OnlineSubtitles.credential(context, id, Field.EMAIL)) }
+            "napisy24" -> napisy24Of(napisy24Request(context, "0000000000000000", 1_000_000L, "check.mkv")).let { a ->
+                signInCheckOf(a.problem == null, a.problem, OnlineSubtitles.credential(context, id, Field.USERNAME)) }
             else -> CheckResult(Check.NO_ANSWER)
         }
         when (result.check) {

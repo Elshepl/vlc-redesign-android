@@ -421,4 +421,11 @@
     <string name="rd_os_open_elsewhere">%1$s फोन वा कम्प्युटरमा खोल्नुहोस्।</string>
     <string name="rd_os_show_text">देखाउनुहोस्</string>
     <string name="rd_os_hide_text">लुकाउनुहोस्</string>
+    <string name="rd_os_svc_titlovi">तपाईंको निःशुल्क खातासँग · क्रोएसियाली, सर्बियाली, बोस्नियाली, स्लोभेनियाली, म्यासेडोनियाली</string>
+    <string name="rd_os_svc_assrt">तपाईंको निःशुल्क टोकनसँग · चिनियाँ</string>
+    <string name="rd_os_svc_jimaku">तपाईंको निःशुल्क कुञ्जीसँग · एनिमे, जापानी</string>
+    <string name="rd_os_svc_betaseries">तपाईंको निःशुल्क कुञ्जीसँग · शृङ्खला, फ्रान्सेली</string>
+    <string name="rd_os_svc_subsro">तपाईंको निःशुल्क कुञ्जीसँग · रोमानियाली</string>
+    <string name="rd_os_svc_napisy24">तपाईंको निःशुल्क खातासँग · पोलिस · तपाईंको फाइलका लागि बनाइएका फेला पार्छ</string>
+    <string name="rd_os_svc_legendasnet">तपाईंको निःशुल्क खातासँग · पोर्तुगाली (ब्राजिल)</string>
 </resources>
