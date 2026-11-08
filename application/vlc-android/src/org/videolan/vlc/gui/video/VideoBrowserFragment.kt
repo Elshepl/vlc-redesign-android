@@ -88,6 +88,10 @@ class VideoBrowserFragment : BaseFragment(), TabLayout.OnTabSelectedListener, Fi
         viewPager = view.findViewById(R.id.pager)
         videoPagerAdapter = VideoPagerAdapter(this)
         viewPager.adapter = videoPagerAdapter
+        // VLC Redesign, the TV layout: ViewPager2 gives the focus to its own list first (FOCUS_BEFORE_DESCENDANTS), so
+        // the remote's Right from the sidebar or Down from the header stopped on the whole page, never on a video;
+        // the page's videos take it instead
+        if (org.videolan.tools.Settings.showTvUi) (viewPager.getChildAt(0) as? ViewGroup)?.descendantFocusability = ViewGroup.FOCUS_AFTER_DESCENDANTS
     }
 
     override fun onStart() {
