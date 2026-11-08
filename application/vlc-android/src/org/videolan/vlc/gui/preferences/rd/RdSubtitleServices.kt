@@ -52,6 +52,22 @@ import org.videolan.vlc.util.RdCompat
 import org.videolan.vlc.util.SubtitleSecrets
 import java.util.Locale
 
+/**
+ * The TV remote: the focus on the row of that key (its first control), once the list shows it: after a row was
+ * removed (its neighbour) or brought back, the focus stays there instead of going back to the top of the screen.
+ */
+fun androidx.preference.PreferenceFragmentCompat.rdFocusRow(key: String) {
+    val list = listView ?: return
+    list.post {
+        if (!isAdded) return@post
+        scrollToPreference(key)
+        list.post {
+            val position = (list.adapter as? androidx.preference.PreferenceGroup.PreferencePositionCallback)?.getPreferenceAdapterPosition(key) ?: -1
+            if (position >= 0) list.findViewHolderForAdapterPosition(position)?.itemView?.requestFocus()
+        }
+    }
+}
+
 /** A service's row (its layout: rd_pref_service); drawn by RdSubtitleServices. */
 class RdServicePreference(context: Context, val provider: Provider, private val host: RdSubtitleServices) : Preference(context) {
     init {
@@ -136,7 +152,7 @@ class RdSubtitleServices(private val page: PreferenceFragmentCompat) {
             .setItems(removed.map { it.name + "\n" + detail(ctx, it) }.toTypedArray()) { _, which ->
                 OnlineSubtitles.setRemoved(app, removed[which].id, false)
                 build()
-                page.scrollToPreference(RdServicePreference.KEY_PREFIX + removed[which].id)
+                page.rdFocusRow(RdServicePreference.KEY_PREFIX + removed[which].id)
             }
             .setNegativeButton(R.string.cancel, null)
             .show()
@@ -189,6 +205,14 @@ class RdSubtitleServices(private val page: PreferenceFragmentCompat) {
             if (p.fields.any { SubtitleSecrets.has(app, p.id, it.pref) })
                 box.addView(button(ctx, ctx.getString(if (p.login && signIn) R.string.rd_os_sign_out else R.string.rd_os_clear), enabled = true) { clear(p) })
             box.addView(button(ctx, ctx.getString(if (signIn) R.string.rd_os_create_account else R.string.rd_os_get_key), enabled = true) { openPage(p) })
+            // the D-pad: down from the well to its buttons (by geometry, the next row's switch was nearer the wide
+            // well's middle than the buttons at its start), up from them to the well
+            val buttons = (0 until box.childCount).map { box.getChildAt(it) }
+            for (b in buttons) {
+                b.id = View.generateViewId()
+                b.nextFocusUpId = R.id.rd_svc_fields
+            }
+            holder.findViewById(R.id.rd_svc_fields)?.nextFocusDownId = buttons.firstOrNull { it.isEnabled }?.id ?: View.NO_ID
         }
         (holder.findViewById(R.id.rd_svc_result) as? TextView)?.let { result ->
             val r = results[p.id]
@@ -221,8 +245,12 @@ class RdSubtitleServices(private val page: PreferenceFragmentCompat) {
         val popup = PopupMenu(anchor.context, anchor)
         popup.menu.add(0, 1, 0, R.string.rd_remove)
         popup.setOnMenuItemClickListener {
+            // the focus on the next service (else Add a service)
+            val shown = OnlineSubtitles.providers.filter { it.id !in OnlineSubtitles.removedServices(app) }
+            val next = shown.getOrNull(shown.indexOfFirst { it.id == p.id } + 1)
             OnlineSubtitles.setRemoved(app, p.id, true)
             build()
+            page.rdFocusRow(next?.let { RdServicePreference.KEY_PREFIX + it.id } ?: KEY_ADD)
             true
         }
         popup.show()

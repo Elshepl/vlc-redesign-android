@@ -121,6 +121,9 @@ class RdSubtitleLanguages(private val page: PreferenceFragmentCompat) {
         holder.findViewById(R.id.rd_svc_more)?.let { more ->
             more.contentDescription = ctx.getString(R.string.more_actions) + ", " + native
             more.setOnClickListener { menu(l, preferred, it) }
+            // (the preferred language alone in the list: nothing to move or remove, no menu)
+            val all = OnlineSubtitles.searchLanguages(app)
+            more.visibility = if (all.size > 1 || l.code != preferred) View.VISIBLE else View.INVISIBLE
         }
     }
 
@@ -148,8 +151,9 @@ class RdSubtitleLanguages(private val page: PreferenceFragmentCompat) {
             }
             OnlineSubtitles.setSearchLanguages(app, now)
             build()
-            // the moved row keeps the focus (the TV remote: OK, then Up or Down again)
+            // the moved row keeps the focus (the TV remote: OK, then Up or Down again); a removed one's, the next
             if (item.itemId != 3) page.listView?.post { focusRow(l.code) }
+            else page.rdFocusRow(now.getOrNull(at)?.let { RdLanguagePreference.KEY_PREFIX + it.code } ?: KEY_ADD)
             true
         }
         popup.show()

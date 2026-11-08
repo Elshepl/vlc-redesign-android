@@ -151,6 +151,22 @@ class RdSettingsPage : BasePreferenceFragment(), SharedPreferences.OnSharedPrefe
     override fun getXml() = page.xml
     override fun getTitleId() = page.title
 
+    /**
+     * The TV remote: the rows a little below (and above) the list laid out as well. A row of several controls (a
+     * subtitle service: its switch, its key, its buttons) moved the focus off the list's last laid-out row; the list
+     * then scrolled and recycled it, and the focus went back to the top of the screen. With the next rows there,
+     * the focus finds them and the list scrolls to them.
+     */
+    override fun onCreateLayoutManager(): androidx.recyclerview.widget.RecyclerView.LayoutManager =
+        object : androidx.recyclerview.widget.LinearLayoutManager(requireContext()) {
+            override fun calculateExtraLayoutSpace(state: androidx.recyclerview.widget.RecyclerView.State, extraLayoutSpace: IntArray) {
+                super.calculateExtraLayoutSpace(state, extraLayoutSpace)
+                val extra = height / 2
+                extraLayoutSpace[0] = maxOf(extraLayoutSpace[0], extra)
+                extraLayoutSpace[1] = maxOf(extraLayoutSpace[1], extra)
+            }
+        }
+
     private fun <T : Preference> pref(key: String): T? = findPreference(key)
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -98,7 +98,9 @@ class TvPreferencesActivity : PreferencesActivity() {
             side.clipToOutline = true
         }
         findViewById<View>(R.id.fragment_placeholder)?.let { pane ->
-            (pane.layoutParams as LinearLayout.LayoutParams).apply { width = 784.dp; weight = 0f; marginStart = 32.dp }
+            // (815 high: under the bar, as the sidebar; the coordinator gave it the card's whole height, its last 50
+            // under the card's edge, where a row the remote moved to stayed out of sight and the focus was lost)
+            (pane.layoutParams as LinearLayout.LayoutParams).apply { width = 784.dp; height = 815.dp; weight = 0f; marginStart = 32.dp }
         }
     }
 
