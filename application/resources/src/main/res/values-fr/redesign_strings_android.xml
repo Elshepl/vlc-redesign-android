@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Conservé sur cet appareil uniquement, pour reprendre là où vous vous êtes arrêté.</string>
     <string name="rd_ob_updates_help">Recherche une version de test plus récente de VLC for Android une fois par jour.</string>
     <string-array name="rd_whats_new_items">
-        <item>Sous-titres depuis Internet : recherche depuis le lecteur sur OpenSubtitles, Wizdom (hébreu), YIFY Subtitles et Addic7ed, gratuitement et sans compte.</item>
-        <item>Trouvés même pour les fichiers dont le nom ne dit rien. En option : votre propre clé OpenSubtitles.com et une recherche automatique, dans Paramètres › Sous-titres.</item>
-        <item>TV en direct : la barre d\'informations tient sur un téléphone tenu à la verticale.</item>
-        <item>Android TV : la télécommande atteint chaque vidéo et chaque bouton du lecteur.</item>
+        <item>Sous-titres : SubSource (arabe), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 et Legendas.net avec votre clé ou votre compte gratuit. Chacun dans Paramètres › Sous-titres, avec son interrupteur.</item>
+        <item>Langues à rechercher : activez ou désactivez chaque langue de sous-titres pour une recherche plus rapide.</item>
+        <item>Comptes TV en direct : votre Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR ou HDHomeRun, et le guide Schedules Direct. Les serveurs de votre réseau sont trouvés automatiquement.</item>
+        <item>TV en direct : un guide trouvé automatiquement pour les chaînes qui n\'en ont pas, un onglet Guides pour les guides de chaque source, et les sources de votre pays en premier dans le catalogue.</item>
+        <item>Corrections : sous-titres enregistrés dans le stockage propre de l\'application (un plantage sous Android 14), champs de mot de passe masqués, le focus de la télécommande TV, la traduction de « Pays » dans de nombreuses langues et celle de « mot de passe » en arabe.</item>
     </string-array>
     <string name="rd_subtitle_size">Taille des sous-titres</string>
     <string name="rd_cast_this_phone">Ce téléphone</string>

@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Csak ezen az eszközön tárolódik, hogy ott folytathassa, ahol abbahagyta.</string>
     <string name="rd_ob_updates_help">Naponta egyszer keres újabb tesztkiadást a VLC for Androidból.</string>
     <string-array name="rd_whats_new_items">
-        <item>Feliratok az internetről: keresés közvetlenül a lejátszóból az OpenSubtitles, a Wizdom (héber), a YIFY Subtitles és az Addic7ed szolgáltatásban, ingyen és fiók nélkül.</item>
-        <item>Olyan fájlokhoz is megtalálhatók, amelyek neve semmit sem árul el. Választható: saját OpenSubtitles.com-kulcs és automatikus keresés, a Beállítások › Feliratok alatt.</item>
-        <item>Élő TV: az információs sáv elfér az álló helyzetben tartott telefonon.</item>
-        <item>Android TV: a távirányító minden videót és a lejátszó minden gombját eléri.</item>
+        <item>Feliratok: SubSource (arab), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 és Legendas.net saját ingyenes kulccsal vagy fiókkal. Mindegyik a Beállítások › Feliratok alatt, saját kapcsolóval.</item>
+        <item>Keresési nyelvek: a gyorsabb keresésért kapcsolja be vagy ki egyenként a feliratnyelveket.</item>
+        <item>Élő TV-fiókok: saját Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR vagy HDHomeRun, valamint a Schedules Direct műsorújság. A hálózatán lévő kiszolgálókat az alkalmazás magától megtalálja.</item>
+        <item>Élő TV: magától megtalált műsorújság a műsorújság nélküli csatornákhoz, Műsorújságok lap minden forrás műsorújságaival, és a katalógusban elöl az Ön országának forrásai.</item>
+        <item>Javítások: a feliratok az alkalmazás saját tárhelyére kerülnek (összeomlás Android 14 rendszeren), a jelszómezők elrejtik a beírt jelszót, a TV-távirányító fókusza, az Ország szó sok nyelven és a jelszó szó arabul.</item>
     </string-array>
     <string name="rd_subtitle_size">Feliratméret</string>
     <string name="rd_cast_this_phone">Ez a telefon</string>

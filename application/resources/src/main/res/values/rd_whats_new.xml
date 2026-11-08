@@ -3,9 +3,10 @@
      translate"). -->
 <resources>
     <string-array name="rd_whats_new_items">
-        <item>Subtitles from the internet: search from the player in OpenSubtitles, Wizdom (Hebrew), YIFY Subtitles and Addic7ed, free and without an account.</item>
-        <item>Found even for files whose names say nothing. Optional: your own OpenSubtitles.com key and an automatic search, in Settings › Subtitles.</item>
-        <item>Live TV: the info bar fits a phone held upright.</item>
-        <item>Android TV: the remote reaches every video and every button of the player.</item>
+        <item>Subtitles: SubSource (Arabic), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 and Legendas.net, with your own free key or account. Each one in Settings › Subtitles, with its switch.</item>
+        <item>Languages to search: turn each subtitle language on or off for a faster search.</item>
+        <item>Live TV accounts: your Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR or HDHomeRun, and the Schedules Direct guide. Servers on your network are found by themselves.</item>
+        <item>Live TV: a guide found by itself for channels without one, a Guides tab for every source\'s guides, and the catalog\'s sources for your country first.</item>
+        <item>Fixes: subtitles saved in the app\'s own storage (a crash on Android 14), password fields hidden, the TV remote\'s focus, the word for Country in many languages and the word for password in Arabic.</item>
     </string-array>
 </resources>

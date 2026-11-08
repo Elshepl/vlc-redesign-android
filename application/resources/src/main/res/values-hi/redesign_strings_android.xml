@@ -32,10 +32,11 @@
     <string name="rd_ob_history_help">केवल इसी डिवाइस पर रखा जाता है, ताकि आप वहीं से जारी रख सकें जहाँ आपने छोड़ा था।</string>
     <string name="rd_ob_updates_help">दिन में एक बार VLC for Android का नया परीक्षण बिल्ड खोजता है।</string>
     <string-array name="rd_whats_new_items">
-        <item>इंटरनेट से उपशीर्षक: प्लेयर से ही OpenSubtitles, Wizdom (हिब्रू), YIFY Subtitles और Addic7ed में खोजें, मुफ़्त और बिना खाते के।</item>
-        <item>उन फ़ाइलों के लिए भी मिलते हैं जिनके नाम से कुछ पता नहीं चलता। वैकल्पिक: आपकी अपनी OpenSubtitles.com कुंजी और अपने-आप खोज, सेटिंग्स › उपशीर्षक में।</item>
-        <item>लाइव TV: फ़ोन को सीधा पकड़ने पर भी जानकारी पट्टी पूरी दिखती है।</item>
-        <item>Android TV: रिमोट अब हर वीडियो और प्लेयर के हर बटन तक पहुँचता है।</item>
+        <item>उपशीर्षक: SubSource (अरबी), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 और Legendas.net आपकी अपनी मुफ़्त कुंजी या खाते से। हर एक सेटिंग्स › उपशीर्षक में, अपने स्विच के साथ।</item>
+        <item>खोज के लिए भाषाएँ: तेज़ खोज के लिए हर उपशीर्षक भाषा को चालू या बंद करें।</item>
+        <item>लाइव TV खाते: आपका Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR या HDHomeRun, और Schedules Direct गाइड। आपके नेटवर्क पर मौजूद सर्वर अपने-आप मिल जाते हैं।</item>
+        <item>लाइव TV: जिन चैनलों की अपनी गाइड नहीं है उनके लिए अपने-आप मिली गाइड, हर स्रोत की गाइड के लिए \"गाइड\" टैब, और कैटलॉग में आपके देश के स्रोत सबसे पहले।</item>
+        <item>सुधार: डाउनलोड किए गए उपशीर्षक ऐप के अपने स्टोरेज में सहेजे जाते हैं (Android 14 पर क्रैश), पासवर्ड फ़ील्ड छिपे रहते हैं, TV रिमोट का फ़ोकस, कई भाषाओं में \"देश\" शब्द और अरबी में \"पासवर्ड\" शब्द।</item>
     </string-array>
     <string name="rd_subtitle_size">उपशीर्षक का आकार</string>
     <string name="rd_cast_this_phone">यह फ़ोन</string>

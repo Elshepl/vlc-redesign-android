@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Alleen op dit apparaat bewaard, om verder te gaan waar je gebleven was.</string>
     <string name="rd_ob_updates_help">Zoekt eenmaal per dag naar een nieuwere testversie van VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Ondertitels van internet: zoek vanuit de speler bij OpenSubtitles, Wizdom (Hebreeuws), YIFY Subtitles en Addic7ed, gratis en zonder account.</item>
-        <item>Ook gevonden voor bestanden waarvan de naam niets zegt. Optioneel: uw eigen OpenSubtitles.com-sleutel en automatisch zoeken, in Instellingen › Ondertitels.</item>
-        <item>Live-tv: de infobalk past op een rechtop gehouden telefoon.</item>
-        <item>Android TV: de afstandsbediening bereikt elke video en elke knop van de speler.</item>
+        <item>Ondertitels: SubSource (Arabisch), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 en Legendas.net met uw gratis sleutel of account. Elke dienst in Instellingen › Ondertitels, met een eigen schakelaar.</item>
+        <item>Talen om in te zoeken: zet elke ondertiteltaal aan of uit voor sneller zoeken.</item>
+        <item>Live-tv-accounts: uw Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR of HDHomeRun, en de gids van Schedules Direct. Servers op uw netwerk worden vanzelf gevonden.</item>
+        <item>Live-tv: een vanzelf gevonden gids voor zenders zonder gids, een tabblad Gidsen met de gidsen van elke bron, en in de catalogus eerst de bronnen van uw land.</item>
+        <item>Correcties: gedownloade ondertitels in de eigen opslag van de app (verhelpt een crash op Android 14), wachtwoordvelden tonen het wachtwoord niet meer, de focus van de tv-afstandsbediening, het woord voor \"Land\" in veel talen en het woord voor wachtwoord in het Arabisch.</item>
     </string-array>
     <string name="rd_subtitle_size">Ondertitelgrootte</string>
     <string name="rd_cast_this_phone">Deze telefoon</string>

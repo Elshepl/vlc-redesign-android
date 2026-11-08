@@ -32,10 +32,11 @@
     <string name="rd_ob_history_help">ਸਿਰਫ਼ ਇਸੇ ਡਿਵਾਈਸ ਉੱਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕੋ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ।</string>
     <string name="rd_ob_updates_help">ਦਿਨ ਵਿੱਚ ਇੱਕ ਵਾਰ VLC for Android ਦਾ ਨਵਾਂ ਟੈਸਟ ਬਿਲਡ ਲੱਭਦਾ ਹੈ।</string>
     <string-array name="rd_whats_new_items">
-        <item>ਇੰਟਰਨੈੱਟ ਤੋਂ ਸਬ-ਟਾਈਟਲ: ਪਲੇਅਰ ਤੋਂ ਹੀ OpenSubtitles, Wizdom (ਹਿਬਰੂ), YIFY Subtitles ਅਤੇ Addic7ed ਵਿੱਚ ਖੋਜੋ, ਮੁਫ਼ਤ ਅਤੇ ਖਾਤੇ ਤੋਂ ਬਿਨਾਂ।</item>
-        <item>ਉਹਨਾਂ ਫ਼ਾਈਲਾਂ ਲਈ ਵੀ ਮਿਲਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਨਾਂ ਤੋਂ ਕੁਝ ਪਤਾ ਨਹੀਂ ਲੱਗਦਾ। ਵਿਕਲਪਿਕ: ਤੁਹਾਡੀ ਆਪਣੀ OpenSubtitles.com ਕੁੰਜੀ ਅਤੇ ਆਟੋਮੈਟਿਕ ਖੋਜ, ਸੈਟਿੰਗ › ਸਬ-ਟਾਈਟਲ ਵਿੱਚ।</item>
-        <item>ਲਾਈਵ TV: ਫ਼ੋਨ ਨੂੰ ਸਿੱਧਾ ਫੜਨ \'ਤੇ ਵੀ ਜਾਣਕਾਰੀ ਪੱਟੀ ਪੂਰੀ ਦਿਸਦੀ ਹੈ।</item>
-        <item>Android TV: ਰਿਮੋਟ ਹੁਣ ਹਰ ਵੀਡੀਓ ਅਤੇ ਪਲੇਅਰ ਦੇ ਹਰ ਬਟਨ ਤੱਕ ਪਹੁੰਚਦਾ ਹੈ।</item>
+        <item>ਸਬ-ਟਾਈਟਲ: SubSource (ਅਰਬੀ), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 ਅਤੇ Legendas.net ਤੁਹਾਡੀ ਆਪਣੀ ਮੁਫ਼ਤ ਕੁੰਜੀ ਜਾਂ ਖਾਤੇ ਨਾਲ। ਹਰ ਇੱਕ ਸੈਟਿੰਗ › ਸਬ-ਟਾਈਟਲ ਵਿੱਚ, ਆਪਣੇ ਸਵਿੱਚ ਨਾਲ।</item>
+        <item>ਖੋਜ ਲਈ ਭਾਸ਼ਾਵਾਂ: ਤੇਜ਼ ਖੋਜ ਲਈ ਹਰ ਸਬ-ਟਾਈਟਲ ਭਾਸ਼ਾ ਨੂੰ ਚਾਲੂ ਜਾਂ ਬੰਦ ਕਰੋ।</item>
+        <item>ਲਾਈਵ TV ਖਾਤੇ: ਤੁਹਾਡਾ Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR ਜਾਂ HDHomeRun, ਅਤੇ Schedules Direct ਗਾਈਡ। ਤੁਹਾਡੇ ਨੈੱਟਵਰਕ ਉੱਤੇ ਸਰਵਰ ਆਪਣੇ ਆਪ ਲੱਭ ਜਾਂਦੇ ਹਨ।</item>
+        <item>ਲਾਈਵ TV: ਬਿਨਾਂ ਗਾਈਡ ਵਾਲੇ ਚੈਨਲਾਂ ਲਈ ਆਪਣੇ ਆਪ ਲੱਭੀ ਗਾਈਡ, ਹਰ ਸਰੋਤ ਦੀਆਂ ਗਾਈਡਾਂ ਲਈ \"ਗਾਈਡਾਂ\" ਟੈਬ, ਅਤੇ ਕੈਟਾਲਾਗ ਵਿੱਚ ਤੁਹਾਡੇ ਦੇਸ਼ ਦੇ ਸਰੋਤ ਸਭ ਤੋਂ ਪਹਿਲਾਂ।</item>
+        <item>ਸੁਧਾਰ: ਡਾਊਨਲੋਡ ਕੀਤੇ ਸਬ-ਟਾਈਟਲ ਐਪ ਦੀ ਆਪਣੀ ਸਟੋਰੇਜ ਵਿੱਚ ਸੰਭਾਲੇ ਜਾਂਦੇ ਹਨ (Android 14 ਉੱਤੇ ਕ੍ਰੈਸ਼), ਪਾਸਵਰਡ ਖੇਤਰ ਲੁਕੇ ਰਹਿੰਦੇ ਹਨ, TV ਰਿਮੋਟ ਦਾ ਫੋਕਸ, ਕਈ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ \"ਦੇਸ਼\" ਸ਼ਬਦ ਅਤੇ ਅਰਬੀ ਵਿੱਚ \"ਪਾਸਵਰਡ\" ਸ਼ਬਦ।</item>
     </string-array>
     <string name="rd_subtitle_size">ਉਪਸਿਰਲੇਖ ਦਾ ਆਕਾਰ</string>
     <string name="rd_cast_this_phone">ਇਹ ਫ਼ੋਨ</string>

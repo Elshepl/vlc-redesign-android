@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Mantido somente neste dispositivo, para continuar de onde você parou.</string>
     <string name="rd_ob_updates_help">Procura uma versão de teste mais nova do VLC for Android uma vez por dia.</string>
     <string-array name="rd_whats_new_items">
-        <item>Legendas da internet: busque direto do reprodutor no OpenSubtitles, Wizdom (hebraico), YIFY Subtitles e Addic7ed, de graça e sem conta.</item>
-        <item>Encontradas até para arquivos cujo nome não diz nada. Opcional: sua própria chave do OpenSubtitles.com e uma busca automática, em Configurações › Legendas.</item>
-        <item>TV ao vivo: a barra de informações cabe em um celular na vertical.</item>
-        <item>Android TV: o controle remoto alcança cada vídeo e cada botão do reprodutor.</item>
+        <item>Legendas: SubSource (árabe), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 e Legendas.net com sua chave ou conta gratuita. Cada um em Configurações › Legendas, com seu botão liga/desliga.</item>
+        <item>Idiomas para buscar: ative ou desative cada idioma de legenda para uma busca mais rápida.</item>
+        <item>Contas de TV ao vivo: seu Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR ou HDHomeRun, e o guia Schedules Direct. Os servidores na sua rede são encontrados automaticamente.</item>
+        <item>TV ao vivo: um guia encontrado automaticamente para canais sem guia, uma aba Guias com os guias de cada fonte e, primeiro, as fontes do seu país no catálogo.</item>
+        <item>Correções: legendas salvas no armazenamento do próprio app (um travamento no Android 14), campos de senha ocultos, o foco do controle remoto da TV, a tradução de “País” em vários idiomas e a de “senha” em árabe.</item>
     </string-array>
     <string name="rd_subtitle_size">Tamanho das legendas</string>
     <string name="rd_cast_this_phone">Este celular</string>

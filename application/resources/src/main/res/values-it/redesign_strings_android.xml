@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Conservata solo su questo dispositivo, per riprendere da dove avevi lasciato.</string>
     <string name="rd_ob_updates_help">Cerca una versione di prova più recente di VLC for Android una volta al giorno.</string>
     <string-array name="rd_whats_new_items">
-        <item>Sottotitoli da internet: cerca dal lettore su OpenSubtitles, Wizdom (ebraico), YIFY Subtitles e Addic7ed, gratis e senza account.</item>
-        <item>Trovati anche per i file il cui nome non dice nulla. Facoltativo: la tua chiave OpenSubtitles.com e una ricerca automatica, in Impostazioni › Sottotitoli.</item>
-        <item>TV in diretta: la barra informazioni sta su un telefono tenuto in verticale.</item>
-        <item>Android TV: il telecomando raggiunge ogni video e ogni pulsante del lettore.</item>
+        <item>Sottotitoli: SubSource (arabo), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 e Legendas.net con la tua chiave o il tuo account gratuiti. Ognuno in Impostazioni › Sottotitoli, con il suo interruttore.</item>
+        <item>Lingue da cercare: attiva o disattiva ogni lingua dei sottotitoli per una ricerca più veloce.</item>
+        <item>Account TV in diretta: il tuo Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR o HDHomeRun e la guida Schedules Direct. I server della tua rete vengono trovati automaticamente.</item>
+        <item>TV in diretta: una guida trovata automaticamente per i canali che non ne hanno, una scheda Guide con le guide di ogni sorgente e, per prime, le sorgenti del tuo Paese nel catalogo.</item>
+        <item>Correzioni: sottotitoli salvati nello spazio di archiviazione dell\'app (una chiusura inattesa su Android 14), campi password nascosti, il focus del telecomando TV, la traduzione di «Paese» in molte lingue e quella di «password» in arabo.</item>
     </string-array>
     <string name="rd_subtitle_size">Dimensione dei sottotitoli</string>
     <string name="rd_cast_this_phone">Questo telefono</string>

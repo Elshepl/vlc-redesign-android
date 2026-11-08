@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Disimpan pada peranti ini sahaja, untuk menyambung dari tempat anda berhenti.</string>
     <string name="rd_ob_updates_help">Mencari binaan ujian VLC for Android yang lebih baharu sekali sehari.</string>
     <string-array name="rd_whats_new_items">
-        <item>Sarikata dari internet: cari terus dari pemain dalam OpenSubtitles, Wizdom (Ibrani), YIFY Subtitles dan Addic7ed, percuma dan tanpa akaun.</item>
-        <item>Ditemui walaupun untuk fail yang namanya tidak memberi apa-apa petunjuk. Pilihan: kunci OpenSubtitles.com anda sendiri dan carian automatik, dalam Tetapan › Sarikata.</item>
-        <item>TV Langsung: bar maklumat muat pada telefon yang dipegang tegak.</item>
-        <item>Android TV: alat kawalan jauh kini mencapai setiap video dan setiap butang pemain.</item>
+        <item>Sarikata: SubSource (Arab), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 dan Legendas.net dengan kunci percuma atau akaun anda sendiri. Setiap satu dalam Tetapan › Sarikata, dengan suisnya.</item>
+        <item>Bahasa untuk dicari: hidupkan atau matikan setiap bahasa sarikata untuk carian lebih pantas.</item>
+        <item>Akaun TV Langsung: Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR atau HDHomeRun anda, dan panduan Schedules Direct. Pelayan dalam rangkaian anda ditemui secara automatik.</item>
+        <item>TV Langsung: panduan yang ditemui secara automatik untuk saluran tanpa panduan, tab Panduan untuk panduan setiap sumber, dan sumber negara anda dahulu dalam katalog.</item>
+        <item>Pembetulan: sarikata disimpan dalam storan aplikasi sendiri (ranap pada Android 14), medan kata laluan disembunyikan, fokus alat kawalan jauh TV, terjemahan Negara dalam banyak bahasa dan terjemahan kata laluan dalam bahasa Arab.</item>
     </string-array>
     <string name="rd_subtitle_size">Saiz sari kata</string>
     <string name="rd_cast_this_phone">Telefon ini</string>

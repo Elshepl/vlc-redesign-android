@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">このデバイスにのみ保存され、前回の続きから再開するために使われます。</string>
     <string name="rd_ob_updates_help">1 日に 1 回、VLC for Android の新しいテスト版を確認します。</string>
     <string-array name="rd_whats_new_items">
-        <item>インターネットから字幕：プレーヤーから OpenSubtitles、Wizdom（ヘブライ語）、YIFY Subtitles、Addic7ed を無料・アカウント不要で検索できます。</item>
-        <item>名前から何もわからないファイルでも見つかります。オプション：ご自身の OpenSubtitles.com キーと自動検索（設定 › 字幕）。</item>
-        <item>ライブ TV：スマートフォンを縦に持っても情報バーが収まるようになりました。</item>
-        <item>Android TV：リモコンですべての動画とプレーヤーのすべてのボタンを操作できるようになりました。</item>
+        <item>字幕：SubSource（アラビア語）、SubDL、Titlovi、Assrt、Jimaku、BetaSeries、Subs.ro、Napisy24、Legendas.net はご自身の無料キーまたはアカウントで使えます。どれも「設定 › 字幕」にあり、スイッチでオン／オフできます。</item>
+        <item>検索する言語：字幕の言語ごとにオン／オフを切り替えて、検索を速くできます。</item>
+        <item>ライブ TV のアカウント：ご自身の Jellyfin、Emby、Tvheadend、NextPVR、Channels DVR、HDHomeRun と、Schedules Direct のガイド。ネットワーク上のサーバーは自動で見つかります。</item>
+        <item>ライブ TV：ガイドのないチャンネル用にガイドを自動で検出、すべてのソースのガイドを表示する「ガイド」タブ、カタログではお住まいの国のソースを先頭に表示します。</item>
+        <item>修正：字幕をアプリ自身のストレージに保存（Android 14 でのクラッシュ）、パスワード欄の入力を非表示に、TV リモコンのフォーカス、多くの言語での「国」の訳語、アラビア語の「パスワード」の訳語。</item>
     </string-array>
     <string name="rd_subtitle_size">字幕のサイズ</string>
     <string name="rd_cast_this_phone">このスマートフォン</string>

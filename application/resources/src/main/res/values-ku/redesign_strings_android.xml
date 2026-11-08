@@ -32,10 +32,11 @@
     <string name="rd_ob_history_help">تەنها لەسەر ئەم ئامێرە هەڵدەگیرێت، بۆ ئەوەی لەو شوێنەوە بەردەوام بیت کە لێی وەستایت.</string>
     <string name="rd_ob_updates_help">ڕۆژی جارێک بۆ وەشانێکی تاقیکاریی نوێتری VLC for Android دەگەڕێت.</string>
     <string-array name="rd_whats_new_items">
-        <item>Binnivîs ji înternetê: dema temaşekirinê li OpenSubtitles, Wizdom (Îbranî), YIFY Subtitles û Addic7ed bigere, belaş û bê hesab.</item>
-        <item>Ji bo pelên ku navê wan tiştekî nabêje jî tên dîtin. Vebijarkî: mifteya te ya OpenSubtitles.com û lêgerîna xweber, di Mîheng › Binnivîs de.</item>
-        <item>TV ya zindî: darika agahiyan êdî li ser telefona ku stûnî tê girtin cih digire.</item>
-        <item>Android TV: kontrola ji dûr ve digihîje hemû vîdyoyan û hemû bişkokên lêdarê.</item>
+        <item>ژێرنووس: SubSource (عەرەبی)، SubDL، Titlovi، Assrt، Jimaku، BetaSeries، Subs.ro، Napisy24 و Legendas.net بە کلیل یان هەژماری بێبەرامبەری خۆت. هەر یەکەیان لە ڕێکخستنەکان › ژێرنووسەکان بە جیا هەڵدەکرێت و دەکوژێتەوە.</item>
+        <item>زمانەکانی گەڕان: هەر زمانێکی ژێرنووس هەڵبکە یان بیکوژێنەوە بۆ گەڕانێکی خێراتر.</item>
+        <item>هەژمارەکانی تەلەفزیۆنی ڕاستەوخۆ: ڕاژەکاری خۆت (Jellyfin، Emby، Tvheadend، NextPVR، Channels DVR یان HDHomeRun) و ڕێبەری Schedules Direct. ڕاژەکارەکانی سەر ڕایەڵەکەت خۆیان دەدۆزرێنەوە.</item>
+        <item>تەلەفزیۆنی ڕاستەوخۆ: ڕێبەرێک کە خۆی دەدۆزرێتەوە بۆ ئەو کەناڵانەی ڕێبەریان نییە، تابی «ڕێبەرەکان» بۆ ڕێبەرەکانی هەموو سەرچاوەیەک، و سەرچاوەکانی وڵاتەکەت لە سەرەتای کاتالۆگدا.</item>
+        <item>چاککردنەوەکان: ژێرنووسە داگیراوەکان لە بیرگەی خودی بەرنامەکەدا پاشەکەوت دەکرێن (تێکچوون لە Android 14)، خانەکانی تێپەڕەوشە شاراوەن، فۆکەسی کۆنترۆڵی دووری تەلەفزیۆن، وەرگێڕانی «وڵات» لە زۆر زماندا و «تێپەڕەوشە» لە عەرەبیدا.</item>
     </string-array>
     <string name="rd_subtitle_size">قەبارەی ژێرنووس</string>
     <string name="rd_cast_this_phone">ئەم مۆبایلە</string>

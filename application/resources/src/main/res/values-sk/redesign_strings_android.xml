@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Uchováva sa iba v tomto zariadení, aby ste mohli pokračovať tam, kde ste skončili.</string>
     <string name="rd_ob_updates_help">Raz denne hľadá novšiu testovaciu zostavu VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Titulky z internetu: hľadanie priamo z prehrávača na OpenSubtitles, Wizdom (hebrejčina), YIFY Subtitles a Addic7ed, zadarmo a bez účtu.</item>
-        <item>Nájdu sa aj pre súbory, ktorých názvy nič nehovoria. Voliteľne: vlastný kľúč OpenSubtitles.com a automatické hľadanie v Nastavenia › Titulky.</item>
-        <item>Živá TV: informačný pruh sa zmestí na telefón držaný na výšku.</item>
-        <item>Android TV: diaľkový ovládač sa dostane ku každému videu aj ku každému tlačidlu prehrávača.</item>
+        <item>Titulky: SubSource (arabčina), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 a Legendas.net s vlastným kľúčom alebo účtom zadarmo. Každá služba v Nastavenia › Titulky, s vlastným prepínačom.</item>
+        <item>Jazyky na vyhľadávanie: zapnite alebo vypnite každý jazyk titulkov pre rýchlejšie vyhľadávanie.</item>
+        <item>Účty pre živú TV: váš Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR alebo HDHomeRun a sprievodca Schedules Direct. Servery vo vašej sieti sa nájdu samy.</item>
+        <item>Živá TV: sprievodca nájdený automaticky pre kanály, ktoré žiadny nemajú, karta „Sprievodcovia“ so sprievodcami všetkých zdrojov a zdroje vašej krajiny na začiatku katalógu.</item>
+        <item>Opravy: stiahnuté titulky sa ukladajú do vlastného úložiska aplikácie (pád v systéme Android 14), polia pre heslo skrývajú zadané heslo, fokus pri ovládaní diaľkovým ovládačom, preklad slova „Krajina“ v mnohých jazykoch a slovo „heslo“ v arabčine.</item>
     </string-array>
     <string name="rd_subtitle_size">Veľkosť titulkov</string>
     <string name="rd_cast_this_phone">Tento telefón</string>

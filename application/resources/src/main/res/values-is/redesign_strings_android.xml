@@ -32,10 +32,11 @@
     <string name="rd_ob_history_help">Geymt eingöngu á þessu tæki, til að halda áfram þar sem frá var horfið.</string>
     <string name="rd_ob_updates_help">Leitar einu sinni á dag að nýrri prófunarútgáfu af VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Skjátextar af netinu: leitaðu beint úr spilaranum á OpenSubtitles, Wizdom (hebreska), YIFY Subtitles og Addic7ed, ókeypis og án aðgangs.</item>
-        <item>Finnast líka fyrir skrár þar sem nafnið segir ekkert. Valfrjálst: þinn eigin OpenSubtitles.com-lykill og sjálfvirk leit, í Stillingar › Skjátextar.</item>
-        <item>Beint sjónvarp: upplýsingastikan passar á síma sem haldið er uppréttum.</item>
-        <item>Android TV: fjarstýringin nær í hvert myndskeið og hvern hnapp spilarans.</item>
+        <item>Skjátextar: SubSource (arabíska), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 og Legendas.net með þínum ókeypis lykli eða aðgangi. Hver þjónusta í Stillingar › Skjátextar, með sinn eigin rofa.</item>
+        <item>Tungumál til að leita á: kveiktu eða slökktu á hverju skjátextatungumáli fyrir hraðari leit.</item>
+        <item>Aðgangar fyrir beint sjónvarp: þjónninn þinn (Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR eða HDHomeRun) og dagskráin frá Schedules Direct. Þjónar á netkerfinu þínu finnast sjálfkrafa.</item>
+        <item>Beint sjónvarp: dagskrá sem finnst sjálfkrafa fyrir rásir án dagskrár, flipinn Dagskrár með dagskrám hverrar uppsprettu, og uppsprettur landsins þíns fyrst í vörulistanum.</item>
+        <item>Lagfæringar: sóttir skjátextar vistast í eigin geymslu forritsins (lagar hrun í Android 14), lykilorðsreitir sýna ekki lengur lykilorðið, fókus fjarstýringar sjónvarpsins, orðið fyrir „Land“ á mörgum tungumálum og orðið fyrir lykilorð á arabísku.</item>
     </string-array>
     <string name="rd_subtitle_size">Stærð skjátexta</string>
     <string name="rd_cast_this_phone">Þessi sími</string>

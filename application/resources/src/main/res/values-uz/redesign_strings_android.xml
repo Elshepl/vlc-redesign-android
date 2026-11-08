@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Faqat shu qurilmada saqlanadi, to‘xtagan joyingizdan davom ettirish uchun.</string>
     <string name="rd_ob_updates_help">Kuniga bir marta VLC for Android ning yangiroq sinov versiyasini qidiradi.</string>
     <string-array name="rd_whats_new_items">
-        <item>Internetdan subtitrlar: pleyerning oʻzidan OpenSubtitles, Wizdom (ivrit), YIFY Subtitles va Addic7ed da qidiring, bepul va hisobsiz.</item>
-        <item>Nomi hech narsa demaydigan fayllar uchun ham topiladi. Ixtiyoriy: oʻzingizning OpenSubtitles.com kalitingiz va avtomatik qidiruv, Sozlamalar › Subtitrlar boʻlimida.</item>
-        <item>Jonli TV: maʼlumot paneli tik ushlangan telefonga sigʻadi.</item>
-        <item>Android TV: pult endi har bir videoga va pleyerning har bir tugmasiga yetadi.</item>
+        <item>Subtitrlar: SubSource (arabcha), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 va Legendas.net oʻzingizning bepul kalitingiz yoki hisobingiz bilan. Har biri Sozlamalar › Subtitrlar boʻlimida, yoqish-oʻchirish tugmasi bilan.</item>
+        <item>Qidiriladigan tillar: tezroq qidirish uchun har bir subtitr tilini yoqing yoki oʻchiring.</item>
+        <item>Jonli TV hisoblari: Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR yoki HDHomeRun serveringiz va Schedules Direct teledasturi. Tarmogʻingizdagi serverlar oʻzi topiladi.</item>
+        <item>Jonli TV: teledasturi yoʻq kanallar uchun oʻzi topilgan teledastur, barcha manbalarning teledasturlari jamlangan “Teledasturlar” varagʻi va katalogda avval mamlakatingiz manbalari.</item>
+        <item>Tuzatishlar: subtitrlar ilovaning oʻz xotirasida saqlanadi (Android 14 da ishdan chiqish), maxfiy soʻz maydonlari yashirin, TV pultining fokusi, koʻp tillarda “Mamlakat” soʻzining tarjimasi va arab tilida “maxfiy soʻz” tarjimasi.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtitr oʻlchami</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

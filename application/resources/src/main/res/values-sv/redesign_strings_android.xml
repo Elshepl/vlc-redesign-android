@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Sparas bara på den här enheten, så att du kan fortsätta där du slutade.</string>
     <string name="rd_ob_updates_help">Letar en gång om dagen efter en nyare testversion av VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Undertexter från internet: sök direkt från spelaren i OpenSubtitles, Wizdom (hebreiska), YIFY Subtitles och Addic7ed, gratis och utan konto.</item>
-        <item>Hittas även för filer vars namn inte säger något. Valfritt: din egen OpenSubtitles.com-nyckel och automatisk sökning, under Inställningar › Undertexter.</item>
-        <item>Live-TV: infofältet får plats på en telefon som hålls upprätt.</item>
-        <item>Android TV: fjärrkontrollen når varje video och varje knapp i spelaren.</item>
+        <item>Undertexter: SubSource (arabiska), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 och Legendas.net med din gratis nyckel eller ditt konto. Varje tjänst under Inställningar › Undertexter, med eget reglage.</item>
+        <item>Språk att söka på: slå på eller av varje undertextspråk för snabbare sökning.</item>
+        <item>Live-TV-konton: din Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR eller HDHomeRun, och guiden från Schedules Direct. Servrar i ditt nätverk hittas automatiskt.</item>
+        <item>Live-TV: en guide som hittas automatiskt för kanaler som saknar en, en flik Guider med varje källas guider, och katalogens källor för ditt land först.</item>
+        <item>Korrigeringar: nedladdade undertexter sparas i appens egen lagring (åtgärdar en krasch på Android 14), lösenordsfält visar inte längre lösenordet, TV-fjärrkontrollens fokus, ordet för ”Land” på många språk och ordet för lösenord på arabiska.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertextstorlek</string>
     <string name="rd_cast_this_phone">Den här telefonen</string>

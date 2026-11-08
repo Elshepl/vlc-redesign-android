@@ -31,10 +31,11 @@
     <string name="rd_ob_history_help">Yn cael ei gadw ar y ddyfais hon yn unig, i barhau o\'r man lle gadawoch chi.</string>
     <string name="rd_ob_updates_help">Yn chwilio am fersiwn prawf mwy newydd o VLC for Android unwaith y dydd.</string>
     <string-array name="rd_whats_new_items">
-        <item>Isdeitlau o\'r rhyngrwyd: chwilio o\'r chwaraewr yn OpenSubtitles, Wizdom (Hebraeg), YIFY Subtitles ac Addic7ed, am ddim a heb gyfrif.</item>
-        <item>Fe\'u ceir hyd yn oed ar gyfer ffeiliau nad yw eu henwau\'n dweud dim. Dewisol: eich allwedd OpenSubtitles.com eich hun a chwilio awtomatig, yn Gosodiadau › Isdeitlau.</item>
-        <item>Teledu Byw: mae\'r bar gwybodaeth yn ffitio ffôn sy\'n cael ei ddal yn unionsyth.</item>
-        <item>Android TV: mae\'r teclyn rheoli o bell yn cyrraedd pob fideo a phob botwm yn y chwaraewr.</item>
+        <item>Isdeitlau: SubSource (Arabeg), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 a Legendas.net gyda\'ch allwedd neu\'ch cyfrif eich hun am ddim. Pob un yn Gosodiadau › Isdeitlau, gyda\'i switsh ei hun.</item>
+        <item>Ieithoedd i\'w chwilio: trowch bob iaith isdeitlau ymlaen neu i ffwrdd i chwilio\'n gyflymach.</item>
+        <item>Cyfrifon Teledu Byw: eich Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR neu HDHomeRun, ac amserlen Schedules Direct. Caiff gweinyddion ar eich rhwydwaith eu canfod yn awtomatig.</item>
+        <item>Teledu Byw: amserlen wedi\'i chanfod yn awtomatig ar gyfer sianeli heb un, tab Amserlenni gydag amserlenni pob ffynhonnell, a ffynonellau eich gwlad yn gyntaf yn y catalog.</item>
+        <item>Atgyweiriadau: isdeitlau\'n cael eu cadw yn storfa\'r ap ei hun (chwalfa ar Android 14), meysydd cyfrinair yn cuddio\'r cyfrinair, ffocws teclyn rheoli o bell y teledu, y gair Gwlad mewn llawer o ieithoedd a\'r gair am gyfrinair yn Arabeg.</item>
     </string-array>
     <string name="rd_subtitle_size">Maint isdeitlau</string>
     <string name="rd_cast_this_phone">Y ffôn hwn</string>

@@ -32,10 +32,11 @@
     <string name="rd_ob_history_help">Coinnítear ar an ngléas seo amháin é, chun leanúint ar aghaidh ón áit ar stop tú.</string>
     <string name="rd_ob_updates_help">Lorgaíonn sé leagan tástála níos nuaí de VLC for Android uair sa lá.</string>
     <string-array name="rd_whats_new_items">
-        <item>Fotheidil ón idirlíon: cuardaigh ón seinnteoir in OpenSubtitles, Wizdom (Eabhrais), YIFY Subtitles agus Addic7ed, saor in aisce agus gan chuntas.</item>
-        <item>Aimsítear iad fiú do chomhaid nach ndeir a n-ainm tada. Roghnach: d\'eochair OpenSubtitles.com féin agus cuardach uathoibríoch, in Socruithe › Fotheidil.</item>
-        <item>Teilifís bheo: luíonn an barra faisnéise ar fhón a choinnítear ina sheasamh.</item>
-        <item>Android TV: sroicheann an cianrialtán gach físeán agus gach cnaipe den seinnteoir.</item>
+        <item>Fotheidil: SubSource (Araibis), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 agus Legendas.net le d\'eochair nó do chuntas féin saor in aisce. Gach ceann acu in Socruithe › Fotheidil, lena lasc féin.</item>
+        <item>Teangacha le cuardach: cas gach teanga fotheideal air nó as chun cuardach níos tapúla a dhéanamh.</item>
+        <item>Cuntais teilifíse beo: do Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR nó HDHomeRun féin, agus eolaire Schedules Direct. Aimsítear freastalaithe ar do líonra go huathoibríoch.</item>
+        <item>Teilifís bheo: eolaire a aimsítear go huathoibríoch do chainéil gan cheann, cluaisín Eolairí le heolairí gach foinse, agus foinsí do thíre féin ar dtús sa chatalóg.</item>
+        <item>Ceartúcháin: sábháiltear fotheidil i stóras na haipe féin (tuairt ar Android 14), réimsí focal faire ceilte, fócas an chianrialtáin teilifíse, an focal Tír i go leor teangacha agus an focal Araibise ar fhocal faire.</item>
     </string-array>
     <string name="rd_subtitle_size">Méid na bhfotheideal</string>
     <string name="rd_cast_this_phone">An fón seo</string>

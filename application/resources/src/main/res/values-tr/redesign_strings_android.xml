@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Kaldığınız yerden devam edebilmeniz için yalnızca bu aygıtta saklanır.</string>
     <string name="rd_ob_updates_help">Günde bir kez VLC for Android\'in daha yeni bir test derlemesini arar.</string>
     <string-array name="rd_whats_new_items">
-        <item>İnternetten altyazılar: doğrudan oynatıcıdan OpenSubtitles, Wizdom (İbranice), YIFY Subtitles ve Addic7ed\'de arayın, ücretsiz ve hesapsız.</item>
-        <item>Adı hiçbir şey söylemeyen dosyalar için bile bulunur. İsteğe bağlı: kendi OpenSubtitles.com anahtarınız ve otomatik arama, Ayarlar › Altyazılar bölümünde.</item>
-        <item>Canlı TV: bilgi çubuğu dik tutulan bir telefona sığıyor.</item>
-        <item>Android TV: kumanda artık her videoya ve oynatıcının her düğmesine ulaşıyor.</item>
+        <item>Altyazılar: SubSource (Arapça), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 ve Legendas.net kendi ücretsiz anahtarınız veya hesabınızla. Her biri Ayarlar › Altyazılar bölümünde, kendi açma/kapama düğmesiyle.</item>
+        <item>Aranacak diller: daha hızlı arama için her altyazı dilini açın veya kapatın.</item>
+        <item>Canlı TV hesapları: kendi Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR veya HDHomeRun sunucunuz ve Schedules Direct kılavuzu. Ağınızdaki sunucular kendiliğinden bulunur.</item>
+        <item>Canlı TV: kılavuzu olmayan kanallar için kendiliğinden bulunan bir kılavuz, her kaynağın kılavuzları için Kılavuzlar sekmesi ve katalogda önce ülkenizin kaynakları.</item>
+        <item>Düzeltmeler: altyazılar uygulamanın kendi depolama alanına kaydediliyor (Android 14\'te bir çökme), parola alanları parolayı gizliyor, TV kumandasının odağı, birçok dilde Ülke sözcüğü ve Arapçada parola sözcüğü.</item>
     </string-array>
     <string name="rd_subtitle_size">Altyazı boyutu</string>
     <string name="rd_cast_this_phone">Bu telefon</string>

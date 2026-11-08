@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Shranjeno samo v tej napravi, da lahko nadaljujete tam, kjer ste končali.</string>
     <string name="rd_ob_updates_help">Enkrat na dan poišče novejšo preizkusno izdajo VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Podnapisi iz interneta: iskanje kar iz predvajalnika v OpenSubtitles, Wizdom (hebrejščina), YIFY Subtitles in Addic7ed, brezplačno in brez računa.</item>
-        <item>Najdejo se tudi za datoteke, katerih ime nič ne pove. Neobvezno: vaš lastni ključ OpenSubtitles.com in samodejno iskanje, v Nastavitve › Podnapisi.</item>
-        <item>TV v živo: informacijska vrstica se prilega telefonu, ki ga držite pokonci.</item>
-        <item>Android TV: daljinski upravljalnik doseže vsak videoposnetek in vsak gumb predvajalnika.</item>
+        <item>Podnapisi: SubSource (arabščina), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 in Legendas.net z vašim brezplačnim ključem ali računom. Vsaka storitev v Nastavitve › Podnapisi, s svojim stikalom.</item>
+        <item>Jeziki za iskanje: vklopite ali izklopite vsak jezik podnapisov za hitrejše iskanje.</item>
+        <item>Računi za TV v živo: vaš Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR ali HDHomeRun in vodnik Schedules Direct. Strežniki v vašem omrežju se najdejo sami.</item>
+        <item>TV v živo: vodnik, samodejno najden za kanale brez njega, zavihek »Vodniki« z vodniki vseh virov in viri vaše države na začetku kataloga.</item>
+        <item>Popravki: preneseni podnapisi se shranijo v lastno shrambo aplikacije (sesutje v sistemu Android 14), polja za geslo skrijejo vneseno geslo, fokus pri upravljanju z daljinskim upravljalnikom, prevod besede »Država« v mnogih jezikih in beseda »geslo« v arabščini.</item>
     </string-array>
     <string name="rd_subtitle_size">Velikost podnapisov</string>
     <string name="rd_cast_this_phone">Ta telefon</string>

@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Gemmes kun på denne enhed, så du kan fortsætte, hvor du slap.</string>
     <string name="rd_ob_updates_help">Søger én gang om dagen efter en nyere testudgave af VLC for Android.</string>
     <string-array name="rd_whats_new_items">
-        <item>Undertekster fra internettet: søg fra afspilleren i OpenSubtitles, Wizdom (hebraisk), YIFY Subtitles og Addic7ed, gratis og uden konto.</item>
-        <item>Findes også til filer, hvis navne ikke siger noget. Valgfrit: din egen OpenSubtitles.com-nøgle og automatisk søgning, under Indstillinger › Undertekster.</item>
-        <item>Live-tv: infobjælken passer til en telefon, der holdes lodret.</item>
-        <item>Android TV: fjernbetjeningen når hver video og hver knap i afspilleren.</item>
+        <item>Undertekster: SubSource (arabisk), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 og Legendas.net med din gratis nøgle eller konto. Hver tjeneste under Indstillinger › Undertekster med sin egen kontakt.</item>
+        <item>Sprog at søge på: slå hvert undertekstsprog til eller fra for en hurtigere søgning.</item>
+        <item>Live-tv-konti: din Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR eller HDHomeRun og programguiden fra Schedules Direct. Servere på dit netværk findes af sig selv.</item>
+        <item>Live-tv: en programguide, der findes af sig selv, til kanaler, der mangler en, en fane Programguider med hver kildes programguider og katalogets kilder for dit land først.</item>
+        <item>Rettelser: downloadede undertekster gemmes i appens eget lager (retter et nedbrud på Android 14), adgangskodefelter viser ikke længere adgangskoden, tv-fjernbetjeningens fokus, ordet for \"Land\" på mange sprog og ordet for adgangskode på arabisk.</item>
     </string-array>
     <string name="rd_subtitle_size">Undertekststørrelse</string>
     <string name="rd_cast_this_phone">Denne telefon</string>

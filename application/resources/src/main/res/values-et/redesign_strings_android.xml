@@ -30,10 +30,11 @@
     <string name="rd_ob_history_help">Hoitakse ainult selles seadmes, et saaksid jätkata sealt, kus pooleli jäid.</string>
     <string name="rd_ob_updates_help">Otsib kord päevas VLC for Androidi uuemat testversiooni.</string>
     <string-array name="rd_whats_new_items">
-        <item>Subtiitrid internetist: otsi otse mängijast teenustest OpenSubtitles, Wizdom (heebrea), YIFY Subtitles ja Addic7ed, tasuta ja ilma kontota.</item>
-        <item>Leitakse ka failidele, mille nimi ei ütle midagi. Valikuline: sinu enda OpenSubtitles.com-i võti ja automaatne otsing, jaotises Sätted › Subtiitrid.</item>
-        <item>Otse-TV: infoariba mahub püsti hoitud telefonile.</item>
-        <item>Android TV: kaugjuhtimispult jõuab iga video ja mängija iga nupuni.</item>
+        <item>Subtiitrid: SubSource (araabia), SubDL, Titlovi, Assrt, Jimaku, BetaSeries, Subs.ro, Napisy24 ja Legendas.net sinu tasuta võtme või kontoga. Iga teenus jaotises Sätted › Subtiitrid, oma lülitiga.</item>
+        <item>Otsingukeeled: lülita iga subtiitrikeel sisse või välja, et otsing oleks kiirem.</item>
+        <item>Otse-TV kontod: sinu Jellyfin, Emby, Tvheadend, NextPVR, Channels DVR või HDHomeRun ning telekavateenus Schedules Direct. Sinu võrgus olevad serverid leitakse ise.</item>
+        <item>Otse-TV: ise leitud telekava kanalitele, millel seda pole, vahekaart Telekavad iga allika telekavadega ja kataloogis esmalt sinu riigi allikad.</item>
+        <item>Parandused: allalaaditud subtiitrid salvestatakse rakenduse enda salvestusruumi (parandab kokkujooksmise Android 14 puhul), parooliväljad ei näita enam parooli, teleri kaugjuhtimispuldi fookus, sõna \"Riik\" tõlge paljudes keeltes ja sõna parool araabia keeles.</item>
     </string-array>
     <string name="rd_subtitle_size">Subtiitrite suurus</string>
     <string name="rd_cast_this_phone">See telefon</string>
