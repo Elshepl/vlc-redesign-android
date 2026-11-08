@@ -1,0 +1,44 @@
+24.sk	:24
+ArenaSport1.sk	Arena Sport 1
+ArenaSport2.sk	Arena Sport 2
+ducktv.sk	ducktv	Bebe TV
+ducktvPLUS.sk	ducktv PLUS
+Folklorika.sk	Folklorika
+HAHATV.sk	HAHA TV
+Jednotka.sk	Jednotka
+JOJ24.sk	JOJ 24
+JOJCinema.sk	JOJ Cinema
+JOJFamily.sk	JOJ Family
+Jojko.sk	Jojko
+JOJPlus.sk	JOJ Plus
+JOJSport.sk	JOJ Sport	JOJ Šport
+JOJWAU.sk	JOJ WAU
+LalaTV.sk	Lala TV
+Markiza.sk	Markiza	Markíza
+MarkizaDajto.sk	Markiza Dajto	Markíza Dajto
+MarkizaDoma.sk	Markiza Doma	Markíza Doma
+MarkizaInternational.sk	Markiza International	Markíza International
+MarkizaKrimi.sk	Markiza Krimi	Markíza Krimi
+ParkTV.sk	Park TV
+PremierSport1.sk	Premier Sport 1
+PremierSport2.sk	Premier Sport 2
+Senzi.sk	Senzi
+Sport.sk	Sport	Šport
+TA3.sk	TA3
+TukiTV.sk	Tuki TV	Ťuki TV
+TurboTV.sk	Turbo TV
+TV7.sk	TV7
+TV8.sk	TV8	Televízia Osem
+TVCentral.sk	TV Central	Televízia Central
+TVDK.sk	TV DK	Televízia Dolný Kubín
+TVJOJ.sk	TV JOJ
+TVLux.sk	TV Lux
+TVPanorama.sk	TV Panorama	TV Panoráma
+TVPovazie.sk	TV Povazie	TV Považie
+TVRaj.sk	TV Raj
+TVRiK.sk	TV RiK
+TVRomana.sk	TV Romana
+TVRuzinov.sk	TV Ruzinov	TV Ružinov
+TVSeverka.sk	TV Severka
+TVVega.sk	TV Vega
+TVVychod.sk	TV Vychod	Televízia Východ

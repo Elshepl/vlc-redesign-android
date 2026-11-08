@@ -1,0 +1,57 @@
+ArcadiaWorldHD.at	Arcadia World HD
+ATV.at	ATV
+ATV2.at	ATV2	ATV II
+CanalPlusFirst.at	Canal+ First
+ComedyCentral.at	Comedy Central	Comedy Central Austria
+eXXpressTV.at	eXXpress TV
+HitradioO3.at	Hitradio O3	Hitradio Ö3
+K19.at	K19
+kabeleinsAustria.at	kabel eins Austria
+kabeleinsDokuAustria.at	kabel eins Doku Austria
+kronetv.at	krone.tv
+KT1.at	KT1	Kärnten 1
+KTV.at	K-TV
+KurierTV.at	Kurier TV
+LandleTV.at	Landle TV	Ländle TV
+MelodieTV.at	Melodie TV
+NickelodeonAustria.at	Nickelodeon Austria	Nick Austria
+ntv.at	n-tv
+oe24TV.at	oe24.TV
+Okto.at	Okto
+ORF1.at	ORF 1
+ORF2.at	ORF 2
+ORF2Burgenland.at	ORF 2 Burgenland
+ORF2Europe.at	ORF 2 Europe
+ORF2Karnten.at	ORF 2 Karnten	ORF 2 Kärnten
+ORF2NO.at	ORF 2 NO	ORF 2 NÖ	ORF 2 Niederösterreich
+ORF2Oberosterreich.at	ORF 2 Oberosterreich	ORF 2 Oberösterreich
+ORF2Salzburg.at	ORF 2 Salzburg
+ORF2Steiermark.at	ORF 2 Steiermark
+ORF2Tirol.at	ORF 2 Tirol
+ORF2Vorarlberg.at	ORF 2 Vorarlberg
+ORF2Wien.at	ORF 2 Wien
+ORFIII.at	ORF III
+ORFSportPlus.at	ORF Sport+	ORF Sport Plus
+ProSiebenAustria.at	ProSieben Austria
+ProSiebenMaxxAustria.at	ProSieben Maxx Austria
+Puls24.at	Puls 24
+Puls4.at	Puls 4	PULS tv
+R9.at	R9	R9 TV Austria
+RedBullTV.at	Red Bull TV
+SAT1Austria.at	SAT.1 Austria	SAT.1 Österreich
+SAT1GoldAustria.at	SAT.1 Gold Austria	SAT.1 Gold Österreich
+ServusTV.at	ServusTV
+sixxAustria.at	sixx Austria
+SkySportAustria1.at	Sky Sport Austria 1	Sky Sport Austria	Premiere Austria
+SkySportAustria2.at	Sky Sport Austria 2
+SkySportAustria3.at	Sky Sport Austria 3
+SkySportAustria4.at	Sky Sport Austria 4
+SkySportAustria5.at	Sky Sport Austria 5
+SkySportAustria6.at	Sky Sport Austria 6
+SkySportAustria7.at	Sky Sport Austria 7
+SkySportAustria8.at	Sky Sport Austria 8
+StimmungsgartenTV.at	Stimmungsgarten TV
+TirolTV.at	Tirol TV
+TLC.at	TLC	TLC Austria
+VOX.at	VOX
+W24.at	W24

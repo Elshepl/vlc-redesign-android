@@ -1,0 +1,6 @@
+AlAnwarTV.kw	Al Anwar TV	Alanwar TV	قناة ألانوار الفضائية
+AlraiTV.kw	Alrai TV
+AlSabah.kw	Al Sabah	Prince Al-Waleed bin Talal
+ATV.kw	ATV	Adala TV
+KTV1.kw	KTV 1	دولة الكويت - الأولى	القناة الاولى
+KTV2.kw	KTV 2	دولة الكويت - الثانية

@@ -1,0 +1,82 @@
+1Plus1.ua	1+1	один плюс один
+1Plus1International.ua	1+1 International	1+1 Інтернешнл
+1Plus1Ukraina.ua	1+1 Ukraina	1+1 Україна
+2Plus2.ua	2+2	два плюс два
+4everCinema.ua	4ever Cinema
+4everDrama.ua	4ever Drama
+4everMusic.ua	4ever Music	UA Music
+4everTheater.ua	4ever Theater
+6sotok.ua	6 sotok	6 соток	6 acres
+ArmyTV.ua	Army TV	Армія ТБ
+ATR.ua	ATR	АТР
+Avers.ua	Avers	Аверс	Obverse
+Bolt.ua	Bolt
+Channel5.ua	Channel 5	5 канал	Пятый канал
+CinePlus.ua	Cine+
+CinePlusHit.ua	Cine+ Hit
+CinePlusKids.ua	Cine+ Kids
+ContinentE.ua	Continent E	Континент Е
+Dacha.ua	Dacha	Дача	Cottage
+DIM.ua	DIM	ДІМ	HOME	Дом
+DynamoKyivTV.ua	Dynamo Kyiv TV	Динамо Киев ТВ
+EnterFilm.ua	Enter-Film	Enter-фільм
+Equalympic.ua	Equalympic
+EspresoTV.ua	Espreso TV	Еспресо TV	Espreso
+FashionTV.ua	Fashion TV	FashionTV UA
+Fauna.ua	Fauna	Фауна
+FilmUADrama.ua	FilmUADrama
+FREEDOM.ua	FREEDOM	FREEДOM	UATV	Ukraine Tomorrow
+GalychynaTV.ua	Galychyna TV	Галичина ТБ	ОТБ Галичина
+GenuineTV.ua	Genuine TV
+HopeChannelUkraine.ua	Hope Channel Ukraine	Надія	Nadiia
+ICTV2.ua	ICTV2
+IDFashion.ua	ID Fashion
+Inter.ua	Inter	Інтер
+K2.ua	K2
+Kinoliving.ua	Kinoliving
+Kinowood.ua	Kinowood
+KusKus.ua	Kus-Kus	Кус-Кус
+Kyiv.ua	Kyiv	Київ	Київ 24
+Lale.ua	Lale	Lâle	Ляле
+Mega.ua	Mega	Мега	Мегаспорт
+MiladyTelevision.ua	Milady Television
+Muzvar.ua	Muzvar	Музвар
+Nauka.ua	Nauka	Наука	Science
+NickelodeonUkrainePlutoTV.ua	Nickelodeon Ukraine Pluto TV	Нікелодеон Україна Pluto TV
+NikiJunior.ua	Niki Junior
+NikiKids.ua	Niki Kids
+NTA.ua	NTA	НТА
+NTN.ua	NTN	НТН
+ObozrevatelTV.ua	Obozrevatel TV	Oboz TV	Observer TV
+OnePlanet.ua	One Planet
+OTSE.ua	OTSE	ОЦЕ
+Pershyiavtomobilnyi.ua	Pershyi avtomobilnyi	Перший автомобільний	First automotive
+PershyiZahidnyi.ua	Pershyi Zahidnyi	Перший Західний	First Western	Львов-ТВ
+PixelTV.ua	Pixel TV	Піксель TV
+PLUSPLUS.ua	PLUSPLUS	ПЛЮСПЛЮС
+Priamyi.ua	Priamyi	Прямий	Pryamyy	Direct
+Prokino.ua	Prokino
+Provence.ua	Provence	Прованс
+PTV.ua	PTV	Poltavske TV	Полтавське телебачення	Полтавское ТВ
+QuizTV.ua	Quiz TV
+Rivne1.ua	Rivne 1	Рівне 1	MTV
+SaltTV.ua	Salt TV	Соль ТВ
+Sonce.ua	Sonce	Сонцe	Sontse	Солнце
+Sport1Baltic.ua	Sport 1 Baltic
+Sport2Baltic.ua	Sport 2 Baltic
+StarCinema.ua	Star Cinema
+SuperPlus.ua	Super+
+Svarozhychy.ua	Svarozhychy	Сварожичи	Горизонт ТВ
+Svitlo.ua	Svitlo	Світло	Light
+Televsesvit.ua	Televsesvit	Телевсесвіт	Teleuniverse
+Ternopil1.ua	Ternopil 1	Тернопіль 1
+Terra.ua	Terra	Терра
+Trofei.ua	Trofei	Трофей	Trophy
+TUSO.ua	TUSO	ТЮСО
+ViasatKino.ua	Viasat Kino	TV1000 East
+ViasatKinoAction.ua	Viasat Kino Action	TV1000 Action East
+ViasatKinoComedy.ua	Viasat Kino Comedy	ViP Comedy East
+ViasatKinoMegahit.ua	Viasat Kino Megahit	ViP Megahit East
+XSport.ua	XSport	Хоккей
+XSportPlus.ua	XSport+
+Zoom.ua	Zoom	MTV Ukraine

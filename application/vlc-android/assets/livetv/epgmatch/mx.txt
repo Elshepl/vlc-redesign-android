@@ -1,0 +1,84 @@
+APlus.mx	A+	A Más
+AprendeTV.mx	Aprende TV
+AyMSports.mx	AyM Sports
+AzCinema.mx	Az Cinema	Cinema
+AzCorazon.mx	Az Corazon	Corazón
+Azteca7.mx	Azteca 7
+AztecaInternacional.mx	Azteca Internacional
+AztecaUno.mx	Azteca Uno
+Bandamax.mx	Bandamax
+bitMe.mx	bitMe
+bitMeLatinAmerica.mx	bitMe Latin America
+Canal22MetropolitanayNacional.mx	Canal 22 Metropolitana y Nacional
+Canal5.mx	Canal 5
+CineLatino.mx	CineLatino
+CinemaPlatino.mx	Cinema Platino
+CineMexicano.mx	Cine Mexicano
+ClaroCinema.mx	Claro Cinema
+ClaroSports.mx	Claro Sports
+DePeliculaClasico.mx	De Pelicula Clasico	De Película Clásico
+DePeliculaEuropa.mx	De Pelicula Europa	De Película Europa
+DePeliculaLatinAmerica.mx	De Pelicula Latin America	De Película Latin America
+DiscoveryHomeHealthLatinAmerica.mx	Discovery Home & Health Latin America
+DistritoComedia.mx	Distrito Comedia
+EfektoTV.mx	Efekto TV
+ElFinancieroBloombergTV.mx	El Financiero Bloomberg TV
+ExcelsiorTV.mx	Excelsior TV	Excélsior TV
+Filmex.mx	Filmex
+FilmexClasico.mx	Filmex Clasico
+FX.mx	FX
+Golden.mx	Golden
+GoldenEdge.mx	Golden Edge
+GoldenPlus.mx	Golden Plus
+GoldenPremier.mx	Golden Premier
+GoldenPremier2.mx	Golden Premier 2
+History.mx	History
+IngenioTV.mx	Ingenio TV
+ITVDeportes.mx	ITV Deportes	InternetvDeportes
+LasEstrellas.mx	Las Estrellas
+LasEstrellasEuropa.mx	Las Estrellas Europa
+LasEstrellasLatinAmerica.mx	Las Estrellas Latin America	Las Estrellas Latin América
+MariaVision.mx	Maria Vision	María Visión
+MC.mx	MC
+MeganoticiasMX.mx	Meganoticias MX
+MexiquenseTV.mx	Mexiquense TV	XHGEM-TDT
+MilenioTelevision.mx	Milenio Television	Milenio Televisión
+Moovimex.mx	Moovimex
+MultimediosPlus.mx	Multimedios Plus
+MultiPremier.mx	MultiPremier
+MVSTV.mx	MVS TV
+NationalGeographic.mx	National Geographic
+Panico.mx	Panico	Pánico
+PXSports.mx	PX Sports
+RMS.mx	RMS
+RTG.mx	RTG
+SkyOne.mx	Sky One
+SkySports1.mx	Sky Sports 1
+SkySports16.mx	Sky Sports 16
+SkySports24.mx	Sky Sports 24
+SonyChannel.mx	Sony Channel
+StarChannel.mx	Star Channel
+TDNMexico.mx	TDN Mexico
+TeleFormula.mx	TeleFormula	TeleFórmula
+TeleHit.mx	TeleHit
+TelehitMusica.mx	Telehit Musica	Telehit Música
+TelevisaGuadalajara.mx	Televisa Guadalajara
+TLNNetwork.mx	TLN Network
+TlnovelasEuropa.mx	Tlnovelas Europa
+TlnovelasLatinAmerica.mx	Tlnovelas Latin America
+TlnovelasMexico.mx	Tlnovelas Mexico
+TUDN.mx	TUDN
+TVCDeportes.mx	TVC Deportes
+TVT.mx	TVT	Televisión Tabasqueña
+TVUNAM.mx	TV UNAM
+Unicable.mx	Unicable
+VibraTV.mx	Vibra TV
+VideoRola.mx	Video Rola
+ViXCineClub.mx	ViX Cine Club
+ViXJajaja.mx	ViX Jajaja
+ViXLoMejordeLaLiga.mx	ViX Lo Mejor de La Liga
+VixNovelasdeOro.mx	Vix Novelas de Oro
+ViXNovelasdeRomance.mx	ViX Novelas de Romance
+XEFBTDT.mx	XEFB-TDT
+XEIMTTDT2.mx	XEIMT-TDT2	Canal 22
+XEIPNTDT.mx	XEIPN-TDT	Canal Once

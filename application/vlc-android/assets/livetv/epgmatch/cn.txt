@@ -1,0 +1,136 @@
+AnhuiTV.cn	Anhui TV	安徽卫视
+BeijingSatelliteTV.cn	Beijing Satellite TV	北京卫视
+BRTVArtsChannel.cn	BRTV Arts Channel	BRTV 文艺
+BRTVFilmTelevisionChannel.cn	BRTV Film & Television Channel	BRTV 影视
+BRTVFinancialChannel.cn	BRTV Financial Channel	BRTV 财经
+BRTVInternationalChannel.cn	BRTV International Channel	BRTV 台冬奥纪实
+BRTVKakuChildrensChannel.cn	BRTV Kaku Childrens Channel	BRTV 卡酷少儿
+BRTVLifeChannel.cn	BRTV Life Channel	BRTV生活	北京生活台
+BRTVNewsChannel.cn	BRTV News Channel	BRTV新闻	北京新闻台
+BRTVScienceEducationChannel.cn	BRTV Science & Education Channel	BRTV 科教
+BRTVWinterOlympicsDocumentaryChannel.cn	BRTV Winter Olympics Documentary Channel	BRTV 冬奥纪实
+CCTV1.cn	CCTV-1	CCTV-1 综合
+CCTV10.cn	CCTV-10	CCTV-10 科教
+CCTV11.cn	CCTV-11	CCTV-11 戏曲
+CCTV12.cn	CCTV-12	CCTV-12 社会与法
+CCTV13.cn	CCTV-13	CCTV-13 新闻	中国中央电视台新闻频道
+CCTV14.cn	CCTV-14	CCTV-14 少儿
+CCTV15.cn	CCTV-15	CCTV-15 音乐
+CCTV2.cn	CCTV-2	CCTV-2 财经
+CCTV3.cn	CCTV-3	CCTV-3 综艺
+CCTV4America.cn	CCTV-4 America	CCTV-4 中文国际美洲
+CCTV4Asia.cn	CCTV-4 Asia	CCTV-4 中文国际亚洲
+CCTV4Europe.cn	CCTV-4 Europe	CCTV-4 中文国际欧洲
+CCTV5.cn	CCTV-5	CCTV-5 体育
+CCTV5Plus.cn	CCTV-5+	CCTV-5+ 体育赛事
+CCTV6.cn	CCTV-6	CCTV-6 电影
+CCTV7.cn	CCTV-7	CCTV-7 国防军事
+CCTV8.cn	CCTV-8	CCTV-8 电视剧
+CCTV9.cn	CCTV-9	CCTV-9 纪录
+CCTVBilliards.cn	CCTV-Billiards	CCTV-央视台球
+CCTVChinaTelevisionShoppingChannel.cn	CCTV-China Television Shopping Channel	CCTV-中视购物
+CCTVCultureofQuality.cn	CCTV-Culture of Quality	CCTV-央视文化精品
+CCTVEntertainment.cn	CCTV-Entertainment	CCTV-娱乐
+CCTVGolfTennis.cn	CCTV-Golf & Tennis	CCTV-高尔夫·网球
+CCTVHealth.cn	CCTV-Health	CCTV-卫生健康
+CCTVNostalgiaTheater.cn	CCTV-Nostalgia Theater	CCTV-怀旧剧场
+CCTVStormFootball.cn	CCTV-Storm Football	CCTV-风云足球
+CCTVStormMusic.cn	CCTV-Storm Music	CCTV-风云音乐
+CCTVStormTheater.cn	CCTV-Storm Theater	CCTV-风云剧场
+CCTVTheFirstTheater.cn	CCTV-The First Theater	CCTV-第一剧场
+CCTVTVGuide.cn	CCTV-TV Guide	CCTV-电视指南
+CCTVWomensFashion.cn	CCTV-Women's Fashion	CCTV-女性时尚
+CCTVWorldGeography.cn	CCTV-World Geography	CCTV-世界地理
+CDTV1.cn	CDTV 1	CDTV-1 Comprehensive News Channel 新闻综合频道
+CDTV2.cn	CDTV 2	CDTV-2 Economy & Information Channel 经济资讯频道
+CETV1.cn	CETV-1	中国教育电视台
+CETV2.cn	CETV-2	中国教育电视台
+CETV3.cn	CETV-3	中国教育电视台
+CETVEarlyEducation.cn	CETV-Early Education	CETV-早期教育频道
+CGTN.cn	CGTN
+CGTNArabic.cn	CGTN Arabic	CGTN العربية
+CGTNDocumentary.cn	CGTN Documentary
+CGTNFrench.cn	CGTN French	CGTN Français
+CGTNGlobalBiz.cn	CGTN Global Biz	Global Biz
+CGTNRussian.cn	CGTN Russian	CGTN Pусский
+CGTNSpanish.cn	CGTN Spanish	CGTN Español
+ChinaMovieChannel.cn	China Movie Channel	中國電影頻道
+ChinaTravel.cn	China Travel	China Travel CGTN
+DAIFUchannel.cn	DAIFUchannel	中国テレビ★CCTV大富	中国テレビ★大富チャンネル	中国电视★大富频道
+DiscoveringChina.cn	Discovering China	Discovering China CGTN
+DragonTV.cn	Dragon TV	东方卫视
+DragonTVInternational.cn	Dragon TV International	东方卫视国际
+GansuTV.cn	Gansu TV
+GreatWallElite.cn	Great Wall Elite
+GTV.cn	GTV	八大電視股份有限公司
+GuangdongSatelliteTV.cn	Guangdong Satellite TV
+GuangxiTV.cn	Guangxi TV
+GuizhouTV.cn	Guizhou TV
+HainanSatelliteTV.cn	Hainan Satellite TV
+HebeiTV.cn	Hebei TV	河北电视台
+HeilongjiangTV.cn	Heilongjiang TV	黑龙江电视台
+HenanTVSatellite.cn	Henan TV Satellite
+HubeiSatelliteTV.cn	Hubei Satellite TV
+HunanTV.cn	Hunan TV
+HunanTVInternational.cn	Hunan TV International
+HunanTVWorld.cn	Hunan TV World
+iPanda.cn	iPanda
+iQIYI.cn	iQIYI	爱奇艺
+JiangsuInternationalChannel.cn	Jiangsu International Channel	江苏国际频道
+JiangsuLiangMakeUp.cn	Jiangsu Liang MakeUp
+JiangsuSatelliteTV.cn	Jiangsu Satellite TV	江苏卫视
+JiangsuTV.cn	Jiangsu TV
+JiangxiTV.cn	Jiangxi TV
+JilinTVStation.cn	Jilin TV Station
+LiaoningTV.cn	Liaoning TV
+LiyuanTV.cn	Liyuan TV
+MartialArtsWorld.cn	Martial Arts World
+NBTV1.cn	NBTV 1	新闻综合频道
+NBTV2.cn	NBTV 2	社会生活频道
+NBTV3.cn	NBTV 3	文化娱乐频道
+NBTV4.cn	NBTV 4	影视频道
+NBTV5.cn	NBTV 5	少儿频道
+NeiMonggolChineseTV.cn	Nei Monggol Chinese TV
+NingxiaSatelliteChannel.cn	Ningxia Satellite Channel	卫视频道	宁夏卫视
+PremiumBoxOffice.cn	Premium Box Office
+QinghaiTV.cn	Qinghai TV
+SanshaTV.cn	Sansha TV
+ShandongEducationTV.cn	Shandong Education TV
+ShandongTV.cn	Shandong TV
+ShanxiTV.cn	Shanxi TV
+ShenzhenSatelliteTV.cn	Shenzhen Satellite TV	深圳卫视
+ShenzhenTV.cn	Shenzhen TV
+SichuanTV1.cn	Sichuan TV 1
+STChineseHomeland.cn	ST Chinese Homeland
+STDadinKowa.cn	ST Dadin Kowa
+STKids.cn	ST Kids
+STKungfu.cn	ST Kungfu
+STMoviesPlus.cn	ST Movies Plus
+STNollywoodPlus.cn	ST Nollywood Plus
+STNovelaE.cn	ST Novela E
+STNovelaEPlus.cn	ST Novela E Plus
+STNovelaF1.cn	ST Novela F1
+STNovelaFPlus.cn	ST Novela F Plus
+STNovelaP.cn	ST Novela P
+STSinoDrama.cn	ST Sino Drama
+STSportsArena.cn	ST Sports Arena
+STSportsFocus.cn	ST Sports Focus
+STSportsLife.cn	ST Sports Life
+STSportsPremium.cn	ST Sports Premium
+STSwahili.cn	ST Swahili
+STWorldFootball.cn	ST World Football
+STYoruba.cn	ST Yoruba	ST Yorùbá
+STZone.cn	ST Zone
+SuperChannel.cn	Super Channel
+TianjinTV.cn	Tianjin TV
+TianyuanIGoChannel.cn	Tianyuan I-Go Channel
+TVS2SouthernTV.cn	TVS 2 Southern TV
+XiamenStarTVChina.cn	Xiamen Star TV China
+XingKongChina.cn	Xing Kong China
+XizangTVChinese.cn	Xizang TV Chinese
+XizangTVTibetan.cn	Xizang TV Tibetan
+YanbianTV1.cn	Yanbian TV 1
+YunnanTV1.cn	Yunnan TV 1
+ZhejiangInternationalChannel.cn	Zhejiang International Channel
+ZhejiangSatelliteTV.cn	Zhejiang Satellite TV	浙江卫视
+ZTVWorld.cn	ZTV World

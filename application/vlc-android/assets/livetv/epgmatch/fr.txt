@@ -1,0 +1,296 @@
+13emeRue.fr	13eme Rue	13ème Rue	13th Street France
+20MinutesTV.fr	20 Minutes TV	20' TV
+6ter.fr	6ter
+7ALimoges.fr	7ALimoges
+AB1.fr	AB1
+Action.fr	Action
+Africa24.fr	Africa 24
+AfricanewsEnglish.fr	Africanews English
+AfroNovelas.fr	Afro Novelas
+AlpedHuezTV.fr	Alpe d'Huez TV
+AlRawda.fr	Al Rawda
+AngersTele.fr	Angers Tele	Angers Télé
+Animaux.fr	Animaux
+AntenneReunion.fr	Antenne Reunion	Antenne Réunion
+APlus.fr	A+
+APlusInternational.fr	A+ International
+arte.fr	arte
+AstrocenterTV.fr	Astrocenter TV
+ASTV.fr	ASTV
+Automotolachaine.fr	Automoto la chaine	Automoto la chaîne
+BerbereJeunesse.fr	Berbere Jeunesse	Berbère Jeunesse
+BerbereMusic.fr	Berbere Music	Berbère Music
+BerbereTV.fr	Berbere TV	Berbère TV
+BeurTV.fr	Beur TV
+BFM2.fr	BFM2
+BFMAlsace.fr	BFM Alsace
+BFMBusiness.fr	BFM Business
+BFMCotedAzur.fr	BFM Cote d'Azur	BFM Côte d'Azur	BFM Nice Côte d'Azur
+BFMDICIAlpesduSud.fr	BFM DICI Alpes du Sud
+BFMDICIHauteProvence.fr	BFM DICI Haute-Provence
+BFMGrandLille.fr	BFM Grand Lille
+BFMGrandLittoral.fr	BFM Grand Littoral
+BFMLyon.fr	BFM Lyon
+BFMMarseille.fr	BFM Marseille
+BFMNormandie.fr	BFM Normandie
+BFMParisIledeFrance.fr	BFM Paris Ile-de-France	BFM Paris Île-de-France	BFM Paris
+BFMTV.fr	BFM TV
+BFMVar.fr	BFM Var	BFM Toulon Var
+Boomerang.fr	Boomerang
+BSmartTV.fr	B Smart TV
+Caillou.fr	Caillou
+Canal32.fr	Canal 32
+CanalJ.fr	Canal J
+CanalLocalGrosblie.fr	Canal Local Grosblie
+CanalPlus.fr	Canal+
+CanalPlusBoxOffice.fr	Canal+ Box Office
+CanalPlusCaraibes.fr	Canal+ Caraibes	Canal+ Caraïbes
+CanalPlusCinemas.fr	Canal+ Cinemas	Canal+ Cinéma(s)
+CanalPlusDocs.fr	Canal+ Docs
+CanalPlusFamily.fr	Canal+ Family
+CanalPlusFoot.fr	Canal+ Foot
+CanalPlusGrandEcran.fr	Canal+ Grand Ecran
+CanalPlusKids.fr	Canal+ Kids
+CanalPlusPremierLeague.fr	Canal+ Premier League
+CanalPlusSeries.fr	Canal+ Series	Canal+ Séries
+CanalPlusSport.fr	Canal+ Sport
+CanalPlusSport360.fr	Canal+ Sport 360
+CanalSchilick.fr	Canal Schilick
+CannesLerinsTV.fr	Cannes Lerins TV	Cannes Lérins TV
+CDirect.fr	CDirect
+ChassePeche.fr	Chasse & Peche	Chasse & Pêche
+CineNanar.fr	Cine Nanar	Ciné Nanar
+CinePlusClassic.fr	Cine+ Classic	Ciné+ Classic
+CinePlusEmotion.fr	Cine+ Emotion	Ciné+ Emotion	Ciné + Émotion	CinéCinéma Émotion	CinéCinémas 2	CinéCinémas Prime
+CinePlusFamily.fr	Cine+ Family	Ciné+ Family	Ciné+ family	Ciné+ Famiz	CinéCinéma Famiz	CinéCinéma Succès
+CinePlusFestival.fr	Cine+ Festival	Ciné+ Festival	Ciné+ festival	Ciné + Festival	Ciné + festival
+CinePlusFrisson.fr	Cine+ Frisson	Ciné+ Frisson	Ciné+ frisson	Ciné Cinéma Frissons
+CinePlusOCS.fr	Cine+ OCS	Ciné+ OCS	Ciné+	Ciné +	CinéCinéma	CinéCinémas
+CineWestern.fr	Cine Western	Ciné Western
+CliqueTV.fr	Clique TV
+CNews.fr	CNews
+ComediePlus.fr	Comedie+	Comédie+
+ComedyCentral.fr	Comedy Central
+CrimeDistrict.fr	Crime District
+CStar.fr	C Star
+DemainTV.fr	Demain TV
+DiscoveryChannel.fr	Discovery Channel
+DisneyChannel.fr	Disney Channel
+DreamWorks.fr	DreamWorks	DreamWorks Channel
+E.fr	E!	Entertainment
+EmotionL.fr	Emotion L	Emotion'L
+Equidia.fr	Equidia
+EuronewsEnglish.fr	Euronews English
+EuronewsFrench.fr	Euronews French	Euronews Français	Euronews FR
+EuronewsGerman.fr	Euronews German	Euronews Deutsch	Euronews GE
+EuronewsHungarian.fr	Euronews Hungarian
+EuronewsItalian.fr	Euronews Italian	euronews Italiano	Euronews I
+EuronewsPortuguese.fr	Euronews Portuguese	Euronews Português	Euronews PT
+EuronewsRussian.fr	Euronews Russian	Euronews по-русски	Euronews Russki
+EuronewsSpanish.fr	Euronews Spanish	euronews en español	euronews español
+Eurosport1.fr	Eurosport 1
+Eurosport2.fr	Eurosport 2
+Eurosport360HD1.fr	Eurosport 360 HD 1
+Eurosport360HD2.fr	Eurosport 360 HD 2
+Eurosport360HD3.fr	Eurosport 360 HD 3
+Eurosport360HD4.fr	Eurosport 360 HD 4
+Eurosport360HD5.fr	Eurosport 360 HD 5
+Eurosport360HD6.fr	Eurosport 360 HD 6
+Eurosport360HD7.fr	Eurosport 360 HD 7
+Eurosport360HD8.fr	Eurosport 360 HD 8
+Eurosport4K.fr	Eurosport 4K
+FashionTVAsia.fr	FashionTV Asia
+FashionTVEurope.fr	FashionTV Europe	Fashion TV
+FashionTVHD.fr	Fashion TV HD
+FashionTVUHD.fr	FashionTV UHD
+France2.fr	France 2
+France24.fr	France 24
+France3.fr	France 3
+France4.fr	France 4
+France5.fr	France 5
+Franceinfo.fr	Franceinfo
+FrequenceNovelas.fr	Frequence Novelas	Fréquence Novelas
+GeneveRegionTelevision.fr	Geneve Region Television	Genève Région Television
+GolfChannel.fr	Golf Channel
+GolfPlus.fr	Golf +
+Gong.fr	Gong
+GongMax.fr	Gong Max
+Gulli.fr	Gulli
+HistoireTV.fr	Histoire TV	Histoire
+HLIVE.fr	HLIVE
+Hotbird4K1.fr	Hotbird 4K1
+ILTV.fr	ILTV
+IMEARTH.fr	IMEARTH
+InfosportPlus.fr	Infosport+
+IntoCrime.fr	Into Crime
+InvestigationDiscovery.fr	Investigation Discovery
+JournalDuGolf.fr	Journal Du Golf
+Kanaldude.fr	Kanaldude
+KozoomTV.fr	Kozoom TV
+KTO.fr	KTO
+LaChaineMeteo.fr	La Chaine Meteo	La Chaîne Météo
+LCI.fr	LCI
+LCP.fr	LCP	La Chaîne parlementaire	Canal Assemblées	Canal Assemblée nationale
+LeFigaroLive.fr	Le Figaro Live
+LeFigaroTVIledeFrance.fr	Le Figaro TV Ile-de-France	Le Figaro TV Île-de-France
+LEquipe.fr	L'Equipe	L'Équipe
+LEspritSorcierTV.fr	L'Esprit Sorcier TV
+LMTVSarthe.fr	LM TV Sarthe
+LyonCapitaleTV.fr	Lyon Capitale TV
+M6.fr	M6	RTL6
+M6International.fr	M6 International
+M6Music.fr	M6 Music
+MaisonTravauxTV.fr	Maison & Travaux TV
+MandarinTV.fr	Mandarin TV
+Mangas.fr	Mangas
+MaritimaTV.fr	Maritima TV
+MarmitonTV.fr	Marmiton TV
+MaurienneTV.fr	Maurienne TV	MaTV
+MCMTop.fr	MCM Top
+Melody.fr	Melody
+MelodydAfrique.fr	Melody d'Afrique
+MensUPTV.fr	Men's UP TV
+Mezzo.fr	Mezzo
+MezzoLive.fr	Mezzo Live	Mezzo Live HD
+MGGTV.fr	MGG TV
+MosaikCristal.fr	Mosaik Cristal	Mosaïk Cristal
+MoselleTV.fr	Moselle TV
+Motorsporttv.fr	Motorsport.tv
+MTV.fr	MTV
+MultiSports1.fr	MultiSports 1
+MultiSports2.fr	MultiSports 2
+MultiSports3.fr	MultiSports 3
+MultiSports4.fr	MultiSports 4
+MultiSports5.fr	MultiSports 5
+MultiSports6.fr	MultiSports 6
+MuseumTVEnglish.fr	Museum TV English
+MuseumTVFrench.fr	Museum TV French
+MyZenTV.fr	MyZen TV
+MyZenTV4K.fr	MyZen TV 4K
+NationalGeographic.fr	National Geographic	National Geographic Channel
+NationalGeographicWild.fr	National Geographic Wild
+NATV.fr	NA TV
+Nickelodeon.fr	Nickelodeon	Nickelodéon
+NickelodeonJunior.fr	Nickelodeon Junior	Nickelodéon Junior
+Nicktoons.fr	Nicktoons	Nickelodeon Teen	Nickelodéon Teen
+NollywoodTV.fr	Nollywood TV
+NollywoodTVEpic.fr	Nollywood TV Epic	Nollywood TV Épic
+NovelasTV.fr	Novelas TV
+NOVO19.fr	NOVO19
+NRJHits.fr	NRJ Hits
+OLTV.fr	OL TV
+OlympiaTV.fr	Olympia TV
+ParamountChannelOffset.fr	Paramount Channel Offset	Paramount Channel Décalé
+ParisPremiere.fr	Paris Premiere	Paris Première
+PinkTV.fr	Pink TV
+PinkX.fr	Pink X
+PiwiPlus.fr	Piwi+
+PlanetePlus.fr	Planete+	Planète+
+PlanetePlusAventure.fr	Planete+ Aventure	Planète+ Aventure	Planète+ A&E	Planète+ Action & Expérience	Planète No Limit	Planète Choc	Planète Future	Planète Futur	Forum Planète
+PlanetePlusCrime.fr	Planete+ Crime	Planète+ Crime	Planète+ Crime+Investigation	Planète+ CI	Planète+ Justice	Planète Justice
+PolarPlus.fr	Polar+
+ProximusTVRegInfo.fr	Proximus TV RegInfo	RegInfo F
+PublicSenat2424.fr	Public Senat 24/24	Public Sénat 24/24	Public Sénat
+PuissanceTV.fr	Puissance TV
+QwestTV.fr	Qwest TV
+RFMTV.fr	RFM TV
+RMCDecouverte.fr	RMC Decouverte	RMC Découverte
+RMCLife.fr	RMC Life	Chérie 25
+RMCSport1.fr	RMC Sport 1
+RMCSport2.fr	RMC Sport 2
+RMCSport3.fr	RMC Sport 3
+RMCSport4.fr	RMC Sport 4
+RMCSportAccess1.fr	RMC Sport Access 1	RMC Sport Access
+RMCSportLive10.fr	RMC Sport Live 10
+RMCSportLive11.fr	RMC Sport Live 11
+RMCSportLive12.fr	RMC Sport Live 12
+RMCSportLive13.fr	RMC Sport Live 13
+RMCSportLive14.fr	RMC Sport Live 14
+RMCSportLive5.fr	RMC Sport Live 5
+RMCSportLive6.fr	RMC Sport Live 6
+RMCSportLive7.fr	RMC Sport Live 7
+RMCSportLive8.fr	RMC Sport Live 8
+RMCSportLive9.fr	RMC Sport Live 9
+RMCStory.fr	RMC Story	Numéro 23
+RugbyZoneTV.fr	RugbyZone.TV
+ScienceVieTV.fr	Science & Vie TV
+Seasons.fr	Seasons
+SerieClub.fr	Serie Club	Série Club
+SonyOneBlacklist.fr	Sony One Blacklist
+SonyOneFavoris.fr	Sony One Favoris	Sony One Hits Faves
+SonyOneHitsAction.fr	Sony One Hits Action
+SonyOneHitsComedie.fr	Sony One Hits Comedie	Sony One Hits Comédie
+SonyOneSeriesComedie.fr	Sony One Series Comedie	Sony One Séries Comédie
+SonyOneSeriesThriller.fr	Sony One Series Thriller	Sony One Séries Thriller
+SportenFrance.fr	Sport en France
+SQOOLTV.fr	SQOOL TV
+Studiocanal.fr	Studiocanal
+T18.fr	T18
+TCMCinema.fr	TCM Cinema	TCM Cinéma
+TebeoTV.fr	Tebeo TV	Tébéo TV
+TechCo.fr	Tech & Co	01TV
+TeleAntilles.fr	TeleAntilles	TéléAntilles
+TeleBocal.fr	Tele Bocal	Télé Bocal
+TeleGrenoble.fr	TeleGrenoble	TéléGrenoble
+Telenantes.fr	Telenantes	Télénantes
+TeletoonPlus.fr	Teletoon+	Télétoon+	Télétoon
+Teva.fr	Teva	Téva
+TF1.fr	TF1	Télévision française 1
+TF1SeriesFilms.fr	TF1 Series Films	TF1 Séries Films
+TFX.fr	TFX
+TiJi.fr	TiJi
+TL7.fr	TL7	Télévision loire 7
+TLC.fr	TLC	Discovery Real Time	Discovery HD Showcase	Discovery Science	The Learning Channel
+TMC.fr	TMC
+TopSanteTV.fr	Top Sante TV	Top Santé TV
+ToutelHistoire.fr	Toute l'Histoire
+TraceAfrica.fr	Trace Africa
+TraceBrazuca.fr	Trace Brazuca
+TraceCaribbean.fr	Trace Caribbean
+TraceGospel.fr	Trace Gospel
+TraceJama.fr	Trace Jama
+TraceLatina.fr	Trace Latina
+TraceNaija.fr	Trace Naija
+TraceSportStars.fr	Trace Sport Stars
+TraceToca.fr	Trace Toca
+TraceUrban.fr	Trace Urban	Trace TV
+TraceVanillaIslands.fr	Trace Vanilla Islands
+Trek.fr	Trek	Escales
+TV2COM.fr	TV2COM
+TV5Monde.fr	TV5 Monde	TV5
+TV5MondeAfrica.fr	TV5Monde Africa	TV5Monde Afrique
+TV5MondeAsia.fr	TV5Monde Asia	TV5Monde Asie
+TV5MondeEurope.fr	TV5Monde Europe
+TV5MondeFranceBelgiumSwitzerlandMonaco.fr	TV5Monde France Belgium Switzerland Monaco	TV5Monde France Belgique Suisse Monaco	TV5Monde France Belgium Switzerland	TV5Monde
+TV5MondeInfo.fr	TV5Monde Info
+TV5MondeLatinAmerica.fr	TV5Monde Latin America	TV5Monde Amérique Latine
+TV5MondePacific.fr	TV5Monde Pacific	TV5Monde Pacifique
+TV5MondeStyle.fr	TV5Monde Style
+TV78.fr	TV78
+TV7Bordeaux.fr	TV7 Bordeaux
+TV8MontBlanc.fr	TV8 Mont-Blanc
+TV8MoselleEst.fr	TV8 Moselle-Est
+TVBreizh.fr	TV Breizh
+TVPI.fr	TVPI
+TVPitchoun.fr	TV Pitchoun
+TVPitchounKidsMusic.fr	TV Pitchoun Kids Music
+TVR.fr	TVR
+TVSudProvence.fr	TV Sud Provence
+TVTours.fr	TV Tours
+TVVendee.fr	TV Vendee	TV Vendée
+UltraNature.fr	Ultra Nature
+UshuaiaTV.fr	Ushuaia TV	Ushuaïa TV
+Via93.fr	Via93	Vià93
+ViaGuadeloupe.fr	ViaGuadeloupe	ViàGuadeloupe
+ViaGuyane.fr	ViaGuyane	ViàGuyane
+ViaOccitanieMontpellier.fr	ViaOccitanie Montpellier	ViàOccitanie Montpellier
+ViaOccitaniePaysCatalan.fr	ViaOccitanie Pays Catalan	ViàOccitanie Pays Catalan
+ViaOccitaniePaysGardois.fr	ViaOccitanie Pays Gardois	ViàOccitanie Pays Gardois
+ViaOccitanieToulouse.fr	ViaOccitanie Toulouse	ViàOccitanie Toulouse
+viaTelePaese.fr	viaTelePaese	viàTéléPaese
+VosgesTV.fr	Vosges TV
+W9.fr	W9
+WarnerTV.fr	Warner TV
+WarnerTVNext.fr	Warner TV Next
+WildSideTV.fr	Wild Side TV
+XXL.fr	XXL

@@ -38,7 +38,7 @@ object TvNet {
     /** The host of an address, for the messages (never the whole address: it often holds a token). */
     fun hostOf(url: String) = try { Uri.parse(url).host ?: "a file" } catch (e: Exception) { "?" }
 
-    private fun open(context: Context, address: String, cancel: AtomicBoolean?): Pair<InputStream, Long> {
+    private fun open(context: Context, address: String, cancel: AtomicBoolean?, auth: TvAuth? = null): Pair<InputStream, Long> {
         val uri = Uri.parse(address)
         when (uri.scheme?.lowercase()) {
             "content" -> {
@@ -52,6 +52,7 @@ object TvNet {
         }
         var url = URL(address)
         var redirects = 0
+        var authorization: String? = null
         while (true) {
             if (cancel?.get() == true) throw CancelledException()
             val c = url.openConnection() as HttpURLConnection
@@ -61,7 +62,15 @@ object TvNet {
             c.setRequestProperty("User-Agent", USER_AGENT)
             // as it is: a gzip-compressed guide stays so (read inflated later)
             c.setRequestProperty("Accept-Encoding", "identity")
+            if (authorization != null) c.setRequestProperty("Authorization", authorization)
             val code = c.responseCode
+            // an account's list or guide (Tvheadend, an M3U with a sign-in): answered once as the server asks
+            if (code == 401 && authorization == null && auth != null && !auth.isEmpty) {
+                val challenge = c.getHeaderField("WWW-Authenticate") ?: ""
+                c.disconnect()
+                authorization = TvHttp.authorizationFor(challenge, auth, "GET", url) ?: throw IOException("HTTP 401")
+                continue
+            }
             if (code in 300..399) {
                 val location = c.getHeaderField("Location")
                 c.disconnect()
@@ -83,11 +92,11 @@ object TvNet {
      * Saves the resource at address (http(s), file, content) to file, as it is; progress gets the bytes received
      * and the size when known (-1). The file is replaced only once the whole of it came.
      */
-    fun download(context: Context, address: String, file: File, cancel: AtomicBoolean?, progress: ((Long, Long) -> Unit)? = null) {
+    fun download(context: Context, address: String, file: File, cancel: AtomicBoolean?, auth: TvAuth? = null, progress: ((Long, Long) -> Unit)? = null) {
         file.parentFile?.mkdirs()
         val tmp = File(file.path + ".part")
         try {
-            val (input, total) = open(context, address, cancel)
+            val (input, total) = open(context, address, cancel, auth)
             input.use { inp ->
                 tmp.outputStream().buffered(256 * 1024).use { out ->
                     val buf = ByteArray(64 * 1024)

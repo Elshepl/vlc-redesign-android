@@ -1,0 +1,8 @@
+LHTV.me	LH TV
+NovaTV.me	Nova TV	Nova M	Pink M
+PinkM.me	Pink M
+PrvaMontenegro.me	Prva Montenegro	Prva CG	Prva TV Crna Gora	Prva Televizija Montenegro
+TVCG1.me	TVCG 1
+TVCG2.me	TVCG 2
+TVCGMNE.me	TVCG MNE	MNE	TVCG Sat	RTCG Sat
+TVVijesti.me	TV Vijesti

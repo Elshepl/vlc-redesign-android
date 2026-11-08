@@ -1,0 +1,200 @@
+AgroMais.br	AgroMais
+AmazonSat.br	Amazon Sat
+AnimalPlanet.br	Animal Planet	Animal Planet Brasil
+Arte1.br	Arte 1
+AXN.br	AXN	AXN Brazil
+Band.br	Band
+BandAmazonas.br	Band Amazonas
+BandBahia.br	Band Bahia
+BandCuritiba.br	Band Curitiba
+BandNews.br	BandNews	BandNews TV	Band News
+BandSaoPaulo.br	Band Sao Paulo	Band São Paulo
+BandSports.br	Band Sports
+Bis.br	Bis
+BMCNews.br	BM&C News
+BoasNovas.br	Boas Novas
+BoaVontadeTV.br	Boa Vontade TV
+CanalBrasil.br	Canal Brasil
+CanaldoBoi.br	Canal do Boi
+CanalFutura.br	Canal Futura
+CanalOff.br	Canal Off
+CanalRural.br	Canal Rural
+CanalViva.br	Canal Viva	Viva
+ChefTV.br	Chef TV
+CineBrasilTV.br	CineBrasil TV
+Cinemax.br	Cinemax	Cinemax Brasil
+Climatempo.br	Climatempo
+CNNBrasil.br	CNN Brasil
+Combate.br	Combate
+Curta.br	Curta!
+DiscoveryTheater.br	Discovery Theater
+DisneyChannel.br	Disney Channel	Disney Channel Brasil
+EPTVSuldeMinas.br	EPTV Sul de Minas	ZYA 732
+ESPN.br	ESPN	ESPN Brasil
+ESPNExtra.br	ESPN Extra	ESPN Extra Brasil
+FashionTV.br	FashionTV
+FishTV.br	Fish TV
+GloboNews.br	GloboNews
+Gloob.br	Gloob
+Gloobinho.br	Gloobinho
+GNT.br	GNT
+HBO.br	HBO	HBO Brasil
+HBO2.br	HBO 2	HBO 2 Brasil
+HBOFamily.br	HBO Family	HBO Family Brasil
+HBOMundi.br	HBO Mundi
+HBOPlus.br	HBO+
+HBOPop.br	HBO Pop	HBO Pop Brasil
+HBOSignature.br	HBO Signature
+HBOXtreme.br	HBO Xtreme
+History.br	History	History Brasil
+IdealTV.br	Ideal TV
+InterTVAltoLitoral.br	InterTV Alto Litoral
+InterTVCabugi.br	InterTV Cabugi	Channel 11
+InterTVGrandeMinas.br	InterTV Grande Minas
+InterTVSerraPlusMar.br	InterTV Serra+Mar
+InvestigationDiscovery.br	Investigation Discovery	Investigação Discovery
+JovemPanNews.br	Jovem Pan News
+MaisnaTela.br	Mais na Tela
+Megapix.br	Megapix
+MTV.br	MTV
+Multishow.br	Multishow
+MusicBoxBrazil.br	Music Box Brazil
+MyTimeMovieNetwork.br	MyTime Movie Network
+NationalGeographicWild.br	National Geographic Wild
+NickOnline.br	NickOnline	Nickelodeon Online
+NSCTVBlumenau.br	NSC TV Blumenau	ZYB 760
+NSCTVChapeco.br	NSC TV Chapeco	NSC TV Chapecó	ZYQ 651
+NSCTVCriciuma.br	NSC TV Criciuma	NSC TV Criciúma	ZYB 762
+NSCTVFlorianopolis.br	NSC TV Florianopolis	NSC TV Florianópolis	ZYB 763
+NSCTVJoinville.br	NSC TV Joinville
+NuevoTiempo.br	Nuevo Tiempo
+PlayboyTV.br	Playboy TV
+PremiereClubes.br	Premiere Clubes
+PrimeBoxBrazil.br	Prime Box Brazil
+RBATV.br	RBATV
+RBITV.br	RBI TV
+RBSTVPortoAlegre.br	RBS TV Porto Alegre
+RBSTVRS.br	RBS TV RS
+RBSTVSantaMaria.br	RBS TV Santa Maria
+Record.br	Record	RecordTV	Rede Record	TV Record
+RecordNews.br	Record News
+RecordRS.br	Record RS	RecordTV RS	Record Rio Grande do Sul	Rede Record Rio Grande do Sul
+RecordTVBelem.br	RecordTV Belem	RecordTV Belém
+RecordTVCabralia.br	RecordTV Cabralia	RecordTV Cabrália
+RecordTVGoias.br	RecordTV Goias	RecordTV Goiás
+RecordTVItapoan.br	RecordTV Itapoan
+RecordTVMinas.br	RecordTV Minas
+RecordTVPaulista.br	RecordTV Paulista
+RecordTVRio.br	RecordTV Rio
+RecordTVSaoPaulo.br	RecordTV Sao Paulo	RecordTV São Paulo
+Rede21.br	Rede 21
+RedeAmazonica.br	Rede Amazonica	Rede Amazônica
+RedeAmazonicaManaus.br	Rede Amazonica Manaus	Rede Amazônica Manaus
+RedeBrasil.br	Rede Brasil
+RedeCNTRiodeJaneiro.br	Rede CNT Rio de Janeiro
+RedeFamilia.br	Rede Familia	Rede Família
+RedeGenesis.br	Rede Genesis	Rede Gênesis
+RedeGlobo.br	Rede Globo
+RedeGospel.br	Rede Gospel
+RedeInternacionaldeTV.br	Rede Internacional de TV
+RedeMassa.br	Rede Massa
+RedeMeioNorte.br	Rede Meio Norte
+RedeMinas.br	Rede Minas
+RedeSeculo21.br	Rede Seculo 21	Rede Século 21
+RedeSuper.br	Rede Super
+RedeTV.br	Rede TV!
+RedeTVRondonia.br	Rede TV! Rondonia	Rede TV! Rondônia
+RedeVida.br	Rede Vida
+RPCTVCuritiba.br	RPC TV Curitiba
+RPCTVFozdoIguacu.br	RPC TV Foz do Iguacu	RPC TV Foz do Iguaçu
+RPCTVMaringa.br	RPC TV Maringa	RPC TV Maringá
+RPCTVParanavai.br	RPC TV Paranavai	RPC TV Paranavaí
+RPCTVPontaGrossa.br	RPC TV Ponta Grossa
+SBTMS.br	SBT MS
+SBTNacional.br	SBT Nacional
+SBTPara.br	SBT Para	SBT Pará
+SBTRio.br	SBT Rio
+SESCTV.br	SESC TV
+Sextreme.br	Sextreme
+SexyHot.br	Sexy Hot
+Shoptime.br	Shoptime
+SICTV.br	SIC TV
+SmithsonianChannel.br	Smithsonian Channel
+SonyChannel.br	Sony Channel
+SporTV.br	SporTV
+SporTV2.br	SporTV 2
+SporTV3.br	SporTV 3
+StarChannel.br	Star Channel
+TelecineAction.br	Telecine Action
+TelecineCult.br	Telecine Cult
+TelecineFun.br	Telecine Fun
+TelecinePipoca.br	Telecine Pipoca
+TelecinePremium.br	Telecine Premium
+TelecineTouch.br	Telecine Touch
+TerraViva.br	Terra Viva
+TravelBoxBrazil.br	Travel Box Brazil
+TVACritica.br	TV A Critica	TV A Crítica
+TVALESP.br	TV ALESP
+TVAmapa.br	TV Amapa	TV Amapá
+TVAnhangueraGoiania.br	TV Anhanguera Goiania	TV Anhanguera Goiânia
+TVAntena10.br	TV Antena 10
+TVAparecida.br	TV Aparecida
+TVAratu.br	TV Aratu
+TVAssembleiaCeara.br	TV Assembleia Ceara	TV Assembléia Ceará
+TVAssembleiaMinasGerais.br	TV Assembleia Minas Gerais	TV Assembléia Minas Gerais
+TVAtalaia.br	TV Atalaia
+TVBahia.br	TV Bahia
+TVBrasil.br	TV Brasil
+TVCaboBranco.br	TV Cabo Branco
+TVCamara.br	TV Camara	TV Câmara
+TVCancaoNova.br	TV Cancao Nova	TV Canção Nova
+TVCapixaba.br	TV Capixaba
+TVCeara.br	TV Ceara	TV Ceará
+TVCentroAmericaCuiaba.br	TV Centro America Cuiaba	TV Centro América Cuiabá
+TVCidadeSaoLuiz.br	TV Cidade Sao Luiz	TV Cidade São Luíz
+TVCidadeVerdeCuiaba.br	TV Cidade Verde Cuiaba	TV Cidade Verde Cuiabá
+TVClube.br	TV Clube
+TVCorreio.br	TV Correio
+TVDiario.br	TV Diario	TV Diário
+TVDifusoraSaoLuis.br	TV Difusora Sao Luis	TV Difusora São Luís
+TVEBahia.br	TVE Bahia
+TVEmTempo.br	TV Em Tempo
+TVERS.br	TVE RS
+TVEscola.br	TV Escola
+TVGazeta.br	TV Gazeta
+TVGloboBrasilia.br	TV Globo Brasilia	TV Globo Brasília
+TVGloboInternacionalAmericas.br	TV Globo Internacional Americas	TV Globo Internacional Américas
+TVGloboInternacionalEuropa.br	TV Globo Internacional Europa
+TVGloboNordeste.br	TV Globo Nordeste
+TVGloboRiodeJaneiro.br	TV Globo Rio de Janeiro
+TVGloboSaoPaulo.br	TV Globo Sao Paulo	TV Globo São Paulo	ZYB 850	Rede Globo São Paulo	Rede Globo SP	TV Globo Paulista	TV Paulista	ZYE 88
+TVGoianiaBand.br	TV Goiania Band	TV Goiânia Band
+TVGuara.br	TV Guara	TV Guará
+TVHorizonte.br	TV Horizonte
+TVIguacu.br	TV Iguacu	TV Iguaçu
+TVJangadeiro.br	TV Jangadeiro
+TVJornalCaruaru.br	TV Jornal Caruaru
+TVJustica.br	TV Justica	TV Justiça
+TVLiberal.br	TV Liberal
+TVMaanaim.br	TV Maanaim
+TVNovoTempo.br	TV Novo Tempo	Novo Tempo	NT
+TVPajucara.br	TV Pajucara	TV Pajuçara
+TVPampa.br	TV Pampa
+TVParanaiba.br	TV Paranaiba	TV Paranaíba
+TVParanaTurismo.br	TV Parana Turismo	TV Paraná Turismo
+TVPontaNegra.br	TV Ponta Negra
+TVRaTimBum.br	TV Ra Tim Bum	TV Rá Tim Bum
+TVRioSul.br	TV Rio Sul
+TVRondonia.br	TV Rondonia	TV Rondônia
+TVSantaCruz.br	TV Santa Cruz
+TVSenado.br	TV Senado
+TVSergipe.br	TV Sergipe
+TVSerraDourada.br	TV Serra Dourada
+TVT.br	TVT
+TVTribuna.br	TV Tribuna
+TVTropical.br	TV Tropical
+TVUFOP.br	TV UFOP
+TVUniaoFortaleza.br	TV Uniao Fortaleza	TV União Fortaleza
+TVVerdesMares.br	TV Verdes Mares
+UnivespTV.br	Univesp TV
+WooHoo.br	WooHoo

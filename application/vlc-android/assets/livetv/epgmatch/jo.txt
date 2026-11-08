@@ -1,0 +1,14 @@
+AlerthAlnabawiChannel.jo	Alerth Alnabawi Channel	قناة التنبيه النبوي
+AlMamlakaTV.jo	Al Mamlaka TV	المملكة تي في
+AmmanTV.jo	Amman TV	تلفزيون عمّان
+AzhariTV.jo	Azhari TV
+JordanTV.jo	Jordan TV	الأردني تي في
+KaifaTV.jo	Kaifa TV
+Karameesh.jo	Karameesh
+RoyaComedy.jo	Roya Comedy	رؤيا كوميديا
+RoyaDrama.jo	Roya Drama	الصدأ الدرامي
+RoyaKids.jo	Roya Kids	أطفال رؤيا
+RoyaKidsSongs.jo	Roya Kids Songs	أغاني رؤيا للأطفال
+RoyaKitchen.jo	Roya Kitchen	مطبخ رؤيا
+RoyaNews.jo	Roya News	أخبار رؤيا
+RoyaTV.jo	Roya TV	رؤيا تي في

@@ -1,0 +1,52 @@
+ArenaSport1.hr	Arena Sport 1	Arena Sport 1 Hrvatska
+ArenaSport10.hr	Arena Sport 10	Arena Sport 10 Hrvatska
+ArenaSport2.hr	Arena Sport 2	Arena Sport 2 Hrvatska
+ArenaSport3.hr	Arena Sport 3	Arena Sport 3 Hrvatska
+ArenaSport4.hr	Arena Sport 4	Arena Sport 4 Hrvatska
+ArenaSport5.hr	Arena Sport 5	Arena Sport 5 Hrvatska
+ArenaSport6.hr	Arena Sport 6	Arena Sport 6 Hrvatska
+ArenaSport7.hr	Arena Sport 7	Arena Sport 7 Hrvatska
+ArenaSport8.hr	Arena Sport 8	Arena Sport 8 Hrvatska
+ArenaSport9.hr	Arena Sport 9	Arena Sport 9 Hrvatska
+CineStarTV1.hr	CineStar TV 1
+CineStarTV2.hr	CineStar TV 2
+CineStarTVAction.hr	CineStar TV Action
+CineStarTVComedy.hr	CineStar TV Comedy
+CineStarTVFantasy.hr	CineStar TV Fantasy
+CineStarTVPremiere1.hr	CineStar TV Premiere 1
+CineStarTVPremiere2.hr	CineStar TV Premiere 2
+CMCTV.hr	CMC TV
+DokuTV.hr	Doku TV
+DomaTV.hr	Doma TV
+DoxTV.hr	Dox TV
+HRT1.hr	HRT 1
+HRT2.hr	HRT 2
+HRT3.hr	HRT 3
+HRT4.hr	HRT 4
+HRTInternational.hr	HRT International	HRT Int.	HRT5
+ICTBusiness.hr	ICT Business
+KinoTV.hr	Kino TV
+KlapeiTambureTV.hr	Klape i Tambure TV
+Klasik.hr	Klasik	Klasik TV
+LaudatoTV.hr	Laudato TV
+M1Film.hr	M1 Film
+M1Gold.hr	M1 Gold
+MiniTV.hr	Mini TV
+MrezaTV.hr	Mreza TV
+N1.hr	N1	N1 HR
+NationalGeographic.hr	National Geographic
+NovaTV.hr	Nova TV
+NovaWorld.hr	Nova World
+OTV.hr	OTV	Otvorena televizija
+PickboxTV.hr	Pickbox TV
+RTL.hr	RTL
+RTL2.hr	RTL 2
+RTLCrime.hr	RTL Crime
+RTLKockica.hr	RTL Kockica
+RTLLiving.hr	RTL Living
+RTLPassion.hr	RTL Passion
+ShiftTV.hr	Shift TV
+SportskaTV.hr	Sportska TV
+TVJadran.hr	TV Jadran
+Z1.hr	Z1
+ZdravaTV7.hr	Zdrava TV 7

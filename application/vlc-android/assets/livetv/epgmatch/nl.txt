@@ -1,0 +1,212 @@
+100NLTV.nl	100% NL TV
+192TV.nl	192TV
+360TuneBox.nl	360TuneBox
+A1TV.nl	A1 TV
+AAVISIE.nl	AAVISIE	Aavisie TV
+AlbrandswaardTV.nl	Albrandswaard TV
+AltenaTV.nl	Altena TV
+AnimalPlanet.nl	Animal Planet
+AssenTV.nl	Assen TV
+AT5.nl	AT5
+ATOSTV.nl	ATOS TV
+BBCNL.nl	BBC NL
+BeekTV.nl	Beek TV
+BlueHustler.nl	Blue Hustler
+BR6TV.nl	BR6 TV
+BredaNuTV.nl	BredaNu TV
+BVN.nl	BVN
+CastricumTV.nl	Castricum TV
+CentraalTV.nl	Centraal TV
+ComedyCentral.nl	Comedy Central
+DanceTelevision.nl	Dance Television	DT
+DeltaTV.nl	Delta TV
+DenHaagTV.nl	Den Haag TV
+DiscoveryChannel.nl	Discovery Channel
+DisneyChannel.nl	Disney Channel
+DocuBox.nl	DocuBox
+DorcelTV.nl	Dorcel TV
+DorcelTVAfrica.nl	Dorcel TV Africa
+DorcelXXX.nl	Dorcel XXX
+DTVOssBernheze.nl	DTV Oss & Bernheze
+DuskTV.nl	Dusk TV
+EEurope.nl	E! Europe	Entertainment
+EroX.nl	EroX
+EroXXX.nl	EroXXX
+ESPN.nl	ESPN	ESPN 1
+ESPN2.nl	ESPN 2
+ESPN3.nl	ESPN 3
+ESPN4.nl	ESPN 4
+ExtremeSportsChannel.nl	Extreme Sports Channel
+Family7.nl	Family 7
+FashionBox.nl	FashionBox
+FastFunBox.nl	Fast&FunBox
+FeelGoodTV.nl	Feel Good TV
+FightBox.nl	FightBox
+Film1Action.nl	Film1 Action
+Film1Drama.nl	Film1 Drama
+Film1Family.nl	Film1 Family
+Film1Premiere.nl	Film1 Premiere
+FunBoxUHD.nl	FunBox UHD
+Gametoon.nl	Gametoon	MadScreenBox
+GemeenteWestlandTV.nl	Gemeente Westland TV
+GL8.nl	GL8
+GOTV.nl	GO-TV
+GouwestadTV.nl	Gouwestad TV
+HGTV.nl	HGTV	Home & Garden Television
+History.nl	History
+HofstreekTV.nl	Hofstreek TV
+HOiTV.nl	HOi TV
+HTRTV.nl	HTR TV
+HustlerHD.nl	Hustler HD
+HustlerTVEurope.nl	Hustler TV Europe
+IdeaalTV.nl	Ideaal TV
+IjsselmondTV.nl	Ijsselmond TV
+INFAST.nl	INFAST
+INPLUS.nl	INPLUS
+INTRAVEL.nl	INTRAVEL
+InTrouble.nl	InTrouble
+INULTRA.nl	INULTRA
+InvestigationDiscovery.nl	Investigation Discovery
+INWILD.nl	INWILD
+InWonder.nl	InWonder
+KempenTV.nl	KempenTV
+L1TV.nl	L1 TV	L1	L1imburg TV
+LangstraatTV.nl	Langstraat TV
+LansingerlandTV.nl	Lansingerland TV
+LocoTV.nl	Loco TV
+LOETV.nl	LOE TV
+LOKTV.nl	LOK TV
+LONTV.nl	LON TV
+LOSTV.nl	LOS TV
+MeidenvanHollandHard.nl	Meiden van Holland Hard	MvH Hard
+MeppelTV.nl	Meppel TV
+ML5TV.nl	ML5 TV
+MLATV.nl	MLA TV
+MTV.nl	MTV
+NationalGeographic.nl	National Geographic
+NationalGeographicWild.nl	National Geographic Wild
+NET5.nl	NET5	Net5
+NH.nl	NH	NH Nieuws
+Nickelodeon.nl	Nickelodeon
+NickelodeonScandinavia.nl	Nickelodeon Scandinavia
+NickJr.nl	Nick Jr.
+NickJrScandinavia.nl	Nick Jr. Scandinavia
+Nicktoons.nl	Nicktoons
+NicktoonsScandinavia.nl	Nicktoons Scandinavia
+NOOSTV.nl	NOOS TV
+NPO1.nl	NPO 1
+NPO1extra.nl	NPO 1 extra
+NPO2.nl	NPO 2
+NPO2extra.nl	NPO 2 extra
+NPO3.nl	NPO 3
+NPOPolitiekenNieuws.nl	NPO Politiek en Nieuws
+OmroepBrabant.nl	Omroep Brabant
+OmroepCentraalTV.nl	Omroep Centraal TV
+OmroepFlevoland.nl	Omroep Flevoland
+OmroepGelderland.nl	Omroep Gelderland
+OmroepHulst.nl	Omroep Hulst
+OmroepMeierijstad.nl	Omroep Meierijstad
+OmroepOnsWestBrabant.nl	Omroep Ons West Brabant
+OmroepTilburg.nl	Omroep Tilburg
+OmroepVenlo.nl	Omroep Venlo
+OmroepWest.nl	Omroep West	RTV West	TV West
+OmroepZeeland.nl	Omroep Zeeland
+OmropFryslan.nl	Omrop Fryslan	Omrop Fryslân
+ONS.nl	ONS
+OOGTV.nl	OOG TV
+OPENRotterdamTV.nl	OPEN Rotterdam TV
+OUTtv.nl	OUTtv
+ParamountNetwork.nl	Paramount Network
+PassieXXX.nl	Passie XXX
+PassionXXX.nl	Passion XXX
+PebbleTV.nl	Pebble TV
+PMTV.nl	P&M TV
+PrivateTV.nl	Private TV	Daring! TV	XXX Xtreme
+ProximusTVRegInfo.nl	Proximus TV RegInfo	RegInfo N
+RadioAalsmeerTV.nl	Radio Aalsmeer TV
+RedlightHD.nl	Redlight HD
+Regio8TV.nl	Regio8 TV
+Regio90TV.nl	Regio90 TV
+RN7.nl	RN7
+RondeVenenTV.nl	Ronde Venen TV
+RTL4.nl	RTL 4
+RTL5.nl	RTL 5
+RTL7.nl	RTL 7
+RTL8.nl	RTL 8
+RTLCrime.nl	RTL Crime
+RTLLounge.nl	RTL Lounge
+RTLTelekids.nl	RTL Telekids
+RTLZ.nl	RTL Z
+RTV1.nl	RTV 1
+RTV7.nl	RTV-7
+RTVConnectTV.nl	RTV Connect TV
+RTVDrenthe.nl	RTV Drenthe
+RTVFocusTV.nl	RTV Focus TV
+RTVHorizon.nl	RTV Horizon
+RTVNoord.nl	RTV Noord
+RTVOost.nl	RTV Oost
+RTVPurmerend.nl	RTV Purmerend
+RTVRijnmond.nl	RTV Rijnmond
+RTVRijnstreekTV.nl	RTV Rijnstreek TV
+RTVScheldemond.nl	RTV Scheldemond
+RTVSlingeland.nl	RTV Slingeland
+RTVSLOS.nl	RTV SLOS
+RTVUtrecht.nl	RTV Utrecht
+RTVVeluwezoomTV.nl	RTV Veluwezoom TV
+Samen1TV.nl	Samen1 TV
+SBS6.nl	SBS 6
+SBS9.nl	SBS 9
+SchieTV.nl	Schie TV
+SchlagerTV.nl	Schlager TV
+SirisTV.nl	Siris TV
+SLAMTV.nl	SLAM! TV	SLAM!TV
+SLOGOTV.nl	SLOGO TV
+SLOSTV.nl	SLOS TV
+SlotstadTV.nl	Slotstad TV
+SportKlub1.nl	Sport Klub 1	SK 1
+SportKlub2.nl	Sport Klub 2	SK 2
+SportKlub3.nl	Sport Klub 3	SK 3
+SportKlub4.nl	Sport Klub 4	SK 4
+SportKlub5.nl	Sport Klub 5	SK 5
+SportKlubGolf.nl	Sport Klub Golf	SK Golf
+STARChannel.nl	STAR Channel	Fox	FOX
+StreekTV.nl	StreekTV
+Studio040TV.nl	Studio040 TV
+StudioAlphenTV.nl	Studio Alphen TV
+StudioRheden.nl	Studio Rheden
+TholenTV.nl	Tholen TV
+TLC.nl	TLC
+Top40TV.nl	Top 40 TV	Top40 TV
+TV538.nl	TV 538	TV538
+TVKrimpenerwaard.nl	TV Krimpenerwaard
+TVNunspeet.nl	TV Nunspeet
+TVOranje.nl	TV Oranje	TV Orange
+TVStichtseVecht.nl	TV Stichtse Vecht
+TwenteTV.nl	Twente TV
+VechtdalTV.nl	Vechtdal TV
+VeronicaDisneyJr.nl	Veronica / Disney Jr.	Veronica	Disney Jr.
+ViaplayTV.nl	Viaplay TV
+ViaplayTVPlus.nl	Viaplay TV+
+VOSTV.nl	VOS TV	Valkenswaardse Omroep Stichting
+WOS.nl	WOS
+XITE.nl	XITE
+XITE60s70sGroove.nl	XITE 60s & 70s Groove
+XITEAllOutDance.nl	XITE All Out Dance
+XITEClassicCountry.nl	XITE Classic Country
+XITEHits.nl	XITE Hits
+XITEJustChill.nl	XITE Just Chill
+XITELekkerHollands.nl	XITE Lekker Hollands
+XITEReggaeVibes.nl	XITE Reggae Vibes
+XITERockxMetal.nl	XITE Rock x Metal
+XITEUltimateThrowback.nl	XITE Ultimate Throwback
+XITEVanEigenBodem.nl	XITE Van Eigen Bodem
+XMO.nl	X-MO
+ZiggoSport.nl	Ziggo Sport	Ziggo Sport 1
+ZiggoSport2.nl	Ziggo Sport 2	Ziggo Sport Voetbal
+ZiggoSport3.nl	Ziggo Sport 3	Ziggo Sport Racing
+ZiggoSport4.nl	Ziggo Sport 4	Ziggo Sport Tennis
+ZiggoSport5.nl	Ziggo Sport 5	Ziggo Sport Docu
+ZiggoSport6.nl	Ziggo Sport 6	Ziggo Sport Golf
+ZiggoSportExtra.nl	Ziggo Sport Extra
+ZuidWestTV.nl	ZuidWest TV
+ZVTAVS.nl	ZVT-AVS

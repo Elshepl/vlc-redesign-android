@@ -1,0 +1,24 @@
+ANTV.ve	ANTV
+AvilaTV.ve	Avila TV	Ávila TV
+CanalI.ve	Canal I
+Colombeia.ve	Colombeia
+ConCienciaTV.ve	ConCiencia TV
+Globovision.ve	Globovision	Globovisión
+History.ve	History
+IVC.ve	IVC
+IVCInternacional.ve	IVC Internacional
+LaTeleTuya.ve	La Tele Tuya	TLT
+MeridianoTV.ve	Meridiano TV
+SunChannel.ve	Sun Channel
+Telesur.ve	Telesur
+Televen.ve	Televen
+TVes.ve	TVes
+TVFamilia.ve	TV Familia
+TVFANB.ve	TV FANB
+ValeTV.ve	Vale TV
+Venevision.ve	Venevision	Venevisión
+VenevisionInternacional.ve	Venevision Internacional	Venevisión Internacional
+VenezolanadeTelevision.ve	Venezolana de Television	Venezolana de Televisión
+VepacoTV.ve	Vepaco TV
+VePlus.ve	Ve Plus	Venevisión Plus
+Vive.ve	Vive

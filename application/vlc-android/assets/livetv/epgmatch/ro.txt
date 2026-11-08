@@ -1,0 +1,88 @@
+A7TV.ro	A7TV
+Acasa.ro	Acasa	Acasă	Pro 2	Acasă TV
+AcasaGold.ro	Acasa Gold	Acasă Gold	Pro Gold	Acasă Clasic	Acasă 2
+AgroTV.ro	Agro TV
+AlephNews.ro	Aleph News
+AlfaOmegaTV.ro	Alfa Omega TV
+Antena1.ro	Antena 1
+AntenaInternational.ro	Antena International
+AntenaStars.ro	Antena Stars	Antena 2
+B1.ro	B1
+BollywoodClassic.ro	Bollywood Classic	Bollywood Clasic
+BollywoodFilm.ro	Bollywood Film
+BollywoodTV.ro	Bollywood TV
+CineWow.ro	CineWow
+ComedyCentral.ro	Comedy Central
+CredoTV.ro	Credo TV
+Digi24.ro	Digi 24	Digi News	10 TV
+DigiAnimalWorld.ro	Digi Animal World
+DigiLife.ro	Digi Life
+DigiSport1.ro	Digi Sport 1
+DigiSport2.ro	Digi Sport 2
+DigiSport3.ro	Digi Sport 3
+DigiSport4.ro	Digi Sport 4
+DigiWorld.ro	Digi World
+DiscoveryChannel.ro	Discovery Channel
+DisneyChannel.ro	Disney Channel
+Diva.ro	Diva	Diva România
+ErdelyTV.ro	Erdely TV	Erdély TV	Erdélyi Magyar Televízió
+EtnoTV.ro	Etno TV
+FavoritTV.ro	Favorit TV
+FilmNow.ro	Film Now
+HappyChannel.ro	Happy Channel
+HBO.ro	HBO	HBO Romania	HBO România
+HBO2.ro	HBO 2
+HBO3.ro	HBO 3	HBO Comedy
+History.ro	History	History România
+HtMusicChannel.ro	H!t Music Channel	Hit Music Channel
+IneditTV.ro	Inedit TV
+InfoTVRomania.ro	Info TV Romania	Info TV România
+JimJam.ro	JimJam
+KanalD.ro	Kanal D	Kanal D România
+KissTV.ro	Kiss TV
+MagicTV.ro	Magic TV
+MoozDance.ro	Mooz Dance
+MoozHits.ro	Mooz Hits
+MoozRo.ro	Mooz Ro!
+MusicChannel.ro	Music Channel
+NasulTV.ro	Nasul TV	Nașul TV
+National24Plus.ro	National 24 Plus	Național 24 Plus	N24 Plus	N24
+NationalGeographic.ro	National Geographic	National Geographic România
+NationalGeographicWild.ro	National Geographic Wild
+NationalTV.ro	National TV	Național TV
+Nickelodeon.ro	Nickelodeon	Nickelodeon România
+NickJr.ro	Nick Jr.	Nick Jr România
+Nicktoons.ro	Nicktoons	Nicktoons România
+Prima4K.ro	Prima 4K	Look 4K	LookSport 1
+PrimaSport1.ro	Prima Sport 1	LookSport+	LookPlus	Look Plus	Transilvania L!VE	NCN Cluj-Napoca
+PrimaSport2.ro	Prima Sport 2	LookSport	Look TV	Transilvania Look	TTV
+PrimaSport3.ro	Prima Sport 3	LookSport 3
+PrimaSport4.ro	Prima Sport 4	LookSport 2
+PrimaTV.ro	Prima TV	Canal 38 Amerom Bucureşti
+ProArena.ro	Pro Arena	Pro X	Sport.ro	TV Sport
+ProCinema.ro	Pro Cinema
+PROTV.ro	PRO TV	Canal 31
+PROTVInternational.ro	PRO TV International	PRO TV Internațional
+RealitateaPlus.ro	Realitatea Plus
+RockTV.ro	Rock TV
+RomaniaTV.ro	Romania TV	România TV
+SperantaTV.ro	SperantaTV	Speranța TV
+SportExtra.ro	Sport Extra
+TarafTV.ro	Taraf TV
+TimelessDiziChannel.ro	Timeless Dizi Channel
+TLC.ro	TLC
+TravelMix.ro	Travel Mix
+TrinitasTV.ro	Trinitas TV
+TVPaprika.ro	TV Paprika
+TVR1.ro	TVR 1	România 1	Televiziunea Română Liberă	TVR	Programul 1
+TVR2.ro	TVR 2	Programul 2
+TVR3.ro	TVR 3
+TVRCluj.ro	TVR Cluj
+TVRCraiova.ro	TVR Craiova
+TVRIasi.ro	TVR Iasi
+TVRInternational.ro	TVR International
+TVRTarguMures.ro	TVR Targu-Mures
+TVRTimisoara.ro	TVR Timisoara
+UTV.ro	UTV
+VTV.ro	VTV
+WarnerTV.ro	Warner TV	TNT Romania	Turner Classic Movies Romania	TNT Classic Movies Romania

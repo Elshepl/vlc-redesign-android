@@ -1,0 +1,4 @@
+GloomChannel.mz	Gloom Channel
+HaqTV.mz	Haq TV
+STVNoticias.mz	STV Noticias	STV Notícias
+TVMInternacional.mz	TVM Internacional

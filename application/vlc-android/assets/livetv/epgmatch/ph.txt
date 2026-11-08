@@ -1,0 +1,32 @@
+A2Z.ph	A2Z
+ANC.ph	ANC	ABS-CBN News Channel
+ANCGlobal.ph	ANC Global
+CinemaOneGlobal.ph	Cinema One Global
+GMALifeTV.ph	GMA Life TV
+GMANewsTV.ph	GMA News TV	GMA News TV International
+GMAPinoyTV.ph	GMA Pinoy TV
+GMAPinoyTVAsiaPacific.ph	GMA Pinoy TV Asia-Pacific
+GMAPinoyTVUSACanada.ph	GMA Pinoy TV USA & Canada
+GMATV.ph	GMA TV
+GTV.ph	GTV
+History.ph	History
+IBC13.ph	IBC 13	DZTV-TV	Channel 13
+JeepneyTV.ph	Jeepney TV
+KapamilyaChannel.ph	Kapamilya Channel
+MetroChannel.ph	Metro Channel
+Myx.ph	Myx
+NationalGeographic.ph	National Geographic
+Net25.ph	Net 25	DZEC-TV
+Nickelodeon.ph	Nickelodeon
+PBO.ph	PBO	Pinoy Box Office
+PremierFootball.ph	Premier Football
+PremierSports.ph	Premier Sports
+PremierSports2.ph	Premier Sports 2
+PTV.ph	PTV
+ShopTV.ph	Shop TV
+TagalizedMovieChannel.ph	Tagalized Movie Channel
+TAPEdge.ph	TAP Edge	EDGEsport Philippines
+TAPSports.ph	TAP Sports
+TV5.ph	TV5
+VivaCinema.ph	Viva Cinema
+WarnerTV.ph	Warner TV

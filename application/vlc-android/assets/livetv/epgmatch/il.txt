@@ -1,0 +1,17 @@
+5Sport.il	5Sport	ספורט 5
+5Sport4K.il	5Sport 4K
+Channel13.il	Channel 13	ערוץ 13
+Channel9.il	Channel 9	9 канал
+i24NEWSArabic.il	i24NEWS Arabic	i24NEWS عربى
+i24NEWSEnglishUSA.il	i24NEWS English USA
+i24NEWSEnglishWorld.il	i24NEWS English World
+i24NEWSFrench.il	i24NEWS French	i24NEWS Français
+Kan11.il	Kan 11	כאן 11
+KanEducational.il	Kan Educational	כאן חינוכית
+Keshet12.il	Keshet 12	קשת 12
+KnessetChannel.il	Knesset Channel	ערוץ כנסת
+Makan33.il	Makan 33	מכאן 33
+Now14.il	Now 14	עכשיו 14
+TheIsraeliNetwork.il	The Israeli Network
+YesDocu.il	Yes Docu
+YesMoviesKids.il	Yes Movies Kids

@@ -1,0 +1,195 @@
+13tv.pl	13.tv
+13Ulica.pl	13 Ulica	13th Street
+4FunDance.pl	4 Fun Dance
+4FunKids.pl	4 Fun Kids
+4FunTV.pl	4 Fun TV
+ActiveFamily.pl	Active Family
+AdventureTV.pl	Adventure TV
+AleKinoPlus.pl	Ale Kino+
+AlfaTVP.pl	Alfa TVP
+AmericanCrimeChannel.pl	American Crime Channel
+AntenaHD.pl	Antena HD	Antena
+BelsatTV.pl	Belsat TV	Белсат TV
+Biznes24.pl	Biznes 24
+CanalPlus1.pl	Canal+ »1
+CanalPlus4KUltraHD.pl	Canal+ 4K Ultra HD
+CanalPlusDokument.pl	Canal+ Dokument
+CanalPlusDomo.pl	Canal+ Domo
+CanalPlusFilm.pl	Canal+ Film
+CanalPlusKuchnia.pl	Canal+ Kuchnia
+CanalPlusPremium.pl	Canal+ Premium
+CanalPlusSeriale.pl	Canal+ Seriale
+CanalPlusSport.pl	Canal+ Sport
+CanalPlusSport2.pl	Canal+ Sport 2
+CanalPlusSport3.pl	Canal+ Sport 3
+CanalPlusSport4.pl	Canal+ Sport 4
+CBeebies.pl	CBeebies
+CBSReality.pl	CBS Reality
+ComedyCentral.pl	Comedy Central
+CrimePlusInvestigationPolsat.pl	Crime + Investigation Polsat
+DaVinci.pl	Da Vinci
+DiscoPoloMusic.pl	Disco Polo Music
+DiscoveryChannel.pl	Discovery Channel
+DiscoveryHistoria.pl	Discovery Historia
+DisneyChannel.pl	Disney Channel
+DisneyJunior.pl	Disney Junior
+DisneyXD.pl	Disney XD
+dlaCiebietv.pl	dlaCiebie.tv
+E.pl	E!	Entertainment
+Echo24.pl	Echo24
+ElevenSports1.pl	Eleven Sports 1
+ElevenSports2.pl	Eleven Sports 2
+ElevenSports3.pl	Eleven Sports 3
+ElevenSports4.pl	Eleven Sports 4
+EskaRockTV.pl	Eska Rock TV
+EskaTV.pl	Eska TV
+EskaTVExtra.pl	Eska TV Extra
+EWTNPoland.pl	EWTN Poland	EWTN Polska
+ExtremeSportsChannelPolska.pl	Extreme Sports Channel Polska
+FightKlub.pl	Fight Klub
+FokusTV.pl	Fokus TV
+FoodNetwork.pl	Food Network
+Fox.pl	Fox
+HBO.pl	HBO	HBO Polska
+HBO2.pl	HBO 2	HBO 2 Polska
+HGTV.pl	HGTV	HGTV Home&Garden
+History.pl	History
+History2.pl	History 2
+HomeTV.pl	Home TV
+InvestigationDiscovery.pl	Investigation Discovery
+ITVNEurope.pl	ITVN Europe
+ITVNExtra.pl	ITVN Extra
+JuniorMusic.pl	Junior Music
+KabaretTV.pl	Kabaret TV
+KinoPolska.pl	Kino Polska
+KinoPolskaMuzyka.pl	Kino Polska Muzyka
+KinoPolskaMuzykaInternational.pl	Kino Polska Muzyka International
+Metro.pl	Metro
+MiniMiniPlus.pl	MiniMini+
+MixtapeTV.pl	Mixtape TV
+Motowizja.pl	Motowizja
+MTV.pl	MTV	MTV Polska
+NatGeoPeople.pl	Nat Geo People
+NationalGeographic.pl	National Geographic
+NationalGeographicWild.pl	National Geographic Wild
+News24.pl	News24
+NewTV.pl	NewTV	Lubelska.tv
+Nickelodeon.pl	Nickelodeon	Nickelodeon Polska
+NickJr.pl	Nick Jr.	Nick Jr Polska
+Nicktoons.pl	Nicktoons	Nicktoons Polska
+NovelaTV.pl	Novela TV
+NowaTV.pl	Nowa TV
+NutaTV.pl	Nuta TV
+ParamountNetwork.pl	Paramount Network	Paramount Channel Poland	Viacom Blink!
+PlanetePlus.pl	Planete+
+Polonia1.pl	Polonia 1
+PoloTV.pl	Polo TV
+Polsat.pl	Polsat
+Polsat1.pl	Polsat 1
+Polsat2.pl	Polsat 2
+PolsatCafe.pl	Polsat Cafe	Polsat Café
+PolsatComedyCentralExtra.pl	Polsat Comedy Central Extra	Comedy Central Family
+PolsatDoku.pl	Polsat Doku
+PolsatFilm.pl	Polsat Film
+PolsatGames.pl	Polsat Games
+PolsatJimJam.pl	Polsat JimJam
+PolsatMusic.pl	Polsat Music
+PolsatNews.pl	Polsat News
+PolsatNews2.pl	Polsat News 2
+PolsatPlay.pl	Polsat Play
+PolsatRodzina.pl	Polsat Rodzina
+PolsatSeriale.pl	Polsat Seriale
+PolsatSport1.pl	Polsat Sport 1
+PolsatSport2.pl	Polsat Sport 2
+PolsatSport3.pl	Polsat Sport 3
+PolsatSportFight.pl	Polsat Sport Fight
+PolsatSportPremium1.pl	Polsat Sport Premium 1
+PolsatSportPremium2.pl	Polsat Sport Premium 2
+PolsatViasatExplore.pl	Polsat Viasat Explore
+PolsatViasatHistory.pl	Polsat Viasat History
+PolsatViasatNature.pl	Polsat Viasat Nature
+PowerTV.pl	Power TV
+Puls2.pl	Puls 2
+RACERInternational.pl	RACER International
+RedCarpetTV.pl	Red Carpet TV
+RomanceTV.pl	Romance TV
+SciFi.pl	Sci Fi
+ShadesofBlack.pl	Shades of Black
+SportKlub.pl	Sport Klub
+StarsTV.pl	Stars TV
+StopklatkaTV.pl	Stopklatka TV
+StudioMedTV.pl	StudioMed TV
+SundanceTV.pl	Sundance TV
+SuperPolsat.pl	Super Polsat
+TBNPolska.pl	TBN Polska
+TeenNick.pl	TeenNick
+Tele5.pl	Tele5
+TeletoonPlus.pl	Teletoon+
+TheReuters60.pl	The Reuters 60
+TLC.pl	TLC
+TNAWrestlingChannel.pl	TNA Wrestling Channel
+TOPBarca.pl	TOP Barca	TOP Barça
+TopKids.pl	Top Kids
+TravelChannel.pl	Travel Channel
+TTV.pl	TTV	UTV
+TV4.pl	TV4
+TV6.pl	TV6
+TVASTA.pl	TV ASTA
+TVC.pl	TVC
+TVN.pl	TVN
+TVN24.pl	TVN24
+TVN24BiS.pl	TVN24 BiS
+TVN7.pl	TVN 7
+TVNFabula.pl	TVN Fabula
+TVNStyle.pl	TVN Style
+TVNTurbo.pl	TVN Turbo
+TVOkazje.pl	TV Okazje
+TVP1.pl	TVP1
+TVP2.pl	TVP2
+TVP3Bialystok.pl	TVP 3 Bialystok
+TVP3Bydgoszcz.pl	TVP 3 Bydgoszcz
+TVP3Gdansk.pl	TVP 3 Gdansk
+TVP3GorzowWielkopolski.pl	TVP 3 Gorzow Wielkopolski	TVP 3 Gorzów Wielkopolski
+TVP3Katowice.pl	TVP 3 Katowice
+TVP3Kielce.pl	TVP 3 Kielce
+TVP3Krakow.pl	TVP 3 Krakow	TVP 3 Kraków
+TVP3Lodz.pl	TVP 3 Lodz	TVP 3 Lódz
+TVP3Lublin.pl	TVP 3 Lublin
+TVP3Olsztyn.pl	TVP 3 Olsztyn
+TVP3Opole.pl	TVP 3 Opole
+TVP3Poznan.pl	TVP 3 Poznan
+TVP3Rzeszow.pl	TVP 3 Rzeszow	TVP 3 Rzeszów
+TVP3Szczecin.pl	TVP 3 Szczecin
+TVP3Warszawa.pl	TVP 3 Warszawa
+TVP3Wroclaw.pl	TVP 3 Wroclaw
+TVPABC.pl	TVP ABC
+TVPDokument.pl	TVP Dokument
+TVPHD.pl	TVP HD
+TVPHistoria.pl	TVP Historia
+TVPInfo.pl	TVP Info
+TVPKobieta.pl	TVP Kobieta
+TVPKultura.pl	TVP Kultura
+TVPKultura2.pl	TVP Kultura 2
+TVPNauka.pl	TVP Nauka
+TVPPolonia.pl	TVP Polonia
+TVPRozrywka.pl	TVP Rozrywka
+TVPSeriale.pl	TVP Seriale
+TVPSport.pl	TVP Sport
+TVPuls.pl	TV Puls
+TVPWilno.pl	TVP Wilno
+TVPWorld.pl	TVP World
+TVRegionalnaLubin.pl	TV Regionalna Lubin
+tvregionalnapl.pl	tvregionalna.pl
+TVRepublika.pl	TV Republika
+TVS.pl	TVS
+TVT.pl	TVT
+TVTrwam.pl	TV Trwam
+UltraTV4K.pl	Ultra TV 4K
+VOXMusicTV.pl	VOX Music TV
+WarnerTV.pl	Warner TV	TNT	TNT Classic Movies
+WaterPlanet.pl	Water Planet
+WorldBilliards.pl	World Billiards
+WPolscePL.pl	W Polsce PL
+WPTV.pl	WP TV
+WTK.pl	WTK
+ZoomTV.pl	Zoom TV

@@ -1,0 +1,58 @@
+ANPITV.uy	ANPI TV
+AntelEventos.uy	Antel Eventos
+APlusV.uy	A+V
+ArtigasTelevision.uy	Artigas Television	Artigas Televisión	Canal 3 Artigas TV
+AsuntosPublicos.uy	Asuntos Publicos	Asuntos Públicos
+CamaradeRepresentantes.uy	Camara de Representantes	Cámara de Representantes
+CamaradeSenadores.uy	Camara de Senadores	Cámara de Senadores
+Canal10.uy	Canal 10	SAETA TV Canal 10
+Canal11TreintayTres.uy	Canal 11 Treinta y Tres
+Canal11TV.uy	Canal 11 TV	Canal 11 Las Piedras
+Canal12Melo.uy	Canal 12 Melo	Melo TV Canal 12
+Canal23Florida.uy	Canal 23 Florida
+Canal2Lascano.uy	Canal 2 Lascano
+Canal2SanCarlos.uy	Canal 2 San Carlos
+Canal2VisionCanaria.uy	Canal 2 Vision Canaria	Canal 2 Visión Canaria
+Canal4.uy	Canal 4	Monte Carlo Televisión
+Canal4Chuy.uy	Canal 4 Chuy
+Canal4JuanLacaze.uy	Canal 4 Juan Lacaze
+Canal4Paysandu.uy	Canal 4 Paysandu	Canal 4 Paysandú
+Canal4Salto.uy	Canal 4 Salto
+Canal4Tacuarembo.uy	Canal 4 Tacuarembo	Canal 4 Tacuarembó
+Canal5.uy	Canal 5	Televisión Nacional Uruguay
+Canal6Durazno.uy	Canal 6 Durazno	Zebra Televisión
+Canal7PuntadelEste.uy	Canal 7 Punta del Este
+Canal8Artigas.uy	Canal 8 Artigas
+Canal8Durazno.uy	Canal 8 Durazno	Canal Ocho Durazno
+Canal8Rivera.uy	Canal 8 Rivera
+Canal8Salto.uy	Canal 8 Salto
+Canal9Telerocha.uy	Canal 9 Telerocha	El 9 de Rocha
+CardinalTV.uy	Cardinal TV
+CharruaTelevision.uy	Charrua Television	Charrúa Televisión
+DuraznoTV.uy	Durazno TV	Canal 7 Durazno
+ElCanaldelaRegion.uy	El Canal de la Region	El Canal de la Región
+FTC.uy	FTC	Florida Televisora Color
+LatinaTVPaysandu.uy	Latina TV Paysandu	Latina TV Paysandú
+MaronasEntertainment.uy	Maronas Entertainment	Maroñas Entertainment
+MIEM.uy	MIEM
+MiMovilTV.uy	Mi Movil TV	Mi Móvil TV
+NSEventos1.uy	NS Eventos 1
+NSEventos2.uy	NS Eventos 2
+NSEventos3.uy	NS Eventos 3
+NuevoSigloTV.uy	Nuevo Siglo TV
+PantallaIMPO.uy	Pantalla IMPO
+Plazacanal.uy	Plazacanal	Canal 4 Treinta y Tres
+RDTV.uy	RDTV	Raquel Daruech TV
+RioUruguayTV.uy	Rio Uruguay TV	Río Uruguay Televisión	Canal 12 Fray Bentos
+Siemprecine.uy	Siemprecine
+TCC1.uy	TCC 1
+TCC2.uy	TCC 2
+TCC3.uy	TCC 3
+Teledoce.uy	Teledoce	La Tele
+TVCiudad.uy	TV Ciudad
+TVLPando.uy	TVL Pando
+UCL.uy	UCL	Unión Continental Latinoamérica
+UruguayNaturalTV.uy	Uruguay Natural TV
+UruguayPresidencia.uy	Uruguay Presidencia
+VTV.uy	VTV
+VTVPlus.uy	VTV Plus

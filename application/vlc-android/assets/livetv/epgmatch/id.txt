@@ -1,0 +1,112 @@
+AjwaTV.id	Ajwa TV
+AntaraTV.id	Antara TV
+ANTV.id	ANTV
+BaliTV.id	Bali TV
+BandungTV.id	Bandung TV
+BeritaSatu.id	BeritaSatu
+BioskopIndonesia.id	Bioskop Indonesia
+BTV.id	BTV
+CelebritiesTV.id	Celebrities TV
+ChampionsFight.id	Champions Fight
+ChampionsGolf1.id	Champions Golf 1
+ChampionsGolf2.id	Champions Golf 2
+ChampionsTV1.id	Champions TV 1
+ChampionsTV2.id	Champions TV 2
+ChampionsTV3.id	Champions TV 3
+ChampionsTV5.id	Champions TV 5
+ChampionsTV6.id	Champions TV 6
+ChampionsTVEPL.id	Champions TV EPL
+ChannelJowo.id	Channel Jowo
+CitraDangdut.id	Citra Dangdut
+CitraDrama.id	Citra Drama
+CitraEntertainment.id	Citra Entertainment
+CNBCIndonesia.id	CNBC Indonesia
+CNNIndonesia.id	CNN Indonesia
+DAAITV.id	DAAI TV
+DensFoodChannel.id	Dens Food Channel
+DensKnowledge.id	Dens Knowledge	Dens Learning & Knowledge
+DensLifeStyle.id	Dens Life & Style
+DensPlay.id	Dens Play
+DensShowBiz.id	Dens ShowBiz
+DiscoveryChannel.id	Discovery Channel
+DMITV.id	DMI TV	Tawaf TV
+DuniaAnak.id	Dunia Anak
+DuniaLain.id	Dunia Lain
+EatNGo.id	Eat N Go
+ElshintaTV.id	Elshinta TV
+Entertainment.id	Entertainment
+Flik.id	Flik
+Galaxy.id	Galaxy
+GalaxyPremium.id	Galaxy Premium
+GarudaTV.id	Garuda TV
+GTV.id	GTV
+HipHipHoree.id	Hip Hip Horee!
+Horee.id	Horee!
+IDXChannel.id	IDX Channel
+IMC.id	IMC	Indonesia Movie Channel
+Indosiar.id	Indosiar
+iNews.id	iNews
+JakTV.id	Jak TV
+JawaPosTV.id	Jawa Pos TV
+JTV.id	JTV
+Karisma.id	Karisma
+KDrama.id	K-Drama
+Khazanah.id	Khazanah
+KidsTV.id	Kids TV
+KompasTV.id	Kompas TV
+Life.id	Life
+MagnaChannel.id	Magna Channel	Magna TV
+MAXEats.id	MAX Eats
+MAXKids.id	MAX Kids
+MAXReels.id	MAX Reels
+MAXSports.id	MAX Sports
+MAXStreak.id	MAX Streak
+MDTV.id	MDTV
+MentariTV.id	Mentari TV
+MetroTV.id	Metro TV
+MNCTV.id	MNCTV
+Moji.id	Moji
+MQTV.id	MQTV
+MTATV.id	MTA TV
+MusicInformationChannel.id	Music Information Channel
+MusicTV.id	Music TV
+MusikIndonesia.id	Musik Indonesia
+MuslimTV.id	Muslim TV
+MyKidz.id	My Kidz
+NabawiTV.id	Nabawi TV
+NewTVComprehensive.id	New TV Comprehensive
+NewTVFinance.id	New TV Finance
+NewTVVariety.id	New TV Variety
+nsert.id	!nsert	Insert
+NusantaraTV.id	Nusantara TV
+PijarTV.id	Pijar TV
+Prambors.id	Prambors
+PSJTV.id	PSJ TV
+RCTI.id	RCTI
+Reformed21.id	Reformed 21
+RodjaTV.id	Rodja TV
+SalamTV.id	Salam TV
+SCTV.id	SCTV
+SindoNewsTV.id	Sindo News TV
+SinPoTV.id	Sin Po TV
+SoccerChannel.id	Soccer Channel
+Sportstars.id	Sportstars
+Sportstars2.id	Sportstars 2
+Sportstars3.id	Sportstars 3
+Sportstars4.id	Sportstars 4
+SPOTV.id	SPOTV
+SPOTV2.id	SPOTV 2
+TheIndonesiaChannel.id	The Indonesia Channel
+Trans7.id	Trans7
+TransTV.id	Trans TV
+TV9Nusantara.id	TV 9 Nusantara
+TVMu.id	TV Mu
+TVMUI.id	TV MUI
+tvOne.id	tvOne
+TVRI.id	TVRI	TVRI Nasional
+TVRISport.id	TVRI Sport
+TVRIWorld.id	TVRI World
+UChannel.id	U Channel
+VisionPrime.id	Vision Prime
+VTV.id	VTV
+ZeeBioskop.id	Zee Bioskop

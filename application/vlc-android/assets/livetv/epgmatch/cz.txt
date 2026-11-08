@@ -1,0 +1,78 @@
+A11.cz	A11	Náš region TV	Regionální televize CZ
+BarrandovKrimi.cz	Barrandov Krimi	Barrandov Plus
+CanalPlusSport1.cz	Canal+ Sport 1
+CNNPrimaNews.cz	CNN Prima News
+CSFilm.cz	CS Film
+CSHistory.cz	CS History
+CSHorror.cz	CS Horror
+CSMystery.cz	CS Mystery
+CT1.cz	CT1	ČT1
+CT2.cz	CT2	ČT2
+CT24.cz	CT24	ČT24
+CTart.cz	CT art	ČT art
+CTDecko.cz	CT Decko	ČT Déčko
+CTSport.cz	CT Sport	ČT Sport
+CurrentTimeTV.cz	Current Time TV	Настоящее Время	Nastoyashchee Vremya
+DisneyChannel.cz	Disney Channel
+DisneyJunior.cz	Disney Junior
+EXTASYTV.cz	EXTASY TV
+FilmEurope.cz	Film Europe
+FilmEuropePlus.cz	Film Europe +
+FilmPlus.cz	Film+
+History.cz	History
+HobbyTV.cz	Hobby TV
+KinoBarrandov.cz	Kino Barrandov
+LEOTV.cz	LEO TV
+LEOTVGOLD.cz	LEO TV GOLD
+LoungeTV.cz	Lounge TV
+MinimaxCEE.cz	Minimax CEE
+MnamTV.cz	Mnam TV	Mňam TV
+MnauTV.cz	Mnau TV	Mňau TV
+NationalGeographic.cz	National Geographic
+NationalGeographicWild.cz	National Geographic Wild
+Nickelodeon.cz	Nickelodeon
+NickJr.cz	Nick Jr.
+Nicktoons.cz	Nicktoons
+NovaAction.cz	Nova Action	TV Fanda
+NovaCinema.cz	Nova Cinema
+NovaFun.cz	Nova Fun	Nova 2	TV Smíchov
+NovaGold.cz	Nova Gold	TV Telka
+NovaInternational.cz	Nova International
+NovaLady.cz	Nova Lady
+NovaSport1.cz	Nova Sport 1	Nova Sport	Galaxie Sport	TV Galaxie
+NovaSport2.cz	Nova Sport 2
+NovaSport3.cz	Nova Sport 3
+NovaSport4.cz	Nova Sport 4
+O2TVFotbal.cz	O2 TV Fotbal
+O2TVSport.cz	O2 TV Sport
+Ocko.cz	Ocko	Óčko
+OckoBlack.cz	Ocko Black	Óčko Black
+OckoExpres.cz	Ocko Expres	Óčko Expres
+OckoStar.cz	Ocko Star	Óčko Star
+Prima.cz	Prima
+PrimaCool.cz	Prima Cool
+PrimaKrimi.cz	Prima Krimi
+PrimaLove.cz	Prima Love
+PrimaMax.cz	Prima Max
+PrimaPlus.cz	Prima Plus
+PrimaShow.cz	Prima Show
+PrimaStar.cz	Prima Star
+PrimaZoom.cz	Prima Zoom
+Rebel.cz	Rebel
+Relax.cz	Relax
+RetroMusicTV.cz	Retro Music TV
+SlagerMuzika.cz	Slager Muzika	Sláger Muzika
+SlagerOriginal.cz	Slager Original	Šláger Originál
+SlagerPremium.cz	Slager Premium	Sláger Premium
+Spektrum.cz	Spektrum
+SpektrumHome.cz	Spektrum Home
+Sport1.cz	Sport1
+Sport2.cz	Sport2
+TelevizeSeznam.cz	Televize Seznam
+TVBarrandov.cz	TV Barrandov
+TVNoe.cz	TV Noe
+TVNova.cz	TV Nova
+TVPaprika.cz	TV Paprika
+ViasatExplore.cz	Viasat Explore
+ViasatHistory.cz	Viasat History
+ViasatNature.cz	Viasat Nature

@@ -1,0 +1,2 @@
+BoliviaTV.bo	Bolivia TV	BTV	Bolivia Televisión
+UnicaTV.bo	Unica TV	Única TV

@@ -1,0 +1,9 @@
+AgroTVMoldova.md	Agro TV Moldova
+GRT.md	GRT	Gagauzia Radio Televizionu	TV Gagauzia
+JurnalTV.md	Jurnal TV
+Moldova1.md	Moldova 1
+Moldova2.md	Moldova 2
+N4.md	N4	Național 4
+OrizontTV.md	Orizont TV
+TSV.md	TSV	ТСВ
+TVRMoldova.md	TVR Moldova

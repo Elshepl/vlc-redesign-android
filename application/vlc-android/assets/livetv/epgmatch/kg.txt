@@ -1,0 +1,6 @@
+312Kino.kg	312 Kino	312 Кино
+312Muzyka.kg	312 Muzyka	312 Музыка
+312TV.kg	312 TV	312 ТВ	312 Сериал
+Balastan.kg	Balastan	Баластан	УТРК Баластан	КТРК Баластан
+Music.kg	Music	Музыка	УТРК Музыка	КТРК Музыка	Muzika
+Sport.kg	Sport	Спорт	УТРК Спорт	КТРК Спорт	KTRK Sport

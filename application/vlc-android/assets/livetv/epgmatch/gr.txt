@@ -1,0 +1,24 @@
+AlphaSat.gr	Alpha Sat
+AlphaTV.gr	Alpha TV	Alpha Sky
+ANT1Europe.gr	ANT1 Europe
+ANT1Pacific.gr	ANT1 Pacific	Antenna Pacific
+ANT1Satellite.gr	ANT1 Satellite
+DisneyJunior.gr	Disney Junior
+HellenicParliamentTV.gr	Hellenic Parliament TV	Βουλή Τηλεόραση
+NationalGeographic.gr	National Geographic
+NationalGeographicWild.gr	National Geographic Wild
+Novasports1.gr	Novasports 1
+Novasports2.gr	Novasports 2
+Novasports3.gr	Novasports 3
+Novasports4.gr	Novasports 4
+Novasports5.gr	Novasports 5
+Novasports6.gr	Novasports 6
+NovasportsExtra1.gr	Novasports Extra 1
+NovasportsExtra2.gr	Novasports Extra 2
+NovasportsExtra3.gr	Novasports Extra 3
+NovasportsExtra4.gr	Novasports Extra 4
+NovasportsNews.gr	Novasports News
+NovasportsPremierLeague.gr	Novasports Premier League
+NovasportsPrime.gr	Novasports Prime
+NovasportsStart.gr	Novasports Start
+PlayTV.gr	Play TV

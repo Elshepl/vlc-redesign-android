@@ -1,0 +1,6 @@
+FlavaTV.zm	Flava TV
+FreshTV.zm	Fresh TV
+ZNBCTV1.zm	ZNBC TV 1
+ZNBCTV2.zm	ZNBC TV 2
+ZNBCTV3.zm	ZNBC TV 3
+ZNBCTV4.zm	ZNBC TV 4

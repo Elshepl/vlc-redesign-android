@@ -1,0 +1,22 @@
+2TV.lt	2TV
+ArenaHDBaltic.lt	Arena HD Baltic
+BalticumAuksinis.lt	Balticum Auksinis
+BalticumTV.lt	Balticum TV
+BTV.lt	BTV
+DelfiTV.lt	Delfi TV
+InfoTV.lt	Info TV
+INITEkstraTV.lt	INIT Ekstra TV
+INITTV.lt	INIT TV
+JustTV.lt	Just TV
+LietuvosRytasTV.lt	Lietuvos Rytas TV
+LNK.lt	LNK
+LRTLituanica.lt	LRT Lituanica
+LRTPlius.lt	LRT Plius
+LRTTV.lt	LRT TV
+MarijampolesTV.lt	Marijampoles TV	Marijampolės TV
+SiauliuTV.lt	Siauliu TV	Šiaulių TV
+Sport1.lt	Sport1
+TV1.lt	TV1
+TV3.lt	TV3
+TV6.lt	TV6
+TV8.lt	TV8

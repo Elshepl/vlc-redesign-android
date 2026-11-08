@@ -1,0 +1,226 @@
+addikTV.ca	addikTV
+AdultSwim.ca	Adult Swim
+AMItele.ca	AMI-tele	AMI-télé
+AMItv.ca	AMI-tv
+AnimalPlanet.ca	Animal Planet
+AssembleenationaleduQuebec.ca	Assemblee nationale du Quebec
+ATNARYMusik.ca	ATN ARY Musik
+ATNARYZauq.ca	ATN ARY Zauq
+ATNColorsRishtey.ca	ATN Colors Rishtey
+ATNMovies.ca	ATN Movies
+ATNPunjabi5.ca	ATN Punjabi 5
+ATNPunjabiPlus.ca	ATN Punjabi Plus
+ATNSABTV.ca	ATN SAB TV
+ATNZoom.ca	ATN Zoom
+BET.ca	BET
+BNNBloomberg.ca	BNN Bloomberg
+CanalD.ca	Canal D
+CanalM.ca	Canal M
+CanalVie.ca	Canal Vie
+CartoonNetwork.ca	Cartoon Network	Teletoon
+Casa.ca	Casa
+CBCNewsNetwork.ca	CBC News Network
+CBN.ca	CBN
+CBSSportsNetworkCanada.ca	CBS Sports Network Canada
+CHCHDT.ca	CHCH-DT
+CHEK.ca	CHEK
+Cinepop.ca	Cinepop	Cinépop
+CitytvSaskatchewan.ca	Citytv Saskatchewan
+CMT.ca	CMT
+CottageLife.ca	Cottage Life
+CP24.ca	CP24
+CPACEnglish.ca	CPAC English
+CPACFrench.ca	CPAC French
+Crave1.ca	Crave 1
+Crave4.ca	Crave 4
+CrimePlusInvestigation.ca	Crime + Investigation
+CTVComedyChannel.ca	CTV Comedy Channel
+CTVDramaChannel.ca	CTV Drama Channel
+CTVLifeChannel.ca	CTV Life Channel
+CTVNewsChannel.ca	CTV News Channel
+CTVSciFiChannel.ca	CTV Sci-Fi Channel
+Declassified.ca	Declassified
+DejaView.ca	DejaView
+DiscoveryChannel.ca	Discovery Channel
+DiscoveryScience.ca	Discovery Science
+DiscoveryVelocity.ca	Discovery Velocity
+DisneyChannel.ca	Disney Channel
+DocumentaryChannel.ca	Documentary Channel
+DTour.ca	DTour
+E.ca	E!	Entertainment	Star!
+EarthDay365.ca	EarthDay 365
+ElleFictions.ca	Elle Fictions
+ERTWorld.ca	ERT World
+Evasion.ca	Evasion	Évasion
+FairchildTV1.ca	Fairchild TV 1	新時代電視
+FairchildTV2.ca	Fairchild TV 2	新時代電視2台
+FamilyChannel.ca	Family Channel
+FamilyJr.ca	Family Jr
+FightNetwork.ca	Fight Network
+FoodNetwork.ca	Food Network
+FPTV.ca	FPTV
+FrissonsTV.ca	Frissons TV
+FX.ca	FX
+FXX.ca	FXX
+GameTV.ca	Game TV
+GINXEsportsTVCanada.ca	GINX Esports TV Canada	Super Channel 4
+GlobalNewsBC1.ca	Global News: BC1
+GustoTV.ca	Gusto TV
+HallaBolKidsTV.ca	Halla Bol! Kids TV
+HardKnocks.ca	Hard Knocks
+HauntTV.ca	HauntTV
+HBO1.ca	HBO 1	HBO East	HBO Canada 1
+HGTV.ca	HGTV
+Historia.ca	Historia
+History.ca	History
+History2.ca	History2
+HollywoodSuite00sMovies.ca	Hollywood Suite 00s Movies
+HollywoodSuite70sMovies.ca	Hollywood Suite 70s Movies
+HollywoodSuite80sMovies.ca	Hollywood Suite 80s Movies
+HollywoodSuite90sMovies.ca	Hollywood Suite 90s Movies
+Homeful.ca	Homeful
+IciARTV.ca	Ici ARTV
+IciExplora.ca	Ici Explora
+IciRDI.ca	Ici RDI
+Investigation.ca	Investigation
+InvestigationDiscovery.ca	Investigation Discovery
+KidoodleTV.ca	Kidoodle.TV
+LCN.ca	LCN	Le Canal Nouvelles
+LeafsNationNetwork.ca	Leafs Nation Network
+LegislativeAssemblyofOntario.ca	Legislative Assembly of Ontario
+Lifetime.ca	Lifetime
+LoveNature.ca	Love Nature
+LovePets.ca	Love Pets
+LSTimesTV.ca	LS Times TV
+Makeful.ca	Makeful
+MAtv.ca	MAtv
+Max.ca	Max
+MediasetItalia.ca	Mediaset Italia
+MeteoMedia.ca	MeteoMedia	MétéoMédia
+MoietCie.ca	Moi et Cie
+MovieTime.ca	MovieTime
+Much.ca	Much
+NationalGeographic.ca	National Geographic
+NationalGeographicWild.ca	National Geographic Wild
+NatureTime.ca	NatureTime
+NBATVCanada.ca	NBA TV Canada
+Noovo.ca	Noovo
+Odyssey.ca	Odyssey
+OLN.ca	OLN
+OUTtv.ca	OUTtv
+PenthouseTV.ca	Penthouse TV
+PlaymenTV.ca	Playmen TV
+PrimeAsiaTV.ca	Prime Asia TV
+Prise2.ca	Prise 2
+QelloConcertsbyStingray.ca	Qello Concerts by Stingray
+RDS.ca	RDS
+RDS2.ca	RDS 2
+RDSInfo.ca	RDS Info
+RedHotTV.ca	Red Hot TV
+REVTVCanada.ca	REV TV Canada
+Rewind.ca	Rewind
+SaisonsCanada.ca	Saisons Canada
+SaltPlusLightTelevision.ca	Salt + Light Television
+SeriesPlus.ca	Series Plus	Séries Plus
+ShawPayPerView1.ca	Shaw Pay Per View 1
+ShawPayPerView2.ca	Shaw Pay Per View 2
+ShawPayPerView3.ca	Shaw Pay Per View 3
+ShawPayPerView4.ca	Shaw Pay Per View 4
+ShawPayPerView5.ca	Shaw Pay Per View 5
+ShawPayPerView6.ca	Shaw Pay Per View 6
+ShawPayPerView7.ca	Shaw Pay Per View 7
+ShawPayPerView8.ca	Shaw Pay Per View 8
+Showcase.ca	Showcase
+SilverScreenClassics.ca	Silver Screen Classics
+Slice.ca	Slice
+SmithsonianChannel.ca	Smithsonian Channel	eqhd	Equator HD
+SportsmanChannelCanada.ca	Sportsman Channel Canada
+Sportsnet.ca	Sportsnet
+Sportsnet360.ca	Sportsnet 360
+SportsnetOne.ca	Sportsnet One
+SportsnetWorld.ca	Sportsnet World
+Starz1.ca	Starz 1
+Starz2.ca	Starz 2
+StingrayAlternative.ca	Stingray Alternative
+StingrayBroadway.ca	Stingray Broadway
+StingrayClassica.ca	Stingray Classica
+StingrayClassicRB.ca	Stingray Classic R&B
+StingrayClassicRock.ca	Stingray Classic Rock
+StingrayCMusic.ca	Stingray CMusic	C Music TV
+StingrayDJAZZ.ca	Stingray DJAZZ
+StingrayEasyListening.ca	Stingray Easy Listening
+StingrayEuroHits.ca	Stingray Euro Hits
+StingrayEverything80s.ca	Stingray Everything '80s
+StingrayExitosdelMomento.ca	Stingray Exitos del Momento	Stingray Éxitos del Momento
+StingrayFestival4K.ca	Stingray Festival 4K
+StingrayFlashback70s.ca	Stingray Flashback 70's
+StingrayFrancoFetes.ca	Stingray Franco Fetes	Stingray Franco Fêtes
+StingrayGospel.ca	Stingray Gospel
+StingrayGreatestHits.ca	Stingray Greatest Hits
+StingrayHipHopRB.ca	Stingray Hip-Hop/R&B
+StingrayHitList.ca	Stingray Hit List
+StingrayHotCountry.ca	Stingray Hot Country
+StingrayiConcerts.ca	Stingray iConcerts
+StingrayJuicebox.ca	Stingray Juicebox
+StingrayKaraoke.ca	Stingray Karaoke
+StingrayLiteTV.ca	Stingray Lite TV
+StingrayLoud.ca	Stingray Loud
+StingrayNaturescape.ca	Stingray Naturescape
+StingrayNoFences.ca	Stingray No Fences
+StingrayNothinBut90s.ca	Stingray Nothin' But 90s
+StingrayPopAdult.ca	Stingray Pop Adult
+StingrayRememberthe80s.ca	Stingray Remember the 80s
+StingrayRetro.ca	Stingray Retro
+StingrayRockAlternative.ca	Stingray Rock Alternative
+StingrayRomanceLatino.ca	Stingray Romance Latino
+StingraySmoothJazz.ca	Stingray Smooth Jazz
+StingraySoulStorm.ca	Stingray Soul Storm
+StingrayTheSpa.ca	Stingray The Spa
+StingrayTodaysKPop.ca	Stingray Today's K-Pop
+StingrayTodaysLatinPop.ca	Stingray Today's Latin Pop
+StingrayUrbanBeat.ca	Stingray Urban Beat
+StingrayVibe.ca	Stingray Vibe
+StingrayY2K.ca	Stingray Y2K
+SuperChannelFuse.ca	Super Channel Fuse	Super Channel 1
+SuperChannelHeartHome.ca	Super Channel Heart & Home	Super Channel 2
+SuperChannelVault.ca	Super Channel Vault	Super Channel 3
+SuperEcran1.ca	Super Ecran 1	Super Écran 1
+SuperEcran2.ca	Super Ecran 2	Super Écran 2
+SuperEcran3.ca	Super Ecran 3	Super Écran 3
+SuperEcran4.ca	Super Ecran 4	Super Écran 4
+Talentvision.ca	Talentvision
+TCM.ca	TCM	Turner Classic Movies Canada
+Telebimbi.ca	Telebimbi
+Telemagino.ca	Telemagino	Télémagino
+TeleNinos.ca	TeleNinos	TeleNiños
+TeletoonFrench.ca	Teletoon French	Télétoon French
+TheWeatherNetwork.ca	The Weather Network
+TLN.ca	TLN
+TotalCrime.ca	Total Crime	TotalCrime
+TPlusE.ca	T+E	Travel + Escape	CTV Travel
+TreehouseTV.ca	Treehouse TV
+TSC.ca	TSC	Today's Shopping Choice	The Shopping Channel	Canadian Home Shopping Network
+TSN1.ca	TSN1
+TSN2.ca	TSN2
+TSN3.ca	TSN3
+TSN4.ca	TSN4
+TSN5.ca	TSN5
+TSNTheOcho.ca	TSN The Ocho
+TV5QuebecCanada.ca	TV5 Quebec Canada	TV5 Québec Canada
+TVASports.ca	TVA Sports
+TVASports2.ca	TVA Sports 2
+TVASports3.ca	TVA Sports 3
+VisionTV.ca	VisionTV
+VixenTV.ca	Vixen TV	Hustler TV Canada
+WaterTelevisionNetwork.ca	Water Television Network
+WCGtv.ca	WCGtv
+WildBrainTV.ca	WildBrainTV	Family CHRGD	Disney XD Canada
+WildTV.ca	Wild TV
+WNetwork.ca	W Network
+WWENetwork.ca	WWE Network
+Yoopa.ca	Yoopa
+YourTVMilton.ca	YourTV Milton
+YTV.ca	YTV
+Z.ca	Z
+ZeeTVCanada.ca	Zee TV Canada
+Zeste.ca	Zeste

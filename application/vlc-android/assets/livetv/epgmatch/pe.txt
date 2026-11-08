@@ -1,0 +1,22 @@
+AmericaTelevision.pe	America Television	América Televisión
+ATV.pe	ATV
+ATVPlus.pe	ATV+
+ATVSur.pe	ATV Sur
+BethelTV.pe	Bethel TV
+CanalJ.pe	Canal J
+CanalN.pe	Canal N
+CongresoTV.pe	Congreso TV
+ExitosaTV.pe	Exitosa TV
+GlobalTV.pe	Global TV
+JusticiaTV.pe	Justicia TV
+LaTele.pe	La Tele
+Latina.pe	Latina
+MovistarPlus.pe	Movistar Plus
+PanamericanaTV.pe	Panamericana TV
+PaxTV.pe	Pax TV
+PeruMagico.pe	Peru Magico	Perú Mágico
+RPPTV.pe	RPP TV	RPP
+TVPeru.pe	TV Peru	TV Perú
+TVPeruNoticias.pe	TV Peru Noticias	TV Perú Noticias	TV Noticias 7.3	TV Perú 7.3
+USMPTV.pe	USMPTV
+WillaxTV.pe	Willax TV	Willax Televisión

@@ -1,0 +1,5 @@
+AlistiqamaTV.om	Alistiqama TV	قناة الاستقامة الفضائية
+OmanSportsTV.om	Oman Sports TV	قناة عمان الرياضية
+OmanTV.om	Oman TV	عُمان تي في	تلفزيون سلطنة عمان
+OmanTVCultural.om	Oman TV Cultural	القناة الثقافية
+OmanTVMubashir.om	Oman TV Mubashir	قناة عُمان مباشر

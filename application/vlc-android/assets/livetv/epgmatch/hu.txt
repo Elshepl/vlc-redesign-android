@@ -1,0 +1,92 @@
+7TV.hu	7.TV
+ApostolTV.hu	Apostol TV
+Arena4.hu	Arena4
+ATV.hu	ATV
+AXNSpin.hu	AXN Spin
+BalatonTV.hu	Balaton TV
+ComedyCentral.hu	Comedy Central
+CoolTV.hu	Cool TV
+D1TV.hu	D1 TV
+DaVinci.hu	Da Vinci
+DikhTV.hu	Dikh TV
+DiscoveryChannel.hu	Discovery Channel
+DisneyChannel.hu	Disney Channel
+Duna.hu	Duna	Duna TV	Duna Televízió
+DunaWorld.hu	Duna World	Duna 2	Duna II AutonómiA	AutonómiA
+EWTNBonumTV.hu	EWTN/Bonum TV
+FehervarTV.hu	Fehervar TV	Fehérvár TV
+FEM3.hu	FEM3
+Film4.hu	Film4
+FilmCafe.hu	Film Cafe	Film Café Hungary	Filmcafé	Romantica	Zone Romantica
+FilmMania.hu	Film Mania	Film Mánia
+FilmPlus.hu	Film+	F+
+FitHD.hu	FitHD
+FoodNetwork.hu	Food Network
+Galaxy4.hu	Galaxy4
+HegyvidekTV.hu	Hegyvidek TV	HTV	Hegyvidék TV
+HetiTV.hu	Heti TV
+HirTV.hu	Hir TV	Hír TV
+InvestigationDiscovery.hu	Investigation Discovery
+IzauraTV.hu	Izaura TV
+JimJam.hu	JimJam
+JockyTV.hu	Jocky TV
+KaposTV.hu	Kapos TV
+KolcseyTV.hu	Kolcsey TV	Kölcsey TV
+LifeTV.hu	Life TV
+M1.hu	M1
+M2.hu	M2
+M3.hu	M3
+M4Sport.hu	M4 Sport
+M4SportPlus.hu	M4 Sport+
+M5.hu	M5
+MagyarMoziTV.hu	Magyar Mozi TV
+Match4.hu	Match4
+MAX4.hu	MAX4
+Minimax.hu	Minimax
+MoziPlus.hu	Mozi+
+Moziverzum.hu	Moziverzum
+MuzsikaTV.hu	Muzsika TV
+NationalGeographic.hu	National Geographic
+NationalGeographicWild.hu	National Geographic Wild
+Nickelodeon.hu	Nickelodeon
+NickJr.hu	Nick Jr.
+OzoneTV.hu	Ozone TV
+ParamountNetwork.hu	Paramount Network	Paramount Channel Hungary
+PaxTV.hu	Pax TV
+Prime.hu	Prime
+RTL.hu	RTL
+RTLGold.hu	RTL Gold	Film+ 2
+RTLHarom.hu	RTL Harom	RTL Három	Poén!	Prizma TV	RTL+
+RTLKetto.hu	RTL Ketto	RTL Kettő	RTL II
+SlagerTV.hu	Slager TV	Sláger TV
+SorozatPlus.hu	Sorozat+
+Spektrum.hu	Spektrum
+SpektrumHome.hu	Spektrum Home
+Spiler1.hu	Spiler 1	Spíler 1	Spíler1 TV
+Spiler2.hu	Spiler 2	Spíler 2	Spíler2 TV
+Sport1.hu	Sport 1
+Sport2.hu	Sport 2
+Story4.hu	Story4
+SuperONE.hu	SuperONE	MusicMix SuperOne	MusicMax Adult	Super 1
+SuperTV2.hu	Super TV2
+SzegedTV.hu	Szeged TV
+TeenNick.hu	TeenNick
+TheFishingHuntingChannel.hu	The Fishing & Hunting Channel
+TLC.hu	TLC
+TotalDanceTV.hu	Total Dance TV
+TV2.hu	TV2
+TV2Comedy.hu	TV2 Comedy
+TV2Kids.hu	TV2 Kids
+TV2Sef.hu	TV2 Sef	TV2 Séf
+TV4.hu	TV4
+TVEger.hu	TV Eger
+TVPaprika.hu	TV Paprika
+UjbudaTV.hu	Ujbuda TV	ÚBTV	Újbuda TV
+Viasat2.hu	Viasat2	Sony Max Hungary	AXN White Hungary	AXN Crime Hungary
+Viasat3.hu	Viasat 3
+Viasat6.hu	Viasat 6
+ViasatExplore.hu	Viasat Explore	Viasat Explore Magyarország
+ViasatHistory.hu	Viasat History
+ViasatNature.hu	Viasat Nature
+ZalaegerszegiTV.hu	Zalaegerszegi TV
+Zenebutik.hu	Zenebutik

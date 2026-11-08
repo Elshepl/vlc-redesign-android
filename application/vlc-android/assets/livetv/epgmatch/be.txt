@@ -1,0 +1,104 @@
+AB3.be	AB3
+ABXplore.be	ABXplore
+ACTV.be	ACTV	Antenne Centre Télévision
+ATV.be	ATV	Antwerpse Televisie
+AVS.be	AVS
+Be1.be	Be 1
+Be1Plus1hr.be	Be 1+1hr
+BeCine.be	Be Cine	Be Ciné
+BelRTL.be	Bel RTL
+BeSeries.be	Be Series	Be Séries
+Bouke.be	Bouke	Boukè
+Bruzz.be	Bruzz
+BX1.be	BX1
+CanalZ.be	Canal Z
+CanalZoom.be	Canal Zoom
+CinePlusClassic.be	Cine+ Classic	Ciné+ Classic Belgique
+DiscoveryChannel.be	Discovery Channel
+DisneyChannel.be	Disney Channel
+DobbitTV.be	Dobbit TV
+EclipsTV.be	Eclips TV
+FocusTV.be	Focus TV
+HGTV.be	HGTV
+KanaalZ.be	Kanaal Z
+Ketnet.be	Ketnet
+Klara.be	Klara
+LaTrois.be	La Trois
+LaUne.be	La Une	RTBF La1
+LN24.be	LN24
+MaghrebTV.be	Maghreb TV
+ManX.be	Man-X
+Matele.be	Matele	Matélé
+MentTV.be	Ment TV
+MNM.be	MNM
+Njam.be	Njam!
+Notele.be	Notele	No Télé
+PickxLive.be	Pickx Live
+PickxPlus.be	Pickx+
+PickxPlusSports1.be	Pickx+ Sports 1
+PickxPlusSports10.be	Pickx+ Sports 10
+PickxPlusSports2.be	Pickx+ Sports 2
+PickxPlusSports3.be	Pickx+ Sports 3
+PickxPlusSports4.be	Pickx+ Sports 4
+PickxPlusSports5.be	Pickx+ Sports 5
+PickxPlusSports6.be	Pickx+ Sports 6
+PickxPlusSports7.be	Pickx+ Sports 7
+PickxPlusSports8.be	Pickx+ Sports 8
+PickxPlusSports9.be	Pickx+ Sports 9
+PlattelandsTV.be	Plattelands TV
+Play4.be	Play4	VIER
+Play5.be	Play5	VIJF
+Play6.be	Play6
+Play7.be	Play7
+PlayCrime.be	Play Crime
+PlayFictie.be	Play Fictie
+PlayMoreBlack.be	Play More Black
+PlayMoreCinema.be	Play More Cinema
+PlayMoreCrime.be	Play More Crime
+PlayMoreKicks.be	Play More Kicks
+PlaySports1.be	Play Sports 1
+PlaySports2.be	Play Sports 2
+PlaySports3.be	Play Sports 3
+PlaySports4.be	Play Sports 4
+PlaySports5PremierLeague.be	Play Sports 5 Premier League
+PlaySportsGolf.be	Play Sports Golf
+PlaySportsOpen.be	Play Sports Open
+PromiusPickxInfoChannel.be	Promius Pickx InfoChannel
+Proximus11.be	Proximus 11
+QMusic.be	Q-Music
+QmusicVlaanderen.be	Q-music Vlaanderen
+QU4TRELiegeMedia.be	QU4TRE Liege Media	Quatre	QU4TRE Liège Média	RTC Télé Liège	RTC Liège
+Radio1.be	Radio 1	VRT Radio 1
+Radio2.be	Radio 2	VRT Radio 2
+RadioContact.be	Radio Contact
+RingTV.be	Ring TV
+ROBTV.be	ROB TV
+RTLClub.be	RTL Club	Club RTL
+RTLPlug.be	RTL Plug	Plug RTL
+RTLTVI.be	RTL-TVI
+RTVKempen.be	RTV Kempen
+RTVMech.be	RTV Mech
+Sport10.be	Sport 10	EXQI Sport
+StuBru.be	StuBru	Studio Brussel
+TeleMB.be	Tele MB	Télé MB
+Telesambre.be	Telesambre	Télésambre
+Tipik.be	Tipik	La Deux	RTBF La 2
+TipikVision.be	TipikVision
+TVLimburg.be	TV Limburg
+TVLux.be	TV Lux
+TVOost.be	TV Oost
+Vedia.be	Vedia
+VlaamsParlementTV.be	Vlaams Parlement TV
+VOOsportWorld1.be	VOOsport World 1
+VOOsportWorld2.be	VOOsport World 2
+VOOsportWorld3.be	VOOsport World 3
+VOOsportWorld4.be	VOOsport World 4
+VRT1.be	VRT 1	Één	TV1	BRT TV1	BRT	NIR
+VRTCanvas.be	VRT Canvas	Canvas	BRTN TV2	TVTWEE	BRT TV2
+VTM.be	VTM
+VTM2.be	VTM 2
+VTM3.be	VTM 3
+VTM4.be	VTM 4
+VTMGold.be	VTM Gold
+VTMLife.be	VTM Life	VTM XMAS	VTM Non-Stop 90's	VTM Non-Stop Dokters
+WTV.be	WTV

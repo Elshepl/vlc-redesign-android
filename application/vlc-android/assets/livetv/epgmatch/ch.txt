@@ -1,0 +1,116 @@
+3Plus.ch	3+
+4Plus.ch	4+
+5Plus.ch	5+
+6Plus.ch	6+
+6terSwitzerland.ch	6ter Switzerland
+7PlusNickSchweiz.ch	7+/Nick Schweiz
+AjoieTV.ch	Ajoie TV
+ALFTV.ch	ALF-TV	Arolfinger Lokalfernsehen
+AlpenlandTV.ch	Alpenland TV
+AuftankenTV.ch	Auftanken TV
+BlueAction.ch	Blue Action
+BlueCity.ch	Blue City
+BlueEvent1.ch	Blue Event 1
+BlueEvent2.ch	Blue Event 2
+BluePrime.ch	Blue Prime
+BlueRetro.ch	Blue Retro
+BlueSport1.ch	Blue Sport 1
+BlueSport2.ch	Blue Sport 2
+BlueStars.ch	Blue Stars
+BlueZoomD.ch	Blue Zoom D
+BlueZoomF.ch	Blue Zoom F
+BodenseeTV.ch	Bodensee TV
+Canal9.ch	Canal 9
+CanalAlphaJU.ch	Canal Alpha JU
+CanalAlphaJura.ch	Canal Alpha Jura
+CanalAlphaNE.ch	Canal Alpha NE
+CanalAlphaNeuchatel.ch	Canal Alpha Neuchatel
+Carac1.ch	Carac 1
+Carac2.ch	Carac 2
+Carac3.ch	Carac 3
+Carac4.ch	Carac 4
+Carac5.ch	Carac 5
+DiasporaTVSwitzerland.ch	Diaspora-TV Switzerland
+GameTV.ch	Game TV
+GVAXTV.ch	GVAX TV
+HelvetiaOneTV.ch	Helvetia One TV
+HitExpressTV.ch	HitExpress TV
+ImmaculataTV.ch	Immaculata TV	I-TV
+Kanal9.ch	Kanal 9
+LaTele.ch	La Tele	La Télé
+Latinos1TV.ch	Latinos 1 TV
+LemanBleu.ch	Leman Bleu	Léman Bleu
+LolyTV.ch	Loly TV
+M6.ch	M6	M6 Suisse
+MaxTV.ch	Max TV
+Musig24TV.ch	Musig24 TV
+MyCinemaEurope.ch	My Cinema Europe
+MySports2.ch	MySports 2
+MySports2French.ch	MySports 2 French
+MySports3.ch	MySports 3
+MySports3French.ch	MySports 3 French
+MySports4.ch	MySports 4
+MySports4French.ch	MySports 4 French
+MySports5.ch	MySports 5
+MySports5French.ch	MySports 5 French
+MySports6.ch	MySports 6
+MySports6French.ch	MySports 6 French
+MySports7.ch	MySports 7
+MySports7French.ch	MySports 7 French
+MySports8.ch	MySports 8
+MySports8French.ch	MySports 8 French
+MySports9.ch	MySports 9
+MySports9French.ch	MySports 9 French
+MySportsOne.ch	MySports One
+MySportsOneFrench.ch	MySports One French
+NRTV.ch	NRTV
+PremiumShoppingTV.ch	Premium Shopping TV
+ProSiebenSchweiz.ch	ProSieben Schweiz
+PulsAcht.ch	Puls Acht
+QS24tv.ch	QS24.tv
+RadioPilatusTV.ch	Radio Pilatus TV
+RegioTVplus.ch	RegioTVplus
+RheinweltenTV.ch	Rheinwelten TV
+RhoneTV.ch	Rhone TV	Rhône TV
+rrotv.ch	rrotv
+RSILa1.ch	RSI La 1
+RSILa2.ch	RSI La 2
+RTS1.ch	RTS 1	RTS UN
+RTS2.ch	RTS 2	RTS Deux
+RTSInfo.ch	RTS Info
+S1.ch	S1
+SchaffhauserFernsehen.ch	Schaffhauser Fernsehen
+Schweiz5.ch	Schweiz 5
+SRF1.ch	SRF 1
+SRFinfo.ch	SRF info
+SRFzwei.ch	SRF zwei
+StarTV.ch	Star TV
+Sudostschweiz.ch	Sudostschweiz	Südostschweiz
+Swiss1.ch	Swiss 1
+SwissSportTV.ch	Swiss Sport TV
+Tele1.ch	Tele 1
+TeleBarn.ch	TeleBarn	TeleBärn
+Telebasel.ch	Telebasel
+TeleBielingue.ch	TeleBielingue
+TeleD.ch	Tele D
+TeleM1.ch	Tele M1
+TeleTicino.ch	TeleTicino
+TeleTop.ch	Tele Top
+Televista.ch	Televista
+TeleZ.ch	Tele Z
+TeleZentralschweiz.ch	Tele Zentralschweiz
+TeleZuri.ch	TeleZuri	TeleZüri
+TF1Switzerland.ch	TF 1 Switzerland
+TFXSwitzerland.ch	TFX Switzerland
+TV24.ch	TV 24
+TV25.ch	TV 25
+TV4TNG.ch	TV4TNG
+TVM3.ch	TVM 3
+TVO.ch	TVO
+TVOberwallis.ch	TV Oberwallis
+TVOnex.ch	TV Onex
+TVRheintal.ch	TV Rheintal
+VernierVisions.ch	Vernier Visions
+W9Switzerland.ch	W9 Switzerland
+WaterBear.ch	WaterBear
+WedoBigStories.ch	Wedo Big Stories

@@ -1,0 +1,12 @@
+AgrotendenciaTV.cr	Agrotendencia TV
+Canal11.cr	Canal 11
+Canal4.cr	Canal 4
+Canal6.cr	Canal 6
+Canal8.cr	Canal 8	Multimedios Costa Rica
+Enlace.cr	Enlace
+EnlaceJuvenil.cr	Enlace Juvenil
+ExtraTV42.cr	Extra TV 42
+FUTV.cr	FUTV
+Teletica7.cr	Teletica 7
+TigoSports.cr	Tigo Sports
+TV8.cr	TV8

@@ -1,0 +1,68 @@
+1KZNTV.za	1KZN TV
+AfrolandCrime.za	Afroland Crime
+BusinessDayTV.za	BusinessDay TV
+CapeTownTV.za	Cape Town TV
+ChannelO.za	Channel O
+CNBCAfrica.za	CNBC Africa
+DisneyJuniorSouthAfrica.za	Disney Junior South Africa
+Dumisa.za	Dumisa
+eExtra.za	eExtra
+eMovies.za	eMovies
+eNewsChannelAfrica.za	eNews Channel Africa
+ESPN2Africa.za	ESPN 2 Africa
+ESPNAfrica.za	ESPN Africa
+eToonz.za	eToonz
+etv.za	e.tv
+GauTV.za	Gau TV
+Ignition.za	Ignition
+KykNet.za	KykNet
+kykNETkie.za	kykNET&kie
+kykNETNOU.za	kykNET NOU!
+MaishaMagicBongo.za	Maisha Magic Bongo
+MaishaMagicPlus.za	Maisha Magic Plus
+MNet.za	M-Net
+MNetMovies1.za	M-Net Movies 1
+MNetMovies2.za	M-Net Movies 2
+MNetMovies4.za	M-Net Movies 4
+MovieRoom.za	MovieRoom
+MpumaKapaTV.za	Mpuma Kapa TV	Bay TV
+MTVAfrica.za	MTV Africa
+MTVBaseAfrica.za	MTV Base Africa
+MzansiBioskop.za	Mzansi Bioskop
+MzansiMagic.za	Mzansi Magic
+MzansiMagicMusic.za	Mzansi Magic Music
+MzansiWethu.za	Mzansi Wethu
+NationalGeographicSouthAfrica.za	National Geographic South Africa
+NickelodeonAfrica.za	Nickelodeon Africa
+NickJrAfrica.za	Nick Jr. Africa
+NicktoonsAfrica.za	Nicktoons Africa
+OneGospel.za	One Gospel
+ParliamentTV.za	Parliament TV
+SABC1.za	SABC 1
+SABC2.za	SABC 2
+SABC3.za	SABC 3	National Network Television	Topsport Surplus
+SowetoTV.za	Soweto TV
+SuperSportAction.za	SuperSport Action
+SuperSportCricket.za	SuperSport Cricket
+SuperSportFootball.za	SuperSport Football
+SuperSportFootballPlus.za	SuperSport Football Plus
+SuperSportGolf.za	SuperSport Golf
+SuperSportGrandstand.za	SuperSport Grandstand
+SuperSportLaLiga.za	SuperSport LaLiga
+SuperSportMaximo1.za	SuperSport Maximo 1	SuperSport Máximo 1
+SuperSportMaximo2.za	SuperSport Maximo 2	SuperSport Máximo 2
+SuperSportMotorsport.za	SuperSport Motorsport
+SuperSportPremierLeague.za	SuperSport Premier League
+SuperSportPSL.za	SuperSport PSL
+SuperSportRugby.za	SuperSport Rugby
+SuperSportTennis.za	SuperSport Tennis
+SuperSportVariety1.za	SuperSport Variety 1
+SuperSportVariety2.za	SuperSport Variety 2
+SuperSportVariety3.za	SuperSport Variety 3
+SuperSportVariety4.za	SuperSport Variety 4
+TheHomeChannel.za	The Home Channel
+TshwaneTV.za	Tshwane TV
+VIA.za	VIA
+WildEarth.za	WildEarth
+WSport.za	W-Sport
+ZeeOneAfrica.za	Zee One Africa

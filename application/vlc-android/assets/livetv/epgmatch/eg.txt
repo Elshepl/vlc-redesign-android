@@ -1,0 +1,53 @@
+AghapyTV.eg	Aghapy TV
+AlfathTV.eg	Alfath TV	قناة الفتح الفضائية
+AlGhadTV.eg	Al Ghad TV	قناة الغد
+AlHadathAlyoum.eg	AlHadath Alyoum	-الحدث اليوم
+AlhayatDrama.eg	Alhayat Drama	Alhayah Mosalsalat	Al Hayat Series	الحياة دراما	الحياة مسلسلات
+AlhayatTV.eg	Alhayat TV	الحياة
+AlKaheraWalNas.eg	Al Kahera Wal Nas	القاهرة والناس
+AlKaheraWalNas2.eg	Al Kahera Wal Nas 2	القاهرة والناس
+AlMasriyah.eg	Al Masriyah	Masriya	المصرية
+AlNadaTV.eg	Al Nada TV
+AlNahar.eg	Al-Nahar	النهار
+AlNaharDrama.eg	Al-Nahar Drama	النهار دراما
+AlQaheraNews.eg	Al Qahera News	القاهرة الاخبارية
+AlSaeedah.eg	Al-Saeedah	قناة السعيدة الفضائية
+AlShamsTV.eg	Al Shams TV
+CBC.eg	CBC	سي بي سي
+CBCDrama.eg	CBC Drama	سي بي سي دراما
+CBCSofra.eg	CBC Sofra	سي بي سي سفرة
+Cima.eg	Cima
+DMC.eg	DMC	دي ام سي
+DMCDrama.eg	DMC Drama	دي ام سي دراما
+EgyptianTV.eg	Egyptian TV
+ElMehwarChannel.eg	El Mehwar Channel	Mehwar TV	المحور تي في
+ElMoled.eg	El Moled
+ERTU1.eg	ERTU 1	Al Oula	المصرية الأولى
+ExtraLive.eg	Extra Live
+KoogiTV.eg	Koogi TV	قناة كوجى
+MasperoZaman.eg	Maspero Zaman
+Mazzika.eg	Mazzika	مزيكا
+MBC1Egypt.eg	MBC 1 Egypt
+MBCMasr.eg	MBC Masr	إم بي سي مصر
+MBCMasr2.eg	MBC Masr 2	إم بي سي مصر 2
+MisrAlBalad.eg	Misr AlBalad
+MixBelAraby.eg	Mix Bel Araby
+NileCinema.eg	Nile Cinema	نايل سينما
+NileComedy.eg	Nile Comedy	نايل كوميدي
+NileCulture.eg	Nile Culture
+NileDrama.eg	Nile Drama	نايل دراما
+NileEducationChannel.eg	Nile Education Channel
+NileFamily.eg	Nile Family
+NileLife.eg	Nile Life	نايل لايف
+NileNews.eg	Nile News
+NileSport.eg	Nile Sport
+NogoumFMTV.eg	NogoumFMTV
+OnDrama.eg	On Drama
+OnE.eg	On E	أون إي
+PNCDrama.eg	PNC Drama
+PNCFood.eg	PNC Food	بانوراما فوود
+RotanaCinemaEgypt.eg	Rotana Cinema Egypt	روتانا سينما مصر	Rotana Cinema Masr
+SadaElbalad.eg	Sada Elbalad	صدى البلد
+SadaElbalad2.eg	Sada Elbalad 2	صدى البلد 2
+SadaElbaladDrama.eg	Sada Elbalad Drama	صدى البلد دراما
+TeN.eg	TeN

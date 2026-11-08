@@ -1,0 +1,33 @@
+13C.cl	13C	Canal 13 Cable	13 Cable	13 Cultura
+24Horas.cl	24 Horas	24 Horas Play	24 Play
+ARTV.cl	ARTV
+Canal13.cl	Canal 13
+Canal9BioBioTelevision.cl	Canal 9 Bio-Bio Television	Canal 9 Bío-Bío Televisión
+CanalClaro.cl	Canal Claro
+CanaldelSur.cl	Canal del Sur
+CanalEcool.cl	Canal Ecool
+CanalISB.cl	Canal ISB
+CCPRadio.cl	CCP Radio
+CDFBasico.cl	CDF Basico	CDF Básico
+CDFPremium.cl	CDF Premium
+CDOBasico.cl	CDO Basico	CDO Básico
+CDOPremium.cl	CDO Premium
+ChileVision.cl	ChileVision	ChileVisión
+ClaroSportsChile.cl	Claro Sports Chile
+CNNChile.cl	CNN Chile
+EnerGeekRadio.cl	EnerGeek Radio
+ETCTV.cl	ETC TV
+FunBox.cl	FunBox
+FX.cl	FX
+History.cl	History
+LaRed.cl	La Red
+Mega.cl	Mega
+StarChannel.cl	Star Channel
+TeletrakTV.cl	Teletrak TV
+TVChile.cl	TV Chile
+TVN.cl	TVN
+TVSenado.cl	TV Senado
+UCVTV.cl	UCV TV
+Ufrovision.cl	Ufrovision	Ufrovisión
+ViaX.cl	Via X	Vía X
+ZonaLatina.cl	Zona Latina

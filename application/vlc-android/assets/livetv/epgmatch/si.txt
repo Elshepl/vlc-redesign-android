@@ -1,0 +1,92 @@
+ArenaSport1.si	Arena Sport 1	Arena Sport 1 Slovenija
+ArenaSport1Premium.si	Arena Sport 1 Premium	Arena Sport 1 Premium Slovenija
+ArenaSport2.si	Arena Sport 2	Arena Sport 2 Slovenija
+ArenaSport3.si	Arena Sport 3	Arena Sport 3 Slovenija
+ArenaSport4.si	Arena Sport 4	Arena Sport 4 Slovenija
+ATMTV.si	ATM TV
+BalkanErotic.si	Balkan Erotic
+BKTV.si	BK TV
+BoomTV.si	Boom TV
+BRIO.si	BRIO	POP BRIO	TV Pika
+CineStarTV1.si	CineStar TV 1
+CineStarTV2.si	CineStar TV 2
+CineStarTVAction.si	CineStar TV Action
+CineStarTVFantasy.si	CineStar TV Fantasy
+CineStarTVPremiere1.si	CineStar TV Premiere 1
+CineStarTVPremiere2.si	CineStar TV Premiere 2
+DaVinci.si	Da Vinci	Da Vinci Learning
+DiscoveryChannel.si	Discovery Channel
+ePosavjeTV.si	ePosavje TV
+ETV.si	ETV
+ExodusTV.si	Exodus TV
+Extreme.si	Extreme
+GeaTV.si	Gea TV
+GOLDTV.si	GOLD TV
+GolicaTV.si	Golica TV
+HotPleasure.si	Hot Pleasure
+HotXXL.si	Hot XXL
+KanalA.si	Kanal A
+KanalK3Beltinci.si	Kanal K3 Beltinci
+KICTV.si	KIC TV
+KINO.si	KINO	POP Non Stop Kino
+KoroskaTV.si	Koroska TV
+KTVOrmoz.si	KTV Ormoz	KTV Ormož
+LjubljanaTV.si	Ljubljana TV
+MegafonTV.si	Megafon TV
+MilfTV.si	Milf TV
+Minimax.si	Minimax
+NationalGeographic.si	National Geographic
+NationalGeographicWild.si	National Geographic Wild
+NetTV.si	Net TV
+NetXXL.si	Net XXL
+Nickelodeon.si	Nickelodeon
+NickJr.si	Nick Jr.
+Nova24TV.si	Nova24TV
+Nova24TV2.si	Nova24TV 2
+OronTV.si	Oron TV
+OTO.si	OTO	POP Non Stop Oto
+PeTV.si	PeTV	Ptujska Televizjia
+PlanetEva.si	Planet Eva	Planet Plus
+PlanetTV.si	Planet TV
+PlanetTV2.si	Planet TV 2
+PlayHouse.si	Play House
+POPTV.si	POP TV
+RadioAktual.si	Radio Aktual	Aktual TV HD
+REDxxx.si	RED xxx
+RkanalPlus.si	R kanal +
+RTSMaribor.si	RTS Maribor
+SavinjskaTV.si	Savinjska TV
+SexationTV.si	Sexation TV
+SIPTV.si	SIP TV
+SportTV1.si	Sport TV 1	Šport TV 1
+SportTV2.si	Sport TV 2	Šport TV 2
+SportTV3.si	Sport TV 3	Šport TV 3
+StarChannel.si	Star Channel
+StarCrime.si	Star Crime
+StarLife.si	Star Life	Fox Life
+StarMovies.si	Star Movies	FOX Movies
+T2Info.si	T-2 Info
+TLC.si	TLC
+TopTV.si	Top TV
+TrzicTV.si	Trzic TV
+TV1000.si	TV1000
+TV3.si	TV3	TV3 Medias	TV Pink 3	TV Pink Sl	TV3 Slovenia	Prva TV
+TVArena.si	TV Arena	Arena TV
+TVCelje.si	TV Celje
+TVGaleja.si	TV Galeja
+TVIDEA.si	TV IDEA
+TVKoperCapodistria.si	TV Koper-Capodistria
+TVMaribor.si	TV Maribor	Tele M
+TVMiklavz.si	TV Miklavz
+TVnakupi.si	TV nakupi
+TVSLO1.si	TV SLO 1	TV Slovenija	TV Ljubljana 1
+TVSLO2.si	TV SLO 2	TV Slovenija	TV Ljubljana 2
+TVSLO3.si	TV SLO 3
+TVSRK11.si	TV SRK-11	TV Radgona
+TVZlatiZvoki.si	TV Zlati Zvoki
+VascomTV.si	Vascom TV
+Vaskanal.si	Vas kanal	Televizija Vaš kanal
+VeseljakTV.si	Veseljak TV
+Vitel.si	Vitel
+VTV.si	VTV
+ZdravaTV.si	Zdrava TV

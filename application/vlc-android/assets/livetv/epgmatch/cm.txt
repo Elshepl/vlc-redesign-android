@@ -1,0 +1,4 @@
+Canal2International.cm	Canal 2 International
+CRTV.cm	CRTV
+EquinoxeTV.cm	Equinoxe TV
+TransformersTV.cm	Transformers TV

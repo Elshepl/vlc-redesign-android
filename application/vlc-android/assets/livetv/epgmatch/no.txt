@@ -1,0 +1,14 @@
+AutoMotorogSportTV.no	Auto Motor og Sport TV
+Frikanalen.no	Frikanalen
+NRK1.no	NRK1
+NRK2.no	NRK2
+NRK3.no	NRK3
+NRKSuper.no	NRK Super
+NRKSuperNRK3.no	NRK Super/NRK3
+TV2Direkte.no	TV 2 Direkte
+TV2Nyhetskanalen.no	TV 2 Nyhetskanalen
+TV2Zebra.no	TV 2 Zebra
+TV3.no	TV3
+TV3Plus.no	TV3+
+TVNorge.no	TVNorge
+TVVisjonNorway.no	TV Visjon Norway

@@ -1,0 +1,6 @@
+AztecaGuatemala.gt	Azteca Guatemala
+Canal3.gt	Canal 3
+CanalAntigua.gt	Canal Antigua
+Guatevision.gt	Guatevision	Guatevisión
+LaRedTV.gt	La Red TV
+TigoSports.gt	Tigo Sports

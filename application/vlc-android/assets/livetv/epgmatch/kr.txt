@@ -1,0 +1,109 @@
+Anibox.kr	Anibox	애니박스
+Animax.kr	Animax	애니맥스
+Anione.kr	Anione	애니원
+Aniplus.kr	Aniplus	애니플러스
+ArirangTV.kr	Arirang TV	아리랑 국제방송
+ArirangUN.kr	Arirang UN
+ArirangWorld.kr	Arirang World
+AsiaM.kr	AsiaM
+AsiaN.kr	AsiaN
+BallTV.kr	BallTV
+BilliardsTV.kr	Billiards TV	빌리어즈TV
+BravoKids.kr	Bravo Kids	브라보키즈
+BTNTV.kr	BTN TV	BTN불교TV
+ChannelA.kr	Channel A	채널A
+ChannelAPlus.kr	Channel A Plus	채널A 플러스
+ChannelChina.kr	Channel China	채널차이나
+ChannelJ.kr	Channel J
+CHING.kr	CHING	채널칭
+ChunghwaTV.kr	Chunghwa TV	중화TV
+ChW.kr	Ch W	채널W
+CookTV.kr	CookTV
+CPBCTV.kr	CPBC TV	가톨릭평화방송
+CTSTV.kr	CTS TV	CTS기독교TV
+DaekyoKidsTV.kr	Daekyo Kids TV	대교어린이TV
+DongaTV.kr	DongaTV	동아TV
+EBS1TV.kr	EBS 1TV
+EBS2TV.kr	EBS 2TV
+EBSKids.kr	EBS Kids	EBS 키즈
+EChannel.kr	E Channel	E채널
+EdgeTV.kr	Edge TV
+ENA.kr	ENA	이엔에이	SKY	skyDrama	channel N	HDONE	SKYHD
+ENADRAMA.kr	ENA DRAMA	ENA 드라마	DramaH	드라마H	HomeDrama	HOMETV
+ENAPLAY.kr	ENA PLAY	NQQ	skyENT	channel ONE
+ENASTORY.kr	ENA STORY	ENA 스토리	TRENDY	TrendE	channel TEN
+FunTV.kr	Fun TV
+GMTV.kr	GMTV
+GSMyShop.kr	GS My Shop
+GSShop.kr	GS Shop
+History.kr	History
+HyundaiHomeShopping.kr	Hyundai Home Shopping	현대홈쇼핑
+HyundaiHomeShoppingPlusShop.kr	Hyundai Home Shopping + Shop	현대홈쇼핑+샵
+IndieFilm.kr	Indie Film	인디필름
+JTBC.kr	JTBC
+JTBC2.kr	JTBC2
+JTBC4.kr	JTBC4
+KBS1TV.kr	KBS 1TV	KBS 제1텔레비전
+KBS2TV.kr	KBS 2TV	KBS 제2텔레비전
+KBSDrama.kr	KBS Drama	KBS 드라마
+KBSJoy.kr	KBS Joy	KBS 조이
+KBSLife.kr	KBS Life	KBS 라이프
+KBSStory.kr	KBS Story	KBS 스토리
+KBSWorld.kr	KBS World	KBS 월드
+KidsTalkTalkPlus.kr	Kids Talk Talk Plus	키즈톡톡 플러스	Kids Talk Talk
+KoreaEconomyTV.kr	Korea Economy TV	한국경제TV
+KShopping.kr	K Shopping	K쇼핑
+LifeSportsTV.kr	Life Sports TV	생활체육TV
+LotteHomeShopping.kr	Lotte Home Shopping	롯데홈쇼핑
+LotteOneTV.kr	Lotte OneTV	롯데OneTV
+MaeilBusinessTV.kr	Maeil Business TV	매일경제TV	Mmoney
+MBCDrama.kr	MBC Drama	MBC 드라마
+MBCEvery1.kr	MBC Every1	MBC 에브리원
+MBCM.kr	MBC M
+MBCOn.kr	MBC On
+MBCTV.kr	MBC TV	주식회사 문화방송
+MBN.kr	MBN	주식회사 매일방송	Maeil Broadcasting Network
+MBNPlus.kr	MBN Plus
+Mnet.kr	Mnet	엠넷
+MTN.kr	MTN	MTN 머니투데이방송
+NationalAssemblyTV.kr	National Assembly TV	국회방송
+Nickelodeon.kr	Nickelodeon
+NSHomeShopping.kr	NS Home Shopping	NS홈쇼핑
+NSShopPlus.kr	NS Shop+	NS샵플러스
+OCN.kr	OCN
+OCNMovies.kr	OCN Movies	OCN 무비스
+OCNThrills.kr	OCN Thrills	OCN 쓰릴스
+OGN.kr	OGN
+OLIFE.kr	OLIFE	오라이프	OL!FE
+ONCE.kr	ONCE
+ONT.kr	ONT
+PolarisTV.kr	Polaris TV	폴라리스TV
+SBSBiz.kr	SBS Biz
+SBSFL.kr	SBS F!L	SBS 필
+SBSfunE.kr	SBS funE	SBS 펀이
+SBSGolf.kr	SBS Golf	SBS 골프
+SBSM.kr	SBS M	SBS MTV	MTV Korea
+SBSPlus.kr	SBS Plus	SBS 플러스
+ShinsegaeTVShopping.kr	Shinsegae TV Shopping	신세계쇼핑
+ShoppingNT.kr	Shopping NT	쇼핑엔티
+SKStoa.kr	SK Stoa	SK스토아
+skyUHD.kr	skyUHD
+SmileTVPlus.kr	SmileTV Plus	스마일TV 플러스
+SPOTV.kr	SPOTV	스포티비
+SPOTV2.kr	SPOTV2	스포티비 투
+Telenovela.kr	Telenovela	텔레노벨라
+TheMovie.kr	The Movie
+Tooniverse.kr	Tooniverse	투니버스
+TVasiaPlus.kr	TVasia Plus
+TVChosun.kr	TV Chosun	TV조선
+TVChosun2.kr	TV Chosun 2	TV조선2
+tvN.kr	tvN
+tvNDrama.kr	tvN Drama	O tvN	Story On
+tvNShow.kr	tvN Show	XtvN	XTM
+tvNSports.kr	tvN Sports	올리브	Olive	OnStyle
+UHDDreamTV.kr	UHD Dream TV
+Vlending.kr	Vlending
+YonhapNewsTV.kr	Yonhap News TV	연합뉴스TV
+YTN.kr	YTN
+YTN2.kr	YTN2	와이티엔 투
+YTNScience.kr	YTN Science	YTN 사이언스

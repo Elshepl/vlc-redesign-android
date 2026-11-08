@@ -1,0 +1,9 @@
+Armenia1.am	Armenia 1	Հայաստան 1
+Armenia2.am	Armenia 2	Հայկական երկրորդ հեռուստաալիք
+ATV.am	ATV	ԱԹԻՎԻ
+ATVBazmocTV.am	ATV Bazmoc TV
+ATVFilmzone.am	ATV Filmzone
+ATVKinoman.am	ATV Kinoman
+FastSports1.am	Fast Sports 1
+FastSports2.am	Fast Sports 2
+KentronTV.am	Kentron TV	Կենտրոն հեռուստատեսություն

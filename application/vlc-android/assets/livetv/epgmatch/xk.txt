@@ -1,0 +1,47 @@
+21Junior.xk	21 Junior
+21Mix.xk	21 Mix
+21Plus.xk	21 Plus
+21Popullore.xk	21 Popullore
+ATV.xk	ATV
+Doku1.xk	Doku 1
+Doku2.xk	Doku 2
+DTV.xk	DTV	Dasma TV
+Episode.xk	Episode
+FirstChannel.xk	First Channel
+Kanal10.xk	Kanal 10
+Kino1.xk	Kino 1
+Kino2.xk	Kino 2
+KlanKosova.xk	Klan Kosova
+Kohavision.xk	Kohavision	KTV
+KSport1.xk	K Sport 1
+KSport2.xk	K Sport 2
+KSport3.xk	K Sport 3
+KSport4.xk	K Sport 4
+PrimeTV.xk	Prime TV
+RTK1.xk	RTK 1
+RTK1Sat.xk	RTK 1 Sat
+RTK2.xk	RTK 2
+RTK3.xk	RTK 3
+RTK4.xk	RTK 4
+RTV21.xk	RTV21
+RTVBesa.xk	RTV Besa
+RTVDukagjini.xk	RTV Dukagjini
+RTVIliria.xk	RTV Iliria	RTI.TV
+RTVMir.xk	RTV Mir	Radio televizija Mir
+Sport1.xk	Sport 1
+Sport2.xk	Sport 2
+Sport3.xk	Sport 3
+Sport4.xk	Sport 4
+Sport5.xk	Sport 5
+Sport6.xk	Sport 6
+SyriVision.xk	Syri Vision
+T7.xk	T7
+TemaTV.xk	Tema TV
+Teve1.xk	Teve1	Tëvë1
+TravelingoTV.xk	Travelingo TV
+TVArta.xk	TV Arta
+TVFestina.xk	TV Festina
+TVLlapi.xk	TV Llapi
+TVMitrovica.xk	TV Mitrovica
+TVOpinion.xk	TV Opinion
+TVSyri.xk	TV Syri

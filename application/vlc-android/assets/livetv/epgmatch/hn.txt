@@ -1,0 +1,11 @@
+AlfaOmegaVision.hn	Alfa & Omega Vision
+Canal11.hn	Canal 11
+Canal5ElLider.hn	Canal 5 El Lider	Canal 5 El Líder
+CCIChannel.hn	CCI Channel
+DTV.hn	DTV	D Televisión
+HCH.hn	HCH
+Telecadena7y4.hn	Telecadena 7 y 4
+Teleceiba.hn	Teleceiba
+Telesistema3y7.hn	Telesistema 3 y 7
+TSi.hn	TSi	Telesistema Informativo
+VTV.hn	VTV	VICA Televisión

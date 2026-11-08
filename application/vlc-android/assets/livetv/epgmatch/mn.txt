@@ -1,0 +1,27 @@
+AsianBox.mn	AsianBox
+BloombergTVMongolia.mn	Bloomberg TV Mongolia
+C1.mn	C1
+CentralTV.mn	Central TV
+DreamTV.mn	DreamTV
+EcoTV.mn	Eco TV
+EdutainmentTV.mn	Edutainment TV	eduTV	Боловсрол суваг
+ETV.mn	ETV
+MNB.mn	MNB
+MNBMongoliinMedee.mn	MNB Mongoliin Medee	Монголын мэдээ
+MNBSport.mn	MNB Sport
+MongolianNewsChannel.mn	Mongolian News Channel	MNC
+MongolTV.mn	Mongol TV	Монгол ТВ
+MovieBox.mn	MovieBox
+NTN.mn	NTN
+NTV.mn	NTV	NTV Телевиз
+ParliamentTV.mn	Parliament TV	Парламент TV
+SBN.mn	SBN
+StarTV.mn	Star TV
+SuldTV.mn	Suld TV
+TenGerTV.mn	TenGer TV
+TMTV.mn	TM TV
+TV25.mn	TV 25	MN25	Channel 25
+TV5.mn	TV5
+TV8.mn	TV8
+TV9.mn	TV9
+UBS.mn	UBS
