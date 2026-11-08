@@ -48,6 +48,7 @@ import org.videolan.vlc.util.RdToast
 class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
 
     private lateinit var status: TextView
+    private lateinit var services: TextView
     private lateinit var rows: LinearLayout
     private lateinit var busy: ProgressBar
     private lateinit var again: ImageView
@@ -70,6 +71,7 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val root = inflater.inflate(R.layout.dialog_rd_online_subtitles, container, false)
         status = root.findViewById(R.id.rd_os_status)
+        services = root.findViewById(R.id.rd_os_services)
         rows = root.findViewById(R.id.rd_os_rows)
         busy = root.findViewById(R.id.rd_os_busy)
         again = root.findViewById(R.id.rd_os_again)
@@ -111,6 +113,7 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
 
     private fun setBusy(on: Boolean, text: String) {
         busy.isVisible = on
+        if (on) services.isVisible = false
         again.isEnabled = !on
         status.text = text
     }
@@ -134,6 +137,9 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
         busy.isVisible = false
         again.isEnabled = true
         rows.removeAllViews()
+        // every service asked, what each found
+        services.text = outcome.asked.joinToString("  ·  ") { if (it.failed) "${it.name} –" else "${it.name} ${it.count}" }
+        services.isVisible = outcome.asked.isNotEmpty() && outcome.anyAnswered
         val title = outcome.matchTitle
         if (outcome.results.isEmpty()) {
             status.text = when {
