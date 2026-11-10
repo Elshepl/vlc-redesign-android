@@ -56,6 +56,7 @@ import org.videolan.vlc.PlaybackService
 import org.videolan.vlc.R
 import org.videolan.vlc.gui.AudioPlayerContainerActivity
 import org.videolan.vlc.gui.DialogActivity
+import org.videolan.vlc.gui.dialogs.RdOnlineSubtitlesSheet
 import org.videolan.vlc.gui.dialogs.SubtitleDownloaderDialogFragment
 import org.videolan.vlc.providers.medialibrary.FoldersProvider
 import org.videolan.vlc.providers.medialibrary.MedialibraryProvider
@@ -89,7 +90,7 @@ object MediaUtils {
 
 
     fun showSubtitleDownloaderDialogFragment(activity: FragmentActivity, mediaUris: Uri, mediaTitles:String) {
-        SubtitleDownloaderDialogFragment.newInstance(mediaUris, mediaTitles).show(activity.supportFragmentManager, "Subtitle_downloader")
+        RdOnlineSubtitlesSheet.show(activity.supportFragmentManager, mediaUris, mediaTitles)
     }
 
 

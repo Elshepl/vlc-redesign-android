@@ -2020,18 +2020,14 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
             if (wanted.isEmpty()) return@launch
             val local = rdLocalSubtitleLanguages(wanted)
             if (wanted[0] in local) return@launch
-            val (media, downloaded) = withContext(Dispatchers.IO) {
+            val downloaded = withContext(Dispatchers.IO) {
                 val m = org.videolan.vlc.util.OnlineSubtitles.mediaOf(uri, mw.title)
-                Pair(m, wanted.any { org.videolan.vlc.util.OnlineSubtitles.hasDownloaded(ctx, m, it) })
+                wanted.any { org.videolan.vlc.util.OnlineSubtitles.hasDownloaded(ctx, m, it) }
             }
             if (downloaded) return@launch
-            val outcome = org.videolan.vlc.util.OnlineSubtitles.searchAll(ctx, media)
-            val pick = outcome.bestOf(wanted[0]) ?: wanted.getOrNull(1)?.takeIf { it !in local }?.let { outcome.bestOf(it) } ?: return@launch
+            // Show the subtitle selection sheet instead of auto-downloading
             if (service?.currentMediaWrapper?.uri != uri || isFinishing) return@launch
-            val (file, _) = org.videolan.vlc.util.OnlineSubtitles.download(ctx, pick.result, media)
-            if (file == null || service?.currentMediaWrapper?.uri != uri || isFinishing) return@launch
-            rdAddOnlineSubtitle(file, pick.result, select = true)
-            overlayDelegate.showInfo(org.videolan.vlc.gui.dialogs.RdOnlineSubtitlesSheet.loadedText(ctx, pick.result), 3000)
+            org.videolan.vlc.gui.dialogs.RdOnlineSubtitlesSheet.show(supportFragmentManager)
         }
     }
 

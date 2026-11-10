@@ -136,13 +136,17 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
     }
 
     private fun search(match: OnlineSubtitles.Match?, identify: Boolean) {
-        val mw = service()?.currentMediaWrapper ?: return
+        val mw = service()?.currentMediaWrapper
+        val argUri = arguments?.getParcelable<Uri>("media_uri")
+        val argTitle = arguments?.getString("media_title")
+        val uri = mw?.uri ?: argUri ?: return
+        val title = mw?.title ?: argTitle ?: uri.lastPathSegment ?: ""
         val ctx = requireContext().applicationContext
         job?.cancel()
         rows.removeAllViews()
         setBusy(true, getString(R.string.rd_os_identifying))
         job = lifecycleScope.launch {
-            val m = media ?: withContext(Dispatchers.IO) { OnlineSubtitles.mediaOf(mw.uri, mw.title) }.also { media = it }
+            val m = media ?: withContext(Dispatchers.IO) { OnlineSubtitles.mediaOf(uri, title) }.also { media = it }
             val found = if (identify) withContext(Dispatchers.IO) { OnlineSubtitles.identify(ctx, m) } else match
             setBusy(true, getString(R.string.rd_os_looking))
             show(OnlineSubtitles.search(ctx, m, found))
@@ -227,7 +231,7 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
     private fun load(ranked: OnlineSubtitles.Ranked, detail: TextView, check: ImageView) {
         val m = media ?: return
         val ctx = requireContext().applicationContext
-        val activity = activity as? VideoPlayerActivity
+        val videoActivity = activity as? VideoPlayerActivity
         loading = ranked.result.id
         detail.text = getString(R.string.rd_os_downloading)
         lifecycleScope.launch {
@@ -239,7 +243,19 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
                 return@launch
             }
             check.isVisible = true
-            activity?.rdAddOnlineSubtitle(file, ranked.result, select = true)
+            if (videoActivity != null) {
+                videoActivity.rdAddOnlineSubtitle(file, ranked.result, select = true)
+            } else {
+                // Opened from browser (not during playback): save to DB for later
+                val argUri = arguments?.getParcelable<Uri>("media_uri")
+                if (argUri != null) {
+                    val mediaPath = if (argUri.scheme == "file" && argUri.path != null) argUri.path!! else argUri.toString()
+                    org.videolan.vlc.repository.ExternalSubRepository.getInstance(ctx).saveDownloadedSubtitle(
+                        ranked.result.id, file.absolutePath, mediaPath,
+                        ranked.result.language, ranked.result.release, ranked.result.hearingImpaired
+                    )
+                }
+            }
             RdToast.makeText(ctx, loadedText(ctx, ranked.result), RdToast.LENGTH_SHORT).show()
             dismissAllowingStateLoss()
         }
@@ -286,6 +302,18 @@ class RdOnlineSubtitlesSheet : VLCBottomSheetDialogFragment() {
 
         fun show(manager: FragmentManager) {
             if (manager.findFragmentByTag(TAG) == null) RdOnlineSubtitlesSheet().show(manager, TAG)
+        }
+
+        /** Open from the browser (not during playback): the media URI and title are passed as arguments */
+        fun show(manager: FragmentManager, mediaUri: Uri, title: String) {
+            if (manager.findFragmentByTag(TAG) == null) {
+                RdOnlineSubtitlesSheet().apply {
+                    arguments = Bundle().apply {
+                        putParcelable("media_uri", mediaUri)
+                        putString("media_title", title)
+                    }
+                }.show(manager, TAG)
+            }
         }
 
         /** "עברית · Downloaded from OpenSubtitles" */

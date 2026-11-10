@@ -277,11 +277,14 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
         val media = service.currentMediaWrapper
         val hasVideo = service.videoTracksCount > 0
         val stream = media != null && (media.type == MediaWrapper.TYPE_STREAM || media.uri?.scheme.let { it != null && it != "file" && it != "content" })
+        // VOD over network (SMB/HTTP with known duration) should show subtitle options like local files;
+        // only hide them for live streams (IPTV, no duration)
+        val liveStream = stream && (media?.length ?: 0L) <= 0L
         val streamHasSubs = (service.spuTracks?.size ?: 0) > 0
-        rdStream = stream
-        configureTabs(hasVideo, hasVideo && (!stream || streamHasSubs))
+        rdStream = liveStream
+        configureTabs(hasVideo, hasVideo && (!liveStream || streamHasSubs))
         showSection(rdSection)
-        if (stream) {
+        if (liveStream) {
             binding.rdSubTiming.root.setGone()
             binding.subtitleTracks.trackMore.setGone()
             binding.subtitleTracks.options.setGone()
