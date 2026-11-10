@@ -164,7 +164,7 @@ object OnlineSubtitles {
         val matchTitle: String
             get() {
                 val m = match ?: return ""
-                return if (m.series && media.season >= 0 && media.episode >= 0) "%s · S%02dE%02d".format(m.title, media.season, media.episode)
+                return if (m.series && media.season >= 0 && media.episode >= 0) "%s · S%02dE%02d".format(Locale.ROOT, m.title, media.season, media.episode)
                 else if (m.year > 0) "${m.title} (${m.year})" else m.title
             }
 
@@ -635,7 +635,7 @@ object OnlineSubtitles {
                 hash += h.get(i)
                 hash += t.get(i)
             }
-            Pair("%016x".format(hash), size)
+            Pair("%016x".format(Locale.ROOT, hash), size)
         }
     } catch (e: Exception) {
         null
@@ -644,11 +644,37 @@ object OnlineSubtitles {
     /** what is known of a media: its name read, its local file hashed */
     fun mediaOf(uri: Uri, title: String?, fps: Double = 0.0): Media {
         val path = if (uri.scheme == "file" || uri.scheme == null) uri.path else null
-        val name = path?.let { File(it).name } ?: uri.lastPathSegment?.takeIf { '.' in it } ?: (title ?: uri.lastPathSegment ?: "")
-        val folder = path?.let { File(it).parentFile?.name } ?: ""
-        val parsed = parseName(name, folder)
+        val segments = uri.pathSegments
+        val folder = path?.let { File(it).parentFile?.name }
+            ?: segments?.takeIf { it.size >= 2 }?.let { it[it.size - 2] }
+            ?: ""
+
+        val cleanTitle = title?.trim()?.takeIf {
+            it.isNotEmpty() && !it.contains("://")
+        }
+
+        val lastSegment = (path?.let { File(it).name } ?: uri.lastPathSegment ?: "").substringBefore('?')
+        val lastBase = lastSegment.substringBeforeLast('.', lastSegment)
+        val isGenericOrNumeric = lastBase.isEmpty() ||
+            lastBase.lowercase(Locale.ROOT) in setOf("stream", "video", "live", "index", "playlist", "manifest", "play", "movie", "default", "output", "item", "track") ||
+            lastBase.all { it.isDigit() }
+
+        val name = when {
+            path != null -> File(path).name
+            cleanTitle != null && (isGenericOrNumeric || '.' !in lastSegment) -> cleanTitle
+            lastSegment.isNotEmpty() && '.' in lastSegment -> lastSegment
+            cleanTitle != null -> cleanTitle
+            else -> lastSegment
+        }
+
+        var parsed = parseName(name, folder)
+        if (parsed.title.isEmpty() && cleanTitle != null && cleanTitle != name) {
+            parsed = parseName(cleanTitle, folder)
+        }
+
         val hashed = path?.let { openSubtitlesHash(File(it)) }
-        return Media(name, parsed.title.ifEmpty { title ?: "" }, parsed.year, parsed.season, parsed.episode, parsed.tokens,
+        val finalTitle = parsed.title.ifEmpty { cleanTitle ?: "" }
+        return Media(name, finalTitle, parsed.year, parsed.season, parsed.episode, parsed.tokens,
             hashed?.first ?: "", hashed?.second ?: 0L, fps, key = hashed?.let { "${it.first}:${it.second}" } ?: uri.toString())
     }
 
@@ -831,7 +857,7 @@ object OnlineSubtitles {
 
     internal fun shortHash(text: String) = sha1(text).take(12)
 
-    private fun sha1(text: String) = MessageDigest.getInstance("SHA-1").digest(text.toByteArray()).joinToString("") { "%02x".format(it) }
+    private fun sha1(text: String) = MessageDigest.getInstance("SHA-1").digest(text.toByteArray()).joinToString("") { "%02x".format(Locale.ROOT, it) }
 
     // ---------------------------------------------------------------------------------------------------------------
     // The services
@@ -875,7 +901,7 @@ object OnlineSubtitles {
         if (q.hash.isNotEmpty() && q.size > 0) urls.add(osUrl(listOf("moviebytesize-${q.size}", "moviehash-${q.hash}")))
         val imdb = if (q.imdb.startsWith("tt")) q.imdb.substring(2) else ""
         if (imdb.isNotEmpty()) {
-            val padded = "imdbid-%07d".format(imdb.toLongOrNull() ?: 0L)
+            val padded = "imdbid-%07d".format(Locale.ROOT, imdb.toLongOrNull() ?: 0L)
             for (code in wanted) urls.add(osUrl(episode + padded + "sublanguageid-$code"))
             if (q.everyOther || wanted.isEmpty()) urls.add(osUrl(episode + padded))
         } else if (q.title.isNotEmpty()) {

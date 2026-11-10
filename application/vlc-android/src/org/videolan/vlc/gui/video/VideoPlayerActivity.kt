@@ -1988,7 +1988,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
      *  select, and kept for the file (the downloaded subtitles of a media are added again when it plays) */
     fun rdAddOnlineSubtitle(file: java.io.File, result: org.videolan.vlc.util.OnlineSubtitles.Result, select: Boolean) {
         val s = service ?: return
-        val mediaPath = s.currentMediaWrapper?.uri?.path ?: return
+        val uri = s.currentMediaWrapper?.uri ?: return
+        val mediaPath = if (uri.scheme == "file" && uri.path != null) uri.path!! else uri.toString()
         val path = file.absolutePath
         s.addUtf8SubtitleTrack(path, select)
         addedExternalSubs.add(org.videolan.vlc.mediadb.models.ExternalSub(result.id, path, mediaPath, result.language, result.release, result.hearingImpaired))
@@ -2008,7 +2009,9 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
         val uri = mw.uri ?: return
         if (uri == rdOnlineAutoUri) return
         rdOnlineAutoUri = uri
-        if (mw.type != MediaWrapper.TYPE_VIDEO || uri.scheme !in setOf("file", "content", "smb", "nfs", "ftp", "sftp", "upnp")) return
+        if ((mw.type != MediaWrapper.TYPE_VIDEO && mw.type != MediaWrapper.TYPE_STREAM) ||
+            uri.scheme !in setOf("file", "content", "smb", "nfs", "ftp", "sftp", "upnp", "http", "https")) return
+        if (uri.scheme in setOf("http", "https") && mw.length <= 0) return
         lifecycleScope.launch {
             kotlinx.coroutines.delay(1500L)
             val s = service ?: return@launch
@@ -2674,7 +2677,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
     private fun observeDownloadedSubtitles() {
         service?.let { service ->
             val uri = service.currentMediaWrapper?.uri ?: return
-            val path = uri.path ?: return
+            val path = if (uri.scheme == "file" && uri.path != null) uri.path!! else uri.toString()
             if (previousMediaPath == null || path != previousMediaPath) {
                 previousMediaPath = path
                 removeDownloadedSubtitlesObserver()
