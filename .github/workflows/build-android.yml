@@ -1,0 +1,71 @@
+name: Android Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Android APK
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Free runner disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup \
+                      /opt/hostedtoolcache/CodeQL /usr/local/share/powershell /usr/share/swift
+          sudo docker image prune --all --force > /dev/null || true
+          df -h /
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Build APK in VideoLAN Docker Container
+        run: |
+          mkdir -p out
+          chmod -R 777 .
+          docker run --rm -u root \
+            -e HOST_UID="$(id -u)" \
+            -e HOST_GID="$(id -g)" \
+            -v "$GITHUB_WORKSPACE:/build" \
+            -w /build \
+            registry.videolan.org/vlc-debian-android:20260610055743 \
+            bash -c '
+              set -ex
+              git config --global --add safe.directory /build
+              keytool -genkey -v -keystore /tmp/release.keystore -alias vlcredesign -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=VLC Redesign, O=Elshepl, C=US"
+              export RD_KEYSTORE_FILE=/tmp/release.keystore
+              export RD_KEYSTORE_PASSWORD=android
+              export RD_KEY_ALIAS=vlcredesign
+              export RD_KEY_PASSWORD=android
+              ./buildsystem/compile.sh --init
+              ./gradlew :application:app:assembleSignedRelease --no-daemon --stacktrace
+              chown -R "$HOST_UID:$HOST_GID" /build
+            '
+
+      - name: Upload APKs as Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vlc-redesign-android-apks
+          path: application/app/build/outputs/apk/signedRelease/*.apk
+          if-no-files-found: error

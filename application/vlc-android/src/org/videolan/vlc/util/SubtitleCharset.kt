@@ -138,7 +138,8 @@ object SubtitleCharset {
                     val fields = body.split(',', limit = textIndex + 1)
                     if (fields.size == textIndex + 1) {
                         val parts = fields[textIndex].split("\\N")
-                        val wrapped = parts.map { p -> markBrackets(p, startsRtl(p)).let { if (startsRtl(p)) "\u202B" + it + "\u202C" else it } }
+                        val swapped = parts.map { swapLegacyRtlLine(it) }
+                        val wrapped = swapped.map { p -> markBrackets(p, startsRtl(p)).let { if (startsRtl(p)) "\u202B" + it + "\u202C" else it } }
                         if (wrapped != parts) {
                             lines[i] = head + fields.dropLast(1).joinToString(",") + "," + wrapped.joinToString("\\N") + if (cr) "\r" else ""
                             changed = true
@@ -216,24 +217,199 @@ object SubtitleCharset {
         return false
     }
 
+    private val LEADING_TAGS = Regex("""^(?:<[a-zA-Z/][^>]*>\s*)+""")
+    private val TRAILING_TAGS = Regex("""(?:\s*<[a-zA-Z/][^>]*>)+$""")
+
+    private fun isRtlScriptCodePoint(c: Char): Boolean {
+        val code = c.code
+        return (code in 0x0590..0x08FF) || (code in 0xFB1D..0xFDFF) || (code in 0xFE70..0xFEFF)
+    }
+
+    private fun isLatinLetterCodePoint(c: Char): Boolean {
+        val code = c.code
+        return (c in 'A'..'Z') || (c in 'a'..'z') || (code in 0x00C0..0x024F)
+    }
+
+    private fun isSentenceMark(c: Char): Boolean = when (c) {
+        '.', ',', '!', '?', ':', ';',
+        '\u060C', // Arabic comma
+        '\u061B', // Arabic semicolon
+        '\u061F'  // Arabic question mark
+        -> true
+        else -> false
+    }
+
+    private fun isDash(c: Char): Boolean = c == '-' || c == '\u2013' || c == '\u2014'
+
+    private fun hasBidiControlChar(s: String): Boolean {
+        for (c in s) {
+            val code = c.code
+            if (code == 0x200E || code == 0x200F || (code in 0x202A..0x202E) || (code in 0x2066..0x2069))
+                return true
+        }
+        return false
+    }
+
+    /**
+     * Swaps the ends of a line stored in legacy right-to-left order (leading sentence mark, trailing dash).
+     * Exact parity with the desktop's PrepareRightToLeftLine in modules/text_renderer/freetype/text_layout.c.
+     */
+    fun swapLegacyRtlLine(line: String): String {
+        var leadTag = ""
+        var trailTag = ""
+        var content = line
+
+        val mLead = LEADING_TAGS.find(content)
+        if (mLead != null) {
+            leadTag = mLead.value
+            content = content.substring(leadTag.length)
+        }
+        val mTrail = TRAILING_TAGS.find(content)
+        if (mTrail != null) {
+            trailTag = mTrail.value
+            content = content.substring(0, mTrail.range.first)
+        }
+
+        if (content.isEmpty()) return line
+
+        var rtl = 0
+        var latin = 0
+        for (c in content) {
+            if (isSentenceMark(c) || isDash(c)) continue
+            if (isRtlScriptCodePoint(c)) rtl++
+            else if (isLatinLetterCodePoint(c)) latin++
+        }
+        if (rtl == 0 || rtl < latin) return line
+        if (hasBidiControlChar(content)) return line
+
+        var firstNonSpace = 0
+        while (firstNonSpace < content.length && (content[firstNonSpace] == ' ' || content[firstNonSpace] == '\t')) {
+            firstNonSpace++
+        }
+
+        var lastNonSpace = content.length - 1
+        while (lastNonSpace >= firstNonSpace && (content[lastNonSpace] == ' ' || content[lastNonSpace] == '\t')) {
+            lastNonSpace--
+        }
+
+        if (firstNonSpace > lastNonSpace) return line
+
+        val lStart = firstNonSpace
+        var lEnd = lStart
+        while (lEnd <= lastNonSpace && isSentenceMark(content[lEnd])) {
+            lEnd++
+        }
+
+        var lLen = lEnd - lStart
+        if (lLen > 0) {
+            if (lLen >= 2 && content[lStart] == '.' && content[lStart + 1] == '.') {
+                lLen = 0
+            } else {
+                for (i in lStart until lEnd) {
+                    if (content[i] == '\u2026') {
+                        lLen = 0
+                        break
+                    }
+                }
+            }
+        }
+
+        var hasD = false
+        var dashIdx = -1
+        var dashSpStart = -1
+        if (isDash(content[lastNonSpace])) {
+            hasD = true
+            dashIdx = lastNonSpace
+            dashSpStart = dashIdx
+            while (dashSpStart > firstNonSpace && (content[dashSpStart - 1] == ' ' || content[dashSpStart - 1] == '\t')) {
+                dashSpStart--
+            }
+        }
+
+        if (lLen == 0 && !hasD) return line
+
+        val bodyRawStart = if (lLen > 0) lStart + lLen else firstNonSpace
+        val bodyRawEnd = if (hasD) dashSpStart - 1 else lastNonSpace
+
+        var bodyStart = bodyRawStart
+        while (bodyStart <= bodyRawEnd && (content[bodyStart] == ' ' || content[bodyStart] == '\t')) {
+            bodyStart++
+        }
+
+        var bodyEnd = bodyRawEnd
+        while (bodyEnd >= bodyStart && (content[bodyEnd] == ' ' || content[bodyEnd] == '\t')) {
+            bodyEnd--
+        }
+
+        if (bodyStart > bodyEnd) return line
+
+        val sb = StringBuilder(content.length)
+        sb.append(content, 0, firstNonSpace)
+
+        if (hasD) {
+            sb.append(content[dashIdx])
+            sb.append(content, dashSpStart, dashIdx)
+        }
+
+        sb.append(content, bodyRawStart, bodyStart)
+        sb.append(content, bodyStart, bodyEnd + 1)
+
+        val spEnd = if (hasD) dashSpStart else lastNonSpace + 1
+        sb.append(content, bodyEnd + 1, spEnd)
+
+        if (lLen > 0) {
+            sb.append(content, lStart, lStart + lLen)
+        }
+
+        sb.append(content, lastNonSpace + 1, content.length)
+
+        return leadTag + sb.toString() + trailTag
+    }
+
+    /**
+     * Swaps legacy RTL line ends in a text subtitle file (SRT, WebVTT, etc.).
+     * Returns null when there are no legacy lines to swap.
+     */
+    fun fixLegacyRtlSrt(text: String): String? {
+        var changed = false
+        val lines = text.split('\n').toMutableList()
+        for (i in lines.indices) {
+            val line = lines[i]
+            val cr = line.endsWith("\r")
+            val raw = line.trimEnd('\r')
+            if (raw.isBlank() || raw.all { it.isDigit() } || raw.contains("-->")) {
+                continue
+            }
+            val fixed = swapLegacyRtlLine(raw)
+            if (fixed != raw) {
+                lines[i] = fixed + if (cr) "\r" else ""
+                changed = true
+            }
+        }
+        return if (changed) lines.joinToString("\n") else null
+    }
+
     /**
      * A UTF-8 copy of a subtitle file that libvlc 3 would not read right, kept under the app's files (a hand-added
      * subtitle is remembered with the media and must survive a cache clear), named as the original so that its
      * language tag stays: a file that is not UTF-8 (libvlc reads it as Windows-1252, and libass takes the bytes as
-     * they are), an ASS/SSA file whose styles fix the text direction. Null when the file can be read as it is.
+     * they are), an ASS/SSA file whose styles fix the text direction, or an Arabic/Hebrew subtitle with legacy
+     * inverted line ends. Null when the file can be read as it is.
      */
     fun utf8Copy(context: Context, uri: Uri, displayName: String, hints: List<String>): Uri? {
         val bytes = read(context, uri) ?: return null
         val charset = detect(bytes, fileNameHints(displayName) + hints)
         var text = (if (charset != null) decode(bytes, charset) else String(bytes, Charsets.UTF_8))?.removePrefix("\uFEFF") ?: return null
         val ass = if (isAss(displayName)) assAutoDirection(text) else null
-        if (charset == null && ass == null) return null
+        val srt = if (!isAss(displayName)) fixLegacyRtlSrt(text) else null
+        if (charset == null && ass == null && srt == null) return null
         if (ass != null) text = ass
+        else if (srt != null) text = srt
         val hash = MessageDigest.getInstance("SHA-1").digest(bytes).joinToString("") { "%02x".format(it) }.take(16)
-        val dir = File(context.filesDir, "subtitles-utf8/v3-$hash").apply { mkdirs() }
+        val dir = File(context.filesDir, "subtitles-utf8/v4-$hash").apply { mkdirs() }
         val out = File(dir, displayName.ifEmpty { "subtitle.srt" })
-        if (!out.exists()) out.writeText(text, Charsets.UTF_8)
-        Log.i(TAG, "$displayName: ${charset ?: "UTF-8"}${if (ass != null) ", ASS styles in auto direction" else ""}, read from ${out.path}")
+        if (!out.exists() || out.length() == 0L) out.writeText(text, Charsets.UTF_8)
+        Log.i(TAG, "$displayName: ${charset ?: "UTF-8"}${if (ass != null) ", ASS styles in auto direction" else ""}${if (srt != null) ", RTL line ends swapped" else ""}, read from ${out.path}")
         return Uri.fromFile(out)
     }
 
@@ -241,6 +417,9 @@ object SubtitleCharset {
     fun needsCopies(video: File, hints: List<String>): Boolean = siblings(video).any { f ->
         val bytes = read(f) ?: return@any false
         val charset = detect(bytes, fileNameHints(f.name) + hints)
-        charset != null || isAss(f.name) && assAutoDirection(String(bytes, Charsets.UTF_8)) != null
+        if (charset != null) return@any true
+        val text = String(bytes, Charsets.UTF_8)
+        if (isAss(f.name)) assAutoDirection(text) != null
+        else fixLegacyRtlSrt(text) != null
     }
 }
