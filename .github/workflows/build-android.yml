@@ -52,7 +52,10 @@ jobs:
             registry.videolan.org/vlc-debian-android:20260610055743 \
             bash -c '
               set -ex
+              git config --global user.name "Elshepl"
+              git config --global user.email "66273862+Elshepl@users.noreply.github.com"
               git config --global --add safe.directory /build
+              git config --global --add safe.directory "*"
               keytool -genkey -v -keystore /tmp/release.keystore -alias vlcredesign -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=VLC Redesign, O=Elshepl, C=US"
               export RD_KEYSTORE_FILE=/tmp/release.keystore
               export RD_KEYSTORE_PASSWORD=android
