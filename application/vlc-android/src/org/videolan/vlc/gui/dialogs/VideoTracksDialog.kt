@@ -549,7 +549,7 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             val found = if (identify) withContext(Dispatchers.IO) { OnlineSubtitles.identify(ctx, m) } else match
             val outcome = OnlineSubtitles.search(ctx, m, found)
             onlineOutcome = outcome
-            onlineResults = outcome.results
+            onlineResults = outcome.results.map { it.result }
 
             panel.rdSubBusy.setGone()
             panel.rdSubRefreshBtn.isEnabled = true
