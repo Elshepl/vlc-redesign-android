@@ -390,6 +390,14 @@ object SubtitleCharset {
     }
 
     /**
+     * Whether legacy RTL subtitle line ends should be fixed (can be toggled in settings or player subtitle panel).
+     */
+    fun isRtlFixEnabled(context: Context?): Boolean {
+        if (context == null) return true
+        return org.videolan.tools.Settings.getInstance(context).getBoolean("rd_subtitle_rtl_fix", true)
+    }
+
+    /**
      * A UTF-8 copy of a subtitle file that libvlc 3 would not read right, kept under the app's files (a hand-added
      * subtitle is remembered with the media and must survive a cache clear), named as the original so that its
      * language tag stays: a file that is not UTF-8 (libvlc reads it as Windows-1252, and libass takes the bytes as
@@ -401,7 +409,8 @@ object SubtitleCharset {
         val charset = detect(bytes, fileNameHints(displayName) + hints)
         var text = (if (charset != null) decode(bytes, charset) else String(bytes, Charsets.UTF_8))?.removePrefix("\uFEFF") ?: return null
         val ass = if (isAss(displayName)) assAutoDirection(text) else null
-        val srt = if (!isAss(displayName)) fixLegacyRtlSrt(text) else null
+        val rtlFix = isRtlFixEnabled(context)
+        val srt = if (!isAss(displayName) && rtlFix) fixLegacyRtlSrt(text) else null
         if (charset == null && ass == null && srt == null) return null
         if (ass != null) text = ass
         else if (srt != null) text = srt
@@ -414,12 +423,14 @@ object SubtitleCharset {
     }
 
     /** Whether one of the subtitle files beside [video] has to be read from a copy (see [utf8Copy]) */
-    fun needsCopies(video: File, hints: List<String>): Boolean = siblings(video).any { f ->
+    fun needsCopies(video: File, hints: List<String>, context: Context? = null): Boolean = siblings(video).any { f ->
         val bytes = read(f) ?: return@any false
         val charset = detect(bytes, fileNameHints(f.name) + hints)
         if (charset != null) return@any true
         val text = String(bytes, Charsets.UTF_8)
+        val rtlFix = isRtlFixEnabled(context)
         if (isAss(f.name)) assAutoDirection(text) != null
-        else fixLegacyRtlSrt(text) != null
+        else if (rtlFix) fixLegacyRtlSrt(text) != null
+        else false
     }
 }

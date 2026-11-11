@@ -585,4 +585,29 @@
     <string name="rd_os_find_language">Find a language</string>
     <string name="rd_os_picked_in_player">Chosen in the player</string>
     <string name="rd_os_second_short">Second language</string>
+
+    <!-- Subtitle Panel Redesign -->
+    <string name="rd_position_and_size">Position and size</string>
+    <string name="rd_position">Position</string>
+    <string name="rd_position_usual">Usual</string>
+    <string name="rd_position_up">Move the subtitles up</string>
+    <string name="rd_position_down">Move the subtitles down</string>
+    <string name="rd_size">Size</string>
+    <string name="rd_smaller_subtitles">Smaller subtitles</string>
+    <string name="rd_larger_subtitles">Larger subtitles</string>
+    <string name="rd_rtl">RTL</string>
+    <string name="rd_series_preset">Series preset</string>
+    <string name="rd_in_the_video">In the video</string>
+    <string name="rd_opened_file">Opened file</string>
+    <string name="rd_for_this_file">For this file</string>
+    <string name="rd_hi">HI</string>
+    <string name="rd_no_subtitles_found">No subtitles yet</string>
+    <string name="rd_title_search_hint">Title of the movie or series</string>
+    <string name="rd_default">Default</string>
+    <string name="rd_second">Second</string>
+    <string name="rd_downloads_k">%1$.1fk downloads</string>
+    <string name="rd_downloads_count">%1$d downloads</string>
+    <string name="rd_found_for_file">%1$d found for this file</string>
+    <string name="rd_title_and_count">%1$s · %2$d found</string>
+    <string name="rd_search_title_action">The video is another one: search by its title</string>
 </resources>

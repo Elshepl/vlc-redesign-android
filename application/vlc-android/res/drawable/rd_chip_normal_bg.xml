@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VLC Redesign: Language chip normal background -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/rd_dark_bg_b2" />
+    <corners android:radius="16dp" />
+    <stroke android:width="1dp" android:color="@color/rd_dark_divider_dim" />
+</shape>
