@@ -1,49 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- VLC Redesign: Language chip item in portrait mode -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rd_lang_root"
-    android:layout_width="wrap_content"
-    android:layout_height="36dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
-    android:background="@drawable/rd_chip_normal_bg"
-    android:clickable="true"
-    android:focusable="true"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingStart="12dp"
-    android:paddingEnd="12dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <View
-        android:id="@+id/rd_lang_indicator"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/rd_lang_name"
+    <LinearLayout
+        android:id="@+id/rd_lang_root"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_medium"
-        android:textColor="@color/rd_dark_fg_1"
-        android:textSize="13sp"
-        tools:text="Arabic" />
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rd_chip_normal_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
 
-    <TextView
-        android:id="@+id/rd_lang_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+        <View
+            android:id="@+id/rd_lang_indicator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/rd_lang_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:fontFamily="@font/inter"
-        android:textColor="@color/rd_dark_fg_a1"
-        android:textSize="12sp"
-        tools:text="11" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/rd_lang_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/rd_dark_fg_1"
+            android:textSize="13sp"
+            tools:text="Arabic" />
+
+        <TextView
+            android:id="@+id/rd_lang_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rd_lang_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/rd_dark_fg_a1"
+            android:textSize="12sp"
+            tools:text="11" />
+    </LinearLayout>
+</layout>

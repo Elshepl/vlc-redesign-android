@@ -2,329 +2,26 @@
 <!--
   VLC Redesign: Redesigned Subtitles Panel in Landscape Dual-Pane mode matching desktop PC interface.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rd_subtitles_panel_root"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- 1. Top Header & Action Bar -->
     <LinearLayout
+        android:id="@+id/rd_subtitles_panel_root"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="4dp">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/rd_sub_status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="@font/inter_medium"
-                android:maxLines="1"
-                android:textAlignment="viewStart"
-                android:textColor="@color/rd_dark_fg_1"
-                android:textSize="13sp"
-                tools:text="Elite · S01E01 · 10 found" />
-
-            <TextView
-                android:id="@+id/rd_sub_services"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/inter"
-                android:maxLines="1"
-                android:textAlignment="viewStart"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="11sp"
-                tools:text="OpenSubtitles 4 · SubSource 6" />
-        </LinearLayout>
-
-        <ProgressBar
-            android:id="@+id/rd_sub_busy"
-            style="?android:attr/progressBarStyleSmall"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="6dp"
-            android:visibility="gone"
-            tools:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/rd_sub_search_title_btn"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/rd_search_title_action"
-            android:padding="8dp"
-            android:src="@drawable/rd_ic_search"
-            app:tint="@color/rd_dark_fg_a1" />
-
-        <ImageView
-            android:id="@+id/rd_sub_refresh_btn"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/rd_os_search_again"
-            android:padding="8dp"
-            android:src="@drawable/ic_refresh"
-            app:tint="@color/rd_dark_fg_a1" />
-
-        <ImageView
-            android:id="@+id/rd_sub_add_file_btn"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/subtitle_select"
-            android:padding="8dp"
-            android:src="@drawable/rd_ic_add"
-            app:tint="@color/rd_dark_fg_a1" />
-    </LinearLayout>
-
-    <!-- Inline Title Search Box (Toggled by search icon) -->
-    <LinearLayout
-        android:id="@+id/rd_sub_title_search_box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"
-        android:visibility="gone"
-        tools:visibility="visible">
-
+        <!-- 1. Top Header & Action Bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/rd_sub_title_input"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@drawable/rd_search_well"
-                android:fontFamily="@font/inter"
-                android:hint="@string/rd_title_search_hint"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:textColor="@color/rd_dark_fg_1"
-                android:textColorHint="@color/rd_dark_fg_a1"
-                android:textSize="13sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_title_go"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:minHeight="40dp"
-                android:text="@string/search" />
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rd_sub_title_results"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:visibility="gone" />
-    </LinearLayout>
-
-    <!-- 2 & 3. Side-by-Side Dual-Pane: Languages on left (35%), Variants on right (65%) -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <!-- Left pane: Languages list -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rd_sub_languages_recycler"
-            android:layout_width="160dp"
-            android:layout_height="match_parent"
-            android:clipToPadding="false" />
-
-        <!-- Vertical divider between panes -->
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:background="@color/rd_dark_divider_dim" />
-
-        <!-- Right pane: Subtitles list -->
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rd_sub_variants_recycler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false" />
-
-            <TextView
-                android:id="@+id/rd_sub_empty_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/inter"
-                android:gravity="center"
-                android:padding="24dp"
-                android:text="@string/rd_no_subtitles_found"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="13sp"
-                android:visibility="gone"
-                tools:visibility="gone" />
-        </FrameLayout>
-    </LinearLayout>
-
-    <!-- Divider -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/rd_dark_divider_dim" />
-
-    <!-- 4. Subtitle Timing Section -->
-    <LinearLayout
-        android:id="@+id/rd_sub_timing_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter"
-                android:text="@string/rd_subtitle_timing"
-                android:textAlignment="viewStart"
-                android:textColor="@color/rd_dark_fg_1"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/rd_sub_delay_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
-                android:fontFeatureSettings="tnum"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="13sp"
-                tools:text="+0 ms" />
-        </LinearLayout>
-
-        <com.google.android.material.slider.Slider
-            android:id="@+id/rd_sub_delay_slider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layoutDirection="ltr"
-            android:stepSize="50"
-            android:value="0"
-            android:valueFrom="-10000"
-            android:valueTo="10000"
-            app:haloColor="@color/rd_ripple_dark"
-            app:labelBehavior="gone"
-            app:thumbColor="?attr/colorPrimary"
-            app:thumbRadius="7dp"
-            app:tickVisible="false"
-            app:trackColorActive="@color/rd_dark_bg_b2"
-            app:trackColorInactive="@color/rd_dark_bg_b2"
-            app:trackHeight="6dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_mark_voice"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checkable="true"
-                android:text="@string/rd_mark_voice_heard" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_mark_text"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:checkable="true"
-                android:text="@string/rd_mark_text_seen" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_delay_reset"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/rd_reset" />
-        </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/rd_sub_sync_open"
-            style="@style/Widget.Redesign.Button.Outlined.Player"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="@string/rd_sync_timeline"
-            app:icon="@drawable/ic_delay"
-            app:iconGravity="textStart" />
-    </LinearLayout>
-
-    <!-- Divider -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/rd_dark_divider_dim" />
-
-    <!-- 5. Series Preset Section -->
-    <LinearLayout
-        android:id="@+id/rd_sub_series_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -333,211 +30,517 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/rd_sub_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_medium"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/rd_dark_fg_1"
+                    android:textSize="13sp"
+                    tools:text="Elite · S01E01 · 10 found" />
+
+                <TextView
+                    android:id="@+id/rd_sub_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/rd_dark_fg_a1"
+                    android:textSize="11sp"
+                    tools:text="OpenSubtitles 4 · SubSource 6" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/rd_sub_busy"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="6dp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/rd_sub_search_title_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/rd_search_title_action"
+                android:padding="8dp"
+                android:src="@drawable/rd_ic_search"
+                app:tint="@color/rd_dark_fg_a1" />
+
+            <ImageView
+                android:id="@+id/rd_sub_refresh_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/rd_os_search_again"
+                android:padding="8dp"
+                android:src="@drawable/ic_refresh"
+                app:tint="@color/rd_dark_fg_a1" />
+
+            <ImageView
+                android:id="@+id/rd_sub_add_file_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/subtitle_select"
+                android:padding="8dp"
+                android:src="@drawable/rd_ic_add"
+                app:tint="@color/rd_dark_fg_a1" />
+        </LinearLayout>
+
+        <!-- Inline Title Search Box (Toggled by search icon) -->
+        <LinearLayout
+            android:id="@+id/rd_sub_title_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/rd_sub_title_input"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rd_search_well"
+                    android:fontFamily="@font/inter"
+                    android:hint="@string/rd_title_search_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="@color/rd_dark_fg_1"
+                    android:textColorHint="@color/rd_dark_fg_a1"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_title_go"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:minHeight="40dp"
+                    android:text="@string/search" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rd_sub_title_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 2 & 3. Side-by-Side Dual-Pane: Languages on left (35%), Variants on right (65%) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Left pane: Languages list -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rd_sub_languages_recycler"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:clipToPadding="false" />
+
+            <!-- Vertical divider between panes -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/rd_dark_divider_dim" />
+
+            <!-- Right pane: Subtitles list -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rd_sub_variants_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false" />
+
+                <TextView
+                    android:id="@+id/rd_sub_empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/inter"
-                    android:text="@string/rd_series_preset"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:text="@string/rd_no_subtitles_found"
+                    android:textColor="@color/rd_dark_fg_a1"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    tools:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/rd_dark_divider_dim" />
+
+        <!-- 4. Subtitle Timing Section -->
+        <LinearLayout
+            android:id="@+id/rd_sub_timing_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/rd_subtitle_timing"
                     android:textAlignment="viewStart"
                     android:textColor="@color/rd_dark_fg_1"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/rd_series_detail"
+                    android:id="@+id/rd_sub_delay_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
                     android:fontFamily="@font/inter"
-                    android:textAlignment="viewStart"
+                    android:fontFeatureSettings="tnum"
                     android:textColor="@color/rd_dark_fg_a1"
-                    android:textSize="12sp"
-                    tools:text="Applies to episodes of Elite" />
+                    android:textSize="13sp"
+                    tools:text="+0 ms" />
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/rd_sub_delay_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:stepSize="50"
+                android:value="0"
+                android:valueFrom="-10000"
+                android:valueTo="10000"
+                app:haloColor="@color/rd_ripple_dark"
+                app:labelBehavior="gone"
+                app:thumbColor="?attr/colorPrimary"
+                app:thumbRadius="7dp"
+                app:tickVisible="false"
+                app:trackColorActive="@color/rd_dark_bg_b2"
+                app:trackColorInactive="@color/rd_dark_bg_b2"
+                app:trackHeight="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_mark_voice"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checkable="true"
+                    android:text="@string/rd_mark_voice_heard" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_mark_text"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:checkable="true"
+                    android:text="@string/rd_mark_text_seen" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_delay_reset"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/rd_reset" />
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_series_save"
+                android:id="@+id/rd_sub_sync_open"
                 style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="32dp"
-                android:text="@string/rd_save" />
+                android:layout_marginTop="6dp"
+                android:text="@string/rd_sync_timeline"
+                app:icon="@drawable/ic_delay"
+                app:iconGravity="textStart" />
+        </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_series_remove"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="wrap_content"
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/rd_dark_divider_dim" />
+
+        <!-- 5. Series Preset Section -->
+        <LinearLayout
+            android:id="@+id/rd_sub_series_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:minHeight="32dp"
-                android:text="@string/rd_remove" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/rd_series_preset"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/rd_dark_fg_1"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/rd_series_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/inter"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/rd_dark_fg_a1"
+                        android:textSize="12sp"
+                        tools:text="Applies to episodes of Elite" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_series_save"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="32dp"
+                    android:text="@string/rd_save" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_series_remove"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:minHeight="32dp"
+                    android:text="@string/rd_remove" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/rd_dark_divider_dim" />
+
+        <!-- 6. Position and Size & RTL Section -->
+        <LinearLayout
+            android:id="@+id/rd_sub_position_size_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="@string/rd_position_and_size"
+                android:textAlignment="viewStart"
+                android:textColor="@color/rd_dark_fg_1"
+                android:textSize="15sp" />
+
+            <!-- Position row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/rd_position"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/rd_dark_fg_a1"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_pos_minus"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="38dp"
+                    android:layout_height="36dp"
+                    android:minWidth="38dp"
+                    android:padding="0dp"
+                    android:text="−"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/rd_sub_pos_value"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:textColor="@color/rd_dark_fg_1"
+                    android:textSize="13sp"
+                    tools:text="Usual" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_pos_plus"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="38dp"
+                    android:layout_height="36dp"
+                    android:minWidth="38dp"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_pos_reset"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/rd_reset" />
+            </LinearLayout>
+
+            <!-- Size row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/rd_size"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/rd_dark_fg_a1"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_size_minus"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="38dp"
+                    android:layout_height="36dp"
+                    android:minWidth="38dp"
+                    android:padding="0dp"
+                    android:text="−"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/rd_sub_size_value"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:textColor="@color/rd_dark_fg_1"
+                    android:textSize="13sp"
+                    tools:text="100%" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_size_plus"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="38dp"
+                    android:layout_height="36dp"
+                    android:minWidth="38dp"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_size_reset"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/rd_reset" />
+            </LinearLayout>
+
+            <!-- RTL row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/rd_rtl"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/rd_dark_fg_a1"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rd_sub_rtl_toggle"
+                    style="@style/Widget.Redesign.Button.Outlined.Player"
+                    android:layout_width="60dp"
+                    android:layout_height="36dp"
+                    android:minWidth="60dp"
+                    android:text="@string/rd_on" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <!-- Divider -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/rd_dark_divider_dim" />
-
-    <!-- 6. Position and Size & RTL Section -->
-    <LinearLayout
-        android:id="@+id/rd_sub_position_size_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="12dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter"
-            android:text="@string/rd_position_and_size"
-            android:textAlignment="viewStart"
-            android:textColor="@color/rd_dark_fg_1"
-            android:textSize="15sp" />
-
-        <!-- Position row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter"
-                android:text="@string/rd_position"
-                android:textAlignment="viewStart"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="13sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_pos_minus"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="38dp"
-                android:layout_height="36dp"
-                android:minWidth="38dp"
-                android:padding="0dp"
-                android:text="−"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/rd_sub_pos_value"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
-                android:gravity="center"
-                android:textColor="@color/rd_dark_fg_1"
-                android:textSize="13sp"
-                tools:text="Usual" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_pos_plus"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="38dp"
-                android:layout_height="36dp"
-                android:minWidth="38dp"
-                android:padding="0dp"
-                android:text="+"
-                android:textSize="15sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_pos_reset"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginStart="8dp"
-                android:text="@string/rd_reset" />
-        </LinearLayout>
-
-        <!-- Size row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter"
-                android:text="@string/rd_size"
-                android:textAlignment="viewStart"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="13sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_size_minus"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="38dp"
-                android:layout_height="36dp"
-                android:minWidth="38dp"
-                android:padding="0dp"
-                android:text="−"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/rd_sub_size_value"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
-                android:gravity="center"
-                android:textColor="@color/rd_dark_fg_1"
-                android:textSize="13sp"
-                tools:text="100%" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_size_plus"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="38dp"
-                android:layout_height="36dp"
-                android:minWidth="38dp"
-                android:padding="0dp"
-                android:text="+"
-                android:textSize="15sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_size_reset"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginStart="8dp"
-                android:text="@string/rd_reset" />
-        </LinearLayout>
-
-        <!-- RTL row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter"
-                android:text="@string/rd_rtl"
-                android:textAlignment="viewStart"
-                android:textColor="@color/rd_dark_fg_a1"
-                android:textSize="13sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rd_sub_rtl_toggle"
-                style="@style/Widget.Redesign.Button.Outlined.Player"
-                android:layout_width="60dp"
-                android:layout_height="36dp"
-                android:minWidth="60dp"
-                android:text="@string/rd_on" />
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+</layout>

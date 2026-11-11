@@ -59,7 +59,6 @@ import org.videolan.tools.setGone
 import org.videolan.tools.setVisible
 import org.videolan.vlc.PlaybackService
 import org.videolan.vlc.R
-import org.videolan.vlc.databinding.ItemRdOnlineSubtitleBinding
 import org.videolan.vlc.databinding.ItemRdSubtitleLanguageBinding
 import org.videolan.vlc.databinding.ItemRdSubtitleVariantBinding
 import org.videolan.vlc.databinding.PlayerOverlayTracksBinding
@@ -943,8 +942,8 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
     ) : RecyclerView.Adapter<TitleResultAdapter.Holder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-            val binding = ItemRdOnlineSubtitleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            return Holder(binding)
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_rd_online_subtitle, parent, false)
+            return Holder(view)
         }
 
         override fun getItemCount() = list.size
@@ -955,11 +954,15 @@ class VideoTracksDialog : VLCBottomSheetDialogFragment() {
             holder.itemView.setOnClickListener { onSelect(match) }
         }
 
-        class Holder(private val b: ItemRdOnlineSubtitleBinding) : RecyclerView.ViewHolder(b.root) {
-            fun bind(match: OnlineSubtitles.Match, detail: String) {
-                b.rdOsRowRelease.text = if (match.year > 0) "${match.title} (${match.year})" else match.title
-                b.rdOsRowDetail.text = detail
-                b.rdOsRowCheck.isVisible = false
+        class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+            private val release: TextView = itemView.findViewById(R.id.rd_os_row_release)
+            private val detail: TextView = itemView.findViewById(R.id.rd_os_row_detail)
+            private val check: View? = itemView.findViewById(R.id.rd_os_row_check)
+
+            fun bind(match: OnlineSubtitles.Match, detailText: String) {
+                release.text = if (match.year > 0) "${match.title} (${match.year})" else match.title
+                detail.text = detailText
+                check?.isVisible = false
             }
         }
     }
